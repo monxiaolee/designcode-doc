@@ -2,7 +2,7 @@
     @import "../styles/index.less";
 </style>
 <style>
-    .index-version.ivu-badge-count{
+    .index-version .ivu-badge-count{
         box-shadow: none;
         right: 0;
         top: -3px;
@@ -11,32 +11,34 @@
     }
 </style>
 <template>
-    <div class="index">
-        <div class="bg"><span></span></div>
-        <Row type="flex" justify="center" align="middle" style="position: relative;z-index: 3">
-            <i-col span="24">
-                <h1>
-                    <img src="../images/logo.png" class="img-logo">
-                    <Badge count="1.0.1" class="index-version">
-                        <img src="../images/name.png" class="img-name">
-                    </Badge>
-                </h1>
-                <h2>一套基于 Vue.js 的高质量 UI 组件库</h2>
-                <div class="list">
-                    <a v-link="{path: '/docs/guide/introduce'}">指南</a>
-                    <a v-link="{path: '/docs/guide/install'}">组件</a>
-                    <a v-link="{path: '/docs/practice/case'}">实践</a>
-                    <a v-link="{path: '/cli'}">脚手架</a>
-                    <a v-link="{path: '/overview'}">概览</a>
-                    <a href="https://github.com/iview/iview" target="_blank">
-                        <Icon type="social-github"></Icon>
-                        GitHub
-                    </a>
-                </div>
-            </i-col>
-        </Row>
+    <div>
+        <div class="index">
+            <div class="bg"><span></span></div>
+            <Row type="flex" justify="center" align="middle" style="position: relative;z-index: 3">
+                <i-col span="24">
+                    <h1>
+                        <img src="../images/logo.png" class="img-logo">
+                        <Badge count="2.0.0" class="index-version">
+                            <img src="../images/name.png" class="img-name">
+                        </Badge>
+                    </h1>
+                    <h2>一套基于 Vue.js 的高质量 UI 组件库</h2>
+                    <div class="list">
+                        <router-link to="/docs/guide/introduce">指南</router-link>
+                        <router-link to="/docs/guide/install">组件</router-link>
+                        <router-link to="/docs/practice/case">实践</router-link>
+                        <router-link to="/cli">脚手架</router-link>
+                        <router-link to="/overview">概览</router-link>
+                        <a href="https://github.com/iview/iview" target="_blank">
+                            <Icon type="social-github"></Icon>
+                            GitHub
+                        </a>
+                    </div>
+                </i-col>
+            </Row>
+        </div>
+        <div id="indexLizi"></div>
     </div>
-    <div id="indexLizi"></div>
 </template>
 <script>
     import THREE from '../libs/three/three';
@@ -169,7 +171,7 @@
                 }
             }
         },
-        ready () {
+        mounted () {
             this.liziInit();
         },
         beforeDestroy () {

@@ -3,13 +3,14 @@
  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import App from 'components/app.vue';
+import App from './components/app.vue';
 import Routers from './router';
 import Util from './libs/util';
 import iView from 'iview';
 import locale from 'iview/src/locale/lang/zh-CN';
-// import 'iview/dist/styles/iview.css';
+import 'iview/dist/styles/iview.css';
 import Env from './config/env';
+import bus from './components/bus';
 
 Vue.use(VueRouter);
 Vue.use(iView, { locale });
@@ -18,27 +19,29 @@ Vue.use(iView, { locale });
 Vue.config.debug = true;
 
 // 路由配置
-let router = new VueRouter({
-    history: Env != 'local',
-    abstract: Env == 'local'
-});
+const RouterConfig = {
+    routes: Routers
+};
+if (Env != 'local') {
+    RouterConfig.mode = 'history';
+}
+const router = new VueRouter(RouterConfig);
 
-router.map(Routers);
-
-router.beforeEach((transition) => {
+router.beforeEach((to, from, next) => {
     iView.LoadingBar.start();
-    transition.to.router.app.loading = true;
-    Util.title(transition.to.title);
-    transition.next();
+    bus.loading = true;
+    Util.title(to.meta.title);
+    next();
 });
 
-router.afterEach((transition) => {
+router.afterEach((to, from, next) => {
     iView.LoadingBar.finish();
-    transition.to.router.app.loading = false;
+    bus.loading = false;
     window.scrollTo(0, 0);
 });
 
-router.redirect({
-    '*': "/"
+new Vue({
+    el: '#app',
+    router: router,
+    render: h => h(App)
 });
-router.start(App, '#app');
