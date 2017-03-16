@@ -1,0 +1,375 @@
+<style lang="less">
+    .ivu-article .ivu-select li{
+        margin-bottom: 0;
+    }
+    .ivu-article .ivu-select ul{
+        padding-left: 0 !important;
+        list-style-type: none;
+    }
+</style>
+<template>
+    <i-article>
+        <article>
+            <h1>Select 选择器</h1>
+            <Anchor title="概述" h2></Anchor>
+            <p>使用模拟的增强下拉选择器来代替浏览器原生的选择器。</p>
+            <p>选择器支持单选、多选、搜索，以及键盘快捷操作。</p>
+            <Anchor title="代码示例" h2></Anchor>
+            <Demo title="基础用法">
+                <div slot="demo">
+                    <i-select :model.sync="model1" style="width:200px">
+                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                    <span class="demo-data">{{ model1 | json }}</span>
+                </div>
+                <div slot="desc">
+                    <p>基本用法。给<code>i-select</code>设置属性<code>model</code>绑定数据，需要将<code>model</code>设置<code>.sync</code>实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                    <p>单选时，model 只接受字符串和数字类型，多选时，只接受数组类型，组件会自动根据<code>i-option</code>的<code>value</code>来返回选中的数据。</p>
+                    <p>可以给<code>i-select</code>添加 style 样式，比如宽度。</p>
+                    <p>在展开选择器后，可以使用键盘的<code>up</code>和<code>down</code>快速上下选择，按下<code>Enter</code>选择，按下<code>Esc</code>收起选择器。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.base }}</i-code>
+            </Demo>
+            <Demo title="尺寸">
+                <div slot="demo">
+                    <i-select :model.sync="model2" size="small" style="width:100px">
+                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                    <i-select :model.sync="model3" style="width:100px">
+                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                    <i-select :model.sync="model4" size="large" style="width:100px">
+                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                </div>
+                <div slot="desc">
+                    <p>通过设置<code>size</code>属性为<code>large</code>和<code>small</code>将输入框设置为大和小尺寸，不设置为默认（中）尺寸。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.size }}</i-code>
+            </Demo>
+            <Demo title="禁用">
+                <div slot="demo">
+                    <i-select :model.sync="model5" disabled style="width:200px">
+                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                    <i-select :model.sync="model6" style="width:200px">
+                        <i-option value="beijing">北京市</i-option>
+                        <i-option value="shanghai" disabled>上海市</i-option>
+                        <i-option value="shenzhen">深圳市</i-option>
+                    </i-select>
+                </div>
+                <div slot="desc">
+                    <p>通过给<code>i-select</code>设置属性<code>disabled</code>禁用整个选择器。</p>
+                    <p>通过给<code>i-option</code>设置属性<code>disabled</code>可以禁用当前项。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
+            </Demo>
+            <Demo title="可清空">
+                <div slot="demo">
+                    <i-select :model.sync="model8" clearable style="width:200px">
+                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                    <span class="demo-data">{{ model8 | json }}</span>
+                </div>
+                <div slot="desc">
+                    <p>通过设置属性<code>clearable</code>可以清空已选项，仅适用于单选模式。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.clearable }}</i-code>
+            </Demo>
+            <Demo title="分组">
+                <div slot="demo">
+                    <i-select :model.sync="model7" style="width:200px">
+                        <Option-group label="热门城市">
+                            <i-option v-for="item in cityList | limitBy 3" :value="item.value">{{ item.label }}</i-option>
+                        </Option-group>
+                        <Option-group label="其它城市">
+                            <i-option v-for="item in cityList | limitBy 3 3" :value="item.value">{{ item.label }}</i-option>
+                        </Option-group>
+                    </i-select>
+                    <span class="demo-data">{{ model7 | json }}</span>
+                </div>
+                <div slot="desc">
+                    <p>使用<code>Option-group</code>可将选项进行分组。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.group }}</i-code>
+            </Demo>
+            <Demo title="自定义模板">
+                <div slot="demo">
+                    <i-select :model.sync="model9" style="width:200px">
+                        <i-option value="beijing" label="北京市">
+                            <span>北京</span>
+                            <span style="float:right;color:#ccc">Beiing</span>
+                        </i-option>
+                        <i-option value="shanghai" label="上海市">
+                            <span>上海</span>
+                            <span style="float:right;color:#ccc">ShangHai</span>
+                        </i-option>
+                        <i-option value="shenzhen" label="深圳市">
+                            <span>深圳</span>
+                            <span style="float:right;color:#ccc">ShenZhen</span>
+                        </i-option>
+                    </i-select>
+                    <span class="demo-data">{{ model9 | json }}</span>
+                </div>
+                <div slot="desc">
+                    <p>对选项内容可以进行自定义。注意在<code>i-option</code>中使用<code>label</code>属性，可以让选择器优先读取该属性的值以显示，否则选中时显示的内容会和自定义的一样，这往往不是我们想要的。</p>
+                    <p>对于选项显示内容的逻辑：优先显示 slot 内容，如果没有定义 slot，则显示<code>label</code>的值，如果没有设置 label，则显示<code>value</code>的值。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.label }}</i-code>
+            </Demo>
+            <Demo title="多选">
+                <div slot="demo">
+                    <p class="demo-data">{{ model10 | json }}</p>
+                    <i-select :model.sync="model10" multiple style="width:260px">
+                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                    </i-select>
+                </div>
+                <div slot="desc">
+                    <p>通过设置属性<code>multiple</code>可以开启多选模式。多选模式下，model 接受数组类型的数据，所返回的也是数组。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.multiple }}</i-code>
+            </Demo>
+            <Demo title="可搜索">
+                <div slot="demo">
+                    <Row>
+                        <i-col span="12" style="padding-right:10px">
+                            <i-select :model.sync="model11" filterable>
+                                <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </i-col>
+                        <i-col span="12">
+                            <i-select :model.sync="model12" filterable multiple>
+                                <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                        </i-col>
+                    </Row>
+                </div>
+                <div slot="desc">
+                    <p>通过设置属性<code>filterable</code>可以开启搜索模式。单选和多选都支持搜索模式。多选搜索时，可以使用键盘<code>Delete</code>快捷删除最后一个已选项。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.filterable }}</i-code>
+            </Demo>
+            <div class="api">
+                <Anchor title="API" h2></Anchor>
+                <Anchor title="iSelect props" h3></Anchor>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>属性</th>
+                            <th>说明</th>
+                            <th>类型</th>
+                            <th>默认值</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>model</td>
+                            <td>指定选中项目的项的 value 值，需要使用<code>.sync</code>双向绑定，否则改变状态时并不能改变使用者的数据。单选时只接受 String 或 Number，多选时只接受 Array</td>
+                            <td>String | Number | Array</td>
+                            <td>空</td>
+                        </tr>
+                        <tr>
+                            <td>multiple</td>
+                            <td>是否支持多选</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>disabled</td>
+                            <td>是否禁用</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>clearable</td>
+                            <td>是否可以清空选项，只在单选时有效</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>filterable</td>
+                            <td>是否支持搜索</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>size</td>
+                            <td>选择框大小，可选值为<code>large</code>和<code>small</code>或者不填</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>placeholder</td>
+                            <td>选择框默认文字</td>
+                            <td>String</td>
+                            <td>请选择</td>
+                        </tr>
+                        <tr>
+                            <td>not-found-text</td>
+                            <td>当下拉列表为空时显示的内容</td>
+                            <td>String</td>
+                            <td>无匹配数据</td>
+                        </tr>
+                        <tr>
+                            <td>label-in-value</td>
+                            <td>在返回选项时，是否将 label 和 value 一并返回，默认只返回 value</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <Anchor title="iSelect events" h3></Anchor>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>事件名</th>
+                            <th>说明</th>
+                            <th>返回值</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>on-change</td>
+                            <td>选中的<code>i-option</code>变化时触发，默认返回 value，如需返回 label，详见 label-in-value 属性</td>
+                            <td>当前选中项</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <Anchor title="iSelect methods" h3></Anchor>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>方法名</th>
+                            <th>说明</th>
+                            <th>参数</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>setQuery</td>
+                            <td>设置搜索词，为空时清空，仅在 <code>filterable="true"</code> 时有效</td>
+                            <td>query</td>
+                        </tr>
+                        <tr>
+                            <td>clearSingleSelect</td>
+                            <td>清空单选项，仅在 <code>clearable="true"</code> 时有效</td>
+                            <td>无</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <Anchor title="iOption props" h3></Anchor>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>属性</th>
+                            <th>说明</th>
+                            <th>类型</th>
+                            <th>默认值</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>value</td>
+                            <td>选项值，默认根据此属性值进行筛选，必填</td>
+                            <td>String | Number</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
+                            <td>label</td>
+                            <td>选项显示的内容，默认会读取 slot，无 slot 时，优先读取该 label 值，无 label 时，读取 value。当选中时，选择器会显示 label 为已选文案。大部分情况不需要配置此项，直接写入 slot 即可，在自定义选项时，该属性非常有用。</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>disabled</td>
+                            <td>是否禁用当前项</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <Anchor title="OptionGroup props" h3></Anchor>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>属性</th>
+                            <th>说明</th>
+                            <th>类型</th>
+                            <th>默认值</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>label</td>
+                            <td>分组的组名</td>
+                            <td>String</td>
+                            <td>空</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+    </i-article>
+</template>
+<script>
+    import iArticle from '../../components/article.vue';
+    import iCode from 'iCode';
+    import Demo from '../../components/demo.vue';
+    import Code from '../../code/select';
+    import Anchor from '../../components/anchor.vue';
+
+    export default {
+        components: {
+            iArticle,
+            iCode,
+            Demo,
+            Anchor
+        },
+        data () {
+            return {
+                code: Code,
+                cityList: [
+                    {
+                        value: 'beijing',
+                        label: '北京市'
+                    },
+                    {
+                        value: 'shanghai',
+                        label: '上海市'
+                    },
+                    {
+                        value: 'shenzhen',
+                        label: '深圳市'
+                    },
+                    {
+                        value: 'hangzhou',
+                        label: '杭州市'
+                    },
+                    {
+                        value: 'nanjing',
+                        label: '南京市'
+                    },
+                    {
+                        value: 'chongqing',
+                        label: '重庆市'
+                    }
+                ],
+                model1: '',
+                model2: '',
+                model3: '',
+                model4: '',
+                model5: '',
+                model6: '',
+                model7: '',
+                model8: '',
+                model9: '',
+                model10: [],
+                model11: '',
+                model12: []
+            }
+        },
+        methods: {
+
+        }
+    }
+</script>
