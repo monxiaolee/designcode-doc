@@ -28,11 +28,11 @@ module.exports = {
                 options: {
                     loaders: {
                         less: ExtractTextPlugin.extract({
-                          use: ['css-loader' ,'less-loader'],
+                          use: ['css-loader', 'autoprefixer-loader', 'less-loader'],
                           fallback: 'vue-style-loader'
                         }),
                         css: ExtractTextPlugin.extract({
-                          use: ['css-loader', 'less-loader'],
+                          use: ['css-loader', 'autoprefixer-loader', 'less-loader'],
                           fallback: 'vue-style-loader'
                         }),
                     },
