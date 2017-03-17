@@ -37,7 +37,7 @@ config.plugins = (config.plugins || []).concat([
     new ExtractTextPlugin({
         filename: '[name].css',
         allChunks: true,
-        disable: true
+        // disable: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendors',

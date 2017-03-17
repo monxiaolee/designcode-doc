@@ -50,21 +50,35 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/
             },
+            // {
+            //     test: /\.css$/,
+            //     use: [
+            //         'style-loader',
+            //         'css-loader',
+            //         'autoprefixer-loader'
+            //     ]
+            // },
             {
                 test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'autoprefixer-loader'
-                ]
+                use: ExtractTextPlugin.extract({
+                    use: 'css-loader',
+                    fallback: 'style-loader'
+                })
             },
+            // {
+            //     test: /\.less/,
+            //     use: [
+            //         'style-loader',
+            //         'css-loader',
+            //         'less-loader'
+            //     ]
+            // },
             {
                 test: /\.less/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'less-loader'
-                ]
+                use: ExtractTextPlugin.extract({
+                    use: 'less-loader',
+                    fallback: 'style-loader'
+                })
             },
             {
                 test: /\.scss$/,
