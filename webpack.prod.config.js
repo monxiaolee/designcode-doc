@@ -13,30 +13,11 @@ config.output.publicPath = '/dist/';
 config.output.filename = '[name].[hash].js';                 // 带hash值的入口js名称
 config.output.chunkFilename = '[name].[hash].chunk.js';      // 带hash值的路由js名称
 
-config.module.rules[0].options = {
-    loaders: {
-        // css: ExtractTextPlugin.extract(
-        //     "style-loader",
-        //     "css-loader",
-        //     {
-        //         publicPath: "https:\\file.iviewui.com/dist/"
-        //         // publicPath: "/dist/",
-        //     }
-        // ),
-        // less: ExtractTextPlugin.extract(
-        //     'vue-style-loader',
-        //     'css-loader!less-loader'
-        // ),
-        // sass: ExtractTextPlugin.extract(
-        //     'vue-style-loader',
-        //     'css-loader!sass-loader'
-        // )
-    }
-};
 
 config.plugins = (config.plugins || []).concat([
     new ExtractTextPlugin({
         filename: '[name].[hash].css',
+        disable: false,
         allChunks: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
