@@ -24,13 +24,19 @@
             <div class="footer-main">
                 <Row>
                     <i-col span="5">
-                        <h4>GitHub</h4>
+                        <h4>
+                            <Icon type="social-github"></Icon>
+                            GitHub
+                        </h4>
                         <ul>
                             <li>
                                 <a href="https://github.com/iview/iview" target="_blank">iView</a>
                             </li>
                             <li>
                                 <a href="https://github.com/iview/iview-cli" target="_blank">iView Cli</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/iview/iview-doc" target="_blank">iView 文档</a>
                             </li>
                             <li>
                                 <a href="https://github.com/iview/iview-project" target="_blank">iView 工程</a>
@@ -41,7 +47,10 @@
                         </ul>
                     </i-col>
                     <i-col span="5">
-                        <h4>相关站点</h4>
+                        <h4>
+                            <Icon type="link"></Icon>
+                            相关站点
+                        </h4>
                         <ul>
                             <li>
                                 <a href="https://www.talkingcoder.com/?from=iview" target="_blank">TalkingCoder</a> - 有逼格的程序员社区
@@ -61,7 +70,10 @@
                         </ul>
                     </i-col>
                     <i-col span="5" offset="2">
-                        <h4>社区</h4>
+                        <h4>
+                            <Icon type="chatbubbles"></Icon>
+                            社区
+                        </h4>
                         <ul>
                             <li>
                                 <a href="https://github.com/iview/iview/issues" target="_blank">反馈建议</a>
@@ -114,7 +126,7 @@
                 </div>
             </div>
         </Modal>
-        <Modal v-model="ask" title="提问" @on-ok="handleModalClose" @on-cancel="handleModalClose" :style="{top: '20px'}">
+        <Modal v-model="ask" title="提问" @on-ok="handleModalClose" @on-cancel="handleModalClose" :styles="{top: '20px'}">
             <div class="ivu-article">
                 <p>如果您在开发中遇到任何问题，包括但不限于 iView、JavaScript、Vue、Webpack、Canvas、WebGL、Node.js 等相关技术，可以加入小密圈和我们一对一提问，收到问题后，我们会在 10 ~ 30 分钟内解答。</p>
                 <p>因为提供高质量的答疑服务，所以我们暂时收费 <span style="color: #f50">￥98/年</span> 。</p>

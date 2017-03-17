@@ -6,7 +6,7 @@ let i18n = {};
 let theme = {};
 
 introduce.install = `
-$ npm install iview@1.0.1 --save
+$ npm install iview --save
 `;
 
 introduce.script= `
@@ -15,7 +15,7 @@ introduce.script= `
 
 introduce.demo = `
 <template>
-    <Slider :value.sync="value" range></Slider>
+    <Slider v-model="value" range></Slider>
 </template>
 <script>
     export default {
