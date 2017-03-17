@@ -22,13 +22,13 @@
                             <img src="../images/name.png" class="img-name">
                         </Badge>
                     </h1>
-                    <h2>一套基于 Vue.js 的高质量 UI 组件库</h2>
+                    <h2>{{ $t('index.title') }}</h2>
                     <div class="list">
-                        <router-link to="/docs/guide/introduce">指南</router-link>
-                        <router-link to="/docs/guide/install">组件</router-link>
-                        <router-link to="/docs/practice/case">实践</router-link>
-                        <router-link to="/cli">脚手架</router-link>
-                        <router-link to="/overview">概览</router-link>
+                        <router-link to="/docs/guide/introduce">{{ $t('index.guide') }}</router-link>
+                        <router-link to="/docs/guide/install">{{ $t('index.component') }}</router-link>
+                        <router-link to="/docs/practice/case">{{ $t('index.practice') }}</router-link>
+                        <router-link to="/cli">{{ $t('index.cli') }}</router-link>
+                        <router-link to="/overview">{{ $t('index.overview') }}</router-link>
                         <a href="https://github.com/iview/iview" target="_blank">
                             <Icon type="social-github"></Icon>
                             GitHub

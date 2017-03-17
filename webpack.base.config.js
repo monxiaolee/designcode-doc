@@ -41,10 +41,10 @@ module.exports = {
                     }
                 }
             },
-            // {
-            //     test: /iview\/.*?js$/,
-            //     loader: 'babel-loader'
-            // },
+            {
+                test: /iview\/.*?js$/,
+                loader: 'babel-loader'
+            },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
