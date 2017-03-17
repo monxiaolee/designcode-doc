@@ -21,7 +21,7 @@
 </style>
 <template>
     <div>
-        <pre :class="{bg: bg}"><code :class="language" v-el:code><slot></slot></code></pre>
+        <pre :class="{bg: bg}"><code :class="language" ref="code"><slot></slot></code></pre>
         <span class="copy" @click="clip">
             <Icon type="clipboard" size="18" v-show="!copied"></Icon>
             <Icon type="checkmark" size="18" v-show="copied" style="color:#5cb85c"></Icon>
@@ -58,10 +58,10 @@
                 }
             }
         },
-        compiled () {
-            this.code = this.$els.code.innerHTML.replace(/\n/, '');
-            this.$els.code.innerHTML = this.code;
-            hljs.highlightBlock(this.$els.code);
+        mounted () {
+            this.code = this.$refs.code.innerHTML.replace(/\n/, '');
+            this.$refs.code.innerHTML = this.code;
+            hljs.highlightBlock(this.$refs.code);
         },
         methods: {
             clip () {

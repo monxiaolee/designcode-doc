@@ -10,6 +10,13 @@ const routers = [
         component: require('./views/index.vue')
     },
     {
+        path: '/docs/guide/introduce',
+        meta: {
+            title: 'iView介绍'
+        },
+        component: require('./views/guide/introduce.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

@@ -1,44 +1,44 @@
 <template>
-    <Menu mode="horizontal" :active-key.sync="activeKey" @on-select="handleSelect">
+    <Menu mode="horizontal" :active-name="currentActiveKey" @on-select="handleSelect">
         <div class="wrapper-header-nav">
-            <a v-link="{path: '/'}" class="wrapper-header-nav-logo">
+            <router-link to="/" class="wrapper-header-nav-logo">
                 <img src="../images/logo-doc.png">
-            </a>
+            </router-link>
             <div class="wrapper-header-nav-search">
                 <i-select
-                        v-ref:select
-                        :model.sync="search"
-                        filterable
-                        placeholder="搜索组件..."
-                        not-found-text="没有找到相关组件"
-                        @on-change="handleSearch">
-                    <i-option v-for="item in navigateList" :value="item.path">{{ item.title }}</i-option>
+                    ref="select"
+                    v-model="search"
+                    filterable
+                    placeholder="搜索组件..."
+                    not-found-text="没有找到相关组件"
+                    @on-change="handleSearch">
+                    <i-option v-for="item in navigateList" :key="item" :value="item.path">{{ item.title }}</i-option>
                 </i-select>
             </div>
             <div class="wrapper-header-nav-list">
-                <Menu-item key="guide">
+                <Menu-item name="guide">
                     <Icon type="ios-navigate"></Icon>
                     指南
                 </Menu-item>
-                <Menu-item key="component">
+                <Menu-item name="component">
                     <Icon type="ios-keypad"></Icon>
                     组件
                 </Menu-item>
-                <Menu-item key="cli">
+                <Menu-item name="cli">
                     <Icon type="settings"></Icon>
                     脚手架
                 </Menu-item>
-                <Menu-item key="live">
+                <Menu-item name="live">
                     <Badge :dot="liveDot">
                         <Icon type="ios-mic"></Icon>
                         讲堂
                     </Badge>
                 </Menu-item>
-                <Menu-item key="practice">
+                <Menu-item name="practice">
                     <Icon type="ios-analytics"></Icon>
                     实践
                 </Menu-item>
-                <Menu-item key="github">
+                <Menu-item name="github">
                     <Icon type="social-github"></Icon>
                     Github
                 </Menu-item>
@@ -49,6 +49,7 @@
 <script>
     import navigate from '../config/navigate';
     import Config from '../config/config';
+    import bus from './bus';
 
     export default {
         props: {
@@ -58,8 +59,17 @@
             return {
                 search: '',
                 navigateList: [],
-                liveDot: false
+                liveDot: false,
+                currentActiveKey: this.activeKey
             };
+        },
+        watch: {
+            activeKey (val) {
+                this.currentActiveKey = val;
+            },
+            currentActiveKey (val) {
+                this.$emit('on-change', val);
+            }
         },
         computed: {
 
@@ -76,7 +86,7 @@
             },
             handleSelect (type) {
                 if (type === 'donate') {
-                    this.$dispatch('on-donate-show');
+                    bus.$emit('on-donate-show');
                 } else if (type === 'github') {
                     window.open('https://github.com/iview/iview');
                 } else if (type === 'guide') {
@@ -106,17 +116,17 @@
 
                 const route = this.$route.path;
                 if (route.indexOf('component') > -1 || componentList.indexOf(route) > -1) {
-                    this.activeKey = 'component';
+                    this.currentActiveKey = 'component';
                 } else if (route.indexOf('practice') > -1) {
-                    this.activeKey = 'practice';
+                    this.currentActiveKey = 'practice';
                 } else if (route.indexOf('live') > -1) {
-                    this.activeKey = 'live';
+                    this.currentActiveKey = 'live';
                 } else {
-                    this.activeKey = 'guide';
+                    this.currentActiveKey = 'guide';
                 }
-            },
+            }
         },
-        compiled () {
+        created () {
             let list = [];
             for (let i = 0; i < navigate.components.length; i++) {
                 for (let j = 0; j < navigate.components[i].list.length; j++) {
