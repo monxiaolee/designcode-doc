@@ -4,6 +4,7 @@
 
 var path = require('path');
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 function resolve (dir) {
     return path.join(__dirname, '..', dir)
 }
@@ -26,18 +27,24 @@ module.exports = {
                 loader: 'vue-loader',
                 options: {
                     loaders: {
-                        css: 'vue-style-loader!css-loader',
-                        less: 'vue-style-loader!css-loader!less-loader'
+                        less: ExtractTextPlugin.extract({
+                          use: ['css-loader', 'autoprefixer-loader', 'less-loader'],
+                          fallback: 'vue-style-loader'
+                        }),
+                        css: ExtractTextPlugin.extract({
+                          use: ['css-loader', 'autoprefixer-loader', 'less-loader'],
+                          fallback: 'vue-style-loader'
+                        }),
                     },
                     postLoaders: {
                         html: 'babel-loader'
                     }
                 }
             },
-            {
-                test: /iview\/.*?js$/,
-                loader: 'babel-loader'
-            },
+            // {
+            //     test: /iview\/.*?js$/,
+            //     loader: 'babel-loader'
+            // },
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
@@ -83,7 +90,7 @@ module.exports = {
             'hljs': 'highlightjs/highlight.pack.js',
             'iCode': '../../components/code.vue',
             'vue': 'vue/dist/vue.esm.js',
-            '@': resolve('src')
+            // '@': resolve('src')
         }
     }
 };

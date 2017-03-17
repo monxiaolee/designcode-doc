@@ -13,35 +13,23 @@ config.output.publicPath = path.join('./dist/');
 config.output.filename = '[name].[hash].js';                 // 带hash值的入口js名称
 config.output.chunkFilename = '[name].[hash].chunk.js';      // 带hash值的路由js名称
 
-config.vue = {
-    loaders: {
-        css: ExtractTextPlugin.extract(
-            "style-loader",
-            "css-loader",
-            {
-                publicPath: "../dist/"
-            }
-        ),
-        less: ExtractTextPlugin.extract(
-            'vue-style-loader',
-            'css-loader!less-loader'
-        ),
-        sass: ExtractTextPlugin.extract(
-            'vue-style-loader',
-            'css-loader!sass-loader'
-        )
-    }
-};
-
 config.plugins = (config.plugins || []).concat([
-    new ExtractTextPlugin("[name].[hash].css",{ allChunks : true,resolve : ['modules'] }),       // 提取带hash值的css名称
-    new webpack.optimize.CommonsChunkPlugin('vendors', 'vendors.[hash].js'),                     // 提取带hash值的第三方库名称
+    new ExtractTextPlugin({
+        filename: '[name].[hash].css',
+        disable: false,
+        allChunks: true
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendors',
+        filename: 'vendors.[hash].js'
+    }),
     new webpack.DefinePlugin({
         'process.env': {
             NODE_ENV: '"production"'
         }
     }),
-    new webpack.optimize.UglifyJsPlugin({                                                         // 压缩文件
+    // 压缩文件
+    new webpack.optimize.UglifyJsPlugin({
         compress: {
             warnings: false
         }
