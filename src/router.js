@@ -136,6 +136,13 @@ const routers = [
         component: require('./views/components/font.vue')
     },
     {
+        path: '/components/button',
+        meta: {
+            title: '按钮 Button'
+        },
+        component: require('./views/components/button.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

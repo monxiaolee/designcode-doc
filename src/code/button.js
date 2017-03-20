@@ -2,16 +2,16 @@ let code = {};
 
 code.type = `
 <template>
-    <i-button>Default</i-button>
-    <i-button type="primary">Primary</i-button>
-    <i-button type="ghost">Ghost</i-button>
-    <i-button type="dashed">Dashed</i-button>
-    <i-button type="text">Text</i-button>
+    <Button>Default</Button>
+    <Button type="primary">Primary</Button>
+    <Button type="ghost">Ghost</Button>
+    <Button type="dashed">Dashed</Button>
+    <Button type="text">Text</Button>
     <br><br>
-    <i-button type="info">信息按钮</i-button>
-    <i-button type="success">成功按钮</i-button>
-    <i-button type="warning">警告按钮</i-button>
-    <i-button type="error">错误按钮</i-button>
+    <Button type="info">信息按钮</Button>
+    <Button type="success">成功按钮</Button>
+    <Button type="warning">警告按钮</Button>
+    <Button type="error">错误按钮</Button>
 </template>
 <script>
     export default {
@@ -22,15 +22,15 @@ code.type = `
 
 code.icon = `
 <template>
-    <i-button type="primary" shape="circle" icon="ios-search"></i-button>
-    <i-button type="primary" icon="ios-search">搜索</i-button>
-    <i-button type="primary" shape="circle" icon="ios-search">搜索</i-button>
-    <i-button type="primary" shape="circle">圆角按钮</i-button>
+    <Button type="primary" shape="circle" icon="ios-search"></Button>
+    <Button type="primary" icon="ios-search">搜索</Button>
+    <Button type="primary" shape="circle" icon="ios-search">搜索</Button>
+    <Button type="primary" shape="circle">圆角按钮</Button>
     <br><br>
-    <i-button type="ghost" shape="circle" icon="ios-search"></i-button>
-    <i-button type="ghost" icon="ios-search">搜索</i-button>
-    <i-button type="ghost" shape="circle" icon="ios-search">搜索</i-button>
-    <i-button type="ghost" shape="circle">圆角按钮</i-button>
+    <Button type="ghost" shape="circle" icon="ios-search"></Button>
+    <Button type="ghost" icon="ios-search">搜索</Button>
+    <Button type="ghost" shape="circle" icon="ios-search">搜索</Button>
+    <Button type="ghost" shape="circle">圆角按钮</Button>
 </template>
 <script>
     export default {
@@ -41,13 +41,13 @@ code.icon = `
 
 code.size = `
 <template>
-    <i-button type="primary" size="large">Large</i-button>
-    <i-button type="primary">Default</i-button>
-    <i-button type="primary" size="small">Small</i-button>
+    <Button type="primary" size="large">Large</Button>
+    <Button type="primary">Default</Button>
+    <Button type="primary" size="small">Small</Button>
     <br><br>
-    <i-button type="primary" shape="circle" size="large">Large</i-button>
-    <i-button type="primary" shape="circle">Default</i-button>
-    <i-button type="primary" shape="circle" size="small">Small</i-button>
+    <Button type="primary" shape="circle" size="large">Large</Button>
+    <Button type="primary" shape="circle">Default</Button>
+    <Button type="primary" shape="circle" size="small">Small</Button>
 </template>
 <script>
     export default {
@@ -58,9 +58,9 @@ code.size = `
 
 code.long = `
 <template>
-    <i-button type="success" long>确认提交</i-button>
+    <Button type="success" long>确认提交</Button>
     <br><br>
-    <i-button type="error" long>确认删除</i-button>
+    <Button type="error" long>确认删除</Button>
 </template>
 <script>
     export default {
@@ -71,20 +71,20 @@ code.long = `
 
 code.disabled = `
 <template>
-    <i-button>Default</i-button>
-    <i-button disabled>Default(Disabled)</i-button>
+    <Button>Default</Button>
+    <Button disabled>Default(Disabled)</Button>
     <br>
-    <i-button type="primary">Primary</i-button>
-    <i-button type="primary" disabled>Primary(Disabled)</i-button>
+    <Button type="primary">Primary</Button>
+    <Button type="primary" disabled>Primary(Disabled)</Button>
     <br>
-    <i-button type="ghost">Ghost</i-button>
-    <i-button type="ghost" disabled>Ghost(Disabled)</i-button>
+    <Button type="ghost">Ghost</Button>
+    <Button type="ghost" disabled>Ghost(Disabled)</Button>
     <br>
-    <i-button type="dashed">Dashed</i-button>
-    <i-button type="dashed" disabled>Dashed(Disabled)</i-button>
+    <Button type="dashed">Dashed</Button>
+    <Button type="dashed" disabled>Dashed(Disabled)</Button>
     <br>
-    <i-button type="text">Text</i-button>
-    <i-button type="text" disabled>Text(Disabled)</i-button>
+    <Button type="text">Text</Button>
+    <Button type="text" disabled>Text(Disabled)</Button>
 </template>
 <script>
     export default {
@@ -95,15 +95,15 @@ code.disabled = `
 
 code.loading = `
 <template>
-    <i-button type="primary" loading>Loading...</i-button>
-    <i-button type="primary" :loading="loading" @click="toLoading">
+    <Button type="primary" loading>Loading...</Button>
+    <Button type="primary" :loading="loading" @click="toLoading">
         <span v-if="!loading">Click me!</span>
         <span v-else>Loading...</span>
-    </i-button>
-    <i-button type="primary" :loading="loading2" icon="checkmark-round" @click="toLoading2">
+    </Button>
+    <Button type="primary" :loading="loading2" icon="checkmark-round" @click="toLoading2">
         <span v-if="!loading2">Click me!</span>
         <span v-else>Loading...</span>
-    </i-button>
+    </Button>
 </template>
 <script>
     export default {
@@ -129,93 +129,93 @@ code.group = `
     <h4>基本</h4>
     <br><br>
     <Button-group>
-        <i-button>取消</i-button>
-        <i-button type="primary">确定</i-button>
+        <Button>取消</Button>
+        <Button type="primary">确定</Button>
     </Button-group>
     <Button-group>
-        <i-button disabled>昨日</i-button>
-        <i-button disabled>今日</i-button>
-        <i-button disabled>明日</i-button>
+        <Button disabled>昨日</Button>
+        <Button disabled>今日</Button>
+        <Button disabled>明日</Button>
     </Button-group>
     <Button-group>
-        <i-button type="primary">L</i-button>
-        <i-button>M</i-button>
-        <i-button type="ghost">M</i-button>
-        <i-button type="dashed">R</i-button>
+        <Button type="primary">L</Button>
+        <Button>M</Button>
+        <Button type="ghost">M</Button>
+        <Button type="dashed">R</Button>
     </Button-group>
     <br><br>
     <h4>配合图标</h4>
     <br><br>
     <Button-group>
-        <i-button type="primary">
+        <Button type="primary">
             <Icon type="chevron-left"></Icon>
             前进
-        </i-button>
-        <i-button type="primary">
+        </Button>
+        <Button type="primary">
             后退
             <Icon type="chevron-right"></Icon>
-        </i-button>
+        </Button>
     </Button-group>
     <Button-group>
-        <i-button type="primary" icon="ios-skipbackward"></i-button>
-        <i-button type="primary" icon="ios-skipforward"></i-button>
+        <Button type="primary" icon="ios-skipbackward"></Button>
+        <Button type="primary" icon="ios-skipforward"></Button>
     </Button-group>
     <Button-group>
-        <i-button type="ghost" icon="ios-color-wand-outline"></i-button>
-        <i-button type="ghost" icon="ios-sunny-outline"></i-button>
-        <i-button type="ghost" icon="ios-crop"></i-button>
-        <i-button type="ghost" icon="ios-color-filter-outline"></i-button>
+        <Button type="ghost" icon="ios-color-wand-outline"></Button>
+        <Button type="ghost" icon="ios-sunny-outline"></Button>
+        <Button type="ghost" icon="ios-crop"></Button>
+        <Button type="ghost" icon="ios-color-filter-outline"></Button>
     </Button-group>
     <br><br>
     <h4>圆角</h4>
     <br><br>
     <Button-group shape="circle">
-        <i-button type="primary">
+        <Button type="primary">
             <Icon type="chevron-left"></Icon>
             前进
-        </i-button>
-        <i-button type="primary">
+        </Button>
+        <Button type="primary">
             后退
             <Icon type="chevron-right"></Icon>
-        </i-button>
+        </Button>
     </Button-group>
     <Button-group shape="circle">
-        <i-button type="primary" icon="ios-skipbackward"></i-button>
-        <i-button type="primary" icon="ios-skipforward"></i-button>
+        <Button type="primary" icon="ios-skipbackward"></Button>
+        <Button type="primary" icon="ios-skipforward"></Button>
     </Button-group>
     <Button-group shape="circle">
-        <i-button type="ghost" icon="ios-color-wand-outline"></i-button>
-        <i-button type="ghost" icon="ios-sunny-outline"></i-button>
-        <i-button type="ghost" icon="ios-crop"></i-button>
-        <i-button type="ghost" icon="ios-color-filter-outline"></i-button>
+        <Button type="ghost" icon="ios-color-wand-outline"></Button>
+        <Button type="ghost" icon="ios-sunny-outline"></Button>
+        <Button type="ghost" icon="ios-crop"></Button>
+        <Button type="ghost" icon="ios-color-filter-outline"></Button>
     </Button-group>
     <br><br>
     <h4>尺寸</h4>
     <br><br>
     <Button-group size="large">
-        <i-button type="ghost">Large</i-button>
-        <i-button type="ghost">Large</i-button>
+        <Button type="ghost">Large</Button>
+        <Button type="ghost">Large</Button>
     </Button-group>
     <Button-group>
-        <i-button type="ghost">Default</i-button>
-        <i-button type="ghost">Default</i-button>
+        <Button type="ghost">Default</Button>
+        <Button type="ghost">Default</Button>
     </Button-group>
     <Button-group size="small">
-        <i-button type="ghost">Small</i-button>
-        <i-button type="ghost">Small</i-button>
+        <Button type="ghost">Small</Button>
+        <Button type="ghost">Small</Button>
     </Button-group>
     <br><br>
     <Button-group size="large" shape="circle">
-        <i-button type="ghost">Large</i-button>
-        <i-button type="ghost">Large</i-button>
+        <Button type="ghost">Large</Button>
+        <Button type="ghost">Large</Button>
     </Button-group>
     <Button-group shape="circle">
-        <i-button type="ghost">Default</i-button>
-        <i-button type="ghost">Default</i-button>
+        <Button type="ghost">Default</Button>
+        <Button type="ghost">Default</Button>
     </Button-group>
     <Button-group size="small" shape="circle">
-        <i-button type="ghost">Small</i-button>
-        <i-button type="ghost">Small</i-button>
+        <Button type="ghost">Small</Button>
+        <Button type="ghost">Small</Button>
     </Button-group>
 </template>
 <script>
@@ -228,10 +228,10 @@ code.group = `
 code.vertical = `
 <template>
     <Button-group vertical>
-        <i-button type="ghost" icon="social-facebook"></i-button>
-        <i-button type="ghost" icon="social-twitter"></i-button>
-        <i-button type="ghost" icon="social-googleplus"></i-button>
-        <i-button type="ghost" icon="social-tumblr"></i-button>
+        <Button type="ghost" icon="social-facebook"></Button>
+        <Button type="ghost" icon="social-twitter"></Button>
+        <Button type="ghost" icon="social-googleplus"></Button>
+        <Button type="ghost" icon="social-tumblr"></Button>
     </Button-group>
 </template>
 <script>
