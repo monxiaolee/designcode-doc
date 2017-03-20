@@ -85,10 +85,16 @@ Vue.use(VueRouter);
 Vue.use(iView);
 
 // 路由配置
-let router = new VueRouter();
+const RouterConfig = {
+    routes: Routers
+};
+const router = new VueRouter(RouterConfig);
 
-router.map(Routers);
-router.start(App, '#app');
+new Vue({
+    el: '#app',
+    router: router,
+    render: h => h(App)
+});
 `;
 
 install.need = `
@@ -97,7 +103,7 @@ import Checkbox from 'iview/src/components/checkbox';
 
 install.warning = `
 module: {
-    loaders: [
+    rules: [
         { test: /iview.src.*?js$/, loader: 'babel' },
         { test: /\\.js$/, loader: 'babel', exclude: /node_modules/ }
     ]

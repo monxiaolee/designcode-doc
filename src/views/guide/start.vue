@@ -6,16 +6,16 @@
             <p>高效的开发，离不开基础工程的搭建。在开始使用 iView 之前，有必要先了解以下基础知识，我们也假设您已经写过 Vue，并掌握了下面的内容。</p>
             <ul>
                 <li>
-                    <a href="http://v1-cn.vuejs.org/guide/components.html" target="_blank">Vue组件</a>
+                    <a href="https://cn.vuejs.org/v2/guide/components.html" target="_blank">Vue组件</a>
                 </li>
                 <li>
-                    <a href="http://v1-cn.vuejs.org/guide/application.html" target="_blank">基于Vue构建大型应用</a>
+                    <a href="https://cn.vuejs.org/v2/guide/single-file-components.html" target="_blank">单文件组件</a>
                 </li>
             </ul>
             <p>以下概念贯穿 iView 前后，建议开发者花点时间来了解。</p>
             <ul>
                 <li>
-                    <code>props</code> 传递数据，以及<code>:prop</code> <code>:prop.sync</code> <code>:prop.once</code>的区别
+                    <code>props</code> 传递数据
                 </li>
                 <li>
                     <code>slot</code> 内容分发
@@ -25,27 +25,12 @@
                 </li>
             </ul>
             <Anchor title="使用脚手架 iView Cli（推荐）" h2></Anchor>
-            <p>使用 <a v-link="{path: '/cli'}">iView Cli</a> 可以通过可视化的方式快速构建 iView 工程，并且可以根据业务进行丰富的配置。</p>
+            <p>使用 <router-link to="/cli">iView Cli</router-link> 可以通过可视化的方式快速构建 iView 工程，并且可以根据业务进行丰富的配置。</p>
             <Anchor title="使用推荐工程" h2></Anchor>
-            <p>我们已经为您准备好了基础工程和一些详细的教程，以此为基础开发，可以为您省去大量配置和调试环境的时间。</p>
+            <p>我们也为您准备好了基础工程，以此为基础开发，可以为您省去大量配置和调试环境的时间。</p>
             <p>
                 推荐工程：<a href="https://github.com/iview/iview-project" target="_blank">iview-project</a>
             </p>
-            <p>教程（如果您初次接触 webpack，建议阅读）：</p>
-            <ul>
-                <li>
-                    <a href="https://www.talkingcoder.com/article/6310080842228107877?from=iview" target="_blank">《Vue+Webpack开发可复用的单页面富应用教程（配置篇）》</a>
-                </li>
-                <li>
-                    <a href="https://www.talkingcoder.com/article/6310724958473489215?from=iview" target="_blank">《Vue+Webpack开发可复用的单页面富应用教程（组件篇）》</a>
-                </li>
-                <li>
-                    <a href="https://www.talkingcoder.com/article/6310756346094488391?from=iview" target="_blank">《Vue+Webpack开发可复用的单页面富应用教程（技巧篇）》</a>
-                </li>
-                <li>
-                    <a href="https://www.talkingcoder.com/article/6309726065044556372?from=iview" target="_blank">《Vue+Webpack使用规范》</a>
-                </li>
-            </ul>
             <p>如果您使用了我们推荐的工程，可以略过下面的内容直接进入开发阶段，我们也推荐使用这套工程来构建您的项目。</p>
             <p>如果您希望自己配置或使用其它工程，比如 <a href="https://github.com/vuejs/vue-cli" target="_blank">vue-cli</a>，请继续往下阅读。</p>
             <Anchor title="引入 iView" h2></Anchor>

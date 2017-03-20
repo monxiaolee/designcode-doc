@@ -80,6 +80,13 @@ const routers = [
         component: require('./views/guide/install.vue')
     },
     {
+        path: '/docs/guide/start',
+        meta: {
+            title: '快速上手'
+        },
+        component: require('./views/guide/start.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
