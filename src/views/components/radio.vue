@@ -12,53 +12,53 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="单独使用">
                 <div slot="demo">
-                    <Radio :checked.sync="single">Radio</Radio>
-                    <p class="demo-data">{{ single | json }}</p>
+                    <Radio v-model="single">Radio</Radio>
+                    <p class="demo-data">{{ single }}</p>
                 </div>
                 <div slot="desc">
-                    <p>通过设置<code>checked</code>来选中。需要将<code>checked</code>设置<code>.sync</code>实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                    <p>使用 v-model 可以双向绑定数据。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.single }}</i-code>
             </Demo>
             <Demo title="组合使用">
                 <div slot="demo">
-                    <Radio-group :model.sync="phone">
-                        <Radio value="apple">
+                    <Radio-group v-model="phone">
+                        <Radio label="apple">
                             <Icon type="social-apple"></Icon>
                             <span>Apple</span>
                         </Radio>
-                        <Radio value="android">
+                        <Radio label="android">
                             <Icon type="social-android"></Icon>
                             <span>Android</span>
                         </Radio>
-                        <Radio value="windows">
+                        <Radio label="windows">
                             <Icon type="social-windows"></Icon>
                             <span>Windows</span>
                         </Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ phone | json }}</p>
-                    <Radio-group :model.sync="animal">
-                        <Radio value="金斑蝶"></Radio>
-                        <Radio value="爪哇犀牛"></Radio>
-                        <Radio value="印度黑羚"></Radio>
+                    <p class="demo-data">{{ phone }}</p>
+                    <Radio-group v-model="animal">
+                        <Radio label="金斑蝶"></Radio>
+                        <Radio label="爪哇犀牛"></Radio>
+                        <Radio label="印度黑羚"></Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ animal | json }}</p>
+                    <p class="demo-data">{{ animal }}</p>
                 </div>
                 <div slot="desc">
-                    <p>使用<code>Radio-group</code>实现一组互斥的选项组。在组合使用时，<code>Radio</code>不再根据<code>checked</code>参数来判断状态，而是根据传入的<code>model</code>和<code>value</code>的值自动判断。需要将<code>model</code>设置<code>.sync</code>实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。每个 Radio 的内容可以自定义，如不填写则默认使用 value 的值。</p>
+                    <p>使用<code>Radio-group</code>实现一组互斥的选项组。在组合使用时，<code>Radio</code> 使用 <code>label</code> 来自动判断。每个 Radio 的内容可以自定义，如不填写则默认使用 label 的值。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>
             </Demo>
             <Demo title="不可用">
                 <div slot="demo">
-                    <Radio :checked.sync="disabledSingle" disabled>Radio</Radio>
-                    <p class="demo-data">{{ disabledSingle | json }}</p>
-                    <Radio-group :model.sync="disabledGroup">
-                        <Radio value="金斑蝶" disabled></Radio>
-                        <Radio value="爪哇犀牛"></Radio>
-                        <Radio value="印度黑羚"></Radio>
+                    <Radio v-model="disabledSingle" disabled>Radio</Radio>
+                    <p class="demo-data">{{ disabledSingle }}</p>
+                    <Radio-group v-model="disabledGroup">
+                        <Radio label="金斑蝶" disabled></Radio>
+                        <Radio label="爪哇犀牛"></Radio>
+                        <Radio label="印度黑羚"></Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ disabledGroup | json }}</p>
+                    <p class="demo-data">{{ disabledGroup }}</p>
                 </div>
                 <div slot="desc">
                     <p>通过设置<code>disabled</code>属性来禁用单选框。</p>
@@ -67,16 +67,16 @@
             </Demo>
             <Demo title="垂直">
                 <div slot="demo">
-                    <Radio-group :model.sync="vertical" vertical>
-                        <Radio value="apple">
+                    <Radio-group v-model="vertical" vertical>
+                        <Radio label="apple">
                             <Icon type="social-apple"></Icon>
                             <span>Apple</span>
                         </Radio>
-                        <Radio value="android">
+                        <Radio label="android">
                             <Icon type="social-android"></Icon>
                             <span>Android</span>
                         </Radio>
-                        <Radio value="windows">
+                        <Radio label="windows">
                             <Icon type="social-windows"></Icon>
                             <span>Windows</span>
                         </Radio>
@@ -89,27 +89,27 @@
             </Demo>
             <Demo title="按钮样式">
                 <div slot="demo">
-                    <Radio-group :model.sync="button1" type="button">
-                        <Radio value="北京"></Radio>
-                        <Radio value="上海"></Radio>
-                        <Radio value="深圳"></Radio>
-                        <Radio value="杭州"></Radio>
+                    <Radio-group v-model="button1" type="button">
+                        <Radio label="北京"></Radio>
+                        <Radio label="上海"></Radio>
+                        <Radio label="深圳"></Radio>
+                        <Radio label="杭州"></Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ button1 | json }}</p>
-                    <Radio-group :model.sync="button2" type="button">
-                        <Radio value="北京"></Radio>
-                        <Radio value="上海" disabled></Radio>
-                        <Radio value="深圳"></Radio>
-                        <Radio value="杭州"></Radio>
+                    <p class="demo-data">{{ button1 }}</p>
+                    <Radio-group v-model="button2" type="button">
+                        <Radio label="北京"></Radio>
+                        <Radio label="上海" disabled></Radio>
+                        <Radio label="深圳"></Radio>
+                        <Radio label="杭州"></Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ button2 | json }}</p>
-                    <Radio-group :model.sync="button3" type="button">
-                        <Radio value="北京" disabled></Radio>
-                        <Radio value="上海" disabled></Radio>
-                        <Radio value="深圳" disabled></Radio>
-                        <Radio value="杭州" disabled></Radio>
+                    <p class="demo-data">{{ button2 }}</p>
+                    <Radio-group v-model="button3" type="button">
+                        <Radio label="北京" disabled></Radio>
+                        <Radio label="上海" disabled></Radio>
+                        <Radio label="深圳" disabled></Radio>
+                        <Radio label="杭州" disabled></Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ button3 | json }}</p>
+                    <p class="demo-data">{{ button3 }}</p>
                 </div>
                 <div slot="desc">
                     <p>组合使用时可以设置属性<code>type</code>为 button 来应用按钮的样式。</p>
@@ -118,27 +118,27 @@
             </Demo>
             <Demo title="尺寸">
                 <div slot="demo">
-                    <Radio-group :model.sync="button4" type="button" size="large">
-                        <Radio value="北京"></Radio>
-                        <Radio value="上海"></Radio>
-                        <Radio value="深圳"></Radio>
-                        <Radio value="杭州"></Radio>
+                    <Radio-group v-model="button4" type="button" size="large">
+                        <Radio label="北京"></Radio>
+                        <Radio label="上海"></Radio>
+                        <Radio label="深圳"></Radio>
+                        <Radio label="杭州"></Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ button4 | json }}</p>
-                    <Radio-group :model.sync="button5" type="button">
-                        <Radio value="北京"></Radio>
-                        <Radio value="上海"></Radio>
-                        <Radio value="深圳"></Radio>
-                        <Radio value="杭州"></Radio>
+                    <p class="demo-data">{{ button4 }}</p>
+                    <Radio-group v-model="button5" type="button">
+                        <Radio label="北京"></Radio>
+                        <Radio label="上海"></Radio>
+                        <Radio label="深圳"></Radio>
+                        <Radio label="杭州"></Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ button5 | json }}</p>
-                    <Radio-group :model.sync="button6" type="button" size="small">
-                        <Radio value="北京"></Radio>
-                        <Radio value="上海"></Radio>
-                        <Radio value="深圳"></Radio>
-                        <Radio value="杭州"></Radio>
+                    <p class="demo-data">{{ button5 }}</p>
+                    <Radio-group v-model="button6" type="button" size="small">
+                        <Radio label="北京"></Radio>
+                        <Radio label="上海"></Radio>
+                        <Radio label="深圳"></Radio>
+                        <Radio label="杭州"></Radio>
                     </Radio-group>
-                    <p class="demo-data">{{ button6 | json }}</p>
+                    <p class="demo-data">{{ button6 }}</p>
                 </div>
                 <div slot="desc">
                     <p>通过设置属性<code>size</code>为<code>large</code>或<code>small</code>将按钮样式设置为大和小尺寸，不设置为默认(中)尺寸。</p>
@@ -159,14 +159,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>checked</td>
-                            <td>只在单独使用时有效。绑定数据，需要使用<code>.sync</code>双向绑定，否则改变状态时并不能改变使用者的数据</td>
+                            <td>value</td>
+                            <td>只在单独使用时有效。可以使用 <code>v-model</code> 双向绑定数据</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
-                            <td>value</td>
-                            <td>只在组合使用时有效。指定当前选项的value值，组合会自动判断当前选择的项目</td>
+                            <td>label </td>
+                            <td>只在组合使用时有效。指定当前选项的 value 值，组合会自动判断当前选择的项目</td>
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>
@@ -207,8 +207,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>model</td>
-                            <td>指定当前选中的项目数据。需要使用<code>.sync</code>双向绑定，否则改变状态时并不能改变使用者的数据</td>
+                            <td>value</td>
+                            <td>指定当前选中的项目数据。可以使用 <code>v-model</code> 双向绑定数据</td>
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>

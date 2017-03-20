@@ -157,6 +157,13 @@ const routers = [
         component: require('./views/components/input.vue')
     },
     {
+        path: '/components/radio',
+        meta: {
+            title: '单选框 Radio'
+        },
+        component: require('./views/components/radio.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

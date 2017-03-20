@@ -2,7 +2,7 @@ let code = {};
 
 code.single = `
 <template>
-    <Radio :checked.sync="single">Radio</Radio>
+    <Radio v-model="single">Radio</Radio>
 </template>
 <script>
     export default {
@@ -17,24 +17,24 @@ code.single = `
 
 code.group = `
 <template>
-    <Radio-group :model.sync="phone">
-        <Radio value="apple">
+    <Radio-group v-model="phone">
+        <Radio label="apple">
             <Icon type="social-apple"></Icon>
             <span>Apple</span>
         </Radio>
-        <Radio value="android">
+        <Radio label="android">
             <Icon type="social-android"></Icon>
             <span>Android</span>
         </Radio>
-        <Radio value="windows">
+        <Radio label="windows">
             <Icon type="social-windows"></Icon>
             <span>Windows</span>
         </Radio>
     </Radio-group>
-    <Radio-group :model.sync="animal">
-        <Radio value="金斑蝶"></Radio>
-        <Radio value="爪哇犀牛"></Radio>
-        <Radio value="印度黑羚"></Radio>
+    <Radio-group v-model="animal">
+        <Radio label="金斑蝶"></Radio>
+        <Radio label="爪哇犀牛"></Radio>
+        <Radio label="印度黑羚"></Radio>
     </Radio-group>
 </template>
 <script>
@@ -51,11 +51,11 @@ code.group = `
 
 code.disabled = `
 <template>
-    <Radio :checked.sync="disabledSingle" disabled>Radio</Radio>
-    <Radio-group :model.sync="disabledGroup">
-        <Radio value="金斑蝶" disabled></Radio>
-        <Radio value="爪哇犀牛"></Radio>
-        <Radio value="印度黑羚"></Radio>
+    <Radio v-model="disabledSingle" disabled>Radio</Radio>
+    <Radio-group v-model="disabledGroup">
+        <Radio label="金斑蝶" disabled></Radio>
+        <Radio label="爪哇犀牛"></Radio>
+        <Radio label="印度黑羚"></Radio>
     </Radio-group>
 </template>
 <script>
@@ -72,16 +72,16 @@ code.disabled = `
 
 code.vertical = `
 <template>
-    <Radio-group :model.sync="vertical" vertical>
-        <Radio value="apple">
+    <Radio-group v-model="vertical" vertical>
+        <Radio label="apple">
             <Icon type="social-apple"></Icon>
             <span>Apple</span>
         </Radio>
-        <Radio value="android">
+        <Radio label="android">
             <Icon type="social-android"></Icon>
             <span>Android</span>
         </Radio>
-        <Radio value="windows">
+        <Radio label="windows">
             <Icon type="social-windows"></Icon>
             <span>Windows</span>
         </Radio>
@@ -100,23 +100,23 @@ code.vertical = `
 
 code.button = `
 <template>
-    <Radio-group :model.sync="button1" type="button">
-        <Radio value="北京"></Radio>
-        <Radio value="上海"></Radio>
-        <Radio value="深圳"></Radio>
-        <Radio value="杭州"></Radio>
+    <Radio-group v-model="button1" type="button">
+        <Radio label="北京"></Radio>
+        <Radio label="上海"></Radio>
+        <Radio label="深圳"></Radio>
+        <Radio label="杭州"></Radio>
     </Radio-group>
-    <Radio-group :model.sync="button2" type="button">
-        <Radio value="北京"></Radio>
-        <Radio value="上海" disabled></Radio>
-        <Radio value="深圳"></Radio>
-        <Radio value="杭州"></Radio>
+    <Radio-group v-model="button2" type="button">
+        <Radio label="北京"></Radio>
+        <Radio label="上海" disabled></Radio>
+        <Radio label="深圳"></Radio>
+        <Radio label="杭州"></Radio>
     </Radio-group>
-    <Radio-group :model.sync="button3" type="button">
-        <Radio value="北京" disabled></Radio>
-        <Radio value="上海" disabled></Radio>
-        <Radio value="深圳" disabled></Radio>
-        <Radio value="杭州" disabled></Radio>
+    <Radio-group v-model="button3" type="button">
+        <Radio label="北京" disabled></Radio>
+        <Radio label="上海" disabled></Radio>
+        <Radio label="深圳" disabled></Radio>
+        <Radio label="杭州" disabled></Radio>
     </Radio-group>
 </template>
 <script>
@@ -134,23 +134,23 @@ code.button = `
 
 code.size = `
 <template>
-    <Radio-group :model.sync="button4" type="button" size="large">
-        <Radio value="北京"></Radio>
-        <Radio value="上海"></Radio>
-        <Radio value="深圳"></Radio>
-        <Radio value="杭州"></Radio>
+    <Radio-group v-model="button4" type="button" size="large">
+        <Radio label="北京"></Radio>
+        <Radio label="上海"></Radio>
+        <Radio label="深圳"></Radio>
+        <Radio label="杭州"></Radio>
     </Radio-group>
-    <Radio-group :model.sync="button5" type="button">
-        <Radio value="北京"></Radio>
-        <Radio value="上海"></Radio>
-        <Radio value="深圳"></Radio>
-        <Radio value="杭州"></Radio>
+    <Radio-group v-model="button5" type="button">
+        <Radio label="北京"></Radio>
+        <Radio label="上海"></Radio>
+        <Radio label="深圳"></Radio>
+        <Radio label="杭州"></Radio>
     </Radio-group>
-    <Radio-group :model.sync="button6" type="button" size="small">
-        <Radio value="北京"></Radio>
-        <Radio value="上海"></Radio>
-        <Radio value="深圳"></Radio>
-        <Radio value="杭州"></Radio>
+    <Radio-group v-model="button6" type="button" size="small">
+        <Radio label="北京"></Radio>
+        <Radio label="上海"></Radio>
+        <Radio label="深圳"></Radio>
+        <Radio label="杭州"></Radio>
     </Radio-group>
 </template>
 <script>
