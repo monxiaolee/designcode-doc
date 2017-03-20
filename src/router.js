@@ -94,6 +94,13 @@ const routers = [
         component: require('./views/guide/i18n.vue')
     },
     {
+        path: '/docs/guide/theme',
+        meta: {
+            title: '定制主题'
+        },
+        component: require('./views/guide/theme.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
