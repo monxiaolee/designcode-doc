@@ -10,6 +10,13 @@ const routers = [
         component: require('./views/index.vue')
     },
     {
+        path: '/cli',
+        meta: {
+            title: 'iView Cli 可视化脚手架'
+        },
+        component: require('./views/cli.vue')
+    },
+    {
         path: '/docs/guide/introduce',
         meta: {
             title: 'iView介绍'
