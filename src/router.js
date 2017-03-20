@@ -17,6 +17,20 @@ const routers = [
         component: require('./views/guide/introduce.vue')
     },
     {
+        path: '/docs/guide/design',
+        meta: {
+            title: '设计原则'
+        },
+        component: require('./views/guide/design.vue')
+    },
+    {
+        path: '/docs/guide/layout',
+        meta: {
+            title: '布局'
+        },
+        component: require('./views/guide/layout.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

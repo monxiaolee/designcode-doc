@@ -46,32 +46,32 @@ code.top = `
 </style>
 <template>
     <div class="layout">
-        <Menu mode="horizontal" theme="dark" active-key="1">
+        <Menu mode="horizontal" theme="dark" active-name="1">
             <div class="layout-logo"></div>
             <div class="layout-nav">
-                <Menu-item key="1">
+                <Menu-item name="1">
                     <Icon type="ios-navigate"></Icon>
                     导航一
                 </Menu-item>
-                <Menu-item key="2">
+                <Menu-item name="2">
                     <Icon type="ios-keypad"></Icon>
                     导航二
                 </Menu-item>
-                <Menu-item key="3">
+                <Menu-item name="3">
                     <Icon type="ios-analytics"></Icon>
                     导航三
                 </Menu-item>
-                <Menu-item key="4">
+                <Menu-item name="4">
                     <Icon type="ios-paper"></Icon>
                     导航四
                 </Menu-item>
             </div>
         </Menu>
-        <Menu mode="horizontal" active-key="1">
+        <Menu mode="horizontal" active-name="1">
             <div class="layout-assistant">
-                <Menu-item key="1">二级导航</Menu-item>
-                <Menu-item key="2">二级导航</Menu-item>
-                <Menu-item key="3">二级导航</Menu-item>
+                <Menu-item name="1">二级导航</Menu-item>
+                <Menu-item name="2">二级导航</Menu-item>
+                <Menu-item name="3">二级导航</Menu-item>
             </div>
         </Menu>
         <div class="layout-breadcrumb">
@@ -142,62 +142,62 @@ code.left = `
 </style>
 <template>
     <div class="layout">
-        <Menu mode="horizontal" theme="dark" active-key="1">
+        <Menu mode="horizontal" theme="dark" active-name="1">
             <div class="layout-logo"></div>
             <div class="layout-nav">
-                <Menu-item key="1">
+                <Menu-item name="1">
                     <Icon type="ios-navigate"></Icon>
                     导航一
                 </Menu-item>
-                <Menu-item key="2">
+                <Menu-item name="2">
                     <Icon type="ios-keypad"></Icon>
                     导航二
                 </Menu-item>
-                <Menu-item key="3">
+                <Menu-item name="3">
                     <Icon type="ios-analytics"></Icon>
                     导航三
                 </Menu-item>
-                <Menu-item key="4">
+                <Menu-item name="4">
                     <Icon type="ios-paper"></Icon>
                     导航四
                 </Menu-item>
             </div>
         </Menu>
-        <Menu mode="horizontal" active-key="1">
+        <Menu mode="horizontal" active-name="1">
             <div class="layout-assistant">
-                <Menu-item key="1">二级导航</Menu-item>
-                <Menu-item key="2">二级导航</Menu-item>
-                <Menu-item key="3">二级导航</Menu-item>
+                <Menu-item name="1">二级导航</Menu-item>
+                <Menu-item name="2">二级导航</Menu-item>
+                <Menu-item name="3">二级导航</Menu-item>
             </div>
         </Menu>
         <div class="layout-content">
             <Row>
                 <i-col span="5">
-                    <Menu active-key="1-2" width="auto" :open-keys="['1']">
-                        <Submenu key="1">
+                    <Menu active-name="1-2" width="auto" :open-names="['1']">
+                        <Submenu name="1">
                             <template slot="title">
                                 <Icon type="ios-navigate"></Icon>
                                 导航一
                             </template>
-                            <Menu-item key="1-1">选项 1</Menu-item>
-                            <Menu-item key="1-2">选项 2</Menu-item>
-                            <Menu-item key="1-3">选项 3</Menu-item>
+                            <Menu-item name="1-1">选项 1</Menu-item>
+                            <Menu-item name="1-2">选项 2</Menu-item>
+                            <Menu-item name="1-3">选项 3</Menu-item>
                         </Submenu>
-                        <Submenu key="2">
+                        <Submenu name="2">
                             <template slot="title">
                                 <Icon type="ios-keypad"></Icon>
                                 导航二
                             </template>
-                            <Menu-item key="2-1">选项 1</Menu-item>
-                            <Menu-item key="2-2">选项 2</Menu-item>
+                            <Menu-item name="2-1">选项 1</Menu-item>
+                            <Menu-item name="2-2">选项 2</Menu-item>
                         </Submenu>
-                        <Submenu key="3">
+                        <Submenu name="3">
                             <template slot="title">
                                 <Icon type="ios-analytics"></Icon>
                                 导航三
                             </template>
-                            <Menu-item key="3-1">选项 1</Menu-item>
-                            <Menu-item key="3-2">选项 2</Menu-item>
+                            <Menu-item name="3-1">选项 1</Menu-item>
+                            <Menu-item name="3-2">选项 2</Menu-item>
                         </Submenu>
                     </Menu>
                 </i-col>
@@ -263,32 +263,32 @@ code.side = `
     <div class="layout">
         <Row type="flex">
             <i-col span="5" class="layout-menu-left">
-                <Menu active-key="1-2" theme="dark" width="auto" :open-keys="['1']">
+                <Menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
                     <div class="layout-logo-left"></div>
-                    <Submenu key="1">
+                    <Submenu name="1">
                         <template slot="title">
                             <Icon type="ios-navigate"></Icon>
                             导航一
                         </template>
-                        <Menu-item key="1-1">选项 1</Menu-item>
-                        <Menu-item key="1-2">选项 2</Menu-item>
-                        <Menu-item key="1-3">选项 3</Menu-item>
+                        <Menu-item name="1-1">选项 1</Menu-item>
+                        <Menu-item name="1-2">选项 2</Menu-item>
+                        <Menu-item name="1-3">选项 3</Menu-item>
                     </Submenu>
-                    <Submenu key="2">
+                    <Submenu name="2">
                         <template slot="title">
                             <Icon type="ios-keypad"></Icon>
                             导航二
                         </template>
-                        <Menu-item key="2-1">选项 1</Menu-item>
-                        <Menu-item key="2-2">选项 2</Menu-item>
+                        <Menu-item name="2-1">选项 1</Menu-item>
+                        <Menu-item name="2-2">选项 2</Menu-item>
                     </Submenu>
-                    <Submenu key="3">
+                    <Submenu name="3">
                         <template slot="title">
                             <Icon type="ios-analytics"></Icon>
                             导航三
                         </template>
-                        <Menu-item key="3-1">选项 1</Menu-item>
-                        <Menu-item key="3-2">选项 2</Menu-item>
+                        <Menu-item name="3-1">选项 1</Menu-item>
+                        <Menu-item name="3-2">选项 2</Menu-item>
                     </Submenu>
                 </Menu>
             </i-col>
@@ -442,17 +442,17 @@ code.fold = `
     <div class="layout" :class="{'layout-hide-text': spanLeft < 5}">
         <Row type="flex">
             <i-col :span="spanLeft" class="layout-menu-left">
-                <Menu active-key="1" theme="dark" width="auto">
+                <Menu active-name="1" theme="dark" width="auto">
                     <div class="layout-logo-left"></div>
-                    <Menu-item key="1">
+                    <Menu-item name="1">
                         <Icon type="ios-navigate" :size="iconSize"></Icon>
                         <span class="layout-text">选项 1</span>
                     </Menu-item>
-                    <Menu-item key="2">
+                    <Menu-item name="2">
                         <Icon type="ios-keypad" :size="iconSize"></Icon>
                         <span class="layout-text">选项 2</span>
                     </Menu-item>
-                    <Menu-item key="3">
+                    <Menu-item name="3">
                         <Icon type="ios-analytics" :size="iconSize"></Icon>
                         <span class="layout-text">选项 3</span>
                     </Menu-item>

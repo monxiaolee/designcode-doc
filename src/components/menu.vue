@@ -92,7 +92,7 @@
                 this.$refs.select.setQuery('');
                 this.$nextTick(() => {
                     setTimeout(() => {
-                        this.$router.go(val);
+                        this.$router.push(val);
                     }, 300);
                 });
             },
@@ -102,15 +102,15 @@
                 } else if (type === 'github') {
                     window.open('https://github.com/iview/iview');
                 } else if (type === 'guide') {
-                    this.$router.go(navigate.guide[0].path);
+                    this.$router.push(navigate.guide[0].path);
                 } else if (type === 'component') {
-                    this.$router.go(navigate.beforeComponents[0].path);
+                    this.$router.push(navigate.beforeComponents[0].path);
                 } else if (type === 'practice') {
-                    this.$router.go(navigate.practice[0].path);
+                    this.$router.push(navigate.practice[0].path);
                 } else if (type === 'cli') {
-                    this.$router.go('/cli');
+                    this.$router.push('/cli');
                 } else if (type === 'live') {
-                    this.$router.go('/live');
+                    this.$router.push('/live');
                 }
                 this.$nextTick(() => {
                     this.updateActiveNav();

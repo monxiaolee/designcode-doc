@@ -56,7 +56,7 @@
             },
             handleSelect (path) {
                 this.$nextTick(() => {
-                    this.$router.go(path);
+                    this.$router.push(path);
                 });
             }
         },

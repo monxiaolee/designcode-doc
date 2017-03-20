@@ -78,7 +78,7 @@
                 return style;
             }
         },
-        ready () {
+        mounted () {
             this.$nextTick(() => {
                 const demo_height = this.$children[0].$children[0].$el.clientHeight;
                 const code_height = this.$children[0].$children[1].$el.clientHeight + 20;
