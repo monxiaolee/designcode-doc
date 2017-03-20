@@ -24,6 +24,13 @@ const routers = [
         component: require('./views/live.vue')
     },
     {
+        path: '/overview',
+        meta: {
+            title: '概览'
+        },
+        component: require('./views/guide/overview.vue')
+    },
+    {
         path: '/docs/guide/introduce',
         meta: {
             title: 'iView介绍'

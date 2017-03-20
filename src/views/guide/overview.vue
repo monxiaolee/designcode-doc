@@ -20,15 +20,15 @@
         <div class="overview" v-for="item in navigate.components">
             <h3>{{ item.title + ' ' + item.type }}</h3>
             <Row>
-                <i-col v-for="component in item.list" :span="span">
-                    <a v-link="{path: component.path}">
+                <i-col v-for="component in item.list" :span="span" :key="component.path">
+                    <router-link :to="component.path">
                         <Card>
                             <p slot="title">{{ component.title }}</p>
                             <div class="overview-card-img">
                                 <img :src="filePath + component.img">
                             </div>
                         </Card>
-                    </a>
+                    </router-link>
                 </i-col>
             </Row>
         </div>
@@ -56,7 +56,7 @@
         computed: {
         
         },
-        ready () {
+        mounted () {
             this.updateSpin();
             window.addEventListener('resize', this.updateSpin, false);
         },
