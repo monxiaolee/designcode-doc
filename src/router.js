@@ -199,6 +199,13 @@ const routers = [
         component: require('./views/components/slider.vue')
     },
     {
+        path: '/components/date-picker',
+        meta: {
+            title: '日期选择器 DatePicker'
+        },
+        component: require('./views/components/date-picker.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

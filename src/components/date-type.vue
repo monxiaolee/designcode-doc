@@ -1,5 +1,5 @@
 <template>
-    <Modal :visible.sync="visible" title="常见的日期和时间格式">
+    <Modal v-model="currentVisible" title="常见的日期和时间格式">
         <div class="api">
             <table>
                 <thead>
@@ -161,9 +161,22 @@
 <script>
     export default {
         props: {
-            visible: {
+            value: {
                 type: Boolean,
                 default: false
+            }
+        },
+        data () {
+            return {
+                currentVisible: this.value
+            }
+        },
+        watch: {
+            value (val) {
+                this.currentVisible = val;
+            },
+            currentVisible (val) {
+                this.$emit('input', val);
             }
         }
     };

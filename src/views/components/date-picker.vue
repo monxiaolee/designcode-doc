@@ -4,190 +4,191 @@
     }
 </style>
 <template>
-    <i-article>
-        <article>
-            <h1>DatePicker 日期选择器</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>选择或输入日期，支持年、月、日期等类型，支持选择范围。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基础用法">
-                <div slot="demo">
-                    <row>
-                        <i-col span="12">
+    <div>
+        <i-article>
+            <article>
+                <h1>DatePicker 日期选择器</h1>
+                <Anchor title="概述" h2></Anchor>
+                <p>选择或输入日期，支持年、月、日期等类型，支持选择范围。</p>
+                <Anchor title="代码示例" h2></Anchor>
+                <Demo title="基础用法">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
                             <Date-picker type="date" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                        <i-col span="12">
+                            </Col>
+                            <Col span="12">
                             <Date-picker type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                    </row>
-                </div>
-                <div slot="desc">
-                    <p>设置属性 <code>type</code> 为 <code>date</code> 或 <code>daterange</code> 分别显示<strong>选择单日</strong>和<strong>选择范围</strong>类型。</p>
-                    <p>设置属性 <code>placement</code> 可以更改选择器出现的方向，与 Poptip 和 Tooltip 配置一致，支持 12 个方向，详见 API。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.base }}</i-code>
-            </Demo>
-            <Demo title="快捷方式">
-                <div slot="demo">
-                    <row>
-                        <i-col span="12">
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>type</code> 为 <code>date</code> 或 <code>daterange</code> 分别显示<strong>选择单日</strong>和<strong>选择范围</strong>类型。</p>
+                        <p>设置属性 <code>placement</code> 可以更改选择器出现的方向，与 Poptip 和 Tooltip 配置一致，支持 12 个方向，详见 API。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.base }}</i-code>
+                </Demo>
+                <Demo title="快捷方式">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
                             <Date-picker type="date" :options="options1" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                        <i-col span="12">
+                            </Col>
+                            <Col span="12">
                             <Date-picker type="daterange" :options="options2" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                    </row>
-                </div>
-                <div slot="desc">
-                    <p>设置属性 <code>options</code> 对象中的 <code>shortcuts</code> 可以设置快捷选项，详见示例代码。</p>
-                    <p>其中 <strong>value</strong> 为函数，必须返回一个日期，如果是 daterange 类型，需要返回一个数组。</p>
-                    <p>value 接收任何正确的日期格式，比如 2016-12-24 或 12/24/16 都是正确的。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.shortcuts }}</i-code>
-            </Demo>
-            <Demo title="日期格式">
-                <div slot="demo">
-                    <row>
-                        <i-col span="12">
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>options</code> 对象中的 <code>shortcuts</code> 可以设置快捷选项，详见示例代码。</p>
+                        <p>其中 <strong>value</strong> 为函数，必须返回一个日期，如果是 daterange 类型，需要返回一个数组。</p>
+                        <p>value 接收任何正确的日期格式，比如 2016-12-24 或 12/24/16 都是正确的。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.shortcuts }}</i-code>
+                </Demo>
+                <Demo title="日期格式">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
                             <Date-picker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                        <i-col span="12">
+                            </Col>
+                            <Col span="12">
                             <Date-picker :value="value2" format="yyyy/MM/dd" type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                    </row>
-                </div>
-                <div slot="desc">
-                    <p>设置属性 <code>format</code> 可以改变日期的显示格式，详见 <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a>。</p>
-                    <p>注意，format 只是改变显示的格式，并非改变 value 值。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.format }}</i-code>
-            </Demo>
-            <Demo title="日期时间选择">
-                <div slot="demo">
-                    <Date-picker type="datetime" placeholder="选择日期和时间" style="width: 200px"></Date-picker>
-                    <br>
-                    <Date-picker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></Date-picker>
-                    <br>
-                    <Date-picker type="datetimerange" placeholder="选择日期和时间" style="width: 300px"></Date-picker>
-                    <br>
-                    <Date-picker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></Date-picker>
-                </div>
-                <div slot="desc">
-                    <p>设置属性 <code>type</code> 为 <code>datetime</code> 或 <code>datetimerange</code> 可以选择时间。</p>
-                    <p>设置 format 并且忽略秒，可以只设置小时和分钟维度。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.datetime }}</i-code>
-            </Demo>
-            <Demo title="年和月">
-                <div slot="demo">
-                    <row>
-                        <i-col span="12">
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>format</code> 可以改变日期的显示格式，详见 <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a>。</p>
+                        <p>注意，format 只是改变显示的格式，并非改变 value 值。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.format }}</i-code>
+                </Demo>
+                <Demo title="日期时间选择">
+                    <div slot="demo">
+                        <Date-picker type="datetime" placeholder="选择日期和时间" style="width: 200px"></Date-picker>
+                        <br>
+                        <Date-picker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></Date-picker>
+                        <br>
+                        <Date-picker type="datetimerange" placeholder="选择日期和时间" style="width: 300px"></Date-picker>
+                        <br>
+                        <Date-picker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></Date-picker>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>type</code> 为 <code>datetime</code> 或 <code>datetimerange</code> 可以选择时间。</p>
+                        <p>设置 format 并且忽略秒，可以只设置小时和分钟维度。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.datetime }}</i-code>
+                </Demo>
+                <Demo title="年和月">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
                             <Date-picker type="year" placeholder="选择年" style="width: 200px"></Date-picker>
-                        </i-col>
-                        <i-col span="12">
+                            </Col>
+                            <Col span="12">
                             <Date-picker type="month" placeholder="选择月" style="width: 200px"></Date-picker>
-                        </i-col>
-                    </row>
-                </div>
-                <div slot="desc">
-                    <p>设置属性 <code>type</code> 为 <code>year</code> 或 <code>month</code> 可以使用选择年或月的功能。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.type }}</i-code>
-            </Demo>
-            <Demo title="不可选日期">
-                <div slot="demo">
-                    <row>
-                        <i-col span="12">
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>type</code> 为 <code>year</code> 或 <code>month</code> 可以使用选择年或月的功能。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.type }}</i-code>
+                </Demo>
+                <Demo title="不可选日期">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
                             <Date-picker type="date" :options="options3" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                        <i-col span="12">
+                            </Col>
+                            <Col span="12">
                             <Date-picker type="date" :options="options4" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                    </row>
-                </div>
-                <div slot="desc">
-                    <p>设置属性 <code>options</code> 对象中的 <code>disabledDate</code> 可以设置不可选择的日期。</p>
-                    <p>disabledDate 是函数，参数为当前的日期，需要返回 Boolean 是否禁用这天。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
-            </Demo>
-            <Demo title="带有确认操作">
-                <div slot="demo">
-                    <row>
-                        <i-col span="12">
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>options</code> 对象中的 <code>disabledDate</code> 可以设置不可选择的日期。</p>
+                        <p>disabledDate 是函数，参数为当前的日期，需要返回 Boolean 是否禁用这天。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
+                </Demo>
+                <Demo title="带有确认操作">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
                             <Date-picker type="date" confirm placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                        <i-col span="12">
+                            </Col>
+                            <Col span="12">
                             <Date-picker type="daterange" confirm placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
-                        </i-col>
-                    </row>
-                </div>
-                <div slot="desc">
-                    <p>设置属性 <code>confirm</code>，选择日期后，选择器不会主动关闭，需用户确认后才可关闭。</p>
-                    <p>确认按钮并没有影响日期的正常选择。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.confirm }}</i-code>
-            </Demo>
-            <Demo title="手动控制组件">
-                <div slot="demo">
-                    <Date-picker
-                        :open="open"
-                        :value="value3"
-                        confirm
-                        type="date"
-                        @on-change="handleChange"
-                        @on-clear="handleClear"
-                        @on-ok="handleOk">
-                        <a href="javascript:void(0)" @click="handleClick">
-                            <Icon type="ios-calendar-outline"></Icon>
-                            <template v-if="value3 === ''">选择日期</template>
-                            <template v-else>{{ value3 }}</template>
-                        </a>
-                    </Date-picker>
-                </div>
-                <div slot="desc">
-                    <p>对于一些定制化的场景，可以使用 slot 配合参数 <code>open</code> 及事件来手动控制组件的显示状态，详见示例和 API。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.slot }}</i-code>
-            </Demo>
-            <Demo title="尺寸">
-                <div slot="demo">
-                    <row :gutter="16">
-                        <i-col span="8">
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>confirm</code>，选择日期后，选择器不会主动关闭，需用户确认后才可关闭。</p>
+                        <p>确认按钮并没有影响日期的正常选择。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.confirm }}</i-code>
+                </Demo>
+                <Demo title="手动控制组件">
+                    <div slot="demo">
+                        <Date-picker
+                                :open="open"
+                                :value="value3"
+                                confirm
+                                type="date"
+                                @on-change="handleChange"
+                                @on-clear="handleClear"
+                                @on-ok="handleOk">
+                            <a href="javascript:void(0)" @click="handleClick">
+                                <Icon type="ios-calendar-outline"></Icon>
+                                <template v-if="value3 === ''">选择日期</template>
+                                <template v-else>{{ value3 }}</template>
+                            </a>
+                        </Date-picker>
+                    </div>
+                    <div slot="desc">
+                        <p>对于一些定制化的场景，可以使用 slot 配合参数 <code>open</code> 及事件来手动控制组件的显示状态，详见示例和 API。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.slot }}</i-code>
+                </Demo>
+                <Demo title="尺寸">
+                    <div slot="demo">
+                        <Row :gutter="16">
+                            <Col span="8">
                             <Date-picker size="small" type="date" placeholder="选择日期"></Date-picker>
-                        </i-col>
-                        <i-col span="8">
+                            </Col>
+                            <Col span="8">
                             <Date-picker type="date" placeholder="选择日期"></Date-picker>
-                        </i-col>
-                        <i-col span="8">
+                            </Col>
+                            <Col span="8">
                             <Date-picker size="large" type="date" placeholder="选择日期"></Date-picker>
-                        </i-col>
-                    </row>
-                </div>
-                <div slot="desc">
-                    <p>通过设置属性 <code>size</code> 为 <code>large</code> 或 <code>small</code> 可以调整选择器尺寸为大或小，默认不填为中。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.size }}</i-code>
-            </Demo>
-            <div class="api">
-                <Anchor title="API" h2></Anchor>
-                <Anchor title="DatePicker props" h3></Anchor>
-                <table>
-                    <colgroup>
-                        <col>
-                        <col>
-                        <col>
-                        <col width="200">
-                    </colgroup>
-                    <thead>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>通过设置属性 <code>size</code> 为 <code>large</code> 或 <code>small</code> 可以调整选择器尺寸为大或小，默认不填为中。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.size }}</i-code>
+                </Demo>
+                <div class="api">
+                    <Anchor title="API" h2></Anchor>
+                    <Anchor title="DatePicker props" h3></Anchor>
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col width="200">
+                        </colgroup>
+                        <thead>
                         <tr>
                             <th>属性</th>
                             <th>说明</th>
                             <th>类型</th>
                             <th>默认值</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>type</td>
                             <td>显示类型，可选值为 <code>date</code>、<code>daterange</code>、<code>datetime</code>、<code>datetimerange</code>、<code>year</code>、<code>month</code></td>
@@ -198,7 +199,7 @@
                             <td>value</td>
                             <td>
                                 日期，可以是 JavaScript 的 Date，例如 <strong>new Date()</strong>，也可以是标准的日期格式，点击右边查看<br>
-                                注意：value 使用 <code>.sync</code> 时，返回的是 Date 类型，需配合 @on-change 使用
+                                注意：value 使用 v-model 时，值是 Date 类型，可以配合 @on-change 使用
                             </td>
                             <td>
                                 <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a>
@@ -280,20 +281,20 @@
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
-                    </tbody>
-                </table>
-                <Anchor title="options" h3></Anchor>
-                <p>选择器额外配置</p>
-                <table>
-                    <thead>
+                        </tbody>
+                    </table>
+                    <Anchor title="options" h3></Anchor>
+                    <p>选择器额外配置</p>
+                    <table>
+                        <thead>
                         <tr>
                             <th>属性</th>
                             <th>说明</th>
                             <th>类型</th>
                             <th>默认值</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>shortcuts</td>
                             <td>
@@ -313,18 +314,18 @@
                             <td>Function</td>
                             <td>-</td>
                         </tr>
-                    </tbody>
-                </table>
-                <Anchor title="DatePicker events" h3></Anchor>
-                <table>
-                    <thead>
+                        </tbody>
+                    </table>
+                    <Anchor title="DatePicker events" h3></Anchor>
+                    <table>
+                        <thead>
                         <tr>
                             <th>事件名</th>
                             <th>说明</th>
                             <th>返回值</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>on-change</td>
                             <td>日期发生变化时触发</td>
@@ -345,27 +346,28 @@
                             <td>在 confirm 模式或 clearable = true 时有效，在清空日期时触发</td>
                             <td>-</td>
                         </tr>
-                    </tbody>
-                </table>
-                <Anchor title="DatePicker slot" h3></Anchor>
-                <table>
-                    <thead>
+                        </tbody>
+                    </table>
+                    <Anchor title="DatePicker slot" h3></Anchor>
+                    <table>
+                        <thead>
                         <tr>
                             <th>名称</th>
                             <th>说明</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>无</td>
                             <td>自定义选择器的显示内容，建议与 open 等参数一起使用，详见示例</td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
-        </article>
-    </i-article>
-    <Date-type :visible.sync="showDateModal"></Date-type>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+        </i-article>
+        <Date-type v-model="showDateModal"></Date-type>
+    </div>
 </template>
 <script>
     import iArticle from '../../components/article.vue';
