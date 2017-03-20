@@ -35,8 +35,8 @@
         <article style="min-height: 500px">
             <h1>iView 讲堂</h1>
             <p>iView 讲堂以技术分享为目的，不定期地以直播或录制视频的形式开展。</p>
-            <p>近期直播：</p>
-            <Card v-for="item in list">
+            <blockquote>近期直播：</blockquote>
+            <Card v-for="(item, index) in list" :key="item.title">
                 <Row>
                     <i-col span="6">
                         <div class="live-cover" :style="{'backgroundImage': 'url(' + item.cover + ')'}"></div>
@@ -51,7 +51,7 @@
                     </i-col>
                     <i-col span="4">
                         <div class="live-link">
-                            <i-button type="primary" @click="handleClick($index)">
+                            <i-button type="primary" @click="handleClick(index)">
                                 <div><Icon type="android-arrow-dropright-circle" size="20"></Icon></div>
                                 <div>报名参加</div>
                             </i-button>
