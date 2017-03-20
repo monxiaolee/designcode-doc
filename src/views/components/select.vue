@@ -14,33 +14,34 @@
             <Anchor title="概述" h2></Anchor>
             <p>使用模拟的增强下拉选择器来代替浏览器原生的选择器。</p>
             <p>选择器支持单选、多选、搜索，以及键盘快捷操作。</p>
+            <blockquote>注意：非 template/render 模式下，需使用 <code>i-select</code>、<code>i-option</code>。</blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <i-select :model.sync="model1" style="width:200px">
-                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                    </i-select>
-                    <span class="demo-data">{{ model1 | json }}</span>
+                    <Select v-model="model1" style="width:200px">
+                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                    </Select>
+                    <span class="demo-data">{{ model1 }}</span>
                 </div>
                 <div slot="desc">
-                    <p>基本用法。给<code>i-select</code>设置属性<code>model</code>绑定数据，需要将<code>model</code>设置<code>.sync</code>实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
-                    <p>单选时，model 只接受字符串和数字类型，多选时，只接受数组类型，组件会自动根据<code>i-option</code>的<code>value</code>来返回选中的数据。</p>
-                    <p>可以给<code>i-select</code>添加 style 样式，比如宽度。</p>
+                    <p>基本用法。可以使用 v-model 双向绑定数据。</p>
+                    <p>单选时，value 只接受字符串和数字类型，多选时，只接受数组类型，组件会自动根据<code>Option</code>的<code>value</code>来返回选中的数据。</p>
+                    <p>可以给<code>Select</code>添加 style 样式，比如宽度。</p>
                     <p>在展开选择器后，可以使用键盘的<code>up</code>和<code>down</code>快速上下选择，按下<code>Enter</code>选择，按下<code>Esc</code>收起选择器。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="尺寸">
                 <div slot="demo">
-                    <i-select :model.sync="model2" size="small" style="width:100px">
-                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                    </i-select>
-                    <i-select :model.sync="model3" style="width:100px">
-                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                    </i-select>
-                    <i-select :model.sync="model4" size="large" style="width:100px">
-                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                    </i-select>
+                    <Select v-model="model2" size="small" style="width:100px">
+                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                    </Select>
+                    <Select v-model="model3" style="width:100px">
+                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                    </Select>
+                    <Select v-model="model4" size="large" style="width:100px">
+                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                    </Select>
                 </div>
                 <div slot="desc">
                     <p>通过设置<code>size</code>属性为<code>large</code>和<code>small</code>将输入框设置为大和小尺寸，不设置为默认（中）尺寸。</p>
@@ -49,27 +50,27 @@
             </Demo>
             <Demo title="禁用">
                 <div slot="demo">
-                    <i-select :model.sync="model5" disabled style="width:200px">
-                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                    </i-select>
-                    <i-select :model.sync="model6" style="width:200px">
-                        <i-option value="beijing">北京市</i-option>
-                        <i-option value="shanghai" disabled>上海市</i-option>
-                        <i-option value="shenzhen">深圳市</i-option>
-                    </i-select>
+                    <Select v-model="model5" disabled style="width:200px">
+                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                    </Select>
+                    <Select v-model="model6" style="width:200px">
+                        <Option value="beijing">北京市</Option>
+                        <Option value="shanghai" disabled>上海市</Option>
+                        <Option value="shenzhen">深圳市</Option>
+                    </Select>
                 </div>
                 <div slot="desc">
-                    <p>通过给<code>i-select</code>设置属性<code>disabled</code>禁用整个选择器。</p>
-                    <p>通过给<code>i-option</code>设置属性<code>disabled</code>可以禁用当前项。</p>
+                    <p>通过给<code>Select</code>设置属性<code>disabled</code>禁用整个选择器。</p>
+                    <p>通过给<code>Option</code>设置属性<code>disabled</code>可以禁用当前项。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
             <Demo title="可清空">
                 <div slot="demo">
-                    <i-select :model.sync="model8" clearable style="width:200px">
-                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                    </i-select>
-                    <span class="demo-data">{{ model8 | json }}</span>
+                    <Select v-model="model8" clearable style="width:200px">
+                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                    </Select>
+                    <span class="demo-data">{{ model8 }}</span>
                 </div>
                 <div slot="desc">
                     <p>通过设置属性<code>clearable</code>可以清空已选项，仅适用于单选模式。</p>
@@ -78,15 +79,15 @@
             </Demo>
             <Demo title="分组">
                 <div slot="demo">
-                    <i-select :model.sync="model7" style="width:200px">
+                    <Select v-model="model7" style="width:200px">
                         <Option-group label="热门城市">
-                            <i-option v-for="item in cityList | limitBy 3" :value="item.value">{{ item.label }}</i-option>
+                            <Option v-for="item in cityList1" :value="item.value" :key="item">{{ item.label }}</Option>
                         </Option-group>
                         <Option-group label="其它城市">
-                            <i-option v-for="item in cityList | limitBy 3 3" :value="item.value">{{ item.label }}</i-option>
+                            <Option v-for="item in cityList2" :value="item.value" :key="item">{{ item.label }}</Option>
                         </Option-group>
-                    </i-select>
-                    <span class="demo-data">{{ model7 | json }}</span>
+                    </Select>
+                    <span class="demo-data">{{ model7 }}</span>
                 </div>
                 <div slot="desc">
                     <p>使用<code>Option-group</code>可将选项进行分组。</p>
@@ -95,34 +96,34 @@
             </Demo>
             <Demo title="自定义模板">
                 <div slot="demo">
-                    <i-select :model.sync="model9" style="width:200px">
-                        <i-option value="beijing" label="北京市">
+                    <Select v-model="model9" style="width:200px">
+                        <Option value="beijing" label="北京市">
                             <span>北京</span>
                             <span style="float:right;color:#ccc">Beiing</span>
-                        </i-option>
-                        <i-option value="shanghai" label="上海市">
+                        </Option>
+                        <Option value="shanghai" label="上海市">
                             <span>上海</span>
                             <span style="float:right;color:#ccc">ShangHai</span>
-                        </i-option>
-                        <i-option value="shenzhen" label="深圳市">
+                        </Option>
+                        <Option value="shenzhen" label="深圳市">
                             <span>深圳</span>
                             <span style="float:right;color:#ccc">ShenZhen</span>
-                        </i-option>
-                    </i-select>
-                    <span class="demo-data">{{ model9 | json }}</span>
+                        </Option>
+                    </Select>
+                    <span class="demo-data">{{ model9 }}</span>
                 </div>
                 <div slot="desc">
-                    <p>对选项内容可以进行自定义。注意在<code>i-option</code>中使用<code>label</code>属性，可以让选择器优先读取该属性的值以显示，否则选中时显示的内容会和自定义的一样，这往往不是我们想要的。</p>
+                    <p>对选项内容可以进行自定义。注意在<code>Option</code>中使用<code>label</code>属性，可以让选择器优先读取该属性的值以显示，否则选中时显示的内容会和自定义的一样，这往往不是我们想要的。</p>
                     <p>对于选项显示内容的逻辑：优先显示 slot 内容，如果没有定义 slot，则显示<code>label</code>的值，如果没有设置 label，则显示<code>value</code>的值。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.label }}</i-code>
             </Demo>
             <Demo title="多选">
                 <div slot="demo">
-                    <p class="demo-data">{{ model10 | json }}</p>
-                    <i-select :model.sync="model10" multiple style="width:260px">
-                        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                    </i-select>
+                    <p class="demo-data">{{ model10 }}</p>
+                    <Select v-model="model10" multiple style="width:260px">
+                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                    </Select>
                 </div>
                 <div slot="desc">
                     <p>通过设置属性<code>multiple</code>可以开启多选模式。多选模式下，model 接受数组类型的数据，所返回的也是数组。</p>
@@ -133,14 +134,14 @@
                 <div slot="demo">
                     <Row>
                         <i-col span="12" style="padding-right:10px">
-                            <i-select :model.sync="model11" filterable>
-                                <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                            </i-select>
+                            <Select v-model="model11" filterable>
+                                <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                            </Select>
                         </i-col>
                         <i-col span="12">
-                            <i-select :model.sync="model12" filterable multiple>
-                                <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-                            </i-select>
+                            <Select v-model="model12" filterable multiple>
+                                <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                            </Select>
                         </i-col>
                     </Row>
                 </div>
@@ -151,7 +152,7 @@
             </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
-                <Anchor title="iSelect props" h3></Anchor>
+                <Anchor title="Select props" h3></Anchor>
                 <table>
                     <thead>
                         <tr>
@@ -163,8 +164,8 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>model</td>
-                            <td>指定选中项目的项的 value 值，需要使用<code>.sync</code>双向绑定，否则改变状态时并不能改变使用者的数据。单选时只接受 String 或 Number，多选时只接受 Array</td>
+                            <td>value</td>
+                            <td>指定选中项目的 value 值，可以使用 v-model 双向绑定数据。单选时只接受 String 或 Number，多选时只接受 Array</td>
                             <td>String | Number | Array</td>
                             <td>空</td>
                         </tr>
@@ -218,7 +219,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <Anchor title="iSelect events" h3></Anchor>
+                <Anchor title="Select events" h3></Anchor>
                 <table>
                     <thead>
                         <tr>
@@ -230,12 +231,12 @@
                         <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>选中的<code>i-option</code>变化时触发，默认返回 value，如需返回 label，详见 label-in-value 属性</td>
+                            <td>选中的<code>Option</code>变化时触发，默认返回 value，如需返回 label，详见 label-in-value 属性</td>
                             <td>当前选中项</td>
                         </tr>
                     </tbody>
                 </table>
-                <Anchor title="iSelect methods" h3></Anchor>
+                <Anchor title="Select methods" h3></Anchor>
                 <table>
                     <thead>
                         <tr>
@@ -257,7 +258,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <Anchor title="iOption props" h3></Anchor>
+                <Anchor title="Option props" h3></Anchor>
                 <table>
                     <thead>
                         <tr>
@@ -341,6 +342,34 @@
                         value: 'shenzhen',
                         label: '深圳市'
                     },
+                    {
+                        value: 'hangzhou',
+                        label: '杭州市'
+                    },
+                    {
+                        value: 'nanjing',
+                        label: '南京市'
+                    },
+                    {
+                        value: 'chongqing',
+                        label: '重庆市'
+                    }
+                ],
+                cityList1: [
+                    {
+                        value: 'beijing',
+                        label: '北京市'
+                    },
+                    {
+                        value: 'shanghai',
+                        label: '上海市'
+                    },
+                    {
+                        value: 'shenzhen',
+                        label: '深圳市'
+                    }
+                ],
+                cityList2: [
                     {
                         value: 'hangzhou',
                         label: '杭州市'

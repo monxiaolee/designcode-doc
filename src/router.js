@@ -185,6 +185,13 @@ const routers = [
         component: require('./views/components/table.vue')
     },
     {
+        path: '/components/select',
+        meta: {
+            title: '选择器 Select'
+        },
+        component: require('./views/components/select.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

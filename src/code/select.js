@@ -2,9 +2,9 @@ let code = {};
 
 code.base = `
 <template>
-    <i-select :model.sync="model1" style="width:200px">
-        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-    </i-select>
+    <Select v-model="model1" style="width:200px">
+        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+    </Select>
 </template>
 <script>
     export default {
@@ -45,15 +45,15 @@ code.base = `
 
 code.size = `
 <template>
-    <i-select :model.sync="model2" size="small" style="width:100px">
-        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-    </i-select>
-    <i-select :model.sync="model3" style="width:100px">
-        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-    </i-select>
-    <i-select :model.sync="model4" size="large" style="width:100px">
-        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-    </i-select>
+    <Select v-model="model2" size="small" style="width:100px">
+        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+    </Select>
+    <Select v-model="model3" style="width:100px">
+        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+    </Select>
+    <Select v-model="model4" size="large" style="width:100px">
+        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+    </Select>
 </template>
 <script>
     export default {
@@ -96,14 +96,14 @@ code.size = `
 
 code.disabled = `
 <template>
-    <i-select :model.sync="model5" disabled style="width:200px">
-        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-    </i-select>
-    <i-select :model.sync="model6" style="width:200px">
-        <i-option value="beijing">北京市</i-option>
-        <i-option value="shanghai" disabled>上海市</i-option>
-        <i-option value="shenzhen">深圳市</i-option>
-    </i-select>
+    <Select v-model="model5" disabled style="width:200px">
+        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+    </Select>
+    <Select v-model="model6" style="width:200px">
+        <Option value="beijing">北京市</Option>
+        <Option value="shanghai" disabled>上海市</Option>
+        <Option value="shenzhen">深圳市</Option>
+    </Select>
 </template>
 <script>
     export default {
@@ -145,9 +145,9 @@ code.disabled = `
 
 code.clearable = `
 <template>
-    <i-select :model.sync="model8" clearable style="width:200px">
-        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-    </i-select>
+    <Select v-model="model8" clearable style="width:200px">
+        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+    </Select>
 </template>
 <script>
     export default {
@@ -188,14 +188,14 @@ code.clearable = `
 
 code.group = `
 <template>
-    <i-select :model.sync="model7" style="width:200px">
+    <Select v-model="model7" style="width:200px">
         <Option-group label="热门城市">
-            <i-option v-for="item in cityList | limitBy 3" :value="item.value">{{ item.label }}</i-option>
+            <Option v-for="item in cityList1" :value="item.value" :key="item">{{ item.label }}</Option>
         </Option-group>
         <Option-group label="其它城市">
-            <i-option v-for="item in cityList | limitBy 3 3" :value="item.value">{{ item.label }}</i-option>
+            <Option v-for="item in cityList2" :value="item.value" :key="item">{{ item.label }}</Option>
         </Option-group>
-    </i-select>
+    </Select>
 </template>
 <script>
     export default {
@@ -227,6 +227,34 @@ code.group = `
                         label: '重庆市'
                     }
                 ],
+                cityList1: [
+                    {
+                        value: 'beijing',
+                        label: '北京市'
+                    },
+                    {
+                        value: 'shanghai',
+                        label: '上海市'
+                    },
+                    {
+                        value: 'shenzhen',
+                        label: '深圳市'
+                    }
+                ],
+                cityList2: [
+                    {
+                        value: 'hangzhou',
+                        label: '杭州市'
+                    },
+                    {
+                        value: 'nanjing',
+                        label: '南京市'
+                    },
+                    {
+                        value: 'chongqing',
+                        label: '重庆市'
+                    }
+                ],
                 model7: ''
             }
         }
@@ -236,20 +264,20 @@ code.group = `
 
 code.label = `
 <template>
-    <i-select :model.sync="model9" style="width:200px">
-        <i-option value="beijing" label="北京市">
+    <Select v-model="model9" style="width:200px">
+        <Option value="beijing" label="北京市">
             <span>北京</span>
             <span style="float:right;color:#ccc">Beiing</span>
-        </i-option>
-        <i-option value="shanghai" label="上海市">
+        </Option>
+        <Option value="shanghai" label="上海市">
             <span>上海</span>
             <span style="float:right;color:#ccc">ShangHai</span>
-        </i-option>
-        <i-option value="shenzhen" label="深圳市">
+        </Option>
+        <Option value="shenzhen" label="深圳市">
             <span>深圳</span>
             <span style="float:right;color:#ccc">ShenZhen</span>
-        </i-option>
-    </i-select>
+        </Option>
+    </Select>
 </template>
 <script>
     export default {
@@ -264,9 +292,9 @@ code.label = `
 
 code.multiple = `
 <template>
-    <i-select :model.sync="model10" multiple style="width:260px">
-        <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-    </i-select>
+    <Select v-model="model10" multiple style="width:260px">
+        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+    </Select>
 </template>
 <script>
     export default {
@@ -309,14 +337,14 @@ code.filterable = `
 <template>
     <Row>
         <i-col span="12" style="padding-right:10px">
-            <i-select :model.sync="model11" filterable>
-                <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-            </i-select>
+            <Select v-model="model11" filterable>
+                <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+            </Select>
         </i-col>
         <i-col span="12">
-            <i-select :model.sync="model12" filterable multiple>
-                <i-option v-for="item in cityList" :value="item.value">{{ item.label }}</i-option>
-            </i-select>
+            <Select v-model="model12" filterable multiple>
+                <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+            </Select>
         </i-col>
     </Row>
 </template>
