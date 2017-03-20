@@ -25,195 +25,197 @@
     }
 </style>
 <template>
-    <i-article>
-        <article>
-            <h1>Table 表格</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>主要用于展示大量结构化数据。</p>
-            <p>支持排序、筛选、分页、自定义操作、导出 csv 等复杂功能。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基础用法" vertical hide-code>
-                <div slot="demo">
-                    <i-table :columns="columns1" :data="data1"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>表格的最简单用法。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.base }}</i-code>
-            </Demo>
-            <Demo title="斑马纹" vertical hide-code>
-                <div slot="demo">
-                    <i-table stripe :columns="columns1" :data="data1"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>设置属性 <code>stripe</code> ，表格会间隔显示不同颜色，用于区分不同行数据。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.stripe }}</i-code>
-            </Demo>
-            <Demo title="带边框" vertical hide-code>
-                <div slot="demo">
-                    <i-table border :columns="columns1" :data="data1"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>添加表格的边框线。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.border }}</i-code>
-            </Demo>
-            <Demo title="特定样式" vertical hide-code>
-                <div slot="demo">
-                    <p>自定义行样式：</p>
-                    <i-table :row-class-name="rowClassName" :columns="columns1" :data="data1"></i-table>
-                    <p>自定义列样式：</p>
-                    <i-table :columns="columns9" :data="data1"></i-table>
-                    <p>自定义任意单元格样式：</p>
-                    <i-table :columns="columns1" :data="data8"></i-table>
-                </div>
-                <div slot="desc">
-                    <p><strong>行</strong>：通过属性 <code>row-class-name</code> 可以给某一行指定一个样式名称。</p>
-                    <p><strong>列</strong>：通过给列 columns 设置字段 <code>className</code> 可以给某一列指定一个样式。</p>
-                    <p><strong>单元格</strong>：通过给数据 data 设置字段 <code>cellClassName</code> 可以给任意一个单元格指定样式。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.class }}</i-code>
-            </Demo>
-            <Demo title="固定表头" vertical hide-code>
-                <div slot="demo">
-                    <i-table height="200" :columns="columns1" :data="data2"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>通过设置属性 <code>height</code> 给表格指定高度后，会自动固定表头。当纵向内容过多时可以使用。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.height }}</i-code>
-            </Demo>
-            <Demo title="固定列" vertical hide-code>
-                <div slot="demo">
-                    <i-table width="550" border :columns="columns2" :data="data3"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>通过给数据 <code>columns</code> 的项设置 <code>fixed</code> 为 <code>left</code> 或 <code>right</code>，可以左右固定需要的列。当横向内容过多时可以使用。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.fixed }}</i-code>
-            </Demo>
-            <Demo title="固定表头和列" vertical hide-code>
-                <div slot="demo">
-                    <i-table width="550" height="200" border :columns="columns2" :data="data4"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>同时应用上述两个属性，可以同时固定表头和列。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.fixedAll }}</i-code>
-            </Demo>
-            <Demo title="单选" vertical hide-code>
-                <div slot="demo">
-                    <i-table highlight-row :columns="columns3" :data="data1"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>通过设置属性 <code>highlight-row</code>，可以选中某一行。</p>
-                    <p>当选择时，触发事件 <code>@on-current-change</code>，可以自定义操作，事件返回两个值 <code>currentRow</code> 和 <code>oldCurrentRow</code>，分别为当前行的数据和上一次选择的数据。</p>
-                    <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'index'</code>，可以自动显示一个从 1 开始的索引列。</p>
-                    <p>给 data 项设置特殊 key <code>_highlight: true</code> 可以默认选中当前项。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.highlight }}</i-code>
-            </Demo>
-            <Demo title="多选" vertical hide-code>
-                <div slot="demo">
-                    <i-table border :columns="columns4" :data="data1"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'selection'</code>，即可自动开启多选功能。</p>
-                    <p>给 data 项设置特殊 key <code>_checked: true</code> 可以默认选中当前项。</p>
-                    <p>给 data 项设置特殊 key <code>_disabled: true</code> 可以禁止选择当前项。</p>
-                    <p>正确使用好以下事件，可以达到需要的效果：</p>
-                    <ul>
-                        <li><code>@on-select</code>，选中某一项触发，返回值为 <code>selection</code> 和 <code>row</code>，分别为已选项和刚选择的项。</li>
-                        <li><code>@on-select-all</code>，点击全选时触发，返回值为 <code>selection</code>，已选项。</li>
-                        <li><code>@on-selection-change</code>，只要选中项发生变化时就会触发，返回值为 <code>selection</code>，已选项。</li>
-                    </ul>
-                </div>
-                <i-code lang="html" slot="code">{{ code.selection }}</i-code>
-            </Demo>
-            <Demo title="排序" vertical hide-code>
-                <div slot="demo">
-                    <i-table border :columns="columns5" :data="data5"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>通过给 <code>columns</code> 数据的项，设置 <code>sortable: true</code>，即可对该列数据进行排序。</p>
-                    <p>排序默认使用升序和降序，也可以通过设置属性 <code>sortMethod</code> 指定一个自定义排序函数，接收三个参数 a 、 b 和 type。</p>
-                    <p>如果使用远程排序，可以设置 <code>sortable： 'custom'</code>，然后在触发排序事件 <code>@on-sort-change</code>后，进行远程排序，并手动设置新的 data，详见 API。</p>
-                    <p>注意，排序并不会影响到源数据 data。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.sort }}</i-code>
-            </Demo>
-            <Demo title="筛选" vertical hide-code>
-                <div slot="demo">
-                    <i-table border :columns="columns6" :data="data5"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>通过给 <code>columns</code> 数据的项，设置 <code>filters</code>，可进行筛选，filters 接收一个数组，详见 Demo 和 API。</p>
-                    <p>必须指定一个筛选函数 <code>filterMethod</code> 才可以进行筛选，filterMethod 传入两个参数 value 和 row，详见 Demo 和 API。</p>
-                    <p>如果指定 <code>filterMultiple: false</code>，则使用单选，默认为多选。</p>
-                    <p>注意，筛选并不会影响到源数据 data。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.filter }}</i-code>
-            </Demo>
-            <Demo title="自定义列模板" vertical hide-code>
-                <div slot="demo">
-                    <i-table border :content="self" :columns="columns7" :data="data6"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>通过给 <code>columns</code> 数据的项，设置一个函数 <code>render</code>，可以自定义渲染当前列，包括渲染自定义组件。</p>
-                    <p><code>render</code> 函数传入三个参数 <code>row</code>、<code>column</code> 和 <code>index</code>，分别指当前单元格数据，当前列数据，当前是第几行。</p>
-                    <p><code>render</code> 函数本质返回的是字符串，Table 组件在内部对其进行了编译，如果使用了自定义组件，需要特别注意上下文，编译后的自定义组件，默认的上下文是 <code>i-table</code> 所在的上下文，如果想让组件在指定的实例下编译，可以给 <code>i-table</code> 设置属性 <code>content</code> 来指定上下文，比如本例指定当前路由页为上下文。一般情况不需要此配置，但如果你把 <code>i-table</code> 作为一个 slot 封装在其它组件里，这时 <code>content</code> 属性就很有用，比如父级是 $parent，根组件 $root。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.render }}</i-code>
-            </Demo>
-            <Demo title="尺寸" vertical hide-code>
-                <div slot="demo">
-                    <i-table size="large" :columns="columns1" :data="data1"></i-table>
-                    <br>
-                    <i-table size="small" :columns="columns1" :data="data1"></i-table>
-                </div>
-                <div slot="desc">
-                    <p>通过设置属性 <code>size</code> 为 <code>large</code> 或 <code>small</code> 可以调整表格尺寸为大或小，默认不填或填写 <code>default</code> 为中。</p>
-                </div>
-                <i-code lang="html" slot="code">{{ code.size }}</i-code>
-            </Demo>
-            <Demo title="导出csv" vertical hide-code>
-                <div slot="demo">
-                    <i-table :columns="columns8" :data="data7" size="small" v-ref:table></i-table>
-                    <br>
-                    <i-button type="primary" size="large" @click="exportData(1)"><Icon type="ios-download-outline"></Icon> 导出原始数据</i-button>
-                    <i-button type="primary" size="large" @click="exportData(2)"><Icon type="ios-download-outline"></Icon> 导出排序和过滤后的数据</i-button>
-                    <i-button type="primary" size="large" @click="exportData(3)"><Icon type="ios-download-outline"></Icon> 导出自定义数据</i-button>
-                </div>
-                <div slot="desc">
-                    <p>通过调用 <code>exportCsv()</code> 方法，可以将数据导出为 <code>.csv</code> 的表格文件，详见 API。</p>
-                    <p>说明：</p>
-                    <ul>
-                        <li>支持IE9~IE11、Edge、Chrome、Safari、Firefox 全系列浏览器。</li>
-                        <li>IE9、Safari 需要手动修改后缀名为 <code>.csv</code>。</li>
-                        <li>IE9暂时只支持英文，中文会显示为乱码。</li>
-                    </ul>
-                </div>
-                <i-code lang="html" slot="code">{{ code.csv }}</i-code>
-            </Demo>
-            <Anchor title="高级示例" h2></Anchor>
-            <p>以上示例已经基本涵盖了表格组件的所有功能，我们根据实际业务场景，增加了一些较为复杂的示例，可以结合来看，更深入了解表格组件的使用。</p>
-            <i-button type="primary" size="large" @click="table1 = true">带有分页的复杂表格</i-button>
-            <i-button type="primary" size="large" @click="table2 = true">多列指标筛选的表格</i-button>
-            <i-button type="primary" size="large" @click="table3 = true">多种效果组合的表格</i-button>
-            <div class="api">
-                <Anchor title="API" h2></Anchor>
-                <Anchor title="iTable props" h3></Anchor>
-                <table>
-                    <thead>
+    <div>
+        <i-article>
+            <article>
+                <h1>Table 表格</h1>
+                <Anchor title="概述" h2></Anchor>
+                <p>主要用于展示大量结构化数据。</p>
+                <p>支持排序、筛选、分页、自定义操作、导出 csv 等复杂功能。</p>
+                <blockquote>注意：非 template/render 模式下，需使用 <code>i-table</code>。</blockquote>
+                <Anchor title="代码示例" h2></Anchor>
+                <Demo title="基础用法" vertical hide-code>
+                    <div slot="demo">
+                        <Table :columns="columns1" :data="data1"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>表格的最简单用法。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.base }}</i-code>
+                </Demo>
+                <Demo title="斑马纹" vertical hide-code>
+                    <div slot="demo">
+                        <Table stripe :columns="columns1" :data="data1"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>stripe</code> ，表格会间隔显示不同颜色，用于区分不同行数据。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.stripe }}</i-code>
+                </Demo>
+                <Demo title="带边框" vertical hide-code>
+                    <div slot="demo">
+                        <Table border :columns="columns1" :data="data1"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>添加表格的边框线。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.border }}</i-code>
+                </Demo>
+                <Demo title="特定样式" vertical hide-code>
+                    <div slot="demo">
+                        <p>自定义行样式：</p>
+                        <Table :row-class-name="rowClassName" :columns="columns1" :data="data1"></Table>
+                        <p>自定义列样式：</p>
+                        <Table :columns="columns9" :data="data1"></Table>
+                        <p>自定义任意单元格样式：</p>
+                        <Table :columns="columns1" :data="data8"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p><strong>行</strong>：通过属性 <code>row-class-name</code> 可以给某一行指定一个样式名称。</p>
+                        <p><strong>列</strong>：通过给列 columns 设置字段 <code>className</code> 可以给某一列指定一个样式。</p>
+                        <p><strong>单元格</strong>：通过给数据 data 设置字段 <code>cellClassName</code> 可以给任意一个单元格指定样式。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.class }}</i-code>
+                </Demo>
+                <Demo title="固定表头" vertical hide-code>
+                    <div slot="demo">
+                        <Table height="200" :columns="columns1" :data="data2"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>通过设置属性 <code>height</code> 给表格指定高度后，会自动固定表头。当纵向内容过多时可以使用。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.height }}</i-code>
+                </Demo>
+                <Demo title="固定列" vertical hide-code>
+                    <div slot="demo">
+                        <Table width="550" border :columns="columns2" :data="data3"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>通过给数据 <code>columns</code> 的项设置 <code>fixed</code> 为 <code>left</code> 或 <code>right</code>，可以左右固定需要的列。当横向内容过多时可以使用。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.fixed }}</i-code>
+                </Demo>
+                <Demo title="固定表头和列" vertical hide-code>
+                    <div slot="demo">
+                        <Table width="550" height="200" border :columns="columns2" :data="data4"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>同时应用上述两个属性，可以同时固定表头和列。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.fixedAll }}</i-code>
+                </Demo>
+                <Demo title="单选" vertical hide-code>
+                    <div slot="demo">
+                        <Table highlight-row :columns="columns3" :data="data1"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>通过设置属性 <code>highlight-row</code>，可以选中某一行。</p>
+                        <p>当选择时，触发事件 <code>@on-current-change</code>，可以自定义操作，事件返回两个值 <code>currentRow</code> 和 <code>oldCurrentRow</code>，分别为当前行的数据和上一次选择的数据。</p>
+                        <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'index'</code>，可以自动显示一个从 1 开始的索引列。</p>
+                        <p>给 data 项设置特殊 key <code>_highlight: true</code> 可以默认选中当前项。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.highlight }}</i-code>
+                </Demo>
+                <Demo title="多选" vertical hide-code>
+                    <div slot="demo">
+                        <Table border :columns="columns4" :data="data1"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'selection'</code>，即可自动开启多选功能。</p>
+                        <p>给 data 项设置特殊 key <code>_checked: true</code> 可以默认选中当前项。</p>
+                        <p>给 data 项设置特殊 key <code>_disabled: true</code> 可以禁止选择当前项。</p>
+                        <p>正确使用好以下事件，可以达到需要的效果：</p>
+                        <ul>
+                            <li><code>@on-select</code>，选中某一项触发，返回值为 <code>selection</code> 和 <code>row</code>，分别为已选项和刚选择的项。</li>
+                            <li><code>@on-select-all</code>，点击全选时触发，返回值为 <code>selection</code>，已选项。</li>
+                            <li><code>@on-selection-change</code>，只要选中项发生变化时就会触发，返回值为 <code>selection</code>，已选项。</li>
+                        </ul>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.selection }}</i-code>
+                </Demo>
+                <Demo title="排序" vertical hide-code>
+                    <div slot="demo">
+                        <Table border :columns="columns5" :data="data5"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>通过给 <code>columns</code> 数据的项，设置 <code>sortable: true</code>，即可对该列数据进行排序。</p>
+                        <p>排序默认使用升序和降序，也可以通过设置属性 <code>sortMethod</code> 指定一个自定义排序函数，接收三个参数 a 、 b 和 type。</p>
+                        <p>如果使用远程排序，可以设置 <code>sortable： 'custom'</code>，然后在触发排序事件 <code>@on-sort-change</code>后，进行远程排序，并手动设置新的 data，详见 API。</p>
+                        <p>注意，排序并不会影响到源数据 data。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.sort }}</i-code>
+                </Demo>
+                <Demo title="筛选" vertical hide-code>
+                    <div slot="demo">
+                        <Table border :columns="columns6" :data="data5"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>通过给 <code>columns</code> 数据的项，设置 <code>filters</code>，可进行筛选，filters 接收一个数组，详见 Demo 和 API。</p>
+                        <p>必须指定一个筛选函数 <code>filterMethod</code> 才可以进行筛选，filterMethod 传入两个参数 value 和 row，详见 Demo 和 API。</p>
+                        <p>如果指定 <code>filterMultiple: false</code>，则使用单选，默认为多选。</p>
+                        <p>注意，筛选并不会影响到源数据 data。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.filter }}</i-code>
+                </Demo>
+                <Demo title="自定义列模板" vertical hide-code>
+                    <div slot="demo">
+                        <Table border :context="self" :columns="columns7" :data="data6"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>通过给 <code>columns</code> 数据的项，设置一个函数 <code>render</code>，可以自定义渲染当前列，包括渲染自定义组件。</p>
+                        <p><code>render</code> 函数传入三个参数 <code>row</code>、<code>column</code> 和 <code>index</code>，分别指当前单元格数据，当前列数据，当前是第几行。</p>
+                        <p><code>render</code> 函数本质返回的是字符串，Table 组件在内部对其进行了编译，如果使用了自定义组件，需要特别注意上下文，编译后的自定义组件，默认的上下文是 <code>Table</code> 所在的上下文，如果想让组件在指定的实例下编译，可以给 <code>Table</code> 设置属性 <code>context</code> 来指定上下文，比如本例指定当前路由页为上下文。一般情况不需要此配置，但如果你把 <code>Table</code> 作为一个 slot 封装在其它组件里，这时 <code>context</code> 属性就很有用，比如父级是 $parent，根组件 $root。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.render }}</i-code>
+                </Demo>
+                <Demo title="尺寸" vertical hide-code>
+                    <div slot="demo">
+                        <Table size="large" :columns="columns1" :data="data1"></Table>
+                        <br>
+                        <Table size="small" :columns="columns1" :data="data1"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>通过设置属性 <code>size</code> 为 <code>large</code> 或 <code>small</code> 可以调整表格尺寸为大或小，默认不填或填写 <code>default</code> 为中。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.size }}</i-code>
+                </Demo>
+                <Demo title="导出csv" vertical hide-code>
+                    <div slot="demo">
+                        <Table :columns="columns8" :data="data7" size="small" ref="table"></Table>
+                        <br>
+                        <Button type="primary" size="large" @click="exportData(1)"><Icon type="ios-download-outline"></Icon> 导出原始数据</Button>
+                        <Button type="primary" size="large" @click="exportData(2)"><Icon type="ios-download-outline"></Icon> 导出排序和过滤后的数据</Button>
+                        <Button type="primary" size="large" @click="exportData(3)"><Icon type="ios-download-outline"></Icon> 导出自定义数据</Button>
+                    </div>
+                    <div slot="desc">
+                        <p>通过调用 <code>exportCsv()</code> 方法，可以将数据导出为 <code>.csv</code> 的表格文件，详见 API。</p>
+                        <p>说明：</p>
+                        <ul>
+                            <li>支持IE9~IE11、Edge、Chrome、Safari、Firefox 全系列浏览器。</li>
+                            <li>IE9、Safari 需要手动修改后缀名为 <code>.csv</code>。</li>
+                            <li>IE9暂时只支持英文，中文会显示为乱码。</li>
+                        </ul>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.csv }}</i-code>
+                </Demo>
+                <Anchor title="高级示例" h2></Anchor>
+                <p>以上示例已经基本涵盖了表格组件的所有功能，我们根据实际业务场景，增加了一些较为复杂的示例，可以结合来看，更深入了解表格组件的使用。</p>
+                <Button type="primary" size="large" @click="table1 = true">带有分页的复杂表格</Button>
+                <Button type="primary" size="large" @click="table2 = true">多列指标筛选的表格</Button>
+                <Button type="primary" size="large" @click="table3 = true">多种效果组合的表格</Button>
+                <div class="api">
+                    <Anchor title="API" h2></Anchor>
+                    <Anchor title="Table props" h3></Anchor>
+                    <table>
+                        <thead>
                         <tr>
                             <th>属性</th>
                             <th>说明</th>
                             <th>类型</th>
                             <th>默认值</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>data</td>
                             <td>显示的结构化数据，其中，字段 cellClassName 用于设置任意单元格的样式名称，因此数据不能使用该字段，详见示例<strong>特定样式</strong>。</td>
@@ -281,8 +283,8 @@
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td>content</td>
-                            <td>设置单元格内渲染自定义组件时的上下文。比如父级是 $parent，根组件是 $root，当 <code>i-table</code> 作为一个 slot 封装在其它组件里时，会很有用</td>
+                            <td>context</td>
+                            <td>设置单元格内渲染自定义组件时的上下文。比如父级是 $parent，根组件是 $root，当 <code>Table</code> 作为一个 slot 封装在其它组件里时，会很有用</td>
                             <td>Object</td>
                             <td>Table 所在的上下文</td>
                         </tr>
@@ -298,18 +300,18 @@
                             <td>String</td>
                             <td>暂无筛选结果</td>
                         </tr>
-                    </tbody>
-                </table>
-                <Anchor title="iTable events" h3></Anchor>
-                <table>
-                    <thead>
+                        </tbody>
+                    </table>
+                    <Anchor title="Table events" h3></Anchor>
+                    <table>
+                        <thead>
                         <tr>
                             <th>事件名</th>
                             <th>说明</th>
                             <th>返回值</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>on-current-change</td>
                             <td>开启 <code>highlight-row</code> 后有效，当表格的当前行发生变化的时候会触发</td>
@@ -373,17 +375,17 @@
                                 当前行的数据
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-                <Anchor title="iTable slot" h3></Anchor>
-                <table>
-                    <thead>
+                        </tbody>
+                    </table>
+                    <Anchor title="Table slot" h3></Anchor>
+                    <table>
+                        <thead>
                         <tr>
                             <th>名称</th>
                             <th>说明</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>header</td>
                             <td>表头</td>
@@ -392,18 +394,18 @@
                             <td>footer</td>
                             <td>页脚</td>
                         </tr>
-                    </tbody>
-                </table>
-                <Anchor title="iTable methods" h3></Anchor>
-                <table>
-                    <thead>
+                        </tbody>
+                    </table>
+                    <Anchor title="Table methods" h3></Anchor>
+                    <table>
+                        <thead>
                         <tr>
                             <th>方法名</th>
                             <th>说明</th>
                             <th>参数</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>exportCsv</td>
                             <td>
@@ -441,20 +443,20 @@
                                 说明：columns 和 data 需同时声明，声明后将导出指定的数据，建议列数据有自定义render时，可以根据需求自定义导出内容
                             </td>
                         </tr>
-                    </tbody>
-                </table>
-                <Anchor title="column" h3></Anchor>
-                <p>列描述数据对象，是 columns 中的一项</p>
-                <table>
-                    <thead>
+                        </tbody>
+                    </table>
+                    <Anchor title="column" h3></Anchor>
+                    <p>列描述数据对象，是 columns 中的一项</p>
+                    <table>
+                        <thead>
                         <tr>
                             <th>属性</th>
                             <th>说明</th>
                             <th>类型</th>
                             <th>默认值</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>title</td>
                             <td>列头显示文字</td>
@@ -545,82 +547,83 @@
                             <td>Array</td>
                             <td>-</td>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
-        </article>
-    </i-article>
-    <Modal :visible.sync="table1" title="带有分页的复杂表格" width="1000" :style="{top: '20px'}">
-        <div v-if="table1">
-            <div class="ivu-article">
-                <blockquote>
-                    <p>该表格来自于 TalkingData <a href="https://www.talkingdata.com/product-MarketingCloud.jsp" target="_blank">MarketingCloud</a> 产品，展示的是人群画像列表，数据为模拟数据，分页只是提供效果展示，并非真实拉取服务端数据。</p>
-                    <p>在单元格渲染自定义组件，比较难理解的是上下文，因为 iView 是通过 $compile() 在指定实例上进行编译的，你可以使用任何 Vue 的语法，但别忘了 render 函数返回的是字符串，注意看示例中的使用方法。</p>
-                </blockquote>
-            </div>
-            <i-table :content="self" :data="tableData1" :columns="tableColumns1" stripe></i-table>
-            <div style="margin: 10px;overflow: hidden">
-                <div style="float: right;">
-                    <Page :total="100" :current="1" @on-change="changePage"></Page>
+                        </tbody>
+                    </table>
                 </div>
+            </article>
+        </i-article>
+        <Modal v-model="table1" title="带有分页的复杂表格" width="1000" :styles="{top: '20px'}">
+            <div v-if="table1">
+                <div class="ivu-article">
+                    <blockquote>
+                        <p>该表格来自于 TalkingData <a href="https://www.talkingdata.com/product-MarketingCloud.jsp" target="_blank">MarketingCloud</a> 产品，展示的是人群画像列表，数据为模拟数据，分页只是提供效果展示，并非真实拉取服务端数据。</p>
+                        <p>在单元格渲染自定义组件，比较难理解的是上下文，因为 iView 是通过 $compile() 在指定实例上进行编译的，你可以使用任何 Vue 的语法，但别忘了 render 函数返回的是字符串，注意看示例中的使用方法。</p>
+                    </blockquote>
+                </div>
+                <Table :context="self" :data="tableData1" :columns="tableColumns1" stripe></Table>
+                <div style="margin: 10px;overflow: hidden">
+                    <div style="float: right;">
+                        <Page :total="100" :current="1" @on-change="changePage"></Page>
+                    </div>
+                </div>
+                <i-code lang="html" bg>{{ code.table1 }}</i-code>
             </div>
-            <i-code lang="html" bg>{{ code.table1 }}</i-code>
-        </div>
-    </Modal>
-    <Modal :visible.sync="table2" title="多列指标筛选的表格" width="1000" :style="{top: '20px'}">
-        <div v-if="table2">
-            <div class="ivu-article">
-                <blockquote>
-                    <p>该表格来自于 TalkingData <a href="https://www.talkingdata.com/product-AdTracking.jsp">Ad Tracking</a> 产品，展示各种推广活动不同指标的数据，数据为模拟数据。</p>
-                    <p>该示例主要展示固定列、自定义列数量以及排序的功能。</p>
-                </blockquote>
-            </div>
-            <checkbox-group :model.sync="tableColumnsChecked" @on-change="changeTableColumns">
-                <checkbox value="show">展示</checkbox>
-                <checkbox value="weak">唤醒</checkbox>
-                <checkbox value="signin">登录</checkbox>
-                <checkbox value="click">点击</checkbox>
-                <checkbox value="active">激活</checkbox>
-                <checkbox value="day7">7日留存</checkbox>
-                <checkbox value="day30">30日留存</checkbox>
-                <checkbox value="tomorrow">次日留存</checkbox>
-                <checkbox value="day">日活跃</checkbox>
-                <checkbox value="week">周活跃</checkbox>
-                <checkbox value="month">月活跃</checkbox>
-            </checkbox-group>
-            <i-table :content="self" :data="tableData2" :columns="tableColumns2" border></i-table>
-            <br>
-            <i-code lang="html" bg>{{ code.table2 }}</i-code>
-        </div>
-    </Modal>
-    <Modal :visible.sync="table3" title="多种效果组合的表格" width="1000" :style="{top: '20px'}">
-        <div v-if="table3">
-            <div class="ivu-article">
-                <blockquote>
-                    <p>该示例主要展示了表格丰富的显示效果。</p>
-                </blockquote>
-            </div>
-            <div style="margin: 10px">
-                显示边框 <switch :checked.sync="showBorder" style="margin-right: 5px"></switch>
-                显示斑马纹 <switch :checked.sync="showStripe" style="margin-right: 5px"></switch>
-                显示索引 <switch :checked.sync="showIndex" style="margin-right: 5px"></switch>
-                显示多选框 <switch :checked.sync="showCheckbox" style="margin-right: 5px"></switch>
-                显示表头 <switch :checked.sync="showHeader" style="margin-right: 5px"></switch>
-                表格滚动 <switch :checked.sync="fixedHeader" style="margin-right: 5px"></switch>
+        </Modal>
+        <Modal v-model="table2" title="多列指标筛选的表格" width="1000" :styles="{top: '20px'}">
+            <div v-if="table2">
+                <div class="ivu-article">
+                    <blockquote>
+                        <p>该表格来自于 TalkingData <a href="https://www.talkingdata.com/product-AdTracking.jsp">Ad Tracking</a> 产品，展示各种推广活动不同指标的数据，数据为模拟数据。</p>
+                        <p>该示例主要展示固定列、自定义列数量以及排序的功能。</p>
+                    </blockquote>
+                </div>
+                <Checkbox-group v-model="tableColumnsChecked" @on-change="changeTableColumns">
+                    <Checkbox label="show">展示</Checkbox>
+                    <Checkbox label="weak">唤醒</Checkbox>
+                    <Checkbox label="signin">登录</Checkbox>
+                    <Checkbox label="click">点击</Checkbox>
+                    <Checkbox label="active">激活</Checkbox>
+                    <Checkbox label="day7">7日留存</Checkbox>
+                    <Checkbox label="day30">30日留存</Checkbox>
+                    <Checkbox label="tomorrow">次日留存</Checkbox>
+                    <Checkbox label="day">日活跃</Checkbox>
+                    <Checkbox label="week">周活跃</Checkbox>
+                    <Checkbox label="month">月活跃</Checkbox>
+                </Checkbox-group>
+                <Table :context="self" :data="tableData2" :columns="tableColumns2" border></Table>
                 <br>
-                <br>
-                表格尺寸
-                <radio-group :model.sync="tableSize" type="button">
-                    <radio value="large">大</radio>
-                    <radio value="default">中</radio>
-                    <radio value="small">小</radio>
-                </radio-group>
+                <i-code lang="html" bg>{{ code.table2 }}</i-code>
             </div>
-            <i-table :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 250 : ''" :size="tableSize" :data="tableData3" :columns="tableColumns3"></i-table>
-            <br>
-            <i-code lang="html" bg>{{ code.table3 }}</i-code>
-        </div>
-    </Modal>
+        </Modal>
+        <Modal v-model="table3" title="多种效果组合的表格" width="1000" :styles="{top: '20px'}">
+            <div v-if="table3">
+                <div class="ivu-article">
+                    <blockquote>
+                        <p>该示例主要展示了表格丰富的显示效果。</p>
+                    </blockquote>
+                </div>
+                <div style="margin: 10px">
+                    显示边框 <i-switch v-model="showBorder" style="margin-right: 5px"></i-switch>
+                    显示斑马纹 <i-switch v-model="showStripe" style="margin-right: 5px"></i-switch>
+                    显示索引 <i-switch v-model="showIndex" style="margin-right: 5px"></i-switch>
+                    显示多选框 <i-switch v-model="showCheckbox" style="margin-right: 5px"></i-switch>
+                    显示表头 <i-switch v-model="showHeader" style="margin-right: 5px"></i-switch>
+                    表格滚动 <i-switch v-model="fixedHeader" style="margin-right: 5px"></i-switch>
+                    <br>
+                    <br>
+                    表格尺寸
+                    <Radio-group v-model="tableSize" type="button">
+                        <Radio label="large">大</Radio>
+                        <Radio label="default">中</Radio>
+                        <Radio label="small">小</Radio>
+                    </Radio-group>
+                </div>
+                <Table :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 250 : ''" :size="tableSize" :data="tableData3" :columns="tableColumns3"></Table>
+                <br>
+                <i-code lang="html" bg>{{ code.table3 }}</i-code>
+            </div>
+        </Modal>
+    </div>
 </template>
 <script>
     import iArticle from '../../components/article.vue';
@@ -1614,8 +1617,8 @@
                         width: 200,
                         render (row, column, index) {
                             return `
-                                    <Icon style="cursor: pointer" type="ios-star-outline" v-if="tableData2[${index}].fav === 0" @click="toggleFav(${index})"></Icon>
-                                    <Icon style="cursor: pointer;color:#f60" type="ios-star" v-if="tableData2[${index}].fav === 1" @click="toggleFav(${index})"></Icon>
+                                    <Icon style="cursor: pointer" type="ios-star-outline" v-if="tableData2[${index}].fav === 0" @click.native="toggleFav(${index})"></Icon>
+                                    <Icon style="cursor: pointer;color:#f60" type="ios-star" v-if="tableData2[${index}].fav === 1" @click.native="toggleFav(${index})"></Icon>
                                     <span>${row.name}</span>
                                     `;
                         }
@@ -1719,7 +1722,7 @@
                 }
             }
         },
-        ready () {
+        mounted () {
             this.changeTableColumns();
         }
     }

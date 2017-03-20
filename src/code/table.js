@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <i-table :columns="columns1" :data="data1"></i-table>
+    <Table :columns="columns1" :data="data1"></Table>
 </template>
 <script>
     export default {
@@ -52,7 +52,7 @@ code.base = `
 
 code.stripe = `
 <template>
-    <i-table stripe :columns="columns1" :data="data1"></i-table>
+    <Table stripe :columns="columns1" :data="data1"></Table>
 </template>
 <script>
     export default {
@@ -102,7 +102,7 @@ code.stripe = `
 
 code.border = `
 <template>
-    <i-table border :columns="columns1" :data="data1"></i-table>
+    <Table border :columns="columns1" :data="data1"></Table>
 </template>
 <script>
     export default {
@@ -179,11 +179,11 @@ code.class = `
 </style>
 <template>
     <p>自定义行样式：</p>
-    <i-table :row-class-name="rowClassName" :columns="columns1" :data="data1"></i-table>
+    <Table :row-class-name="rowClassName" :columns="columns1" :data="data1"></Table>
     <p>自定义列样式：</p>
-    <i-table :columns="columns9" :data="data1"></i-table>
+    <Table :columns="columns9" :data="data1"></Table>
     <p>自定义任意单元格样式：</p>
-    <i-table :columns="columns1" :data="data8"></i-table>
+    <Table :columns="columns1" :data="data8"></Table>
 </template>
 <script>
     export default {
@@ -287,7 +287,7 @@ code.class = `
 
 code.height = `
 <template>
-    <i-table height="200" :columns="columns1" :data="data2"></i-table>
+    <Table height="200" :columns="columns1" :data="data2"></Table>
 </template>
 <script>
     export default {
@@ -357,7 +357,7 @@ code.height = `
 
 code.fixed = `
 <template>
-    <i-table width="550" border :columns="columns2" :data="data3"></i-table>
+    <Table width="550" border :columns="columns2" :data="data3"></Table>
 </template>
 <script>
     export default {
@@ -447,7 +447,7 @@ code.fixed = `
 
 code.fixedAll = `
 <template>
-    <i-table width="550" height="200" border :columns="columns2" :data="data4"></i-table>
+    <Table width="550" height="200" border :columns="columns2" :data="data4"></Table>
 </template>
 <script>
     export default {
@@ -569,7 +569,7 @@ code.fixedAll = `
 
 code.highlight = `
 <template>
-    <i-table highlight-row :columns="columns3" :data="data1"></i-table>
+    <Table highlight-row :columns="columns3" :data="data1"></Table>
 </template>
 <script>
     export default {
@@ -624,7 +624,7 @@ code.highlight = `
 
 code.selection = `
 <template>
-    <i-table border :columns="columns4" :data="data1"></i-table>
+    <Table border :columns="columns4" :data="data1"></Table>
 </template>
 <script>
     export default {
@@ -679,7 +679,7 @@ code.selection = `
 
 code.sort = `
 <template>
-    <i-table border :columns="columns5" :data="data5"></i-table>
+    <Table border :columns="columns5" :data="data5"></Table>
 </template>
 <script>
     export default {
@@ -739,7 +739,7 @@ code.sort = `
 
 code.filter = `
 <template>
-    <i-table border :columns="columns6" :data="data5"></i-table>
+    <Table border :columns="columns6" :data="data5"></Table>
 </template>
 <script>
     export default {
@@ -832,7 +832,7 @@ code.filter = `
 
 code.render = `
 <template>
-    <i-table border :content="self" :columns="columns7" :data="data6"></i-table>
+    <Table border :context="self" :columns="columns7" :data="data6"></Table>
 </template>
 <script>
     export default {
@@ -906,8 +906,8 @@ code.render = `
 
 code.size = `
 <template>
-    <i-table size="large" :columns="columns1" :data="data1"></i-table>
-    <i-table size="small" :columns="columns1" :data="data1"></i-table>
+    <Table size="large" :columns="columns1" :data="data1"></Table>
+    <Table size="small" :columns="columns1" :data="data1"></Table>
 </template>
 <script>
     export default {
@@ -957,7 +957,7 @@ code.size = `
 
 code.table1 = `
 <template>
-    <i-table :content="self" :data="tableData1" :columns="tableColumns1" stripe></i-table>
+    <Table :context="self" :data="tableData1" :columns="tableColumns1" stripe></Table>
     <div style="margin: 10px;overflow: hidden">
         <div style="float: right;">
             <Page :total="100" :current="1" @on-change="changePage"></Page>
@@ -1072,20 +1072,20 @@ code.table1 = `
 
 code.table2 = `
 <template>
-    <checkbox-group :model.sync="tableColumnsChecked" @on-change="changeTableColumns">
-        <checkbox value="show">展示</checkbox>
-        <checkbox value="weak">唤醒</checkbox>
-        <checkbox value="signin">登录</checkbox>
-        <checkbox value="click">点击</checkbox>
-        <checkbox value="active">激活</checkbox>
-        <checkbox value="day7">7日留存</checkbox>
-        <checkbox value="day30">30日留存</checkbox>
-        <checkbox value="tomorrow">次日留存</checkbox>
-        <checkbox value="day">日活跃</checkbox>
-        <checkbox value="week">周活跃</checkbox>
-        <checkbox value="month">月活跃</checkbox>
-    </checkbox-group>
-    <i-table :content="self" :data="tableData2" :columns="tableColumns2" border></i-table>
+    <Checkbox-group v-model="tableColumnsChecked" @on-change="changeTableColumns">
+        <Checkbox label="show">展示</Checkbox>
+        <Checkbox label="weak">唤醒</Checkbox>
+        <Checkbox label="signin">登录</Checkbox>
+        <Checkbox label="click">点击</Checkbox>
+        <Checkbox label="active">激活</Checkbox>
+        <Checkbox label="day7">7日留存</Checkbox>
+        <Checkbox label="day30">30日留存</Checkbox>
+        <Checkbox label="tomorrow">次日留存</Checkbox>
+        <Checkbox label="day">日活跃</Checkbox>
+        <Checkbox label="week">周活跃</Checkbox>
+        <Checkbox label="month">月活跃</Checkbox>
+    </Checkbox-group>
+    <Table :context="self" :data="tableData2" :columns="tableColumns2" border></Table>
 </template>
 <script>
     export default {
@@ -1130,8 +1130,8 @@ code.table2 = `
                         fixed: 'left',
                         width: 200,
                         render (row, column, index) {
-                            return \`<Icon style="cursor: pointer" type="ios-star-outline" v-if="tableData2[$\{index\}].fav === 0" @click="toggleFav($\{index\})"></Icon>
-                                    <Icon style="cursor: pointer;color:#f60" type="ios-star" v-if="tableData2[$\{index\}].fav === 1" @click="toggleFav($\{index\})"></Icon>
+                            return \`<Icon style="cursor: pointer" type="ios-star-outline" v-if="tableData2[$\{index\}].fav === 0" @click.native="toggleFav($\{index\})"></Icon>
+                                    <Icon style="cursor: pointer;color:#f60" type="ios-star" v-if="tableData2[$\{index\}].fav === 1" @click.native="toggleFav($\{index\})"></Icon>
                                     <span>$\{row.name\}</span>\`;
                         }
                     },
@@ -1216,7 +1216,7 @@ code.table2 = `
                 this.tableData2[index].fav = this.tableData2[index].fav === 0 ? 1 : 0;
             }
         },
-        ready () {
+        mounted () {
             this.changeTableColumns();
         }
     }
@@ -1226,22 +1226,22 @@ code.table2 = `
 code.table3 = `
 <template>
     <div style="margin: 10px">
-        显示边框 <switch :checked.sync="showBorder" style="margin-right: 5px"></switch>
-        显示斑马纹 <switch :checked.sync="showStripe" style="margin-right: 5px"></switch>
-        显示索引 <switch :checked.sync="showIndex" style="margin-right: 5px"></switch>
-        显示多选框 <switch :checked.sync="showCheckbox" style="margin-right: 5px"></switch>
-        显示表头 <switch :checked.sync="showHeader" style="margin-right: 5px"></switch>
-        表格滚动 <switch :checked.sync="fixedHeader" style="margin-right: 5px"></switch>
+        显示边框 <i-switch v-model="showBorder" style="margin-right: 5px"></i-switch>
+        显示斑马纹 <i-switch v-model="showStripe" style="margin-right: 5px"></i-switch>
+        显示索引 <i-switch v-model="showIndex" style="margin-right: 5px"></i-switch>
+        显示多选框 <i-switch v-model="showCheckbox" style="margin-right: 5px"></i-switch>
+        显示表头 <i-switch v-model="showHeader" style="margin-right: 5px"></i-switch>
+        表格滚动 <i-switch v-model="fixedHeader" style="margin-right: 5px"></i-switch>
         <br>
         <br>
         表格尺寸
-        <radio-group :model.sync="tableSize" type="button">
-            <radio value="large">大</radio>
-            <radio value="default">中</radio>
-            <radio value="small">小</radio>
-        </radio-group>
+        <Radio-group v-model="tableSize" type="button">
+            <Radio label="large">大</Radio>
+            <Radio label="default">中</Radio>
+            <Radio label="small">小</Radio>
+        </Radio-group>
     </div>
-    <i-table :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 250 : ''" :size="tableSize" :data="tableData3" :columns="tableColumns3"></i-table>
+    <Table :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 250 : ''" :size="tableSize" :data="tableData3" :columns="tableColumns3"></Table>
 </template>
 <script>
     export default {
@@ -1385,11 +1385,11 @@ code.table3 = `
 
 code.csv = `
 <template>
-    <i-table :columns="columns8" :data="data7" size="small" v-ref:table></i-table>
+    <Table :columns="columns8" :data="data7" size="small" ref="table"></Table>
     <br>
-    <i-button type="primary" size="large" @click="exportData(1)"><Icon type="ios-download-outline"></Icon> 导出原始数据</i-button>
-    <i-button type="primary" size="large" @click="exportData(2)"><Icon type="ios-download-outline"></Icon> 导出排序和过滤后的数据</i-button>
-    <i-button type="primary" size="large" @click="exportData(3)"><Icon type="ios-download-outline"></Icon> 导出自定义数据</i-button>
+    <Button type="primary" size="large" @click="exportData(1)"><Icon type="ios-download-outline"></Icon> 导出原始数据</Button>
+    <Button type="primary" size="large" @click="exportData(2)"><Icon type="ios-download-outline"></Icon> 导出排序和过滤后的数据</Button>
+    <Button type="primary" size="large" @click="exportData(3)"><Icon type="ios-download-outline"></Icon> 导出自定义数据</Button>
 </template>
 <script>
     export default {

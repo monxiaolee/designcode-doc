@@ -178,6 +178,13 @@ const routers = [
         component: require('./views/components/switch.vue')
     },
     {
+        path: '/components/table',
+        meta: {
+            title: '表格 Table'
+        },
+        component: require('./views/components/table.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
