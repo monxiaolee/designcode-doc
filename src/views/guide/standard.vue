@@ -14,7 +14,7 @@
                     <li>对象字面量缩写、箭头函数</li>
                 </ul>
                 <li>通用工具集可以在<code>src/utils/assist</code>内扩展</li>
-                <li>在<code>test/routers</code>内测试组件</li>
+                <li>在<code>examples/routers</code>内测试组件</li>
             </ul>
             <Anchor title="组件" h3></Anchor>
             <p>命名</p>
@@ -41,8 +41,8 @@
             </ul>
             <p>规范</p>
             <ul>
-                <li>使用<code>$emit</code>来对外触发事件，而不用<code>$dispatch</code>和<code>$broadcast</code></li>
-                <li>嵌套组件之间通信，使用<code>$parent</code>和<code>$children</code>，而不用<code>$emit</code>，避免使用者错误使用自定义事件</li>
+                <li><code>$dispatch</code>和<code>$broadcast</code> 替代方案在 <code>src/mixins/emitter.js</code> 内</li>
+                <li>嵌套组件之间通信，可以使用<code>$parent</code>和<code>$children</code>，在 <code>src/utils/assist.js</code> 内提供了 <code>findComponentUpward</code>、<code>findComponentDownward</code>、<code>findComponentsDownward</code> 三个方法来向上或向下查找元素，建议组件可以嵌套其它组件时，查询 parent 或 children 使用这三个方法。参考 Radio、Checkbox、Menu 组件的实现。</li>
             </ul>
             <Anchor title="其它" h3></Anchor>
             <ul>
