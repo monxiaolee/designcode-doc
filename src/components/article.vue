@@ -136,9 +136,9 @@
                 </div>
             </div>
         </Modal>
-        <div class="ask-question" @click="ask = true">
+        <div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">
             <Icon type="help-circled"></Icon>
-            <p>提问</p>
+            <p>{{ $t('index.ask') }}</p>
         </div>
     </div>
 </template>
@@ -159,6 +159,11 @@
                 donate: false,
                 ask: false,
                 activeKey: ''
+            }
+        },
+        computed: {
+            lang () {
+                return bus.lang;
             }
         },
         methods: {

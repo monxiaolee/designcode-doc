@@ -1,3 +1,8 @@
+<style>
+    .wrapper-header-nav .ivu-menu-item i{
+        margin-right: 6px;
+    }
+</style>
 <template>
     <Menu mode="horizontal" :active-name="currentActiveKey" @on-select="handleSelect">
         <div class="wrapper-header-nav">
@@ -9,39 +14,42 @@
                     ref="select"
                     v-model="search"
                     filterable
-                    placeholder="搜索组件..."
-                    not-found-text="没有找到相关组件"
+                    :placeholder="searchText"
+                    :not-found-text="notFoundText"
                     @on-change="handleSearch">
-                    <i-option v-for="item in navigateList" :key="item" :value="item.path">{{ item.title }}</i-option>
+                    <i-option v-for="item in navigateList" :key="item" :value="item.path">
+                        <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
+                        <template v-else>{{ item.title.split(' ')[0] }}</template>
+                    </i-option>
                 </i-select>
             </div>
             <div class="wrapper-header-nav-list">
                 <Menu-item name="guide">
                     <Icon type="ios-navigate"></Icon>
-                    指南
+                    {{ $t('index.guide') }}
                 </Menu-item>
                 <Menu-item name="component">
                     <Icon type="ios-keypad"></Icon>
-                    组件
+                    {{ $t('index.component') }}
                 </Menu-item>
                 <Menu-item name="cli">
                     <Icon type="settings"></Icon>
-                    脚手架
+                    {{ $t('index.cli') }}
                 </Menu-item>
                 <Menu-item name="live">
                     <Badge :dot="liveDot">
                         <Icon type="ios-mic"></Icon>
-                        讲堂
+                        {{ $t('index.live') }}
                     </Badge>
                 </Menu-item>
                 <Menu-item name="practice">
                     <Icon type="ios-analytics"></Icon>
-                    实践
+                    {{ $t('index.practice') }}
                 </Menu-item>
-                <Menu-item name="github">
-                    <Icon type="social-github"></Icon>
-                    Github
-                </Menu-item>
+                <Button type="ghost" size="small" @click="handleChangeLang">
+                    <template v-if="lang === 'zh-CN'">EN</template>
+                    <template v-else>中文</template>
+                </Button>
             </div>
         </div>
     </Menu>
@@ -60,7 +68,9 @@
                 search: '',
                 navigateList: [],
                 liveDot: false,
-                currentActiveKey: this.activeKey
+                currentActiveKey: this.activeKey,
+                searchText: this.$t('index.search'),
+                notFoundText: this.$t('index.notFound')
             };
         },
         watch: {
@@ -72,7 +82,9 @@
             }
         },
         computed: {
-
+            lang () {
+                return bus.lang;
+            }
         },
         methods: {
             handleSearch (val) {
@@ -124,6 +136,10 @@
                 } else {
                     this.currentActiveKey = 'guide';
                 }
+            },
+            handleChangeLang () {
+                const lang = this.lang === 'zh-CN' ? 'en-US' : 'zh-CN';
+                bus.$emit('on-change-lang', lang);
             }
         },
         created () {
