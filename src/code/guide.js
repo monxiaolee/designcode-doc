@@ -30,11 +30,11 @@ introduce.demo = `
 
 install.cdn = `
 <!-- 引入Vue -->
-<script src="//v1.vuejs.org/js/vue.min.js"></script>
+<script src="//vuejs.org/js/vue.min.js"></script>
 <!-- 引入样式 -->
 <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
 <!-- 引入组件库 -->
-<script src="//unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+<script src="//unpkg.com/iview/dist/iview.min.js"></script>
 `;
 
 install.demo = `
@@ -44,13 +44,13 @@ install.demo = `
     <meta charset="utf-8">
     <title>iview example</title>
     <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
-    <script type="text/javascript" src="http://v1.vuejs.org/js/vue.min.js"></script>
-    <script type="text/javascript" src="http://unpkg.com/iview@1.0.1/dist/iview.min.js"></script>
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
 </head>
 <body>
 <div id="app">
     <i-button @click="show">Click me!</i-button>
-    <Modal :visible.sync="visible" title="Welcome">欢迎使用 iView</Modal>
+    <Modal v-model="visible" title="Welcome">欢迎使用 iView</Modal>
 </div>
 <script>
     new Vue({
@@ -70,7 +70,7 @@ install.demo = `
 `;
 
 install.install = `
-$ npm install iview@1.0.1 --save
+$ npm install iview --save
 `;
 
 install.import = `

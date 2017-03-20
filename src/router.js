@@ -73,6 +73,13 @@ const routers = [
         component: require('./views/practice/logo.vue')
     },
     {
+        path: '/docs/guide/install',
+        meta: {
+            title: '安装'
+        },
+        component: require('./views/guide/install.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
