@@ -206,6 +206,13 @@ const routers = [
         component: require('./views/components/date-picker.vue')
     },
     {
+        path: '/components/time-picker',
+        meta: {
+            title: '时间选择器 TimePicker'
+        },
+        component: require('./views/components/time-picker.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

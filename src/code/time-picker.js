@@ -2,14 +2,14 @@ let code = {};
 
 code.base = `
 <template>
-    <row>
-        <i-col span="12">
+    <Row>
+        <Col span="12">
             <Time-picker type="time" placeholder="选择时间" style="width: 168px"></Time-picker>
-        </i-col>
-        <i-col span="12">
+        </Col>
+        <Col span="12">
             <Time-picker type="timerange" placement="bottom-end" placeholder="选择时间" style="width: 168px"></Time-picker>
-        </i-col>
-    </row>
+        </Col>
+    </Row>
 </template>
 <script>
     export default {
@@ -20,14 +20,14 @@ code.base = `
 
 code.format = `
 <template>
-    <row>
-        <i-col span="12">
+    <Row>
+        <Col span="12">
             <Time-picker :value="value1" format="HH点mm分ss秒" placeholder="选择时间" style="width: 168px"></Time-picker>
-        </i-col>
-        <i-col span="12">
+        </Col>
+        <Col span="12">
             <Time-picker :value="value2" format="HH’mm’ss" type="timerange" placement="bottom-end" placeholder="选择时间" style="width: 168px"></Time-picker>
-        </i-col>
-    </row>
+        </Col>
+    </Row>
 </template>
 <script>
     export default {
@@ -43,14 +43,14 @@ code.format = `
 
 code.hours = `
 <template>
-    <row>
-        <i-col span="12">
+    <Row>
+        <Col span="12">
             <Time-picker format="HH:mm" placeholder="选择时间" style="width: 112px"></Time-picker>
-        </i-col>
-        <i-col span="12">
+        </Col>
+        <Col span="12">
             <Time-picker format="HH:mm" type="timerange" placement="bottom-end" placeholder="选择时间" style="width: 168px"></Time-picker>
-        </i-col>
-    </row>
+        </Col>
+    </Row>
 </template>
 <script>
     export default {
@@ -61,23 +61,23 @@ code.hours = `
 
 code.disabled = `
 <template>
-    <row>
-        <i-col span="12">
+    <Row>
+        <Col span="12">
             <Time-picker
                 :disabled-hours="[1,5,10]"
                 :disabled-minutes="[0,10,20]"
                 placeholder="选择时间"
                 style="width: 168px"></Time-picker>
-        </i-col>
-        <i-col span="12">
+        </Col>
+        <Col span="12">
             <Time-picker
                 hide-disabled-options
                 :disabled-hours="[1,5,10]"
                 :disabled-minutes="[0,10,20]"
                 placeholder="选择时间"
                 style="width: 168px"></Time-picker>
-        </i-col>
-    </row>
+        </Col>
+    </Row>
 </template>
 <script>
     export default {
@@ -88,14 +88,14 @@ code.disabled = `
 
 code.confirm = `
 <template>
-    <row>
-        <i-col span="12">
+    <Row>
+        <Col span="12">
             <Time-picker confirm placeholder="选择时间" style="width: 168px"></Time-picker>
-        </i-col>
-        <i-col span="12">
+        </Col>
+        <Col span="12">
             <Time-picker confirm type="timerange" placement="bottom-end" placeholder="选择时间" style="width: 168px"></Time-picker>
-        </i-col>
-    </row>
+        </Col>
+    </Row>
 </template>
 <script>
     export default {
@@ -149,16 +149,16 @@ code.slot = `
 code.size = `
 <template>
     <row :gutter="16">
-        <i-col span="8">
+        <Col span="8">
             <Time-picker size="small" placeholder="选择时间"></Time-picker>
-        </i-col>
-        <i-col span="8">
+        </Col>
+        <Col span="8">
             <Time-picker placeholder="选择时间"></Time-picker>
-        </i-col>
-        <i-col span="8">
+        </Col>
+        <Col span="8">
             <Time-picker size="large" placeholder="选择时间"></Time-picker>
-        </i-col>
-    </row>
+        </Col>
+    </Row>
 </template>
 <script>
     export default {
