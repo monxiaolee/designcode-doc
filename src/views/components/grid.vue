@@ -44,26 +44,26 @@
             <h1>Grid 栅格</h1>
             <Anchor title="概述" h2></Anchor>
             <Row class-name="demo-row">
-                <i-col :span="24" class-name="demo-col">24：100%</i-col>
+                <Col :span="24" class-name="demo-col">24：100%</Col>
             </Row>
             <Row class-name="demo-row light">
-                <i-col :span="12" class-name="demo-col">12：50%</i-col>
-                <i-col :span="12" class-name="demo-col light">12：50%</i-col>
+                <Col :span="12" class-name="demo-col">12：50%</Col>
+                <Col :span="12" class-name="demo-col light">12：50%</Col>
             </Row>
             <Row class-name="demo-row">
-                <i-col :span="8" class-name="demo-col">8：33.33%</i-col>
-                <i-col :span="8" class-name="demo-col light">8：33.33%</i-col>
-                <i-col :span="8" class-name="demo-col">8：33.33%</i-col>
+                <Col :span="8" class-name="demo-col">8：33.33%</Col>
+                <Col :span="8" class-name="demo-col light">8：33.33%</Col>
+                <Col :span="8" class-name="demo-col">8：33.33%</Col>
             </Row>
             <Row class-name="demo-row light">
-                <i-col :span="6" class-name="demo-col">6：25%</i-col>
-                <i-col :span="6" class-name="demo-col light">6：25%</i-col>
-                <i-col :span="6" class-name="demo-col">6：25%</i-col>
-                <i-col :span="6" class-name="demo-col light">6：25%</i-col>
+                <Col :span="6" class-name="demo-col">6：25%</Col>
+                <Col :span="6" class-name="demo-col light">6：25%</Col>
+                <Col :span="6" class-name="demo-col">6：25%</Col>
+                <Col :span="6" class-name="demo-col light">6：25%</Col>
             </Row>
             <Row class-name="demo-row">
-                <i-col :span="16" class-name="demo-col">16：66.66%</i-col>
-                <i-col :span="8" class-name="demo-col light">8：33.33%</i-col>
+                <Col :span="16" class-name="demo-col">16：66.66%</Col>
+                <Col :span="8" class-name="demo-col light">8：33.33%</Col>
             </Row>
             <p>我们采用了24栅格系统，将区域进行24等分，这样可以轻松应对大部分布局问题。使用栅格系统进行网页布局，可以使页面排版美观、舒适。</p>
             <p>我们定义了两个概念，行<code>row</code>和列<code>col</code>，具体使用方法如下：</p>
@@ -74,30 +74,31 @@
                 <li>通过设置<code>col</code>的<code>span</code>参数，指定跨越的范围，其范围是1到24</li>
                 <li>每个<code>row</code>中的<code>col</code>总和应该为24</li>
             </ul>
+            <blockquote>注意：非 template/render 模式下，需使用 <code>i-col</code>。</blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
                     <Row>
-                        <i-col span="12">col-12</i-col>
-                        <i-col span="12">col-12</i-col>
+                        <Col span="12">col-12</Col>
+                        <Col span="12">col-12</Col>
                     </Row>
                     <br>
                     <Row>
-                        <i-col span="8">col-8</i-col>
-                        <i-col span="8">col-8</i-col>
-                        <i-col span="8">col-8</i-col>
+                        <Col span="8">col-8</Col>
+                        <Col span="8">col-8</Col>
+                        <Col span="8">col-8</Col>
                     </Row>
                     <br>
                     <Row>
-                        <i-col span="6">col-6</i-col>
-                        <i-col span="6">col-6</i-col>
-                        <i-col span="6">col-6</i-col>
-                        <i-col span="6">col-6</i-col>
+                        <Col span="6">col-6</Col>
+                        <Col span="6">col-6</Col>
+                        <Col span="6">col-6</Col>
+                        <Col span="6">col-6</Col>
                     </Row>
                 </div>
                 <div slot="desc">
                     <p>水平排列的布局。</p>
-                    <p><code>col</code>必须放在<code>row</code>里面，在使用<code>col</code>组件时，必须加前缀，如<code>&lt;i-col&gt;&lt;/i-col&gt;</code>。</p>
+                    <p><code>col</code>必须放在<code>row</code>里面，在使用<code>col</code>组件时，必须加前缀，如<code>&lt;Col&gt;&lt;/Col&gt;</code>。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
@@ -105,18 +106,18 @@
             <Demo title="区块间隔">
                 <div slot="demo" class="gutter">
                     <Row :gutter="16">
-                        <i-col span="6">
+                        <Col span="6">
                             <div>col-6</div>
-                        </i-col>
-                        <i-col span="6">
+                        </Col>
+                        <Col span="6">
                             <div>col-6</div>
-                        </i-col>
-                        <i-col span="6">
+                        </Col>
+                        <Col span="6">
                             <div>col-6</div>
-                        </i-col>
-                        <i-col span="6">
+                        </Col>
+                        <Col span="6">
                             <div>col-6</div>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -128,10 +129,10 @@
             <Demo title="栅格顺序(Flex)">
                 <div slot="demo">
                     <Row type="flex">
-                        <i-col span="6" order="4">1 | order-4</i-col>
-                        <i-col span="6" order="3">2 | order-3</i-col>
-                        <i-col span="6" order="2">3 | order-2</i-col>
-                        <i-col span="6" order="1">4 | order-1</i-col>
+                        <Col span="6" order="4">1 | order-4</Col>
+                        <Col span="6" order="3">2 | order-3</Col>
+                        <Col span="6" order="2">3 | order-2</Col>
+                        <Col span="6" order="1">4 | order-1</Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -143,8 +144,8 @@
             <Demo title="栅格排序">
                 <div slot="demo">
                     <Row>
-                        <i-col span="18" push="6">col-18 | push-6</i-col>
-                        <i-col span="6" pull="18">col-6 | pull-18</i-col>
+                        <Col span="18" push="6">col-18 | push-6</Col>
+                        <Col span="6" pull="18">col-6 | pull-18</Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -156,17 +157,17 @@
             <Demo title="左右偏移">
                 <div slot="demo">
                     <Row>
-                        <i-col span="8">col-8</i-col>
-                        <i-col span="8" offset="8">col-8 | offset-8</i-col>
+                        <Col span="8">col-8</Col>
+                        <Col span="8" offset="8">col-8 | offset-8</Col>
                     </Row>
                     <br>
                     <Row>
-                        <i-col span="6" offset="8">col-6 | offset-8</i-col>
-                        <i-col span="6" offset="4">col-6 | offset-4</i-col>
+                        <Col span="6" offset="8">col-6 | offset-8</Col>
+                        <Col span="6" offset="4">col-6 | offset-4</Col>
                     </Row>
                     <br>
                     <Row>
-                        <i-col span="12" offset="8">col-12 | offset-8</i-col>
+                        <Col span="12" offset="8">col-12 | offset-8</Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -179,38 +180,38 @@
                 <div slot="demo">
                     <p>子元素向左排列</p>
                     <Row type="flex" justify="start" class="code-row-bg">
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
                     </Row>
                     <p>子元素向右排列</p>
                     <Row type="flex" justify="end" class="code-row-bg">
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
                     </Row>
                     <p>子元素居中排列</p>
                     <Row type="flex" justify="center" class="code-row-bg">
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
                     </Row>
                     <p>子元素等宽排列</p>
                     <Row type="flex" justify="space-between" class="code-row-bg">
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
                     </Row>
                     <p>子元素分散排列</p>
                     <Row type="flex" justify="space-around" class="code-row-bg">
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
-                        <i-col span="4">col-4</i-col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
+                        <Col span="4">col-4</Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -223,24 +224,24 @@
                 <div slot="demo">
                     <p>顶部对齐</p>
                     <Row type="flex" justify="center" align="top" class="code-row-bg">
-                        <i-col span="4"><p style="height: 80px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 30px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 100px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 60px">col-4</p></i-col>
+                        <Col span="4"><p style="height: 80px">col-4</p></Col>
+                        <Col span="4"><p style="height: 30px">col-4</p></Col>
+                        <Col span="4"><p style="height: 100px">col-4</p></Col>
+                        <Col span="4"><p style="height: 60px">col-4</p></Col>
                     </Row>
                     <p>底部对齐</p>
                     <Row type="flex" justify="center" align="bottom" class="code-row-bg">
-                        <i-col span="4"><p style="height: 80px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 30px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 100px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 60px">col-4</p></i-col>
+                        <Col span="4"><p style="height: 80px">col-4</p></Col>
+                        <Col span="4"><p style="height: 30px">col-4</p></Col>
+                        <Col span="4"><p style="height: 100px">col-4</p></Col>
+                        <Col span="4"><p style="height: 60px">col-4</p></Col>
                     </Row>
                     <p>居中对齐</p>
                     <Row type="flex" justify="center" align="middle" class="code-row-bg">
-                        <i-col span="4"><p style="height: 80px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 30px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 100px">col-4</p></i-col>
-                        <i-col span="4"><p style="height: 60px">col-4</p></i-col>
+                        <Col span="4"><p style="height: 80px">col-4</p></Col>
+                        <Col span="4"><p style="height: 30px">col-4</p></Col>
+                        <Col span="4"><p style="height: 100px">col-4</p></Col>
+                        <Col span="4"><p style="height: 60px">col-4</p></Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -252,9 +253,9 @@
             <Demo title="响应式布局">
                 <div slot="demo">
                     <Row>
-                        <i-col :xs="2" :sm="4" :md="6" :lg="8">Col</i-col>
-                        <i-col :xs="20" :sm="16" :md="12" :lg="8">Col</i-col>
-                        <i-col :xs="2" :sm="4" :md="6" :lg="8">Col</i-col>
+                        <Col :xs="2" :sm="4" :md="6" :lg="8">Col</Col>
+                        <Col :xs="20" :sm="16" :md="12" :lg="8">Col</Col>
+                        <Col :xs="2" :sm="4" :md="6" :lg="8">Col</Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -267,9 +268,9 @@
             <Demo title="其它属性的响应式">
                 <div slot="demo">
                     <Row>
-                        <i-col :xs="{ span: 5, offset: 1 }" :lg="{ span: 6, offset: 2 }">Col</i-col>
-                        <i-col :xs="{ span: 11, offset: 1 }" :lg="{ span: 6, offset: 2 }">Col</i-col>
-                        <i-col :xs="{ span: 5, offset: 1 }" :lg="{ span: 6, offset: 2 }">Col</i-col>
+                        <Col :xs="{ span: 5, offset: 1 }" :lg="{ span: 6, offset: 2 }">Col</Col>
+                        <Col :xs="{ span: 11, offset: 1 }" :lg="{ span: 6, offset: 2 }">Col</Col>
+                        <Col :xs="{ span: 5, offset: 1 }" :lg="{ span: 6, offset: 2 }">Col</Col>
                     </Row>
                 </div>
                 <div slot="desc">

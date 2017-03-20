@@ -108,6 +108,13 @@ const routers = [
         component: require('./views/guide/update.vue')
     },
     {
+        path: '/components/grid',
+        meta: {
+            title: '栅格 Grid'
+        },
+        component: require('./views/components/grid.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
