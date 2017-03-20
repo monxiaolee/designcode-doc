@@ -164,6 +164,13 @@ const routers = [
         component: require('./views/components/radio.vue')
     },
     {
+        path: '/components/checkbox',
+        meta: {
+            title: '多选框 Checkbox'
+        },
+        component: require('./views/components/checkbox.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

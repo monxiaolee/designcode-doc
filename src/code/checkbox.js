@@ -2,7 +2,7 @@ let code = {};
 
 code.single = `
 <template>
-    <Checkbox :checked.sync="single">Checkbox</Checkbox>
+    <Checkbox v-model="single">Checkbox</Checkbox>
 </template>
 <script>
     export default {
@@ -17,28 +17,28 @@ code.single = `
 
 code.group = `
 <template>
-    <Checkbox-group :model.sync="social">
-        <Checkbox value="twitter">
+    <Checkbox-group v-model="social">
+        <Checkbox label="twitter">
             <Icon type="social-twitter"></Icon>
             <span>Twitter</span>
         </Checkbox>
-        <Checkbox value="facebook">
+        <Checkbox label="facebook">
             <Icon type="social-facebook"></Icon>
             <span>Facebook</span>
         </Checkbox>
-        <Checkbox value="github">
+        <Checkbox label="github">
             <Icon type="social-github"></Icon>
             <span>Github</span>
         </Checkbox>
-        <Checkbox value="snapchat">
+        <Checkbox label="snapchat">
             <Icon type="social-snapchat"></Icon>
             <span>Snapchat</span>
         </Checkbox>
     </Checkbox-group>
-    <Checkbox-group :model.sync="fruit">
-        <Checkbox value="香蕉"></Checkbox>
-        <Checkbox value="苹果"></Checkbox>
-        <Checkbox value="西瓜"></Checkbox>
+    <Checkbox-group v-model="fruit">
+        <Checkbox label="香蕉"></Checkbox>
+        <Checkbox label="苹果"></Checkbox>
+        <Checkbox label="西瓜"></Checkbox>
     </Checkbox-group>
 </template>
 <script>
@@ -55,11 +55,11 @@ code.group = `
 
 code.disabled = `
 <template>
-    <Checkbox :checked.sync="disabledSingle" disabled>Checkbox</Checkbox>
-    <Checkbox-group :model.sync="disabledGroup">
-        <Checkbox value="香蕉" disabled></Checkbox>
-        <Checkbox value="苹果" disabled></Checkbox>
-        <Checkbox value="西瓜"></Checkbox>
+    <Checkbox v-model="disabledSingle" disabled>Checkbox</Checkbox>
+    <Checkbox-group v-model="disabledGroup">
+        <Checkbox label="香蕉" disabled></Checkbox>
+        <Checkbox label="苹果" disabled></Checkbox>
+        <Checkbox label="西瓜"></Checkbox>
     </Checkbox-group>
 </template>
 <script>
@@ -76,7 +76,7 @@ code.disabled = `
 
 code.communication = `
 <template>
-    <Checkbox :checked.sync="checked" :disabled="disabled">
+    <Checkbox v-model="checked" :disabled="disabled">
         <span v-if="checked">选中</span>
         <span v-else>取消</span>
          - 
@@ -84,14 +84,14 @@ code.communication = `
         <span v-else>不可用</span>
     </Checkbox>
     <br>
-    <i-button type="primary" @click="checked = !checked">
+    <Button type="primary" @click="checked = !checked">
         <span v-if="!checked">选中</span>
         <span v-else>取消</span>
-    </i-button>
-    <i-button type="primary" @click="disabled = !disabled">
+    </Button>
+    <Button type="primary" @click="disabled = !disabled">
         <span v-if="disabled">可用</span>
         <span v-else>不可用</span>
-    </i-button>
+    </Button>
 </template>
 <script>
     export default {
@@ -110,13 +110,13 @@ code.indeterminate = `
     <div style="border-bottom: 1px solid #e9e9e9;padding-bottom:6px;margin-bottom:6px;">
         <Checkbox
             :indeterminate="indeterminate"
-            :checked="checkAll"
-            @click.prevent="handleCheckAll">全选</Checkbox>
+            :value="checkAll"
+            @click.prevent.native="handleCheckAll">全选</Checkbox>
     </div>
-    <Checkbox-group :model.sync="checkAllGroup" @on-change="checkAllGroupChange">
-        <Checkbox value="香蕉"></Checkbox>
-        <Checkbox value="苹果"></Checkbox>
-        <Checkbox value="西瓜"></Checkbox>
+    <Checkbox-group v-model="checkAllGroup" @on-change="checkAllGroupChange">
+        <Checkbox label="香蕉"></Checkbox>
+        <Checkbox label="苹果"></Checkbox>
+        <Checkbox label="西瓜"></Checkbox>
     </Checkbox-group>
 </template>
 <script>

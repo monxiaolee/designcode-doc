@@ -12,57 +12,57 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="单独使用">
                 <div slot="demo">
-                    <Checkbox :checked.sync="single">Checkbox</Checkbox>
-                    <p class="demo-data">{{ single | json }}</p>
+                    <Checkbox v-model="single">Checkbox</Checkbox>
+                    <p class="demo-data">{{ single }}</p>
                 </div>
                 <div slot="desc">
-                    <p>通过设置<code>checked</code>来标记是否选择，因为组件内部是使用<code>v-model</code>来绑定，所以需要将<code>checked</code>设置<code>.sync</code>实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                    <p>使用 v-model 可以双向绑定数据。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.single }}</i-code>
             </Demo>
             <Demo title="组合使用">
                 <div slot="demo">
-                    <Checkbox-group :model.sync="social">
-                        <Checkbox value="twitter">
+                    <Checkbox-group v-model="social">
+                        <Checkbox label="twitter">
                             <Icon type="social-twitter"></Icon>
                             <span>Twitter</span>
                         </Checkbox>
-                        <Checkbox value="facebook">
+                        <Checkbox label="facebook">
                             <Icon type="social-facebook"></Icon>
                             <span>Facebook</span>
                         </Checkbox>
-                        <Checkbox value="github">
+                        <Checkbox label="github">
                             <Icon type="social-github"></Icon>
                             <span>Github</span>
                         </Checkbox>
-                        <Checkbox value="snapchat">
+                        <Checkbox label="snapchat">
                             <Icon type="social-snapchat"></Icon>
                             <span>Snapchat</span>
                         </Checkbox>
                     </Checkbox-group>
-                    <p class="demo-data">{{ social | json }}</p>
-                    <Checkbox-group :model.sync="fruit">
-                        <Checkbox value="香蕉"></Checkbox>
-                        <Checkbox value="苹果"></Checkbox>
-                        <Checkbox value="西瓜"></Checkbox>
+                    <p class="demo-data">{{ social }}</p>
+                    <Checkbox-group v-model="fruit">
+                        <Checkbox label="香蕉"></Checkbox>
+                        <Checkbox label="苹果"></Checkbox>
+                        <Checkbox label="西瓜"></Checkbox>
                     </Checkbox-group>
-                    <p class="demo-data">{{ fruit | json }}</p>
+                    <p class="demo-data">{{ fruit }}</p>
                 </div>
                 <div slot="desc">
-                    <p>使用<code>Checkbox-group</code>配合数组来生成组合。在组合使用时，<code>Checkbox</code>不再根据<code>checked</code>参数来判断状态，而是根据传入的数组和<code>value</code>的值自动判断。需要将<code>model</code>设置<code>.sync</code>实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。每个 Checkbox 的内容可以自定义，如不填写则默认使用 value 的值。</p>
+                    <p>使用<code>Checkbox-group</code>配合数组来生成组合。在组合使用时，<code>Checkbox</code> 使用 <code>label</code> 来自动判断选中状态。每个 Checkbox 的内容可以自定义，如不填写则默认使用 label 的值。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>
             </Demo>
             <Demo title="不可用">
                 <div slot="demo">
-                    <Checkbox :checked.sync="disabledSingle" disabled>Checkbox</Checkbox>
-                    <p class="demo-data">{{ disabledSingle | json }}</p>
-                    <Checkbox-group :model.sync="disabledGroup">
-                        <Checkbox value="香蕉" disabled></Checkbox>
-                        <Checkbox value="苹果" disabled></Checkbox>
-                        <Checkbox value="西瓜"></Checkbox>
+                    <Checkbox v-model="disabledSingle" disabled>Checkbox</Checkbox>
+                    <p class="demo-data">{{ disabledSingle }}</p>
+                    <Checkbox-group v-model="disabledGroup">
+                        <Checkbox label="香蕉" disabled></Checkbox>
+                        <Checkbox label="苹果" disabled></Checkbox>
+                        <Checkbox label="西瓜"></Checkbox>
                     </Checkbox-group>
-                    <p class="demo-data">{{ disabledGroup | json }}</p>
+                    <p class="demo-data">{{ disabledGroup }}</p>
                 </div>
                 <div slot="desc">
                     <p>通过设置<code>disabled</code>属性来禁用多选框。</p>
@@ -71,7 +71,7 @@
             </Demo>
             <Demo title="与其它组件通信">
                 <div slot="demo">
-                    <Checkbox :checked.sync="checked" :disabled="disabled">
+                    <Checkbox v-model="checked" :disabled="disabled">
                         <span v-if="checked">选中</span>
                         <span v-else>取消</span>
                          - 
@@ -79,14 +79,14 @@
                         <span v-else>不可用</span>
                     </Checkbox>
                     <br>
-                    <i-button type="primary" @click="checked = !checked">
+                    <Button type="primary" @click="checked = !checked">
                         <span v-if="!checked">选中</span>
                         <span v-else>取消</span>
-                    </i-button>
-                    <i-button type="primary" @click="disabled = !disabled">
+                    </Button>
+                    <Button type="primary" @click="disabled = !disabled">
                         <span v-if="disabled">可用</span>
                         <span v-else>不可用</span>
-                    </i-button>
+                    </Button>
                 </div>
                 <div slot="desc">
                     <p>与其它组件进行数据联动。</p>
@@ -98,13 +98,13 @@
                     <div style="border-bottom: 1px solid #e9e9e9;padding-bottom:6px;margin-bottom:6px;">
                         <Checkbox
                             :indeterminate="indeterminate"
-                            :checked="checkAll"
-                            @click.prevent="handleCheckAll">全选</Checkbox>
+                            :value="checkAll"
+                            @click.prevent.native="handleCheckAll">全选</Checkbox>
                     </div>
-                    <Checkbox-group :model.sync="checkAllGroup" @on-change="checkAllGroupChange">
-                        <Checkbox value="香蕉"></Checkbox>
-                        <Checkbox value="苹果"></Checkbox>
-                        <Checkbox value="西瓜"></Checkbox>
+                    <Checkbox-group v-model="checkAllGroup" @on-change="checkAllGroupChange">
+                        <Checkbox label="香蕉"></Checkbox>
+                        <Checkbox label="苹果"></Checkbox>
+                        <Checkbox label="西瓜"></Checkbox>
                     </Checkbox-group>
                 </div>
                 <div slot="desc">
@@ -126,14 +126,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>checked</td>
-                            <td>只在单独使用时有效。绑定数据，需要使用<code>.sync</code>双向绑定，否则改变状态时并不能改变使用者的数据</td>
+                            <td>value</td>
+                            <td>只在单独使用时有效。可以使用 v-model 双向绑定数据</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
-                            <td>value</td>
-                            <td>只在组合使用时有效。指定当前选项的value值，组合会自动判断是否选中</td>
+                            <td>label</td>
+                            <td>只在组合使用时有效。指定当前选项的 value 值，组合会自动判断是否选中</td>
                             <td>String | Number | Boolean</td>
                             <td>-</td>
                         </tr>
@@ -180,8 +180,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>model</td>
-                            <td>指定选中项目的集合，需要使用<code>.sync</code>双向绑定，否则改变状态时并不能改变使用者的数据<a href="https://github.com/vuejs/vue/issues/3307" target="_blank">#3307</a></td>
+                            <td>value</td>
+                            <td>指定选中项目的集合，可以使用 v-model 双向绑定数据</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
