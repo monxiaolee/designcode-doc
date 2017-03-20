@@ -171,6 +171,13 @@ const routers = [
         component: require('./views/components/checkbox.vue')
     },
     {
+        path: '/components/switch',
+        meta: {
+            title: '开关 Switch'
+        },
+        component: require('./views/components/switch.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

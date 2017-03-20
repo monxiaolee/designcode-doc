@@ -2,10 +2,15 @@ let code = {};
 
 code.base = `
 <template>
-    <Switch @on-change="change"></Switch>
+    <i-switch v-model="switch1" @on-change="change"></i-switch>
 </template>
 <script>
     export default {
+        data () {
+            return {
+                switch1: false
+            }  
+        },
         methods: {
             change (status) {
                 this.$Message.info('开关状态：' + status);
@@ -17,9 +22,9 @@ code.base = `
 
 code.size = `
 <template>
-    <Switch size="large"></Switch>
-    <Switch></Switch>
-    <Switch size="small"></Switch>
+    <i-switch size="large"></i-switch>
+    <i-switch></i-switch>
+    <i-switch size="small"></i-switch>
 </template>
 <script>
     export default {
@@ -30,23 +35,23 @@ code.size = `
 
 code.custom = `
 <template>
-    <Switch>
+    <i-switch>
         <span slot="open">开</span>
         <span slot="close">关</span>
-    </Switch>
-    <Switch>
+    </i-switch>
+    <i-switch>
         <Icon type="android-done" slot="open"></Icon>
         <Icon type="android-close" slot="close"></Icon>
-    </Switch>
+    </i-switch>
     <br><br>
-    <Switch size="large">
+    <i-switch size="large">
         <span slot="open">开启</span>
         <span slot="close">关闭</span>
-    </Switch>
-    <Switch size="large">
+    </i-switch>
+    <i-switch size="large">
         <span slot="open">ON</span>
         <span slot="close">OFF</span>
-    </Switch>
+    </i-switch>
 </template>
 <script>
     export default {
@@ -57,8 +62,8 @@ code.custom = `
 
 code.disabled = `
 <template>
-    <Switch :disabled="disabled"></Switch>
-    <i-button type="primary" @click="disabled = !disabled">Toggle Disabled</i-button>
+    <i-switch :disabled="disabled"></i-switch>
+    <Button type="primary" @click="disabled = !disabled">Toggle Disabled</Button>
 </template>
 <script>
     export default {
