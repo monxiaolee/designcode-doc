@@ -318,7 +318,7 @@
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td>class-name | class</td>
+                            <td>class-name</td>
                             <td>自定义的class名称</td>
                             <td>String</td>
                             <td>-</td>
@@ -367,7 +367,7 @@
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td>class-name | class</td>
+                            <td>class-name</td>
                             <td>自定义的class名称</td>
                             <td>String</td>
                             <td>-</td>

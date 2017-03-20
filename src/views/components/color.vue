@@ -65,9 +65,9 @@
                     </Card>
                 </i-col>
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#ff6600">
+                    <Card :bordered="false" style="background:#ff3300">
                         <div class="demo-color-name">Error</div>
-                        <div class="demo-color-desc">#ff6600</div>
+                        <div class="demo-color-desc">#ff3300</div>
                     </Card>
                 </i-col>
             </Row>

@@ -115,6 +115,27 @@ const routers = [
         component: require('./views/components/grid.vue')
     },
     {
+        path: '/components/layout',
+        meta: {
+            title: '布局 Layout'
+        },
+        component: require('./views/guide/layout.vue')
+    },
+    {
+        path: '/components/color',
+        meta: {
+            title: '色彩 Color'
+        },
+        component: require('./views/components/color.vue')
+    },
+    {
+        path: '/components/font',
+        meta: {
+            title: '字体 Font'
+        },
+        component: require('./views/components/font.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
