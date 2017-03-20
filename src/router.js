@@ -45,6 +45,20 @@ const routers = [
         component: require('./views/guide/standard.vue')
     },
     {
+        path: '/docs/practice/case',
+        meta: {
+            title: '实践案例'
+        },
+        component: require('./views/practice/case.vue')
+    },
+    {
+        path: '/docs/practice/logo',
+        meta: {
+            title: 'iView Logo 设计思路'
+        },
+        component: require('./views/practice/logo.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
