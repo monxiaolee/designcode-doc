@@ -1,7 +1,7 @@
 let code = {};
 
 code.demo = `
-<Icon type="checkmark"></Icon>
+<Icon type="checkmark" />
 `;
 
 code.render = `

@@ -143,6 +143,13 @@ const routers = [
         component: require('./views/components/button.vue')
     },
     {
+        path: '/components/icon',
+        meta: {
+            title: '图标 Icon'
+        },
+        component: require('./views/components/icon.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

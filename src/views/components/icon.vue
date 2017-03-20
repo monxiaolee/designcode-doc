@@ -47,7 +47,7 @@
             <Anchor title="概述" h2></Anchor>
             <p>iView的图标使用开源项目<a href="http://ionicons.com/" target="_blank"><Icon type="ionic"></Icon> ionicons</a></p>
             <Anchor title="如何使用" h2></Anchor>
-            <p>使用<code>&lt;Icon>&lt;/Icon></code>组件，指定图标对应的<code>type</code>属性，示例代码：</p>
+            <p>使用<code>&lt;Icon /></code>组件，指定图标对应的<code>type</code>属性，示例代码：</p>
             <i-code lang="html" bg>{{ code.demo }}</i-code>
             <p>渲染后为：</p>
             <i-code lang="html" bg>{{ code.render }}</i-code>
@@ -96,7 +96,7 @@
                 <p>点击下面的图标按钮可以直接复制组件代码</p>
             </div>
             <div class="icons">
-                <div class="icons-item" v-for="item in icons | filterBy search in 'tag'" @click="clip(item)">
+                <div class="icons-item" v-for="item in filterIcons" @click="clip(item)">
                     <i class="ivu-icon" :class="[`ivu-icon-${item.name}`]" style="font-size:32px"></i>
                     <p>
                         {{ item.name }}
@@ -130,6 +130,11 @@
                 icons: Icons,
                 searchPlaceholder: searchPlaceholder,
                 search: ''
+            }
+        },
+        computed: {
+            filterIcons () {
+                return this.icons.filter(icon => icon.tag.indexOf(this.search) > -1);
             }
         },
         methods: {
