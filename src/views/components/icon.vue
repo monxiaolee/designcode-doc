@@ -45,7 +45,7 @@
         <article>
             <h1>Icon 图标</h1>
             <Anchor title="概述" h2></Anchor>
-            <p>iView的图标使用开源项目<a href="http://ionicons.com/" target="_blank"><Icon type="ionic"></Icon> ionicons</a></p>
+            <p>iView 的图标使用开源项目<a href="http://ionicons.com/" target="_blank"><Icon type="ionic"></Icon> ionicons</a></p>
             <Anchor title="如何使用" h2></Anchor>
             <p>使用<code>&lt;Icon /></code>组件，指定图标对应的<code>type</code>属性，示例代码：</p>
             <i-code lang="html" bg>{{ code.demo }}</i-code>

@@ -150,6 +150,13 @@ const routers = [
         component: require('./views/components/icon.vue')
     },
     {
+        path: '/components/input',
+        meta: {
+            title: '输入框 Input'
+        },
+        component: require('./views/components/input.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

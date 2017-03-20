@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <i-input :value.sync="value" placeholder="请输入..." style="width: 300px"></i-input>
+    <Input v-model="value" placeholder="请输入..." style="width: 300px"></Input>
 </template>
 <script>
     export default {
@@ -17,97 +17,125 @@ code.base = `
 
 code.size = `
 <template>
-    <i-input size="large" placeholder="large size"></i-input>
+    <Input v-model="value1" size="large" placeholder="large size"></Input>
     <br>
-    <i-input placeholder="default size"></i-input>
+    <Input v-model="value2" placeholder="default size"></Input>
     <br>
-    <i-input size="small" placeholder="small size"></i-input>
+    <Input v-model="value3" size="small" placeholder="small size"></Input>
 </template>
 <script>
     export default {
-        
+        data () {
+            return {
+                value1: '',
+                value2: '',
+                value3: ''
+            }
+        }
     }
 </script>
 `;
 
 code.icon = `
 <template>
-    <i-input icon="ios-clock-outline" placeholder="请输入..." style="width: 200px"></i-input>
+    <Input v-model="value4" icon="ios-clock-outline" placeholder="请输入..." style="width: 200px"></Input>
 </template>
 <script>
     export default {
-        
+        data () {
+            return {
+                value4: ''
+            }
+        }
     }
 </script>
 `;
 
 code.textarea = `
 <template>
-    <i-input type="textarea" placeholder="请输入..."></i-input>
-    <i-input type="textarea" :rows="4" placeholder="请输入..."></i-input>
+    <Input v-model="value5" type="textarea" placeholder="请输入..."></Input>
+    <Input v-model="value6" type="textarea" :rows="4" placeholder="请输入..."></Input>
 </template>
 <script>
     export default {
-        
+        data () {
+            return {
+                value5: '',
+                value6: ''
+            }
+        }
     }
 </script>
 `;
 
 code.autosize = `
 <template>
-    <i-input type="textarea" :autosize="true" placeholder="请输入..."></i-input>
-    <i-input type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></i-input>
+    <Input v-model="value7" type="textarea" :autosize="true" placeholder="请输入..."></Input>
+    <Input v-model="value8" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
 </template>
 <script>
     export default {
-        
+        data () {
+            return {
+                value7: '',
+                value8: ''
+            }
+        }
     }
 </script>
 `;
 
 code.disabled = `
 <template>
-    <i-input disabled placeholder="请输入..."></i-input>
-    <i-input disabled type="textarea" placeholder="请输入..."></i-input>
+    <Input v-model="value9" disabled placeholder="请输入..."></Input>
+    <Input v-model="value10" disabled type="textarea" placeholder="请输入..."></Input>
 </template>
 <script>
     export default {
-        
+        data () {
+            return {
+                value9: '',
+                value10: ''
+            }
+        }
     }
 </script>
 `;
 
 code.addon = `
 <template>
-    <i-input>
+    <Input v-model="value11">
         <span slot="prepend">http://</span>
         <span slot="append">.com</span>
-    </i-input>
+    </Input>
     <br>
-    <i-input>
-        <i-select :model.sync="select1" slot="prepend" style="width: 80px">
-            <i-option value="http">http://</i-option>
-            <i-option value="https">https://</i-option>
-        </i-select>
-        <i-select :model.sync="select2" slot="append" style="width: 70px">
-            <i-option value="com">.com</i-option>
-            <i-option value="org">.org</i-option>
-            <i-option value="io">.io</i-option>
-        </i-select>
-    </i-input>
+    <Input v-model="value12">
+        <Select v-model="select1" slot="prepend" style="width: 80px">
+            <Option value="http">http://</Option>
+            <Option value="https">https://</Option>
+        </Select>
+        <Select v-model="select2" slot="append" style="width: 70px">
+            <Option value="com">.com</Option>
+            <Option value="org">.org</Option>
+            <Option value="io">.io</Option>
+        </Select>
+    </Input>
     <br>
-    <i-input>
-        <i-select :model.sync="select3" slot="prepend" style="width: 80px">
-            <i-option value="day">日活</i-option>
-            <i-option value="month">月活</i-option>
-        </i-select>
-        <i-button slot="append" icon="ios-search"></i-button>
-    </i-input>
+    <Input v-model="value13">
+        <Select v-model="select3" slot="prepend" style="width: 80px">
+            <Option value="day">日活</Option>
+            <Option value="month">月活</Option>
+        </Select>
+        <Button slot="append" icon="ios-search"></Button>
+    </Input>
 </template>
 <script>
     export default {
         data () {
             return {
+                value11: '',
+                value12: '',
+                value13: '',
                 select1: 'http',
                 select2: 'com',
                 select3: 'day'

@@ -4,29 +4,30 @@
             <h1>Input 输入框</h1>
             <Anchor title="概述" h2></Anchor>
             <p>基本表单组件，支持 input 和 textarea，并在原生控件基础上进行了功能扩展，可以组合使用。</p>
+            <blockquote>注意：非 template/render 模式下，需使用 <code>i-input</code>。</blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <i-input :value.sync="value" placeholder="请输入..." style="width: 300px"></i-input>
+                    <Input v-model="value" placeholder="请输入..." style="width: 300px"></Input>
                 </div>
                 <div slot="desc">
-                    <p>基本用法，因为组件内部是使用<code>v-model</code>来绑定，所以需要将<code>value</code>设置<code>.sync</code>实现数据的双向绑定，否则在组件改变数据时，使用者的数据并没有变化。</p>
-                    <p>可以直接设置 style 来改变输入框的宽度，默认 100%</p>
+                    <p>基本用法，可以使用 <code>v-model</code> 实现数据的双向绑定。</p>
+                    <p>可以直接设置 style 来改变输入框的宽度，默认 100%。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="尺寸">
                 <div slot="demo">
                     <Row :gutter="8">
-                        <i-col span="8">
-                            <i-input size="large" placeholder="large size"></i-input>
-                        </i-col>
-                        <i-col span="8">
-                            <i-input placeholder="default size"></i-input>
-                        </i-col>
-                        <i-col span="8">
-                            <i-input size="small" placeholder="small size"></i-input>
-                        </i-col>
+                        <Col span="8">
+                            <Input v-model="value1" size="large" placeholder="large size"></Input>
+                        </Col>
+                        <Col span="8">
+                            <Input v-model="value2" placeholder="default size"></Input>
+                        </Col>
+                        <Col span="8">
+                            <Input v-model="value3" size="small" placeholder="small size"></Input>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -37,7 +38,7 @@
             </Demo>
             <Demo title="带Icon的输入框">
                 <div slot="demo">
-                    <i-input icon="ios-clock-outline" placeholder="请输入..." style="width: 200px"></i-input>
+                    <Input v-model="value4" icon="ios-clock-outline" placeholder="请输入..." style="width: 200px"></Input>
                 </div>
                 <div slot="desc">
                     <p>通过 <code>icon</code> 属性可以在输入框右边加一个图标。</p>
@@ -48,12 +49,12 @@
             <Demo title="文本域">
                 <div slot="demo">
                     <Row :gutter="8">
-                        <i-col span="12">
-                            <i-input type="textarea" placeholder="请输入..."></i-input>
-                        </i-col>
-                        <i-col span="12">
-                            <i-input type="textarea" :rows="4" placeholder="请输入..."></i-input>
-                        </i-col>
+                        <Col span="12">
+                            <Input v-model="value5" type="textarea" placeholder="请输入..."></Input>
+                        </Col>
+                        <Col span="12">
+                            <Input v-model="value6" type="textarea" :rows="4" placeholder="请输入..."></Input>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -65,12 +66,12 @@
             <Demo title="适应文本高度的文本域">
                 <div slot="demo">
                     <Row :gutter="8">
-                        <i-col span="12">
-                            <i-input type="textarea" :autosize="true" placeholder="请输入..."></i-input>
-                        </i-col>
-                        <i-col span="12">
-                            <i-input type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></i-input>
-                        </i-col>
+                        <Col span="12">
+                            <Input v-model="value7" type="textarea" :autosize="true" placeholder="请输入..."></Input>
+                        </Col>
+                        <Col span="12">
+                            <Input v-model="value8" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -82,12 +83,12 @@
             <Demo title="禁用状态">
                 <div slot="demo">
                     <Row :gutter="8">
-                        <i-col span="12">
-                            <i-input disabled placeholder="请输入..."></i-input>
-                        </i-col>
-                        <i-col span="12">
-                            <i-input disabled type="textarea" placeholder="请输入..."></i-input>
-                        </i-col>
+                        <Col span="12">
+                            <Input v-model="value9" disabled placeholder="请输入..."></Input>
+                        </Col>
+                        <Col span="12">
+                            <Input v-model="value10" disabled type="textarea" placeholder="请输入..."></Input>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -97,30 +98,30 @@
             </Demo>
             <Demo title="复合型输入框">
                 <div slot="demo">
-                    <i-input>
+                    <Input v-model="value11">
                         <span slot="prepend">http://</span>
                         <span slot="append">.com</span>
-                    </i-input>
+                    </Input>
                     <br>
-                    <i-input>
-                        <i-select :model.sync="select1" slot="prepend" style="width: 80px">
-                            <i-option value="http">http://</i-option>
-                            <i-option value="https">https://</i-option>
-                        </i-select>
-                        <i-select :model.sync="select2" slot="append" style="width: 70px">
-                            <i-option value="com">.com</i-option>
-                            <i-option value="org">.org</i-option>
-                            <i-option value="io">.io</i-option>
-                        </i-select>
-                    </i-input>
+                    <Input v-model="value12">
+                        <Select v-model="select1" slot="prepend" style="width: 80px">
+                            <Option value="http">http://</Option>
+                            <Option value="https">https://</Option>
+                        </Select>
+                        <Select v-model="select2" slot="append" style="width: 70px">
+                            <Option value="com">.com</Option>
+                            <Option value="org">.org</Option>
+                            <Option value="io">.io</Option>
+                        </Select>
+                    </Input>
                     <br>
-                    <i-input>
-                        <i-select :model.sync="select3" slot="prepend" style="width: 80px">
-                            <i-option value="day">日活</i-option>
-                            <i-option value="month">月活</i-option>
-                        </i-select>
-                        <i-button slot="append" icon="ios-search"></i-button>
-                    </i-input>
+                    <Input v-model="value13">
+                        <Select v-model="select3" slot="prepend" style="width: 80px">
+                            <Option value="day">日活</Option>
+                            <Option value="month">月活</Option>
+                        </Select>
+                        <Button slot="append" icon="ios-search"></Button>
+                    </Input>
                 </div>
                 <div slot="desc">
                     通过前置和后置的 slot 可以实现复合型的输入框。
@@ -129,7 +130,7 @@
             </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
-                <Anchor title="iInput props" h3></Anchor>
+                <Anchor title="Input props" h3></Anchor>
                 <table>
                     <thead>
                         <tr>
@@ -148,7 +149,7 @@
                         </tr>
                         <tr>
                             <td>value</td>
-                            <td>绑定的值，需要设置<code>.sync</code>实现数据的双向绑定</td>
+                            <td>绑定的值，可使用 v-model 双向绑定</td>
                             <td>String | Number</td>
                             <td>空</td>
                         </tr>
@@ -208,7 +209,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <Anchor title="iInput events" h3></Anchor>
+                <Anchor title="Input events" h3></Anchor>
                 <table>
                     <thead>
                         <tr>
@@ -245,7 +246,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <Anchor title="iInput slot" h3></Anchor>
+                <Anchor title="Input slot" h3></Anchor>
                 <table>
                     <thead>
                         <tr>
@@ -286,6 +287,19 @@
             return {
                 code: Code,
                 value: '',
+                value1: '',
+                value2: '',
+                value3: '',
+                value4: '',
+                value5: '',
+                value6: '',
+                value7: '',
+                value8: '',
+                value9: '',
+                value10: '',
+                value11: '',
+                value12: '',
+                value13: '',
                 select1: 'http',
                 select2: 'com',
                 select3: 'day'

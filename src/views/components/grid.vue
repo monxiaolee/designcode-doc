@@ -325,7 +325,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <Anchor title="iCol props" h3></Anchor>
+                <Anchor title="Col props" h3></Anchor>
                 <table>
                     <thead>
                         <tr>

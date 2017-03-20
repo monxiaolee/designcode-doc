@@ -227,7 +227,7 @@
             </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
-                <Anchor title="iButton props" h3></Anchor>
+                <Anchor title="Button props" h3></Anchor>
                 <table>
                     <thead>
                         <tr>
