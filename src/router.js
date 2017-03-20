@@ -87,6 +87,13 @@ const routers = [
         component: require('./views/guide/start.vue')
     },
     {
+        path: '/docs/guide/i18n',
+        meta: {
+            title: '国际化'
+        },
+        component: require('./views/guide/i18n.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

@@ -16,7 +16,7 @@
                 <li>繁体中文（zh-TW）</li>
                 <li>英文（en-US）</li>
             </ul>
-            <p>欢迎贡献代码，以支持更多语言：<a href="https://github.com/iview/iview/tree/master/src/locale/lang" target="_blank">查看</a></p>
+            <p>欢迎贡献代码，以支持更多语言：<a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">查看</a></p>
         </article>
     </i-article>
 </template>
