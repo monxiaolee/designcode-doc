@@ -101,6 +101,13 @@ const routers = [
         component: require('./views/guide/theme.vue')
     },
     {
+        path: '/docs/guide/update',
+        meta: {
+            title: '更新日志'
+        },
+        component: require('./views/guide/update.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
