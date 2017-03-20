@@ -192,6 +192,13 @@ const routers = [
         component: require('./views/components/select.vue')
     },
     {
+        path: '/components/slider',
+        meta: {
+            title: '滑块 Slider'
+        },
+        component: require('./views/components/slider.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

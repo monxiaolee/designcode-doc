@@ -2,9 +2,9 @@ let code = {};
 
 code.base = `
 <template>
-    <Slider :value="value1"></Slider>
-    <Slider :value="value2" range></Slider>
-    <Slider :value="value3" range disabled></Slider>
+    <Slider v-model="value1"></Slider>
+    <Slider v-model="value2" range></Slider>
+    <Slider v-model="value3" range disabled></Slider>
 </template>
 <script>
     export default {
@@ -21,8 +21,8 @@ code.base = `
 
 code.step = `
 <template>
-    <Slider :value="value4" :step="10"></Slider>
-    <Slider :value="value5" :step="10" range></Slider>
+    <Slider v-model="value4" :step="10"></Slider>
+    <Slider v-model="value5" :step="10" range></Slider>
 </template>
 <script>
     export default {
@@ -38,8 +38,8 @@ code.step = `
 
 code.stops = `
 <template>
-    <Slider :value="value6" :step="10" show-stops></Slider>
-    <Slider :value="value7" :step="10" show-stops range></Slider>
+    <Slider v-model="value6" :step="10" show-stops></Slider>
+    <Slider v-model="value7" :step="10" show-stops range></Slider>
 </template>
 <script>
     export default {
@@ -55,7 +55,7 @@ code.stops = `
 
 code.input = `
 <template>
-    <Slider :value="value8" show-input></Slider>
+    <Slider v-model="value8" show-input></Slider>
 </template>
 <script>
     export default {
@@ -70,8 +70,8 @@ code.input = `
 
 code.format = `
 <template>
-    <Slider :value="value9" :tip-format="format"></Slider>
-    <Slider :value="value10" :tip-format="hideFormat"></Slider>
+    <Slider v-model="value9" :tip-format="format"></Slider>
+    <Slider v-model="value10" :tip-format="hideFormat"></Slider>
 </template>
 <script>
     export default {

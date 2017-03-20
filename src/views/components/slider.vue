@@ -13,12 +13,12 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <Slider :value.sync="value1"></Slider>
-                    <Slider :value.sync="value2" range></Slider>
-                    <Slider :value.sync="value3" range disabled></Slider>
+                    <Slider v-model="value1"></Slider>
+                    <Slider v-model="value2" range></Slider>
+                    <Slider v-model="value3" range disabled></Slider>
                 </div>
                 <div slot="desc">
-                    <p>滑块的基本用法，数据可以使用 <code>.sync</code> 双向绑定。</p>
+                    <p>滑块的基本用法，可以使用 v-model 双向绑定数据。</p>
                     <p>通过设置属性 <code>range</code> 开启双滑块，通过设置属性 <code>disable</code> 禁用滑块。</p>
                     <p>注意，单滑块时，<code>value</code> 格式为数字，当开启双滑块时，<code>value</code> 为长度是2的数组，且每项为数字。</p>
                 </div>
@@ -26,8 +26,8 @@
             </Demo>
             <Demo title="离散值">
                 <div slot="demo">
-                    <Slider :value="value4" :step="10"></Slider>
-                    <Slider :value="value5" :step="10" range></Slider>
+                    <Slider v-model="value4" :step="10"></Slider>
+                    <Slider v-model="value5" :step="10" range></Slider>
                 </div>
                 <div slot="desc">
                     <p>通过设置属性 <code>step</code> 可以控制每次滑动的间隔。</p>
@@ -36,8 +36,8 @@
             </Demo>
             <Demo title="显示间断点">
                 <div slot="demo">
-                    <Slider :value="value6" :step="10" show-stops></Slider>
-                    <Slider :value="value7" :step="10" show-stops range></Slider>
+                    <Slider v-model="value6" :step="10" show-stops></Slider>
+                    <Slider v-model="value7" :step="10" show-stops range></Slider>
                 </div>
                 <div slot="desc">
                     <p>通过设置属性 <code>show-stops</code> 可以显示间断点，建议在 <code>step</code> 间隔不密集时使用。</p>
@@ -46,7 +46,7 @@
             </Demo>
             <Demo title="带有输入框">
                 <div slot="demo">
-                    <Slider :value="value8" show-input></Slider>
+                    <Slider v-model="value8" show-input></Slider>
                 </div>
                 <div slot="desc">
                     <p>通过设置属性 <code>show-input</code> 可以显示数字输入框，配合使用，仅在单滑块模式下有效。</p>
@@ -55,8 +55,8 @@
             </Demo>
             <Demo title="自定义提示">
                 <div slot="demo">
-                    <Slider :value="value9" :tip-format="format"></Slider>
-                    <Slider :value="value10" :tip-format="hideFormat"></Slider>
+                    <Slider v-model="value9" :tip-format="format"></Slider>
+                    <Slider v-model="value10" :tip-format="hideFormat"></Slider>
                 </div>
                 <div slot="desc">
                     <p>Slider 会把当前值传给 <code>tip-format</code>，并在 Tooltip 中显示 tip-format 的返回值，若为 null，则隐藏 Tooltip。</p>
@@ -78,7 +78,7 @@
                     <tbody>
                         <tr>
                             <td>value</td>
-                            <td>滑块选定的值，需要使用<code>.sync</code>双向绑定，否则改变数值时并不能改变使用者的数据。普通模式下，数据格式为数字，在双滑块模式下，数据格式为长度是2的数组，且每项都为数字</td>
+                            <td>滑块选定的值，可以使用 v-model 双向绑定数据。普通模式下，数据格式为数字，在双滑块模式下，数据格式为长度是2的数组，且每项都为数字</td>
                             <td>Number | Array</td>
                             <td>0</td>
                         </tr>
