@@ -339,6 +339,13 @@ const routers = [
         component: require('./views/components/poptip.vue')
     },
     {
+        path: '/components/carousel',
+        meta: {
+            title: '走马灯 Carousel'
+        },
+        component: require('./views/components/carousel.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

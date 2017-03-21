@@ -17,7 +17,7 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <Carousel>
+                    <Carousel v-model="value1">
                         <Carousel-item>
                             <div class="demo-carousel">1</div>
                         </Carousel-item>
@@ -39,7 +39,7 @@
             </Demo>
             <Demo title="自动切换">
                 <div slot="demo">
-                    <Carousel autoplay>
+                    <Carousel autoplay v-model="value2">
                         <Carousel-item>
                             <div class="demo-carousel">1</div>
                         </Carousel-item>
@@ -61,38 +61,39 @@
             </Demo>
             <Demo title="综合设置">
                 <div slot="demo">
-                    <i-form :model="setting" :label-width="100">
+                    <Form :model="setting" :label-width="100">
                         <Form-item label="自动切换">
-                            <Switch :checked.sync="setting.autoplay">
+                            <i-switch v-model="setting.autoplay">
                                 <span slot="open">开</span>
                                 <span slot="close">关</span>
-                            </Switch>
+                            </i-switch>
                         </Form-item>
                         <Form-item label="自动切换速度">
-                            <Slider :value.sync="setting.autoplaySpeed" :min="300" :max="10000" :step="100"></Slider>
+                            <Slider v-model="setting.autoplaySpeed" :min="300" :max="10000" :step="100"></Slider>
                         </Form-item>
                         <Form-item label="指示器位置">
-                            <Radio-group :model.sync="setting.dots" type="button">
-                                <Radio value="inside">内部</Radio>
-                                <Radio value="outside">外部</Radio>
-                                <Radio value="none">不显示</Radio>
+                            <Radio-group v-model="setting.dots" type="button">
+                                <Radio label="inside">内部</Radio>
+                                <Radio label="outside">外部</Radio>
+                                <Radio label="none">不显示</Radio>
                             </Radio-group>
                         </Form-item>
                         <Form-item label="切换箭头">
-                            <Radio-group :model.sync="setting.arrow" type="button">
-                                <Radio value="hover">悬停时显示</Radio>
-                                <Radio value="always">一直显示</Radio>
-                                <Radio value="never">不显示</Radio>
+                            <Radio-group v-model="setting.arrow" type="button">
+                                <Radio label="hover">悬停时显示</Radio>
+                                <Radio label="always">一直显示</Radio>
+                                <Radio label="never">不显示</Radio>
                             </Radio-group>
                         </Form-item>
                         <Form-item label="指示器触发方式">
-                            <Radio-group :model.sync="setting.trigger" type="button">
-                                <Radio value="click">点击</Radio>
-                                <Radio value="hover">悬停</Radio>
+                            <Radio-group v-model="setting.trigger" type="button">
+                                <Radio label="click">点击</Radio>
+                                <Radio label="hover">悬停</Radio>
                             </Radio-group>
                         </Form-item>
-                    </i-form>
+                    </Form>
                     <Carousel
+                        v-model="value3"
                         :autoplay="setting.autoplay"
                         :autoplay-speed="setting.autoplaySpeed"
                         :dots="setting.dots"
@@ -131,8 +132,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>current-index</td>
-                            <td>幻灯片的索引，从 0 开始</td>
+                            <td>value</td>
+                            <td>幻灯片的索引，从 0 开始，可以使用 v-model 双向绑定数据</td>
                             <td>Number</td>
                             <td>0</td>
                         </tr>
@@ -218,6 +219,9 @@
         data () {
             return {
                 code: Code,
+                value1: 0,
+                value2: 0,
+                value3: 0,
                 setting: {
                     autoplay: false,
                     autoplaySpeed: 2000,
