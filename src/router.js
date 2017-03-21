@@ -346,6 +346,13 @@ const routers = [
         component: require('./views/components/carousel.vue')
     },
     {
+        path: '/components/tree',
+        meta: {
+            title: '树形控件 Tree'
+        },
+        component: require('./views/components/tree.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
