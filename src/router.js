@@ -304,6 +304,13 @@ const routers = [
         component: require('./views/components/badge.vue')
     },
     {
+        path: '/components/collapse',
+        meta: {
+            title: '折叠面板 Collapse'
+        },
+        component: require('./views/components/collapse.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
