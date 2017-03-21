@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <Rate :value.sync="value"></Rate>
+    <Rate v-model="value"></Rate>
 </template>
 <script>
     export default {
@@ -17,7 +17,7 @@ code.base = `
 
 code.half = `
 <template>
-    <Rate allow-half :value.sync="valueHalf"></Rate>
+    <Rate allow-half v-model="valueHalf"></Rate>
 </template>
 <script>
     export default {
@@ -34,10 +34,10 @@ code.text = `
 <template>
     <Row>
         <i-col span="12">
-            <Rate show-text :value.sync="valueText"></Rate>
+            <Rate show-text v-model="valueText"></Rate>
         </i-col>
         <i-col span="12">
-            <Rate show-text :value.sync="valueCustomText">
+            <Rate show-text v-model="valueCustomText">
                 <span style="color: #f5a623">{{ valueCustomText }}</span>
             </Rate>
         </i-col>
@@ -57,7 +57,7 @@ code.text = `
 
 code.disabled = `
 <template>
-    <Rate disabled :value.sync="valueDisabled"></Rate>
+    <Rate disabled v-model="valueDisabled"></Rate>
 </template>
 <script>
     export default {

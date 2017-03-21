@@ -234,6 +234,13 @@ const routers = [
         component: require('./views/components/input-number.vue')
     },
     {
+        path: '/components/rate',
+        meta: {
+            title: '评分 Rate'
+        },
+        component: require('./views/components/rate.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
