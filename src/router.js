@@ -248,6 +248,13 @@ const routers = [
         component: require('./views/components/upload.vue')
     },
     {
+        path: '/components/form',
+        meta: {
+            title: '表单 Form'
+        },
+        component: require('./views/components/form.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
