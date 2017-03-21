@@ -402,6 +402,13 @@ const routers = [
         component: require('./views/components/loading-bar.vue')
     },
     {
+        path: '/components/circle',
+        meta: {
+            title: '进度环 Circle'
+        },
+        component: require('./views/components/circle.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
