@@ -283,6 +283,13 @@ const routers = [
         component: require('./views/components/notice.vue')
     },
     {
+        path: '/components/modal',
+        meta: {
+            title: '对话框 Modal'
+        },
+        component: require('./views/components/modal.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

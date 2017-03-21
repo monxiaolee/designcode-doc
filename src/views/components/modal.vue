@@ -16,17 +16,13 @@
             <Anchor title="概述" h2></Anchor>
             <p>模态对话框，在浮层中显示，引导用户进行相关操作。</p>
             <p><code>Modal</code>提供了两种用法，普通组件使用和封装好的简洁实例调用。</p>
-            <blockquote>
-                <p>从 <code>0.9.8</code> 版本开始，iView 使用 Vue.prototype 添加了全局方法 $Modal，因此可以直接用 <code>this.$Modal</code> 使用实例调用的方法。</p>
-                <p>当然，您仍然可以使用 <code>import { Modal } from 'iview'</code> 的形式调用。</p>
-            </blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Anchor title="普通组件使用方法" h3></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <i-button type="primary" @click="modal1 = true">显示对话框</i-button>
+                    <Button type="primary" @click="modal1 = true">显示对话框</Button>
                     <Modal
-                        :visible.sync="modal1"
+                        v-model="modal1"
                         title="普通的Modal对话框标题"
                         @on-ok="ok"
                         @on-cancel="cancel">
@@ -37,15 +33,15 @@
                 </div>
                 <div slot="desc">
                     <p>最简单的使用方法，通过控制属性<code>visible</code>来显示 / 隐藏对话框。</p>
-                    <p>需要将<code>visible</code>设置<code>.sync</code>实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                    <p>可以使用 v-model 实现双向绑定。</p>
                     <p>默认按键盘<code>ESC</code>键也可以关闭。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="自定义样式">
                 <div slot="demo">
-                    <i-button @click="modal2 = true">自定义页头和页脚</i-button>
-                    <Modal :visible.sync="modal2" width="360">
+                    <Button @click="modal2 = true">自定义页头和页脚</Button>
+                    <Modal v-model="modal2" width="360">
                         <p slot="header" style="color:#f60;text-align:center">
                             <Icon type="information-circled"></Icon>
                             <span>删除确认</span>
@@ -55,18 +51,18 @@
                             <p>是否继续删除？</p>
                         </div>
                         <div slot="footer">
-                            <i-button type="error" size="large" long :loading="modal_loading" @click="del">删除</i-button>
+                            <Button type="error" size="large" long :loading="modal_loading" @click="del">删除</Button>
                         </div>
                     </Modal>
-                    <i-button @click="modal3 = true">不带标题栏</i-button>
-                    <Modal :visible.sync="modal3">
+                    <Button @click="modal3 = true">不带标题栏</Button>
+                    <Modal v-model="modal3">
                         <p>对话框内容</p>
                         <p>对话框内容</p>
                         <p>对话框内容</p>
                     </Modal>
-                    <i-button @click="modal4 = true">国际化</i-button>
+                    <Button @click="modal4 = true">国际化</Button>
                     <Modal
-                        :visible.sync="modal4"
+                        v-model="modal4"
                         title="Modal Title"
                         ok-text="OK"
                         cancel-text="Cancel">
@@ -74,9 +70,9 @@
                         <p>Something...</p>
                         <p>Something...</p>
                     </Modal>
-                    <i-button @click="modal5 = true">设置宽度</i-button>
+                    <Button @click="modal5 = true">设置宽度</Button>
                     <Modal
-                        :visible.sync="modal5"
+                        v-model="modal5"
                         title="自定义宽度"
                         width="300">
                         <p>自定义宽度，单位 px，默认 520px。</p>
@@ -91,9 +87,9 @@
             </Demo>
             <Demo title="异步关闭">
                 <div slot="demo">
-                    <i-button type="primary" @click="modal6 = true">显示对话框</i-button>
+                    <Button type="primary" @click="modal6 = true">显示对话框</Button>
                     <Modal
-                        :visible.sync="modal6"
+                        v-model="modal6"
                         title="对话框标题"
                         :loading="loading"
                         @on-ok="asyncOK">
@@ -107,19 +103,19 @@
             </Demo>
             <Demo title="禁用关闭">
                 <div slot="demo">
-                    <i-button @click="modal7 = true">禁用右上角关闭（含Esc键）</i-button>
+                    <Button @click="modal7 = true">禁用右上角关闭（含Esc键）</Button>
                     <Modal
                         title="对话框标题"
-                        :visible.sync="modal7"
+                        v-model="modal7"
                         :closable="false">
                         <p>对话框内容</p>
                         <p>对话框内容</p>
                         <p>对话框内容</p>
                     </Modal>
-                    <i-button @click="modal8 = true">禁用遮罩层关闭</i-button>
+                    <Button @click="modal8 = true">禁用遮罩层关闭</Button>
                     <Modal
                         title="对话框标题"
-                        :visible.sync="modal8"
+                        v-model="modal8"
                         :mask-closable="false">
                         <p>对话框内容</p>
                         <p>对话框内容</p>
@@ -133,19 +129,19 @@
             </Demo>
             <Demo title="自定义位置">
                 <div slot="demo">
-                    <i-button @click="modal9 = true">距离顶部 20px</i-button>
+                    <Button @click="modal9 = true">距离顶部 20px</Button>
                     <Modal
                         title="对话框标题"
-                        :visible.sync="modal9"
-                        :style="{top: '20px'}">
+                        v-model="modal9"
+                        :styles="{top: '20px'}">
                         <p>对话框内容</p>
                         <p>对话框内容</p>
                         <p>对话框内容</p>
                     </Modal>
-                    <i-button @click="modal10 = true">垂直居中</i-button>
+                    <Button @click="modal10 = true">垂直居中</Button>
                     <Modal
                         title="对话框标题"
-                        :visible.sync="modal10"
+                        v-model="modal10"
                         class-name="vertical-center-modal">
                         <p>对话框内容</p>
                         <p>对话框内容</p>
@@ -162,10 +158,10 @@
             <p>实例以隐式创建 Vue 组件的方式在全局创建一个对话框，并在消失时移除，所以同时只能操作一个对话框。</p>
             <Demo title="基本用法">
                 <div slot="demo">
-                    <i-button @click="instance('info')">消息</i-button>
-                    <i-button @click="instance('success')">成功</i-button>
-                    <i-button @click="instance('warning')">警告</i-button>
-                    <i-button @click="instance('error')">错误</i-button>
+                    <Button @click="instance('info')">消息</Button>
+                    <Button @click="instance('success')">成功</Button>
+                    <Button @click="instance('warning')">警告</Button>
+                    <Button @click="instance('error')">错误</Button>
                 </div>
                 <div slot="desc">
                     <p>四种基本的对话框，只提供一个确定按钮。</p>
@@ -174,9 +170,9 @@
             </Demo>
             <Demo title="确认对话框">
                 <div slot="demo">
-                    <i-button @click="confirm">标准</i-button>
-                    <i-button @click="custom">自定义按钮文字</i-button>
-                    <i-button @click="async">异步关闭</i-button>
+                    <Button @click="confirm">标准</Button>
+                    <Button @click="custom">自定义按钮文字</Button>
+                    <Button @click="async">异步关闭</Button>
                 </div>
                 <div slot="desc">
                     <p>快速弹出确认对话框，并且可以自定义按钮文字及异步关闭。</p>
