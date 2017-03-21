@@ -325,6 +325,13 @@ const routers = [
         component: require('./views/components/tag.vue')
     },
     {
+        path: '/components/tooltip',
+        meta: {
+            title: '文字提示 Tooltip'
+        },
+        component: require('./views/components/tooltip.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
