@@ -4,6 +4,7 @@
             <h1>Progress 进度条</h1>
             <Anchor title="概述" h2></Anchor>
             <p>展示操作或任务的当前进度，比如上传文件。</p>
+            <blockquote>注意：非 template/render 模式下，需使用 <code>i-progress</code>。</blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基本用法">
                 <div slot="demo">
@@ -22,8 +23,8 @@
                 <div slot="demo">
                     <Progress :percent="percent"></Progress>
                     <Button-group size="large">
-                        <i-button icon="ios-plus-empty" @click="add"></i-button>
-                        <i-button icon="ios-minus-empty" @click="minus"></i-button>
+                        <Button icon="ios-plus-empty" @click="add"></Button>
+                        <Button icon="ios-minus-empty" @click="minus"></Button>
                     </Button-group>
                 </div>
                 <div slot="desc">

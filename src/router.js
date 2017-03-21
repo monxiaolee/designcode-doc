@@ -290,6 +290,13 @@ const routers = [
         component: require('./views/components/modal.vue')
     },
     {
+        path: '/components/progress',
+        meta: {
+            title: '进度条 Progress'
+        },
+        component: require('./views/components/progress.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
