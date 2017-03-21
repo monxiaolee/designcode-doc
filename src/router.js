@@ -388,6 +388,13 @@ const routers = [
         component: require('./views/components/breadcrumb.vue')
     },
     {
+        path: '/components/steps',
+        meta: {
+            title: '步骤条 Steps'
+        },
+        component: require('./views/components/steps.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
