@@ -353,6 +353,13 @@ const routers = [
         component: require('./views/components/tree.vue')
     },
     {
+        path: '/components/menu',
+        meta: {
+            title: '导航菜单 Menu'
+        },
+        component: require('./views/components/menu.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
