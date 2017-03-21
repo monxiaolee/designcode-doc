@@ -374,6 +374,13 @@ const routers = [
         component: require('./views/components/dropdown.vue')
     },
     {
+        path: '/components/page',
+        meta: {
+            title: '分页 Page'
+        },
+        component: require('./views/components/page.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

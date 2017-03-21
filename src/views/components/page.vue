@@ -131,13 +131,13 @@
                             <td>false</td>
                         </tr>
                         <tr>
-                            <td>class</td>
+                            <td>class-name</td>
                             <td>自定义 class 名称</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td>style</td>
+                            <td>styles</td>
                             <td>自定义 style 样式</td>
                             <td>Object</td>
                             <td>-</td>
