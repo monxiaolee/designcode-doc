@@ -269,6 +269,13 @@ const routers = [
         component: require('./views/components/card.vue')
     },
     {
+        path: '/components/message',
+        meta: {
+            title: '全局提示 Message'
+        },
+        component: require('./views/components/message.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
