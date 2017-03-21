@@ -311,6 +311,20 @@ const routers = [
         component: require('./views/components/collapse.vue')
     },
     {
+        path: '/components/timeline',
+        meta: {
+            title: '时间轴 Timeline'
+        },
+        component: require('./views/components/timeline.vue')
+    },
+    {
+        path: '/components/tag',
+        meta: {
+            title: '标签 Tag'
+        },
+        component: require('./views/components/tag.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

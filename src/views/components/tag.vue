@@ -13,7 +13,7 @@
                 </div>
                 <div slot="desc">
                     <p>简单的展示，添加属性<code>closable</code>可以关闭标签。</p>
-                    <blockquote>从 0.9.17 版本开始，点击关闭需使用 @on-close 自己关闭。</blockquote>
+                    <p>点击关闭标签时，会触发 on-close 事件，需自己实现关闭逻辑。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
@@ -53,8 +53,8 @@
             </Demo>
             <Demo title="动态添加和删除">
                 <div slot="demo">
-                    <Tag v-for="item in count" closable>标签{{ item + 1 }}</Tag>
-                    <i-button icon="ios-plus-empty" type="dashed" size="small" @click="count += 1">添加标签</i-button>
+                    <Tag v-for="item in count" :key="item" :name="item" closable @on-close="handleClose2">标签{{ item + 1 }}</Tag>
+                    <Button icon="ios-plus-empty" type="dashed" size="small" @click="handleAdd">添加标签</Button>
                 </div>
                 <div slot="desc">
                     <p>用数组生成一组标签，可以动态添加和删除。</p>
@@ -92,6 +92,12 @@
                             <td>String</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>当前标签的名称，使用 v-for，并支持关闭时，会比较有用</td>
+                            <td>String | Number</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Tag events" h3></Anchor>
@@ -107,7 +113,7 @@
                         <tr>
                             <td>on-close</td>
                             <td>关闭时触发</td>
-                            <td>event</td>
+                            <td>event, name</td>
                         </tr>
                     </tbody>
                 </table>
@@ -132,13 +138,24 @@
         data () {
             return {
                 code: Code,
-                count: 3,
+                count: [0, 1, 2],
                 show: true
             }
         },
         methods: {
             handleClose () {
                 this.show = false;
+            },
+            handleAdd () {
+                if (this.count.length) {
+                    this.count.push(this.count[this.count.length - 1] + 1);
+                } else {
+                    this.count.push(0);
+                }
+            },
+            handleClose2 (event, name) {
+                const index = this.count.indexOf(name);
+                this.count.splice(index, 1);
             }
         }
     }
