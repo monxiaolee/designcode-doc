@@ -395,6 +395,13 @@ const routers = [
         component: require('./views/components/steps.vue')
     },
     {
+        path: '/components/loading-bar',
+        meta: {
+            title: '加载进度条 LoadingBar'
+        },
+        component: require('./views/components/loading-bar.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
