@@ -220,6 +220,13 @@ const routers = [
         component: require('./views/components/cascader.vue')
     },
     {
+        path: '/components/transfer',
+        meta: {
+            title: '穿梭框 Transfer'
+        },
+        component: require('./views/components/transfer.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
