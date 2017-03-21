@@ -241,6 +241,13 @@ const routers = [
         component: require('./views/components/rate.vue')
     },
     {
+        path: '/components/upload',
+        meta: {
+            title: '上传 Upload'
+        },
+        component: require('./views/components/upload.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

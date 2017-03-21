@@ -3,7 +3,7 @@ let code = {};
 code.select = `
 <template>
     <Upload action="//jsonplaceholder.typicode.com/posts/">
-        <i-button type="ghost" icon="ios-cloud-upload-outline">上传文件</i-button>
+        <Button type="ghost" icon="ios-cloud-upload-outline">上传文件</Button>
     </Upload>
 </template>
 <script>
@@ -18,7 +18,7 @@ code.multiple = `
     <Upload
         multiple
         action="//jsonplaceholder.typicode.com/posts/">
-        <i-button type="ghost" icon="ios-cloud-upload-outline">上传文件</i-button>
+        <Button type="ghost" icon="ios-cloud-upload-outline">上传文件</Button>
     </Upload>
 </template>
 <script>
@@ -53,8 +53,8 @@ code.list = `
         <template v-if="item.status === 'finished'">
             <img :src="item.url">
             <div class="demo-upload-list-cover">
-                <Icon type="ios-eye-outline" @click="handleView(item.name)"></Icon>
-                <Icon type="ios-trash-outline" @click="handleRemove(item)"></Icon>
+                <Icon type="ios-eye-outline" @click.native="handleView(item.name)"></Icon>
+                <Icon type="ios-trash-outline" @click.native="handleRemove(item)"></Icon>
             </div>
         </template>
         <template v-else>
@@ -62,7 +62,7 @@ code.list = `
         </template>
     </div>
     <Upload
-        v-ref:upload
+        ref="upload"
         :show-upload-list="false"
         :default-file-list="defaultList"
         :on-success="handleSuccess"
@@ -79,7 +79,7 @@ code.list = `
             <Icon type="camera" size="20"></Icon>
         </div>
     </Upload>
-    <Modal title="查看图片" :visible.sync="visible">
+    <Modal title="查看图片" v-model="visible">
         <img :src="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'" v-if="visible" style="width: 100%">
     </Modal>
 </template>
@@ -98,12 +98,8 @@ code.list = `
                     }
                 ],
                 imgName: '',
-                visible: false
-            }
-        },
-        computed: {
-            uploadList () {
-                return this.$refs.upload ? this.$refs.upload.fileList : [];
+                visible: false,
+                uploadList: []
             }
         },
         methods: {
@@ -142,6 +138,9 @@ code.list = `
                 }
                 return check;
             }
+        },
+        mounted () {
+            this.uploadList = this.$refs.upload.fileList;
         }
     }
 </script>
