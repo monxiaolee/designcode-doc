@@ -262,6 +262,13 @@ const routers = [
         component: require('./views/components/alert.vue')
     },
     {
+        path: '/components/card',
+        meta: {
+            title: '卡片 Card'
+        },
+        component: require('./views/components/card.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
