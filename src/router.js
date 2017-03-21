@@ -227,6 +227,13 @@ const routers = [
         component: require('./views/components/transfer.vue')
     },
     {
+        path: '/components/input-number',
+        meta: {
+            title: '数字输入框 InputNumber'
+        },
+        component: require('./views/components/input-number.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

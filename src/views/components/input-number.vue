@@ -7,7 +7,7 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <Input-number :max="10" :min="1" :value="1"></Input-number>
+                    <Input-number :max="10" :min="1" v-model="value1"></Input-number>
                 </div>
                 <div slot="desc">
                     <p>可以通过输入、鼠标点击或键盘的上下键来改变数值大小。</p>
@@ -16,7 +16,7 @@
             </Demo>
             <Demo title="小数">
                 <div slot="demo">
-                    <Input-number :max="10" :min="1" :step="1.2" :value="1"></Input-number>
+                    <Input-number :max="10" :min="1" :step="1.2" v-model="value2"></Input-number>
                 </div>
                 <div slot="desc">
                     <p>通过设置<code>step</code>属性控制每次改变的精度。</p>
@@ -25,9 +25,9 @@
             </Demo>
             <Demo title="尺寸">
                 <div slot="demo">
-                    <Input-number :value="2" size="small"></Input-number>
-                    <Input-number :value="2"></Input-number>
-                    <Input-number :value="2" size="large"></Input-number>
+                    <Input-number v-model="value3" size="small"></Input-number>
+                    <Input-number v-model="value4"></Input-number>
+                    <Input-number v-model="value5" size="large"></Input-number>
                 </div>
                 <div slot="desc">
                     <p>通过设置<code>size</code>属性为<code>large</code>和<code>small</code>将输入框设置为大和小尺寸，不设置为默认（中）尺寸。</p>
@@ -36,8 +36,8 @@
             </Demo>
             <Demo title="不可用">
                 <div slot="demo">
-                    <Input-number :value="1" :disabled="disabled"></Input-number>
-                    <i-button type="primary" @click="disabled = !disabled">Toggle Disabled</i-button>
+                    <Input-number v-model="value6" :disabled="disabled"></Input-number>
+                    <Button type="primary" @click="disabled = !disabled">Toggle Disabled</Button>
                 </div>
                 <div slot="desc">
                     <p>通过设置<code>disabled</code>属性禁用输入框，点击按钮切换状态。</p>
@@ -71,7 +71,7 @@
                         </tr>
                         <tr>
                             <td>value</td>
-                            <td>当前值。需要使用<code>.sync</code>双向绑定，否则改变值时并不能改变使用者的数据</td>
+                            <td>当前值，可以使用 v-model 双向绑定数据</td>
                             <td>Number</td>
                             <td>1</td>
                         </tr>
@@ -133,7 +133,13 @@
         data () {
             return {
                 code: Code,
-                disabled: true
+                disabled: true,
+                value1: 1,
+                value2: 1,
+                value3: 2,
+                value4: 2,
+                value5: 2,
+                value6: 1
             }
         }
     }
