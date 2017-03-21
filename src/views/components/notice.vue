@@ -8,15 +8,11 @@
                 <li>通知内容带有描述信息</li>
                 <li>系统主动推送</li>
             </ul>
-            <blockquote>
-                <p>从 <code>0.9.8</code> 版本开始，iView 使用 Vue.prototype 添加了全局方法 $Notice，因此可以直接用 <code>this.$Notice</code> 注册实例。</p>
-                <p>当然，您仍然可以使用 <code>import { Notice } from 'iview'</code> 的形式调用。</p>
-            </blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <i-button type="primary" @click="open(false)">打开提醒</i-button>
-                    <i-button @click="open(true)">打开提醒（仅标题）</i-button>
+                    <Button type="primary" @click="open(false)">打开提醒</Button>
+                    <Button @click="open(true)">打开提醒（仅标题）</Button>
                 </div>
                 <div slot="desc">
                     <p>基本用法，默认在 4.5秒后关闭。如果 <code>desc</code> 参数为空或不填，则自动应用仅标题模式下的样式。</p>
@@ -27,15 +23,15 @@
             <Demo title="提醒类型">
                 <div slot="demo">
                     <p>带描述信息</p>
-                    <i-button @click="info(false)">消息</i-button>
-                    <i-button @click="success(false)">成功</i-button>
-                    <i-button @click="warning(false)">警告</i-button>
-                    <i-button @click="error(false)">错误</i-button>
+                    <Button @click="info(false)">消息</Button>
+                    <Button @click="success(false)">成功</Button>
+                    <Button @click="warning(false)">警告</Button>
+                    <Button @click="error(false)">错误</Button>
                     <p>仅标题</p>
-                    <i-button @click="info(true)">消息</i-button>
-                    <i-button @click="success(true)">成功</i-button>
-                    <i-button @click="warning(true)">警告</i-button>
-                    <i-button @click="error(true)">错误</i-button>
+                    <Button @click="info(true)">消息</Button>
+                    <Button @click="success(true)">成功</Button>
+                    <Button @click="warning(true)">警告</Button>
+                    <Button @click="error(true)">错误</Button>
                 </div>
                 <div slot="desc">
                     <p>带有状态图标的提醒。</p>
@@ -44,7 +40,7 @@
             </Demo>
             <Demo title="自定义时长">
                 <div slot="demo">
-                    <i-button type="primary" @click="time">打开提醒</i-button>
+                    <Button type="primary" @click="time">打开提醒</Button>
                 </div>
                 <div slot="desc">
                     <p>自定义时长，为 0 则不自动关闭。也可以在<code>Notice.config()</code>中全局配置，详见API。</p>

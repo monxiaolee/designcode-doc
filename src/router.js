@@ -276,6 +276,13 @@ const routers = [
         component: require('./views/components/message.vue')
     },
     {
+        path: '/components/notice',
+        meta: {
+            title: '通知提醒 Notice'
+        },
+        component: require('./views/components/notice.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

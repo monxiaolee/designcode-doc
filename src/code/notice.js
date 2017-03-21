@@ -2,8 +2,8 @@ let code = {};
 
 code.open = `
 <template>
-    <i-button type="primary" @click="open(false)">打开提醒</i-button>
-    <i-button @click="open(true)">打开提醒（仅标题）</i-button>
+    <Button type="primary" @click="open(false)">打开提醒</Button>
+    <Button @click="open(true)">打开提醒（仅标题）</Button>
 </template>
 <script>
     export default {
@@ -22,15 +22,15 @@ code.open = `
 code.type = `
 <template>
     <p>带描述信息</p>
-    <i-button @click="info(false)">消息</i-button>
-    <i-button @click="success(false)">成功</i-button>
-    <i-button @click="warning(false)">警告</i-button>
-    <i-button @click="error(false)">错误</i-button>
+    <Button @click="info(false)">消息</Button>
+    <Button @click="success(false)">成功</Button>
+    <Button @click="warning(false)">警告</Button>
+    <Button @click="error(false)">错误</Button>
     <p>仅标题</p>
-    <i-button @click="info(true)">消息</i-button>
-    <i-button @click="success(true)">成功</i-button>
-    <i-button @click="warning(true)">警告</i-button>
-    <i-button @click="error(true)">错误</i-button>
+    <Button @click="info(true)">消息</Button>
+    <Button @click="success(true)">成功</Button>
+    <Button @click="warning(true)">警告</Button>
+    <Button @click="error(true)">错误</Button>
 </template>
 <script>
     export default {
@@ -66,7 +66,7 @@ code.type = `
 
 code.time = `
 <template>
-    <i-button type="primary" @click="time">打开提醒</i-button>
+    <Button type="primary" @click="time">打开提醒</Button>
 </template>
 <script>
     export default {
