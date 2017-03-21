@@ -381,6 +381,13 @@ const routers = [
         component: require('./views/components/page.vue')
     },
     {
+        path: '/components/breadcrumb',
+        meta: {
+            title: '面包屑 Breadcrumb'
+        },
+        component: require('./views/components/breadcrumb.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
