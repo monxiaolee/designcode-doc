@@ -360,6 +360,13 @@ const routers = [
         component: require('./views/components/menu.vue')
     },
     {
+        path: '/components/tabs',
+        meta: {
+            title: '标签页 Tabs'
+        },
+        component: require('./views/components/tabs.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
