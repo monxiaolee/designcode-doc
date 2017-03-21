@@ -409,6 +409,13 @@ const routers = [
         component: require('./views/components/circle.vue')
     },
     {
+        path: '/components/affix',
+        meta: {
+            title: '图钉 Affix'
+        },
+        component: require('./views/components/affix.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
