@@ -25,7 +25,7 @@
             </Demo>
             <Demo title="自定义样式">
                 <div slot="demo">
-                    <Back-top :height="100" :bottom="100">
+                    <Back-top :height="100" :bottom="200">
                         <div class="top">返回顶端</div>
                     </Back-top>
                     <p>向下滚动页面，蓝色的按钮为自定义效果。</p>

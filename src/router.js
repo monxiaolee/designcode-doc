@@ -416,6 +416,13 @@ const routers = [
         component: require('./views/components/affix.vue')
     },
     {
+        path: '/components/back-top',
+        meta: {
+            title: '回到顶部 BackTop'
+        },
+        component: require('./views/components/back-top.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
