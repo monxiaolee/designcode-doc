@@ -213,6 +213,13 @@ const routers = [
         component: require('./views/components/time-picker.vue')
     },
     {
+        path: '/components/cascader',
+        meta: {
+            title: '级联选择 Cascader'
+        },
+        component: require('./views/components/cascader.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

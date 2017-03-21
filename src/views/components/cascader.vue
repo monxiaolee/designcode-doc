@@ -13,17 +13,17 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <Cascader :data="data" :value.sync="value1"></Cascader>
+                    <Cascader :data="data" v-model="value1"></Cascader>
                 </div>
                 <div slot="desc">
                     <p>级联选择对数据有较严格要求，请参照示例的格式使用<code>data</code>，每项数据至少包含 <code>value</code>、<code>label</code> 两项，子集为 <code>children</code>，以此类推。</p>
-                    <p><code>value</code> 为当前选择的数据的 value 值的数组，比如 <code>['beijing', 'gugong']</code> ，按照级联顺序依次排序，使用 <code>.sync</code> 进行双向绑定。</p>
+                    <p><code>value</code> 为当前选择的数据的 value 值的数组，比如 <code>['beijing', 'gugong']</code> ，按照级联顺序依次排序，使用 <code>v-model</code> 进行双向绑定。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="默认值">
                 <div slot="demo">
-                    <Cascader :data="data" :value.sync="value2"></Cascader>
+                    <Cascader :data="data" v-model="value2"></Cascader>
                 </div>
                 <div slot="desc">
                     <p>指定 <code>value</code> 默认值，组件会在初始化时选定数据。</p>
@@ -54,12 +54,12 @@
             <Demo title="禁用">
                 <div slot="demo">
                     <Row>
-                        <i-col span="12">
+                        <Col span="12">
                             <Cascader :data="data2" disabled></Cascader>
-                        </i-col>
-                        <i-col span="12">
+                        </Col>
+                        <Col span="12">
                             <Cascader :data="data2"></Cascader>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
