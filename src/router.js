@@ -297,6 +297,13 @@ const routers = [
         component: require('./views/components/progress.vue')
     },
     {
+        path: '/components/badge',
+        meta: {
+            title: '徽标数 Badge'
+        },
+        component: require('./views/components/badge.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
