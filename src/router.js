@@ -255,6 +255,13 @@ const routers = [
         component: require('./views/components/form.vue')
     },
     {
+        path: '/components/alert',
+        meta: {
+            title: '警告提示 Alert'
+        },
+        component: require('./views/components/alert.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
