@@ -367,6 +367,13 @@ const routers = [
         component: require('./views/components/tabs.vue')
     },
     {
+        path: '/components/dropdown',
+        meta: {
+            title: '下拉菜单 Dropdown'
+        },
+        component: require('./views/components/dropdown.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }
