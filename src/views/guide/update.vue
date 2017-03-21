@@ -81,7 +81,6 @@
                         <li>Upload 父级不能通过 computed 获取 Upload 的 fileList 了。</li>
                         <li>Collapse 废弃 activeKey，使用 v-model，key 更名为 name。</li>
                         <li>Carousel 废弃 activeIndex，使用 v-model。</li>
-                        <li>Tree 废弃 data，改为 value，使用 v-model，key 更名为 name。</li>
                         <li>Circle 更名为 <code>iCircle</code>。</li>
                         <li>Tabs 废弃 activeKey，改用 value，使用 v-model，key 更名为 name。</li>
                         <li>DropdownItem key 改为 name, Dropdown 的 visible 要使用 @on-visible-change 捕获，不再 sync</li>

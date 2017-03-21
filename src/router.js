@@ -423,6 +423,13 @@ const routers = [
         component: require('./views/components/back-top.vue')
     },
     {
+        path: '/components/spin',
+        meta: {
+            title: '加载中 Spin'
+        },
+        component: require('./views/components/spin.vue')
+    },
+    {
         path: '*',
         redirect: '/'
     }

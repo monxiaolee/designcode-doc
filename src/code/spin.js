@@ -64,24 +64,24 @@ code.custom = `
 </style>
 <template>
     <Row>
-        <i-col class="demo-spin-col" span="8">
+        <Col class="demo-spin-col" span="8">
             <Spin fix>加载中...</Spin>
-        </i-col>
-        <i-col class="demo-spin-col" span="8">
+        </Col>
+        <Col class="demo-spin-col" span="8">
             <Spin fix>
                 <Icon type="load-c" size=18 class="demo-spin-icon-load"></Icon>
                 <div>Loading</div>
             </Spin>
-        </i-col>
-        <i-col class="demo-spin-col" span="8">
+        </Col>
+        <Col class="demo-spin-col" span="8">
             <Spin fix>
                 <div class="loader">
                     <svg class="circular" viewBox="25 25 50 50">
-                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10" v-pre>
+                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10"></circle>
                     </svg>
                 </div>
             </Spin>
-        </i-col>
+        </Col>
     </Row>
 </template>
 <script>
@@ -106,7 +106,7 @@ code.status = `
         <Spin size="large" fix v-if="spinShow"></Spin>
     </div>
     <br>
-    切换显示状态：<Switch @on-change="spinShow = !spinShow"></Switch>
+    切换显示状态：<i-switch @on-change="spinShow = !spinShow"></i-switch>
 </template>
 <script>
     export default {
