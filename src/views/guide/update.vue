@@ -23,7 +23,7 @@
     <i-article>
         <h1>更新日志</h1>
         <article class="doc-update">
-            <Timeline>
+            <Timeline pending>
                 <Timeline-item>
                     <Anchor title="2.0.0-rc.6" h2></Anchor>
                     <p>
@@ -107,6 +107,9 @@
                         <li>Table 支持组件名 <code>Table</code>，兼容 <code>iTable</code>。</li>
                     </ul>
                 </Timeline-item>
+                <Timeline-item>
+                    <Button type="ghost" size="large" @click="handleBefore">查看 1.x 版本的日志</Button>
+                </Timeline-item>
             </Timeline>
         </article>
     </i-article>
@@ -136,6 +139,11 @@
         },
         mounted () {
             window.localStorage.setItem('version', version.version);
+        },
+        methods: {
+            handleBefore () {
+                window.open('http://v1.iviewui.com/docs/guide/update');
+            }
         }
     }
 </script>
