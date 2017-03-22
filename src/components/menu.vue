@@ -46,14 +46,16 @@
                     <Icon type="ios-analytics"></Icon>
                     {{ $t('index.practice') }}
                 </Menu-item>
-                <Select size="small" value="2" style="width: 70px;" @on-change="handleVersion">
+                <Select size="small" value="2" style="width: 70px;margin: 0 10px;" @on-change="handleVersion">
                     <Option value="2">2.0.0</Option>
                     <Option value="1">1.x</Option>
                 </Select>
-                <Button type="ghost" size="small" @click="handleChangeLang">
-                    <template v-if="lang === 'zh-CN'">EN</template>
-                    <template v-else>中文</template>
-                </Button>
+                <Tooltip content="Working">
+                    <Button type="ghost" size="small" @click="handleChangeLang" disabled>
+                        <template v-if="lang === 'zh-CN'">EN</template>
+                        <template v-else>中文</template>
+                    </Button>
+                </Tooltip>
             </div>
         </div>
     </Menu>
