@@ -145,7 +145,7 @@
             },
             handleVersion (v) {
                 if (v == 1) {
-                    window.location.href = 'http://vi.iviewui.com';
+                    window.location.href = 'http://v1.iviewui.com';
                 }
             }
         },
