@@ -36,16 +36,20 @@
                     <Icon type="settings"></Icon>
                     {{ $t('index.cli') }}
                 </Menu-item>
-                <Menu-item name="live">
-                    <Badge :dot="liveDot">
-                        <Icon type="ios-mic"></Icon>
-                        {{ $t('index.live') }}
-                    </Badge>
-                </Menu-item>
+                <!--<Menu-item name="live">-->
+                    <!--<Badge :dot="liveDot">-->
+                        <!--<Icon type="ios-mic"></Icon>-->
+                        <!--{{ $t('index.live') }}-->
+                    <!--</Badge>-->
+                <!--</Menu-item>-->
                 <Menu-item name="practice">
                     <Icon type="ios-analytics"></Icon>
                     {{ $t('index.practice') }}
                 </Menu-item>
+                <Select size="small" value="2" style="width: 70px;" @on-change="handleVersion">
+                    <Option value="2">2.0.0</Option>
+                    <Option value="1">1.x</Option>
+                </Select>
                 <Button type="ghost" size="small" @click="handleChangeLang">
                     <template v-if="lang === 'zh-CN'">EN</template>
                     <template v-else>中文</template>
@@ -140,6 +144,11 @@
             handleChangeLang () {
                 const lang = this.lang === 'zh-CN' ? 'en-US' : 'zh-CN';
                 bus.$emit('on-change-lang', lang);
+            },
+            handleVersion (v) {
+                if (v == 1) {
+                    window.location.href = 'http://vi.iviewui.com';
+                }
             }
         },
         created () {
