@@ -38,6 +38,13 @@ const routers = [
         component: require('./views/guide/introduce.vue')
     },
     {
+        path: '/docs/guide/introduce-en',
+        meta: {
+            title: 'Introduction'
+        },
+        component: require('./views/guide/introduce-en.vue')
+    },
+    {
         path: '/docs/guide/design',
         meta: {
             title: '设计原则'
