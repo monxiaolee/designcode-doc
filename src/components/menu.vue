@@ -76,7 +76,8 @@
                 liveDot: false,
                 currentActiveKey: this.activeKey,
                 searchText: this.$t('index.search'),
-                notFoundText: this.$t('index.notFound')
+                notFoundText: this.$t('index.notFound'),
+                lang: this.$lang
             };
         },
         watch: {
@@ -85,11 +86,6 @@
             },
             currentActiveKey (val) {
                 this.$emit('on-change', val);
-            }
-        },
-        computed: {
-            lang () {
-                return bus.lang;
             }
         },
         methods: {
@@ -154,6 +150,7 @@
             }
         },
         created () {
+            this.lang = this.$lang;
             let list = [];
             for (let i = 0; i < navigate.components.length; i++) {
                 for (let j = 0; j < navigate.components[i].list.length; j++) {

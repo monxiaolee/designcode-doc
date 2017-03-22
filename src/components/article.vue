@@ -158,12 +158,8 @@
                 list: [],
                 donate: false,
                 ask: false,
-                activeKey: ''
-            }
-        },
-        computed: {
-            lang () {
-                return bus.lang;
+                activeKey: '',
+                lang: this.$lang
             }
         },
         methods: {
@@ -197,6 +193,9 @@
             handleNavMenuChange (val) {
                 this.activeKey = val;
             }
+        },
+        created () {
+            this.lang = this.$lang;
         },
         mounted () {
             this.updateActiveNav();

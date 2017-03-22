@@ -25,6 +25,21 @@
         <article class="doc-update">
             <Timeline>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.6" h2></Anchor>
+                    <p>
+                        <code>2017-03-22</code>
+                    </p>
+                    <ul>
+                        <li>Table 的上下文 prop：content 更名为 <code>context</code>。</li>
+                        <li>修复 Table 在生产环境时，自定义单元格渲染上下文失效的bug。<issue id="454"></issue></li>
+                        <li>iCol 增加名称 <code>Col</code>。</li>
+                        <li>iForm 增加名称 <code>Form</code>。</li>
+                        <li>修复 Input 使用 number 模式时，不能正确返回数字类型的bug。</li>
+                        <li>Card 增加内部间距 prop：padding。<mention id="muei"></mention></li>
+                        <li>Tag 增加 prop：name。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.5" h2></Anchor>
                     <p>
                         <code>2017-03-15</code>
@@ -102,6 +117,7 @@
     import Code from '../../code/guide';
     import Anchor from '../../components/anchor.vue';
     import issue from '../../components/issue.vue';
+    import mention from '../../components/mention.vue';
 
     import version from '../../config/config';
 
@@ -110,7 +126,8 @@
             iArticle,
             iCode,
             Anchor,
-            issue
+            issue,
+            mention
         },
         data () {
             return {

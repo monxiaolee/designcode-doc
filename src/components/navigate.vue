@@ -4,7 +4,10 @@
 <template>
     <div class="navigate">
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'guide'">
-            <Menu-item v-for="item in navigate.guide" :key="item" :name="item.path">{{ item.title }}</Menu-item>
+            <Menu-item v-for="item in navigate.guide" :key="item" :name="item.path">
+                <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
+                <template v-else>{{ item.titleEn }}</template>
+            </Menu-item>
         </Menu>
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'component'">
             <Menu-item v-for="item in navigate.beforeComponents" :key="item" :name="item.path">
@@ -47,7 +50,8 @@
             return {
                 navigate: navigate,
                 showDot: false,
-                activeKey: this.$route.path
+                activeKey: this.$route.path,
+                lang: this.$lang
             }
         },
         methods: {
@@ -55,10 +59,16 @@
                 bus.$emit('on-donate-show');
             },
             handleSelect (path) {
+                if (this.lang === 'en-US') path += '-en';
                 this.$nextTick(() => {
                     this.$router.push(path);
                 });
             }
+        },
+        created () {
+            this.lang = this.$lang;
+            const path = this.lang === 'zh-CN' ? this.$route.path : this.$route.path.split('-en')[0];
+            this.activeKey = path;
         },
         mounted () {
             // 判断是否已阅读更新日志
