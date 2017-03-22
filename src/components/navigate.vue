@@ -12,18 +12,23 @@
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'component'">
             <Menu-item v-for="item in navigate.beforeComponents" :key="item" :name="item.path">
                 <template v-if="item.title !== '更新日志'">
-                    {{ item.title }}
+                    <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
+                    <template v-else>{{ item.titleEn }}</template>
                 </template>
                 <template v-if="item.title === '更新日志'">
-                    <Badge :dot="showDot">{{ item.title }}</Badge>
+                    <Badge :dot="showDot">
+                        <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
+                        <template v-else>{{ item.titleEn }}</template>
+                    </Badge>
                 </template>
             </Menu-item>
-            <i-button type="primary" icon="social-usd" size="small" style="width:130px;margin:15px 0 15px 15px;" @click="handleDonate">赞助</i-button>
-            <div class="navigate-group">组件</div>
+            <Button type="primary" icon="social-usd" size="small" style="width:130px;margin:15px 0 15px 15px;" @click="handleDonate">{{ $t('index.donate') }}</Button>
+            <div class="navigate-group">{{ $t('index.component') }}</div>
             <Menu-group v-for="item in navigate.components" :key="item" :title="item.type">
                 <Menu-item v-for="component in item.list" :key="component" :name="component.path">
                     <i class="ivu-icon" :class="'ivu-icon-' + component.icon"></i>
-                    {{ component.title }}
+                    <template v-if="lang === 'zh-CN'">{{ component.title }}</template>
+                    <template v-else>{{ component.title.split(' ')[0] }}</template>
                 </Menu-item>
             </Menu-group>
         </Menu>

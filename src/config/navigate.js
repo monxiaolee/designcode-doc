@@ -26,26 +26,32 @@ const list = {
     beforeComponents: [
         {
             title: '安装',
+            titleEn: 'Installation',
             path: '/docs/guide/install'
         },
         {
             title: '快速上手',
+            titleEn: 'Quick Start',
             path: '/docs/guide/start'
         },
         {
             title: '国际化',
+            titleEn: 'Internationalization',
             path: '/docs/guide/i18n'
         },
         {
             title: '定制主题',
+            titleEn: 'Customize Theme',
             path: '/docs/guide/theme'
         },
         {
             title: '概览',
+            titleEn: 'Overview',
             path: '/overview'
         },
         {
             title: '更新日志',
+            titleEn: 'Change Log',
             path: '/docs/guide/update'
         }
     ],

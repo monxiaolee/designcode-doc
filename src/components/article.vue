@@ -36,53 +36,53 @@
                                 <a href="https://github.com/iview/iview-cli" target="_blank">iView Cli</a>
                             </li>
                             <li>
-                                <a href="https://github.com/iview/iview-doc" target="_blank">iView 文档</a>
+                                <a href="https://github.com/iview/iview-doc" target="_blank">iView Doc</a>
                             </li>
                             <li>
-                                <a href="https://github.com/iview/iview-project" target="_blank">iView 工程</a>
+                                <a href="https://github.com/iview/iview-project" target="_blank">iView Project</a>
                             </li>
                             <li>
-                                <a href="https://github.com/iview/iview-theme" target="_blank">iView 主题</a>
+                                <a href="https://github.com/iview/iview-theme" target="_blank">iView Theme</a>
                             </li>
                         </ul>
                     </i-col>
                     <i-col span="5">
                         <h4>
                             <Icon type="link"></Icon>
-                            相关站点
+                            {{ $t('index.links') }}
                         </h4>
                         <ul>
                             <li>
-                                <a href="https://www.talkingcoder.com/?from=iview" target="_blank">TalkingCoder</a> - 有逼格的程序员社区
+                                <a href="https://www.talkingcoder.com/?from=iview" target="_blank">TalkingCoder</a> - {{ $t('index.tc') }}
                             </li>
                             <li>
-                                <a href="https://www.talkingdata.com/" target="_blank">TalkingData</a> - 移动·数据·价值
+                                <a href="https://www.talkingdata.com/" target="_blank">TalkingData</a> - {{ $t('index.td') }}
                             </li>
                             <li>
-                                <a href="https://github.com/TalkingData/Fregata" target="_blank">Fregata</a> - 大规模机器学习算法库
+                                <a href="https://github.com/TalkingData/Fregata" target="_blank">Fregata</a> - {{ $t('index.Fregata') }}
                             </li>
                             <li>
-                                <a href="https://github.com/TalkingData/Myna" target="_blank">Myna</a> - Android 平台情景感知框架
+                                <a href="https://github.com/TalkingData/Myna" target="_blank">Myna</a> - {{ $t('index.Myna') }}
                             </li>
                             <li>
-                                <a href="https://github.com/TalkingData/owl" target="_blank">OWL</a> - 分布式监控系统
+                                <a href="https://github.com/TalkingData/owl" target="_blank">OWL</a> - {{ $t('index.OWL') }}
                             </li>
                         </ul>
                     </i-col>
                     <i-col span="5" offset="2">
                         <h4>
                             <Icon type="chatbubbles"></Icon>
-                            社区
+                            {{ $t('index.community') }}
                         </h4>
                         <ul>
                             <li>
-                                <a href="https://github.com/iview/iview/issues" target="_blank">反馈建议</a>
+                                <a href="https://github.com/iview/iview/issues" target="_blank">{{ $t('index.feedback') }}</a>
                             </li>
                             <li>
-                                <a href="https://github.com/iview/iview/issues/new" target="_blank">提交Bug</a>
+                                <a href="https://github.com/iview/iview/issues/new" target="_blank">{{ $t('index.bug') }}</a>
                             </li>
                             <li>
-                                <a href="https://gitter.im/iview/iview" target="_blank">讨论</a>
+                                <a href="https://gitter.im/iview/iview" target="_blank">{{ $t('index.chat') }}</a>
                             </li>
                         </ul>
                     </i-col>
