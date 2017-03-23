@@ -430,6 +430,13 @@ const routers = [
         component: require('./views/components/affix.vue')
     },
     {
+        path: '/components/affix-en',
+        meta: {
+            title: 'Affix'
+        },
+        component: require('./views/components/affix-en.vue')
+    },
+    {
         path: '/components/back-top',
         meta: {
             title: '回到顶部 BackTop'
