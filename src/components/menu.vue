@@ -89,12 +89,13 @@
             }
         },
         methods: {
-            handleSearch (val) {
+            handleSearch (path) {
+                if (this.lang === 'en-US') path += '-en';
                 this.search = '';
                 this.$refs.select.setQuery('');
                 this.$nextTick(() => {
                     setTimeout(() => {
-                        this.$router.push(val);
+                        this.$router.push(path);
                     }, 300);
                 });
             },

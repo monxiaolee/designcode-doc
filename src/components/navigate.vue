@@ -64,7 +64,7 @@
                 bus.$emit('on-donate-show');
             },
             handleSelect (path) {
-                if (this.lang === 'en-US') path += '-en';
+//                if (this.lang === 'en-US') path += '-en';
                 this.$nextTick(() => {
                     this.$router.push(path);
                 });
