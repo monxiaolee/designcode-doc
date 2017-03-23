@@ -14,12 +14,12 @@ const list = {
         },
         {
             title: '布局',
-            titleEn: 'Layout',
+            titleEn: 'Navigation Examples',
             path: '/docs/guide/layout'
         },
         {
             title: '参与贡献',
-            titleEn: 'Contribute Guide',
+            titleEn: 'Contributing Guide',
             path: '/docs/guide/standard'
         }
     ],
