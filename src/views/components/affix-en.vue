@@ -102,7 +102,7 @@
                     <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>Emitted when affix state is changed</td>
+                            <td>Emit when affix state is changed</td>
                             <td>true | false</td>
                         </tr>
                     </tbody>
