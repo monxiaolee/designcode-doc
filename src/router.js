@@ -276,6 +276,13 @@ const routers = [
         component: require('./views/components/alert.vue')
     },
     {
+        path: '/components/alert-en',
+        meta: {
+            title: 'Alert'
+        },
+        component: require('./views/components/alert-en.vue')
+    },
+    {
         path: '/components/card',
         meta: {
             title: '卡片 Card'
@@ -442,6 +449,13 @@ const routers = [
             title: '回到顶部 BackTop'
         },
         component: require('./views/components/back-top.vue')
+    },
+    {
+        path: '/components/back-top-en',
+        meta: {
+            title: 'BackTop'
+        },
+        component: require('./views/components/back-top-en.vue')
     },
     {
         path: '/components/spin',
