@@ -41,10 +41,10 @@
                             换一换
                         </a>
                         <ul>
-                            <li v-for="item in movieList | limitBy limitNum limitFrom">
+                            <li v-for="item in randomMovieList">
                                 <a :href="item.url" target="_blank">{{ item.name }}</a>
                                 <span>
-                                    <Icon type="ios-star" v-for="n in 4"></Icon><Icon type="ios-star" v-if="item.rate >= 9.5"></Icon><Icon type="ios-star-half" v-else></Icon>
+                                    <Icon type="ios-star" v-for="n in 4" :key="n"></Icon><Icon type="ios-star" v-if="item.rate >= 9.5"></Icon><Icon type="ios-star-half" v-else></Icon>
                                     {{ item.rate }}
                                 </span>
                             </li>
@@ -73,22 +73,22 @@
             <Demo title="禁用悬停阴影">
                 <div slot="demo">
                     <Row>
-                        <i-col span="11">
+                        <Col span="11">
                             <Card>
                                 <p slot="title">标准卡片</p>
                                 <p>卡片内容</p>
                                 <p>卡片内容</p>
                                 <p>卡片内容</p>
                             </Card>
-                        </i-col>
-                        <i-col span="11" offset="2">
+                        </Col>
+                        <Col span="11" offset="2">
                             <Card dis-hover>
                                 <p slot="title">禁用悬停阴影的卡片</p>
                                 <p>卡片内容</p>
                                 <p>卡片内容</p>
                                 <p>卡片内容</p>
                             </Card>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -99,22 +99,22 @@
             <Demo title="卡片阴影">
                 <div slot="demo">
                     <Row style="background:#eee;padding:20px">
-                        <i-col span="11">
+                        <Col span="11">
                             <Card :bordered="false">
                                 <p slot="title">无边框卡片</p>
                                 <p>卡片内容</p>
                                 <p>卡片内容</p>
                                 <p>卡片内容</p>
                             </Card>
-                        </i-col>
-                        <i-col span="11" offset="2">
+                        </Col>
+                        <Col span="11" offset="2">
                             <Card shadow>
                                 <p slot="title">使用阴影效果的卡片</p>
                                 <p>卡片内容</p>
                                 <p>卡片内容</p>
                                 <p>卡片内容</p>
                             </Card>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -127,7 +127,7 @@
                 <div slot="demo">
                     <Card style="width:320px">
                         <div style="text-align:center">
-                            <img src="../../images/logo.png" style="width:50%">
+                            <img src="../../images/logo.png">
                             <h3>一套基于 Vue.js 的高质量UI组件库</h3>
                         </div>
                     </Card>
@@ -167,6 +167,12 @@
                             <td>卡片阴影，建议在灰色背景下使用</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>padding</td>
+                            <td>卡片内部间距，单位 px</td>
+                            <td>Number</td>
+                            <td>16</td>
                         </tr>
                     </tbody>
                 </table>
@@ -214,8 +220,6 @@
         data () {
             return {
                 code: Code,
-                limitNum: 5,
-                limitFrom: 0,
                 movieList: [
                     {
                         name: '肖申克的救赎',
@@ -267,13 +271,34 @@
                         url: 'https://movie.douban.com/subject/3541415/',
                         rate: 9.2
                     }
-                ]
+                ],
+                randomMovieList: []
             }
         },
         methods: {
             changeLimit () {
-                this.limitFrom = this.limitFrom === 0 ? 5 : 0;
+                function getArrayItems(arr, num) {
+                    const temp_array = [];
+                    for (let index in arr) {
+                        temp_array.push(arr[index]);
+                    }
+                    const return_array = [];
+                    for (let i = 0; i<num; i++) {
+                        if (temp_array.length>0) {
+                            const arrIndex = Math.floor(Math.random()*temp_array.length);
+                            return_array[i] = temp_array[arrIndex];
+                            temp_array.splice(arrIndex, 1);
+                        } else {
+                            break;
+                        }
+                    }
+                    return return_array;
+                }
+                this.randomMovieList = getArrayItems(this.movieList, 5);
             }
+        },
+        mounted () {
+            this.changeLimit();
         }
     }
 </script>

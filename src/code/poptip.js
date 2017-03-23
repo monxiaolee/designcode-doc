@@ -3,13 +3,13 @@ let code = {};
 code.base = `
 <template>
     <Poptip trigger="hover" title="提示标题" content="提示内容">
-        <i-button>hover 激活</i-button>
+        <Button>hover 激活</Button>
     </Poptip>
     <Poptip title="提示标题" content="提示内容">
-        <i-button>click 激活</i-button>
+        <Button>click 激活</Button>
     </Poptip>
     <Poptip trigger="focus" title="提示标题" content="提示内容">
-        <i-button>focus 激活</i-button>
+        <Button>focus 激活</Button>
     </Poptip>
     <Poptip trigger="focus" title="提示标题" content="提示内容">
         <i-input placeholder="输入框的 focus"></i-input>
@@ -42,48 +42,48 @@ code.placement = `
 <template>
     <div class="top">
         <Poptip title="提示标题" content="提示内容" placement="top-start">
-            <i-button>上左</i-button>
+            <Button>上左</Button>
         </Poptip>
         <Poptip title="提示标题" content="提示内容" placement="top">
-            <i-button>上边</i-button>
+            <Button>上边</Button>
         </Poptip>
         <Poptip title="提示标题" content="提示内容" placement="top-end">
-            <i-button>上右</i-button>
+            <Button>上右</Button>
         </Poptip>
     </div>
     <div class="center">
         <div class="center-left">
             <Poptip title="提示标题" content="提示内容" placement="left-start">
-                <i-button>左上</i-button>
+                <Button>左上</Button>
             </Poptip><br><br>
             <Poptip title="提示标题" content="提示内容" placement="left">
-                <i-button>左边</i-button>
+                <Button>左边</Button>
             </Poptip><br><br>
             <Poptip title="提示标题" content="提示内容" placement="left-end">
-                <i-button>左下</i-button>
+                <Button>左下</Button>
             </Poptip>
         </div>
         <div class="center-right">
             <Poptip title="提示标题" content="提示内容" placement="right-start">
-                <i-button>右上</i-button>
+                <Button>右上</Button>
             </Poptip><br><br>
             <Poptip title="提示标题" content="提示内容" placement="right">
-                <i-button>右边</i-button>
+                <Button>右边</Button>
             </Poptip><br><br>
             <Poptip title="提示标题" content="提示内容" placement="right-end">
-                <i-button>右下</i-button>
+                <Button>右下</Button>
             </Poptip>
         </div>
     </div>
     <div class="bottom">
         <Poptip title="提示标题" content="提示内容" placement="bottom-start">
-            <i-button>下左</i-button>
+            <Button>下左</Button>
         </Poptip>
         <Poptip title="提示标题" content="提示内容" placement="bottom">
-            <i-button>下边</i-button>
+            <Button>下边</Button>
         </Poptip>
         <Poptip title="提示标题" content="提示内容" placement="bottom-end">
-            <i-button>下右</i-button>
+            <Button>下右</Button>
         </Poptip>
     </div>
 </template>
@@ -96,7 +96,7 @@ code.placement = `
 
 code.visible = `
 <template>
-    <Poptip :visible.sync="visible">
+    <Poptip v-model="visible">
         <a>click 激活</a>
         <div slot="title"><i>自定义标题</i></div>
         <div slot="content">
@@ -123,7 +123,7 @@ code.visible = `
 code.slot = `
 <template>
     <Poptip placement="right" width="400">
-        <i-button type="ghost">click 激活</i-button>
+        <Button type="ghost">click 激活</Button>
         <div class="api" slot="content">
             <table>
                 <thead>
@@ -168,7 +168,7 @@ code.confirm = `
         title="您确认删除这条内容吗？"
         @on-ok="ok"
         @on-cancel="cancel">
-        <i-button>删除</i-button>
+        <Button>删除</Button>
     </Poptip>
     <Poptip
         confirm
@@ -177,7 +177,7 @@ code.confirm = `
         @on-cancel="cancel"
         ok-text="yes"
         cancel-text="no">
-        <i-button>国际化</i-button>
+        <Button>国际化</Button>
     </Poptip>
 </template>
 <script>

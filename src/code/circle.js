@@ -2,17 +2,17 @@ let code = {};
 
 code.base = `
 <template>
-    <Circle :percent="80">
-        <span class="demo-circle-inner" style="font-size:24px">80%</span>
-    </Circle>
-    <Circle :percent="100" stroke-color="#5cb85c">
+    <i-circle :percent="80">
+        <span class="demo-i-circle-inner" style="font-size:24px">80%</span>
+    </i-circle>
+    <i-circle :percent="100" stroke-color="#5cb85c">
         <Icon type="ios-checkmark-empty" size="60" style="color:#5cb85c"></Icon>
-    </Circle>
-    <Circle :percent="35" stroke-color="#ff5500">
-        <span class="demo-circle-inner">
+    </i-circle>
+    <i-circle :percent="35" stroke-color="#ff5500">
+        <span class="demo-i-circle-inner">
             <Icon type="ios-close-empty" size="50" style="color:#ff5500"></Icon>
         </span>
-    </Circle>
+    </i-circle>
 </template>
 <script>
     export default {
@@ -23,13 +23,13 @@ code.base = `
 
 code.percent = `
 <template>
-    <Circle :percent="percent" :stroke-color="color">
+    <i-circle :percent="percent" :stroke-color="color">
         <Icon v-if="percent == 100" type="ios-checkmark-empty" size="60" style="color:#5cb85c"></Icon>
         <span v-else style="font-size:24px">{{ percent }}%</span>
-    </Circle>
+    </i-circle>
     <Button-group size="large">
-        <i-button icon="ios-plus-empty" @click="add"></i-button>
-        <i-button icon="ios-minus-empty" @click="minus"></i-button>
+        <Button icon="ios-plus-empty" @click="add"></Button>
+        <Button icon="ios-minus-empty" @click="minus"></Button>
     </Button-group>
 </template>
 <script>
@@ -68,7 +68,7 @@ code.percent = `
 
 code.custom = `
 <style lang="less">
-    .demo-circle-custom{
+    .demo-i-circle-custom{
         & h1{
             color: #3f414d;
             font-size: 28px;
@@ -102,22 +102,22 @@ code.custom = `
     }
 </style>
 <template>
-    <Circle
+    <i-circle
         :size="250"
         :trail-width="4"
         :stroke-width="5"
         :percent="75"
         stroke-linecap="square"
         stroke-color="#43a3fb">
-        <div class="demo-circle-custom">
-            <h1>{{ 42001776 | currency '' 0 }}</h1>
+        <div class="demo-i-circle-custom">
+            <h1>42,001,776</h1>
             <p>消费人群规模</p>
             <span>
                 总占人数
                 <i>75%</i>
             </span>
         </div>
-    </Circle>
+    </i-circle>
 </template>
 <script>
     export default {

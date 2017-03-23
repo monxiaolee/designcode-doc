@@ -5,12 +5,12 @@ code.router = `
 import iView from 'iview';
 Vue.use(iView);
 
-router.beforeEach((transition) => {
+router.beforeEach((to, from, next) => {
     iView.LoadingBar.start();
-    transition.next();
+    next();
 });
 
-router.afterEach((transition) => {
+router.afterEach((to, from, next) => {
     iView.LoadingBar.finish();
 });
 `;
@@ -41,9 +41,9 @@ export default {
 
 code.base = `
 <template>
-    <i-button @click="start">Start</i-button>
-    <i-button @click="finish">Finish</i-button>
-    <i-button @click="error">Error</i-button>
+    <Button @click="start">Start</Button>
+    <Button @click="finish">Finish</Button>
+    <Button @click="error">Error</Button>
 </template>
 <script>
     export default {

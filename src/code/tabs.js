@@ -2,10 +2,10 @@ let code = {};
 
 code.base = `
 <template>
-    <Tabs active-key="key1">
-        <Tab-pane label="标签一" key="key1">标签一的内容</Tab-pane>
-        <Tab-pane label="标签二" key="key2">标签二的内容</Tab-pane>
-        <Tab-pane label="标签三" key="key3">标签三的内容</Tab-pane>
+    <Tabs value="name1">
+        <Tab-pane label="标签一" name="name1">标签一的内容</Tab-pane>
+        <Tab-pane label="标签二" name="name2">标签二的内容</Tab-pane>
+        <Tab-pane label="标签三" name="name3">标签三的内容</Tab-pane>
     </Tabs>
 </template>
 <script>
@@ -144,20 +144,20 @@ code.style = `
 </style>
 <template>
     <Row :gutter="32">
-        <i-col span="12" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
+        <Col span="12" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
             <Tabs type="card">
                 <Tab-pane label="标签一">标签一的内容</Tab-pane>
                 <Tab-pane label="标签二">标签二的内容</Tab-pane>
                 <Tab-pane label="标签三">标签三的内容</Tab-pane>
             </Tabs>
-        </i-col>
-        <i-col span="12" class="demo-tabs-style2">
+        </Col>
+        <Col span="12" class="demo-tabs-style2">
             <Tabs type="card">
                 <Tab-pane label="标签一">标签一的内容</Tab-pane>
                 <Tab-pane label="标签二">标签二的内容</Tab-pane>
                 <Tab-pane label="标签三">标签三的内容</Tab-pane>
             </Tabs>
-        </i-col>
+        </Col>
     </Row>
 </template>
 <script>

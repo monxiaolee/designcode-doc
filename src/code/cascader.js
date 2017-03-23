@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <Cascader :data="data" :value.sync="value1"></Cascader>
+    <Cascader :data="data" v-model="value1"></Cascader>
 </template>
 <script>
     export default {
@@ -64,7 +64,7 @@ code.base = `
 
 code.value = `
 <template>
-    <Cascader :data="data" :value.sync="value2"></Cascader>
+    <Cascader :data="data" v-model="value2"></Cascader>
 </template>
 <script>
     export default {

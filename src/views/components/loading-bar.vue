@@ -6,10 +6,6 @@
             <p>全局创建一个显示页面加载、异步请求、文件上传等的加载进度条。</p>
             <Anchor title="说明" h2></Anchor>
             <p>LoadingBar 只会在全局创建一个，因此在任何位置调用的方法都会控制这同一个组件。主要使用场景是路由切换和Ajax，因为这两者都不能拿到精确的进度，LoadingBar 会模拟进度，当然也可以通过<code>update()</code>方法来传入一个精确的进度，比如在文件上传时会很有用，具体见API。</p>
-            <blockquote>
-                <p>从 <code>0.9.8</code> 版本开始，iView 使用 Vue.prototype 添加了全局方法 $Loading，因此可以直接用 <code>this.$Loading</code> 操作实例。</p>
-                <p>当然，您仍然可以使用 <code>import { LoadingBar } from 'iview'</code> 的形式调用。</p>
-            </blockquote>
             <Anchor title="在路由中使用" h4></Anchor>
             <i-code bg>{{ code.router }}</i-code>
             <Anchor title="在异步请求中使用" h4></Anchor>
@@ -17,9 +13,9 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基本用法">
                 <div slot="demo">
-                    <i-button @click="start">Start</i-button>
-                    <i-button @click="finish">Finish</i-button>
-                    <i-button @click="error">Error</i-button>
+                    <Button @click="start">Start</Button>
+                    <Button @click="finish">Finish</Button>
+                    <Button @click="error">Error</Button>
                 </div>
                 <div slot="desc">
                     <p>点击 Start 开始进度，点击 Finish 结束。在调用<code>start()</code>方法后，组件会自动模拟进度，当调用<code>finish()</code>或<code>error()</code>时，补全进度并自动消失。</p>

@@ -22,7 +22,7 @@ code.custom = `
     }
 </style>
 <template>
-    <Back-top :height="100" :bottom="100">
+    <Back-top :height="100" :bottom="200">
         <div class="top">返回顶端</div>
     </Back-top>
 </template>

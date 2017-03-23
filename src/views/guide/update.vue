@@ -23,7 +23,22 @@
     <i-article>
         <h1>更新日志</h1>
         <article class="doc-update">
-            <Timeline>
+            <Timeline pending>
+                <Timeline-item>
+                    <Anchor title="2.0.0-rc.6" h2></Anchor>
+                    <p>
+                        <code>2017-03-22</code>
+                    </p>
+                    <ul>
+                        <li>Table 的上下文 prop：content 更名为 <code>context</code>。</li>
+                        <li>修复 Table 在生产环境时，自定义单元格渲染上下文失效的bug。<issue id="454"></issue></li>
+                        <li>iCol 增加名称 <code>Col</code>。</li>
+                        <li>iForm 增加名称 <code>Form</code>。</li>
+                        <li>修复 Input 使用 number 模式时，不能正确返回数字类型的bug。</li>
+                        <li>Card 增加内部间距 prop：padding。<mention id="muei"></mention></li>
+                        <li>Tag 增加 prop：name。</li>
+                    </ul>
+                </Timeline-item>
                 <Timeline-item>
                     <Anchor title="2.0.0-rc.5" h2></Anchor>
                     <p>
@@ -81,7 +96,6 @@
                         <li>Upload 父级不能通过 computed 获取 Upload 的 fileList 了。</li>
                         <li>Collapse 废弃 activeKey，使用 v-model，key 更名为 name。</li>
                         <li>Carousel 废弃 activeIndex，使用 v-model。</li>
-                        <li>Tree 废弃 data，改为 value，使用 v-model，key 更名为 name。</li>
                         <li>Circle 更名为 <code>iCircle</code>。</li>
                         <li>Tabs 废弃 activeKey，改用 value，使用 v-model，key 更名为 name。</li>
                         <li>DropdownItem key 改为 name, Dropdown 的 visible 要使用 @on-visible-change 捕获，不再 sync</li>
@@ -93,6 +107,9 @@
                         <li>Table 支持组件名 <code>Table</code>，兼容 <code>iTable</code>。</li>
                     </ul>
                 </Timeline-item>
+                <Timeline-item>
+                    <Button type="ghost" size="large" @click="handleBefore">查看 1.x 版本的日志</Button>
+                </Timeline-item>
             </Timeline>
         </article>
     </i-article>
@@ -103,6 +120,7 @@
     import Code from '../../code/guide';
     import Anchor from '../../components/anchor.vue';
     import issue from '../../components/issue.vue';
+    import mention from '../../components/mention.vue';
 
     import version from '../../config/config';
 
@@ -111,7 +129,8 @@
             iArticle,
             iCode,
             Anchor,
-            issue
+            issue,
+            mention
         },
         data () {
             return {
@@ -120,6 +139,11 @@
         },
         mounted () {
             window.localStorage.setItem('version', version.version);
+        },
+        methods: {
+            handleBefore () {
+                window.open('http://v1.iviewui.com/docs/guide/update');
+            }
         }
     }
 </script>

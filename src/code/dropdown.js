@@ -16,10 +16,10 @@ code.base = `
         </Dropdown-menu>
     </Dropdown>
     <Dropdown style="margin-left: 20px">
-        <i-button type="primary">
+        <Button type="primary">
             下拉菜单
             <Icon type="arrow-down-b"></Icon>
-        </i-button>
+        </Button>
         <Dropdown-menu slot="list">
             <Dropdown-item>驴打滚</Dropdown-item>
             <Dropdown-item>炸酱面</Dropdown-item>
@@ -72,7 +72,7 @@ code.trigger = `
         <Dropdown-menu slot="list">
             <p>常用于各种自定义下拉内容的场景。</p>
             <div style="text-align: right;margin:10px;">
-                <i-button type="primary" @click="handleClose">关闭</i-button>
+                <Button type="primary" @click="handleClose">关闭</Button>
             </div>
         </Dropdown-menu>
     </Dropdown>

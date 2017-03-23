@@ -33,48 +33,48 @@ code.placement = `
 <template>
     <div class="top">
         <Tooltip content="Top Left 文字提示" placement="top-start">
-            <i-button>上左</i-button>
+            <Button>上左</Button>
         </Tooltip>
         <Tooltip content="Top Center 文字提示" placement="top">
-            <i-button>上边</i-button>
+            <Button>上边</Button>
         </Tooltip>
         <Tooltip content="Top Right 文字提示" placement="top-end">
-            <i-button>上右</i-button>
+            <Button>上右</Button>
         </Tooltip>
     </div>
     <div class="center">
         <div class="center-left">
             <Tooltip content="Left Top 文字提示" placement="left-start">
-                <i-button>左上</i-button>
+                <Button>左上</Button>
             </Tooltip><br><br>
             <Tooltip content="Left Center 文字提示" placement="left">
-                <i-button>左边</i-button>
+                <Button>左边</Button>
             </Tooltip><br><br>
             <Tooltip content="Left Bottom 文字提示" placement="left-end">
-                <i-button>左下</i-button>
+                <Button>左下</Button>
             </Tooltip>
         </div>
         <div class="center-right">
             <Tooltip content="Right Top 文字提示" placement="right-start">
-                <i-button>右上</i-button>
+                <Button>右上</Button>
             </Tooltip><br><br>
             <Tooltip content="Right Center 文字提示" placement="right">
-                <i-button>右边</i-button>
+                <Button>右边</Button>
             </Tooltip><br><br>
             <Tooltip content="Right Bottom 文字提示" placement="right-end">
-                <i-button>右下</i-button>
+                <Button>右下</Button>
             </Tooltip>
         </div>
     </div>
     <div class="bottom">
         <Tooltip content="Bottom Left 文字提示" placement="bottom-start">
-            <i-button>下左</i-button>
+            <Button>下左</Button>
         </Tooltip>
         <Tooltip content="Bottom Center 文字提示" placement="bottom">
-            <i-button>下边</i-button>
+            <Button>下边</Button>
         </Tooltip>
         <Tooltip content="Bottom Right 文字提示" placement="bottom-end">
-            <i-button>下右</i-button>
+            <Button>下右</Button>
         </Tooltip>
     </div>
 </template>
@@ -88,7 +88,7 @@ code.placement = `
 code.content = `
 <template>
     <Tooltip placement="top">
-        <i-button>多行</i-button>
+        <Button>多行</Button>
         <div slot="content">
             <p>显示多行信息</p>
             <p><i>可以自定义样式</i></p>
@@ -105,7 +105,7 @@ code.content = `
 code.disabled = `
 <template>
     <Tooltip placement="top" content="可以禁用文字提示" :disabled="disabled">
-        <i-button @click="disabled = true">点击关闭提示</i-button>
+        <Button @click="disabled = true">点击关闭提示</Button>
     </Tooltip>
 </template>
 <script>
@@ -122,7 +122,7 @@ code.disabled = `
 code.delay = `
 <template>
     <Tooltip placement="top" content="Tooltip 文字提示" :delay="1000">
-        <i-button @click="disabled = true">延时1秒显示</i-button>
+        <Button @click="disabled = true">延时1秒显示</Button>
     </Tooltip>
 </template>
 <script>

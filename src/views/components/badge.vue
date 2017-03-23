@@ -33,21 +33,21 @@
             <Demo title="小红点">
                 <div slot="demo">
                     <Row>
-                        <i-col span="6">
+                        <Col span="6">
                             <Badge dot>
                                 <a href="#" class="demo-badge"></a>
                             </Badge>
-                        </i-col>
-                        <i-col span="6">
+                        </Col>
+                        <Col span="6">
                             <Badge dot>
                                 <Icon type="ios-bell-outline" size="26"></Icon>
                             </Badge>
-                        </i-col>
-                        <i-col span="6">
+                        </Col>
+                        <Col span="6">
                             <Badge dot>
                                 <a href="#">可以是一个链接</a>
                             </Badge>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -58,16 +58,16 @@
             <Demo title="封顶数字">
                 <div slot="demo">
                     <Row>
-                        <i-col span="6">
+                        <Col span="6">
                             <Badge count="100">
                                 <a href="#" class="demo-badge"></a>
                             </Badge>
-                        </i-col>
-                        <i-col span="6">
+                        </Col>
+                        <Col span="6">
                             <Badge count="1000" overflow-count="999">
                                 <a href="#" class="demo-badge"></a>
                             </Badge>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -78,7 +78,7 @@
             <Demo title="独立使用及自定义样式">
                 <div slot="demo">
                     <Badge count="10"></Badge>
-                    <Badge count="20" class="demo-badge-alone"></Badge>
+                    <Badge count="20" class-name="demo-badge-alone"></Badge>
                 </div>
                 <div slot="desc">
                     <p>可以没有 slot 独立展示。</p>
@@ -117,7 +117,7 @@
                             <td>false</td>
                         </tr>
                         <tr>
-                            <td>class</td>
+                            <td>class-name</td>
                             <td>自定义的class名称，dot 模式下无效</td>
                             <td>String</td>
                             <td>-</td>

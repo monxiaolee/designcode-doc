@@ -45,6 +45,7 @@
             <h1>Spin 加载中</h1>
             <Anchor title="概述" h2></Anchor>
             <p>当区块正在获取数据中时可使用，适当的等待动画可以提升用户体验。</p>
+            <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
                     <Spin></Spin>
@@ -57,15 +58,15 @@
             <Demo title="各种尺寸">
                 <div slot="demo">
                     <Row>
-                        <i-col span="8">
+                        <Col span="8">
                             <Spin size="small"></Spin>
-                        </i-col>
-                        <i-col span="8">
+                        </Col>
+                        <Col span="8">
                             <Spin></Spin>
-                        </i-col>
-                        <i-col span="8">
+                        </Col>
+                        <Col span="8">
                             <Spin size="large"></Spin>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -87,24 +88,24 @@
             <Demo title="自定义内容">
                 <div slot="demo">
                     <Row>
-                        <i-col class="demo-spin-col" span="8">
+                        <Col class="demo-spin-col" span="8">
                             <Spin fix>加载中...</Spin>
-                        </i-col>
-                        <i-col class="demo-spin-col" span="8">
+                        </Col>
+                        <Col class="demo-spin-col" span="8">
                             <Spin fix>
                                 <Icon type="load-c" size=18 class="demo-spin-icon-load"></Icon>
                                 <div>Loading</div>
                             </Spin>
-                        </i-col>
-                        <i-col class="demo-spin-col" span="8">
+                        </Col>
+                        <Col class="demo-spin-col" span="8">
                             <Spin fix>
                                 <div class="loader">
                                     <svg class="circular" viewBox="25 25 50 50">
-                                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10" v-pre>
+                                        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke-miterlimit="10"></circle>
                                     </svg>
                                 </div>
                             </Spin>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -126,7 +127,7 @@
                         <Spin size="large" fix v-if="spinShow"></Spin>
                     </div>
                     <br>
-                    切换显示状态：<Switch @on-change="spinShow = !spinShow"></Switch>
+                    切换显示状态：<i-switch @on-change="spinShow = !spinShow"></i-switch>
                 </div>
                 <div slot="desc">
                     <p>控制 Spin 组件的显示和消失。</p>

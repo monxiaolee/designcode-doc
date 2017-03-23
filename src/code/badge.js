@@ -65,7 +65,7 @@ code.alone = `
 </style>
 <template>
     <Badge count="10"></Badge>
-    <Badge count="20" class="demo-badge-alone"></Badge>
+    <Badge count="20" class-name="demo-badge-alone"></Badge>
 </template>
 <script>
     export default {

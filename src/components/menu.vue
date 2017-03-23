@@ -36,20 +36,26 @@
                     <Icon type="settings"></Icon>
                     {{ $t('index.cli') }}
                 </Menu-item>
-                <Menu-item name="live">
-                    <Badge :dot="liveDot">
-                        <Icon type="ios-mic"></Icon>
-                        {{ $t('index.live') }}
-                    </Badge>
-                </Menu-item>
+                <!--<Menu-item name="live">-->
+                    <!--<Badge :dot="liveDot">-->
+                        <!--<Icon type="ios-mic"></Icon>-->
+                        <!--{{ $t('index.live') }}-->
+                    <!--</Badge>-->
+                <!--</Menu-item>-->
                 <Menu-item name="practice">
                     <Icon type="ios-analytics"></Icon>
                     {{ $t('index.practice') }}
                 </Menu-item>
-                <Button type="ghost" size="small" @click="handleChangeLang">
-                    <template v-if="lang === 'zh-CN'">EN</template>
-                    <template v-else>中文</template>
-                </Button>
+                <Select size="small" value="2" style="width: 70px;margin: 0 10px;" @on-change="handleVersion">
+                    <Option value="2">2.0.0</Option>
+                    <Option value="1">1.x</Option>
+                </Select>
+                <Tooltip content="Working">
+                    <Button type="ghost" size="small" @click="handleChangeLang" >
+                        <template v-if="lang === 'zh-CN'">EN</template>
+                        <template v-else>中文</template>
+                    </Button>
+                </Tooltip>
             </div>
         </div>
     </Menu>
@@ -70,7 +76,8 @@
                 liveDot: false,
                 currentActiveKey: this.activeKey,
                 searchText: this.$t('index.search'),
-                notFoundText: this.$t('index.notFound')
+                notFoundText: this.$t('index.notFound'),
+                lang: this.$lang
             };
         },
         watch: {
@@ -79,11 +86,6 @@
             },
             currentActiveKey (val) {
                 this.$emit('on-change', val);
-            }
-        },
-        computed: {
-            lang () {
-                return bus.lang;
             }
         },
         methods: {
@@ -140,9 +142,15 @@
             handleChangeLang () {
                 const lang = this.lang === 'zh-CN' ? 'en-US' : 'zh-CN';
                 bus.$emit('on-change-lang', lang);
+            },
+            handleVersion (v) {
+                if (v == 1) {
+                    window.location.href = 'http://v1.iviewui.com';
+                }
             }
         },
         created () {
+            this.lang = this.$lang;
             let list = [];
             for (let i = 0; i < navigate.components.length; i++) {
                 for (let j = 0; j < navigate.components[i].list.length; j++) {

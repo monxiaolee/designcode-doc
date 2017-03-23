@@ -4,14 +4,10 @@
             <h1>Message 全局提示</h1>
             <Anchor title="概述" h2></Anchor>
             <p>轻量级的信息反馈组件，在顶部居中显示，并自动消失。有多种不同的提示状态可选择。</p>
-            <blockquote>
-                <p>从 <code>0.9.8</code> 版本开始，iView 使用 Vue.prototype 添加了全局方法 $Message，因此可以直接用 <code>this.$Message</code> 注册实例。</p>
-                <p>当然，您仍然可以使用 <code>import { Message } from 'iview'</code> 的形式调用。</p>
-            </blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="普通提示">
                 <div slot="demo">
-                    <i-button type="primary" @click="info">显示普通提示</i-button>
+                    <Button type="primary" @click="info">显示普通提示</Button>
                 </div>
                 <div slot="desc">
                     <p>最基本的提示，默认在1.5秒后消失。</p>
@@ -20,9 +16,9 @@
             </Demo>
             <Demo title="提示类型">
                 <div slot="demo">
-                    <i-button @click="success">显示成功提示</i-button>
-                    <i-button @click="warning">显示警告提示</i-button>
-                    <i-button @click="error">显示错误提示</i-button>
+                    <Button @click="success">显示成功提示</Button>
+                    <Button @click="warning">显示警告提示</Button>
+                    <Button @click="error">显示错误提示</Button>
                 </div>
                 <div slot="desc">
                     <p>不同的提示状态：成功、警告、错误。</p>
@@ -31,7 +27,7 @@
             </Demo>
             <Demo title="加载中">
                 <div slot="demo">
-                    <i-button @click="loading">显示加载中...</i-button>
+                    <Button @click="loading">显示加载中...</Button>
                 </div>
                 <div slot="desc">
                     <p>Loading 的状态，并异步在某个时机移除。</p>
@@ -40,7 +36,7 @@
             </Demo>
             <Demo title="自定义时长">
                 <div slot="demo">
-                    <i-button @click="time">显示一个10秒的提示</i-button>
+                    <Button @click="time">显示一个10秒的提示</Button>
                 </div>
                 <div slot="desc">
                     <p>自定义时长，也可以在<code>Message.config()</code>中全局配置，详见API。</p>

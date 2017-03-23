@@ -19,8 +19,8 @@ code.percent = `
 <template>
     <Progress :percent="percent"></Progress>
     <Button-group size="large">
-        <i-button icon="ios-plus-empty" @click="add"></i-button>
-        <i-button icon="ios-minus-empty" @click="minus"></i-button>
+        <Button icon="ios-plus-empty" @click="add"></Button>
+        <Button icon="ios-minus-empty" @click="minus"></Button>
     </Button-group>
 </template>
 <script>

@@ -7,7 +7,7 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <Rate :value.sync="value"></Rate>
+                    <Rate v-model="value"></Rate>
                 </div>
                 <div slot="desc">
                     <p>基本用法。</p>
@@ -16,7 +16,7 @@
             </Demo>
             <Demo title="半星">
                 <div slot="demo">
-                    <Rate allow-half :value.sync="valueHalf"></Rate>
+                    <Rate allow-half v-model="valueHalf"></Rate>
                 </div>
                 <div slot="desc">
                     <p>设置属性 <code>allow-half</code> 可以选中半星。</p>
@@ -27,10 +27,10 @@
                 <div slot="demo">
                     <Row>
                         <i-col span="12">
-                            <Rate show-text :value.sync="valueText"></Rate>
+                            <Rate show-text v-model="valueText"></Rate>
                         </i-col>
                         <i-col span="12">
-                            <Rate show-text :value.sync="valueCustomText">
+                            <Rate show-text v-model="valueCustomText">
                                 <span style="color: #f5a623">{{ valueCustomText }}</span>
                             </Rate>
                         </i-col>
@@ -44,7 +44,7 @@
             </Demo>
             <Demo title="只读">
                 <div slot="demo">
-                    <Rate disabled :value.sync="valueDisabled"></Rate>
+                    <Rate disabled v-model="valueDisabled"></Rate>
                 </div>
                 <div slot="desc">
                     <p>设置属性 <code>disabled</code> 开启只读模式，无法交互。</p>
@@ -72,7 +72,7 @@
                         </tr>
                         <tr>
                             <td>value</td>
-                            <td>当前 star 数，需要使用 <code>.sync</code> 双向绑定，否则改变值时并不能改变使用者的数据</td>
+                            <td>当前 star 数，可以使用 v-model 双向绑定数据</td>
                             <td>Number</td>
                             <td>0</td>
                         </tr>

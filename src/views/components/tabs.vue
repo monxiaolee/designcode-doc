@@ -43,14 +43,14 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <Tabs active-key="key1">
-                        <Tab-pane label="标签一" key="key1">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二" key="key2">标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三" key="key3">标签三的内容</Tab-pane>
+                    <Tabs value="name1">
+                        <Tab-pane label="标签一" name="name1">标签一的内容</Tab-pane>
+                        <Tab-pane label="标签二" name="name2">标签二的内容</Tab-pane>
+                        <Tab-pane label="标签三" name="name3">标签三的内容</Tab-pane>
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p><code>active-key</code> 与 <code>Tab-pane</code> 的 <code>key</code> 对于，用于标识当前激活的是哪一项，key 值默认从 0 开始，默认激活第一项。</p>
+                    <p><code>value</code> 与 <code>Tab-pane</code> 的 <code>name</code> 对应，用于标识当前激活的是哪一项，name 值默认从 0 开始，默认激活第一项。可以使用 v-model 双向绑定数据。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
@@ -135,20 +135,20 @@
             <Demo title="其它样式" vertical hide-code>
                 <div slot="demo">
                     <Row :gutter="32">
-                        <i-col span="12" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
+                        <Col span="12" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
                             <Tabs type="card">
                                 <Tab-pane label="标签一">标签一的内容</Tab-pane>
                                 <Tab-pane label="标签二">标签二的内容</Tab-pane>
                                 <Tab-pane label="标签三">标签三的内容</Tab-pane>
                             </Tabs>
-                        </i-col>
-                        <i-col span="12" class="demo-tabs-style2">
+                        </Col>
+                        <Col span="12" class="demo-tabs-style2">
                             <Tabs type="card">
                                 <Tab-pane label="标签一">标签一的内容</Tab-pane>
                                 <Tab-pane label="标签二">标签二的内容</Tab-pane>
                                 <Tab-pane label="标签三">标签三的内容</Tab-pane>
                             </Tabs>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">
@@ -170,10 +170,10 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>active-key</td>
-                            <td>当前激活 tab 面板的 key</td>
+                            <td>value</td>
+                            <td>当前激活 tab 面板的 name，可以使用 v-model 双向绑定数据</td>
                             <td>String</td>
-                            <td>默认为第一项的 key</td>
+                            <td>默认为第一项的 name</td>
                         </tr>
                         <tr>
                             <td>type</td>
@@ -214,12 +214,12 @@
                         <tr>
                             <td>on-click</td>
                             <td>tab 被点击时触发</td>
-                            <td>key</td>
+                            <td>name</td>
                         </tr>
                         <tr>
                             <td>on-tab-remove</td>
                             <td>tab 被关闭时触发</td>
-                            <td>key</td>
+                            <td>name</td>
                         </tr>
                     </tbody>
                 </table>
@@ -235,8 +235,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>key</td>
-                            <td>用于标识当前面板，对应 active-key，默认为其索引值</td>
+                            <td>name</td>
+                            <td>用于标识当前面板，对应 value，默认为其索引值</td>
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>
