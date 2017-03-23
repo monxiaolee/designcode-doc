@@ -29,11 +29,11 @@ const lang = window.localStorage.getItem('language') || localLang || 'zh-CN';
 
 Vue.config.lang = lang;
 bus.lang = lang;
-bus.$on('on-change-lang', (lang) => {
+bus.$on('on-change-lang', (lang, path) => {
     // Vue.config.lang = lang;
     // bus.lang = lang;
     window.localStorage.setItem('language', lang);
-    window.location.reload();
+    window.location.href = path;
 });
 
 // 多语言配置

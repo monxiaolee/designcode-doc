@@ -59,6 +59,13 @@ const routers = [
         component: require('./views/guide/layout.vue')
     },
     {
+        path: '/docs/guide/layout-en',
+        meta: {
+            title: 'Layout'
+        },
+        component: require('./views/guide/layout-en.vue')
+    },
+    {
         path: '/docs/guide/standard',
         meta: {
             title: '参与贡献'
