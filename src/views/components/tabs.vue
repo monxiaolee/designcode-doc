@@ -108,14 +108,15 @@
             </Demo>
             <Demo title="可关闭">
                 <div slot="demo">
-                    <Tabs type="card" closable>
-                        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                    <Tabs type="card" closable @on-tab-remove="handleTabRemove">
+                        <Tab-pane label="标签一" v-if="tab0">标签一的内容</Tab-pane>
+                        <Tab-pane label="标签二" v-if="tab1">标签二的内容</Tab-pane>
+                        <Tab-pane label="标签三" v-if="tab2">标签三的内容</Tab-pane>
                     </Tabs>
                 </div>
                 <div slot="desc">
                     <p>通过设置属性 <code>closable</code> 可以关闭某一项，仅在 <code>type</code> 为 <code>card</code> 时有效。</p>
+                    <p>需结合 @on-tab-remove 事件手动关闭标签页。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.closable }}</i-code>
             </Demo>
@@ -286,11 +287,16 @@
         },
         data () {
             return {
-                code: Code
+                code: Code,
+                tab0: true,
+                tab1: true,
+                tab2: true
             }
         },
         methods: {
-
+            handleTabRemove (name) {
+                this['tab' + name] = false;
+            }
         }
     }
 </script>
