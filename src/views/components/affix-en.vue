@@ -16,7 +16,7 @@
             <h1>Affix</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>By using Affix, user can fix the content at the screen position and it won't scroll with page scrolling. Common Usage: Sidebar etc.</p>
-            <Anchor title="Example" h2></Anchor>
+            <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
                     <Affix>

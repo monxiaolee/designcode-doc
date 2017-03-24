@@ -4,7 +4,7 @@
             <h1>Alert</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>Present some warning messages staticlly, can be closed manually.</p>
-            <Anchor title="Example" h2></Anchor>
+            <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
                     <Alert>Info Text</Alert>
