@@ -24,11 +24,11 @@
                     </h1>
                     <h2>{{ $t('index.title') }}</h2>
                     <div class="list">
-                        <router-link to="/docs/guide/introduce">{{ $t('index.guide') }}</router-link>
-                        <router-link to="/docs/guide/install">{{ $t('index.component') }}</router-link>
-                        <router-link to="/docs/practice/case">{{ $t('index.practice') }}</router-link>
-                        <router-link to="/cli">{{ $t('index.cli') }}</router-link>
-                        <router-link to="/overview">{{ $t('index.overview') }}</router-link>
+                        <router-link :to="'/docs/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
+                        <router-link :to="'/docs/guide/install' + suffix">{{ $t('index.component') }}</router-link>
+                        <router-link :to="'/docs/practice/case' + suffix">{{ $t('index.practice') }}</router-link>
+                        <router-link :to="'/cli' + suffix">{{ $t('index.cli') }}</router-link>
+                        <router-link :to="'/overview' + suffix">{{ $t('index.overview') }}</router-link>
                         <a href="https://github.com/iview/iview" target="_blank">
                             <Icon type="social-github"></Icon>
                             GitHub
@@ -46,7 +46,12 @@
     export default {
         data () {
             return {
-
+                lang: this.$lang
+            }
+        },
+        computed: {
+            suffix () {
+                return this.lang === 'zh-CN' ? '' : '-en';
             }
         },
         methods: {
@@ -172,6 +177,7 @@
             }
         },
         mounted () {
+            this.lang = this.$lang;
             this.liziInit();
         },
         beforeDestroy () {

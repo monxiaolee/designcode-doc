@@ -100,18 +100,20 @@
                 });
             },
             handleSelect (type) {
+                const pathSuffix = this.lang === 'zh-CN' ? '' : '-en';
+
                 if (type === 'donate') {
                     bus.$emit('on-donate-show');
                 } else if (type === 'github') {
                     window.open('https://github.com/iview/iview');
                 } else if (type === 'guide') {
-                    this.$router.push(navigate.guide[0].path);
+                    this.$router.push(navigate.guide[0].path + pathSuffix);
                 } else if (type === 'component') {
-                    this.$router.push(navigate.beforeComponents[0].path);
+                    this.$router.push(navigate.beforeComponents[0].path + pathSuffix);
                 } else if (type === 'practice') {
-                    this.$router.push(navigate.practice[0].path);
+                    this.$router.push(navigate.practice[0].path + pathSuffix);
                 } else if (type === 'cli') {
-                    this.$router.push('/cli');
+                    this.$router.push('/cli' + pathSuffix);
                 } else if (type === 'live') {
                     this.$router.push('/live');
                 }

@@ -17,6 +17,13 @@ const routers = [
         component: require('./views/cli.vue')
     },
     {
+        path: '/cli-en',
+        meta: {
+            title: 'iView Cli'
+        },
+        component: require('./views/cli-en.vue')
+    },
+    {
         path: '/live',
         meta: {
             title: '讲堂'
