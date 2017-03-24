@@ -52,6 +52,13 @@ const routers = [
         component: require('./views/guide/design.vue')
     },
     {
+        path: '/docs/guide/design-en',
+        meta: {
+            title: 'Design Principle'
+        },
+        component: require('./views/guide/design-en.vue')
+    },
+    {
         path: '/docs/guide/layout',
         meta: {
             title: '布局'
@@ -155,6 +162,13 @@ const routers = [
             title: '按钮 Button'
         },
         component: require('./views/components/button.vue')
+    },
+    {
+        path: '/components/button-en',
+        meta: {
+            title: 'Button'
+        },
+        component: require('./views/components/button-en.vue')
     },
     {
         path: '/components/icon',
