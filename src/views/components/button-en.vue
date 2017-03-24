@@ -327,7 +327,7 @@
     import iArticle from '../../components/article.vue';
     import iCode from 'iCode';
     import Demo from '../../components/demo.vue';
-    import Code from '../../code/button-en';
+    import Code from '../../code/button';
     import Anchor from '../../components/anchor.vue';
 
     export default {
