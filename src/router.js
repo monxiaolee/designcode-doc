@@ -52,11 +52,25 @@ const routers = [
         component: require('./views/guide/design.vue')
     },
     {
+        path: '/docs/guide/design-en',
+        meta: {
+            title: 'Design Principle'
+        },
+        component: require('./views/guide/design-en.vue')
+    },
+    {
         path: '/docs/guide/layout',
         meta: {
             title: '布局'
         },
         component: require('./views/guide/layout.vue')
+    },
+    {
+        path: '/docs/guide/layout-en',
+        meta: {
+            title: 'Layout'
+        },
+        component: require('./views/guide/layout-en.vue')
     },
     {
         path: '/docs/guide/standard',
@@ -129,6 +143,13 @@ const routers = [
         component: require('./views/guide/layout.vue')
     },
     {
+        path: '/components/layout-en',
+        meta: {
+            title: 'Layout'
+        },
+        component: require('./views/guide/layout-en.vue')
+    },
+    {
         path: '/components/color',
         meta: {
             title: '色彩 Color'
@@ -148,6 +169,13 @@ const routers = [
             title: '按钮 Button'
         },
         component: require('./views/components/button.vue')
+    },
+    {
+        path: '/components/button-en',
+        meta: {
+            title: 'Button'
+        },
+        component: require('./views/components/button-en.vue')
     },
     {
         path: '/components/icon',
@@ -267,6 +295,13 @@ const routers = [
             title: '警告提示 Alert'
         },
         component: require('./views/components/alert.vue')
+    },
+    {
+        path: '/components/alert-en',
+        meta: {
+            title: 'Alert'
+        },
+        component: require('./views/components/alert-en.vue')
     },
     {
         path: '/components/card',
@@ -423,11 +458,25 @@ const routers = [
         component: require('./views/components/affix.vue')
     },
     {
+        path: '/components/affix-en',
+        meta: {
+            title: 'Affix'
+        },
+        component: require('./views/components/affix-en.vue')
+    },
+    {
         path: '/components/back-top',
         meta: {
             title: '回到顶部 BackTop'
         },
         component: require('./views/components/back-top.vue')
+    },
+    {
+        path: '/components/back-top-en',
+        meta: {
+            title: 'BackTop'
+        },
+        component: require('./views/components/back-top-en.vue')
     },
     {
         path: '/components/spin',

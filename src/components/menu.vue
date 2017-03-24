@@ -142,7 +142,8 @@
             },
             handleChangeLang () {
                 const lang = this.lang === 'zh-CN' ? 'en-US' : 'zh-CN';
-                bus.$emit('on-change-lang', lang);
+                const path = this.$route.path.indexOf('-en') > -1 ? this.$route.path.split('-en')[0] : this.$route.path + '-en';
+                bus.$emit('on-change-lang', lang, path);
             },
             handleVersion (v) {
                 if (v == 1) {
