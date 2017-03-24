@@ -7,36 +7,36 @@
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
-                    <Alert>Info Text</Alert>
-                    <Alert type="success">Success Text</Alert>
-                    <Alert type="warning">Warning Text</Alert>
-                    <Alert type="error">Error Text</Alert>
+                    <Alert>消息提示文案</Alert>
+                    <Alert type="success">成功提示文案</Alert>
+                    <Alert type="warning">警告提示文案</Alert>
+                    <Alert type="error">错误提示文案</Alert>
                 </div>
                 <div slot="desc">
-                    <p>Basic Usage: 4 alternative types: <code>info</code>, <code>success</code>, <code>warning</code>, <code>error</code>。</p>
+                    <p>Basic Usage: 4 alternative types: <code>info</code>, <code>success</code>, <code>warning</code>, <code>error</code>.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="With Description">
                 <div slot="demo">
                     <Alert>
-                        Info Text
-                        <template slot="desc">Info Description Info Description Info Description Info Description Info Description </template>
+                        消息提示文案
+                        <template slot="desc">消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案</template>
                     </Alert>
                     <Alert type="success">
-                        Success Text
-                        <span slot="desc">Success Description Success Description Success Description Success Description </span>
+                        成功提示文案
+                        <span slot="desc">成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案</span>
                     </Alert>
                     <Alert type="warning">
-                        Wanring Text
+                        警告提示文案
                         <template slot="desc">
-                            Warning Description Warning Description Warning Description 
+                            警告的提示描述文案警告的提示描述文案警告的提示描述文案
                         </template>
                     </Alert>
                     <Alert type="error">
-                        Error Text
+                        错误提示文案
                         <span slot="desc">
-                            Customized Error Description.<Icon type="help-circled" size="14"></Icon>
+                            自定义错误描述文案。<Icon type="help-circled" size="14"></Icon>
                         </span>
                     </Alert>
                 </div>
@@ -47,34 +47,34 @@
             </Demo>
             <Demo title="Icon">
                 <div slot="demo">
-                    <Alert show-icon>Info Text</Alert>
-                    <Alert type="success" show-icon>Success Text</Alert>
-                    <Alert type="warning" show-icon>Warning Text</Alert>
-                    <Alert type="error" show-icon>Error Text</Alert>
+                    <Alert show-icon>消息提示文案</Alert>
+                    <Alert type="success" show-icon>成功提示文案</Alert>
+                    <Alert type="warning" show-icon>警告提示文案</Alert>
+                    <Alert type="error" show-icon>错误提示文案</Alert>
                     <Alert show-icon>
-                        Info Text
-                        <template slot="desc">Info Description Info Description Info Description Info Description </template>
+                        消息提示文案
+                        <template slot="desc">消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案</template>
                     </Alert>
                     <Alert type="success" show-icon>
-                        Success Text
-                        <span slot="desc">Success Description Success Description Success Description Success Description </span>
+                        成功提示文案
+                        <span slot="desc">成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案</span>
                     </Alert>
                     <Alert type="warning" show-icon>
-                        Warning Text
+                        警告提示文案
                         <template slot="desc">
-                            Warning Description
+                            警告的提示描述文案警告的提示描述文案警告的提示描述文案
                         </template>
                     </Alert>
                     <Alert type="error" show-icon>
-                        Error Text
+                        错误提示文案
                         <span slot="desc">
-                            Customized Error Description
+                            自定义错误描述文案。
                         </span>
                     </Alert>
                     <Alert show-icon>
-                        Customized Icon
+                        自定义图标
                         <Icon type="ios-lightbulb-outline" slot="icon"></Icon>
-                        <template slot="desc">Customized Icon Text Customized Icon Text Customized Icon Text</template>
+                        <template slot="desc">自定义图标文案自定义图标文案自定义图标文案自定义图标文案自定义图标文案</template>
                     </Alert>
                 </div>
                 <div slot="desc">
@@ -84,14 +84,14 @@
             </Demo>
             <Demo title="Closable">
                 <div slot="demo">
-                    <Alert closable>Info Text</Alert>
+                    <Alert closable>消息提示文案</Alert>
                     <Alert type="success" show-icon closable>
-                        Success Text
-                        <span slot="desc">Success Description Success Description Success Description Success Description </span>
+                        成功提示文案
+                        <span slot="desc">成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案</span>
                     </Alert>
                     <Alert type="warning" closable>
-                        Customized Close Content.
-                        <span slot="close">Don't Show Again</span>
+                        自定义关闭内容
+                        <span slot="close">不再提示</span>
                     </Alert>
                 </div>
                 <div slot="desc">
@@ -101,8 +101,8 @@
             </Demo>
             <Demo title="Banner">
                 <div slot="demo">
-                    <Alert banner type="warning">Notice: Content...</Alert>
-                    <Alert banner closable type="warning">Notice: Content...</Alert>
+                    <Alert banner type="warning">通知：通知内容。。。</Alert>
+                    <Alert banner closable type="warning">通知：通知内容。。。</Alert>
                 </div>
                 <div slot="desc">
                     <p>Set property <code>banner</code> can apply banner style.</p>
@@ -169,7 +169,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>N/A</td>
+                            <td>(None)</td>
                             <td>Alert text</td>
                         </tr>
                         <tr>
