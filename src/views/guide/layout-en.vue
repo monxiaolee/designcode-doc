@@ -82,7 +82,7 @@
         <article>
             <h1>Navigation Examples</h1>
             <p>Get a project started with appropriate layout and navigation is important. It will give user a smooth experience and help define the interactivity and styles.</p>
-            <Anchor title="Samples" h2></Anchor>
+            <Anchor title="Examples" h2></Anchor>
             <Demo title="Top Navigation" vertical hide-code>
                 <div slot="demo">
                     <div class="layout">

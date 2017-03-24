@@ -2,7 +2,7 @@
     <i-article>
         <article>
             <h1>Introduction</h1>
-            <p>iView is a set of user interface components and widgets build on top of the Vue.js.</p>
+            <p>iView is a set of UI components and widgets built based on Vue.js.</p>
             <Anchor title="Features" h2></Anchor>
             <ul>
                 <li>Dozens of useful and beautiful components.</li>
@@ -64,7 +64,7 @@
                 </li>
             </ul>
             <Anchor title="License" h2></Anchor>
-            <p>iView is released under the <a href="https://github.com/iview/iview/blob/2.0/LICENSE" target="_blank">MIT license</a></p>
+            <p>iView is released under <a href="https://github.com/iview/iview/blob/2.0/LICENSE" target="_blank">MIT license</a></p>
         </article>
     </i-article>
 </template>
