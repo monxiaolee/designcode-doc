@@ -157,6 +157,13 @@ const routers = [
         component: require('./views/components/button.vue')
     },
     {
+        path: '/components/button-en',
+        meta: {
+            title: 'Button'
+        },
+        component: require('./views/components/button-en.vue')
+    },
+    {
         path: '/components/icon',
         meta: {
             title: '图标 Icon'
