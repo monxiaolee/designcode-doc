@@ -143,6 +143,13 @@ const routers = [
         component: require('./views/guide/layout.vue')
     },
     {
+        path: '/components/layout-en',
+        meta: {
+            title: 'Layout'
+        },
+        component: require('./views/guide/layout-en.vue')
+    },
+    {
         path: '/components/color',
         meta: {
             title: '色彩 Color'
