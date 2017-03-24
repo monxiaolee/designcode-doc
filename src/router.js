@@ -353,6 +353,13 @@ const routers = [
         component: require('./views/components/badge.vue')
     },
     {
+        path: '/components/badge-en',
+        meta: {
+            title: 'Badge'
+        },
+        component: require('./views/components/badge-en.vue')
+    },
+    {
         path: '/components/collapse',
         meta: {
             title: '折叠面板 Collapse'
@@ -435,6 +442,13 @@ const routers = [
             title: '面包屑 Breadcrumb'
         },
         component: require('./views/components/breadcrumb.vue')
+    },
+    {
+        path: '/components/breadcrumb-en',
+        meta: {
+            title: 'Breadcrumb'
+        },
+        component: require('./views/components/breadcrumb-en.vue')
     },
     {
         path: '/components/steps',
