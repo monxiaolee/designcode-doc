@@ -1,11 +1,11 @@
 <template>
     <i-article>
         <article>
-            <h1>Button 按钮</h1>
-            <p>基础组件，触发业务逻辑时使用。</p>
-            <blockquote>注意：非 template/render 模式下，需使用 <code>i-button</code>。</blockquote>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="按钮类型">
+            <h1>Button</h1>
+            <p>Basic component that is used to trigger bussiness logic.</p>
+            <blockquote>Warning：Except for template/render mode，use <code>i-button</code> instead.</blockquote>
+            <Anchor title="Example" h2></Anchor>
+            <Demo title="Types">
                 <div slot="demo">
                     <Button>Default</Button>
                     <Button type="primary">Primary</Button>
@@ -13,37 +13,37 @@
                     <Button type="dashed">Dashed</Button>
                     <Button type="text">Text</Button>
                     <br><br>
-                    <Button type="info">信息按钮</Button>
-                    <Button type="success">成功按钮</Button>
-                    <Button type="warning">警告按钮</Button>
-                    <Button type="error">错误按钮</Button>
+                    <Button type="info">Info</Button>
+                    <Button type="success">Success</Button>
+                    <Button type="warning">Warning</Button>
+                    <Button type="error">Error</Button>
                 </div>
                 <div slot="desc">
-                    <p>按钮类型有：默认按钮、主按钮、幽灵按钮、虚线按钮、文字按钮以及四种颜色按钮。</p>
-                    <p>通过设置<code>type</code>为<code>primary</code>、<code>ghost</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>创建不同样式的按钮，不设置为默认样式。</p>
+                    <p>Types of buttons: default, primary, ghost, dashed, text and 4 buttons of different colors.</p>
+                    <p>Set the <code>type</code> to<code>primary</code>、<code>ghost</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>to choose different buttons, by default the default type is used.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.type }}</i-code>
             </Demo>
-            <Demo title="图标按钮及按钮形状">
+            <Demo title="Icons & Shapes">
                 <div slot="demo">
                     <Button type="primary" shape="circle" icon="ios-search"></Button>
-                    <Button type="primary" icon="ios-search">搜索</Button>
-                    <Button type="primary" shape="circle" icon="ios-search">搜索</Button>
-                    <Button type="primary" shape="circle">圆角按钮</Button>
+                    <Button type="primary" icon="ios-search">Search</Button>
+                    <Button type="primary" shape="circle" icon="ios-search">Search</Button>
+                    <Button type="primary" shape="circle">Circle</Button>
                     <br><br>
                     <Button type="ghost" shape="circle" icon="ios-search"></Button>
-                    <Button type="ghost" icon="ios-search">搜索</Button>
-                    <Button type="ghost" shape="circle" icon="ios-search">搜索</Button>
-                    <Button type="ghost" shape="circle">圆角按钮</Button>
+                    <Button type="ghost" icon="ios-search">Search</Button>
+                    <Button type="ghost" shape="circle" icon="ios-search">Search</Button>
+                    <Button type="ghost" shape="circle">Circle</Button>
                 </div>
                 <div slot="desc">
-                    <p>通过设置<code>icon</code>属性在<code>Button</code>内嵌入一个<code>Icon</code>，或者直接在<code>Button</code>内使用<code>Icon</code>组件。</p>
-                    <p>使用<code>Button</code>的<code>icon</code>属性，图标位置将在最左边，如果需要自定义位置，需使用<code>Icon</code>组件。</p>
-                    <p>通过设置<code>shape</code>属性为<code>circle</code>，可将按钮置为圆的形状。</p>
+                    <p>Set the <code>icon</code> to insert an <code>Icon</code> to the <code>Button</code>, or use the <code>Icon</code> component inside the <code>Button</code> directly.</p>
+                    The icon would appear at the leftmost side of the <code>Button</code> when <p>using the <code>icon</code>; use <code>Icon</code> component for different icons' positions.</p>
+                    <p>Set the <code>shape</code> to <code>circle</code> to use a circle button.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.icon }}</i-code>
             </Demo>
-            <Demo title="按钮尺寸">
+            <Demo title="Size">
                 <div slot="demo">
                     <Button type="primary" size="large">Large</Button>
                     <Button type="primary">Default</Button>
@@ -54,24 +54,24 @@
                     <Button type="primary" shape="circle" size="small">Small</Button>
                 </div>
                 <div slot="desc">
-                    <p>按钮有三种尺寸：大、默认（中）、小</p>
-                    <p>通过设置<code>size</code>为<code>large</code>和<code>small</code>将按钮设置为大和小尺寸，不设置为默认（中）尺寸。</p>
+                    <p>Sizes of buttons: large, default (medium) and small.</p>
+                    <p>Set the <code>size</code> to <code>large</code> or <code>small</code> to use large/small size of button, by default the button's size is medium.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.size }}</i-code>
             </Demo>
-            <Demo title="长按钮">
+            <Demo title="Long Button">
                 <div slot="demo">
-                    <Button type="success" long>确认提交</Button>
+                    <Button type="success" long>SUBMIT</Button>
                     <br><br>
-                    <Button type="error" long>确认删除</Button>
+                    <Button type="error" long>DELETE</Button>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>long</code> 可将按钮宽度设置为 100%，常用于弹窗内操作按钮。</p>
-                    <p>使用者也可以直接通过给组件添加 <code>style</code> 来设置更细节的样式，比如定宽。</p>
+                    <p>Set the <code>long</code> to set the width of the button to 100%，it's usually used for modals.</p>
+                    <p>Users could also add <code>style</code> to the component to furtherly refine, e.g., use customed width.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.long }}</i-code>
             </Demo>
-            <Demo title="不可用状态">
+            <Demo title="Disabled">
                 <div slot="demo">
                     <Button>Default</Button>
                     <Button disabled>Default(Disabled)</Button>
@@ -89,11 +89,11 @@
                     <Button type="text" disabled>Text(Disabled)</Button>
                 </div>
                 <div slot="desc">
-                    <p>通过添加<code>disabled</code>属性可将按钮设置为不可用状态。</p>
+                    <p>Set the <code>disabled</code> attribute to disable the button.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
-            <Demo title="加载中状态">
+            <Demo title="Loading">
                 <div slot="demo">
                     <Button type="primary" loading>Loading...</Button>
                     <Button type="primary" :loading="loading" @click="toLoading">
@@ -106,22 +106,22 @@
                     </Button>
                 </div>
                 <div slot="desc">
-                    <p>通过添加<code>loading</code>属性可以让按钮处于加载中状态，后两个按钮在点击时进入加载状态。</p>
+                    <p>Set <code>loading</code> attribute to set the button to loading status, click the latter two buttons to see the loading effect in action.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.loading }}</i-code>
             </Demo>
-            <Demo title="按钮组合">
+            <Demo title="Group">
                 <div slot="demo">
-                    <h4>基本</h4>
+                    <h4>Basic</h4>
                     <br><br>
                     <Button-group>
-                        <Button>取消</Button>
-                        <Button type="primary">确定</Button>
+                        <Button>Cancel</Button>
+                        <Button type="primary">Confirm</Button>
                     </Button-group>
                     <Button-group>
-                        <Button disabled>昨日</Button>
-                        <Button disabled>今日</Button>
-                        <Button disabled>明日</Button>
+                        <Button disabled>Yesterday</Button>
+                        <Button disabled>Today</Button>
+                        <Button disabled>Tomorrow</Button>
                     </Button-group>
                     <Button-group>
                         <Button type="primary">L</Button>
@@ -130,15 +130,15 @@
                         <Button type="dashed">R</Button>
                     </Button-group>
                     <br><br>
-                    <h4>配合图标</h4>
+                    <h4>Icons</h4>
                     <br><br>
                     <Button-group>
                         <Button type="primary">
                             <Icon type="chevron-left"></Icon>
-                            后退
+                            Backward
                         </Button>
                         <Button type="primary">
-                            前进
+                            Forward
                             <Icon type="chevron-right"></Icon>
                         </Button>
                     </Button-group>
@@ -153,15 +153,15 @@
                         <Button type="ghost" icon="ios-color-filter-outline"></Button>
                     </Button-group>
                     <br><br>
-                    <h4>圆角</h4>
+                    <h4>Circle</h4>
                     <br><br>
                     <Button-group shape="circle">
                         <Button type="primary">
                             <Icon type="chevron-left"></Icon>
-                            后退
+                            Backward
                         </Button>
                         <Button type="primary">
-                            前进
+                            Forward
                             <Icon type="chevron-right"></Icon>
                         </Button>
                     </Button-group>
@@ -176,7 +176,7 @@
                         <Button type="ghost" icon="ios-color-filter-outline"></Button>
                     </Button-group>
                     <br><br>
-                    <h4>尺寸</h4>
+                    <h4>Size</h4>
                     <br><br>
                     <Button-group size="large">
                         <Button type="ghost">Large</Button>
@@ -205,13 +205,13 @@
                     </Button-group>
                 </div>
                 <div slot="desc">
-                    <p>将多个<code>Button</code>放入<code>ButtonGroup</code>内，可实现按钮组合的效果。</p>
-                    <p>通过设置<code>ButtonGroup</code>的属性<code>size</code>为<code>large</code>和<code>small</code>，可将按钮组尺寸设置为大和小，不设置<code>size</code>，则为默认（中）尺寸。</p>
-                    <p>通过设置<code>ButtonGroup</code>的属性<code>shape</code>为<code>circle</code>，可将按钮组形状设置为圆角。</p>
+                    <p>Combine multiple <code>Button</code> together into <code>ButtonGroup</code> to get a buttons set.</p>
+                    <p>Set the <code>ButtonGroup</code> attribute <code>size</code> to <code>large</code> or <code>small</code> to choose large/small size of botton group, by default the <code>size</code> is medium.</p>
+                    <p>Set the <code>ButtonGroup</code> atrribute <code>shape</code> to <code>circle</code> to apply a border-radius to the button's shape.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>
             </Demo>
-            <Demo title="按钮组纵向排列">
+            <Demo title="Vertical ButtonGroup">
                 <div slot="demo">
                     <Button-group vertical>
                         <Button type="ghost" icon="social-facebook"></Button>
@@ -221,7 +221,7 @@
                     </Button-group>
                 </div>
                 <div slot="desc">
-                    <p>通过设置<code>ButtonGroup</code>的属性<code>vertical</code>，可以使按钮组纵向排列。</p>
+                    <p>Set the <code>ButtonGroup</code> attribute <code>vertical</code> to set up a vertical button group.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.vertical }}</i-code>
             </Demo>
@@ -231,58 +231,58 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Attribute</th>
+                            <th>Explanation</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>type</td>
-                            <td>按钮类型，可选值为<code>primary</code>、<code>ghost</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>或者不设置</td>
+                            <td>Button type, options include <code>primary</code>、<code>ghost</code>、<code>dashed</code>、<code>text</code>、<code>info</code>、<code>success</code>、<code>warning</code>、<code>error</code>, optional</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>按钮大小，可选值为<code>large</code>和<code>small</code>或者不设置</td>
+                            <td>Button size，options include <code>large</code>和<code>small</code>,  optional</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>shape</td>
-                            <td>按钮形状，可选值为<code>circle</code>或者不设置</td>
+                            <td>Button shape, options include <code>circle</code>, optional</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>long</td>
-                            <td>开启后，按钮的长度为 100%</td>
+                            <td>Set the width of the button to 100%</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>htmlType</td>
-                            <td>设置<code>button</code>原生的<code>type</code>，可选值为<code>button</code>、<code>submit</code>、<code>reset</code></td>
+                            <td>Set the <code>button</code> raw <code>type</code>，options include <code>button</code>、<code>submit</code>、<code>reset</code></td>
                             <td>String</td>
                             <td>button</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
-                            <td>设置按钮为禁用状态</td>
+                            <td>Disable the button</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>loading</td>
-                            <td>设置按钮为加载中状态</td>
+                            <td>Set the button to loading status</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>icon</td>
-                            <td>设置按钮的图标类型</td>
+                            <td>Set the icons used in the button</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
@@ -292,28 +292,28 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Attribute</th>
+                            <th>Explanation</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>size</td>
-                            <td>按钮组合大小，可选值为<code>large</code>和<code>small</code>或者不设置</td>
+                            <td>ButtonGroup size, options include <code>large</code> and <code>small</code>, optional</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>shape</td>
-                            <td>按钮组合形状，可选值为<code>circle</code>或者不设置</td>
+                            <td>ButtonGroup shape, options include<code>circle</code>, optional</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>vertical</td>
-                            <td>是否纵向排列按钮组</td>
+                            <td>For vertical ButtonGroup</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
