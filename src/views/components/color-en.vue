@@ -74,7 +74,7 @@
             <br>
             <Anchor title="Neutral Colors" h3></Anchor>
             <p>Neutral colors are usually used for text, background, border, shadow, etc, showing the hierachical structure of the page.</p>
-            <Row :gutter="16"
+            <Row :gutter="16">
                 <i-col span="6">
                     <Card :bordered="false" style="background:#464c5b">
                         <div class="demo-color-name">Title</div>

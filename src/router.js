@@ -87,6 +87,13 @@ const routers = [
         component: require('./views/guide/standard.vue')
     },
     {
+        path: '/docs/guide/standard-en',
+        meta: {
+            title: 'Contributing Guide'
+        },
+        component: require('./views/guide/standard-en.vue')
+    },
+    {
         path: '/docs/practice/case',
         meta: {
             title: '实践案例'
@@ -108,6 +115,13 @@ const routers = [
         component: require('./views/guide/install.vue')
     },
     {
+        path: '/docs/guide/install-en',
+        meta: {
+            title: 'Installation'
+        },
+        component: require('./views/guide/install-en.vue')
+    },
+    {
         path: '/docs/guide/start',
         meta: {
             title: '快速上手'
@@ -115,11 +129,25 @@ const routers = [
         component: require('./views/guide/start.vue')
     },
     {
+        path: '/docs/guide/start-en',
+        meta: {
+            title: 'Quick Start'
+        },
+        component: require('./views/guide/start-en.vue')
+    },
+    {
         path: '/docs/guide/i18n',
         meta: {
             title: '国际化'
         },
         component: require('./views/guide/i18n.vue')
+    },
+    {
+        path: '/docs/guide/i18n-en',
+        meta: {
+            title: 'Internationalization'
+        },
+        component: require('./views/guide/i18n-en.vue')
     },
     {
         path: '/docs/guide/theme',

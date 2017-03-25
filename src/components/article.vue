@@ -172,11 +172,17 @@
             updateActiveNav () {
                 const componentList = [
                     '/docs/guide/install',
+                    '/docs/guide/install-en',
                     '/docs/guide/start',
+                    '/docs/guide/start-en',
                     '/docs/guide/i18n',
+                    '/docs/guide/i18n-en',
                     '/docs/guide/theme',
+                    '/docs/guide/theme-en',
                     '/overview',
-                    '/docs/guide/update'
+                    '/overview-en',
+                    '/docs/guide/update',
+                    '/docs/guide/update-en'
                 ];
 
                 const route = this.$route.path;
