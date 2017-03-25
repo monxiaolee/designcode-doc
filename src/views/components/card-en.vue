@@ -25,11 +25,11 @@
 <template>
     <i-article>
         <article>
-            <h1>Card 卡片</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>基础容器，用来显示文字、列表、图文等内容，也可以配合其它组件一起使用。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基本用法">
+            <h1>Card</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>Basic container, used to display text, list, images, etc. Can also be used with other components.</p>
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Basic Usage">
                 <div slot="demo">
                     <Card style="width:350px">
                         <p slot="title">
@@ -52,11 +52,11 @@
                     </Card>
                 </div>
                 <div slot="desc">
-                    <p>自定义标题、额外操作和主体内容，可以完全自由控制各个部分，也可以结合其它组件一起使用，较为灵活。</p>
+                    <p>Customized title, extra operation and main content. User can customize all parts of the component, and combined with other components. It's relatively flexible.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
-            <Demo title="无边框">
+            <Demo title="No Border">
                 <div slot="demo">
                     <div style="background:#eee;padding: 20px">
                         <Card :bordered="false">
@@ -66,11 +66,11 @@
                     </div>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性<code>bordered</code>为 false ，可以不添加边框，建议在灰色背景下使用。</p>
+                    <p>Disable the border by setting <code>bordered</code> prop to false. We recommend you to use it when background color is gray.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.bordered }}</i-code>
             </Demo>
-            <Demo title="禁用悬停阴影">
+            <Demo title="Disable Hover Shadow">
                 <div slot="demo">
                     <Row>
                         <Col span="11">
@@ -92,11 +92,11 @@
                     </Row>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性<code>dis-hover</code>来禁用鼠标悬停显示阴影的效果。</p>
+                    <p>Disable mouse hover shadow by setting <code>dis-hover</code> prop. </p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.disHover }}</i-code>
             </Demo>
-            <Demo title="卡片阴影">
+            <Demo title="Card Shadow">
                 <div slot="demo">
                     <Row style="background:#eee;padding:20px">
                         <Col span="11">
@@ -118,12 +118,12 @@
                     </Row>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性<code>shadow</code>来显示卡片阴影，使用该属性后，<code>bordered</code>和<code
-                    >dis-hover</code>将无效，建议在灰色背景下使用。</p>
+                    <p>Set <code>shadow</code> prop to display card shadow. If the prop is set, <code>bordered</code> prop and <code
+                    >dis-hover</code> prop will be invalid. We recommend you to use it when background color is gray.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.shadow }}</i-code>
             </Demo>
-            <Demo title="简洁卡片">
+            <Demo title="Succinct Card">
                 <div slot="demo">
                     <Card style="width:320px">
                         <div style="text-align:center">
@@ -133,7 +133,7 @@
                     </Card>
                 </div>
                 <div slot="desc">
-                    <p>只包含内容区域，没有标题。</p>
+                    <p>Only contains content, no title.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.simple }}</i-code>
             </Demo>
@@ -143,34 +143,34 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>bordered</td>
-                            <td>是否显示边框，建议在灰色背景下使用</td>
+                            <td>Show the border or not, recommend setting to true when background color is gray.</td>
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
                         <tr>
                             <td>dis-hover</td>
-                            <td>禁用鼠标悬停显示阴影</td>
+                            <td>Disable mouse hover shadow.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>shadow</td>
-                            <td>卡片阴影，建议在灰色背景下使用</td>
+                            <td>Card shadow, recommend using it when background color is gray.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>padding</td>
-                            <td>卡片内部间距，单位 px</td>
+                            <td>Padding of the card. Unit: px</td>
                             <td>Number</td>
                             <td>16</td>
                         </tr>
@@ -180,22 +180,22 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>说明</th>
+                            <th>Name</th>
+                            <th>Decsription</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>title</td>
-                            <td>自定义卡片标题，如果是简单文字，可以使用<code>&lt;p&gt;</code>标签包裹</td>
+                            <td>Custoimzed card title. If the title is simple text, you can use <code>&lt;p&gt;</code> tag to wrap it.</td>
                         </tr>
                         <tr>
                             <td>extra</td>
-                            <td>额外显示的内容，默认位置在右上角</td>
+                            <td>Extra contents, shown at the right head corner by default.</td>
                         </tr>
                         <tr>
-                            <td>无</td>
-                            <td>卡片主体内容</td>
+                            <td>(None)</td>
+                            <td>Main content of the card</td>
                         </tr>
                     </tbody>
                 </table>

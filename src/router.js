@@ -360,6 +360,13 @@ const routers = [
         component: require('./views/components/card.vue')
     },
     {
+        path: '/components/card-en',
+        meta: {
+            title: 'Card'
+        },
+        component: require('./views/components/card-en.vue')
+    },
+    {
         path: '/components/message',
         meta: {
             title: '全局提示 Message'
@@ -446,7 +453,7 @@ const routers = [
     {
         path: '/components/carousel-en',
         meta: {
-            title: 'Carousel-en'
+            title: 'Carousel'
         },
         component: require('./views/components/carousel-en.vue')
     },
