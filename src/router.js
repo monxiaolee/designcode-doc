@@ -444,6 +444,13 @@ const routers = [
         component: require('./views/components/carousel.vue')
     },
     {
+        path: '/components/carousel-en',
+        meta: {
+            title: 'Carousel-en'
+        },
+        component: require('./views/components/carousel-en.vue')
+    },
+    {
         path: '/components/tree',
         meta: {
             title: '树形控件 Tree'
