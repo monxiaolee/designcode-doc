@@ -143,6 +143,13 @@ const routers = [
         component: require('./views/components/color.vue')
     },
     {
+        path: '/components/color-en',
+        meta: {
+            title: 'Color'
+        },
+        component: require('./views/components/color-en.vue')
+    },
+    {
         path: '/components/font',
         meta: {
             title: '字体 Font'
