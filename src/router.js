@@ -150,6 +150,13 @@ const routers = [
         component: require('./views/components/font.vue')
     },
     {
+        path: '/components/font-en',
+        meta: {
+            title: 'Font'
+        },
+        component: require('./views/components/font-en.vue')
+    },
+    {
         path: '/components/button',
         meta: {
             title: '按钮 Button'
