@@ -157,6 +157,13 @@ const routers = [
         component: require('./views/guide/theme.vue')
     },
     {
+        path: '/docs/guide/theme-en',
+        meta: {
+            title: 'Customize Theme'
+        },
+        component: require('./views/guide/theme-en.vue')
+    },
+    {
         path: '/docs/guide/update',
         meta: {
             title: '更新日志'
