@@ -535,6 +535,13 @@ const routers = [
         component: require('./views/components/circle.vue')
     },
     {
+        path: '/components/circle-en',
+        meta: {
+            title: 'Circle'
+        },
+        component: require('./views/components/circle-en.vue')
+    },
+    {
         path: '/components/affix',
         meta: {
             title: '图钉 Affix'
