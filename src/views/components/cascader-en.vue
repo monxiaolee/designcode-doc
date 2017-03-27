@@ -6,40 +6,40 @@
 <template>
     <i-article>
         <article>
-            <h1>Cascader 级联选择</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>从一组相关联的数据集合中进行选择，常用于省市区、公司级层、事务分类等。</p>
-            <p>相比 Select 组件，可以一次性完成选择，体验更好。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基础用法">
+            <h1>Cascader</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>Select from a set of associated data, such as province/city/district, company level, things classification.</p>
+            <p>User will have better experience using Cascader than Select for they can complete their selection in one operation.</p>
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Basic Usage">
                 <div slot="demo">
                     <Cascader :data="data" v-model="value1"></Cascader>
                 </div>
                 <div slot="desc">
-                    <p>级联选择对数据有较严格要求，请参照示例的格式使用<code>data</code>，每项数据至少包含 <code>value</code>、<code>label</code> 两项，子集为 <code>children</code>，以此类推。</p>
-                    <p><code>value</code> 为当前选择的数据的 value 值的数组，比如 <code>['beijing', 'gugong']</code> ，按照级联顺序依次排序，使用 <code>v-model</code> 进行双向绑定。</p>
+                    <p>Cascader has a strict requirement on data. Please follow the demo to use <code>data</code>. Each piece of data should contains at least two items: <code>value</code>, <code>label</code>. Its subset is called <code>children</code>.</p>
+                    <p><code>value</code> is an array stored selected data's value, for example:  <code>['beijing', 'gugong']</code>. It will sorted by cascader's order. Use <code>v-model</code> to enable a two-way binding.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
-            <Demo title="默认值">
+            <Demo title="Default Value">
                 <div slot="demo">
                     <Cascader :data="data" v-model="value2"></Cascader>
                 </div>
                 <div slot="desc">
-                    <p>指定 <code>value</code> 默认值，组件会在初始化时选定数据。</p>
+                    <p>Let the component select default selected data on initialization by setting default <code>value</code> prop.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.value }}</i-code>
             </Demo>
-            <Demo title="移入展开">
+            <Demo title="Move In and Spread">
                 <div slot="demo">
                     <Cascader :data="data" trigger="hover"></Cascader>
                 </div>
                 <div slot="desc">
-                    <p>设置属性 <code>trigger</code> 为 <code>hover</code>，当鼠标悬停时就会展开子集。</p>
+                    <p>Set <code>trigger</code> to <code>hover</code> to spread the subset when mouse hovers on.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.trigger }}</i-code>
             </Demo>
-            <Demo title="自定义显示">
+            <Demo title="Customize Display">
                 <div slot="demo">
                     {{ text }}
                     <Cascader :data="data" @on-change="handleChange">
@@ -47,11 +47,11 @@
                     </Cascader>
                 </div>
                 <div slot="desc">
-                    <p>通过设置 slot 可以自定义显示内容，不局限于输入框。</p>
+                    <p>Customize display content by setting slot. You can not only use it on input box.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.slot }}</i-code>
             </Demo>
-            <Demo title="禁用">
+            <Demo title="Disable">
                 <div slot="demo">
                     <Row>
                         <Col span="12">
@@ -63,31 +63,31 @@
                     </Row>
                 </div>
                 <div slot="desc">
-                    <p>设置属性 <code>disabled</code> 可以禁用组件。</p>
-                    <p>给某项数据设置 <code>disabled: true</code> 可以禁用某一项。</p>
+                    <p>Disable the component by setting <code>disabled</code> prop.</p>
+                    <p>Set <code>disabled: true</code> prop to a certain item can disable it.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
-            <Demo title="选择即改变">
+            <Demo title="Change When Selected">
                 <div slot="demo">
                     <Cascader :data="data" change-on-select></Cascader>
                 </div>
                 <div slot="desc">
-                    <p>设置属性 <code>change-on-select</code> 点任何一级都可以选择。</p>
+                    <p>Set <code>change-on-select</code> to allow user select any level.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.select }}</i-code>
             </Demo>
-            <Demo title="自定义已选项">
+            <Demo title="Customize Selected Items.">
                 <div slot="demo">
                     <Cascader :data="data3" :render-format="format"></Cascader>
                 </div>
                 <div slot="desc">
-                    <p>对于显示的结果，可以通过 <code>render-format</code> 接收一个函数来自定义。</p>
-                    <p>其中第一个参数 <code>labels</code> 是当前选择的label的集合，第二个参数 <code>selectedData</code> 是当前选择的数据集合，可以利用它们组合出你想要显示的内容。</p>
+                    <p>You can use <code>render-format</code> which accepts a function to customize displayed result.</p>
+                    <p>The first argument <code>labels</code> is current selected label set, the second argument <code>selectedData</code> is current selected data set. You can make what you want to display by combining them.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.format }}</i-code>
             </Demo>
-            <Demo title="尺寸">
+            <Demo title="Size">
                 <div slot="demo">
                     <Cascader :data="data" size="large"></Cascader>
                     <br>
@@ -96,7 +96,7 @@
                     <Cascader :data="data" size="small"></Cascader>
                 </div>
                 <div slot="desc">
-                    <p>通过设置<code>size</code>属性为<code>large</code>和<code>small</code>将输入框设置为大和小尺寸，不设置为默认（中）尺寸。</p>
+                    <p>Set <code>size</code> prop to <code>large</code> or <code>small</code> to set the input box to large or small size. Default size is medium.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.size }}</i-code>
             </Demo>
@@ -106,65 +106,65 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>data</td>
-                            <td>可选项的数据源，格式参照示例说明</td>
+                            <td>Optional data source, the format is shown on the demos above.</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
                         <tr>
                             <td>value</td>
-                            <td>当前已选项的数据，格式参照示例说明</td>
+                            <td>Selected item's data, the format is shown on the demos above.</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
                         <tr>
                             <td>render-format</td>
-                            <td>选择后展示的函数，用于自定义显示格式</td>
+                            <td>Customize display format by sending a function to this property. It will be called after selection.</td>
                             <td>Function</td>
                             <td>label => label.join(' / ')</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
-                            <td>是否禁用选择器</td>
+                            <td>Disable the selector or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>clearable</td>
-                            <td>是否支持清除</td>
+                            <td>Support clear operation or not.</td>
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
 
                         <tr>
                             <td>placeholder</td>
-                            <td>输入框占位符</td>
+                            <td>Input box placeholder.</td>
                             <td>String</td>
                             <td>请选择</td>
                         </tr>
                         <tr>
                             <td>trigger</td>
-                            <td>次级菜单展开方式，可选值为 <code>click</code> 或 <code>hover</code></td>
+                            <td>The way subset spreading. Optional value: <code>click</code> or <code>hover</code></td>
                             <td>String</td>
                             <td>click</td>
                         </tr>
                         <tr>
                             <td>change-on-select</td>
-                            <td>当此项为 true 时，点选每级菜单选项值都会发生变化，具体见上面的示例</td>
+                            <td>When it's set to true, change will occur when selecting each level of the data set. For more details, see demos above.</td>
                             <td>Function</td>
                             <td>value</td>
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>输入框大小，可选值为<code>large</code>和<code>small</code>或者不填</td>
+                            <td>The size of the input box, Optional value: <code>large</code> or <code>small</code> or leave blank.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
@@ -174,15 +174,15 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>选择完成后的回调，返回值 value 即已选值 value，selectedData 为已选项的具体数据</td>
+                            <td>Callback function after selection. value is the selected item's value. selectedData is the detail data of the selected item./td>
                             <td>value, selectedData</td>
                         </tr>
                     </tbody>
