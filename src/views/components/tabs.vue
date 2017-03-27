@@ -120,6 +120,18 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.closable }}</i-code>
             </Demo>
+            <Demo title="附加内容">
+                <div slot="demo">
+                    <Tabs type="card">
+                        <Tab-pane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</Tab-pane>
+                        <Button type="ghost" @click="handleTabsAdd" size="small" slot="extra" :disabled="tabs > 3">增加</Button>
+                    </Tabs>
+                </div>
+                <div slot="desc">
+                    <p>设置 slot <code>extra</code> 可以在页签右边添加附加操作。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.extra }}</i-code>
+            </Demo>
             <Demo title="不使用动画">
                 <div slot="demo">
                     <Tabs :animated="false">
@@ -224,6 +236,21 @@
                         </tr>
                     </tbody>
                 </table>
+                <Anchor title="Tabs slot" h3></Anchor>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>名称</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>extra</td>
+                            <td>附加内容</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <Anchor title="TabPane props" h3></Anchor>
                 <table>
                     <thead>
@@ -290,12 +317,16 @@
                 code: Code,
                 tab0: true,
                 tab1: true,
-                tab2: true
+                tab2: true,
+                tabs: 2
             }
         },
         methods: {
             handleTabRemove (name) {
                 this['tab' + name] = false;
+            },
+            handleTabsAdd () {
+                this.tabs ++;
             }
         }
     }
