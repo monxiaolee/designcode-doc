@@ -88,7 +88,7 @@
                         <tr>
                             <td>on-click</td>
                             <td>Emit when click button.</td>
-                            <td>(None)</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>

@@ -1,11 +1,11 @@
 <template>
     <i-article>
         <article>
-            <h1>Collapse 折叠面板</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>将内容区域折叠/展开。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基础用法">
+            <h1>Collapse</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>Used to fold/spread the content area.</p>
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Basic Usage">
                 <div slot="demo">
                     <Collapse v-model="value1">
                         <Panel name="1">
@@ -23,11 +23,11 @@
                     </Collapse>
                 </div>
                 <div slot="desc">
-                    <p>默认可以同时展开多个面板，可以设置默认展开第几个。</p>
+                    <p>You can spread multiple panels simultaneously by default. You can also set which one to be spread.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
-            <Demo title="手风琴">
+            <Demo title="Accordion">
                 <div slot="demo">
                     <Collapse accordion v-model="value2">
                         <Panel name="1">
@@ -45,11 +45,11 @@
                     </Collapse>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性<code>accordion</code>开启手风琴模式，每次只能打开一个面板。</p>
+                    <p>Enable accordion effect by setting <code>accordion</code> prop. In this mode, you can only spread one panel each time.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.accordion }}</i-code>
             </Demo>
-            <Demo title="面板嵌套">
+            <Demo title="Panel Nesting">
                 <div slot="demo">
                     <Collapse accordion v-model="value3">
                         <Panel name="1">
@@ -79,7 +79,7 @@
                     </Collapse>
                 </div>
                 <div slot="desc">
-                    <p>折叠面板可以进行嵌套。</p>
+                    <p>Collapse can be nested.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.nest }}</i-code>
             </Demo>
@@ -89,22 +89,22 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>value</td>
-                            <td>当前激活的面板的 name，可以使用 v-model 双向绑定</td>
+                            <td>The name of the activated panel. Use v-model to enable a two-way binding.</td>
                             <td>Array | String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>accordion</td>
-                            <td>是否开启手风琴模式，开启后每次至多展开一个面板</td>
+                            <td>Enable accordion effect or not. In this mode, you can only spread one panel each time.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
@@ -114,15 +114,15 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>切换面板时触发，返回当前已展开的面板的 key，格式为数组</td>
+                            <td>Emit when panel is switched. Return the key of the spread panel(s) in an array. </td>
                             <td>[]</td>
                         </tr>
                     </tbody>
@@ -131,16 +131,16 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>name</td>
-                            <td>当前面板的 name，与 Collapse的<code>value</code>对应，不填为索引值</td>
+                            <td>The name of current panel, corresponds with <code>value</code> of Collapse. Index value will be used if not filled.</td>
                             <td>String</td>
                             <td>index</td>
                         </tr>
@@ -150,18 +150,18 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>说明</th>
+                            <th>Name</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>无</td>
-                            <td>面板头内容</td>
+                            <td>-</td>
+                            <td>Header of the panel.</td>
                         </tr>
                         <tr>
                             <td>content</td>
-                            <td>描述内容</td>
+                            <td>Description content.</td>
                         </tr>
                     </tbody>
                 </table>

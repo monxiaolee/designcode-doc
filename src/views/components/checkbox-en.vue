@@ -6,21 +6,21 @@
 <template>
     <i-article>
         <article>
-            <h1>Checkbox 多选框</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>基本组件-多选框。主要用于一组可选项多项选择，或者单独用于标记切换某种状态。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="单独使用">
+            <h1>Checkbox</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>Basic Component - Checkbox. Mainly used for selecting multiple values from several options, or used to tag state switching seprately.</p>
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Standalone Usage">
                 <div slot="demo">
                     <Checkbox v-model="single">Checkbox</Checkbox>
                     <p class="demo-data">{{ single }}</p>
                 </div>
                 <div slot="desc">
-                    <p>使用 v-model 可以双向绑定数据。</p>
+                    <p>Use v-model to enable two-way binding.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.single }}</i-code>
             </Demo>
-            <Demo title="组合使用">
+            <Demo title="Combination Usage">
                 <div slot="demo">
                     <Checkbox-group v-model="social">
                         <Checkbox label="twitter">
@@ -49,11 +49,11 @@
                     <p class="demo-data">{{ fruit }}</p>
                 </div>
                 <div slot="desc">
-                    <p>使用<code>Checkbox-group</code>配合数组来生成组合。在组合使用时，<code>Checkbox</code> 使用 <code>label</code> 来自动判断选中状态。每个 Checkbox 的内容可以自定义，如不填写则默认使用 label 的值。</p>
+                    <p>Use <code>Checkbox-group</code> combined with array to generate a combination. In this case, <code>Checkbox</code> uses <code>label</code> to judge selected state automatically. The content of each Checkbox can be customized. If not filled, the value of label prop will be used by default.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>
             </Demo>
-            <Demo title="不可用">
+            <Demo title="Disabled">
                 <div slot="demo">
                     <Checkbox v-model="disabledSingle" disabled>Checkbox</Checkbox>
                     <p class="demo-data">{{ disabledSingle }}</p>
@@ -65,11 +65,11 @@
                     <p class="demo-data">{{ disabledGroup }}</p>
                 </div>
                 <div slot="desc">
-                    <p>通过设置<code>disabled</code>属性来禁用多选框。</p>
+                    <p>To disable Checkbox by setting <code>disabled</code> prop.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
-            <Demo title="与其它组件通信">
+            <Demo title="Communication with Other Components">
                 <div slot="demo">
                     <Checkbox v-model="checked" :disabled="disabled">
                         <span v-if="checked">选中</span>
@@ -89,11 +89,11 @@
                     </Button>
                 </div>
                 <div slot="desc">
-                    <p>与其它组件进行数据联动。</p>
+                    <p>Data linking with other components.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.communication }}</i-code>
             </Demo>
-            <Demo title="全选">
+            <Demo title="Select All">
                 <div slot="demo">
                     <div style="border-bottom: 1px solid #e9e9e9;padding-bottom:6px;margin-bottom:6px;">
                         <Checkbox
@@ -108,7 +108,7 @@
                     </Checkbox-group>
                 </div>
                 <div slot="desc">
-                    <p>在实现全选效果时，你可能会用到 <code>indeterminate</code> 属性。示例代码只是一种写法，业务中可以用更多的方法，比如计算属性。</p>
+                    <p>You might use <code>indeterminate</code> prop when realise select-all effect. The demo code is just a kind of realisation. There are many other ways you can use in your bussiness.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.indeterminate }}</i-code>
             </Demo>
@@ -118,34 +118,34 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>value</td>
-                            <td>只在单独使用时有效。可以使用 v-model 双向绑定数据</td>
+                            <td>Only works when used alone. Use v-model to enable two-way binding.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>label</td>
-                            <td>只在组合使用时有效。指定当前选项的 value 值，组合会自动判断是否选中</td>
+                            <td>Only works when combined with other components. The combination will judge the selected state automatically if current selection's value prop is set.</td>
                             <td>String | Number | Boolean</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
-                            <td>是否禁用当前项</td>
+                            <td>Disable current selection or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>indeterminate</td>
-                            <td>设置 indeterminate 状态，只负责样式控制</td>
+                            <td>Used to set the state of indeterminate. Only used to control styles.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
@@ -155,15 +155,15 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return value</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>只在单独使用时有效。在选项状态发生改变时触发，通过修改外部的数据改变时不会触发</td>
+                            <td>Only emitted when used alone. Emitted when the state of the selection changed, but won't be emitted if outer data is changed.</td>
                             <td>true | false</td>
                         </tr>
                     </tbody>
@@ -172,16 +172,16 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>value</td>
-                            <td>指定选中项目的集合，可以使用 v-model 双向绑定数据</td>
+                            <td>Specify the selected item's set. Use v-model to enable a two-way binding.</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
@@ -191,15 +191,15 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>在选项状态发生改变时触发，返回已选中的数组。通过修改外部的数据改变时不会触发</td>
+                            <td>Emit when the state of the selection is changed. Selected array will be returned. It won't be emitted if outer data is changed.</td>
                             <td>[...]</td>
                         </tr>
                     </tbody>

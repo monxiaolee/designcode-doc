@@ -169,7 +169,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>(None)</td>
+                            <td>-</td>
                             <td>Alert text</td>
                         </tr>
                         <tr>

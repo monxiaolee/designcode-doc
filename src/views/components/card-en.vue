@@ -194,7 +194,7 @@
                             <td>Extra contents, shown at the right head corner by default.</td>
                         </tr>
                         <tr>
-                            <td>(None)</td>
+                            <td>-</td>
                             <td>Main content of the card</td>
                         </tr>
                     </tbody>
