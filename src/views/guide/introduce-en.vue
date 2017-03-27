@@ -2,7 +2,7 @@
     <i-article>
         <article>
             <h1>Introduction</h1>
-            <p>iView is a set of UI components and widgets built based on Vue.js.</p>
+            <p>iView is a set of UI components and widgets built on Vue.js.</p>
             <Anchor title="Features" h2></Anchor>
             <ul>
                 <li>Dozens of useful and beautiful components.</li>
