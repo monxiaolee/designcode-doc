@@ -50,12 +50,10 @@
                     <Option value="2">2.0.0</Option>
                     <Option value="1">1.x</Option>
                 </Select>
-                <Tooltip content="Working">
-                    <Button type="ghost" size="small" @click="handleChangeLang" >
-                        <template v-if="lang === 'zh-CN'">EN</template>
-                        <template v-else>中文</template>
-                    </Button>
-                </Tooltip>
+                <Button type="ghost" size="small" @click="handleChangeLang" >
+                    <template v-if="lang === 'zh-CN'">EN</template>
+                    <template v-else>中文</template>
+                </Button>
             </div>
         </div>
     </Menu>

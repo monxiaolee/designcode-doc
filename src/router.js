@@ -38,6 +38,13 @@ const routers = [
         component: require('./views/guide/overview.vue')
     },
     {
+        path: '/overview-en',
+        meta: {
+            title: 'Overview'
+        },
+        component: require('./views/guide/overview-en.vue')
+    },
+    {
         path: '/docs/guide/introduce',
         meta: {
             title: 'iView介绍'
@@ -155,6 +162,13 @@ const routers = [
             title: '定制主题'
         },
         component: require('./views/guide/theme.vue')
+    },
+    {
+        path: '/docs/guide/theme-en',
+        meta: {
+            title: 'Customize Theme'
+        },
+        component: require('./views/guide/theme-en.vue')
     },
     {
         path: '/docs/guide/update',
@@ -540,6 +554,13 @@ const routers = [
             title: '进度环 Circle'
         },
         component: require('./views/components/circle.vue')
+    },
+    {
+        path: '/components/circle-en',
+        meta: {
+            title: 'Circle'
+        },
+        component: require('./views/components/circle-en.vue')
     },
     {
         path: '/components/affix',
