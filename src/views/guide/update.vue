@@ -25,6 +25,19 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.7" h2></Anchor>
+                    <p>
+                        <code>2017-03-27</code>
+                    </p>
+                    <ul>
+                        <li>重构 <code>Tree</code> 组件。<issue id="468"></issue></li>
+                        <li>修复 <code>Cascader</code> 数据置为空时，视图并没有更新的bug。<issue id="488"></issue></li>
+                        <li>修复 <code>Form</code> 无法对 <code>Date</code> 类型的组件及时验证的bug。<issue id="494"></issue></li>
+                        <li>优化 <code>Radio</code> 组合使用时，无法识别 label 为 0 的情况。<issue id="425"></issue></li>
+                        <li><code>Tabs</code> 新增附加内容 slot <code>extra</code>。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.6" h2></Anchor>
                     <p>
                         <code>2017-03-22</code>
