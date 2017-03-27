@@ -444,6 +444,13 @@ const routers = [
         component: (resolve) => require(['./views/components/collapse.vue'], resolve)
     },
     {
+        path: '/components/collapse-en',
+        meta: {
+            title: 'Collapse'
+        },
+        component: (resolve) => require(['./views/components/collapse-en.vue'], resolve)
+    },
+    {
         path: '/components/timeline',
         meta: {
             title: '时间轴 Timeline'
