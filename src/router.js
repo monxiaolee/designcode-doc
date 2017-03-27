@@ -255,6 +255,13 @@ const routers = [
         component: require('./views/components/checkbox.vue')
     },
     {
+        path: '/components/checkbox-en',
+        meta: {
+            title: 'Checkbox'
+        },
+        component: require('./views/components/checkbox-en.vue')
+    },
+    {
         path: '/components/switch',
         meta: {
             title: '开关 Switch'
@@ -302,6 +309,13 @@ const routers = [
             title: '级联选择 Cascader'
         },
         component: require('./views/components/cascader.vue')
+    },
+    {
+        path: '/components/cascader-en',
+        meta: {
+            title: 'Cascader'
+        },
+        component: require('./views/components/cascader-en.vue')
     },
     {
         path: '/components/transfer',
