@@ -263,7 +263,7 @@
                             <td>false</td>
                         </tr>
                         <tr>
-                            <td>htmlType</td>
+                            <td>html-type</td>
                             <td>Set the <code>button</code> raw <code>type</code>，options include <code>button</code>、<code>submit</code>、<code>reset</code></td>
                             <td>String</td>
                             <td>button</td>

@@ -9,11 +9,11 @@ import App from './components/app.vue';
 import Routers from './router';
 import Util from './libs/util';
 import iView from 'iview';
-import 'iview/dist/styles/iview.css';
 import zhLocale from 'iview/src/locale/lang/zh-CN';
 import enLocale from 'iview/src/locale/lang/en-US';
 import Env from './config/env';
 import bus from './components/bus';
+import 'iview/dist/styles/iview.css';
 
 Vue.use(VueRouter);
 Vue.use(VueI18n);

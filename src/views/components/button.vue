@@ -263,7 +263,7 @@
                             <td>false</td>
                         </tr>
                         <tr>
-                            <td>htmlType</td>
+                            <td>html-type</td>
                             <td>设置<code>button</code>原生的<code>type</code>，可选值为<code>button</code>、<code>submit</code>、<code>reset</code></td>
                             <td>String</td>
                             <td>button</td>
