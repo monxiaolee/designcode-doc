@@ -311,6 +311,13 @@ const routers = [
         component: (resolve) => require(['./views/components/date-picker.vue'], resolve)
     },
     {
+        path: '/components/date-picker-en',
+        meta: {
+            title: 'DatePicker'
+        },
+        component: (resolve) => require(['./views/components/date-picker-en.vue'], resolve)
+    },
+    {
         path: '/components/time-picker',
         meta: {
             title: '时间选择器 TimePicker'
