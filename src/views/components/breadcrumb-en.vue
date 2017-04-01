@@ -99,6 +99,12 @@
                             <td>String</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>replace</td>
+                            <td>set <code>true</code>, the navigation will not leave a history record</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

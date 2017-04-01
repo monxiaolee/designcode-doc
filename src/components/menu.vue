@@ -32,10 +32,10 @@
                     <Icon type="ios-keypad"></Icon>
                     {{ $t('index.component') }}
                 </Menu-item>
-                <Menu-item name="cli">
-                    <Icon type="settings"></Icon>
-                    {{ $t('index.cli') }}
-                </Menu-item>
+                <!--<Menu-item name="cli">-->
+                    <!--<Icon type="settings"></Icon>-->
+                    <!--{{ $t('index.cli') }}-->
+                <!--</Menu-item>-->
                 <!--<Menu-item name="live">-->
                     <!--<Badge :dot="liveDot">-->
                         <!--<Icon type="ios-mic"></Icon>-->

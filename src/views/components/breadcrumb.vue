@@ -99,6 +99,12 @@
                             <td>String</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>replace</td>
+                            <td>路由跳转时，开启 replace 将不会向 history 添加新记录</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

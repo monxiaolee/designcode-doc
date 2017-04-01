@@ -258,6 +258,12 @@
                             <td>String</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>transition-names</td>
+                            <td>自定义显示动画，第一项是模态框，第二项是背景</td>
+                            <td>Array</td>
+                            <td>['ease', 'fade']</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Modal events" h3></Anchor>

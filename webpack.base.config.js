@@ -28,11 +28,11 @@ module.exports = {
                 options: {
                     loaders: {
                         less: ExtractTextPlugin.extract({
-                          use: ['css-loader', 'autoprefixer-loader', 'less-loader'],
+                          use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
                           fallback: 'vue-style-loader'
                         }),
                         css: ExtractTextPlugin.extract({
-                          use: ['css-loader', 'autoprefixer-loader', 'less-loader'],
+                          use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
                           fallback: 'vue-style-loader'
                         }),
                     },
@@ -50,29 +50,13 @@ module.exports = {
                 loader: 'babel-loader',
                 exclude: /node_modules/
             },
-            // {
-            //     test: /\.css$/,
-            //     use: [
-            //         'style-loader',
-            //         'css-loader',
-            //         'autoprefixer-loader'
-            //     ]
-            // },
             {
                 test: /\.css$/,
                 use: ExtractTextPlugin.extract({
-                    use: 'css-loader',
+                    use: 'css-loader?minimize',
                     fallback: 'style-loader'
                 })
             },
-            // {
-            //     test: /\.less/,
-            //     use: [
-            //         'style-loader',
-            //         'css-loader',
-            //         'less-loader'
-            //     ]
-            // },
             {
                 test: /\.less/,
                 use: ExtractTextPlugin.extract({

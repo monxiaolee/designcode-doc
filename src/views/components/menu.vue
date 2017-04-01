@@ -308,7 +308,7 @@
                             <td>无</td>
                         </tr>
                         <tr>
-                            <td>updateActiveKey</td>
+                            <td>updateActiveName</td>
                             <td>手动更新当前选择项，注意要在 $nextTick 里调用</td>
                             <td>无</td>
                         </tr>

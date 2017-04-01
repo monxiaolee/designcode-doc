@@ -24,8 +24,8 @@
                     <code>events</code> <code>$emit</code> <code>@click</code> Event
                 </li>
             </ul>
-            <Anchor title="iView CLI (Recommend)" h2></Anchor>
-            <p>iView provide an <router-link to="/cli">CLI</router-link> for quickly construct a project with iView.</p>
+            <!--<Anchor title="iView CLI (Recommend)" h2></Anchor>-->
+            <!--<p>iView provide an <router-link to="/cli">CLI</router-link> for quickly construct a project with iView.</p>-->
             <Anchor title="Starter Kit" h2></Anchor>
             <p>We provide a starter kit <a href="https://github.com/iview/iview-project" target="_blank">iview-project</a> for you.</p>
             <p>If you are using it, you are ready for developing and can skip the following part. We recommend it to you since it can save your time.</p>

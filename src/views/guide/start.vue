@@ -24,8 +24,8 @@
                     <code>events</code> <code>$emit</code> <code>@click</code> 事件
                 </li>
             </ul>
-            <Anchor title="使用脚手架 iView Cli（推荐）" h2></Anchor>
-            <p>使用 <router-link to="/cli">iView Cli</router-link> 可以通过可视化的方式快速构建 iView 工程，并且可以根据业务进行丰富的配置。</p>
+            <!--<Anchor title="使用脚手架 iView Cli（推荐）" h2></Anchor>-->
+            <!--<p>使用 <router-link to="/cli">iView Cli</router-link> 可以通过可视化的方式快速构建 iView 工程，并且可以根据业务进行丰富的配置。</p>-->
             <Anchor title="使用推荐工程" h2></Anchor>
             <p>我们也为您准备好了基础工程，以此为基础开发，可以为您省去大量配置和调试环境的时间。</p>
             <p>

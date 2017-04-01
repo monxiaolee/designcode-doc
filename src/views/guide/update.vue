@@ -25,6 +25,41 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.9" h2></Anchor>
+                    <p>
+                        <code>2017-04-01</code>
+                    </p>
+                    <ul>
+                        <li>Table 单元格的 render 方法，支持 <code v-pre>{{ row }}</code>、<code v-pre>{{ column }}</code> 用法。<issue id="438"></issue></li>
+                        <li>Select 支持 IE。</li>
+                        <li>BreadcrumbItem 新增 prop <code>replace</code> ，并支持 vue-router 的 push 和 replae 两种跳转。</li>
+                        <li>Modal 新增 prop <code>transition-names</code>，支持自定义动画。<issue id="505"></issue></li>
+                        <li>优化 DatePicker 在某些时候无法关闭弹窗的问题。</li>
+                        <li>修复部分组件结合 vue-i18n 使用时，无法翻译的bug。</li>
+                        <li>修复动态使用 Col 时，gutter 无法更新的bug。<issue id="540"></issue></li>
+                        <li>修复 Cascader 修改 <code>data</code> 后，不能更新选中项的bug。<issue id="553"></issue></li>
+                        <li>修复 Transfer 修改 <code>data</code> 后，不能更新内容的bug。<issue id="555"></issue></li>
+                        <li>Input 组件：</li>
+                        <ul>
+                            <li>修复使用 slot 时，icon 不显示的bug。<issue id="554"></issue></li>
+                            <li>优化默认情况下有右间距的问题。</li>
+                            <li>优化使用 slot 时，不是圆角的问题。<issue id="397"></issue></li>
+                        </ul>
+                        <li>新增土耳其语。<mention id="ndrshn"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
+                    <Anchor title="2.0.0-rc.8" h2></Anchor>
+                    <p>
+                        <code>2017-03-29</code>
+                    </p>
+                    <ul>
+                        <li>修复 <code>Form</code> 无法对 <code>Cascader</code> 组件及时验证的bug。<issue id="525"></issue></li>
+                        <li>修复 <code>Select</code> 在单选可搜索模式下，从外部清空数据时，视图没有更新的bug。<issue id="518"></issue></li>
+                        <li>优化 <code>Date</code> 类型组件，点击小图标也可以显示选择器。<issue id="528"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.7" h2></Anchor>
                     <p>
                         <code>2017-03-27</code>
