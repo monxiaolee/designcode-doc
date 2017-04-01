@@ -16,6 +16,7 @@
                 <li>简体中文(zh-CN)</li>
                 <li>繁体中文(zh-TW)</li>
                 <li>English(en-US)</li>
+                <li>Turkish(tr-TR)</li>
             </ul>
             <p>If your target language is not included, you are more than welcome to contribute: <a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">Supported Languages</a></p>
         </article>

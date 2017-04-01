@@ -15,6 +15,7 @@
                 <li>简体中文（zh-CN）</li>
                 <li>繁体中文（zh-TW）</li>
                 <li>英文（en-US）</li>
+                <li>土耳其语（tr-TR）</li>
             </ul>
             <p>欢迎贡献代码，以支持更多语言：<a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">查看</a></p>
         </article>
