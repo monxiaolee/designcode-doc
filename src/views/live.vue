@@ -36,7 +36,7 @@
             <h1>iView 讲堂</h1>
             <p>iView 讲堂以技术分享为目的，不定期地以直播或录制视频的形式开展。</p>
             <blockquote>近期直播：</blockquote>
-            <Card v-for="(item, index) in list" :key="item.title">
+            <Card v-for="(item, index) in list" :key="item.title" style="margin-bottom: 10px;">
                 <Row>
                     <i-col span="6">
                         <div class="live-cover" :style="{'backgroundImage': 'url(' + item.cover + ')'}"></div>
@@ -75,6 +75,14 @@
         data () {
             return {
                 list: [
+                    {
+                        title: 'Vue.js 实战之 Render 函数',
+                        time: '2017-04-26 20:00',
+                        cost: '9.9元',
+                        cover: 'https://ooo.0o0.ooo/2017/04/04/58e351fae6021.png',
+                        desc: '关于 Vue.js 2中 Render 函数的详解，及项目实战。主要内容为：Virtual DOM 与 Vue 2 的 Render 函数介绍；Render 函数使用场景；createElement 用法；函数化组件及实战；实战：用 Render 函数开发一个可排序的表格组件；Q & A',
+                        link: 'https://segmentfault.com/l/1500000008892728'
+                    },
                     {
                         title: '基于 Vue.js 2.x 的 iView 组件开发实践',
                         time: '2017-03-23 20:00',
