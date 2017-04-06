@@ -48,7 +48,7 @@
                 <div slot="desc">
                     <p>水平的顶部导航菜单。</p>
                     <p>通过设置属性 <code>theme</code> 为 <code>light</code>、<code>dark</code>、<code>primary</code> 可以选择主题。</p>
-                    <p>通过事件 <code>on-select</code> 可以得到点击菜单的 key 值，从而控制页面路由或自定义操作。</p>
+                    <p>通过事件 <code>on-select</code> 可以得到点击菜单的 name 值，从而控制页面路由或自定义操作。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
@@ -173,7 +173,7 @@
                 </div>
                 <div slot="desc">
                     <p>垂直导航菜单，可以内嵌子菜单。</p>
-                    <p>设置 <code>active-key</code> 可以选中指定的菜单，设置 <code>open-keys</code> 可以展开指定的子菜单。</p>
+                    <p>设置 <code>active-name</code> 可以选中指定的菜单，设置 <code>open-names</code> 可以展开指定的子菜单。</p>
                     <p>设置属性 <code>accordion</code> 可以开启手风琴模式，每次只能展开一个子菜单。</p>
                     <p>通过设置属性 <code>theme</code> 为 <code>light</code>、<code>dark</code> 可以选择主题，侧栏菜单不支持 primary 主题。</p>
                 </div>
@@ -283,7 +283,7 @@
                         <tr>
                             <td>on-select</td>
                             <td>选择菜单（Menu-item）时触发</td>
-                            <td>key</td>
+                            <td>name</td>
                         </tr>
                         <tr>
                             <td>on-open-change</td>

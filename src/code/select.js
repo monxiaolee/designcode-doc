@@ -336,16 +336,16 @@ code.multiple = `
 code.filterable = `
 <template>
     <Row>
-        <i-col span="12" style="padding-right:10px">
+        <Col span="12" style="padding-right:10px">
             <Select v-model="model11" filterable>
                 <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
             </Select>
-        </i-col>
-        <i-col span="12">
+        </Col>
+        <Col span="12">
             <Select v-model="model12" filterable multiple>
                 <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
             </Select>
-        </i-col>
+        </Col>
     </Row>
 </template>
 <script>
