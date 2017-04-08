@@ -1,11 +1,11 @@
 <template>
     <i-article>
         <article>
-            <h1>Dropdown 下拉菜单</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>展示一组折叠的下拉菜单。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基础用法">
+            <h1>Dropdown</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>Show a folded-styled dropdown menu.</p>
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Basic Usage">
                 <div slot="demo">
                     <Dropdown>
                         <a href="javascript:void(0)">
@@ -35,13 +35,13 @@
                     </Dropdown>
                 </div>
                 <div slot="desc">
-                    <p>需要配合 <code>Dropdown-menu</code> 和 <code>Dropdown-item</code> 两个组件来使用，并且给列表设置具名 slot 为 <code>list</code>。</p>
-                    <p>触发对象可以是链接、按钮等各种元素。</p>
-                    <p>本例还展示了禁用项和分隔线。</p>
+                    <p>Dropdown needs to be used with <code>Dropdown-menu</code> and <code>Dropdown-item</code> , and slot name needs to be set to <code>list</code>.</p>
+                    <p>Trig object can be link, button or other elements.</p>
+                    <p>The demo also uses disabled item and split line.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
-            <Demo title="触发方式">
+            <Demo title="Trig Mode">
                 <div slot="demo">
                     <Dropdown>
                         <a href="javascript:void(0)">
@@ -83,12 +83,12 @@
                     </Dropdown>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>trigger</code> 可以更改触发方式，可选项为 click 、 hover(默认) 或 custom(自定义)。</p>
-                    <p>触发方式设置为 custom 自定义时，需手动设置 visible 属性来控制下拉框的显示。</p>
+                    <p>Change the trigger by setting <code>trigger</code> prop. Optional: click, hover(default) or custom.</p>
+                    <p>When trigger is set to custom, you need to set visible property manually to control the display of Dropdown.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.trigger }}</i-code>
             </Demo>
-            <Demo title="对齐方向">
+            <Demo title="Align Orientation">
                 <div slot="demo">
                     <Dropdown placement="bottom-start">
                         <a href="javascript:void(0)">
@@ -131,11 +131,11 @@
                     </Dropdown>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>placement</code> 可以更改下拉菜单出现的方向，与 Poptip 和 Tooltip 配置一致，支持 12 个方向，详见 API。</p>
+                    <p>Change the direction that Dropdown displays by setting <code>placement</code> prop. Same as Tooltip Conf, Poptip supports 12 directions. Details on API Doc.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.placement }}</i-code>
             </Demo>
-            <Demo title="嵌套用法">
+            <Demo title="Nested Usage">
                 <div slot="demo">
                     <Dropdown>
                         <a href="javascript:void(0)">
@@ -161,7 +161,7 @@
                     </Dropdown>
                 </div>
                 <div slot="desc">
-                    <p>下拉菜单可以进行嵌套实现级联的效果，嵌套时注意设置子集的展开方向。</p>
+                    <p>Dropdown can realise Cascade-like style by nesting. Remind to set subset's expanding direction when nesting.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.nest }}</i-code>
             </Demo>
@@ -171,28 +171,28 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Desciption</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>trigger</td>
-                            <td>触发方式，可选值为 <code>hover</code>（悬停）<code>click</code>（点击）<code>custom</code>（自定义），使用 custom 时，需配合 visible 一起使用</td>
+                            <td>Way to activate. Optional Value: <code>hover</code>, <code>click</code>, <code>custom</code>. visible prop is needed when set to custom.</td>
                             <td>String</td>
                             <td>hover</td>
                         </tr>
                         <tr>
                             <td>visible</td>
-                            <td>手动控制下拉框的显示，在 trigger = 'custom' 时使用</td>
+                            <td>Control the display of Dropdown manually, used when trigger = 'custom'.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>placement</td>
-                            <td>下拉菜单出现的位置，可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code></td>
+                            <td>The direction Dropdown displays on.Optional Value: <code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code></td>
                             <td>String</td>
                             <td>bottom</td>
                         </tr>
@@ -202,20 +202,20 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>on-click</td>
-                            <td>点击菜单项时触发</td>
+                            <td>Emit when clicking the dropdown item.</td>
                             <td>Dropdown-item 的 name 值</td>
                         </tr>
                         <tr>
                             <td>on-visible-change</td>
-                            <td>菜单显示状态改变时调用</td>
+                            <td>Emit when display status of Dropdown changed.</td>
                             <td>visible</td>
                         </tr>
                     </tbody>
@@ -224,18 +224,18 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>说明</th>
+                            <th>Name</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>无</td>
-                            <td>主体内容</td>
+                            <td>-</td>
+                            <td>Main content.</td>
                         </tr>
                         <tr>
                             <td>list</td>
-                            <td>列表内容，一般由 <code>Dropdown-menu</code> 承担</td>
+                            <td>The content of the list, generally handled by <code>Dropdown-menu</code>.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -243,34 +243,34 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>name</td>
-                            <td>用来标识这一项</td>
+                            <td>Used to tag the item.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
-                            <td>禁用该项</td>
+                            <td>Used to disable the item.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>divided</td>
-                            <td>显示分割线</td>
+                            <td>Show spilt line.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>selected</td>
-                            <td>标记该项为选中状态</td>
+                            <td>Tag the item status to selected.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>

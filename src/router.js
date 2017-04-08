@@ -528,6 +528,13 @@ const routers = [
         component: (resolve) => require(['./views/components/dropdown.vue'], resolve)
     },
     {
+        path: '/components/dropdown-en',
+        meta: {
+            title: 'Dropdown'
+        },
+        component: (resolve) => require(['./views/components/dropdown-en.vue'], resolve)
+    },
+    {
         path: '/components/page',
         meta: {
             title: '分页 Page'
