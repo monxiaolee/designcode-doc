@@ -360,6 +360,13 @@ const routers = [
         component: (resolve) => require(['./views/components/input-number.vue'], resolve)
     },
     {
+        path: '/components/input-number-en',
+        meta: {
+            title: 'InputNumber'
+        },
+        component: (resolve) => require(['./views/components/input-number-en.vue'], resolve)
+    },
+    {
         path: '/components/rate',
         meta: {
             title: '评分 Rate'

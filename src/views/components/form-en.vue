@@ -1,8 +1,8 @@
 <template>
     <i-article>
         <article>
-            <h1>Form 表单</h1>
-            <Anchor title="概述" h2></Anchor>
+            <h1>Form</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
             <p>具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。</p>
             <blockquote>注意：非 template/render 模式下，需使用 <code>i-form</code>。</blockquote>
             <Anchor title="代码示例" h2></Anchor>
