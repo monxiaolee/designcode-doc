@@ -248,6 +248,13 @@ const routers = [
         component: (resolve) => require(['./views/components/icon.vue'], resolve)
     },
     {
+        path: '/components/icon-en',
+        meta: {
+            title: 'Icon'
+        },
+        component: (resolve) => require(['./views/components/icon-en.vue'], resolve)
+    },
+    {
         path: '/components/input',
         meta: {
             title: '输入框 Input'
