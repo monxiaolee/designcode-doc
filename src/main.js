@@ -1,6 +1,7 @@
 /**
  * Created by aresn on 16/6/20.
  */
+import 'babel-polyfill';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueI18n from 'vue-i18n';
