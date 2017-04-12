@@ -343,7 +343,7 @@ const routers = [
         meta: {
             title: 'Cascader'
         },
-        component: require('./views/components/cascader-en.vue')
+        component: (resolve) => require(['./views/components/cascader-en.vue'], resolve)
     },
     {
         path: '/components/transfer',
@@ -386,6 +386,13 @@ const routers = [
             title: '表单 Form'
         },
         component: (resolve) => require(['./views/components/form.vue'], resolve)
+    },
+    {
+        path: '/components/form-en',
+        meta: {
+            title: 'Form'
+        },
+        component: (resolve) => require(['./views/components/form-en.vue'], resolve)
     },
     {
         path: '/components/alert',

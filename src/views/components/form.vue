@@ -187,7 +187,7 @@
                     </Form>
                 </div>
                 <div slot="desc">
-                    <p>Form 组件基于 <a href="https://github.com/yiminghe/async-validator" target="_blank"><Icon type="social-github"></Icon> async-validator</a> 实现的数据验证，给 Form 设置属性 <code>rules</code>，同时给需要验证的 Form-item 设置属性 <code>prop</code> 指向对于字段即可。</p>
+                    <p>Form 组件基于 <a href="https://github.com/yiminghe/async-validator" target="_blank"><Icon type="social-github"></Icon> async-validator</a> 实现的数据验证，给 Form 设置属性 <code>rules</code>，同时给需要验证的 Form-item 设置属性 <code>prop</code> 指向对应字段即可。</p>
                     <p>完整的验证规则请参照开源项目 async-validator。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.validate }}</i-code>
@@ -344,7 +344,7 @@
                     <tbody>
                         <tr>
                             <td>prop</td>
-                            <td>对于表单域 model 里的字段</td>
+                            <td>对应表单域 model 里的字段</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
