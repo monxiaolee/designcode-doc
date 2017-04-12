@@ -185,6 +185,11 @@
                             <td>选择完成后的回调，返回值 value 即已选值 value，selectedData 为已选项的具体数据</td>
                             <td>value, selectedData</td>
                         </tr>
+                        <tr>
+                            <td>on-visible-change</td>
+                            <td>展开和关闭弹窗时触发</td>
+                            <td>显示状态，Boolean</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

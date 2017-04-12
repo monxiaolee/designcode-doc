@@ -25,6 +25,24 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.10" h2></Anchor>
+                    <p>
+                        <code>2017-04-10</code>
+                    </p>
+                    <ul>
+                        <li>Modal 的 DOM 移动到了 body。<issue id="583"></issue> <issue id="380"></issue></li>
+                        <li>Select 新增 <code>on-query-change</code> 事件。</li>
+                        <li>Cascader 新增 <code>on-visible-change</code> 事件。<issue id="593"></issue></li>
+                        <li>修复 Date 在 Table 内使用时，样式错误的问题。<issue id="577"></issue></li>
+                        <li>修复 Table 的 slot 无法使用的bug。<issue id="549"></issue></li>
+                        <li>修复 Table 在 Modal 和 Tabs 内使用时，宽度计算不正确的bug。<issue id="591"></issue></li>
+                        <li>修复 Tree 组件没有正确引入 Icon 组件的bug。<issue id="612"></issue></li>
+                        <li>优化 Slider 在靠近边缘时，卡顿的问题。<issue id="461"></issue></li>
+                        <li>优化 Select 在搜索模式下的交互体验。<issue id="566"></issue></li>
+                        <li>新增西班牙语。<mention id="MatiasVerdier"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.9" h2></Anchor>
                     <p>
                         <code>2017-04-01</code>

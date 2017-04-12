@@ -234,6 +234,11 @@
                             <td>选中的<code>Option</code>变化时触发，默认返回 value，如需返回 label，详见 label-in-value 属性</td>
                             <td>当前选中项</td>
                         </tr>
+                        <tr>
+                            <td>on-query-change</td>
+                            <td>搜索词改变时触发</td>
+                            <td>query</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Select methods" h3></Anchor>

@@ -501,7 +501,7 @@
                         </tr>
                         <tr>
                             <td>render</td>
-                            <td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前单元格数据，当前列数据，当前是第几行，详见示例</td>
+                            <td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
