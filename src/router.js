@@ -262,6 +262,13 @@ const routers = [
         component: (resolve) => require(['./views/components/input.vue'], resolve)
     },
     {
+        path: '/components/input-en',
+        meta: {
+            title: 'Input'
+        },
+        component: (resolve) => require(['./views/components/input-en.vue'], resolve)
+    },
+    {
         path: '/components/radio',
         meta: {
             title: '单选框 Radio'
