@@ -493,6 +493,13 @@ const routers = [
         component: (resolve) => require(['./views/components/timeline.vue'], resolve)
     },
     {
+        path: '/components/timeline-en',
+        meta: {
+            title: 'Timeline'
+        },
+        component: (resolve) => require(['./views/components/timeline-en.vue'], resolve)
+    },
+    {
         path: '/components/tag',
         meta: {
             title: '标签 Tag'
