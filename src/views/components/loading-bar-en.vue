@@ -1,31 +1,31 @@
 <template>
     <i-article>
         <article>
-            <h1>LoadingBar 加载进度条</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>全局创建一个显示页面加载、异步请求、文件上传等的加载进度条。</p>
-            <Anchor title="说明" h2></Anchor>
-            <p>LoadingBar 只会在全局创建一个，因此在任何位置调用的方法都会控制这同一个组件。主要使用场景是路由切换和Ajax，因为这两者都不能拿到精确的进度，LoadingBar 会模拟进度，当然也可以通过<code>update()</code>方法来传入一个精确的进度，比如在文件上传时会很有用，具体见API。</p>
-            <Anchor title="在路由中使用" h4></Anchor>
+            <h1>LoadingBar</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>Create a global loading bar to display page loading, asynchronous request, file uploading etc.</p>
+            <Anchor title="Explanation" h2></Anchor>
+            <p>LoadingBar will be created only once globally, so you'll control the same component no matter where you call the methods. It is mainly used on route changing or Ajax. In those two situations, operation cannot get the accurate progress rate, so LoadingBar will simulate the progress rate. You can also use <code>update()</code> to pass an accurate progress rate. Details on API Doc.</p>
+            <Anchor title="Using in Router" h4></Anchor>
             <i-code bg>{{ code.router }}</i-code>
-            <Anchor title="在异步请求中使用" h4></Anchor>
+            <Anchor title="Using in Asynchronous Request" h4></Anchor>
             <i-code bg lang="html">{{ code.ajax }}</i-code>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基本用法">
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Basic Usage">
                 <div slot="demo">
                     <Button @click="start">Start</Button>
                     <Button @click="finish">Finish</Button>
                     <Button @click="error">Error</Button>
                 </div>
                 <div slot="desc">
-                    <p>点击 Start 开始进度，点击 Finish 结束。在调用<code>start()</code>方法后，组件会自动模拟进度，当调用<code>finish()</code>或<code>error()</code>时，补全进度并自动消失。</p>
+                    <p>Click Start to start loading. Click Finish to complete. When calling <code>start()</code> method, the component will automatically simulate the loading bar. When calling <code>finish()</code> or <code>error()</code> methods, the loading bar will be fulfilled and then disappear.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="LoadingBar instance" h3></Anchor>
-                <p>通过直接调用以下方法来使用组件：</p>
+                <p>Use the component by calling method below directly.</p>
                 <ul>
                     <li>
                         <code>this.$Loading.start()</code>
@@ -40,39 +40,39 @@
                         <code>this.$Loading.update(percent)</code>
                     </li>
                 </ul>
-                <p>以上方法隐式的创建及维护Vue组件。函数及参数说明如下：</p>
+                <p>Those methods above create and maintain Vue componenets implicitly. Details on API Doc.</p>
                 <table>
                     <thead>
                         <tr>
-                            <th>函数名</th>
-                            <th>说明</th>
-                            <th>参数</th>
+                            <th>method Name</th>
+                            <th>Description</th>
+                            <th>Parameter</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>start</td>
-                            <td>开始从 0 显示进度条，并自动加载进度</td>
-                            <td>无</td>
+                            <td>Start the loading bar from 0 and automatically simulate the progress rate.</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>finish</td>
-                            <td>结束进度条，自动补全剩余进度</td>
-                            <td>无</td>
+                            <td>Finish loading bar.</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>error</td>
-                            <td>以错误的类型结束进度条，自动补全剩余进度</td>
+                            <td>Finish loading bar in an error style.</td>
                             <td>无</td>
                         </tr>
                         <tr>
                             <td>update</td>
-                            <td>精确加载到指定的进度</td>
-                            <td>percent，指定的进度百分比</td>
+                            <td>Fill the loading bar to an accurate rate.</td>
+                            <td>loading percent</td>
                         </tr>
                     </tbody>
                 </table>
-                <p>另外提供了全局配置和全局销毁的方法：</p>
+                <p>Furthermore, we provide global config and global destroy methods.</p>
                 <ul>
                     <li>
                         <code>this.$Loading.config(options)</code>
@@ -87,28 +87,28 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>color</td>
-                            <td>进度条的颜色，默认为 iView 主色</td>
+                            <td>Color of the loading bar. Default: iView's main color.</td>
                             <td>String</td>
                             <td>primary</td>
                         </tr>
                         <tr>
                             <td>failedColor</td>
-                            <td>失败时的进度条颜色，默认为 iView 主色</td>
+                            <td>Color of the loading bar when finishing with error. Default: iView's main color.</td>
                             <td>String</td>
                             <td>error</td>
                         </tr>
                         <tr>
                             <td>height</td>
-                            <td>进度条高度，单位 px</td>
+                            <td>Height of the loading bar. Unit: px</td>
                             <td>Number</td>
                             <td>2</td>
                         </tr>

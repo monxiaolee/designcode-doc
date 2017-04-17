@@ -598,6 +598,13 @@ const routers = [
         component: (resolve) => require(['./views/components/loading-bar.vue'], resolve)
     },
     {
+        path: '/components/loading-bar-en',
+        meta: {
+            title: 'LoadingBar'
+        },
+        component: (resolve) => require(['./views/components/loading-bar-en.vue'], resolve)
+    },
+    {
         path: '/components/circle',
         meta: {
             title: '进度环 Circle'
