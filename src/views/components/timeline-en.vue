@@ -11,7 +11,7 @@
 <template>
     <i-article>
         <article>
-            <h1>Timeline 时间轴</h1>
+            <h1>Timeline</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>Used to vertically display a series of information ordered by time.</p>
             <Anchor title="Examples" h2></Anchor>
@@ -19,39 +19,39 @@
                 <div slot="demo">
                     <Timeline>
                         <Timeline-item>
-                            <p class="time">1976</p>
-                            <p class="content">Apple I is released</p>
+                            <p class="time">1976年</p>
+                            <p class="content">Apple I 问世</p>
                         </Timeline-item>
                         <Timeline-item>
-                            <p class="time">1984</p>
-                            <p class="content">Macintosh is released</p>
+                            <p class="time">1984年</p>
+                            <p class="content">发布 Macintosh</p>
                         </Timeline-item>
                         <Timeline-item>
-                            <p class="time">2007</p>
-                            <p class="content">iPhone is released</p>
+                            <p class="time">2007年</p>
+                            <p class="content">发布 iPhone</p>
                         </Timeline-item>
                         <Timeline-item>
-                            <p class="time">2010</p>
-                            <p class="content">iPad is released</p>
+                            <p class="time">2010年</p>
+                            <p class="content">发布 iPad</p>
                         </Timeline-item>
                         <Timeline-item>
-                            <p class="time">10/05/2011</p>
-                            <p class="content">Steve Jobs passes away</p>
+                            <p class="time">2011年10月5日</p>
+                            <p class="content">史蒂夫·乔布斯去世</p>
                         </Timeline-item>
                     </Timeline>
                 </div>
                 <div slot="desc">
-                    <p>Simplest usage of a timeline.</p>
+                    <p>Basic timeline.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="Circle Colors">
                 <div slot="demo">
                     <Timeline>
-                        <Timeline-item color="green">Version 1.0 release</Timeline-item>
-                        <Timeline-item color="green">Version 2.0 release</Timeline-item>
-                        <Timeline-item color="red">Critical failure</Timeline-item>
-                        <Timeline-item color="blue">Version 3.0 release</Timeline-item>
+                        <Timeline-item color="green">发布1.0版本</Timeline-item>
+                        <Timeline-item color="green">发布2.0版本</Timeline-item>
+                        <Timeline-item color="red">严重故障</Timeline-item>
+                        <Timeline-item color="blue">发布3.0版本</Timeline-item>
                     </Timeline>
                 </div>
                 <div slot="desc">
@@ -62,10 +62,10 @@
             <Demo title="Last Item">
                 <div slot="demo">
                     <Timeline pending>
-                        <Timeline-item>Version 1.0 release</Timeline-item>
-                        <Timeline-item>Version 2.0 release</Timeline-item>
-                        <Timeline-item>Version 3.0 release</Timeline-item>
-                        <Timeline-item><a href="#">See more</a></Timeline-item>
+                        <Timeline-item>发布1.0版本</Timeline-item>
+                        <Timeline-item>发布2.0版本</Timeline-item>
+                        <Timeline-item>发布3.0版本</Timeline-item>
+                        <Timeline-item><a href="#">查看更多</a></Timeline-item>
                     </Timeline>
                 </div>
                 <div slot="desc">
@@ -78,11 +78,11 @@
                     <Timeline>
                         <Timeline-item color="green">
                             <Icon type="trophy" slot="dot"></Icon>
-                            <span>Milestone version release</span>
+                            <span>发布里程碑版本</span>
                         </Timeline-item>
-                        <Timeline-item>Version 1.0 release</Timeline-item>
-                        <Timeline-item>Version 2.0 release</Timeline-item>
-                        <Timeline-item>Version 3.0 release</Timeline-item>
+                        <Timeline-item>发布1.0版本</Timeline-item>
+                        <Timeline-item>发布2.0版本</Timeline-item>
+                        <Timeline-item>发布3.0版本</Timeline-item>
                     </Timeline>
                 </div>
                 <div slot="desc">
