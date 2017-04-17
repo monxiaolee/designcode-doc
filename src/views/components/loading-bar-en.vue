@@ -44,7 +44,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>method Name</th>
+                            <th>Method Name</th>
                             <th>Description</th>
                             <th>Parameter</th>
                         </tr>
