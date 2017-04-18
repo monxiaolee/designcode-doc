@@ -437,6 +437,13 @@ const routers = [
         component: (resolve) => require(['./views/components/message.vue'], resolve)
     },
     {
+        path: '/components/message-en',
+        meta: {
+            title: 'Message'
+        },
+        component: (resolve) => require(['./views/components/message-en.vue'], resolve)
+    },
+    {
         path: '/components/notice',
         meta: {
             title: '通知提醒 Notice'
