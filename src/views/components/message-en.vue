@@ -3,7 +3,7 @@
         <article>
             <h1>Message</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
-            <p>A lightweight feedback message component appearing on top of the screen and then fades automatically, with many different options for different situations.</p>
+            <p>A lightweight feedback message appearing at the top of the screen, fading automatically. Has many different options for different situations.</p>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Normal Prompt">
                 <div slot="demo">
@@ -21,7 +21,7 @@
                     <Button @click="error">显示错误提示</Button>
                 </div>
                 <div slot="desc">
-                    <p>Different prompt types：success, warning, error.</p>
+                    <p>Different prompt types: success, warning, error.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.type }}</i-code>
             </Demo>
