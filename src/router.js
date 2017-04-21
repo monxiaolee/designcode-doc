@@ -185,6 +185,13 @@ const routers = [
         component: (resolve) => require(['./views/components/grid.vue'], resolve)
     },
     {
+        path: '/components/grid-en',
+        meta: {
+            title: 'Grid'
+        },
+        component: (resolve) => require(['./views/components/grid-en.vue'], resolve)
+    },
+    {
         path: '/components/layout',
         meta: {
             title: '布局 Layout'
