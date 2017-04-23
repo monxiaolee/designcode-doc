@@ -25,6 +25,23 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.11" h2></Anchor>
+                    <p>
+                        <code>2017-04-22</code>
+                    </p>
+                    <ul>
+                        <li>修复 Cascader 在 disabled 模式下扔能使用 clearable 功能的bug。<issue id="635"></issue></li>
+                        <li>修复 Message 的 destroy 方法无法使用的bug。<mention id="lcx960324"></mention></li>
+                        <li>修复 BreadcrumbItem 动态添加时，无法显示分隔符的bug。<mention id="Becavalier"></mention></li>
+                        <li>修复 Menu 的 active-name 为 0 时无法正确匹配的bug。</li>
+                        <li>修复 Slider 在 range 模式下，主动设置 value 时显示错误的bug。<issue id="724"></issue></li>
+                        <li>修复 Select 在单选可搜索模式下，数字 0 默认不会被选中的问题。<issue id="718"></issue></li>
+                        <li>修复 Select 在单选可搜索模式下，第一次展开选项显示不全的bug。<issue id="712"></issue></li>
+                        <li>Table 新增远程过滤。<mention id="hezhiying"></mention> <issue id="714"></issue></li>
+                        <li>Step 新增 slot。<mention id="purocean"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.10" h2></Anchor>
                     <p>
                         <code>2017-04-10</code>

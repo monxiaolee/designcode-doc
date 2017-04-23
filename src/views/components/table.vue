@@ -547,6 +547,12 @@
                             <td>Array</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>filterRemote</td>
+                            <td>使用远程过滤</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
                         </tbody>
                     </table>
                 </div>

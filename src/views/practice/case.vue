@@ -14,7 +14,7 @@
             <p>从 2016 年下旬开始，TalkingData 的众多新项目开始使用 iView，部分核心项目已逐步开始使用 iView 重构。</p>
             <p>iView 已逐步成为 TalkingData 的设计和开发规范。</p>
             <Anchor title="最佳实践" h2></Anchor>
-            <Anchor title="App 统计分析（重构中）" h3></Anchor>
+            <Anchor title="App 统计分析" h3></Anchor>
             <Row :gutter="32">
                 <i-col span="10">
                     <p>App 统计分析是 TalkingData 最核心的产品，因历史原因，项目已沉淀很久，开发模式也比较传统，现已全面基于 iView 进行重构，视觉和交互都有极大的提升。</p>
