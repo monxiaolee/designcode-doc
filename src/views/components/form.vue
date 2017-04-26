@@ -68,10 +68,10 @@
                             </Checkbox-group>
                         </Form-item>
                         <Form-item label="开关">
-                            <Switch v-model="formItem.switch" size="large">
+                            <i-switch v-model="formItem.switch" size="large">
                                 <span slot="open">开启</span>
                                 <span slot="close">关闭</span>
-                            </Switch>
+                            </i-switch>
                         </Form-item>
                         <Form-item label="滑块">
                             <Slider v-model="formItem.slider" range></Slider>
