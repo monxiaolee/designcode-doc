@@ -101,6 +101,12 @@
                             <td>[10, 20, 30, 40]</td>
                         </tr>
                         <tr>
+                            <td>placement</td>
+                            <td>条数切换弹窗的展开方向，可选值为 <code>bottom</code> 和 <code>top</code></td>
+                            <td>String</td>
+                            <td>bottom</td>
+                        </tr>
+                        <tr>
                             <td>size</td>
                             <td>可选值为<code>small</code>（迷你版）或不填（默认）</td>
                             <td>String</td>

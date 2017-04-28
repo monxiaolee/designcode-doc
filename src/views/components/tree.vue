@@ -67,6 +67,11 @@
                             <td>点击复选框时触发</td>
                             <td>当前已勾选节点的数组</td>
                         </tr>
+                        <tr>
+                            <td>on-toggle-expand</td>
+                            <td>展开和收起子列表时触发</td>
+                            <td>当前节点的数组</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Tree methods" h3></Anchor>

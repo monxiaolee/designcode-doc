@@ -217,6 +217,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>placement</td>
+                            <td>弹窗的展开方向，可选值为 <code>bottom</code> 和 <code>top</code></td>
+                            <td>String</td>
+                            <td>bottom</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Select events" h3></Anchor>

@@ -49,22 +49,22 @@
             }
 
             if (this.liveVisible) {
-                this.$Notice.config({
-                    top: 85
-                });
-                this.$Notice.info({
-                    title: 'Vue.js 系列讲堂',
-                    desc: '4月26日，直播 "Vue.js 实战之 Render 函数"，为您介绍 Vue2 的虚拟DOM、Render 函数使用场景及函数化组件和 Render 函数的的实战示例。<a href="https://segmentfault.com/l/1500000008892728" target="_blank">点击报名参加</a>',
-                    duration: 0,
-                    onClose: () => {
-                        const today = this.getTodayUnix();
-                        window.localStorage.setItem('liveModalTime', today);
-                        this.$Message.success('关闭成功，一周内不再提示', 5);
-                    }
-                });
-                this.$Notice.config({
-                    top: 24
-                });
+//                this.$Notice.config({
+//                    top: 85
+//                });
+//                this.$Notice.info({
+//                    title: 'Vue.js 系列讲堂',
+//                    desc: '4月26日，直播 "Vue.js 实战之 Render 函数"，为您介绍 Vue2 的虚拟DOM、Render 函数使用场景及函数化组件和 Render 函数的的实战示例。<a href="https://segmentfault.com/l/1500000008892728" target="_blank">点击报名参加</a>',
+//                    duration: 0,
+//                    onClose: () => {
+//                        const today = this.getTodayUnix();
+//                        window.localStorage.setItem('liveModalTime', today);
+//                        this.$Message.success('关闭成功，一周内不再提示', 5);
+//                    }
+//                });
+//                this.$Notice.config({
+//                    top: 24
+//                });
             }
         },
         methods: {

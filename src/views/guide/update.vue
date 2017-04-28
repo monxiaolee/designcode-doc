@@ -25,6 +25,27 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.12" h2></Anchor>
+                    <p>
+                        <code>2017-04-28</code>
+                    </p>
+                    <ul>
+
+                        <li>Table 单元格支持渲染局部注册的组件。<issue id="775"></issue></li>
+                        <li>Tree 新增事件 on-toggle-expand。<mention id="lcx960324"></mention></li>
+                        <li>Page 和 Select 新增 prop: placement，可设置展开方向。</li>
+                        <li>修复 Dropdown 有时点击报错的问题。<issue id="721"></issue></li>
+                        <li>修复 Modal 标题默认为空，更新后不显示的bug。<issue id="504"></issue> <mention id="hezhiying"></mention></li>
+                        <li>修复 FormItem 数据为数组时，第一次 reset 出错的问题。<issue id="768"></issue></li>
+                        <li>修复 Tree 从外部改变数据时，视图没有正确更新的bug。<issue id="787"></issue></li>
+                        <li>修复 CheckboxGroup 动态更新 Checkbox 时，没有选中已选值的bug。<issue id="778"></issue></li>
+                        <li>修复 RadioGroup 动态更新 Radio 时，没有选中已选值的bug。</li>
+                        <li>修复 Select 在单选可搜索模式下，手动设置 Option 时，第一次展开选项显示不全的bug。<issue id="805"></issue></li>
+                        <li>调整 Page 的 on-page-size-change 事件触发时机。<issue id="759"></issue></li>
+                        <li>新增日语。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.11" h2></Anchor>
                     <p>
                         <code>2017-04-22</code>
