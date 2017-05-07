@@ -563,6 +563,13 @@ const routers = [
         component: (resolve) => require(['./views/components/menu.vue'], resolve)
     },
     {
+        path: '/components/menu-en',
+        meta: {
+            title: 'Menu'
+        },
+        component: (resolve) => require(['./views/components/menu-en.vue'], resolve)
+    },
+    {
         path: '/components/tabs',
         meta: {
             title: '标签页 Tabs'
