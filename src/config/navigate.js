@@ -372,10 +372,12 @@ const list = {
     practice: [
         {
             title: '实践案例',
+            titleEn: 'Practical Cases',
             path: '/docs/practice/case'
         },
         {
-            title: 'iView LOGO 设计思路',
+            title: 'iView Logo 设计思路',
+            titleEn: 'iView Logo Design',
             path: '/docs/practice/logo'
         }
     ],

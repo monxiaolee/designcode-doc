@@ -108,11 +108,25 @@ const routers = [
         component: (resolve) => require(['./views/practice/case.vue'], resolve)
     },
     {
+        path: '/docs/practice/case-en',
+        meta: {
+            title: 'Practical Cases'
+        },
+        component: (resolve) => require(['./views/practice/case-en.vue'], resolve)
+    },
+    {
         path: '/docs/practice/logo',
+        meta: {
+            title: 'iView Logo Design'
+        },
+        component: (resolve) => require(['./views/practice/logo.vue'], resolve)
+    },
+    {
+        path: '/docs/practice/logo-en',
         meta: {
             title: 'iView Logo 设计思路'
         },
-        component: (resolve) => require(['./views/practice/logo.vue'], resolve)
+        component: (resolve) => require(['./views/practice/logo-en.vue'], resolve)
     },
     {
         path: '/docs/guide/install',
