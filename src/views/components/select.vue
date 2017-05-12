@@ -245,7 +245,7 @@
                             <td>false</td>
                         </tr>
                         <tr>
-                            <td>loadingText</td>
+                            <td>loading-text</td>
                             <td>远程搜索中的文字提示</td>
                             <td>String</td>
                             <td>加载中</td>
