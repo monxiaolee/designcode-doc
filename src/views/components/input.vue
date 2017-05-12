@@ -265,6 +265,23 @@
                         </tr>
                     </tbody>
                 </table>
+                <Anchor title="Input methods" h3></Anchor>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>方法名</th>
+                        <th>说明</th>
+                        <th>参数</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>focus</td>
+                        <td>手动聚焦输入框</td>
+                        <td>无</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </article>
     </i-article>

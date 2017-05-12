@@ -150,6 +150,39 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.filterable }}</i-code>
             </Demo>
+            <Demo title="远程搜索">
+                <div slot="demo">
+                    <Row>
+                        <Col span="12" style="padding-right:10px">
+                            <Select
+                                v-model="model13"
+                                filterable
+                                remote
+                                :remote-method="remoteMethod1"
+                                :loading="loading1">
+                                <Option v-for="option in options1" :value="option.value" :key="new Date()">{{option.label}}</Option>
+                            </Select>
+                        </Col>
+                        <Col span="12">
+                        <Select
+                            v-model="model14"
+                            multiple
+                            filterable
+                            remote
+                            :remote-method="remoteMethod2"
+                            :loading="loading2">
+                            <Option v-for="option in options2" :value="option.value" :key="new Date()">{{option.label}}</Option>
+                        </Select>
+                        </Col>
+                    </Row>
+                </div>
+                <div slot="desc">
+                    <p>远程搜索需同时设置 <code>filterable</code>、<code>remote</code>、<code>remote-method</code>、<code>loading</code> 四个 props，其中 loading 用于控制是否正则搜索中，remote-method 是远程搜索的方法。</p>
+                    <p>注意：需要给 Option 设置 key，本例以当前时间为 key。</p>
+                    <p>本例为美国州名，尝试输入一些字母。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.remote }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Select props" h3></Anchor>
@@ -192,6 +225,30 @@
                             <td>是否支持搜索</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>remote</td>
+                            <td>是否使用远程搜索</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>remote-method</td>
+                            <td>远程搜索的方法</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>loading</td>
+                            <td>当前是否正则远程搜索</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>loadingText</td>
+                            <td>远程搜索中的文字提示</td>
+                            <td>String</td>
+                            <td>加载中</td>
                         </tr>
                         <tr>
                             <td>size</td>
@@ -405,11 +462,51 @@
                 model9: '',
                 model10: [],
                 model11: '',
-                model12: []
+                model12: [],
+                list: ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New hampshire', 'New jersey', 'New mexico', 'New york', 'North carolina', 'North dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode island', 'South carolina', 'South dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West virginia', 'Wisconsin', 'Wyoming'],
+                model13: '',
+                loading1: false,
+                options1: [],
+                model14: [],
+                loading2: false,
+                options2: []
             }
         },
         methods: {
-
+            remoteMethod1 (query) {
+                if (query !== '') {
+                    this.loading1 = true;
+                    setTimeout(() => {
+                        this.loading1 = false;
+                        const list = this.list.map(item => {
+                            return {
+                                value: item,
+                                label: item
+                            };
+                        });
+                        this.options1 = list.filter(item => item.label.toLowerCase().indexOf(query.toLowerCase()) > -1);
+                    }, 200);
+                } else {
+                    this.options1 = [];
+                }
+            },
+            remoteMethod2 (query) {
+                if (query !== '') {
+                    this.loading2 = true;
+                    setTimeout(() => {
+                        this.loading2 = false;
+                        const list = this.list.map(item => {
+                            return {
+                                value: item,
+                                label: item
+                            };
+                        });
+                        this.options2 = list.filter(item => item.label.toLowerCase().indexOf(query.toLowerCase()) > -1);
+                    }, 200);
+                } else {
+                    this.options2 = [];
+                }
+            }
         }
     }
 </script>

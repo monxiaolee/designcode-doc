@@ -265,6 +265,23 @@
                         </tr>
                     </tbody>
                 </table>
+                <Anchor title="Input methods" h3></Anchor>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Method Name</th>
+                        <th>Description</th>
+                        <th>Parameters</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>focus</td>
+                        <td>Focus Input</td>
+                        <td>None</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
         </article>
     </i-article>
