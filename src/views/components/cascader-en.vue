@@ -100,6 +100,26 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.size }}</i-code>
             </Demo>
+            <Demo title="Load Options Lazily">
+                <div slot="demo">
+                    <Cascader :data="data4" :load-data="loadData"></Cascader>
+                </div>
+                <div slot="desc">
+                    <p>Load options lazily with <code>load-data</code>. You need add <code>loading</code> to your data to show whether it is loading.</p>
+                    <p>The second arguments of load-data is callback function, if you run it, the children options will be opened.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.loadData }}</i-code>
+            </Demo>
+            <Demo title="Filterable">
+                <div slot="demo">
+                    <Cascader v-model="value3" :data="data" filterable></Cascader>
+                </div>
+                <div slot="desc">
+                    <p>Search and select options directly with <code>filterable</code>.</p>
+                    <p>Now, it doesn't support search on server.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.filterable }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Cascader props" h3></Anchor>
@@ -167,6 +187,24 @@
                             <td>The size of the input box, Optional value: <code>large</code> or <code>small</code> or leave blank.</td>
                             <td>String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>load-data</td>
+                            <td>Load options lazily, you need add loading to data.</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>filterable</td>
+                            <td>Whether show search input.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>not-found-text</td>
+                            <td>Specify content to show when no result matches.</td>
+                            <td>String</td>
+                            <td>Not Found</td>
                         </tr>
                     </tbody>
                 </table>
@@ -306,7 +344,22 @@
                             code: 210000
                         }]
                     }]
-                }]
+                }],
+                data4: [
+                    {
+                        value: 'beijing',
+                        label: '北京',
+                        children: [],
+                        loading: false
+                    },
+                    {
+                        value: 'hangzhou',
+                        label: '杭州',
+                        children: [],
+                        loading:false
+                    }
+                ],
+                value3: []
             }
         },
         methods: {
@@ -320,6 +373,40 @@
             },
             handleChange (value, selectedData) {
                 this.text = selectedData.map(o => o.label).join(', ');
+            },
+            loadData (item, callback) {
+                item.loading = true;
+                setTimeout(() => {
+                    if (item.value === 'beijing') {
+                        item.children = [
+                            {
+                                value: 'talkingdata',
+                                label: 'TalkingData'
+                            },
+                            {
+                                value: 'baidu',
+                                label: '百度'
+                            },
+                            {
+                                value: 'sina',
+                                label: '新浪'
+                            }
+                        ];
+                    } else if (item.value === 'hangzhou') {
+                        item.children = [
+                            {
+                                value: 'ali',
+                                label: '阿里巴巴'
+                            },
+                            {
+                                value: '163',
+                                label: '网易'
+                            }
+                        ];
+                    }
+                    item.loading = false;
+                    callback();
+                }, 1000);
             }
         }
     }

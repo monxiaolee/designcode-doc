@@ -100,6 +100,26 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.size }}</i-code>
             </Demo>
+            <Demo title="动态加载选项">
+                <div slot="demo">
+                    <Cascader :data="data4" :load-data="loadData"></Cascader>
+                </div>
+                <div slot="desc">
+                    <p>使用 <code>load-data</code> 属性可以异步加载子选项，需要给数据增加 <code>loading</code> 来标识当前是否在加载中。</p>
+                    <p>load-data 的第二个参数为回调，如果执行，则会自动展开当前项的子列表。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.loadData }}</i-code>
+            </Demo>
+            <Demo title="搜索">
+                <div slot="demo">
+                    <Cascader v-model="value3" :data="data" filterable></Cascader>
+                </div>
+                <div slot="desc">
+                    <p>使用属性 <code>filterable</code> 可直接搜索选项并选择。</p>
+                    <p>暂不支持服务端搜索。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.filterable }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Cascader props" h3></Anchor>
@@ -167,6 +187,24 @@
                             <td>输入框大小，可选值为<code>large</code>和<code>small</code>或者不填</td>
                             <td>String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>load-data</td>
+                            <td>动态获取数据，数据源需标识 loading</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>filterable</td>
+                            <td>是否支持搜索</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>not-found-text</td>
+                            <td>当搜索列表为空时显示的内容</td>
+                            <td>String</td>
+                            <td>无匹配数据</td>
                         </tr>
                     </tbody>
                 </table>
@@ -311,7 +349,22 @@
                             code: 210000
                         }]
                     }]
-                }]
+                }],
+                data4: [
+                    {
+                        value: 'beijing',
+                        label: '北京',
+                        children: [],
+                        loading: false
+                    },
+                    {
+                        value: 'hangzhou',
+                        label: '杭州',
+                        children: [],
+                        loading:false
+                    }
+                ],
+                value3: []
             }
         },
         methods: {
@@ -325,6 +378,40 @@
             },
             handleChange (value, selectedData) {
                 this.text = selectedData.map(o => o.label).join(', ');
+            },
+            loadData (item, callback) {
+                item.loading = true;
+                setTimeout(() => {
+                    if (item.value === 'beijing') {
+                        item.children = [
+                            {
+                                value: 'talkingdata',
+                                label: 'TalkingData'
+                            },
+                            {
+                                value: 'baidu',
+                                label: '百度'
+                            },
+                            {
+                                value: 'sina',
+                                label: '新浪'
+                            }
+                        ];
+                    } else if (item.value === 'hangzhou') {
+                        item.children = [
+                            {
+                                value: 'ali',
+                                label: '阿里巴巴'
+                            },
+                            {
+                                value: '163',
+                                label: '网易'
+                            }
+                        ];
+                    }
+                    item.loading = false;
+                    callback();
+                }, 1000);
             }
         }
     }

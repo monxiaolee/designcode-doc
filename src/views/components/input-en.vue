@@ -271,7 +271,7 @@
                     <tr>
                         <th>Method Name</th>
                         <th>Description</th>
-                        <th>Parameters</th>
+                        <th>Arguments</th>
                     </tr>
                     </thead>
                     <tbody>
