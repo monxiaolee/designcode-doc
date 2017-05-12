@@ -168,7 +168,7 @@
                             <td>placeholder</td>
                             <td>Input box placeholder.</td>
                             <td>String</td>
-                            <td>请选择</td>
+                            <td>Select</td>
                         </tr>
                         <tr>
                             <td>trigger</td>

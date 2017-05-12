@@ -159,7 +159,7 @@
                 </Demo>
                 <Demo title="自定义列模板" vertical hide-code>
                     <div slot="demo">
-                        <Table border :context="self" :columns="columns7" :data="data6"></Table>
+                        <Table border :columns="columns7" :data="data6"></Table>
                     </div>
                     <div slot="desc">
                         <p>通过给 <code>columns</code> 数据的项，设置一个函数 <code>render</code>，可以自定义渲染当前列，包括渲染自定义组件，它基于 Vue 的 Render 函数。</p>
@@ -569,7 +569,7 @@
                         <p>该表格来自于 TalkingData <a href="https://www.talkingdata.com/product-MarketingCloud.jsp" target="_blank">MarketingCloud</a> 产品，展示的是人群画像列表，数据为模拟数据，分页只是提供效果展示，并非真实拉取服务端数据。</p>
                     </blockquote>
                 </div>
-                <Table :context="self" :data="tableData1" :columns="tableColumns1" stripe></Table>
+                <Table :data="tableData1" :columns="tableColumns1" stripe></Table>
                 <div style="margin: 10px;overflow: hidden">
                     <div style="float: right;">
                         <Page :total="100" :current="1" @on-change="changePage"></Page>
@@ -599,7 +599,7 @@
                     <Checkbox label="week">周活跃</Checkbox>
                     <Checkbox label="month">月活跃</Checkbox>
                 </Checkbox-group>
-                <Table :context="self" :data="tableData2" :columns="tableColumns2" border></Table>
+                <Table :data="tableData2" :columns="tableColumns2" border></Table>
                 <br>
                 <i-code lang="html" bg>{{ code.table2 }}</i-code>
             </div>
@@ -805,7 +805,6 @@
                 showCheckbox: false,
                 fixedHeader: false,
                 tableSize: 'default',
-                self: this,
                 columns1: [
                     {
                         title: '姓名',

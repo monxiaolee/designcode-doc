@@ -25,12 +25,28 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.13" h2>
+                        <span class="doc-update-important">重要更新</span>
+                    </Anchor>
+                    <p>
+                        <code>2017-05-12</code>
+                    </p>
+                    <ul>
+                        <li>Table 单元格渲染支持 Render 函数<span style="color: #f50">（目前兼容旧用法，但未来将废弃）</span>。</li>
+                        <li>Select 支持远程搜索。</li>
+                        <li>Cascader 支持异步加载选项。</li>
+                        <li>Cascader 支持搜索。</li>
+                        <li>Input 新增 focus 方法。<mention id="yinheli"></mention></li>
+                        <li>修复 Cascader 在 change-on-select 模式下，初始设置的数组长度为1时视图没有渲染的bug。<issue id="810"></issue></li>
+                        <li>修复 DatePicker 在 daterange 模式下，月模板的年份切换错误的bug。<issue id="845"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.12" h2></Anchor>
                     <p>
                         <code>2017-04-28</code>
                     </p>
                     <ul>
-
                         <li>Table 单元格支持渲染局部注册的组件。<issue id="775"></issue></li>
                         <li>Tree 新增事件 on-toggle-expand。<mention id="lcx960324"></mention></li>
                         <li>Page 和 Select 新增 prop: placement，可设置展开方向。</li>

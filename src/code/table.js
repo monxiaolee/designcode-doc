@@ -858,13 +858,12 @@ code.filter = `
 
 code.render = `
 <template>
-    <Table border :context="self" :columns="columns7" :data="data6"></Table>
+    <Table border :columns="columns7" :data="data6"></Table>
 </template>
 <script>
     export default {
         data () {
             return {
-                self: this,
                 columns7: [
                     {
                         title: '姓名',
@@ -1016,7 +1015,7 @@ code.size = `
 
 code.table1 = `
 <template>
-    <Table :context="self" :data="tableData1" :columns="tableColumns1" stripe></Table>
+    <Table :data="tableData1" :columns="tableColumns1" stripe></Table>
     <div style="margin: 10px;overflow: hidden">
         <div style="float: right;">
             <Page :total="100" :current="1" @on-change="changePage"></Page>
@@ -1027,7 +1026,6 @@ code.table1 = `
     export default {
         data () {
             return {
-                self: this,
                 tableData1: this.mockTableData1(),
                 tableColumns1: [
                     {
@@ -1181,13 +1179,12 @@ code.table2 = `
         <Checkbox label="week">周活跃</Checkbox>
         <Checkbox label="month">月活跃</Checkbox>
     </Checkbox-group>
-    <Table :context="self" :data="tableData2" :columns="tableColumns2" border></Table>
+    <Table :data="tableData2" :columns="tableColumns2" border></Table>
 </template>
 <script>
     export default {
         data () {
             return {
-                self: this,
                 tableData2: this.mockTableData2(),
                 tableColumns2: [],
                 tableColumnsChecked: ['show', 'weak', 'signin', 'click', 'active', 'day7', 'day30', 'tomorrow', 'day', 'week', 'month']
