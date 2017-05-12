@@ -162,9 +162,12 @@
                         <Table border :context="self" :columns="columns7" :data="data6"></Table>
                     </div>
                     <div slot="desc">
-                        <p>通过给 <code>columns</code> 数据的项，设置一个函数 <code>render</code>，可以自定义渲染当前列，包括渲染自定义组件。</p>
-                        <p><code>render</code> 函数传入三个参数 <code>row</code>、<code>column</code> 和 <code>index</code>，分别指当前单元格数据，当前列数据，当前是第几行。</p>
-                        <p><code>render</code> 函数本质返回的是字符串，Table 组件在内部对其进行了编译，如果使用了自定义组件，需要特别注意上下文，编译后的自定义组件，默认的上下文是 <code>Table</code> 所在的上下文，如果想让组件在指定的实例下编译，可以给 <code>Table</code> 设置属性 <code>context</code> 来指定上下文，比如本例指定当前路由页为上下文。一般情况不需要此配置，但如果你把 <code>Table</code> 作为一个 slot 封装在其它组件里，这时 <code>context</code> 属性就很有用，比如父级是 $parent，根组件 $root。</p>
+                        <p>通过给 <code>columns</code> 数据的项，设置一个函数 <code>render</code>，可以自定义渲染当前列，包括渲染自定义组件，它基于 Vue 的 Render 函数。</p>
+                        <p><code>render</code> 函数传入两个参数，第一个是 h，第二个是对象，包含 <code>row</code>、<code>column</code> 和 <code>index</code>，分别指当前单元格数据，当前列数据，当前是第几行。</p>
+                        <blockquote>
+                            <p style="color: #f50">以下只适用于 rc.13 以前的版本，未来将废弃，请勿过多依赖旧用法。</p>
+                            <code>render</code> 函数本质返回的是字符串，Table 组件在内部对其进行了编译，如果使用了自定义组件，需要特别注意上下文，编译后的自定义组件，默认的上下文是 <code>Table</code> 所在的上下文，如果想让组件在指定的实例下编译，可以给 <code>Table</code> 设置属性 <code>context</code> 来指定上下文，比如本例指定当前路由页为上下文。一般情况不需要此配置，但如果你把 <code>Table</code> 作为一个 slot 封装在其它组件里，这时 <code>context</code> 属性就很有用，比如父级是 $parent，根组件 $root。
+                        </blockquote>
                     </div>
                     <i-code lang="html" slot="code">{{ code.render }}</i-code>
                 </Demo>
@@ -284,7 +287,7 @@
                         </tr>
                         <tr>
                             <td>context</td>
-                            <td>设置单元格内渲染自定义组件时的上下文。比如父级是 $parent，根组件是 $root，当 <code>Table</code> 作为一个 slot 封装在其它组件里时，会很有用</td>
+                            <td><span style="color: #f50">旧用法，未来将废弃。</span>设置单元格内渲染自定义组件时的上下文。比如父级是 $parent，根组件是 $root，当 <code>Table</code> 作为一个 slot 封装在其它组件里时，会很有用</td>
                             <td>Object</td>
                             <td>Table 所在的上下文</td>
                         </tr>
@@ -501,7 +504,8 @@
                         </tr>
                         <tr>
                             <td>render</td>
-                            <td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>
+                            <!--<td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>-->
+                            <td>自定义渲染列，使用 Vue 的 Render 函数。传入两个参数，第一个是 h，第二个为对象，包含 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例。<span style="color: #f50">兼容旧的 render 用法，但未来将废弃。</span></td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
@@ -563,7 +567,6 @@
                 <div class="ivu-article">
                     <blockquote>
                         <p>该表格来自于 TalkingData <a href="https://www.talkingdata.com/product-MarketingCloud.jsp" target="_blank">MarketingCloud</a> 产品，展示的是人群画像列表，数据为模拟数据，分页只是提供效果展示，并非真实拉取服务端数据。</p>
-                        <p>在单元格渲染自定义组件，比较难理解的是上下文，因为 iView 是通过 $compile() 在指定实例上进行编译的，你可以使用任何 Vue 的语法，但别忘了 render 函数返回的是字符串，注意看示例中的使用方法。</p>
                     </blockquote>
                 </div>
                 <Table :context="self" :data="tableData1" :columns="tableColumns1" stripe></Table>
@@ -711,48 +714,85 @@
                     {
                         title: '状态',
                         key: 'status',
-                        render (row) {
-                            const color = row.status == 1 ? 'blue' : row.status == 2 ? 'green' : 'red';
-                            const text = row.status == 1 ? '构建中' : row.status == 2 ? '构建完成' : '构建失败';
-                            return `<tag type="dot" color="${color}">${text}</tag>`;
+                        render: (h, params) => {
+                            const row = params.row;
+                            const color = row.status === 1 ? 'blue' : row.status === 2 ? 'green' : 'red';
+                            const text = row.status === 1 ? '构建中' : row.status === 2 ? '构建完成' : '构建失败';
+
+                            return h('Tag', {
+                                props: {
+                                    type: 'dot',
+                                    color: color
+                                }
+                            }, text);
                         }
                     },
                     {
                         title: '画像内容',
                         key: 'portrayal',
-                        render (row, column, index) {
-                            return`<Poptip trigger="hover" title="${row.portrayal.length}个画像" placement="bottom">
-                                       <tag>${row.portrayal.length}</tag>
-                                       <div slot="content">
-                                           <ul><li v-for="item in tableData1[${index}].portrayal" style="text-align: center;padding: 4px">{{ item }}</li></ul>
-                                       </div>
-                                   </Poptip>`;
+                        render: (h, params) => {
+                            return h('Poptip', {
+                                props: {
+                                    trigger: 'hover',
+                                    title: params.row.portrayal.length + '个画像',
+                                    placement: 'bottom'
+                                }
+                            }, [
+                                h('Tag', params.row.portrayal.length),
+                                h('div', {
+                                    slot: 'content'
+                                }, [
+                                    h('ul', this.tableData1[params.index].portrayal.map(item => {
+                                        return h('li', {
+                                            style: {
+                                                textAlign: 'center',
+                                                padding: '4px'
+                                            }
+                                        }, item)
+                                    }))
+                                ])
+                            ]);
                         }
                     },
                     {
                         title: '选定人群数',
                         key: 'people',
-                        render (row, column, index) {
-                            return`<Poptip trigger="hover" title="${row.people.length}个客群" placement="bottom">
-                                       <tag>${row.people.length}</tag>
-                                       <div slot="content">
-                                           <ul><li v-for="item in tableData1[${index}].people" style="text-align: center;padding: 4px">{{ item.n }}：{{ item.c }}人</li></ul>
-                                       </div>
-                                   </Poptip>`;
+                        render: (h, params) => {
+                            return h('Poptip', {
+                                props: {
+                                    trigger: 'hover',
+                                    title: params.row.people.length + '个客群',
+                                    placement: 'bottom'
+                                }
+                            }, [
+                                h('Tag', params.row.people.length),
+                                h('div', {
+                                    slot: 'content'
+                                }, [
+                                    h('ul', this.tableData1[params.index].people.map(item => {
+                                        return h('li', {
+                                            style: {
+                                                textAlign: 'center',
+                                                padding: '4px'
+                                            }
+                                        }, item.n + '：' + item.c + '人')
+                                    }))
+                                ])
+                            ]);
                         }
                     },
                     {
                         title: '取样时段',
                         key: 'time',
-                        render (row) {
-                            return `近${row.time}天`
+                        render: (h, params) => {
+                            return h('div', '近' + params.row.time + '天');
                         }
                     },
                     {
                         title: '更新时间',
                         key: 'update',
-                        render (row, column, index) {
-                            return `{{ formatDate(tableData1[${index}].update) }}`;
+                        render: (h, params) => {
+                            return h('div', this.formatDate(this.tableData1[params.index].update));
                         }
                     }
                 ],
@@ -817,8 +857,21 @@
                         key: 'action',
                         fixed: 'right',
                         width: 120,
-                        render () {
-                            return `<i-button type="text" size="small">查看</i-button><i-button type="text" size="small">编辑</i-button>`;
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Button', {
+                                    props: {
+                                        type: 'text',
+                                        size: 'small'
+                                    }
+                                }, '查看'),
+                                h('Button', {
+                                    props: {
+                                        type: 'text',
+                                        size: 'small'
+                                    }
+                                }, '编辑')
+                            ]);
                         }
                     }
                 ],
@@ -937,8 +990,15 @@
                     {
                         title: '姓名',
                         key: 'name',
-                        render (row, column, index) {
-                            return `<Icon type="person"></Icon> <strong>${row.name}</strong>`;
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Icon', {
+                                    props: {
+                                        type: 'person'
+                                    }
+                                }),
+                                h('strong', params.row.name)
+                            ]);
                         }
                     },
                     {
@@ -954,8 +1014,34 @@
                         key: 'action',
                         width: 150,
                         align: 'center',
-                        render (row, column, index) {
-                            return `<i-button type="primary" size="small" @click="show(${index})">查看</i-button> <i-button type="error" size="small" @click="remove(${index})">删除</i-button>`;
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Button', {
+                                    props: {
+                                        type: 'primary',
+                                        size: 'small'
+                                    },
+                                    style: {
+                                        marginRight: '5px'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.show(params.index)
+                                        }
+                                    }
+                                }, '查看'),
+                                h('Button', {
+                                    props: {
+                                        type: 'error',
+                                        size: 'small'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.remove(params.index)
+                                        }
+                                    }
+                                }, '删除')
+                            ]);
                         }
                     }
                 ],
@@ -1621,12 +1707,28 @@
                         key: 'name',
                         fixed: 'left',
                         width: 200,
-                        render (row, column, index) {
-                            return `
-                                    <Icon style="cursor: pointer" type="ios-star-outline" v-if="tableData2[${index}].fav === 0" @click.native="toggleFav(${index})"></Icon>
-                                    <Icon style="cursor: pointer;color:#f60" type="ios-star" v-if="tableData2[${index}].fav === 1" @click.native="toggleFav(${index})"></Icon>
-                                    <span>${row.name}</span>
-                                    `;
+                        render: (h, params) => {
+                            const fav = this.tableData2[params.index].fav;
+                            const style = fav === 0 ? {
+                                cursor: 'pointer'
+                            } : {
+                                cursor: 'pointer',
+                                color: '#f50'
+                            };
+
+                            return h('div', [
+                                h('Icon', {
+                                    style: style,
+                                    props: {
+                                        type: fav === 0 ? 'ios-star-outline' : 'ios-star'
+                                    },
+                                    nativeOn: {
+                                        click: () => {
+                                            this.toggleFav(params.index);
+                                        }
+                                    }
+                                })
+                            ]);
                         }
                     },
                     show: {

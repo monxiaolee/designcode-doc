@@ -400,8 +400,21 @@ code.fixed = `
                         key: 'action',
                         fixed: 'right',
                         width: 120,
-                        render () {
-                            return \`<i-button type="text" size="small">查看</i-button><i-button type="text" size="small">编辑</i-button>\`;
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Button', {
+                                    props: {
+                                        type: 'text',
+                                        size: 'small'
+                                    }
+                                }, '查看'),
+                                h('Button', {
+                                    props: {
+                                        type: 'text',
+                                        size: 'small'
+                                    }
+                                }, '编辑')
+                            ]);
                         }
                     }
                 ],
@@ -490,8 +503,21 @@ code.fixedAll = `
                         key: 'action',
                         fixed: 'right',
                         width: 120,
-                        render () {
-                            return \`<i-button type="text" size="small">查看</i-button><i-button type="text" size="small">编辑</i-button>\`;
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Button', {
+                                    props: {
+                                        type: 'text',
+                                        size: 'small'
+                                    }
+                                }, '查看'),
+                                h('Button', {
+                                    props: {
+                                        type: 'text',
+                                        size: 'small'
+                                    }
+                                }, '编辑')
+                            ]);
                         }
                     }
                 ],
@@ -843,8 +869,15 @@ code.render = `
                     {
                         title: '姓名',
                         key: 'name',
-                        render (row, column, index) {
-                            return \`<Icon type="person"></Icon> <strong>$\{row.name\}</strong>\`;
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Icon', {
+                                    props: {
+                                        type: 'person'
+                                    }
+                                }),
+                                h('strong', params.row.name)
+                            ]);
                         }
                     },
                     {
@@ -860,8 +893,34 @@ code.render = `
                         key: 'action',
                         width: 150,
                         align: 'center',
-                        render (row, column, index) {
-                            return \`<i-button type="primary" size="small" @click="show($\{index\})">查看</i-button> <i-button type="error" size="small" @click="remove($\{index\})">删除</i-button>\`;
+                        render: (h, params) => {
+                            return h('div', [
+                                h('Button', {
+                                    props: {
+                                        type: 'primary',
+                                        size: 'small'
+                                    },
+                                    style: {
+                                        marginRight: '5px'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.show(params.index)
+                                        }
+                                    }
+                                }, '查看'),
+                                h('Button', {
+                                    props: {
+                                        type: 'error',
+                                        size: 'small'
+                                    },
+                                    on: {
+                                        click: () => {
+                                            this.remove(params.index)
+                                        }
+                                    }
+                                }, '删除')
+                            ]);
                         }
                     }
                 ],
@@ -978,48 +1037,85 @@ code.table1 = `
                     {
                         title: '状态',
                         key: 'status',
-                        render (row) {
-                            const color = row.status == 1 ? 'blue' : row.status == 2 ? 'green' : 'red';
-                            const text = row.status == 1 ? '构建中' : row.status == 2 ? '构建完成' : '构建失败';
-                            return \`<tag type="dot" color="$\{color\}">$\{text\}</tag>\`;
+                        render: (h, params) => {
+                            const row = params.row;
+                            const color = row.status === 1 ? 'blue' : row.status === 2 ? 'green' : 'red';
+                            const text = row.status === 1 ? '构建中' : row.status === 2 ? '构建完成' : '构建失败';
+
+                            return h('Tag', {
+                                props: {
+                                    type: 'dot',
+                                    color: color
+                                }
+                            }, text);
                         }
                     },
                     {
                         title: '画像内容',
                         key: 'portrayal',
-                        render (row, column, index) {
-                            return \`<Poptip trigger="hover" title="$\{row.portrayal.length\}个画像" placement="bottom">
-                                        <tag>$\{row.portrayal.length\}</tag>
-                                        <div slot="content">
-                                            <ul><li v-for="item in tableData1[$\{index\}].portrayal" style="text-align: center;padding: 4px">{{ item }}</li></ul>
-                                        </div>
-                                    </Poptip>\`;
+                        render: (h, params) => {
+                            return h('Poptip', {
+                                props: {
+                                    trigger: 'hover',
+                                    title: params.row.portrayal.length + '个画像',
+                                    placement: 'bottom'
+                                }
+                            }, [
+                                h('Tag', params.row.portrayal.length),
+                                h('div', {
+                                    slot: 'content'
+                                }, [
+                                    h('ul', this.tableData1[params.index].portrayal.map(item => {
+                                        return h('li', {
+                                            style: {
+                                                textAlign: 'center',
+                                                padding: '4px'
+                                            }
+                                        }, item)
+                                    }))
+                                ])
+                            ]);
                         }
                     },
                     {
                         title: '选定人群数',
                         key: 'people',
-                        render (row, column, index) {
-                            return \`<Poptip trigger="hover" title="$\{row.people.length\}个客群" placement="bottom">
-                                        <tag>$\{row.people.length\}</tag>
-                                        <div slot="content">
-                                            <ul><li v-for="item in tableData1[$\{index\}].people" style="text-align: center;padding: 4px">{{ item.n }}：{{ item.c }}人</li></ul>
-                                        </div>
-                                    </Poptip>\`;
+                        render: (h, params) => {
+                            return h('Poptip', {
+                                props: {
+                                    trigger: 'hover',
+                                    title: params.row.people.length + '个客群',
+                                    placement: 'bottom'
+                                }
+                            }, [
+                                h('Tag', params.row.people.length),
+                                h('div', {
+                                    slot: 'content'
+                                }, [
+                                    h('ul', this.tableData1[params.index].people.map(item => {
+                                        return h('li', {
+                                            style: {
+                                                textAlign: 'center',
+                                                padding: '4px'
+                                            }
+                                        }, item.n + '：' + item.c + '人')
+                                    }))
+                                ])
+                            ]);
                         }
                     },
                     {
                         title: '取样时段',
                         key: 'time',
-                        render (row) {
-                            return \`近$\{row.time\}天\`
+                        render: (h, params) => {
+                            return h('div', '近' + params.row.time + '天');
                         }
                     },
                     {
                         title: '更新时间',
                         key: 'update',
-                        render (row, column, index) {
-                            return \`{{ formatDate(tableData1[$\{index\}].update) }}\`;
+                        render: (h, params) => {
+                            return h('div', this.formatDate(this.tableData1[params.index].update));
                         }
                     }
                 ]
@@ -1129,10 +1225,28 @@ code.table2 = `
                         key: 'name',
                         fixed: 'left',
                         width: 200,
-                        render (row, column, index) {
-                            return \`<Icon style="cursor: pointer" type="ios-star-outline" v-if="tableData2[$\{index\}].fav === 0" @click.native="toggleFav($\{index\})"></Icon>
-                                    <Icon style="cursor: pointer;color:#f60" type="ios-star" v-if="tableData2[$\{index\}].fav === 1" @click.native="toggleFav($\{index\})"></Icon>
-                                    <span>$\{row.name\}</span>\`;
+                        render: (h, params) => {
+                            const fav = this.tableData2[params.index].fav;
+                            const style = fav === 0 ? {
+                                cursor: 'pointer'
+                            } : {
+                                cursor: 'pointer',
+                                color: '#f50'
+                            };
+
+                            return h('div', [
+                                h('Icon', {
+                                    style: style,
+                                    props: {
+                                        type: fav === 0 ? 'ios-star-outline' : 'ios-star'
+                                    },
+                                    nativeOn: {
+                                        click: () => {
+                                            this.toggleFav(params.index);
+                                        }
+                                    }
+                                })
+                            ]);
                         }
                     },
                     show: {
