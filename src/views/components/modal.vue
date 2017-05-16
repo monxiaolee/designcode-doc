@@ -193,8 +193,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>visible</td>
-                            <td>对话框是否显示。需要使用<code>.sync</code>双向绑定，否则改变状态时并不能改变使用者的数据</td>
+                            <td>value</td>
+                            <td>对话框是否显示，可使用 v-model 双向绑定数据。</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
