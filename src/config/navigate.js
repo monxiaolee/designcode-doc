@@ -383,7 +383,7 @@ const list = {
     ],
     live: [
         {
-            title: '最新直播',
+            title: '最新课程',
             path: '/live'
         }
     ]

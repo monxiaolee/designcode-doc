@@ -251,6 +251,12 @@
                             <td>加载中</td>
                         </tr>
                         <tr>
+                            <td>label</td>
+                            <td>仅在 remote 模式下，初始化时使用。因为仅通过 value 无法得知选项的 label，需手动设置。</td>
+                            <td>String | Number | Array</td>
+                            <td>空</td>
+                        </tr>
+                        <tr>
                             <td>size</td>
                             <td>选择框大小，可选值为<code>large</code>和<code>small</code>或者不填</td>
                             <td>String</td>

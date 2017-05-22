@@ -3,6 +3,13 @@
 </style>
 <template>
     <div class="navigate">
+        <div class="ad" @click="handleAd">
+            <div class="ad-main">
+                <a href="https://segmentfault.com/l/1500000009448056" target="_blank">
+                    <img src="../images/ad.png">
+                </a>
+            </div>
+        </div>
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'guide'">
             <Menu-item v-for="item in navigate.guide" :key="item" :name="item.path">
                 <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
@@ -74,6 +81,9 @@
                 this.$nextTick(() => {
                     this.$router.push(path);
                 });
+            },
+            handleAd () {
+                this.$router.push('/live');
             }
         },
         created () {

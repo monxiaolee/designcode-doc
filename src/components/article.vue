@@ -128,9 +128,9 @@
         </Modal>
         <Modal v-model="ask" title="提问" @on-ok="handleModalClose" @on-cancel="handleModalClose" :styles="{top: '20px'}">
             <div class="ivu-article">
-                <p>如果您在开发中遇到任何问题，包括但不限于 iView、JavaScript、Vue、Webpack、Canvas、WebGL、Node.js 等相关技术，可以加入小密圈和我们一对一提问，收到问题后，我们会在 10 ~ 30 分钟内解答。</p>
+                <p>如果您在开发中遇到问题，包括但不限于 iView、JavaScript、Vue、Webpack 等相关技术，可以加入小密圈和我们一对一提问，收到问题后，我们会在 30 分钟内解答。</p>
                 <p>因为提供高质量的答疑服务，所以我们暂时收费 <span style="color: #f50">￥98/年</span> 。</p>
-                <p>如果您不愿意付费，仍然可以在 GitHub 提交与 iView 相关的 issues，我们也会逐一解答。</p>
+                <p>如果您不愿意付费，可以在 GitHub 提交与 iView 相关的 issues，或到 <a href="https://segmentfault.com/t/iview" target="_blank">社区</a>讨论。</p>
                 <div>
                     <img src="../images/miquan.jpg" style="width: 300px;margin: 0 auto;display: block;">
                 </div>

@@ -25,6 +25,22 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.14" h2></Anchor>
+                    <p>
+                        <code>2017-05-22</code>
+                    </p>
+                    <ul>
+                        <li>修复 Table 重复调用 render 函数的问题。</li>
+                        <li>Select 新增 prop: label，用于 remote 模式。</li>
+                        <li>修复 Select 在单选 remote 模式下，选中显示为 value 而不是 label 的bug。<issue id="915"></issue></li>
+                        <li>修复 Select 在 remote 模式下，设置初始值不生效的bug。<issue id="952"></issue></li>
+                        <li>优化 Select 在搜索模式下，手动赋值后，第一次展开显示为全部候选项。<issue id="957"></issue></li>
+                        <li>修复 Cascader 在搜索模式下，搜索结果过多时内容溢出的bug。</li>
+                        <li>优化 Cascader 在动态加载选项时，调用 loadData 的时机。<issue id="941"></issue></li>
+                        <li>修复 Form 在只有一个 Input 元素时，回车触发 submit 事件的问题。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.13" h2>
                         <span class="doc-update-important">重要更新</span>
                     </Anchor>

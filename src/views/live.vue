@@ -44,7 +44,7 @@
                     <i-col span="14">
                         <div class="live-info">
                             <div class="live-title">{{ item.title }}</div>
-                            <div class="live-time">开播时间：{{ item.time }}</div>
+                            <div class="live-time" v-if="item.time !== 'finish'">开播时间：{{ item.time }}</div>
                             <div class="live-cost">报名费用：<span style="color: #ff5500">{{ item.cost }}</span></div>
                             <div class="live-desc">{{ item.desc }}</div>
                         </div>
@@ -53,7 +53,8 @@
                         <div class="live-link">
                             <i-button type="primary" @click="handleClick(index)">
                                 <div><Icon type="android-arrow-dropright-circle" size="20"></Icon></div>
-                                <div>报名参加</div>
+                                <div v-if="item.time === 'finish'">查看回放</div>
+                                <div v-else>报名参加</div>
                             </i-button>
                         </div>
                     </i-col>
@@ -76,8 +77,24 @@
             return {
                 list: [
                     {
+                        title: 'Vue.js 实战之组件篇（上）',
+                        time: '2017-06-21 20:00',
+                        cost: '9.9元',
+                        cover: 'https://ooo.0o0.ooo/2017/05/22/59227ada0b65c.png',
+                        desc: '组件（Component）是 Vue.js 最核心的功能，也是整个框架设计最精彩的地方，当然也是最难掌握的。本课程将带领你由浅入深地学习组件的全部内容，并通过几个实战项目熟练使用 Vue 组件。',
+                        link: 'https://segmentfault.com/l/1500000009448056'
+                    },
+                    {
+                        title: 'Vue.js 实战之组件篇（下）',
+                        time: '2017-07-01 20:00',
+                        cost: '9.9元',
+                        cover: 'https://ooo.0o0.ooo/2017/05/22/59227ada0b65c.png',
+                        desc: '高效的开发，离不开基础工程的搭建。本课程主要介绍目前热门的 JavaScript 应用程序的模块打包工具 webpack。在开始学习本章前，需要先安装 Node.js 和 npm，如果你不熟悉它们，可以先查阅相关资料，完成安装并了解 npm 最基本的用法。',
+                        link: 'https://segmentfault.com/l/1500000009448189'
+                    },
+                    {
                         title: 'Vue.js 实战之 Render 函数',
-                        time: '2017-04-26 20:00',
+                        time: 'finish',
                         cost: '9.9元',
                         cover: 'https://ooo.0o0.ooo/2017/04/04/58e351fae6021.png',
                         desc: '关于 Vue.js 2中 Render 函数的详解，及项目实战。主要内容为：Virtual DOM 与 Vue 2 的 Render 函数介绍；Render 函数使用场景；createElement 用法；函数化组件及实战；实战：用 Render 函数开发一个可排序的表格组件；Q & A',
@@ -85,8 +102,8 @@
                     },
                     {
                         title: '基于 Vue.js 2.x 的 iView 组件开发实践',
-                        time: '2017-03-23 20:00',
-                        cost: '1元',
+                        time: 'finish',
+                        cost: '6.6元',
                         cover: 'https://ooo.0o0.ooo/2017/03/16/58c96bdc984ec.jpeg',
                         desc: 'iView 2.0 版本发布了测试版，已全面支持 Vue.js 2.x。直播主要介绍 iView 2.0 的组件开发实践。主要内容为：升级 2.0 经验分享；部分组件设计思路；Q & A',
                         link: 'https://segmentfault.com/l/1500000008614960'
