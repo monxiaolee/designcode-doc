@@ -43,7 +43,7 @@
             if (window.localStorage.getItem('liveModalTime')) {
                 const time = parseInt(window.localStorage.getItem('liveModalTime'));
                 const today = this.getTodayUnix();
-                if ((today - time) > 86400000 * 7) this.liveVisible = true;
+                if ((today - time) > 86400000 * 5) this.liveVisible = true;
             } else {
                 this.liveVisible = true;
             }
@@ -53,13 +53,13 @@
                     top: 85
                 });
                 this.$Notice.info({
-                    title: 'Recruiting Translation Volunteer',
-                    desc: 'iView team are recruting volunteers to help us translate the document. If you master both Chinese and English, we are looking forward to your joining in our translation plan and help us improve iView. If you want to join in the translation plan, please send E-Mail to <a href="mailto:admin@aresn.com">admin@aresn.com</a>',
+                    title: '最新课程通知',
+                    desc: '6月21日和7月1日直播《Vue.js 实战之组件篇》，本课程将带领你由浅入深地学习组件的全部内容及 webpack，并通过几个实战项目熟练使用 Vue 组件。往期课程请点击菜单的"讲堂"查看。<br><a href="https://segmentfault.com/l/1500000009448056" target="_blank">报名参加 Vue.js 实战之组件篇（上）</a><br><a href="https://segmentfault.com/l/1500000009448189" target="_blank">报名参加 Vue.js 实战之组件篇（下）</a>',
                     duration: 0,
                     onClose: () => {
                         const today = this.getTodayUnix();
                         window.localStorage.setItem('liveModalTime', today);
-                        this.$Message.success('关闭成功，一周内不再提示', 5);
+                        this.$Message.success('关闭成功，近期不再提示', 4);
                     }
                 });
                 this.$Notice.config({

@@ -5,9 +5,7 @@
     <div class="navigate">
         <div class="ad" @click="handleAd">
             <div class="ad-main">
-                <a href="https://segmentfault.com/l/1500000009448056" target="_blank">
-                    <img src="../images/ad.png">
-                </a>
+                <img src="../images/ad.png">
             </div>
         </div>
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'guide'">
@@ -51,6 +49,11 @@
                 <template v-else>{{ item.titleEn }}</template>
             </Menu-item>
         </Menu>
+        <Modal v-model="showAd" title="Recruiting Translation Volunteer">
+            <div class="i-article">
+                <p style="font-size: 16px;">iView team are recruting volunteers to help us translate the document. If you master both Chinese and English, we are looking forward to your joining in our translation plan and help us improve iView. If you want to join in the translation plan, please send E-Mail to <a href="mailto:admin@aresn.com">admin@aresn.com</a></p>
+            </div>
+        </Modal>
     </div>
 </template>
 <script>
@@ -69,7 +72,8 @@
                 navigate: navigate,
                 showDot: false,
                 activeKey: this.$route.path,
-                lang: this.$lang
+                lang: this.$lang,
+                showAd: false
             }
         },
         methods: {
@@ -83,7 +87,8 @@
                 });
             },
             handleAd () {
-                this.$router.push('/live');
+//                this.$router.push('/live');
+                this.showAd = true;
             }
         },
         created () {

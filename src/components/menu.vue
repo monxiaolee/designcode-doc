@@ -36,12 +36,12 @@
                     <Icon type="settings"></Icon>
                     {{ $t('index.cli') }}
                 </Menu-item>
-                <!--<Menu-item name="live">-->
-                    <!--<Badge :dot="liveDot">-->
-                        <!--<Icon type="ios-mic"></Icon>-->
-                        <!--{{ $t('index.live') }}-->
-                    <!--</Badge>-->
-                <!--</Menu-item>-->
+                <Menu-item name="live">
+                    <Badge :dot="liveDot">
+                        <Icon type="ios-mic"></Icon>
+                        {{ $t('index.live') }}
+                    </Badge>
+                </Menu-item>
                 <Menu-item name="practice">
                     <Icon type="ios-analytics"></Icon>
                     {{ $t('index.practice') }}
