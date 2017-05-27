@@ -24,9 +24,9 @@
             <p>iView use the safe blue colors as the primary colors, among which the <strong>Light Primary</strong> is usually used for <i>hover</i> state while the <strong>Dark Primary</strong> for <i>active</i>.</p>
             <Row :gutter="16">
                 <i-col span="8">
-                    <Card :bordered="false" style="background:#3399ff">
+                    <Card :bordered="false" style="background:#2d8cf0">
                         <div class="demo-color-name">Primary</div>
-                        <div class="demo-color-desc">#3399ff</div>
+                        <div class="demo-color-desc">#2d8cf0</div>
                     </Card>
                 </i-col>
                 <i-col span="8">
@@ -53,9 +53,9 @@
                     </Card>
                 </i-col>
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#00cc66">
+                    <Card :bordered="false" style="background:#19be6b">
                         <div class="demo-color-name">Success</div>
-                        <div class="demo-color-desc">#00cc66</div>
+                        <div class="demo-color-desc">#19be6b</div>
                     </Card>
                 </i-col>
                 <i-col span="6">
@@ -65,9 +65,9 @@
                     </Card>
                 </i-col>
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#ff3300">
+                    <Card :bordered="false" style="background:#ed3f14">
                         <div class="demo-color-name">Error</div>
-                        <div class="demo-color-desc">#ff3300</div>
+                        <div class="demo-color-desc">#ed3f14</div>
                     </Card>
                 </i-col>
             </Row>
@@ -76,48 +76,48 @@
             <p>Neutral colors are usually used for text, background, border, shadow, etc, showing the hierachical structure of the page.</p>
             <Row :gutter="16">
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#464c5b">
+                    <Card :bordered="false" style="background:#1c2438">
                         <div class="demo-color-name">Title</div>
-                        <div class="demo-color-desc">#464c5b</div>
+                        <div class="demo-color-desc">#1c2438</div>
                     </Card>
                 </i-col>
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#657180">
+                    <Card :bordered="false" style="background:#495060">
                         <div class="demo-color-name">Content</div>
-                        <div class="demo-color-desc">#657180</div>
+                        <div class="demo-color-desc">#495060</div>
                     </Card>
                 </i-col>
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#9ea7b4">
+                    <Card :bordered="false" style="background:#80848f">
                         <div class="demo-color-name">Sub Color</div>
-                        <div class="demo-color-desc">#9ea7b4</div>
+                        <div class="demo-color-desc">#80848f</div>
                     </Card>
                 </i-col>
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#c3cbd6">
+                    <Card :bordered="false" style="background:#bbbec4">
                         <div class="demo-color-name">Disabled</div>
-                        <div class="demo-color-desc">#c3cbd6</div>
+                        <div class="demo-color-desc">#bbbec4</div>
                     </Card>
                 </i-col>
             </Row>
             <br>
             <Row :gutter="16">
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#d7dde4">
+                    <Card :bordered="false" style="background:#dddee1">
                         <div class="demo-color-name dark">Border</div>
-                        <div class="demo-color-desc dark">#d7dde4</div>
+                        <div class="demo-color-desc dark">#dddee1</div>
                     </Card>
                 </i-col>
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#e3e8ee">
+                    <Card :bordered="false" style="background:#e9eaec">
                         <div class="demo-color-name dark">Divider</div>
-                        <div class="demo-color-desc dark">#e3e8ee</div>
+                        <div class="demo-color-desc dark">#e9eaec</div>
                     </Card>
                 </i-col>
                 <i-col span="6">
-                    <Card :bordered="false" style="background:#f5f7f9">
+                    <Card :bordered="false" style="background:#f8f8f9">
                         <div class="demo-color-name dark">Background</div>
-                        <div class="demo-color-desc dark">#f5f7f9</div>
+                        <div class="demo-color-desc dark">#f8f8f9</div>
                     </Card>
                 </i-col>
             </Row>
