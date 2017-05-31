@@ -391,6 +391,16 @@
                                 当前行的数据
                             </td>
                         </tr>
+                        <tr>
+                            <td>on-expand</td>
+                            <td>展开或收起某一行时触发</td>
+                            <td>
+                                <ul>
+                                    <li><code>row</code>：当前行的数据</li>
+                                    <li><code>status</code>：当前的状态</li>
+                                </ul>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                     <Anchor title="Table slot" h3></Anchor>
