@@ -43,28 +43,37 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.time }}</i-code>
             </Demo>
+            <Demo title="Closable">
+                <div slot="demo">
+                    <Button @click="closable">Display a closable message.</Button>
+                </div>
+                <div slot="desc">
+                    <p>Set parameter as an object, and set its <code>closable</code> to true to allow manual close. Details on API Doc.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.closable }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Message instance" h3></Anchor>
                 <p>This component can be used with the following static methods:</p>
                 <ul>
                     <li>
-                        <code>this.$Message.info(content, duration, onClose)</code>
+                        <code>this.$Message.info(config)</code>
                     </li>
                     <li>
-                        <code>this.$Message.success(content, duration, onClose)</code>
+                        <code>this.$Message.success(config)</code>
                     </li>
                     <li>
-                        <code>this.$Message.warning(content, duration, onClose)</code>
+                        <code>this.$Message.warning(config)</code>
                     </li>
                     <li>
-                        <code>this.$Message.error(content, duration, onClose)</code>
+                        <code>this.$Message.error(config)</code>
                     </li>
                     <li>
-                        <code>this.$Message.loading(content, duration, onClose)</code>
+                        <code>this.$Message.loading(config)</code>
                     </li>
                 </ul>
-                <p>The methods above implicitly create and maintain Vue components. Parameters are explained below:</p>
+                <p>The methods above implicitly create and maintain Vue components. Parameter config can be string or object. When string, the content will be directly displayed, when object, the detail usage is explained below:</p>
                 <table>
                     <thead>
                         <tr>
@@ -93,6 +102,12 @@
                             <td>Function</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>closable</td>
+                            <td>Whether to show a close button.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <p>Methods for global configuration and disposal are also provided:</p>
@@ -119,7 +134,7 @@
                     <tbody>
                         <tr>
                             <td>top</td>
-                            <td>Prompt's distance from top, in pixels</td>
+                            <td>Prompt's distance from top, in pixels.</td>
                             <td>Number</td>
                             <td>24</td>
                         </tr>
@@ -168,11 +183,24 @@
                 this.$Message.error('对方不想说话，并且向你抛出了一个异常');
             },
             loading () {
-                const msg = this.$Message.loading('正在加载中...', 0);
+                const msg = this.$Message.loading({
+                    content: '正在加载中...',
+                    duration: 0
+                });
                 setTimeout(msg, 3000);
             },
             time () {
-                this.$Message.info('我将在10秒后消失', 10);
+                this.$Message.info({
+                    content: '我将在10秒后消失',
+                    duration: 10
+                });
+            },
+            closable () {
+                this.$Message.info({
+                    content: '可手动关闭的提示',
+                    duration: 10,
+                    closable: true
+                });
             }
         }
     }

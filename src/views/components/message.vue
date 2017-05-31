@@ -43,28 +43,37 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.time }}</i-code>
             </Demo>
+            <Demo title="可关闭">
+                <div slot="demo">
+                    <Button @click="closable">显示一个可关闭的提示</Button>
+                </div>
+                <div slot="desc">
+                    <p>将参数设置为一个对象，并指定 <code>closable</code> 为 true 后可以手动关闭提示，完整参数详见API。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.closable }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Message instance" h3></Anchor>
                 <p>通过直接调用以下方法来使用组件：</p>
                 <ul>
                     <li>
-                        <code>this.$Message.info(content, duration, onClose)</code>
+                        <code>this.$Message.info(config)</code>
                     </li>
                     <li>
-                        <code>this.$Message.success(content, duration, onClose)</code>
+                        <code>this.$Message.success(config)</code>
                     </li>
                     <li>
-                        <code>this.$Message.warning(content, duration, onClose)</code>
+                        <code>this.$Message.warning(config)</code>
                     </li>
                     <li>
-                        <code>this.$Message.error(content, duration, onClose)</code>
+                        <code>this.$Message.error(config)</code>
                     </li>
                     <li>
-                        <code>this.$Message.loading(content, duration, onClose)</code>
+                        <code>this.$Message.loading(config)</code>
                     </li>
                 </ul>
-                <p>以上方法隐式的创建及维护Vue组件。参数说明如下：</p>
+                <p>以上方法隐式的创建及维护 Vue 组件。参数 config 可以是字符串或对象，当为字符串时，直接显示内容，当为对象时，具体说明如下：</p>
                 <table>
                     <thead>
                         <tr>
@@ -92,6 +101,12 @@
                             <td>关闭时的回调</td>
                             <td>Function</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>closable</td>
+                            <td>是否显示关闭按钮</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                     </tbody>
                 </table>
@@ -168,11 +183,24 @@
                 this.$Message.error('对方不想说话，并且向你抛出了一个异常');
             },
             loading () {
-                const msg = this.$Message.loading('正在加载中...', 0);
+                const msg = this.$Message.loading({
+                    content: '正在加载中...',
+                    duration: 0
+                });
                 setTimeout(msg, 3000);
             },
             time () {
-                this.$Message.info('我将在10秒后消失', 10);
+                this.$Message.info({
+                    content: '我将在10秒后消失',
+                    duration: 10
+                });
+            },
+            closable () {
+                this.$Message.info({
+                    content: '可手动关闭的提示',
+                    duration: 10,
+                    closable: true
+                });
             }
         }
     }

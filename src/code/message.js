@@ -46,7 +46,10 @@ code.loading = `
     export default {
         methods: {
             loading () {
-                const msg = this.$Message.loading('正在加载中...', 0);
+                const msg = this.$Message.loading({
+                    content: '正在加载中...',
+                    duration: 0
+                });
                 setTimeout(msg, 3000);
             },
         }
@@ -61,9 +64,10 @@ code.time = `
 <script>
     export default {
         methods: {
-            time () {
-                this.$Message.info('我将在10秒后消失', 10);
-            }
+            this.$Message.info({
+                content: '我将在10秒后消失',
+                duration: 10
+            });
         }
     }
 </script>
@@ -74,6 +78,25 @@ this.$Message.config({
     top: 50,
     duration: 3
 });
+`;
+
+code.closable = `
+<template>
+    <Button @click="closable">显示一个可关闭的提示</Button>
+</template>
+<script>
+    export default {
+        methods: {
+            closable () {
+                this.$Message.info({
+                    content: '可手动关闭的提示',
+                    duration: 10,
+                    closable: true
+                });
+            }
+        }
+    }
+</script>
 `;
 
 export default code;
