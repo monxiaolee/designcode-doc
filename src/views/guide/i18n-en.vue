@@ -19,6 +19,7 @@
                 <li>Turkish(tr-TR)</li>
                 <li>Spanish(es-ES)</li>
                 <li>Japanese(ja-JP)</li>
+                <li>Russian(ru-RU)</li>
             </ul>
             <p>If your target language is not included, you are more than welcome to contribute: <a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">Supported Languages</a></p>
         </article>

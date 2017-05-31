@@ -164,6 +164,7 @@
                     <div slot="desc">
                         <p>通过给 <code>columns</code> 数据的项，设置一个函数 <code>render</code>，可以自定义渲染当前列，包括渲染自定义组件，它基于 Vue 的 Render 函数。</p>
                         <p><code>render</code> 函数传入两个参数，第一个是 h，第二个是对象，包含 <code>row</code>、<code>column</code> 和 <code>index</code>，分别指当前单元格数据，当前列数据，当前是第几行。</p>
+                        <p><study-render></study-render></p>
                         <blockquote>
                             <p style="color: #f50">以下只适用于 rc.13 以前的版本，未来将废弃，请勿过多依赖旧用法。</p>
                             <p>旧用法必须设置 context 。</p>
@@ -181,6 +182,7 @@
                         <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'expand'</code>，即可开启扩展功能。</p>
                         <p>给行数据 data 的某项设置 <code>_expanded</code> 为 true，可以默认展开当前行。</p>
                         <p>渲染展开区域与自定义列模板方法类似，使用 render 函数。当内容较复杂时，可拆分为组件或使用 JSX。</p>
+                        <p><study-render></study-render></p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.expand }}</i-code>
                 </Demo>
@@ -528,7 +530,7 @@
                         <tr>
                             <td>render</td>
                             <!--<td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>-->
-                            <td>自定义渲染列，使用 Vue 的 Render 函数。传入两个参数，第一个是 h，第二个为对象，包含 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例。<span style="color: #f50">兼容旧的 render 用法，但未来将废弃。</span></td>
+                            <td>自定义渲染列，使用 Vue 的 Render 函数。传入两个参数，第一个是 h，第二个为对象，包含 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例。<study-render></study-render> <span style="color: #f50">兼容旧的 render 用法，但未来将废弃。</span></td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
@@ -665,6 +667,7 @@
     import Anchor from '../../components/anchor.vue';
 
     import expandRow from './table-expand.vue';
+    import studyRender from '../../components/render.vue';
 
     export default {
         components: {
@@ -672,7 +675,8 @@
             iCode,
             Demo,
             Anchor,
-            expandRow
+            expandRow,
+            studyRender
         },
         data () {
             return {

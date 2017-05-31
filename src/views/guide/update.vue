@@ -25,6 +25,22 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.15" h2></Anchor>
+                    <p>
+                        <code>2017-05-31</code>
+                    </p>
+                    <ul>
+                        <li>Table 新增可展开功能。</li>
+                        <li>Message 支持可关闭，并调整参数。<router-link to="/components/message">查看</router-link></li>
+                        <li>Input 增加 type 为 textarea 时的 autofocus。<issue id="1017"></issue></li>
+                        <li>修复 Table 新 render 方法重复渲染组件的bug。<issue id="1011"></issue></li>
+                        <li>修复 Select 在 remote 模式下，绑定初始值但没有设置 label 时报错的问题。<issue id="978"></issue></li>
+                        <li>修复 BackTop 不支持 IE、Firefox 浏览器的bug。<issue id="995"></issue></li>
+                        <li>调整配色。</li>
+                        <li>新增俄语。<mention id="explosivebit"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.14" h2></Anchor>
                     <p>
                         <code>2017-05-22</code>
