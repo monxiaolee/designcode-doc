@@ -31,7 +31,7 @@
                     <p>Scroll down. The blue button shows the customized BackTop style.</p>
                 </div>
                 <div slot="desc">
-                    <p>Custimize the position of the BackTop button at 100px to the bottom, and display when scroll to 100px to the top.</p>
+                    <p>Custimize the position of the BackTop button at 200px to the bottom, and display when scroll to 200px to the top.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.custom }}</i-code>
             </Demo>

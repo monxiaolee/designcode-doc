@@ -31,7 +31,7 @@
                     <p>向下滚动页面，蓝色的按钮为自定义效果。</p>
                 </div>
                 <div slot="desc">
-                    <p>自定义了位置在页面底部 100px,滚动至距顶端 100px 时显示。</p>
+                    <p>自定义了位置在页面底部 200px,滚动至距顶端 200px 时显示。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.custom }}</i-code>
             </Demo>
