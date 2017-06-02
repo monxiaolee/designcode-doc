@@ -180,7 +180,7 @@
                     <div slot="desc">
                         <p>当表格内容较多不能一次性完全展示时使用。</p>
                         <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'expand'</code>，即可开启扩展功能。</p>
-                        <p>给行数据 data 的某项设置 <code>_expanded</code> 为 true，可以默认展开当前行。</p>
+                        <p>给行数据 data 的某项设置 <code>_expanded</code> 为 true，可以默认展开当前行，设置 <code>_disableExpand</code> 可以禁用当前行的展开功能。</p>
                         <p>渲染展开区域与自定义列模板方法类似，使用 render 函数。当内容较复杂时，可拆分为组件或使用 JSX。</p>
                         <p><study-render></study-render></p>
                     </div>
