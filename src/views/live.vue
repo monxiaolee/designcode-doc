@@ -45,7 +45,7 @@
                         <div class="live-info">
                             <div class="live-title">{{ item.title }}</div>
                             <div class="live-time" v-if="item.time !== 'finish'">开播时间：{{ item.time }}</div>
-                            <div class="live-cost">报名费用：<span style="color: #ff5500">{{ item.cost }}</span></div>
+                            <!--<div class="live-cost">报名费用：<span style="color: #ff5500">{{ item.cost }}</span></div>-->
                             <div class="live-desc">{{ item.desc }}</div>
                         </div>
                     </i-col>
