@@ -179,6 +179,22 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.confirm }}</i-code>
             </Demo>
+            <Demo title="自定义内容">
+                <div slot="demo">
+                    <p>
+                        姓名：{{ value }}
+                    </p>
+                    <p>
+                        <Button @click="render">自定义内容</Button>
+                    </p>
+                </div>
+                <div slot="desc">
+                    <p>使用 <code>render</code> 字段可以基于 Render 函数来自定义内容。</p>
+                    <p>使用 render 后，将不再限制类型，content 也将无效。</p>
+                    <p><study-render></study-render></p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.render }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Modal props" h3></Anchor>
@@ -358,6 +374,12 @@
                             <td>-</td>
                         </tr>
                         <tr>
+                            <td>render</td>
+                            <td>自定义内容，使用后不再限制类型， content 也无效。<study-render></study-render></td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>width</td>
                             <td>宽度，单位 px</td>
                             <td>Number | String</td>
@@ -417,13 +439,15 @@
     import Demo from '../../components/demo.vue';
     import Code from '../../code/modal';
     import Anchor from '../../components/anchor.vue';
+    import studyRender from '../../components/render.vue';
 
     export default {
         components: {
             iArticle,
             iCode,
             Demo,
-            Anchor
+            Anchor,
+            studyRender
         },
         data () {
             return {
@@ -439,7 +463,8 @@
                 modal7: false,
                 modal8: false,
                 modal9: false,
-                modal10: false
+                modal10: false,
+                value: ''
             }
         },
         methods: {
@@ -524,6 +549,24 @@
                         }, 2000);
                     }
                 });
+            },
+            render () {
+                this.$Modal.confirm({
+                    render: (h) => {
+                        return h('Input', {
+                            props: {
+                                value: this.value,
+                                autofocus: true,
+                                placeholder: 'Please enter your name...'
+                            },
+                            on: {
+                                input: (val) => {
+                                    this.value = val;
+                                }
+                            }
+                        })
+                    }
+                })
             }
         }
     }

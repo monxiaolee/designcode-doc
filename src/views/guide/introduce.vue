@@ -28,8 +28,10 @@
             </p>
             <Anchor title="兼容" h2></Anchor>
             <ul>
-                <li>Vue.js 2.x</li>
-                <li>Vue.js 1.x <a href="http://v1.iviewui.com">查看 1.0 文档</a></li>
+                <li>支持 Vue.js 2.x</li>
+                <li>支持 Vue.js 1.x <a href="http://v1.iviewui.com">查看 1.0 文档</a></li>
+                <li>支持服务端渲染</li>
+                <li><a href="http://electron.atom.io/" target="_blank">Electron</a></li>
                 <li>由于 <a href="https://cn.vuejs.org/v2/guide/reactivity.html" target="_blank">Vue.js</a> 是基于Object.defineProperty实现数据追踪，故不支持IE8及更低版本的浏览器。</li>
             </ul>
             <Anchor title="相关链接" h2></Anchor>

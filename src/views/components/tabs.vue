@@ -120,6 +120,20 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.closable }}</i-code>
             </Demo>
+            <Demo title="自定义标签页">
+                <div slot="demo">
+                    <Tabs value="name1">
+                        <Tab-pane :label="label" name="name1">标签一的内容</Tab-pane>
+                        <Tab-pane label="标签二" name="name2">标签二的内容</Tab-pane>
+                        <Tab-pane label="标签三" name="name3">标签三的内容</Tab-pane>
+                    </Tabs>
+                </div>
+                <div slot="desc">
+                    <p>设置 label 为 Render 函数后，可以自定义标签页的内容。</p>
+                    <p><study-render></study-render></p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.render }}</i-code>
+            </Demo>
             <Demo title="附加内容">
                 <div slot="demo">
                     <Tabs type="card">
@@ -270,8 +284,8 @@
                         </tr>
                         <tr>
                             <td>label</td>
-                            <td>选项卡头显示文字</td>
-                            <td>String</td>
+                            <td>选项卡头显示文字，支持 Render 函数。<study-render></study-render></td>
+                            <td>String | Function</td>
                             <td>空</td>
                         </tr>
                         <tr>
@@ -304,13 +318,15 @@
     import Demo from '../../components/demo.vue';
     import Code from '../../code/tabs';
     import Anchor from '../../components/anchor.vue';
+    import studyRender from '../../components/render.vue';
 
     export default {
         components: {
             iArticle,
             iCode,
             Demo,
-            Anchor
+            Anchor,
+            studyRender
         },
         data () {
             return {
@@ -318,7 +334,17 @@
                 tab0: true,
                 tab1: true,
                 tab2: true,
-                tabs: 2
+                tabs: 2,
+                label: (h) => {
+                    return h('div', [
+                        h('span', '标签一'),
+                        h('Badge', {
+                            props: {
+                                count: 3
+                            }
+                        })
+                    ])
+                }
             }
         },
         methods: {

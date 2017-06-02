@@ -22,8 +22,10 @@
             </p>
             <Anchor title="Compatibility" h2></Anchor>
             <ul>
-                <li>Vue.js 2.x</li>
-                <li>Vue.js 1.x <a href="http://v1.iviewui.com">Visit 1.0 doc</a></li>
+                <li>Support Vue.js 2.x</li>
+                <li>Support Vue.js 1.x <a href="http://v1.iviewui.com">Visit 1.0 doc</a></li>
+                <li>Support SSR</li>
+                <li><a href="http://electron.atom.io/" target="_blank">Electron</a></li>
                 <li>iView does not support IE8 or below since <a href="https://vuejs.org/v2/guide/reactivity.html" target="_blank">Vue.js</a> is using Object.defineProperty which do not be supported by these browsers to track changes.</li>
             </ul>
             <Anchor title="Related Links" h2></Anchor>

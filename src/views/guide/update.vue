@@ -25,6 +25,25 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Icon type="social-apple-outline" size="18" slot="dot"></Icon>
+                    <Anchor title="2.0.0-rc.16" h2></Anchor>
+                    <p>
+                        <code>2017-06-06</code>
+                    </p>
+                    <ul>
+                        <li>支持 SSR。</li>
+                        <li>$Modal 内容支持自定义组件。<issue id="1041"></issue></li>
+                        <li>Tabs 支持自定义标签页。</li>
+                        <li>Table 可单独设置某行禁用展开功能。</li>
+                        <li>Menu 增加展开时的过渡动画。<issue id="514"></issue></li>
+                        <li>Collapse 增加展开时的过渡动画。</li>
+                        <li>Tree 增加展开时的过渡动画。</li>
+                        <li>修复 Notice 的 destroy 方法无法使用的bug。<issue id="1054"></issue> <mention id="lcx960324"></mention></li>
+                        <li>修复 Badge 判断类型错误导致渲染错误的bug。<issue id="646"></issue></li>
+                        <li>新增法语。<mention id="LekisS"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.15" h2></Anchor>
                     <p>
                         <code>2017-05-31</code>
