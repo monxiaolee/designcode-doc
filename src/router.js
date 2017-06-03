@@ -479,6 +479,13 @@ const routers = [
         component: (resolve) => require(['./views/components/modal.vue'], resolve)
     },
     {
+        path: '/components/modal-en',
+        meta: {
+            title: 'Modal'
+        },
+        component: (resolve) => require(['./views/components/modal-en.vue'], resolve)
+    },
+    {
         path: '/components/progress',
         meta: {
             title: '进度条 Progress'
