@@ -472,6 +472,13 @@ const routers = [
         component: (resolve) => require(['./views/components/notice.vue'], resolve)
     },
     {
+        path: '/components/notice-en',
+        meta: {
+            title: 'Notice'
+        },
+        component: (resolve) => require(['./views/components/notice-en.vue'], resolve)
+    },
+    {
         path: '/components/modal',
         meta: {
             title: '对话框 Modal'
