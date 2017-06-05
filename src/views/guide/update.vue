@@ -28,7 +28,7 @@
                     <Icon type="social-apple-outline" size="18" slot="dot"></Icon>
                     <Anchor title="2.0.0-rc.16" h2></Anchor>
                     <p>
-                        <code>2017-06-06</code>
+                        <code>2017-06-05</code>
                     </p>
                     <ul>
                         <li>支持 SSR。</li>
