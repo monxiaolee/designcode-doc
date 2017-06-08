@@ -263,7 +263,7 @@
                             <td>520</td>
                         </tr>
                         <tr>
-                            <td>style</td>
+                            <td>styles</td>
                             <td>设置浮层样式，调整浮层位置等，该属性设置的是<code>.ivu-modal</code>的样式</td>
                             <td>Object</td>
                             <td>-</td>

@@ -263,7 +263,7 @@
                             <td>520</td>
                         </tr>
                         <tr>
-                            <td>style</td>
+                            <td>styles</td>
                             <td>Set layer's style or adjust its position. The prop sets <code>.ivu-modal</code>'s style.</td>
                             <td>Object</td>
                             <td>-</td>
