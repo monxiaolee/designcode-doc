@@ -50,7 +50,7 @@
                     <Page :total="40" size="small" show-total></Page>
                 </div>
                 <div slot="desc">
-                    <p>设置<code>size</code>为<code>small</code>使用迷你型，迷你型拥有普通的所以功能。</p>
+                    <p>设置<code>size</code>为<code>small</code>使用迷你型，迷你型拥有普通的所有功能。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.mini }}</i-code>
             </Demo>
