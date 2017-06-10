@@ -626,6 +626,13 @@ const routers = [
         component: (resolve) => require(['./views/components/page.vue'], resolve)
     },
     {
+        path: '/components/page-en',
+        meta: {
+            title: 'Page'
+        },
+        component: (resolve) => require(['./views/components/page-en.vue'], resolve)
+    },
+    {
         path: '/components/breadcrumb',
         meta: {
             title: '面包屑 Breadcrumb'
