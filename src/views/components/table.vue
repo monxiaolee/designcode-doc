@@ -277,6 +277,12 @@
                             <td>-</td>
                         </tr>
                         <tr>
+                            <td>disabled-hover</td>
+                            <td>禁用鼠标悬停时的高亮</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
                             <td>highlight-row</td>
                             <td>是否支持高亮选中的行，即单选</td>
                             <td>Boolean</td>
