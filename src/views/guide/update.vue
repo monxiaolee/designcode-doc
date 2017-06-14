@@ -25,6 +25,22 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.17" h2></Anchor>
+                    <p>
+                        <code>2017-06-14</code>
+                    </p>
+                    <ul>
+                        <li>Table 新增禁用鼠标悬停高亮 prop：disabled-hover。<mention id="lcx960324"></mention></li>
+                        <li>修复 CheckboxGroup 的 Checkbox 向上寻找父组件时的bug。</li>
+                        <li>修复 Date 组件在禁用时，点击图标仍然会展开面板的bug。</li>
+                        <li>修复 Vue 2.3.3 版本下， Poptip 在 focus，slot 含有 input、textarea 元素时无法聚焦的bug。<issue id="1101"></issue></li>
+                        <li>修复 Menu 在手风琴模式下，on-open-change 返回值错误的bug。<issue id="1102"></issue></li>
+                        <li>优化 Table 单元格的渲染。</li>
+                        <li>优化 Table 展开项的渲染。<mention id="ckryo"></mention></li>
+                        <li>优化 Tabs 自定义标签页的渲染。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Icon type="social-apple-outline" size="18" slot="dot"></Icon>
                     <Anchor title="2.0.0-rc.16" h2></Anchor>
                     <p>
