@@ -108,7 +108,7 @@
                     </Poptip>
                 </div>
                 <div slot="desc">
-                    <p>通过属性<code>visible</code>来控制提示框的显示和隐藏。需要将<code>visible</code>设置<code>.sync</code>实现数据的双向绑定，否则在改变状态时，使用者的数据并没有变化。</p>
+                    <p>通过<code>v-model</code>来控制提示框的显示和隐藏。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.visible }}</i-code>
             </Demo>
