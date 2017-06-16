@@ -563,6 +563,13 @@ const routers = [
         component: (resolve) => require(['./views/components/poptip.vue'], resolve)
     },
     {
+        path: '/components/poptip-en',
+        meta: {
+            title: 'Poptip'
+        },
+        component: (resolve) => require(['./views/components/poptip-en.vue'], resolve)
+    },
+    {
         path: '/components/carousel',
         meta: {
             title: '走马灯 Carousel'
