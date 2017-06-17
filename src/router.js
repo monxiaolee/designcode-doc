@@ -500,6 +500,13 @@ const routers = [
         component: (resolve) => require(['./views/components/progress.vue'], resolve)
     },
     {
+        path: '/components/progress-en',
+        meta: {
+            title: 'Progress'
+        },
+        component: (resolve) => require(['./views/components/progress-en.vue'], resolve)
+    },
+    {
         path: '/components/badge',
         meta: {
             title: '徽标数 Badge'
