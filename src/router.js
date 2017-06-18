@@ -297,6 +297,13 @@ const routers = [
         component: (resolve) => require(['./views/components/radio.vue'], resolve)
     },
     {
+        path: '/components/radio-en',
+        meta: {
+            title: 'Radio'
+        },
+        component: (resolve) => require(['./views/components/radio-en.vue'], resolve)
+    },
+    {
         path: '/components/checkbox',
         meta: {
             title: '多选框 Checkbox'
