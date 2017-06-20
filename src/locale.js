@@ -32,7 +32,7 @@ export default {
             practice: 'Practice',
             cli: 'Cli',
             overview: 'Overview',
-            live: 'live',
+            live: 'Live',
             search: 'Search Components...',
             notFound: 'Not Found',
             ask: 'Ask',

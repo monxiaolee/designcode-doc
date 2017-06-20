@@ -17,12 +17,12 @@
 <template>
     <i-article>
         <article>
-            <h1>Poptip 气泡提示</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>Poptip 与 Tooltip 类似，具有很多相同配置，不同点是 Poptip 以卡片的形式承载了更多的内容，比如链接、表格、按钮等。</p>
-            <p>Poptip 还 confirm 确认框，与 Modal 不同的是，它会出现在就近元素，相对轻量。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基础用法">
+            <h1>Poptip</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>Poptip is simlar to Tooltip. It has many common configurations. The difference is Poptip contains more content in a card style, such as link, table and button.</p>
+            <p>Poptip can also contain a confirm dialog. Different to Modal. It'll be shown beside the nearest element, so it's relatively lighter.</p>
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Basic Usage">
                 <div slot="demo">
                     <Poptip trigger="hover" title="提示标题" content="提示内容">
                         <Button>hover 激活</Button>
@@ -38,12 +38,12 @@
                     </Poptip>
                 </div>
                 <div slot="desc">
-                    <p>支持三种触发方式：鼠标悬停、点击、聚焦。默认是点击。</p>
-                    <p>注意 Poptip 内的文本使用了 <code>white-space: nowrap;</code>，即不自动换行，如需展示很多内容并自动换行时，建议给内容 slot 增加样式 <code>white-space: normal;</code>。</p>
+                    <p>Poptip supports 3 triggers: hover, click and focus. The default is click.</p>
+                    <p>Attention: Text in Poptip uses <code>white-space: nowrap;</code>, that is, no line wrap. If there are much content to show and line wrap is needed, we suggest you add style <code>white-space: normal;</code> to content slot.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
-            <Demo title="位置">
+            <Demo title="Direction">
                 <div slot="demo">
                     <div class="top">
                         <Poptip title="提示标题" content="提示内容" placement="top-start">
@@ -93,11 +93,11 @@
                     </div>
                 </div>
                 <div slot="desc">
-                    <p>组件提供了12个不同的方向显示Poptip，具体配置可查看API。。</p>
+                    <p>We provide 12 different directions to show Poptip. Details on API Doc.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.placement }}</i-code>
             </Demo>
-            <Demo title="从浮层内关闭">
+            <Demo title="Close inside the Floating Layer">
                 <div slot="demo">
                     <Poptip v-model="visible">
                         <a>click 激活</a>
@@ -108,11 +108,11 @@
                     </Poptip>
                 </div>
                 <div slot="desc">
-                    <p>通过<code>v-model</code>来控制提示框的显示和隐藏。</p>
+                    <p>You can control tooltip's visibility by changing <code>v-model</code> to true or false.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.visible }}</i-code>
             </Demo>
-            <Demo title="嵌套复杂内容">
+            <Demo title="Nest Complex Content">
                 <div slot="demo">
                     <Poptip placement="right" width="400">
                         <Button type="ghost">click 激活</Button>
@@ -147,11 +147,11 @@
                     </Poptip>
                 </div>
                 <div slot="desc">
-                    <p>通过自定义 slot 来实现复杂的内容。</p>
+                    <p>You can add complex content into Poptip by using content slot.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.slot }}</i-code>
             </Demo>
-            <Demo title="确认框">
+            <Demo title="Confirm Dialog">
                 <div slot="demo">
                     <Poptip
                         confirm
@@ -171,7 +171,7 @@
                     </Poptip>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性<code>confirm</code>开启确认框模式。确认框只会以 click 的形式激活，并且只会显示 title 的内容，忽略 content。</p>
+                    <p>Open confirm-dialog mode by setting <code>confirm</code> prop. The confirm dialog can only be activated by clicking. It only shows title's text. The content will be ignored.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.confirm }}</i-code>
             </Demo>
@@ -181,60 +181,60 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>trigger</td>
-                            <td>触发方式，可选值为<code>hover</code>（悬停）<code>click</code>（点击）<code>focus</code>（聚焦）,在 confirm 模式下，只有 click 有效</td>
+                            <td>The trigger. Optional value: <code>hover</code>, <code>click</code>, <code>focus</code>. In confirm mode, only <code>click</code> works.</td>
                             <td>String</td>
                             <td>click</td>
                         </tr>
                         <tr>
                             <td>title</td>
-                            <td>显示的标题</td>
+                            <td>The title of Poptip.</td>
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>content</td>
-                            <td>显示的正文内容，只在非 confirm 模式下有效</td>
+                            <td>The content of Poptip. In confirm mode, it'll be ignored.</td>
                             <td>String | Number</td>
-                            <td>空</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>placement</td>
-                            <td>提示框出现的位置，可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code></td>
+                            <td>The direction tooltip shows. Optional value: <code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code></td>
                             <td>String</td>
                             <td>top</td>
                         </tr>
                         <tr>
                             <td>width</td>
-                            <td>宽度，最小宽度为 150px，在 confirm 模式下，默认最大宽度为 300px</td>
+                            <td>The width of the tooltip. The minimal width allowed is 150px. The maximum width by default in confirm mode is 300px.</td>
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>confirm</td>
-                            <td>是否开启对话框模式</td>
+                            <td>Enable confirm mode or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>ok-text</td>
-                            <td>确定按钮的文字，只在 confirm 模式下有效</td>
+                            <td>Text in OK button. It only works in confirm mode.</td>
                             <td>String</td>
-                            <td>确定</td>
+                            <td>OK</td>
                         </tr>
                         <tr>
                             <td>cancel-text</td>
-                            <td>取消按钮的文字，只在 confirm 模式下有效</td>
+                            <td>Text in Cancel button. It only works in confirm mode.</td>
                             <td>String</td>
-                            <td>取消</td>
+                            <td>Cancel</td>
                         </tr>
                     </tbody>
                 </table>
@@ -242,26 +242,26 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>on-popper-hide</td>
-                            <td>在提示框消失时触发</td>
-                            <td>无</td>
+                            <td>Emit when tooltip disappears.</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>on-ok</td>
-                            <td>点击确定的回调，只在 confirm 模式下有效</td>
-                            <td>无</td>
+                            <td>Callback when clicking OK button. It only works in confirm mode.</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>on-cancel</td>
-                            <td>点击取消的回调，只在 confirm 模式下有效</td>
-                            <td>无</td>
+                            <td>Callback when clicking Cancel button. It only works in confirm mode.</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>
@@ -269,22 +269,22 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>说明</th>
+                            <th>Name</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>无</td>
-                            <td>主体内容</td>
+                            <td>-</td>
+                            <td>Main content</td>
                         </tr>
                         <tr>
                             <td>title</td>
-                            <td>提示框标题，定义此 slot 时，会覆盖 props <code>title</code></td>
+                            <td>Title. It'll convert <code>title</code> prop.</td>
                         </tr>
                         <tr>
                             <td>content</td>
-                            <td>提示框内容，定义此 slot 时，会覆盖 props <code>content</code>，只在非 confirm 模式下有效</td>
+                            <td>The content of the tooltip. It'll convert <code>content</code> props. It'll be ignored in confirm mode.</td>
                         </tr>
                     </tbody>
                 </table>

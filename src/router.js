@@ -297,6 +297,13 @@ const routers = [
         component: (resolve) => require(['./views/components/radio.vue'], resolve)
     },
     {
+        path: '/components/radio-en',
+        meta: {
+            title: 'Radio'
+        },
+        component: (resolve) => require(['./views/components/radio-en.vue'], resolve)
+    },
+    {
         path: '/components/checkbox',
         meta: {
             title: '多选框 Checkbox'
@@ -500,6 +507,13 @@ const routers = [
         component: (resolve) => require(['./views/components/progress.vue'], resolve)
     },
     {
+        path: '/components/progress-en',
+        meta: {
+            title: 'Progress'
+        },
+        component: (resolve) => require(['./views/components/progress-en.vue'], resolve)
+    },
+    {
         path: '/components/badge',
         meta: {
             title: '徽标数 Badge'
@@ -561,6 +575,13 @@ const routers = [
             title: '气泡提示 Poptip'
         },
         component: (resolve) => require(['./views/components/poptip.vue'], resolve)
+    },
+    {
+        path: '/components/poptip-en',
+        meta: {
+            title: 'Poptip'
+        },
+        component: (resolve) => require(['./views/components/poptip-en.vue'], resolve)
     },
     {
         path: '/components/carousel',
