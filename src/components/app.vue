@@ -54,7 +54,7 @@
                 });
                 this.$Notice.info({
                     title: '最新课程通知',
-                    desc: '6月21日和7月1日直播《Vue.js 实战之组件篇》，本课程将带领你由浅入深地学习组件的全部内容及 webpack，并通过几个实战项目熟练使用 Vue 组件。往期课程请点击菜单的"讲堂"查看。<br><a href="https://segmentfault.com/l/1500000009448056" target="_blank">报名参加 Vue.js 实战之组件篇（上）</a><br><a href="https://segmentfault.com/l/1500000009448189" target="_blank">报名参加 Vue.js 实战之组件篇（下）</a>',
+                    desc: '7月5日直播《Vue.js 实战之工程篇》，本课程将带领你由浅入深地学习组件的全部内容及 webpack。往期系列课程请点击菜单的"讲堂"查看。<br><a href="https://segmentfault.com/l/1500000009448189" target="_blank">报名参加 Vue.js 实战之工程篇</a>',
                     duration: 0,
                     onClose: () => {
                         const today = this.getTodayUnix();

@@ -53,9 +53,6 @@
                         </h4>
                         <ul>
                             <li>
-                                <a href="https://www.talkingcoder.com/?from=iview" target="_blank">TalkingCoder</a> - {{ $t('index.tc') }}
-                            </li>
-                            <li>
                                 <a href="https://www.talkingdata.com/" target="_blank">TalkingData</a> - {{ $t('index.td') }}
                             </li>
                             <li>
@@ -83,6 +80,9 @@
                             </li>
                             <li>
                                 <a href="https://gitter.im/iview/iview" target="_blank">{{ $t('index.chat') }}</a>
+                            </li>
+                            <li>
+                                <a href="https://segmentfault.com/t/iview" target="_blank">SegmentFault</a>
                             </li>
                         </ul>
                     </i-col>

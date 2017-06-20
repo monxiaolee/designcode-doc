@@ -77,20 +77,20 @@
             return {
                 list: [
                     {
-                        title: 'Vue.js 实战之组件篇（上）',
+                        title: 'Vue.js 实战之工程篇',
+                        time: '2017-07-05 20:00',
+                        cost: '9.9元',
+                        cover: 'https://ooo.0o0.ooo/2017/05/22/59227ada0b65c.png',
+                        desc: '高效的开发，离不开基础工程的搭建。本课程主要介绍目前热门的 JavaScript 应用程序的模块打包工具 webpack。在开始学习本章前，需要先安装 Node.js 和 npm，如果你不熟悉它们，可以先查阅相关资料，完成安装并了解 npm 最基本的用法。',
+                        link: 'https://segmentfault.com/l/1500000009448189'
+                    },
+                    {
+                        title: 'Vue.js 实战之组件篇',
                         time: '2017-06-21 20:00',
                         cost: '9.9元',
                         cover: 'https://ooo.0o0.ooo/2017/05/22/59227ada0b65c.png',
                         desc: '组件（Component）是 Vue.js 最核心的功能，也是整个框架设计最精彩的地方，当然也是最难掌握的。本课程将带领你由浅入深地学习组件的全部内容，并通过几个实战项目熟练使用 Vue 组件。',
                         link: 'https://segmentfault.com/l/1500000009448056'
-                    },
-                    {
-                        title: 'Vue.js 实战之组件篇（下）',
-                        time: '2017-07-01 20:00',
-                        cost: '9.9元',
-                        cover: 'https://ooo.0o0.ooo/2017/05/22/59227ada0b65c.png',
-                        desc: '高效的开发，离不开基础工程的搭建。本课程主要介绍目前热门的 JavaScript 应用程序的模块打包工具 webpack。在开始学习本章前，需要先安装 Node.js 和 npm，如果你不熟悉它们，可以先查阅相关资料，完成安装并了解 npm 最基本的用法。',
-                        link: 'https://segmentfault.com/l/1500000009448189'
                     },
                     {
                         title: 'Vue.js 实战之 Render 函数',
