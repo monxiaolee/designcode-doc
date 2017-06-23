@@ -696,6 +696,13 @@ const routers = [
         component: (resolve) => require(['./views/components/steps.vue'], resolve)
     },
     {
+        path: '/components/steps-en',
+        meta: {
+            title: 'Steps'
+        },
+        component: (resolve) => require(['./views/components/steps-en.vue'], resolve)
+    },
+    {
         path: '/components/loading-bar',
         meta: {
             title: '加载进度条 LoadingBar'
