@@ -416,6 +416,13 @@ const routers = [
         component: (resolve) => require(['./views/components/rate.vue'], resolve)
     },
     {
+        path: '/components/rate-en',
+        meta: {
+            title: 'Rate'
+        },
+        component: (resolve) => require(['./views/components/rate-en.vue'], resolve)
+    },
+    {
         path: '/components/upload',
         meta: {
             title: '上传 Upload'
