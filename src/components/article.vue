@@ -116,11 +116,20 @@
                 </div>
             </card>
         </div>
-        <Modal v-model="donate" title="支持 iView 的开发" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">
+        <Modal v-model="donate" v-if="lang === 'zh-CN'" title="支持 iView 的开发" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">
             <div class="ivu-article">
                 <p>iView 是采用 MIT 许可的开源项目，您可以在个人或企业项目中免费使用。不过，如果您觉得 iView 对您的项目带来了帮助，提高开发效率，可以用捐助来表示您的谢意：)</p>
                 <p>您可以用公司的名义进行赞助，赞助信息将在文档页展示。联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a></p>
                 <h3>个人可使用 微信 或 支付宝 捐助：</h3>
+                <div>
+                    <img src="../images/pay.png" style="width: 100%">
+                </div>
+            </div>
+        </Modal>
+        <Modal v-model="donate" v-if="lang !== 'zh-CN'" title="Donate iView project" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">
+            <div class="ivu-article">
+                <p>iView is an open source project with MIT licenses that you can use for free in your personal or business projects. However, if you feel that iView has helped your project to improve development efficiency, you can use donations to express your gratitude: )</p>
+                <h3>Use Wechat or Alipay to donate：</h3>
                 <div>
                     <img src="../images/pay.png" style="width: 100%">
                 </div>
