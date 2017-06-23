@@ -570,6 +570,13 @@ const routers = [
         component: (resolve) => require(['./views/components/tag.vue'], resolve)
     },
     {
+        path: '/components/tag-en',
+        meta: {
+            title: 'Tag'
+        },
+        component: (resolve) => require(['./views/components/tag-en.vue'], resolve)
+    },
+    {
         path: '/components/tooltip',
         meta: {
             title: '文字提示 Tooltip'
