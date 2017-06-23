@@ -325,6 +325,13 @@ const routers = [
         component: (resolve) => require(['./views/components/switch.vue'], resolve)
     },
     {
+        path: '/components/switch-en',
+        meta: {
+            title: 'Switch'
+        },
+        component: (resolve) => require(['./views/components/switch-en.vue'], resolve)
+    },
+    {
         path: '/components/table',
         meta: {
             title: '表格 Table'
