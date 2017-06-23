@@ -246,7 +246,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>Button size，options include <code>large</code>和<code>small</code>,  optional</td>
+                            <td>Button size，options include <code>large</code> and <code>small</code>,  optional</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

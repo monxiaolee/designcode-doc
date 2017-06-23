@@ -738,6 +738,13 @@ const routers = [
         component: (resolve) => require(['./views/components/spin.vue'], resolve)
     },
     {
+        path: '/components/spin-en',
+        meta: {
+            title: 'Spin'
+        },
+        component: (resolve) => require(['./views/components/spin-en.vue'], resolve)
+    },
+    {
         path: '*',
         redirect: '/'
     }
