@@ -24,14 +24,14 @@
                     <span class="demo-data">{{ model1 }}</span>
                 </div>
                 <div slot="desc">
-                    <p>Basic。use v-model to create two-way data bindings.</p>
-                    <p>Single type，value only accept String and Number type，multiple type，value only accept Array type，Select Component will return selected data from <code>Option</code>'s <code>value</code> automately.</p>
+                    <p>Basic usage. You can use v-model to enable two-way data bindings.</p>
+                    <p>In the single select, value only accept String and Number type.In the multiple select, value only accept Array type.Select Component will return selected data from <code>Option</code>'s <code>value</code> automately.</p>
                     <p>You can add style css for <code>Select</code>，such as width.</p>
-                    <p>After expanding select, you can select up and down with the <code>up</code>and<code>down</code>of the keyboard, Press<code>Enter</code>to confirm，press<code>Esc</code>to collapse.</p>
+                    <p>After expanding select, you can select up and down with the <code>Up</code>and<code>Down</code> key, Press<code>Enter</code>to confirm，press<code>Esc</code>to collapse.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
-            <Demo title="尺寸">
+            <Demo title="Size">
                 <div slot="demo">
                     <Select v-model="model2" size="small" style="width:100px">
                         <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
@@ -44,11 +44,12 @@
                     </Select>
                 </div>
                 <div slot="desc">
-                    <p>Using<code>size</code>props<code>large</code>or<code>small</code>will set input's size, default is middle.</p>
+                    <p>There are three size of select: large, medium(default), small.</p>
+                    <p>Set<code>size</code>property to <code>large</code>or<code>small</code>.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.size }}</i-code>
             </Demo>
-            <Demo title="禁用">
+            <Demo title="Disable">
                 <div slot="demo">
                     <Select v-model="model5" disabled style="width:200px">
                         <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
@@ -60,12 +61,12 @@
                     </Select>
                 </div>
                 <div slot="desc">
-                    <p>Using <code>disabled</code> for <code>Select</code> can disable the select.</p>
-                    <p>Using <code>disabled</code> for <code>Option</code> can disable that option.</p>
+                    <p>Add <code>disabled</code> property to <code>Select</code> can disable the select.</p>
+                    <p>Add <code>disabled</code> property to <code>Option</code> can disable that option.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
-            <Demo title="可清空">
+            <Demo title="clearable">
                 <div slot="demo">
                     <Select v-model="model8" clearable style="width:200px">
                         <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
@@ -73,11 +74,11 @@
                     <span class="demo-data">{{ model8 }}</span>
                 </div>
                 <div slot="desc">
-                    <p>Using <code>clearable</code> can clear the selected option，which only used for single mode.</p>
+                    <p>Add <code>clearable</code> property can clear the selected option，which only used for single select.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.clearable }}</i-code>
             </Demo>
-            <Demo title="分组">
+            <Demo title="Group">
                 <div slot="demo">
                     <Select v-model="model7" style="width:200px">
                         <Option-group label="热门城市">
@@ -90,11 +91,11 @@
                     <span class="demo-data">{{ model7 }}</span>
                 </div>
                 <div slot="desc">
-                    <p>Using <code>Option-group</code>can group options.</p>
+                    <p>Using <code>Option-group</code> component can group the options.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>
             </Demo>
-            <Demo title="自定义模板">
+            <Demo title="Customize Template">
                 <div slot="demo">
                     <Select v-model="model9" style="width:200px">
                         <Option value="beijing" label="北京市">
@@ -113,12 +114,12 @@
                     <span class="demo-data">{{ model9 }}</span>
                 </div>
                 <div slot="desc">
-                    <p>Customize the option content. When using <code>label</code> props in <code>Option</code>，we should make the Select read the label Property to show, otherwise,the selected content will be same with the customise content what we don't want.</p>
-                    <p>The logic of show the option content：show slot content firstly.If there is no slot, it will show the content of <code>label</code>. If there is no label property, it will show the <code>value</code></p>
+                    <p>Customize the option content. When using <code>label</code> property in <code>Option</code>, the option will show the label preferentially. Otherwise the selected content will be same with the customise content and that is not what we want.</p>
+                    <p>The logic of showing the option content：show slot content firstly.If there is no slot, it will show the content of <code>label</code>. If there is no label property, it will show the <code>value</code></p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.label }}</i-code>
             </Demo>
-            <Demo title="多选">
+            <Demo title="Multiple">
                 <div slot="demo">
                     <p class="demo-data">{{ model10 }}</p>
                     <Select v-model="model10" multiple style="width:260px">
@@ -126,11 +127,11 @@
                     </Select>
                 </div>
                 <div slot="desc">
-                    <p>Using <code>multiple</code> property can set multiple mode. In the mode model accept an Array and return an Array.</p>
+                    <p>Add <code>multiple</code> property can support multiple select. In the multiple mode model accept an Array and return an Array.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.multiple }}</i-code>
             </Demo>
-            <Demo title="可搜索">
+            <Demo title="Searchable">
                 <div slot="demo">
                     <Row>
                         <Col span="12" style="padding-right:10px">
@@ -146,11 +147,11 @@
                     </Row>
                 </div>
                 <div slot="desc">
-                    <p>Using <code>filterable</code> property can set search mode.Single and Multiple Mode both support search.when using multiple mode to search, using <code>Delete</code> of keyboard can delete the last option.</p>
+                    <p>Add <code>filterable</code> property can set search mode.Single and Multiple Mode both support search. When using multiple mode to search, using <code>Delete</code> key can delete the last option.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.filterable }}</i-code>
             </Demo>
-            <Demo title="远程搜索">
+            <Demo title="Remote Search">
                 <div slot="demo">
                     <Row>
                         <Col span="12" style="padding-right:10px">
@@ -177,7 +178,7 @@
                     </Row>
                 </div>
                 <div slot="desc">
-                    <p>Remote search need set <code>filterable</code>、<code>remote</code>、<code>remote-method</code>、<code>loading</code> four props，which loading is to show searching status and remote-method is the methods of searching remotely.</p>
+                    <p>Remote search need set <code>filterable</code>, <code>remote</code>, <code>remote-method</code>, <code>loading</code> four props, which loading is to show searching status and remote-method is the methods of searching remotely.</p>
                     <p>Notice：Option need to set key，the example set the current time to the key。</p>
                     <p>The example is America state, try to input some.</p>
                 </div>
@@ -200,7 +201,7 @@
                             <td>value</td>
                             <td>指定选中项目的 value 值，可以使用 v-model 双向绑定数据。单选时只接受 String 或 Number，多选时只接受 Array</td>
                             <td>String | Number | Array</td>
-                            <td>空</td>
+                            <td>empty</td>
                         </tr>
                         <tr>
                             <td>multiple</td>
@@ -254,7 +255,7 @@
                             <td>label</td>
                             <td>use for init in the remote mode. It should set 手动 because  it can't get the option label by the value.</td>
                             <td>String | Number | Array</td>
-                            <td>空</td>
+                            <td>empty</td>
                         </tr>
                         <tr>
                             <td>size</td>
@@ -347,7 +348,7 @@
                             <td>value</td>
                             <td>the option value, filter by the property, required</td>
                             <td>String | Number</td>
-                            <td>无</td>
+                            <td>empty</td>
                         </tr>
                         <tr>
                             <td>label</td>
@@ -357,7 +358,7 @@
                         </tr>
                         <tr>
                             <td>disabled</td>
-                            <td>set to disable the option.是否禁用当前项</td>
+                            <td>set to disable the option.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
@@ -378,7 +379,7 @@
                             <td>label</td>
                             <td>Group Name</td>
                             <td>String</td>
-                            <td>-s</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>
