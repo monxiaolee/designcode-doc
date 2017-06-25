@@ -14,7 +14,7 @@
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>A dropdown select , alternative to the native select component.</p>
             <p>Select supports single, multiple, search and keyboard.</p>
-            <blockquote>Notice: If not template/render mode, you need to use<code>i-select</code>、<code>i-option</code>.</blockquote>
+            <blockquote>Notice: If not template/render mode, you need to use<code>i-select</code>, <code>i-option</code>.</blockquote>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
@@ -199,7 +199,7 @@
                         <tbody>
                         <tr>
                             <td>value</td>
-                            <td>指定选中项目的 value 值，可以使用 v-model 双向绑定数据。单选时只接受 String 或 Number，多选时只接受 Array</td>
+                            <td>The value of the selected item. Use v-model to enable a two-way binding. It only accepts String or Number in single-choice mode. And it only accepts Array in mutli-choices mode.</td>
                             <td>String | Number | Array</td>
                             <td>empty</td>
                         </tr>
@@ -306,7 +306,7 @@
                         </tr>
                         <tr>
                             <td>on-query-change</td>
-                            <td>搜索词改变时触发</td>
+                            <td>Emitted when query word is changed.</td>
                             <td>query</td>
                         </tr>
                     </tbody>
