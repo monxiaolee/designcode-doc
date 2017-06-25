@@ -346,6 +346,13 @@ const routers = [
         component: (resolve) => require(['./views/components/select.vue'], resolve)
     },
     {
+        path: '/components/select-en',
+        meta: {
+            title: 'Select'
+        },
+        component: (resolve) => require(['./views/components/select-en.vue'], resolve)
+    },
+    {
         path: '/components/slider',
         meta: {
             title: '滑块 Slider'
