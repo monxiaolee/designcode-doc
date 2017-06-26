@@ -605,6 +605,13 @@ const routers = [
         component: (resolve) => require(['./views/components/tooltip.vue'], resolve)
     },
     {
+        path: '/components/tooltip-en',
+        meta: {
+            title: 'Tooltip'
+        },
+        component: (resolve) => require(['./views/components/tooltip-en.vue'], resolve)
+    },
+    {
         path: '/components/poptip',
         meta: {
             title: '气泡提示 Poptip'
