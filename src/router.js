@@ -409,6 +409,13 @@ const routers = [
         component: (resolve) => require(['./views/components/transfer.vue'], resolve)
     },
     {
+        path: '/components/transfer-en',
+        meta: {
+            title: 'Transfer'
+        },
+        component: (resolve) => require(['./views/components/transfer-en.vue'], resolve)
+    },
+    {
         path: '/components/input-number',
         meta: {
             title: '数字输入框 InputNumber'

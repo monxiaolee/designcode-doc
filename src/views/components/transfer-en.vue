@@ -11,15 +11,15 @@
                     <code>:data</code>: Overall data / Array / Each item is an object which must contain a <code>key</code> prop. The component does the query operation based on this prop.
                 </li>
                 <li>
-                    <code>:target-keys</code>: 目标列索引集合，数组，每项为数据的 key 值，Transfer 会将含有这些 key 值的数据筛选到右边。
+                    <code>:target-keys</code>: Target index / Array / Each item is the key of the data item. Transfer will filter data with these keys and move them to the right.
                 </li>
                 <li>
-                    <code>:render-format</code>：每行数据显示的格式函数，默认优先显示 label 值，没有时显示 key 值，可以自己组合出需要的数据格式。
+                    <code>:render-format</code>: The format function controlling how to display each row of data. label's value will be displayed by default. If there is no label, key's value will be displayed. You can customize your own data format.
                 </li>
                 <li>
-                    <code>@on-change</code>：当点击转移按钮时，组件本身并不会转移数据，而是触发事件，由用户来操作数据。
+                    <code>@on-change</code>: Emitted when clicking transfer button. Transfer won't transfer data itself. You should handle it by yourself.
                 </li>
-                <p>示例：</p>
+                <p>Demo:</p>
                 <i-code bg>{{ code.demo }}</i-code>
             </ul>
             <Anchor title="Examples" h2></Anchor>
@@ -32,7 +32,7 @@
                         @on-change="handleChange1"></Transfer>
                 </div>
                 <div slot="desc">
-                    <p>基本用法，展示了 <code>data</code>、<code>target-keys</code>、每行的渲染函数 <code>render-format</code> 以及回调函数 <code>on-change</code> 的用法。</p>
+                    <p>Basic usage. It shows the usage of <code>data</code>, <code>target-keys</code>, render function for each row - <code>render-format</code> and callback function for <code>on-change</code> event.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
@@ -45,7 +45,7 @@
                         @on-change="handleChange2"></Transfer>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>filterable</code> 可以进行搜索，可以自定义搜索函数。</p>
+                    <p>Set <code>filterable</code> prop to enable filter. You can customize filter function.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.search }}</i-code>
             </Demo>
@@ -65,7 +65,7 @@
                     </Transfer>
                 </div>
                 <div slot="desc">
-                    <p>穿梭框高级用法，可以自定义两列的宽高、操作文案，以及底部自定义操作，更多配置见 API。</p>
+                    <p>Advanced usage of Transfer. You can customize the width and the height of the column, change transfer button's text, or add custom operations at the bottom. Details on API Doc.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.high }}</i-code>
             </Demo>
@@ -78,7 +78,7 @@
                         @on-change="handleChange4"></Transfer>
                 </div>
                 <div slot="desc">
-                    <p>可以通过 <code>render-format</code> 来渲染复杂的数据。</p>
+                    <p>You can render complex data by setting <code>render-format</code>.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.render }}</i-code>
             </Demo>
@@ -88,78 +88,78 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>data</td>
-                            <td>数据源，其中的数据将会被渲染到左边一栏中，<code>targetKeys</code> 中指定的除外。</td>
+                            <td>Source data. Except for those in <code>targetKeys</code>, data will be rendered into the left column.</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
                         <tr>
                             <td>targetKeys</td>
-                            <td>显示在右侧框数据的key集合</td>
+                            <td>The keys of data displayed in the right column.</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
                         <tr>
                             <td>render-format</td>
-                            <td>每行数据渲染函数，该函数的入参为 <code>data</code> 中的项</td>
+                            <td>Render function for each row. It accepts items in <code>data</code>.</td>
                             <td>Function</td>
-                            <td>默认显示label，没有时显示key</td>
+                            <td>Default is label. If no label, key will be displayed.</td>
                         </tr>
                         <tr>
                             <td>selected-keys</td>
-                            <td>设置哪些项应该被选中</td>
+                            <td>Which items should be selected.</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
                         <tr>
                             <td>list-style</td>
-                            <td>两个穿梭框的自定义样式</td>
+                            <td>Custom style for columns.</td>
                             <td>Object</td>
                             <td>{}</td>
                         </tr>
                         <tr>
                             <td>titles</td>
-                            <td>标题集合，顺序从左至右</td>
+                            <td>Title text. Order: left-right</td>
                             <td>Array</td>
-                            <td>['源列表', '目的列表']</td>
+                            <td>['', '']</td>
                         </tr>
                         <tr>
                             <td>operations</td>
-                            <td>操作文案集合，顺序从上至下</td>
+                            <td>Transfer button's text. Order: top-down</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
                         <tr>
                             <td>filterable</td>
-                            <td>是否显示搜索框</td>
+                            <td>Show the filter or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>filter-placeholder</td>
-                            <td>搜索框的占位</td>
+                            <td>Placeholder of the filter.</td>
                             <td>String</td>
-                            <td>请输入搜索内容</td>
+                            <td>Search here</td>
                         </tr>
                         <tr>
                             <td>filter-method</td>
-                            <td>自定义搜索函数，入参为 data 和 query，data 为项，query 为当前输入的搜索词</td>
+                            <td>Custom filter function. It accepts 3 arguments: data - raw data, query - keyword.</td>
                             <td>Function</td>
-                            <td>默认搜索label</td>
+                            <td>It searches label by default.</td>
                         </tr>
                         <tr>
                             <td>not-found-text</td>
-                            <td>当列表为空时显示的内容</td>
+                            <td>Tip text when list is empty.</td>
                             <td>String</td>
-                            <td>列表为空</td>
+                            <td>Not found</td>
                         </tr>
                     </tbody>
                 </table>
@@ -167,15 +167,15 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>选项在两栏之间转移时的回调函数</td>
+                            <td>Emitted when selection is transfered.</td>
                             <td>targetKeys, direction, moveKeys</td>
                         </tr>
                     </tbody>
@@ -184,14 +184,14 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>说明</th>
+                            <th>Name</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>无</td>
-                            <td>自定义底部内容</td>
+                            <td>-</td>
+                            <td>Custom footer.</td>
                         </tr>
                     </tbody>
                 </table>
