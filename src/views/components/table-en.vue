@@ -230,7 +230,7 @@
                             <th>Property</th>
                             <th>Description</th>
                             <th>Type</th>
-                            <th>Default Value</th>
+                            <th>Default</th>
                         </tr>
                         </thead>
                         <tbody>
