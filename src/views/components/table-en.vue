@@ -227,74 +227,74 @@
                     <table>
                         <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default Value</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>data</td>
-                            <td>显示的结构化数据，其中，字段 cellClassName 用于设置任意单元格的样式名称，因此数据不能使用该字段，详见示例<strong>特定样式</strong>。</td>
+                            <td>Structured data displayed. Key cellClassName is used to set any cell's class name, so your data cannot use the key with such name. For more details, see <strong>Custom Style</strong>.</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
                         <tr>
                             <td>columns</td>
-                            <td>表格列的配置描述，具体项见后文</td>
+                            <td>Column configuration. Details are mentioned below.</td>
                             <td>Array</td>
                             <td>[]</td>
                         </tr>
                         <tr>
                             <td>stripe</td>
-                            <td>是否显示间隔斑马纹</td>
+                            <td>Show stripe or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>border</td>
-                            <td>是否显示纵向边框</td>
+                            <td>Show vertical border or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>show-header</td>
-                            <td>是否显示表头</td>
+                            <td>Show header or not.</td>
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
                         <tr>
                             <td>width</td>
-                            <td>表格宽度，单位 px</td>
+                            <td>The width of the table. Unit: px</td>
                             <td>Number | String</td>
-                            <td>自动</td>
+                            <td>auto</td>
                         </tr>
                         <tr>
                             <td>height</td>
-                            <td>表格高度，单位 px，设置后，如果表格内容大于此值，会固定表头</td>
+                            <td>The height of the table. Unit: px / When this prop is set, if the content height is larger then the set value, the header will be fixed at the top.</td>
                             <td>Number | String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>disabled-hover</td>
-                            <td>禁用鼠标悬停时的高亮</td>
+                            <td>Disable highlight effect when mouse hovering.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>highlight-row</td>
-                            <td>是否支持高亮选中的行，即单选</td>
+                            <td>Highlight selected row or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>row-class-name</td>
                             <td>
-                                行的 className 的回调方法，传入参数：
+                                Callback function for row's class name. Accept two arguments:
                                 <ul>
-                                    <li><code>row</code>：当前行数据</li>
-                                    <li><code>index</code>：当前行的索引</li>
+                                    <li><code>row</code>: current row's data.</li>
+                                    <li><code>index</code>: current row's index</li>
                                 </ul>
                             </td>
                             <td>Function</td>
@@ -302,27 +302,27 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>表格尺寸，可选值为 <code>large</code>、<code>small</code>、<code>default</code> 或者不填</td>
+                            <td>The size of the table. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave empty.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>context</td>
-                            <td><span style="color: #f50">Deprecated</span> 设置单元格内渲染自定义组件时的上下文。比如父级是 $parent，根组件是 $root，当 <code>Table</code> 作为一个 slot 封装在其它组件里时，会很有用。使用旧用法时必须设置。</td>
+                            <td><span style="color: #f50">Deprecated</span> Set context for custom component rendered in the cell. For example, if parent component is $parent, root component is $root. When <code>Table</code> is encapsulated in other components as a slot, the prop will be useful. You must set context if you are still using old-styled render function.</td>
                             <td>Object</td>
-                            <td>Table 所在的上下文</td>
+                            <td>Table's context.</td>
                         </tr>
                         <tr>
                             <td>no-data-text</td>
-                            <td>数据为空时显示的提示内容</td>
+                            <td>Tip text when data is empty.</td>
                             <td>String</td>
-                            <td>暂无数据</td>
+                            <td>No Data</td>
                         </tr>
                         <tr>
                             <td>no-filtered-data-text</td>
-                            <td>筛选数据为空时显示的提示内容</td>
+                            <td>Tip text when filtered data is empty.</td>
                             <td>String</td>
-                            <td>暂无筛选结果</td>
+                            <td>No filter data</td>
                         </tr>
                         </tbody>
                     </table>
@@ -330,82 +330,82 @@
                     <table>
                         <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>on-current-change</td>
-                            <td>开启 <code>highlight-row</code> 后有效，当表格的当前行发生变化的时候会触发</td>
+                            <td>It works when <code>highlight-row</code> is enabled. Emitted when current row is changed.</td>
                             <td>
                                 <ul>
-                                    <li><code>currentRow</code>：当前高亮行的数据</li>
-                                    <li><code>oldCurrentRow</code>：上一次高亮的数据</li>
+                                    <li><code>currentRow</code>: Current highlighted row's data.</li>
+                                    <li><code>oldCurrentRow</code>: Last highlighted row's data.</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
                             <td>on-select</td>
-                            <td>在多选模式下有效，选中某一项时触发</td>
+                            <td>It works in multi-choices mode. Emitted when a certain row is selected.</td>
                             <td>
                                 <ul>
-                                    <li><code>selection</code>：已选项数据</li>
-                                    <li><code>row</code>：刚选择的项数据</li>
+                                    <li><code>selection</code>: Selected rows' data array</li>
+                                    <li><code>row</code>: Latest selected row's data.</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
                             <td>on-select-all</td>
-                            <td>在多选模式下有效，点击全选时触发</td>
+                            <td>It works in multi-choices mode. Emitted when clicking select-all checkbox.</td>
                             <td>
                                 <ul>
-                                    <li><code>selection</code>：已选项数据</li>
+                                    <li><code>selection</code>: selected rows' data array.</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
                             <td>on-selection-change</td>
-                            <td>在多选模式下有效，只要选中项发生变化时就会触发</td>
+                            <td>It works in multi-choices mode. Emitted when selected item's state changes.</td>
                             <td>
                                 <ul>
-                                    <li><code>selection</code>：已选项数据</li>
+                                    <li><code>selection</code>: selected rows' data array.</li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
                             <td>on-sort-change</td>
-                            <td>排序时有效，当点击排序时触发</td>
+                            <td>It works during sorting. Emitted when clicking sorting button.</td>
                             <td>
                                 <ul>
-                                    <li><code>column</code>：当前列数据</li>
-                                    <li><code>key</code>：排序依据的指标</li>
-                                    <li><code>order</code>：排序的顺序，值为 <code>asc</code> 或 <code>desc</code></li>
+                                    <li><code>column</code>: current column's data.</li>
+                                    <li><code>key</code>: sort-by key.</li>
+                                    <li><code>order</code>: Sorting order. Value: <code>asc</code>, <code>desc</code></li>
                                 </ul>
                             </td>
                         </tr>
                         <tr>
                             <td>on-row-click</td>
-                            <td>单击某一行时触发</td>
+                            <td>Emitted when clicking a certain row.</td>
                             <td>
-                                当前行的数据
+                                Current row's data.
                             </td>
                         </tr>
                         <tr>
                             <td>on-row-dblclick</td>
-                            <td>双击某一行时触发</td>
+                            <td>Emitted when double clicking a certain row.</td>
                             <td>
-                                当前行的数据
+                                Current row's data.
                             </td>
                         </tr>
                         <tr>
                             <td>on-expand</td>
-                            <td>展开或收起某一行时触发</td>
+                            <td>Emitted when expand or fold a certain row.</td>
                             <td>
                                 <ul>
-                                    <li><code>row</code>：当前行的数据</li>
-                                    <li><code>status</code>：当前的状态</li>
+                                    <li><code>row</code>: Current row's data.</li>
+                                    <li><code>status</code>: Current row's state.</li>
                                 </ul>
                             </td>
                         </tr>
@@ -415,18 +415,18 @@
                     <table>
                         <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>说明</th>
+                            <th>Name</th>
+                            <th>Description</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>header</td>
-                            <td>表头</td>
+                            <td>Table header</td>
                         </tr>
                         <tr>
                             <td>footer</td>
-                            <td>页脚</td>
+                            <td>Table footer</td>
                         </tr>
                         </tbody>
                     </table>
@@ -434,20 +434,20 @@
                     <table>
                         <thead>
                         <tr>
-                            <th>方法名</th>
-                            <th>说明</th>
-                            <th>参数</th>
+                            <th>Method Name</th>
+                            <th>Description</th>
+                            <th>Parameter</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>exportCsv</td>
                             <td>
-                                将数据导出为 <code>.csv</code> 文件，说明：
+                                Export the data as <code>.csv</code> file. Description:
                                 <ul>
-                                    <li>支持IE9~IE11、Edge、Chrome、Safari、Firefox 全系列浏览器。</li>
-                                    <li>IE9、Safari 需要手动修改后缀名为 <code>.csv</code>。</li>
-                                    <li>IE9暂时只支持英文，中文会显示为乱码。</li>
+                                    <li>It supports IE9 ~ IE 11, Edge, Chrome, Safari, Firefox.</li>
+                                    <li>You need to add <code>.csv</code> extension manually after downloading the file.</li>
+                                    <li>Temporarily, IE9 only supports English data. Chinese will be messy code.</li>
                                 </ul>
                             </td>
                             <td>
@@ -455,136 +455,136 @@
                                 <ul>
                                     <li>
                                         <strong>filename</strong>
-                                        文件名，默认为 table.csv
+                                        Filename. Default: table.csv
                                     </li>
                                     <li>
                                         <strong>original</strong>
-                                        是否导出为原始数据，默认为 true
+                                        Exported as original data. Default: true
                                     </li>
                                     <li>
                                         <strong>noHeader</strong>
-                                        不显示表头，默认为 false
+                                        No header. Default: false
                                     </li>
                                     <li>
                                         <strong>columns</strong>
-                                        自定义导出的列数据
+                                        Customize columns to be exported.
                                     </li>
                                     <li>
                                         <strong>data</strong>
-                                        自定义导出的行数据
+                                        Customize rows to be exported.
                                     </li>
                                 </ul>
-                                说明：columns 和 data 需同时声明，声明后将导出指定的数据，建议列数据有自定义render时，可以根据需求自定义导出内容
+                                Notice: columns and data should be declared simultaneously. If are declared, only selected data will be exported.
                             </td>
                         </tr>
                         </tbody>
                     </table>
                     <Anchor title="column" h3></Anchor>
-                    <p>列描述数据对象，是 columns 中的一项</p>
+                    <p>One of the item in columns. It describes the column data.</p>
                     <table>
                         <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Return Value</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>title</td>
-                            <td>列头显示文字</td>
+                            <td>Column title.</td>
                             <td>String</td>
                             <td>#</td>
                         </tr>
                         <tr>
                             <td>key</td>
-                            <td>对应列内容的字段名</td>
+                            <td>Data key.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>width</td>
-                            <td>列宽</td>
+                            <td>Column width.</td>
                             <td>Number</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>align</td>
-                            <td>对齐方式，可选值为 <code>left</code> 左对齐、<code>right</code> 右对齐和 <code>center</code> 居中对齐</td>
+                            <td>Alignment way. Optional value: <code>left</code>, <code>right</code> or <code>center</code>.</td>
                             <td>String</td>
                             <td>left</td>
                         </tr>
                         <tr>
                             <td>className</td>
-                            <td>列的样式名称</td>
+                            <td>Column's class name.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>fixed</td>
-                            <td>列是否固定在左侧或者右侧，可选值为 <code>left</code> 左侧和 <code>right</code> 右侧</td>
+                            <td>Fix the column at the left / right or not. Optional value: <code>left</code> or <code>right</code></td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>ellipsis</td>
-                            <td>开启后，文本将不换行，超出部分显示为省略号</td>
+                            <td>If this prop is set, line wrap will be disabled. The overflowing content will be displayed as ellipsis.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>render</td>
                             <!--<td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>-->
-                            <td>自定义渲染列，使用 Vue 的 Render 函数。传入两个参数，第一个是 h，第二个为对象，包含 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例。<study-render></study-render> <span style="color: #f50">兼容旧的 render 用法，但未来将废弃。</span></td>
+                            <td>Custom column renderer. It uses Vue's render function. It accepts two arguments:  the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index). Details on the demo above. <study-render></study-render> <span style="color: #f50">It is compatible with old-styled render function. But the old function will be abandoned in the future.</span></td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>renderHeader</td>
-                            <td>自定义列头显示内容，传入参数有两个，<code>column</code> 和 <code>index</code>，分别为当前列数据和当前列索引，不支持渲染自定义组件</td>
+                            <td>Custom column header renderer. It accepts two arguments: <code>column</code> and <code>index</code> (current col's data &amp; current index). It doesn't support custom component rendering.</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>sortable</td>
-                            <td>对应列是否可以排序，如果设置为 <code>custom</code>，则代表用户希望远程排序，需要监听 Table 的 on-sort-change 事件</td>
+                            <td>The column is sortable or not. If set to<code>custom</code>, it means user wants a remote sorting. So you shall listen on-sort-change event on Table.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>sortMethod</td>
-                            <td>自定义排序使用的方法，接收三个参数 a 、 b 和 type，当设置 <code>sortable: true</code> 时有效。type 值为 asc 和 desc</td>
+                            <td>Custom sort function. It accepts 3 arguments: a, b , type. It works when <code>sortable: true</code> is set. The value of type argument can be asc or desc.</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>filters</td>
-                            <td>过滤数据的选项，格式为数组，数组中每项包含 <code>label</code> 和 <code>value</code> 属性，使用过滤，必须同时配置 filterMethod</td>
+                            <td>Options for filter. It accepts an array. Each item of the array contains <code>label</code> and <code>value</code> props. You should config filterMethod simultaneously to enable filter.</td>
                             <td>Array</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>filterMethod</td>
-                            <td>数据过滤使用的方法，如果是多选的筛选项，对每一条数据会执行多次，任意一次返回 true 就会显示</td>
+                            <td>The way to use filter options. If it is a multi-choices filter, for each piece of data, the filter will be executed more than once. The data will be displayed as long as one true value is returned.</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>filterMultiple</td>
-                            <td>数据过滤的选项是否多选</td>
+                            <td>Enable multiple filters or not.</td>
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
                         <tr>
                             <td>filteredValue</td>
-                            <td>在初始化时使用过滤，数组，值为需要过滤的 value 集合</td>
+                            <td>Enable filtering during initialization. It accepts an array of the values need to be filtered.</td>
                             <td>Array</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>filterRemote</td>
-                            <td>使用远程过滤</td>
+                            <td>Enable remote flitering.</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
@@ -593,11 +593,11 @@
                 </div>
             </article>
         </i-article>
-        <Modal v-model="table1" title="带有分页的复杂表格" width="1000" :styles="{top: '20px'}">
+        <Modal v-model="table1" title="Complex Table with Paging" width="1000" :styles="{top: '20px'}">
             <div v-if="table1">
                 <div class="ivu-article">
                     <blockquote>
-                        <p>该表格来自于 TalkingData <a href="https://www.talkingdata.com/product-MarketingCloud.jsp" target="_blank">MarketingCloud</a> 产品，展示的是人群画像列表，数据为模拟数据，分页只是提供效果展示，并非真实拉取服务端数据。</p>
+                        <p>The table comes from TalkingData's <a href="https://www.talkingdata.com/product-MarketingCloud.jsp" target="_blank">MarketingCloud</a> product. It shows the list of the crowd portrait. The data is fake. The paging effect is simulated in the front end, not got from the server side.</p>
                     </blockquote>
                 </div>
                 <Table :data="tableData1" :columns="tableColumns1" stripe></Table>
@@ -609,12 +609,12 @@
                 <i-code lang="html" bg>{{ code.table1 }}</i-code>
             </div>
         </Modal>
-        <Modal v-model="table2" title="多列指标筛选的表格" width="1000" :styles="{top: '20px'}">
+        <Modal v-model="table2" title="Table with Multi-cols Filter" width="1000" :styles="{top: '20px'}">
             <div v-if="table2">
                 <div class="ivu-article">
                     <blockquote>
-                        <p>该表格来自于 TalkingData <a href="https://www.talkingdata.com/product-AdTracking.jsp">Ad Tracking</a> 产品，展示各种推广活动不同指标的数据，数据为模拟数据。</p>
-                        <p>该示例主要展示固定列、自定义列数量以及排序的功能。</p>
+                        <p>The table comes from TalkingData's <a href="https://www.talkingdata.com/product-AdTracking.jsp">Ad Tracking</a> product. It shows different metrics of different kinds of promotion activities. The data is fake.</p>
+                        <p>The demo mainly shows fixed columns, custom column count and sorting.</p>
                     </blockquote>
                 </div>
                 <Checkbox-group v-model="tableColumnsChecked" @on-change="changeTableColumns">
@@ -635,27 +635,27 @@
                 <i-code lang="html" bg>{{ code.table2 }}</i-code>
             </div>
         </Modal>
-        <Modal v-model="table3" title="多种效果组合的表格" width="1000" :styles="{top: '20px'}">
+        <Modal v-model="table3" title="Table with Many Styles" width="1000" :styles="{top: '20px'}">
             <div v-if="table3">
                 <div class="ivu-article">
                     <blockquote>
-                        <p>该示例主要展示了表格丰富的显示效果。</p>
+                        <p>The demo shows many different styles on Table.</p>
                     </blockquote>
                 </div>
                 <div style="margin: 10px">
-                    显示边框 <i-switch v-model="showBorder" style="margin-right: 5px"></i-switch>
-                    显示斑马纹 <i-switch v-model="showStripe" style="margin-right: 5px"></i-switch>
-                    显示索引 <i-switch v-model="showIndex" style="margin-right: 5px"></i-switch>
-                    显示多选框 <i-switch v-model="showCheckbox" style="margin-right: 5px"></i-switch>
-                    显示表头 <i-switch v-model="showHeader" style="margin-right: 5px"></i-switch>
-                    表格滚动 <i-switch v-model="fixedHeader" style="margin-right: 5px"></i-switch>
+                    Display border <i-switch v-model="showBorder" style="margin-right: 5px"></i-switch>
+                    Display stripe <i-switch v-model="showStripe" style="margin-right: 5px"></i-switch>
+                    Display index <i-switch v-model="showIndex" style="margin-right: 5px"></i-switch>
+                    Display multi choice <i-switch v-model="showCheckbox" style="margin-right: 5px"></i-switch>
+                    Display header <i-switch v-model="showHeader" style="margin-right: 5px"></i-switch>
+                    Table scrolling <i-switch v-model="fixedHeader" style="margin-right: 5px"></i-switch>
                     <br>
                     <br>
-                    表格尺寸
+                    Table size
                     <Radio-group v-model="tableSize" type="button">
-                        <Radio label="large">大</Radio>
-                        <Radio label="default">中</Radio>
-                        <Radio label="small">小</Radio>
+                        <Radio label="large">large</Radio>
+                        <Radio label="default">medium(default)</Radio>
+                        <Radio label="small">small</Radio>
                     </Radio-group>
                 </div>
                 <Table :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 250 : ''" :size="tableSize" :data="tableData3" :columns="tableColumns3"></Table>
