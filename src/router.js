@@ -339,6 +339,13 @@ const routers = [
         component: (resolve) => require(['./views/components/table.vue'], resolve)
     },
     {
+        path: '/components/table-en',
+        meta: {
+            title: 'Table'
+        },
+        component: (resolve) => require(['./views/components/table-en.vue'], resolve)
+    },
+    {
         path: '/components/select',
         meta: {
             title: '选择器 Select'
