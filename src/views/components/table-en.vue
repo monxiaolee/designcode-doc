@@ -162,13 +162,13 @@
                         <Table border :columns="columns7" :data="data6"></Table>
                     </div>
                     <div slot="desc">
-                        <p>通过给 <code>columns</code> 数据的项，设置一个函数 <code>render</code>，可以自定义渲染当前列，包括渲染自定义组件，它基于 Vue 的 Render 函数。</p>
-                        <p><code>render</code> 函数传入两个参数，第一个是 h，第二个是对象，包含 <code>row</code>、<code>column</code> 和 <code>index</code>，分别指当前单元格数据，当前列数据，当前是第几行。</p>
+                        <p>You can render the column yourself by setting <code>render</code> to certain <code>columns</code> prop's items. It is based on Vue's Render function.</p>
+                        <p><code>render</code> accepts two arguments: the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index).
                         <p><study-render></study-render></p>
                         <blockquote>
-                            <p style="color: #f50">以下只适用于 rc.13 以前的版本，未来将废弃，请勿过多依赖旧用法。</p>
-                            <p>旧用法必须设置 context 。</p>
-                            <code>render</code> 函数本质返回的是字符串，Table 组件在内部对其进行了编译，如果使用了自定义组件，需要特别注意上下文，编译后的自定义组件，默认的上下文是 <code>Table</code> 所在的上下文，如果想让组件在指定的实例下编译，可以给 <code>Table</code> 设置属性 <code>context</code> 来指定上下文，比如本例指定当前路由页为上下文。一般情况不需要此配置，但如果你把 <code>Table</code> 作为一个 slot 封装在其它组件里，这时 <code>context</code> 属性就很有用，比如父级是 $parent，根组件 $root。
+                            <p style="color: #f50">Content below only applies to version rc.13 or lower. It'll be abandoned in the future.</p>
+                            <p>You must set context for the old render function.</p>
+                            The essence of <code>render</code> function is to return a string. Table compiles the string inside it. If you've used custom components inside render, you should pay more attention on the context. The rendered component's default context is same to <code>Table</code>'s context. If you want to compile the component in selected instance, you can set <code>context</code> prop to Table to set the context. In this example, we set current route page as the context. 一般情况不需要此配置，但如果你把 <code>Table</code> 作为一个 slot 封装在其它组件里，这时 <code>context</code> 属性就很有用，比如父级是 $parent，根组件 $root。
                         </blockquote>
                     </div>
                     <i-code lang="html" slot="code">{{ code.render }}</i-code>
@@ -178,10 +178,10 @@
                         <Table :columns="columns10" :data="data9"></Table>
                     </div>
                     <div slot="desc">
-                        <p>当表格内容较多不能一次性完全展示时使用。</p>
-                        <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'expand'</code>，即可开启扩展功能。</p>
-                        <p>给行数据 data 的某项设置 <code>_expanded</code> 为 true，可以默认展开当前行，设置 <code>_disableExpand</code> 可以禁用当前行的展开功能。</p>
-                        <p>渲染展开区域与自定义列模板方法类似，使用 render 函数。当内容较复杂时，可拆分为组件或使用 JSX。</p>
+                        <p>You can use it when content is too much to completely displayed at one time.</p>
+                        <p>Add an object with <code>type: 'expand'</code> in <code>columns</code> can apply expand function.</p>
+                        <p>Set <code>_expanded</code> to true for certain data item can let the row be expanded by default. Set <code>_disableExpand</code> to disable expanding on the row.</p>                        
+                        <p>Simular to custom column template, we use render function to render expand area. If the content is complex, you can split it into components or use JSX.</p>
                         <p><study-render></study-render></p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.expand }}</i-code>
@@ -193,7 +193,7 @@
                         <Table size="small" :columns="columns1" :data="data1"></Table>
                     </div>
                     <div slot="desc">
-                        <p>通过设置属性 <code>size</code> 为 <code>large</code> 或 <code>small</code> 可以调整表格尺寸为大或小，默认不填或填写 <code>default</code> 为中。</p>
+                        <p>Set <code>size</code> prop to <code>large</code> or <code>small</code> or <code>default</code> to adjust the size of the table to large or small or default size. Default is medium.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.size }}</i-code>
                 </Demo>
@@ -206,18 +206,18 @@
                         <Button type="primary" size="large" @click="exportData(3)"><Icon type="ios-download-outline"></Icon> 导出自定义数据</Button>
                     </div>
                     <div slot="desc">
-                        <p>通过调用 <code>exportCsv()</code> 方法，可以将数据导出为 <code>.csv</code> 的表格文件，详见 API。</p>
-                        <p>说明：</p>
+                        <p>You can export the data to <code>.csv</code> document file by calling <code>exportCsv()</code> method. Details on API Doc.</p>
+                        <p>Description:</p>
                         <ul>
-                            <li>支持IE9~IE11、Edge、Chrome、Safari、Firefox 全系列浏览器。</li>
-                            <li>IE9、Safari 需要手动修改后缀名为 <code>.csv</code>。</li>
-                            <li>IE9暂时只支持英文，中文会显示为乱码。</li>
+                            <li>It supports IE9 ~ IE 11, Edge, Chrome, Safari, Firefox.</li>
+                            <li>You need to add <code>.csv</code> extension manually after downloading the file.</li>
+                            <li>Temporarily, IE9 only supports English data. Chinese will be messy code.</li>
                         </ul>
                     </div>
                     <i-code lang="html" slot="code">{{ code.csv }}</i-code>
                 </Demo>
                 <Anchor title="Advanced Examples" h2></Anchor>
-                <p>以上示例已经基本涵盖了表格组件的所有功能，我们根据实际业务场景，增加了一些较为复杂的示例，可以结合来看，更深入了解表格组件的使用。</p>
+                <p>Examples above basically cover all the functions of Table. We provides some complex examples on the basis of real business scenarios:</p>
                 <Button type="primary" size="large" @click="table1 = true">Complex Table with Paging</Button>
                 <Button type="primary" size="large" @click="table2 = true">Table with Multi-cols Filter</Button>
                 <Button type="primary" size="large" @click="table3 = true">Table with Many Styles</Button>
