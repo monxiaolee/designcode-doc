@@ -192,6 +192,13 @@ const routers = [
         component: (resolve) => require(['./views/guide/update.vue'], resolve)
     },
     {
+        path: '/docs/guide/update-en',
+        meta: {
+            title: 'Changelog'
+        },
+        component: (resolve) => require(['./views/guide/update-en.vue'], resolve)
+    },
+    {
         path: '/components/grid',
         meta: {
             title: '栅格 Grid'
@@ -386,6 +393,13 @@ const routers = [
             title: '时间选择器 TimePicker'
         },
         component: (resolve) => require(['./views/components/time-picker.vue'], resolve)
+    },
+    {
+        path: '/components/time-picker-en',
+        meta: {
+            title: 'TimePicker'
+        },
+        component: (resolve) => require(['./views/components/time-picker-en.vue'], resolve)
     },
     {
         path: '/components/cascader',
