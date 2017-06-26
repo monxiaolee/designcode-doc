@@ -37,11 +37,11 @@
 <template>
     <i-article>
         <article>
-            <h1>Tabs 标签页</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>选项卡切换组件，常用于平级区域大块内容的的收纳和展现。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基础用法">
+            <h1>Tabs</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>Tabs make it easy to switch between different views.</p>
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Basic Usage">
                 <div slot="demo">
                     <Tabs value="name1">
                         <Tab-pane label="标签一" name="name1">标签一的内容</Tab-pane>
@@ -50,11 +50,11 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p><code>value</code> 与 <code>Tab-pane</code> 的 <code>name</code> 对应，用于标识当前激活的是哪一项，name 值默认从 0 开始，默认激活第一项。可以使用 v-model 双向绑定数据。</p>
+                    <p><code>Value</code> corresponds to the name of the <code>Tab-pane</code>, it is used to identify which item is currently active. The name defaults from 0 and activates the first item by default. You can use <code>v-model</code> to enable a two-way bingding on data.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
-            <Demo title="禁用">
+            <Demo title="Disabled">
                 <div slot="demo">
                     <Tabs>
                         <Tab-pane label="标签一">标签一的内容</Tab-pane>
@@ -63,11 +63,11 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p>禁用某一项。</p>
+                    <p>Disabled a tab.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
-            <Demo title="图标">
+            <Demo title="Icon">
                 <div slot="demo">
                     <Tabs>
                         <Tab-pane label="macOS" icon="social-apple">标签一的内容</Tab-pane>
@@ -76,11 +76,11 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>icon</code>，可以显示一个图标。</p>
+                    <p>The Tab with Icon.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.icon }}</i-code>
             </Demo>
-            <Demo title="迷你型">
+            <Demo title="Mini tab">
                 <div slot="demo">
                     <Tabs size="small">
                         <Tab-pane label="标签一">标签一的内容</Tab-pane>
@@ -89,11 +89,11 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p>设置属性 <code>size</code> 为 <code>small</code> 可以显示为迷你型，只在 <code>type</code> 为 <code>line</code> 时有效。</p>
+                    <p>Set the property <code></code> to <code>small</code> can be displayed as a mini-type, only effective when the <code>type</code> is <code>line</code>.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.mini }}</i-code>
             </Demo>
-            <Demo title="卡片样式">
+            <Demo title="Card type tab">
                 <div slot="demo">
                     <Tabs type="card">
                         <Tab-pane label="标签一">标签一的内容</Tab-pane>
@@ -102,11 +102,11 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p>设置属性 <code>type</code> 为 <code>card</code> 可以显示卡片样式，常用于容器顶部。</p>
+                    <p>Set the property <code>type</code> to <code>card</code> can display the card style, commonly used at the top of the container.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.card }}</i-code>
             </Demo>
-            <Demo title="可关闭">
+            <Demo title="Closable">
                 <div slot="demo">
                     <Tabs type="card" closable @on-tab-remove="handleTabRemove">
                         <Tab-pane label="标签一" v-if="tab0">标签一的内容</Tab-pane>
@@ -115,12 +115,12 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>closable</code> 可以关闭某一项，仅在 <code>type</code> 为 <code>card</code> 时有效。</p>
-                    <p>需结合 @on-tab-remove 事件手动关闭标签页。</p>
+                    <p>You can close an tab by setting the property <code>closable</code>, only if the <code>type</code> is <code>card</code>.</p>
+                    <p>The tab should be closed manually in conjunction with the <code>on-tab-remove</code> event.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.closable }}</i-code>
             </Demo>
-            <Demo title="自定义标签页">
+            <Demo title="Custom tab">
                 <div slot="demo">
                     <Tabs value="name1">
                         <Tab-pane :label="label" name="name1">标签一的内容</Tab-pane>
@@ -129,12 +129,11 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p>设置 label 为 Render 函数后，可以自定义标签页的内容。</p>
-                    <p><study-render></study-render></p>
+                    <p>You can customize the contents of the tab by setting label as Render function.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.render }}</i-code>
             </Demo>
-            <Demo title="附加内容">
+            <Demo title="Extra content">
                 <div slot="demo">
                     <Tabs type="card">
                         <Tab-pane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</Tab-pane>
@@ -142,11 +141,11 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p>设置 slot <code>extra</code> 可以在页签右边添加附加操作。</p>
+                    <p>You can add extra actions to the right of Tabs by adding the slot <code>extra</code>.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.extra }}</i-code>
             </Demo>
-            <Demo title="不使用动画">
+            <Demo title="Do not use animation">
                 <div slot="demo">
                     <Tabs :animated="false">
                         <Tab-pane label="标签一">标签一的内容</Tab-pane>
@@ -155,11 +154,11 @@
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>animated</code> 为 <code>false</code> 可以禁用动画。</p>
+                    <p>Animating can be disabled by setting the property <code>animated</code> to <code>false</code>.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.animated }}</i-code>
             </Demo>
-            <Demo title="其它样式" vertical hide-code>
+            <Demo title="Other styles" vertical hide-code>
                 <div slot="demo">
                     <Row :gutter="32">
                         <Col span="12" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
@@ -179,7 +178,7 @@
                     </Row>
                 </div>
                 <div slot="desc">
-                    <p>可以根据业务自定义 UI，需要一点额外的样式覆盖。</p>
+                    <p>Custom UI, needs to override styles.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.style }}</i-code>
             </Demo>
@@ -189,40 +188,40 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>value</td>
-                            <td>当前激活 tab 面板的 name，可以使用 v-model 双向绑定数据</td>
+                            <td>Activates the name of the tab panel. Use v-model to enable a two-way binding.</td>
                             <td>String</td>
-                            <td>默认为第一项的 name</td>
+                            <td>Defaults to the first name</td>
                         </tr>
                         <tr>
                             <td>type</td>
-                            <td>页签的基本样式，可选值为 <code>line</code> 和 <code>card</code></td>
+                            <td>The basic style of the tab，Optional value: <code>line</code> and <code>card</code>.</td>
                             <td>String</td>
                             <td>line</td>
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>尺寸，可选值为 <code>default</code> 和 <code>small</code>，仅在 <code>type="line"</code> 时有效</td>
+                            <td>Size, Optional value:  <code>default</code> and <code>small</code>, only effective when the <code>type</code> is <code>line</code>.</td>
                             <td>String</td>
                             <td>default</td>
                         </tr>
                         <tr>
                             <td>closable</td>
-                            <td>是否可以关闭页签，仅在 <code>type="card"</code> 时有效</td>
+                            <td>Whether to close the tab, only effective when the <code>type</code> is <code>card</code>.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>animated</td>
-                            <td>是否使用 CSS3 动画</td>
+                            <td>Whether to use the CSS3 animation.</td>
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
@@ -232,20 +231,20 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>on-click</td>
-                            <td>tab 被点击时触发</td>
+                            <td>Emitted when tab is clicked.</td>
                             <td>name</td>
                         </tr>
                         <tr>
                             <td>on-tab-remove</td>
-                            <td>tab 被关闭时触发</td>
+                            <td>Emitted when tab is closed.</td>
                             <td>name</td>
                         </tr>
                     </tbody>
@@ -254,14 +253,14 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>说明</th>
+                            <th>Name</th>
+                            <th>Description</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>extra</td>
-                            <td>附加内容</td>
+                            <td>Extra content.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -269,40 +268,40 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>name</td>
-                            <td>用于标识当前面板，对应 value，默认为其索引值</td>
+                            <td>Used to identify the current panel, corresponding to the value, the default for its index.</td>
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>label</td>
-                            <td>选项卡头显示文字，支持 Render 函数。<study-render></study-render></td>
+                            <td>The display text of the tab, supports the Render function.</td>
                             <td>String | Function</td>
-                            <td>空</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>icon</td>
-                            <td>选项卡图标</td>
+                            <td>Icon of tab.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
-                            <td>是否禁用该选项卡</td>
+                            <td>Whether to disable the tab.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>closable</td>
-                            <td>是否可以关闭页签，仅在 <code>type="card"</code> 时有效</td>
+                            <td>Whether to close the tab，only effective when <code>type="card"</code>.</td>
                             <td>Boolean</td>
                             <td>null</td>
                         </tr>

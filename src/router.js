@@ -605,6 +605,13 @@ const routers = [
         component: (resolve) => require(['./views/components/tooltip.vue'], resolve)
     },
     {
+        path: '/components/tooltip-en',
+        meta: {
+            title: 'Tooltip'
+        },
+        component: (resolve) => require(['./views/components/tooltip-en.vue'], resolve)
+    },
+    {
         path: '/components/poptip',
         meta: {
             title: '气泡提示 Poptip'
@@ -666,6 +673,13 @@ const routers = [
             title: '标签页 Tabs'
         },
         component: (resolve) => require(['./views/components/tabs.vue'], resolve)
+    },
+    {
+        path: '/components/tabs-en',
+        meta: {
+            title: 'Tabs'
+        },
+        component: (resolve) => require(['./views/components/tabs-en.vue'], resolve)
     },
     {
         path: '/components/dropdown',

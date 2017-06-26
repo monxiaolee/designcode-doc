@@ -439,7 +439,7 @@
     import Demo from '../../components/demo.vue';
     import Code from '../../code/modal';
     import Anchor from '../../components/anchor.vue';
-    import studyRender from '../../components/render.vue';
+    import studyRender from '../../components/study.vue';
 
     export default {
         components: {

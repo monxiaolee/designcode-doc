@@ -673,7 +673,7 @@
     import Anchor from '../../components/anchor.vue';
 
     import expandRow from './table-expand.vue';
-    import studyRender from '../../components/render.vue';
+    import studyRender from '../../components/study.vue';
 
     export default {
         components: {
