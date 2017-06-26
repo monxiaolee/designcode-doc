@@ -675,6 +675,13 @@ const routers = [
         component: (resolve) => require(['./views/components/tabs.vue'], resolve)
     },
     {
+        path: '/components/tabs-en',
+        meta: {
+            title: 'Tabs'
+        },
+        component: (resolve) => require(['./views/components/tabs-en.vue'], resolve)
+    },
+    {
         path: '/components/dropdown',
         meta: {
             title: '下拉菜单 Dropdown'

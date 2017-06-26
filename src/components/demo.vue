@@ -23,7 +23,10 @@
             <div class="example-code-more" v-if="showMore" @click="showCode = !showCode">
                 <Icon type="ios-arrow-down" v-show="!showCode"></Icon>
                 <Icon type="ios-arrow-up" v-show="showCode"></Icon>
-                <i-button type="text" v-show="hideCode && !showCode">显示代码</i-button>
+                <i-button type="text" v-show="hideCode && !showCode">
+                    <template v-if="lang === 'zh-CN'">显示代码</template>
+                    <template v-else>Show Code</template>
+                </i-button>
             </div>
         </i-col>
     </Row>
@@ -51,7 +54,8 @@
                 showMore: true,
                 demo_height: 0,
                 code_height: 0,
-                ready: false
+                ready: false,
+                lang: this.$lang
             }
         },
         computed: {
