@@ -18,8 +18,8 @@
                         </Row>
                     </div>
                     <div slot="desc">
-                        <p>设置属性 <code>type</code> 为 <code>time</code> 或 <code>timerange</code> 分别显示<strong>选择单个时间</strong>和<strong>选择范围时间</strong>类型。</p>
-                        <p>设置属性 <code>placement</code> 可以更改选择器出现的方向，与 Poptip 和 Tooltip 配置一致，支持 12 个方向，详见 API。</p>
+                        <p>Set <code>type</code> prop to <code>time</code> or <code>timerange</code> to display <strong>Select Time</strong> or <strong>Select Time Range</strong> type.</p>
+                        <p>Set <code>placement</code> prop to change the direction time picker displays. The configuration is same to Poptip and Tooltip. Details on API Doc.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.base }}</i-code>
                 </Demo>
@@ -35,8 +35,8 @@
                         </Row>
                     </div>
                     <div slot="desc">
-                        <p>设置属性 <code>format</code> 可以改变时间的显示格式，详见 <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a>。</p>
-                        <p>注意，format 只是改变显示的格式，并非改变 value 值。</p>
+                        <p>Set <code>format</code> prop can change the time format. See <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a> for more details.</p>
+                        <p>Attention: format only controls how TimePicker displays the date, it won't change value.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.format }}</i-code>
                 </Demo>
@@ -52,7 +52,7 @@
                         </Row>
                     </div>
                     <div slot="desc">
-                        <p>组件浮层中的列会随着 <code>format</code> 变化，当略去 <code>format</code> 中的秒时，浮层中对应的列也会消失。</p>
+                        <p>The columns in the picker will change with <code>format</code>. When second in <code>format</code> is removed, the second column will be removed too.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.hours }}</i-code>
                 </Demo>
@@ -77,8 +77,8 @@
                         </Row>
                     </div>
                     <div slot="desc">
-                        <p>可以使用 <code>disabled-hours</code> <code>disabled-minutes</code> <code>disabled-seconds</code> 组合禁止用户选择某个时间。</p>
-                        <p>使用 <code>hide-disabled-options</code> 可以直接把不可选择的项隐藏。</p>
+                        <p>You can use <code>disabled-hours</code> <code>disabled-minutes</code> <code>disabled-seconds</code> as a combination to disallow user select a certain time.</p>
+                        <p>Use <code>hide-disabled-options</code> can hide disabled options.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
                 </Demo>
@@ -94,8 +94,8 @@
                         </Row>
                     </div>
                     <div slot="desc">
-                        <p>设置属性 <code>confirm</code>，选择器会有清空和确定按钮。</p>
-                        <p>确认按钮并没有影响时间的正常选择。</p>
+                        <p>The picker will get a clear and an OK button if you set <code>confirm</code> prop.</p>
+                        <p>OK button won't affect time picking operation.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.confirm }}</i-code>
                 </Demo>
@@ -116,7 +116,7 @@
                         </Time-picker>
                     </div>
                     <div slot="desc">
-                        <p>对于一些定制化的场景，可以使用 slot 配合参数 <code>open</code> <code>confirm</code> 及事件来手动控制组件的显示状态，详见示例和 API。</p>
+                        <p>In some custom scenarios, you can use slots with <code>open</code> <code>confirm</code> params and events to handle the component. Details on API Doc.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.slot }}</i-code>
                 </Demo>
@@ -135,7 +135,7 @@
                         </Row>
                     </div>
                     <div slot="desc">
-                        <p>通过设置属性 <code>size</code> 为 <code>large</code> 或 <code>small</code> 可以调整选择器尺寸为大或小，默认不填为中。</p>
+                        <p>Set <code>size</code> prop to <code>large</code> or <code>small</code> to adjust TimePicker's size. Default is medium.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.size }}</i-code>
                 </Demo>
@@ -151,24 +151,24 @@
                         </colgroup>
                         <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>type</td>
-                            <td>显示类型，可选值为 <code>time</code>、<code>timerange</code></td>
+                            <td>The type of the picker. Optional value: <code>time</code>, <code>timerange</code></td>
                             <td>String</td>
                             <td>time</td>
                         </tr>
                         <tr>
                             <td>value</td>
                             <td>
-                                时间，可以是 JavaScript 的 Date，例如 <strong>new Date()</strong>，也可以是标准的时间格式，点击右边查看<br>
-                                注意：value 使用 v-model 时，值是 Date 类型，可以配合 @on-change 使用
+                                Time. It can be JavaScript's Date, like <strong>new Date()</strong>, or standard time string. Click the link to see more info.<br>
+                                Attention: when binding value on v-model, if the type is Date, you can use it with @on-change event.
                             </td>
                             <td>
                                 <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a>
@@ -177,7 +177,7 @@
                         </tr>
                         <tr>
                             <td>format</td>
-                            <td>展示的时间格式</td>
+                            <td>Time format that is displayed.</td>
                             <td>
                                 <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a>
                             </td>
@@ -185,55 +185,55 @@
                         </tr>
                         <tr>
                             <td>placement</td>
-                            <td>时间选择器出现的位置，可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code></td>
+                            <td>The direction time picker displays. Optional value: <code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code></td>
                             <td>String</td>
                             <td>bottom-start</td>
                         </tr>
                         <tr>
                             <td>placeholder</td>
-                            <td>占位文本</td>
+                            <td>Placeholder</td>
                             <td>String</td>
-                            <td>空</td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>confirm</td>
-                            <td>是否显示底部控制栏</td>
+                            <td>Show confirm panel on the bottom or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>open</td>
-                            <td>手动控制时间选择器的显示状态，true 为显示，false 为收起。使用该属性后，选择器不会主动关闭。建议配合 slot 及 confirm 和相关事件一起使用</td>
+                            <td>Use this prop to control TimePicker's display manually. true: display, false: hide. TimePicker won't close automatically if you use this prop. We suggest you using it with slot, confirm and related events.</td>
                             <td>Boolean</td>
                             <td>null</td>
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>尺寸，可选值为<code>large</code>和<code>small</code>或者不设置</td>
+                            <td>The size of TimePicker. Optional value: <code>large</code>, <code>small</code> or leave empty.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
-                            <td>是否禁用选择器</td>
+                            <td>Disable the picker or not.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>clearable</td>
-                            <td>是否显示清除按钮</td>
+                            <td>Show clear button or not.</td>
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
                         <tr>
                             <td>readonly</td>
-                            <td>完全只读，开启后不会弹出选择器，只在没有设置 open 属性下生效</td>
+                            <td>Readonly. If is set to true, the picker won't display. It only works when open prop is not set.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>editable</td>
-                            <td>文本框是否可以输入，只在没有使用 slot 时有效</td>
+                            <td>Text box is editable or not. It only works when slot is not set.</td>
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
@@ -243,30 +243,30 @@
                     <table>
                         <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>时间发生变化时触发</td>
-                            <td>已经格式化后的时间，比如 09:41:00</td>
+                            <td>Emitted when selected time changes.</td>
+                            <td>Formatted time string like 09:41:00</td>
                         </tr>
                         <tr>
                             <td>on-open-change</td>
-                            <td>弹出浮层和关闭浮层时触发</td>
+                            <td>Emitted when picker is open or close.</td>
                             <td>true | false</td>
                         </tr>
                         <tr>
                             <td>on-ok</td>
-                            <td>点击确定按钮时触发</td>
+                            <td>Emitted when OK button is clicked.</td>
                             <td>-</td>
                         </tr>
                         <tr>
                             <td>on-clear</td>
-                            <td>在清空日期时触发</td>
+                            <td>Emitted when date is cleared.</td>
                             <td>-</td>
                         </tr>
                         </tbody>
@@ -275,14 +275,14 @@
                     <table>
                         <thead>
                         <tr>
-                            <th>名称</th>
-                            <th>说明</th>
+                            <th>Name</th>
+                            <th>Description</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>无</td>
-                            <td>自定义选择器的显示内容，建议与 open 等参数一起使用，详见示例</td>
+                            <td>-</td>
+                            <td>Customize the content picker displays. We suggest you using it with open and other params. For more details, please see the demo above.</td>
                         </tr>
                         </tbody>
                     </table>
