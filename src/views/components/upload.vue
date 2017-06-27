@@ -81,7 +81,7 @@
                     </Upload>
                 </div>
                 <div slot="desc">
-                    <p>设置属性 <code>multiple</code>，可以选择多个文件。</p>
+                    <p>设置属性 <code>type</code> 为 <code>drag</code>，可以拖拽上传。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.drag }}</i-code>
             </Demo>
