@@ -3,11 +3,11 @@
 </style>
 <template>
     <div class="navigate">
-        <div class="ad" @click="handleAd">
-            <div class="ad-main">
-                <img src="../images/ad.png">
-            </div>
-        </div>
+        <!--<div class="ad" @click="handleAd">-->
+            <!--<div class="ad-main">-->
+                <!--<img src="../images/ad.png">-->
+            <!--</div>-->
+        <!--</div>-->
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'guide'">
             <Menu-item v-for="item in navigate.guide" :key="item" :name="item.path">
                 <template v-if="lang === 'zh-CN'">{{ item.title }}</template>

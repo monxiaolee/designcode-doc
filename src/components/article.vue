@@ -103,7 +103,10 @@
         </div>
         <div class="catalogue" v-show="list.length">
             <card dis-hover shadow>
-                <div class="catalogue-title">目录</div>
+                <div class="catalogue-title">
+                    <template v-if="lang === 'zh-CN'">Catalogue</template>
+                    <template v-else></template>
+                </div>
                 <div class="catalogue-content">
                     <ul>
                         <li v-for="item in list">
