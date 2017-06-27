@@ -465,6 +465,13 @@ const routers = [
         component: (resolve) => require(['./views/components/upload.vue'], resolve)
     },
     {
+        path: '/components/upload-en',
+        meta: {
+            title: 'Upload'
+        },
+        component: (resolve) => require(['./views/components/upload-en.vue'], resolve)
+    },
+    {
         path: '/components/form',
         meta: {
             title: '表单 Form'
