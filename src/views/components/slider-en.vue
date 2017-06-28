@@ -151,12 +151,12 @@
                     <tbody>
                         <tr>
                             <td>on-change</td>
-                            <td>在松开滑动时触发，返回当前的选值，在滑动过程中不会触发</td>
+                            <td>Emitted when slide button is released. It'll return current selected value.</td>
                             <td>value</td>
                         </tr>
                         <tr>
                             <td>on-input</td>
-                            <td>滑动条数据变化时触发，返回当前的选值，在滑动过程中实时触发</td>
+                            <td>Emitted when value changes. It'll be emitted in real time during sliding.</td>
                             <td>value</td>
                         </tr>
                     </tbody>
