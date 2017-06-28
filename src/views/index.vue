@@ -38,10 +38,17 @@
             </Row>
         </div>
         <div id="indexLizi"></div>
+        <div class="index-lang">
+            <span @click="handleChangeLang">
+                <template v-if="lang === 'zh-CN'">EN</template>
+                <template v-else>中文</template>
+            </span>
+        </div>
     </div>
 </template>
 <script>
     import THREE from '../libs/three/three';
+    import bus from '../../src/components/bus';
 
     export default {
         data () {
@@ -174,6 +181,10 @@
 
                     count += 0.1;
                 }
+            },
+            handleChangeLang () {
+                const lang = this.lang === 'zh-CN' ? 'en-US' : 'zh-CN';
+                bus.$emit('on-change-lang', lang, '/');
             }
         },
         mounted () {
