@@ -48,7 +48,7 @@
                 this.liveVisible = true;
             }
 
-            if (this.liveVisible) {
+            if (this.liveVisible && this.$lang === 'zh-CN') {
                 this.$Notice.config({
                     top: 85
                 });
