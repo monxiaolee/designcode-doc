@@ -164,7 +164,6 @@
                     <div slot="desc">
                         <p>You can render the column yourself by setting <code>render</code> to certain <code>columns</code> prop's items. It is based on Vue's Render function.</p>
                         <p><code>render</code> accepts two arguments: the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index).
-                        <p><study-render></study-render></p>
                         <blockquote>
                             <p style="color: #f50">Content below only applies to version rc.13 or lower. It'll be abandoned in the future.</p>
                             <p>You must set context for the old render function.</p>
@@ -182,7 +181,6 @@
                         <p>Add an object with <code>type: 'expand'</code> in <code>columns</code> can apply expand function.</p>
                         <p>Set <code>_expanded</code> to true for certain data item can let the row be expanded by default. Set <code>_disableExpand</code> to disable expanding on the row.</p>                        
                         <p>Simular to custom column template, we use render function to render expand area. If the content is complex, you can split it into components or use JSX.</p>
-                        <p><study-render></study-render></p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.expand }}</i-code>
                 </Demo>
@@ -536,7 +534,7 @@
                         <tr>
                             <td>render</td>
                             <!--<td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>-->
-                            <td>Custom column renderer. It uses Vue's render function. It accepts two arguments:  the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index). Details on the demo above. <study-render></study-render> <span style="color: #f50">It is compatible with old-styled render function. But the old function will be abandoned in the future.</span></td>
+                            <td>Custom column renderer. It uses Vue's render function. It accepts two arguments:  the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index). Details on the demo above. <span style="color: #f50">It is compatible with old-styled render function. But the old function will be abandoned in the future.</span></td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
