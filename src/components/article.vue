@@ -104,8 +104,8 @@
         <div class="catalogue" v-show="list.length">
             <card dis-hover shadow>
                 <div class="catalogue-title">
-                    <template v-if="lang === 'zh-CN'">Catalogue</template>
-                    <template v-else></template>
+                    <template v-if="lang === 'zh-CN'">目录</template>
+                    <template v-else>CAT</template>
                 </div>
                 <div class="catalogue-content">
                     <ul>

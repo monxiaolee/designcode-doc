@@ -7,59 +7,60 @@
 <template>
     <i-article>
         <article>
-            <h1>Slider 滑块</h1>
-            <Anchor title="概述" h2></Anchor>
-            <p>滑动输入器，用于在数值区间/自定义区间内进行选择，支持连续或离散值。</p>
-            <Anchor title="代码示例" h2></Anchor>
-            <Demo title="基础用法">
+            <h1>Slider</h1>
+            <Anchor title="Brief Introduction" h2></Anchor>
+            <p>A Slider component for displaying current value and intervals in range.</p>
+            <Anchor title="Examples" h2></Anchor>
+            <Demo title="Basic Usage">
                 <div slot="demo">
                     <Slider v-model="value1"></Slider>
                     <Slider v-model="value2" range></Slider>
                     <Slider v-model="value3" range disabled></Slider>
                 </div>
                 <div slot="desc">
-                    <p>滑块的基本用法，可以使用 v-model 双向绑定数据。</p>
-                    <p>通过设置属性 <code>range</code> 开启双滑块，通过设置属性 <code>disabled</code> 禁用滑块。</p>
-                    <p>注意，单滑块时，<code>value</code> 格式为数字，当开启双滑块时，<code>value</code> 为长度是2的数组，且每项为数字。</p>
+                    <p>Basic slider. You can use <code>v-model</code> to enable a two-way bingding on data.</p>
+                    <p>When <code>range</code> is true, display as dual thumb mode. Disable the slider by setting the property <code>disabled</code>.</p>
+                    <p></p>
+                    <p>Note that when using a single slider, the <code>value</code> format is a number. When using as dual thumb mode, the <code>value</code> is an array of two, and each item is a number.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
-            <Demo title="离散值">
+            <Demo title="Discrete values">
                 <div slot="demo">
                     <Slider v-model="value4" :step="10"></Slider>
                     <Slider v-model="value5" :step="10" range></Slider>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>step</code> 可以控制每次滑动的间隔。</p>
+                    <p>You can control the interval of each slide by setting the property <code>step</code>.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.step }}</i-code>
             </Demo>
-            <Demo title="显示间断点">
+            <Demo title="Breakpoints">
                 <div slot="demo">
                     <Slider v-model="value6" :step="10" show-stops></Slider>
                     <Slider v-model="value7" :step="10" show-stops range></Slider>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>show-stops</code> 可以显示间断点，建议在 <code>step</code> 间隔不密集时使用。</p>
+                    <p>You can display breakpoints by setting the property <code>show-stops</code>, which are recommended when the <code>step</code> interval is not intensive.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.stops }}</i-code>
             </Demo>
-            <Demo title="带有输入框">
+            <Demo title="With input">
                 <div slot="demo">
                     <Slider v-model="value8" show-input></Slider>
                 </div>
                 <div slot="desc">
-                    <p>通过设置属性 <code>show-input</code> 可以显示数字输入框，配合使用，仅在单滑块模式下有效。</p>
+                    <p>Synchronize with <code>InptNumber</code> component by setting the property <code>show-input</code>.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.input }}</i-code>
             </Demo>
-            <Demo title="自定义提示">
+            <Demo title="Customerize tooltip">
                 <div slot="demo">
                     <Slider v-model="value9" :tip-format="format"></Slider>
                     <Slider v-model="value10" :tip-format="hideFormat"></Slider>
                 </div>
                 <div slot="desc">
-                    <p>Slider 会把当前值传给 <code>tip-format</code>，并在 Tooltip 中显示 tip-format 的返回值，若为 null，则隐藏 Tooltip。</p>
+                    <p>Slider will pass the current value to <code>tip-format</code> and display the returned value in Tooltip. If null, the Tooltip will be hidden.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.format }}</i-code>
             </Demo>
@@ -69,70 +70,70 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>属性</th>
-                            <th>说明</th>
-                            <th>类型</th>
-                            <th>默认值</th>
+                            <th>Property</th>
+                            <th>Description</th>
+                            <th>Type</th>
+                            <th>Default</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>value</td>
-                            <td>滑块选定的值，可以使用 v-model 双向绑定数据。普通模式下，数据格式为数字，在双滑块模式下，数据格式为长度是2的数组，且每项都为数字</td>
+                            <td>The value of slider. Use v-model to enable a two-way binding. When using a single slider, the value format is a number. When using as dual thumb mode, the value is an array of two, and each item is a number.</td>
                             <td>Number | Array</td>
                             <td>0</td>
                         </tr>
                         <tr>
                             <td>min</td>
-                            <td>最小值</td>
+                            <td>The minimum value the slider can slide to.</td>
                             <td>Number</td>
                             <td>0</td>
                         </tr>
                         <tr>
                             <td>max</td>
-                            <td>最大值</td>
+                            <td>The maximum value the slider can slide to.</td>
                             <td>Number</td>
                             <td>100</td>
                         </tr>
                         <tr>
                             <td>step</td>
-                            <td>步长，取值建议能被（max - min）整除</td>
+                            <td>The granularity the slider can step through values. Must greater than 0, and be divided by (max - min) .</td>
                             <td>Number</td>
                             <td>1</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
-                            <td>是否禁用滑块</td>
+                            <td>If true, the slider will not be interactable.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>range</td>
-                            <td>是否开启双滑块模式</td>
+                            <td>Whether to use the dual thumb mode.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>show-input</td>
-                            <td>是否显示数字输入框，仅在单滑块模式下有效</td>
+                            <td>Whether to synchronize with InptNumber component, works when range is false.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>show-stops</td>
-                            <td>是否显示间断点，建议在 step 不密集时使用</td>
+                            <td>Whether to display breakpoints.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>show-tip</td>
-                            <td>提示的显示控制，可选值为 <code>hover</code>（悬停，默认）、<code>always</code>（总是可见）、<code>never</code>（不可见）</td>
+                            <td>Tooltip display control, Optional value: <code>hover</code>（Hover, default）,<code>always</code>（Always visible）,<code>never</code>（Invisible）.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>tip-format</td>
-                            <td>Slider 会把当前值传给 <code>tip-format</code>，并在 Tooltip 中显示 tip-format 的返回值，若为 null，则隐藏 Tooltip</td>
+                            <td>Slider will pass the current value to tip-format and display the returned value in Tooltip. If null, the Tooltip will be hidden.</td>
                             <td>Function</td>
                             <td>value</td>
                         </tr>
@@ -142,9 +143,9 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>事件名</th>
-                            <th>说明</th>
-                            <th>返回值</th>
+                            <th>Event Name</th>
+                            <th>Description</th>
+                            <th>Return Value</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -374,6 +374,13 @@ const routers = [
         component: (resolve) => require(['./views/components/slider.vue'], resolve)
     },
     {
+        path: '/components/slider-en',
+        meta: {
+            title: 'Slider'
+        },
+        component: (resolve) => require(['./views/components/slider-en.vue'], resolve)
+    },
+    {
         path: '/components/date-picker',
         meta: {
             title: '日期选择器 DatePicker'

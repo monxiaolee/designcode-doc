@@ -46,7 +46,8 @@
         data () {
             return {
                 code: '',
-                copied: false
+                copied: false,
+                docLang: this.$lang
             }
         },
         computed: {
@@ -76,7 +77,11 @@
                     e.clearSelection();
                     clipboard.destroy();
                     this.copied = true;
-                    this.$Message.success('代码已复制到剪贴板');
+                    if (this.docLang === 'zh-CN') {
+                        this.$Message.success('代码已复制到剪贴板');
+                    } else {
+                        this.$Message.success('Code copied');
+                    }
                     setTimeout(() => {
                         this.copied = false;
                     }, 2000);
