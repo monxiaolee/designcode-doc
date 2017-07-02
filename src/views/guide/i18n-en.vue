@@ -8,7 +8,7 @@
             <Anchor title="Compatible with vue-i18n" h2></Anchor>
             <p>iView is compatible with <a href="https://github.com/kazupon/vue-i18n" target="_blank">vue-i18n</a>, which makes it eaiser to switch between multiple languages.</p>
             <i-code lang="js" bg>{{ code.i18n.vue }}</i-code>
-            <p>We need the help of bebel to import iView language packages:</p>
+            <p>We need the help of Babel to import iView language packages:</p>
             <i-code lang="js" bg>{{ code.install.warning }}</i-code>
             <Anchor title="Supported Languages" h2></Anchor>
             <p>iView have beed translated from Chinese to the following languages:</p>
