@@ -25,6 +25,28 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.0.0-rc.18" h2></Anchor>
+                    <p>
+                        <code>2017-07-03</code>
+                    </p>
+                    <ul>
+                        <li>废弃 Table 旧 render 方法。</li>
+                        <li>修复 Table 在使用展开功能时，render 重复触发的问题。<issue id="1195"></issue></li>
+                        <li>修复 Transfer 在特定条件下报错的问题。</li>
+                        <li>修复 Input 在 small 尺寸时，右间距不正确的问题。<issue id="1174"></issue></li>
+                        <li>修复 Poptip title 无法显示的bug。<issue id="1222"></issue></li>
+                        <li>修复 Poptip 使用 trigger 模式时，对普通元素无法生效的bug。</li>
+                        <li>修复 Select 多选在 Firefox 下样式不正确的bug。<issue id="1224"></issue></li>
+                        <li>修复 Upload 触发区域不准确的bug。<issue id="1258"></issue></li>
+                        <li>优化 Menu 样式。</li>
+                        <li>优化 Page 样式。</li>
+                        <li>Date 组件改为 inline-block。</li>
+                        <li>更新 async-validator 库到 1.7.1 版本。<issue id="1171"></issue></li>
+                        <li>新增德语。<mention id="dspangenberg"></mention></li>
+                        <li>新增葡萄牙语。<mention id="programadorthi"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.0.0-rc.17" h2></Anchor>
                     <p>
                         <code>2017-06-14</code>

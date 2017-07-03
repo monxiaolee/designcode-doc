@@ -44,7 +44,7 @@
         color: #9ea7b4;
     }
     .layout-menu-left{
-        background: #1c2438;
+        background: #495060;
     }
     .layout-header{
         height: 60px;
