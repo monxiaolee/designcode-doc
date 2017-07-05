@@ -165,7 +165,7 @@
                         <p>You can render the column yourself by setting <code>render</code> to certain <code>columns</code> prop's items. It is based on Vue's Render function.</p>
                         <p><code>render</code> accepts two arguments: the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index).
                         <blockquote>
-                            <p style="color: #f50">Content below only applies to version rc.13 or lower. It'll be abandoned in the future.</p>
+                            <p style="color: #f50">Content below only applies to version rc.13 or lower. <span style="font-weight: bold;">It's already abandoned since 2.0.0-rc.18.</span></p>
                             <p>You must set context for the old render function.</p>
                             The essence of <code>render</code> function is to return a string. Table compiles the string inside it. If you've used custom components inside render, you should pay more attention on the context. The rendered component's default context is same to <code>Table</code>'s context. If you want to compile the component in selected instance, you can set <code>context</code> prop to Table to set the context. In this example, we set current route page as the context. 一般情况不需要此配置，但如果你把 <code>Table</code> 作为一个 slot 封装在其它组件里，这时 <code>context</code> 属性就很有用，比如父级是 $parent，根组件 $root。
                         </blockquote>
@@ -305,8 +305,8 @@
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td>context</td>
-                            <td><span style="color: #f50">Deprecated</span> Set context for custom component rendered in the cell. For example, if parent component is $parent, root component is $root. When <code>Table</code> is encapsulated in other components as a slot, the prop will be useful. You must set context if you are still using old-styled render function.</td>
+                            <td><del>context</del></td>
+                            <td><span style="color: #f50; font-weight: bold;">Deprecated</span> Set context for custom component rendered in the cell. For example, if parent component is $parent, root component is $root. When <code>Table</code> is encapsulated in other components as a slot, the prop will be useful. You must set context if you are still using old-styled render function.</td>
                             <td>Object</td>
                             <td>Table's context.</td>
                         </tr>
@@ -534,7 +534,7 @@
                         <tr>
                             <td>render</td>
                             <!--<td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>-->
-                            <td>Custom column renderer. It uses Vue's render function. It accepts two arguments:  the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index). Details on the demo above. <span style="color: #f50">It is compatible with old-styled render function. But the old function will be abandoned in the future.</span></td>
+                            <td>Custom column renderer. It uses Vue's render function. It accepts two arguments:  the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index). Details on the demo above. <span style="color: #f50; font-weight: bold;">We have stopped supporting old-styled render function since rc.18. It's already abandoned.</span></td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>

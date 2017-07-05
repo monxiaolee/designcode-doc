@@ -166,7 +166,7 @@
                         <p><code>render</code> 函数传入两个参数，第一个是 h，第二个是对象，包含 <code>row</code>、<code>column</code> 和 <code>index</code>，分别指当前单元格数据，当前列数据，当前是第几行。</p>
                         <p><study-render></study-render></p>
                         <blockquote>
-                            <p style="color: #f50">以下只适用于 rc.13 以前的版本，未来将废弃，请勿过多依赖旧用法。</p>
+                            <p style="color: #f50">以下只适用于 rc.13 以前的版本，<span style="font-weight: bold;">从 rc.18 版本开始，该用法已被正式废弃。</span></p>
                             <p>旧用法必须设置 context 。</p>
                             <code>render</code> 函数本质返回的是字符串，Table 组件在内部对其进行了编译，如果使用了自定义组件，需要特别注意上下文，编译后的自定义组件，默认的上下文是 <code>Table</code> 所在的上下文，如果想让组件在指定的实例下编译，可以给 <code>Table</code> 设置属性 <code>context</code> 来指定上下文，比如本例指定当前路由页为上下文。一般情况不需要此配置，但如果你把 <code>Table</code> 作为一个 slot 封装在其它组件里，这时 <code>context</code> 属性就很有用，比如父级是 $parent，根组件 $root。
                         </blockquote>
@@ -307,8 +307,8 @@
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td>context</td>
-                            <td><span style="color: #f50">旧用法，未来将废弃。</span>设置单元格内渲染自定义组件时的上下文。比如父级是 $parent，根组件是 $root，当 <code>Table</code> 作为一个 slot 封装在其它组件里时，会很有用。使用旧用法时必须设置。</td>
+                            <td><del>context</del></td>
+                            <td><span style="color: #f50; font-weight: bold;">旧用法，已废弃。</span>设置单元格内渲染自定义组件时的上下文。比如父级是 $parent，根组件是 $root，当 <code>Table</code> 作为一个 slot 封装在其它组件里时，会很有用。使用旧用法时必须设置。</td>
                             <td>Object</td>
                             <td>Table 所在的上下文</td>
                         </tr>
@@ -536,7 +536,7 @@
                         <tr>
                             <td>render</td>
                             <!--<td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>-->
-                            <td>自定义渲染列，使用 Vue 的 Render 函数。传入两个参数，第一个是 h，第二个为对象，包含 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例。<study-render></study-render> <span style="color: #f50">兼容旧的 render 用法，但未来将废弃。</span></td>
+                            <td>自定义渲染列，使用 Vue 的 Render 函数。传入两个参数，第一个是 h，第二个为对象，包含 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例。<study-render></study-render> <span style="color: #f50; font-weight: bold;">从 rc.18 版本开始，我们将不再支持旧的用法。旧的 render 函数已被废弃。</span></td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
