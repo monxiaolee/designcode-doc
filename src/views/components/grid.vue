@@ -98,7 +98,7 @@
                 </div>
                 <div slot="desc">
                     <p>水平排列的布局。</p>
-                    <p><code>col</code>必须放在<code>row</code>里面，在使用<code>col</code>组件时，必须加前缀，如<code>&lt;Col&gt;&lt;/Col&gt;</code>。</p>
+                    <p><code>col</code>必须放在<code>row</code>里面。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>

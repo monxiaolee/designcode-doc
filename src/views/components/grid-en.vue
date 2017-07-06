@@ -98,7 +98,7 @@
                 </div>
                 <div slot="desc">
                     <p>Horizontal arrangement of the layout.</p>
-                    <p><code>col</code> must be placed inside <code>row</code>. When using <code>col</code> component, a prefix must be added: <code>&lt;Col&gt;&lt;/Col&gt;</code></p>
+                    <p><code>col</code> must be placed inside <code>row</code>. </p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
