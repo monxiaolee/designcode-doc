@@ -7,7 +7,7 @@ export default {
             practice: '实践',
             cli: '脚手架',
             overview: '概览',
-            live: '讲堂',
+            live: '教程',
             search: '搜索组件...',
             notFound: '没有找到相关组件',
             ask: '提问',

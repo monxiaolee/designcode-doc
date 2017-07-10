@@ -77,8 +77,16 @@
             return {
                 list: [
                     {
+                        title: 'Vue.js 实战之插件篇',
+                        time: '2017-08-01 20:00',
+                        cost: '9.9元',
+                        cover: 'https://ooo.0o0.ooo/2017/05/22/59227ada0b65c.png',
+                        desc: 'Vue.js 提供了插件机制，可以在全局添加一些功能。它们可以简单到几个方法、属性，也可以很复杂，比如一整套组件库。本课程将介绍几个官方的核心插件，然后通过实战来开发一个插件。',
+                        link: 'https://segmentfault.com/l/1500000010070434'
+                    },
+                    {
                         title: 'Vue.js 实战之工程篇',
-                        time: '2017-07-05 20:00',
+                        time: 'finish',
                         cost: '9.9元',
                         cover: 'https://ooo.0o0.ooo/2017/05/22/59227ada0b65c.png',
                         desc: '高效的开发，离不开基础工程的搭建。本课程主要介绍目前热门的 JavaScript 应用程序的模块打包工具 webpack。在开始学习本章前，需要先安装 Node.js 和 npm，如果你不熟悉它们，可以先查阅相关资料，完成安装并了解 npm 最基本的用法。',
