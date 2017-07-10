@@ -36,20 +36,29 @@ code.manual = `
             action="//jsonplaceholder.typicode.com/posts/">
             <Button type="ghost" icon="ios-cloud-upload-outline">选择要上传文件的文件</Button>
         </Upload>
-        <div v-if="file !== null">待上传文件：{{ file.name }}</div>
+        <div v-if="file !== null">待上传文件：{{ file.name }} <Button type="text" @click="upload" :loading="loadingStatus">{{ loadingStatus ? '上传中' : '点击上传' }}</Button></div>
     </div>
 </template>
 <script>
     export default {
         data () {
             return {
-                file: null
+                file: null,
+                loadingStatus: false
             }
         },
         methods: {
             handleUpload (file) {
                 this.file = file;
                 return false;
+            },
+            upload () {
+                this.loadingStatus = true;
+                setTimeout(() => {
+                    this.file = null;
+                    this.loadingStatus = false;
+                    this.$Message.success('上传成功')
+                }, 1500);
             }
         }
     }
