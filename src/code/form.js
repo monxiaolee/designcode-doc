@@ -408,7 +408,7 @@ code.dynamic = `
     <Form ref="formDynamic" :model="formDynamic" :label-width="80">
         <Form-item
             v-for="(item, index) in formDynamic.items"
-            :key="item"
+            :key="index"
             :label="'项目' + (index + 1)"
             :prop="'items.' + index + '.value'"
             :rules="{required: true, message: '项目' + (index + 1) +'不能为空', trigger: 'blur'}">
