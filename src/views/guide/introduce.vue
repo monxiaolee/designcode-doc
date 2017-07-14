@@ -31,6 +31,7 @@
                 <li>支持 Vue.js 2.x</li>
                 <li>支持 Vue.js 1.x <a href="http://v1.iviewui.com">查看 1.0 文档</a></li>
                 <li>支持服务端渲染</li>
+                <li>支持 Nuxt.js</li>
                 <li><a href="http://electron.atom.io/" target="_blank">Electron</a></li>
                 <li>由于 <a href="https://cn.vuejs.org/v2/guide/reactivity.html" target="_blank">Vue.js</a> 是基于Object.defineProperty实现数据追踪，故不支持IE8及更低版本的浏览器。</li>
             </ul>
@@ -43,32 +44,10 @@
                     <a href="http://webpack.github.io/" target="_blank">webpack</a>
                 </li>
                 <li>
-                    <a href="http://es6.ruanyifeng.com/" target="_blank">ES2015</a>
-                </li>
-                <li>
-                    <a href="http://router.vuejs.org/zh-cn/index.html" target="_blank">vue-router</a>
-                </li>
-                <li>
-                    <a href="https://git.oschina.net/icarusion/iview" target="_blank">码云</a>
-                </li>
-            </ul>
-            <Anchor title="相关开源项目" h2></Anchor>
-            <p>iView 部分组件和样式代码参考了以下项目：</p>
-            <ul>
-                <li>
                     <a href="https://github.com/ant-design/ant-design/" target="_blank">Ant Design</a>
                 </li>
                 <li>
-                    <a href="https://github.com/ElemeFE/element" target="_blank">Element</a>
-                </li>
-                <li>
-                    <a href="https://github.com/okoala/vue-antd" target="_blank">vue-antd</a>
-                </li>
-                <li>
-                    <a href="https://github.com/FE-Driver/vue-beauty" target="_blank">vue-beauty</a>
-                </li>
-                <li>
-                    <a href="https://github.com/airyland/vux" target="_blank">Vux</a>
+                    <a href="https://git.oschina.net/icarusion/iview" target="_blank">码云</a>
                 </li>
             </ul>
         </article>

@@ -36,9 +36,9 @@
                     </Card>
                 </i-col>
                 <i-col span="8">
-                    <Card :bordered="false" style="background:#3091f2">
+                    <Card :bordered="false" style="background:#2b85e4">
                         <div class="demo-color-name">Dark Primary</div>
-                        <div class="demo-color-desc">#3091f2</div>
+                        <div class="demo-color-desc">#2b85e4</div>
                     </Card>
                 </i-col>
             </Row>

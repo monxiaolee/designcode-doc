@@ -25,6 +25,7 @@
                 <li>Support Vue.js 2.x</li>
                 <li>Support Vue.js 1.x <a href="http://v1.iviewui.com">Visit 1.0 doc</a></li>
                 <li>Support SSR</li>
+                <li>Support Nuxt.js</li>
                 <li><a href="http://electron.atom.io/" target="_blank">Electron</a></li>
                 <li>iView does not support IE8 or below since <a href="https://vuejs.org/v2/guide/reactivity.html" target="_blank">Vue.js</a> is using Object.defineProperty which do not be supported by these browsers to track changes.</li>
             </ul>
@@ -37,32 +38,10 @@
                     <a href="http://webpack.github.io/" target="_blank">webpack</a>
                 </li>
                 <li>
-                    <a href="http://es6.ruanyifeng.com/" target="_blank">ES2015</a>
-                </li>
-                <li>
-                    <a href="http://router.vuejs.org/en/" target="_blank">vue-router</a>
-                </li>
-                <li>
-                    <a href="https://git.oschina.net/icarusion/iview" target="_blank">码云</a>
-                </li>
-            </ul>
-            <Anchor title="Related Projects" h2></Anchor>
-            <p>Some components of iView refer to the following projects:</p>
-            <ul>
-                <li>
                     <a href="https://github.com/ant-design/ant-design/" target="_blank">Ant Design</a>
                 </li>
                 <li>
-                    <a href="https://github.com/ElemeFE/element" target="_blank">Element</a>
-                </li>
-                <li>
-                    <a href="https://github.com/okoala/vue-antd" target="_blank">vue-antd</a>
-                </li>
-                <li>
-                    <a href="https://github.com/FE-Driver/vue-beauty" target="_blank">vue-beauty</a>
-                </li>
-                <li>
-                    <a href="https://github.com/airyland/vux" target="_blank">Vux</a>
+                    <a href="https://git.oschina.net/icarusion/iview" target="_blank">码云</a>
                 </li>
             </ul>
             <Anchor title="License" h2></Anchor>

@@ -19,7 +19,7 @@
             <Demo title="基础用法">
                 <div slot="demo">
                     <Select v-model="model1" style="width:200px">
-                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                     <span class="demo-data">{{ model1 }}</span>
                 </div>
@@ -34,13 +34,13 @@
             <Demo title="尺寸">
                 <div slot="demo">
                     <Select v-model="model2" size="small" style="width:100px">
-                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                     <Select v-model="model3" style="width:100px">
-                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                     <Select v-model="model4" size="large" style="width:100px">
-                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                 </div>
                 <div slot="desc">
@@ -51,7 +51,7 @@
             <Demo title="禁用">
                 <div slot="demo">
                     <Select v-model="model5" disabled style="width:200px">
-                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                     <Select v-model="model6" style="width:200px">
                         <Option value="beijing">北京市</Option>
@@ -68,7 +68,7 @@
             <Demo title="可清空">
                 <div slot="demo">
                     <Select v-model="model8" clearable style="width:200px">
-                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                     <span class="demo-data">{{ model8 }}</span>
                 </div>
@@ -81,10 +81,10 @@
                 <div slot="demo">
                     <Select v-model="model7" style="width:200px">
                         <Option-group label="热门城市">
-                            <Option v-for="item in cityList1" :value="item.value" :key="item">{{ item.label }}</Option>
+                            <Option v-for="item in cityList1" :value="item.value" :key="item.value">{{ item.label }}</Option>
                         </Option-group>
                         <Option-group label="其它城市">
-                            <Option v-for="item in cityList2" :value="item.value" :key="item">{{ item.label }}</Option>
+                            <Option v-for="item in cityList2" :value="item.value" :key="item.value">{{ item.label }}</Option>
                         </Option-group>
                     </Select>
                     <span class="demo-data">{{ model7 }}</span>
@@ -122,7 +122,7 @@
                 <div slot="demo">
                     <p class="demo-data">{{ model10 }}</p>
                     <Select v-model="model10" multiple style="width:260px">
-                        <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                     </Select>
                 </div>
                 <div slot="desc">
@@ -135,12 +135,12 @@
                     <Row>
                         <Col span="12" style="padding-right:10px">
                             <Select v-model="model11" filterable>
-                                <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                                <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                             </Select>
                         </Col>
                         <Col span="12">
                             <Select v-model="model12" filterable multiple>
-                                <Option v-for="item in cityList" :value="item.value" :key="item">{{ item.label }}</Option>
+                                <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
                             </Select>
                         </Col>
                     </Row>
@@ -160,7 +160,7 @@
                                 remote
                                 :remote-method="remoteMethod1"
                                 :loading="loading1">
-                                <Option v-for="(option, index) in options1" :value="option.value" :key="index">{{option.label}}</Option>
+                                <Option v-for="option in options1" :value="option.value" :key="option.value">{{option.label}}</Option>
                             </Select>
                         </Col>
                         <Col span="12">
@@ -171,7 +171,7 @@
                             remote
                             :remote-method="remoteMethod2"
                             :loading="loading2">
-                            <Option v-for="(option, index) in options2" :value="option.value" :key="index">{{option.label}}</Option>
+                            <Option v-for="option in options2" :value="option.value" :key="option.value">{{option.label}}</Option>
                         </Select>
                         </Col>
                     </Row>
