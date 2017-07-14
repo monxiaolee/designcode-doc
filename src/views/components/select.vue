@@ -160,7 +160,7 @@
                                 remote
                                 :remote-method="remoteMethod1"
                                 :loading="loading1">
-                                <Option v-for="option in options1" :value="option.value" :key="new Date()">{{option.label}}</Option>
+                                <Option v-for="(option, index) in options1" :value="option.value" :key="index">{{option.label}}</Option>
                             </Select>
                         </Col>
                         <Col span="12">
@@ -171,14 +171,14 @@
                             remote
                             :remote-method="remoteMethod2"
                             :loading="loading2">
-                            <Option v-for="option in options2" :value="option.value" :key="new Date()">{{option.label}}</Option>
+                            <Option v-for="(option, index) in options2" :value="option.value" :key="index">{{option.label}}</Option>
                         </Select>
                         </Col>
                     </Row>
                 </div>
                 <div slot="desc">
                     <p>远程搜索需同时设置 <code>filterable</code>、<code>remote</code>、<code>remote-method</code>、<code>loading</code> 四个 props，其中 loading 用于控制是否正则搜索中，remote-method 是远程搜索的方法。</p>
-                    <p>注意：需要给 Option 设置 key，本例以当前时间为 key。</p>
+                    <p>注意：需要给 Option 设置 key。</p>
                     <p>本例为美国州名，尝试输入一些字母。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.remote }}</i-code>

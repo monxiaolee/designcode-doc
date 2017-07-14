@@ -161,7 +161,7 @@
                                 remote
                                 :remote-method="remoteMethod1"
                                 :loading="loading1">
-                                <Option v-for="option in options1" :value="option.value" :key="new Date()">{{option.label}}</Option>
+                                <Option v-for="(option, index) in options1" :value="option.value" :key="index">{{option.label}}</Option>
                             </Select>
                         </Col>
                         <Col span="12">
@@ -172,14 +172,14 @@
                             remote
                             :remote-method="remoteMethod2"
                             :loading="loading2">
-                            <Option v-for="option in options2" :value="option.value" :key="new Date()">{{option.label}}</Option>
+                            <Option v-for="(option, index) in options2" :value="option.value" :key="index">{{option.label}}</Option>
                         </Select>
                         </Col>
                     </Row>
                 </div>
                 <div slot="desc">
                     <p>Remote search need set <code>filterable</code>, <code>remote</code>, <code>remote-method</code>, <code>loading</code> four props, which loading is to show searching status and remote-method is the methods of searching remotely.</p>
-                    <p>Notice：Option need to set key，the example set the current time to the key。</p>
+                    <p>Notice：Option need to set key.</p>
                     <p>The example is America state, try to input some.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.remote }}</i-code>
