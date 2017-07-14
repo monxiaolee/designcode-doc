@@ -17,7 +17,7 @@
                     :placeholder="searchText"
                     :not-found-text="notFoundText"
                     @on-change="handleSearch">
-                    <i-option v-for="item in navigateList" :key="item" :value="item.path">
+                    <i-option v-for="item in navigateList" :key="item.path" :value="item.path">
                         <template v-if="lang === 'zh-CN'">{{ item.title }}</template>
                         <template v-else>{{ item.title.split(' ')[0] }}</template>
                     </i-option>
