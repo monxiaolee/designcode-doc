@@ -38,7 +38,7 @@
                 </Menu-item>
                 <Menu-item name="live">
                     <Badge :dot="liveDot">
-                        <Icon type="ios-mic"></Icon>
+                        <Icon type="ios-videocam"></Icon>
                         {{ $t('index.live') }}
                     </Badge>
                 </Menu-item>
