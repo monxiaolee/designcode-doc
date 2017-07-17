@@ -180,6 +180,7 @@
                 <div slot="desc">
                     <p>Remote search need set <code>filterable</code>, <code>remote</code>, <code>remote-method</code>, <code>loading</code> four props, which loading is to show searching status and remote-method is the methods of searching remotely.</p>
                     <p>Notice：Option need to set key.</p>
+                    <p>Set the <code>label</code> attribute to set the initial display value.</p>
                     <p>The example is America state, try to input some.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.remote }}</i-code>

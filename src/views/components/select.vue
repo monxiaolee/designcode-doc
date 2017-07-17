@@ -179,6 +179,7 @@
                 <div slot="desc">
                     <p>远程搜索需同时设置 <code>filterable</code>、<code>remote</code>、<code>remote-method</code>、<code>loading</code> 四个 props，其中 loading 用于控制是否正则搜索中，remote-method 是远程搜索的方法。</p>
                     <p>注意：需要给 Option 设置 key。</p>
+                    <p>设置初始显示值，需设置 <code>label</code> 属性。</p>
                     <p>本例为美国州名，尝试输入一些字母。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.remote }}</i-code>
