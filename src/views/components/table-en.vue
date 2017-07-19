@@ -556,13 +556,13 @@
                         </tr>
                         <tr>
                             <td>sortable</td>
-                            <td>The column is sortable or not. If set to<code>custom</code>, it means user wants a remote sorting. So you shall listen on-sort-change event on Table.</td>
+                            <td>The column is sortable or not. If set to <code>custom</code>, it means user wants a remote sorting. So you shall listen on-sort-change event on Table.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
                         <tr>
                             <td>sortMethod</td>
-                            <td>Custom sort function. It accepts 3 arguments: a, b , type. It works when <code>sortable: true</code> is set. The value of type argument can be asc or desc.</td>
+                            <td>Custom sort function. It accepts 3 arguments: a, b, type. It works when <code>sortable: true</code> is set. The value of <code>type</code> argument can be asc or desc.</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
