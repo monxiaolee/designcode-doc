@@ -140,6 +140,7 @@
                     <div slot="desc">
                         <p>You can sort the data by setting <code>sortable: true</code> to a certain <code>columns</code> prop's item. </p>
                         <p>The sorting uses ascending order or descending order by default. You can customize sort method by setting <code>sortMethod</code> props with a function accepting 3 arguments: a, b and type.</p>
+                        <p>You can set <code>sortType</code> to column to sort when initialization.</p>
                         <p>If remote sorting is needed, you can set <code>sortable： 'custom'</code>, and do the remote sorting after <code>@on-sort-change</code> is emitted. After sorting, you have to set the new data manually. Details on API Doc.</p>
                         <p>Attention: Sorting won't affect source data.</p>
                     </div>
@@ -563,6 +564,12 @@
                         <tr>
                             <td>sortMethod</td>
                             <td>Custom sort function. It accepts 3 arguments: a, b, type. It works when <code>sortable: true</code> is set. The value of <code>type</code> argument can be asc or desc.</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>sortType</td>
+                            <td>Set the initialization sort. Optional value: asc or desc.</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
