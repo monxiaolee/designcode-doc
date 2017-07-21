@@ -280,6 +280,12 @@
                             <td>Array</td>
                             <td>['ease', 'fade']</td>
                         </tr>
+                        <tr>
+                            <td>transfer</td>
+                            <td>Whether to append the layer in body.</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Modal events" h3></Anchor>

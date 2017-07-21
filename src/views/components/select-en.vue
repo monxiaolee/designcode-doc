@@ -288,6 +288,12 @@
                             <td>String</td>
                             <td>bottom</td>
                         </tr>
+                        <tr>
+                            <td>transfer</td>
+                            <td>Whether to append the layer in body. When used in Tabs or a fixed Table column, suggests adding this property, it will not be affected by the parent style, resulting in better results.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Select events" h3></Anchor>
