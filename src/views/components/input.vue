@@ -250,6 +250,21 @@
                             <td>输入框失去焦点时触发</td>
                             <td>无</td>
                         </tr>
+                        <tr>
+                            <td>on-keyup</td>
+                            <td>原生的 keyup 事件</td>
+                            <td>event</td>
+                        </tr>
+                        <tr>
+                            <td>on-keydown</td>
+                            <td>原生的 keydown 事件</td>
+                            <td>event</td>
+                        </tr>
+                        <tr>
+                            <td>on-keypress</td>
+                            <td>原生的 keypress 事件</td>
+                            <td>event</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Input slot" h3></Anchor>

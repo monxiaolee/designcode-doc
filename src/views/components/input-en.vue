@@ -250,6 +250,21 @@
                             <td>Emitted when Input loses focus.</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>on-keyup</td>
+                            <td>Native keyup event.</td>
+                            <td>event</td>
+                        </tr>
+                        <tr>
+                            <td>on-keydown</td>
+                            <td>Native keydown event.</td>
+                            <td>event</td>
+                        </tr>
+                        <tr>
+                            <td>on-keypress</td>
+                            <td>Native keypress event.</td>
+                            <td>event</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Input slot" h3></Anchor>
