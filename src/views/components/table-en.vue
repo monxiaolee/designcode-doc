@@ -551,7 +551,7 @@
                         </tr>
                         <tr>
                             <td>renderHeader</td>
-                            <td>Custom column header renderer. It accepts two arguments: <code>column</code> and <code>index</code> (current col's data &amp; current index). It doesn't support custom component rendering.</td>
+                            <td>Custom column header renderer. It uses Vue's render function. It accepts two arguments: the first is h, the second is an object including <code>column</code> and <code>index</code> (current col's data &amp; current index).</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>

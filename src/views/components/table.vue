@@ -553,7 +553,7 @@
                         </tr>
                         <tr>
                             <td>renderHeader</td>
-                            <td>自定义列头显示内容，传入参数有两个，<code>column</code> 和 <code>index</code>，分别为当前列数据和当前列索引，不支持渲染自定义组件</td>
+                            <td>自定义列头显示内容，使用 Vue 的 Render 函数。传入两个参数，第一个是 h，第二个为对象，包含 <code>column</code> 和 <code>index</code>，分别为当前列数据和当前列索引。</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
