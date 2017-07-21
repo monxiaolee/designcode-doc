@@ -24,6 +24,32 @@
         <h1>更新日志</h1>
         <article class="doc-update">
             <Timeline pending>
+                <Timeline-item color="green">
+                    <Icon type="trophy" size="18" slot="dot"></Icon>
+                    <Anchor title="2.0.0" h2></Anchor>
+                    <p>
+                        <code>2017-07-28</code>
+                    </p>
+                    <ul>
+                        <li>Nuxt.js 支持使用多语言。<router-link to="/docs/guide/i18n">查看</router-link></li>
+                        <li>Modal 的 width 当不大于 100 时，将以百分比显示。</li>
+                        <li>Table 新增默认排序属性 sortType。<issue id="1403"></issue></li>
+                        <li>Table 在多选时，阻止冒泡。<issue id="1271"></issue></li>
+                        <li>Table 的自定义表头方法 renderHeader 改为了 Render 函数。<issue id="1357"></issue></li>
+                        <li>Table 在排序时，点击表头标题也可以进行排序。<issue id="122"></issue></li>
+                        <li>修复 Table 内使用 Select、Dropdown 等组件无法收起的bug。<issue id="1341"></issue></li>
+                        <li>修复 Table 在数据为空时，固定列高度不正确的bug。<issue id="1387"></issue></li>
+                        <li>修复 Table 在数据为空时，未设置宽度的 column 消失的bug。<issue id="658"></issue></li>
+                        <li>修复 Table 在数据为空，设置表格高度时，添加数据后，表格高度计算不正确的bug。<a href="https://github.com/iview/iview/commit/119eeafedea02d984650b82920abdcdf4e809f79" target="_blank">commit</a></li>
+                        <li>
+                            Modal、Poptip、Tooltip、Dropdown、Select、Date、Cascader 组件新增 transfer 属性，开启会将浮层移动到 body 内。<issue id="830"></issue> <issue id="844"></issue> <issue id="1187"></issue>
+                            <blockquote>带有浮层的组件，在 Tabs、带有 fixed 的 Table 内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果。</blockquote>
+                        </li>
+                        <li>Input 新增事件 @on-keyup、@on-keydown、@on-keypress。</li>
+                        <li>修复 Select 在 remote 模式下，在 Modal 内使用时，浮层错位的bug。<issue id="1099"></issue></li>
+                        <li>新增韩语。<mention id="dokenzy"></mention></li>
+                    </ul>
+                </Timeline-item>
                 <Timeline-item>
                     <Anchor title="2.0.0-rc.19" h2></Anchor>
                     <p>

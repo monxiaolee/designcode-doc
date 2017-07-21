@@ -13,8 +13,8 @@
             <Anchor title="Supported Languages" h2></Anchor>
             <p>iView have beed translated from Chinese to the following languages:</p>
             <ul>
-                <li>简体中文(zh-CN)</li>
-                <li>繁体中文(zh-TW)</li>
+                <li>Chinese Simplified(zh-CN)</li>
+                <li>Chinese Traditional(zh-TW)</li>
                 <li>English(en-US)</li>
                 <li>Turkish(tr-TR)</li>
                 <li>Spanish(es-ES)</li>
@@ -23,6 +23,7 @@
                 <li>French(fr-FR)</li>
                 <li>German(de-DE)</li>
                 <li>Portuguese(pt-BR)</li>
+                <li>Korean(ko-KR)</li>
             </ul>
             <p>If your target language is not included, you are more than welcome to contribute: <a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">Supported Languages</a></p>
         </article>
