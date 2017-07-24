@@ -48,6 +48,7 @@
                         </li>
                         <li>Input 新增事件 @on-keyup、@on-keydown、@on-keypress。</li>
                         <li>修复 Select 在 remote 模式下，在 Modal 内使用时，浮层错位的bug。<issue id="1099"></issue></li>
+                        <li>修复 Tabs 嵌套使用时，外层禁用动画，内层无法切换的bug。<issue id="1427"></issue></li>
                         <li>新增韩语。<mention id="dokenzy"></mention></li>
                     </ul>
                 </Timeline-item>

@@ -48,6 +48,7 @@
                         </li>
                         <li>Input add event @on-keyup, @on-keydown, @on-keypress. </li>
                         <li>Fixed Select bug that using in Modal, the layer position is not correct under remote mode. <issue id="1099"></issue></li>
+                        <li>Fixed bug that when Tabs contains other Tabs, the outer one disable animation, the inner can not be clicked. <issue id="1427"></issue></li>
                         <li>Add Korean. <mention id="dokenzy"></mention></li>
                     </ul>
                 </Timeline-item>
