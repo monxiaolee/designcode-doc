@@ -33,6 +33,7 @@
                     <ul>
                         <li>Nuxt.js support internationalization. <router-link to="/docs/guide/i18n-en">View</router-link></li>
                         <li>Modal width will be displayed as a percentage when less than 100.</li>
+                        <li>Progress add new property <code>vertical</code>. <issue id="629"></issue></li>
                         <li>Table add property <code>sortType</code> to achieve the default sort. <issue id="1403"></issue></li>
                         <li>Table will prevent bubbling under selection mode. <issue id="1271"></issue></li>
                         <li>Table replace <code>renderHeader</code> to a Render function. <issue id="1357"></issue></li>

@@ -33,6 +33,7 @@
                     <ul>
                         <li>Nuxt.js 支持使用多语言。<router-link to="/docs/guide/i18n">查看</router-link></li>
                         <li>Modal 的 width 当不大于 100 时，将以百分比显示。</li>
+                        <li>Progress 新增垂直方向属性 vertical。<issue id="629"></issue></li>
                         <li>Table 新增默认排序属性 sortType。<issue id="1403"></issue></li>
                         <li>Table 在多选时，阻止冒泡。<issue id="1271"></issue></li>
                         <li>Table 的自定义表头方法 renderHeader 改为了 Render 函数。<issue id="1357"></issue></li>

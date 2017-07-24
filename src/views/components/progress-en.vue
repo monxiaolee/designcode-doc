@@ -19,6 +19,21 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
+            <Demo title="Vertical">
+                <div slot="demo">
+                    <div style="height: 100px;">
+                        <Progress vertical :percent="25"></Progress>
+                        <Progress vertical :percent="45" status="active"></Progress>
+                        <Progress vertical :percent="65" status="wrong"></Progress>
+                        <Progress vertical :percent="100"></Progress>
+                        <Progress vertical :percent="25" hide-info></Progress>
+                    </div>
+                </div>
+                <div slot="desc">
+                    <p>Set the property <code>vertical</code> will be displayed in the vertical direction.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.vertical }}</i-code>
+            </Demo>
             <Demo title="Use with External Component">
                 <div slot="demo">
                     <Progress :percent="percent"></Progress>
@@ -79,6 +94,12 @@
                         <tr>
                             <td>hide-info</td>
                             <td>Hide value/status icon.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>vertical</td>
+                            <td>Whether to display in the vertical direction.</td>
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>

@@ -41,6 +41,7 @@
                             <Input
                                 ref="input"
                                 autofocus
+                                :disabled="counter !== 0"
                                 :maxlength="50"
                                 v-model="barrage"
                                 :placeholder="placeholder"
@@ -93,7 +94,7 @@
             },
             placeholder () {
                 if (this.lang === 'zh-CN') {
-                    return 'iView 一周年啦，发条弹幕吧！';
+                    return 'iView 一周年啦，发条弹幕乐呵乐呵吧！';
                 } else {
                     return 'Send a barrage to celebrate iView one years old.';
                 }
