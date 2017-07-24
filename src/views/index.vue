@@ -2,6 +2,12 @@
     @import "../styles/index.less";
 </style>
 <style>
+    .barrage{
+        font-size: 24px;
+        text-shadow: 0 1px 1px rgba(0,0,0,.1);
+    }
+</style>
+<style>
     .index-version .ivu-badge-count{
         box-shadow: none;
         right: 0;
@@ -12,15 +18,13 @@
 </style>
 <template>
     <div>
+        <div class="bg"></div>
         <div class="index">
-            <div class="bg"><span></span></div>
             <Row type="flex" justify="center" align="middle" style="position: relative;z-index: 3">
                 <i-col span="24">
                     <h1>
                         <img src="../images/logo.png" class="img-logo">
-                        <Badge count="2.0.0" class="index-version">
-                            <img src="../images/name.png" class="img-name">
-                        </Badge>
+                        <img src="../images/name.png" class="img-name">
                     </h1>
                     <h2>{{ $t('index.title') }}</h2>
                     <div class="list">
@@ -33,11 +37,22 @@
                             <Icon type="social-github"></Icon>
                             GitHub
                         </a>
+                        <div style="width: 400px;margin: 16px auto 0;">
+                            <Input
+                                ref="input"
+                                autofocus
+                                :maxlength="50"
+                                v-model="barrage"
+                                :placeholder="placeholder"
+                                @on-enter="handleSendDanmu"
+                                @on-click="handleSendDanmu"
+                                icon="ios-paperplane"></Input>
+                        </div>
                     </div>
                 </i-col>
             </Row>
         </div>
-        <div id="indexLizi"></div>
+        <div id="barrage" ref="barrage"></div>
         <div class="index-lang">
             <span @click="handleChangeLang">
                 <template v-if="lang === 'zh-CN'">EN</template>
@@ -47,139 +62,155 @@
     </div>
 </template>
 <script>
-    import THREE from '../libs/three/three';
     import bus from '../../src/components/bus';
+    import axios from 'axios';
+    const apiPath = 'https://www.iviewui.com';
+//    const apiPath = 'http://127.0.0.1:9800';
+
+    function colorRGB2Hex(color) {
+        var rgb = color.split(',');
+        var r = parseInt(rgb[0].split('(')[1]);
+        var g = parseInt(rgb[1]);
+        var b = parseInt(rgb[2].split(')')[0]);
+
+        var hex = "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+        return hex;
+    }
 
     export default {
         data () {
             return {
-                lang: this.$lang
+                lang: this.$lang,
+                barrage: '',
+                counter: 0,
+                endtime: 0,
+                myIds: []
             }
         },
         computed: {
             suffix () {
                 return this.lang === 'zh-CN' ? '' : '-en';
+            },
+            placeholder () {
+                if (this.lang === 'zh-CN') {
+                    return 'iView 一周年啦，发条弹幕吧！';
+                } else {
+                    return 'Send a barrage to celebrate iView one years old.';
+                }
             }
         },
         methods: {
-            liziInit () {
-                var SCREEN_WIDTH = window.innerWidth;
-                var SCREEN_HEIGHT = window.innerHeight;
-
-                var SEPARATION = 90;
-                var AMOUNTX = 50;
-                var AMOUNTY = 50;
-
-                var container;
-
-                var particles, particle;
-                var count;
-
-                var camera;
-                var scene;
-                var renderer;
-
-                var mouseX = 0;
-                var mouseY = 0;
-
-                var windowHalfX = window.innerWidth / 2;
-                var windowHalfY = window.innerHeight / 2;
-
-                init();
-                this.interval = setInterval(loop, 1000 / 60);
-
-                function init() {
-
-                    container = document.createElement( 'div' );
-                    container.style.position = 'relative';
-                    container.style.top = '200px';
-                    document.getElementById('indexLizi').appendChild( container );
-
-                    camera = new THREE.Camera( 75, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 10000 );
-                    camera.position.z = 1000;
-
-                    scene = new THREE.Scene();
-
-                    renderer = new THREE.CanvasRenderer();
-                    renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
-
-                    particles = new Array();
-
-                    var i = 0;
-                    var material = new THREE.ParticleCircleMaterial( 0x097bdb, 1 );
-
-                    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-
-                        for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-
-                            particle = particles[ i ++ ] = new THREE.Particle( material );
-                            particle.position.x = ix * SEPARATION - ( ( AMOUNTX * SEPARATION ) / 2 );
-                            particle.position.z = iy * SEPARATION - ( ( AMOUNTY * SEPARATION ) / 2 );
-                            scene.add( particle );
-                        }
-                    }
-
-                    count = 0;
-
-                    container.appendChild( renderer.domElement );
-
-                    document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-                    document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-                }
-
-                function onDocumentMouseMove( event ) {
-
-                    mouseX = event.clientX - windowHalfX;
-                    mouseY = event.clientY - windowHalfY;
-
-                }
-
-                function onDocumentTouchMove( event ) {
-
-                    if ( event.touches.length == 1 ) {
-
-                        event.preventDefault();
-
-                        mouseX = event.touches[ 0 ].pageX - windowHalfX;
-                        mouseY = event.touches[ 0 ].pageY - windowHalfY;
-
-                    }
-                }
-
-                function loop() {
-                    camera.position.x += ( mouseX - camera.position.x ) * .05;
-//                    camera.position.y += ( - mouseY - camera.position.y ) * .05;
-                    camera.position.y = 364;
-
-                    var i = 0;
-
-                    for ( var ix = 0; ix < AMOUNTX; ix ++ ) {
-
-                        for ( var iy = 0; iy < AMOUNTY; iy ++ ) {
-
-                            particle = particles[ i++ ];
-                            particle.position.y = ( Math.sin( ( ix + count ) * 0.3 ) * 50 ) + ( Math.sin( ( iy + count ) * 0.5 ) * 50 );
-                            particle.scale.x = particle.scale.y = ( Math.sin( ( ix + count ) * 0.3 ) + 1 ) * 2 + ( Math.sin( ( iy + count ) * 0.5 ) + 1 ) * 2;
-
-                        }
-                    }
-
-                    renderer.render( scene, camera );
-
-                    count += 0.1;
-                }
-            },
             handleChangeLang () {
                 const lang = this.lang === 'zh-CN' ? 'en-US' : 'zh-CN';
                 bus.$emit('on-change-lang', lang, '/');
+            },
+            handleSendDanmu () {
+                if (this.barrage === '') return false;
+                this.sendBarrage(this.barrage);
+            },
+            sendBarrage (text) {
+                const params = new URLSearchParams();
+                params.append('text', text);
+                axios({
+                    method: 'post',
+                    url: `${apiPath}/barrage/add`,
+                    data: params,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+                    }
+                }).then(res => {
+                    if (res.data.status_code === '0') {
+                        this.myIds.push(res.data.data.barrage.id);
+                        this.counter = 5;
+                        this.barrage = '';
+                        this.sendOneBarrage(text);
+                        this.goCounter();
+                    }
+                })
+            },
+            goCounter () {
+                if (this.counter === 0) {
+                    return;
+                }
+                this.counter -= 1;
+                if (this.counter === 0) {
+                    this.$nextTick(() => {
+                        this.$refs.input.focus();
+                    });
+                }
+                setTimeout(() => {
+                    this.goCounter();
+                }, 1000);
+            },
+            getBarrage (init = false) {
+                const params = new URLSearchParams();
+                if (!init) {
+                    params.append('starttime', this.endtime - 5000);
+                    params.append('endtime', this.endtime);
+                }
+                axios({
+                    method: 'post',
+                    url: `${apiPath}/barrage/list`,
+                    data: params,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+                    }
+                }).then(res => {
+                    if (res.data.status_code === '0') {
+                        if (init) {
+                            this.endtime = parseInt(res.data.data.time);
+                        } else {
+                            this.endtime += 5000;
+                            const list = res.data.data.barrages;
+                            if (list.length) {
+                                const time = parseInt(5000 / list.length);
+                                list.forEach(item => {
+                                    if (this.myIds.indexOf(item.id) > -1) {
+
+                                    } else {
+                                        this.sendOneBarrage(item.text);
+                                    }
+                                });
+                            }
+                        }
+                        this.getTimer = setTimeout(() => {
+                            this.getBarrage();
+                        }, 5000);
+                    }
+                })
+            },
+            sendOneBarrage (text) {
+                const rgb = Math.floor(Math.random () * 255) + ',' + Math.floor(Math.random () * 255) + ',' + Math.floor(Math.random () * 255);
+                const color = colorRGB2Hex(`rgb(${rgb})`);
+                let speed = 1;
+                const len = text.length;
+                if (len <= 3) {
+                    speed = 5;
+                } else if (len <= 10) {
+                    speed = 4;
+                } else if (len <= 15) {
+                    speed = 3;
+                } else if (len <= 30) {
+                    speed = 2;
+                } else {
+                    speed = 1;
+                }
+                this.send({
+                    text: text,
+                    color: color,
+                    speed: speed
+                });
             }
         },
         mounted () {
             this.lang = this.$lang;
-            this.liziInit();
+            this.send = this.$start(this.$refs.barrage);
+            this.getBarrage(true);
         },
         beforeDestroy () {
-            if (this.interval) clearInterval(this.interval);
+            if (this.getTimer) {
+                clearTimeout(this.getTimer);
+            }
         }
     }
 </script>

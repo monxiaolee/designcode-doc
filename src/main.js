@@ -16,9 +16,12 @@ import Env from './config/env';
 import bus from './components/bus';
 import 'iview/dist/styles/iview.css';
 
+import barrage from './libs/barrage';
+
 Vue.use(VueRouter);
 Vue.use(VueI18n);
 Vue.use(iView);
+Vue.use(barrage);
 
 // 开启debug模式
 Vue.config.debug = true;
