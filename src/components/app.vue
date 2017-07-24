@@ -49,22 +49,22 @@
             }
 
             if (this.liveVisible && this.$lang === 'zh-CN') {
-                this.$Notice.config({
-                    top: 85
-                });
-                this.$Notice.info({
-                    title: '最新课程通知',
-                    desc: '8月1日直播《Vue.js 实战之插件篇》，本课程将讲解 Vuex、vue-router 等核心插件用法，然后通过实战来开发一个插件。往期系列课程请点击菜单的"教程"查看。<br><a href="https://segmentfault.com/l/1500000010070434" target="_blank">报名参加 Vue.js 实战之插件篇</a>',
-                    duration: 0,
-                    onClose: () => {
-                        const today = this.getTodayUnix();
-                        window.localStorage.setItem('liveModalTime', today);
-                        this.$Message.success('关闭成功，近期不再提示', 4);
-                    }
-                });
-                this.$Notice.config({
-                    top: 24
-                });
+//                this.$Notice.config({
+//                    top: 85
+//                });
+//                this.$Notice.info({
+//                    title: '最新课程通知',
+//                    desc: '8月1日直播《Vue.js 实战之插件篇》，本课程将讲解 Vuex、vue-router 等核心插件用法，然后通过实战来开发一个插件。往期系列课程请点击菜单的"教程"查看。<br><a href="https://segmentfault.com/l/1500000010070434" target="_blank">报名参加 Vue.js 实战之插件篇</a>',
+//                    duration: 0,
+//                    onClose: () => {
+//                        const today = this.getTodayUnix();
+//                        window.localStorage.setItem('liveModalTime', today);
+//                        this.$Message.success('关闭成功，近期不再提示', 4);
+//                    }
+//                });
+//                this.$Notice.config({
+//                    top: 24
+//                });
             }
         },
         methods: {
