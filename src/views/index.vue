@@ -6,6 +6,9 @@
         font-size: 24px;
         text-shadow: 0 1px 1px rgba(0,0,0,.1);
     }
+    .index .ivu-card-shadow{
+        box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    }
 </style>
 <style>
     .index-version .ivu-badge-count{
@@ -24,19 +27,20 @@
                 <i-col span="24">
                     <h1>
                         <img src="../images/logo.png" class="img-logo">
-                        <img src="../images/name.png" class="img-name">
                     </h1>
                     <h2>{{ $t('index.title') }}</h2>
                     <div class="list">
-                        <router-link :to="'/docs/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
-                        <router-link :to="'/docs/guide/install' + suffix">{{ $t('index.component') }}</router-link>
-                        <router-link :to="'/docs/practice/case' + suffix">{{ $t('index.practice') }}</router-link>
-                        <router-link :to="'/cli' + suffix">{{ $t('index.cli') }}</router-link>
-                        <router-link :to="'/overview' + suffix">{{ $t('index.overview') }}</router-link>
-                        <a href="https://github.com/iview/iview" target="_blank">
-                            <Icon type="social-github"></Icon>
-                            GitHub
-                        </a>
+                        <div class="list-a">
+                            <router-link :to="'/docs/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
+                            <router-link :to="'/docs/guide/install' + suffix">{{ $t('index.component') }}</router-link>
+                            <router-link :to="'/docs/practice/case' + suffix">{{ $t('index.practice') }}</router-link>
+                            <router-link :to="'/cli' + suffix">{{ $t('index.cli') }}</router-link>
+                            <router-link :to="'/overview' + suffix">{{ $t('index.overview') }}</router-link>
+                            <a href="https://github.com/iview/iview" target="_blank">
+                                <Icon type="social-github"></Icon>
+                                GitHub
+                            </a>
+                        </div>
                         <div style="width: 400px;margin: 16px auto 0;">
                             <Input
                                 ref="input"
@@ -48,6 +52,16 @@
                                 @on-enter="handleSendDanmu"
                                 @on-click="handleSendDanmu"
                                 icon="ios-paperplane"></Input>
+                        </div>
+                        <div class="index-card">
+                            <Tooltip content="阅读 iView 一周年专题文章">
+                                <Card :padding="0" :bordered="false" shadow>
+                                    <a class="card" href="#" target="_blank">
+                                        <img src="../images/one-year-logo.png">
+                                    </a>
+                                </Card>
+                                <!--<Icon type="ios-play" size="48" class="index-card-play"></Icon>-->
+                            </Tooltip>
                         </div>
                     </div>
                 </i-col>

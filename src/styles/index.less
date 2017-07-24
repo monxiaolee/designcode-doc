@@ -25,14 +25,14 @@
         }
     }
     h2{
-        color: #5cadff;
+        color: #0099fb;
         font-weight: normal;
         margin-top: 50px;
         font-size: 16px;
     }
     .list{
-        margin: 40px 0 200px;
-        a{
+        margin: 40px 0 100px;
+        &-a a{
             color: #0099fb;
             font-size: 16px;
             display: inline-block;
@@ -114,4 +114,24 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+}
+.index-card{
+    width: 200px;
+    margin: 50px auto 0;
+    position: relative;
+    //opacity: 0.6;
+    //transition: all .2s ease-in-out;
+    &:hover{
+        //opacity: 1;
+    }
+    img{
+        width: 100%;
+    }
+    &-play{
+        color: #fff;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        box-shadow: 0 1px 1px rgba(0,0,0,.2);
+    }
 }
