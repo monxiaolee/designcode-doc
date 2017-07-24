@@ -108,7 +108,11 @@
             },
             placeholder () {
                 if (this.lang === 'zh-CN') {
-                    return 'iView 一周年啦，发条弹幕乐呵乐呵吧！';
+                    let msg = 'iView 一周年啦，发条弹幕乐呵乐呵吧！';
+                    if (this.counter !== 0 ) {
+                        msg += '（等待' + this.counter + '秒）'
+                    }
+                    return msg;
                 } else {
                     return 'Send a barrage to celebrate iView one years old.';
                 }

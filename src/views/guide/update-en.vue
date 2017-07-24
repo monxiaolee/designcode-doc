@@ -26,7 +26,7 @@
             <Timeline pending>
                 <Timeline-item color="green">
                     <Icon type="trophy" size="18" slot="dot"></Icon>
-                    <Anchor title="2.0.0" h2></Anchor>
+                    <Anchor title="2.0.0 Leo's Fortune" h2></Anchor>
                     <p>
                         <code>2017-07-28</code>
                     </p>
