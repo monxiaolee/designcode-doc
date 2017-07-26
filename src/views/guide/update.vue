@@ -61,7 +61,7 @@
                         <li>支持 Vue 2.4.1。</li>
                         <li>支持 SSR 和 Nuxt.js。<issue id="1315"></issue></li>
                         <li>Page 支持小键盘操作。<issue id="1318"></issue></li>
-                        <li>Table 新增取消当行事件 @on-select-cancel。<issue id="705"></issue></li>
+                        <li>Table 新增取消当前行事件 @on-select-cancel。<issue id="705"></issue></li>
                         <li>修复 Select 在 remote 模式下，手动设置 label 不生效的bug。<issue id="1286"></issue></li>
                         <li>修复 Table、Cascader、Tree 在 Vue 2.4.1 版本下，报错的问题。<issue id="1353"></issue></li>
                     </ul>
