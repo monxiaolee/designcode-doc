@@ -27,8 +27,8 @@
                 <i-col span="24">
                     <h1>
                         <img src="../images/logo.png" class="img-logo">
+                        <img src="../images/name.png" class="img-name">
                     </h1>
-                    <h2>{{ $t('index.title') }}</h2>
                     <div class="list">
                         <div class="list-a">
                             <router-link :to="'/docs/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
@@ -53,16 +53,15 @@
                                 @on-click="handleSendDanmu"
                                 icon="ios-paperplane"></Input>
                         </div>
-                        <div class="index-card">
-                            <Tooltip content="阅读 iView 一周年专题文章">
-                                <Card :padding="0" :bordered="false" shadow>
-                                    <a class="card" href="#" target="_blank">
-                                        <img src="../images/one-year-logo.png">
-                                    </a>
-                                </Card>
-                                <!--<Icon type="ios-play" size="48" class="index-card-play"></Icon>-->
-                            </Tooltip>
-                        </div>
+                        <!--<div class="index-card">-->
+                            <!--<Tooltip content="阅读 iView 一周年专题文章">-->
+                                <!--<Card :padding="0" :bordered="false" shadow>-->
+                                    <!--<a class="card" href="#" target="_blank">-->
+                                        <!--<img src="../images/one-year-logo.png">-->
+                                    <!--</a>-->
+                                <!--</Card>-->
+                            <!--</Tooltip>-->
+                        <!--</div>-->
                     </div>
                 </i-col>
             </Row>
