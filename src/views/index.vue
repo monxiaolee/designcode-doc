@@ -53,6 +53,9 @@
                                 @on-click="handleSendDanmu"
                                 icon="ios-paperplane"></Input>
                         </div>
+                        <div style="text-align: center;padding-top: 12px;">
+                            <a style="text-decoration: underline" href="https://zhuanlan.zhihu.com/p/28090879" target="_blank">阅读 iView 一周年专题文章</a>
+                        </div>
                         <!--<div class="index-card">-->
                             <!--<Tooltip content="阅读 iView 一周年专题文章">-->
                                 <!--<Card :padding="0" :bordered="false" shadow>-->
