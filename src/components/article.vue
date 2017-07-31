@@ -148,10 +148,11 @@
                 </div>
             </div>
         </Modal>
-        <div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">
-            <Icon type="help-circled"></Icon>
-            <p>{{ $t('index.ask') }}</p>
-        </div>
+        <!-- todo 提问 -->
+        <!--<div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">-->
+            <!--<Icon type="help-circled"></Icon>-->
+            <!--<p>{{ $t('index.ask') }}</p>-->
+        <!--</div>-->
     </div>
 </template>
 <script>

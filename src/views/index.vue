@@ -101,7 +101,8 @@
                 barrage: '',
                 counter: 0,
                 endtime: 0,
-                myIds: []
+                myIds: [],
+                hideBarrage: false
             }
         },
         computed: {
@@ -216,8 +217,12 @@
                 } else {
                     speed = 1;
                 }
+                const new_text = text.replace(/</g, '');
+                if (this.hideBarrage) {
+                    return false;
+                }
                 this.send({
-                    text: text,
+                    text: new_text,
                     color: color,
                     speed: speed
                 });
