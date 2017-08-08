@@ -236,7 +236,7 @@
                         </tr>
                         <tr>
                             <td>remote-method</td>
-                            <td>the mothod of getting remote data</td>
+                            <td>the method of getting remote data</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
