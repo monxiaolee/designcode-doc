@@ -49,22 +49,22 @@
             }
 
             if (this.liveVisible && this.$lang === 'zh-CN') {
-//                this.$Notice.config({
-//                    top: 85
-//                });
-//                this.$Notice.info({
-//                    title: '最新课程通知',
-//                    desc: '8月1日直播《Vue.js 实战之插件篇》，本课程将讲解 Vuex、vue-router 等核心插件用法，然后通过实战来开发一个插件。往期系列课程请点击菜单的"教程"查看。<br><a href="https://segmentfault.com/l/1500000010070434" target="_blank">报名参加 Vue.js 实战之插件篇</a>',
-//                    duration: 0,
-//                    onClose: () => {
-//                        const today = this.getTodayUnix();
-//                        window.localStorage.setItem('liveModalTime', today);
-//                        this.$Message.success('关闭成功，近期不再提示', 4);
-//                    }
-//                });
-//                this.$Notice.config({
-//                    top: 24
-//                });
+                this.$Notice.config({
+                    top: 85
+                });
+                this.$Notice.info({
+                    title: '《Vue.js 实战》新书预购',
+                    desc: '<p>本书以 Vue.js 2.0 为基础，以项目实战的方式来引导读者渐进式学习 Vue.js。本书特点是示例丰富，侧重实战，适用于刚接触或即将接触 Vue.js 的开发者，也适用于对 Vue.js 有过开发经验，但需要进一步提升的开发者。</p><a href="https://www.iviewui.com/vue-book" target="_blank">查看介绍及预定</a>',
+                    duration: 0,
+                    onClose: () => {
+                        const today = this.getTodayUnix();
+                        window.localStorage.setItem('liveModalTime', today);
+                        this.$Message.success('关闭成功，近期不再提示', 4);
+                    }
+                });
+                this.$Notice.config({
+                    top: 24
+                });
             }
         },
         methods: {
