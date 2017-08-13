@@ -46,6 +46,23 @@
             <Anchor title="How to pass value to components" h2></Anchor>
             <p>Many components require adding <code>:</code> before properties for passing integer and boolean:</p>
             <i-code lang="html" bg>{{ code.standard.prop }}</i-code>
+            <p>The following components, if not in template/render mode, you need to add a prefix <code>i-</code>:</p>
+            <ul>
+                <li>Button: <code>i-button</code></li>
+                <li>Col: <code>i-col</code></li>
+                <li>Table: <code>i-table</code></li>
+                <li>Input: <code>i-input</code></li>
+                <li>Form: <code>i-form</code></li>
+                <li>Menu: <code>i-menu</code></li>
+                <li>Select: <code>i-select</code></li>
+                <li>Option: <code>i-option</code></li>
+                <li>Progress: <code>i-progress</code></li>
+            </ul>
+            <p>The following components, you must add a prefix <code>i-</code>:</p>
+            <ul>
+                <li>Switch: <code>i-switch</code></li>
+                <li>Circle: <code>i-circle</code></li>
+            </ul>
         </article>
     </i-article>
 </template>
