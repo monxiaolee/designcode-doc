@@ -56,6 +56,15 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.hours }}</i-code>
                 </Demo>
+                <Demo title="Steps">
+                    <div slot="demo">
+                        <Time-picker :steps="[1, 15, 15]" placeholder="选择时间" style="width: 112px"></Time-picker>
+                    </div>
+                    <div slot="desc">
+                        <p>You can set the interval of hours, minutes, and seconds by <code>steps</code> property. The value corresponds to hours, minutes and seconds.</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.steps }}</i-code>
+                </Demo>
                 <Demo title="Disabled Time">
                     <div slot="demo">
                         <row>
@@ -182,6 +191,12 @@
                                 <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a>
                             </td>
                             <td>HH:mm:ss</td>
+                        </tr>
+                        <tr>
+                            <td>steps</td>
+                            <td>Interval of hours, minutes, and seconds. For example, set [1, 15], the minutes will be displayed as 00, 15, 30, 45. </td>
+                            <td>Array</td>
+                            <td>[]</td>
                         </tr>
                         <tr>
                             <td>placement</td>

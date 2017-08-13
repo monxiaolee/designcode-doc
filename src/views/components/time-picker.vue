@@ -56,6 +56,15 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.hours }}</i-code>
                 </Demo>
+                <Demo title="时间间隔">
+                    <div slot="demo">
+                        <Time-picker :steps="[1, 15, 15]" placeholder="选择时间" style="width: 112px"></Time-picker>
+                    </div>
+                    <div slot="desc">
+                        <p>通过属性 <code>steps</code> 可以设置时间间隔。数组的三项分别对应小时、分钟、秒。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.steps }}</i-code>
+                </Demo>
                 <Demo title="不可选时间">
                     <div slot="demo">
                         <row>
@@ -182,6 +191,12 @@
                                 <a href="javascript:void(0)" @click="handleShowDate"><Icon type="information-circled"></Icon> Date</a>
                             </td>
                             <td>HH:mm:ss</td>
+                        </tr>
+                        <tr>
+                            <td>steps</td>
+                            <td>下拉列表的时间间隔，数组的三项分别对应小时、分钟、秒。例如设置为 [1, 15] 时，分钟会显示：00、15、30、45。</td>
+                            <td>Array</td>
+                            <td>[]</td>
                         </tr>
                         <tr>
                             <td>placement</td>

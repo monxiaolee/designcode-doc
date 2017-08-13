@@ -167,4 +167,15 @@ code.size = `
 </script>
 `;
 
+code.steps = `
+<template>
+    <Time-picker :steps="[1, 15, 15]" placeholder="选择时间" style="width: 112px"></Time-picker>
+</template>
+<script>
+    export default {
+
+    }
+</script>
+`;
+
 export default code;
