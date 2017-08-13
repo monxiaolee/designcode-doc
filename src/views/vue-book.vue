@@ -9,7 +9,8 @@
                 <p>本书由 Vue.js 作者 <strong>尤雨溪</strong> 作推荐序<a href="https://i.loli.net/2017/08/07/5987de0f8d841.png" target="_blank">查看</a>，大漠、justjavac 等老师作推荐语<a href="https://i.loli.net/2017/08/07/5987df18c2a41.png" target="_blank">查看</a>。</p>
                 <p><a href="https://i.loli.net/2017/08/07/5987e087b025b.png" target="_blank">查看本书目录</a></p>
                 <p>图书定价：<strong style="color: #ed3f14">79 元</strong>（包邮），限量 100 册，预定完即止。</p>
-                <p><strong style="color: #ed3f14;font-size: 16px;">注：目前 100 本签名版已售罄，现只预售普通版（无签名、无纪念品），感谢您的支持。</strong></p>
+                <p><strong style="color: #ed3f14;font-size: 16px;">注：目前 100 本签名版已售罄，现只预售普通版（无纪念品）100 册，感谢您的支持。</strong></p>
+                <p>发货日期：出版后即发货，大概在 9 月份。</p>
             </blockquote>
         </div>
         <div class="steps">
@@ -122,7 +123,7 @@
 
                 this.$Modal.confirm({
                     title: '收获信息确认',
-                    content: `<p>姓名：${this.formItem.name}</p><p>电话：${this.formItem.phone}</p><p>地址：${this.formItem.address}</p><p><strong style="color: #ed3f14;font-size: 12px;">目前 100 本签名版已售罄，您将要购买的是普通版（无签名、无纪念品），请知晓，感谢您的支持。</strong></p>`,
+                    content: `<p>姓名：${this.formItem.name}</p><p>电话：${this.formItem.phone}</p><p>地址：${this.formItem.address}</p><p><strong style="color: #ed3f14;font-size: 12px;">目前 100 本签名版已售罄，您将要购买的是普通版（无纪念品），请知晓，感谢您的支持。</strong></p>`,
                     onOk: () => {
                         const params = new URLSearchParams();
                         params.append('name', this.formItem.name);
