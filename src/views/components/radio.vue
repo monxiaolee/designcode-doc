@@ -176,6 +176,18 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>true-value</td>
+                            <td>选中时的值，当使用类似 1 和 0 来判断是否选中时会很有用</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>false-value</td>
+                            <td>没有选中时的值，当使用类似 1 和 0 来判断是否选中时会很有用</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Radio events" h3></Anchor>
