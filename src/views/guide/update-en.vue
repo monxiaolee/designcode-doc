@@ -24,6 +24,30 @@
         <h1>Change Log</h1>
         <article class="doc-update">
             <Timeline pending>
+                <Timeline-item>
+                    <Anchor title="2.1.0 Alto's Adventure" h2></Anchor>
+                    <p>
+                        <code>2017-08-13</code>
+                    </p>
+                    <ul>
+                        <li>TimePicker add new property <code>steps</code>, You can set the interval of hours, minutes, and seconds. <mention id="SergioCrisostomo"></mention></li>
+                        <li>Radio、Checkbox add new property <code>true-value</code> and <code>false-value</code>. <issue id="1191"></issue></li>
+                        <li>The current of the Page supports the <code>.sync</code> modifier.</li>
+                        <li>Poptip、Tooltip add event <code>on-popper-show</code>.</li>
+                        <li>Optimize the export of csv in the Safari browser.</li>
+                        <li>Fix Cascader bug in <code>change-on-select</code> mode that when you choose item again, the panel does not reset the sublist. <issue id="1553"></issue></li>
+                        <li>Fix Cascader bug in the dynamic load option, when the child's data is empty, recursively triggered the requested.</li>
+                        <li>Fix InputNumber bug that sometimes to calculate inaccurate. <issue id="1452"></issue></li>
+                        <li>Fix InputNumber bug that not watch for min and max. <issue id="1134"></issue></li>
+                        <li>Fix Page when changing the <code>total</code>, the page number is incorrect. <issue id="1543"></issue></li>
+                        <li>Fix Date in datetimerange mode, the data is incorrectly returned. <issue id="1220"></issue></li>
+                        <li>Fix the bug that the Tree automatically checked when children were empty. <issue id="1504"></issue></li>
+                        <li>Fix a bug that after the replacement of the Form, some of the components can not be verified for the first time. <issue id="1534"></issue></li>
+                        <li>Add Vietnamese. <mention id="hckhanh"></mention></li>
+                        <li>Add Portuguese. <mention id="SergioCrisostomo"></mention></li>
+                        <li>Add Swedish. <mention id="SergioCrisostomo"></mention></li>
+                    </ul>
+                </Timeline-item>
                 <Timeline-item color="green">
                     <Icon type="trophy" size="18" slot="dot"></Icon>
                     <Anchor title="2.0.0 Leo's Fortune" h2></Anchor>

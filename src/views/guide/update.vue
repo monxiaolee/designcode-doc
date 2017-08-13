@@ -24,6 +24,30 @@
         <h1>更新日志</h1>
         <article class="doc-update">
             <Timeline pending>
+                <Timeline-item>
+                    <Anchor title="2.1.0 Alto's Adventure" h2></Anchor>
+                    <p>
+                        <code>2017-08-13</code>
+                    </p>
+                    <ul>
+                        <li>TimePicker 新增属性 steps, 可以设置小时、分钟、秒的间隔。<mention id="SergioCrisostomo"></mention></li>
+                        <li>Radio、Checkbox 新增 true-value 和 false-value 属性。<issue id="1191"></issue></li>
+                        <li>Page 的 current 属性支持 .sync 修饰符。</li>
+                        <li>Poptip、Tooltip 增加 on-popper-show 事件。</li>
+                        <li>优化 Table 导出 csv 在 Safari 浏览器下的表现。</li>
+                        <li>修复 Cascader 在 change-on-select 模式下，再次选择时没有重置子列表的bug。<issue id="1553"></issue></li>
+                        <li>修复 Cascader 在动态加载选项，children 的数据为空时递归触发请求的bug。</li>
+                        <li>修复 InputNumber 有时计算不准确的bug。<issue id="1452"></issue></li>
+                        <li>修复 InputNumber 没有监听 min 和 max 的bug。<issue id="1134"></issue></li>
+                        <li>修复 Page 在改变 total 时，页码计算不正确的bug。<issue id="1543"></issue></li>
+                        <li>修复 Date 在 datetimerange 模式下，返回数据不正确的bug。<issue id="1220"></issue></li>
+                        <li>修复 Tree 在 children 为空时，自动勾选的bug。<issue id="1504"></issue></li>
+                        <li>修复 Form 重置后，部分组件首次无法校验的bug。<issue id="1534"></issue></li>
+                        <li>新增越南语。<mention id="hckhanh"></mention></li>
+                        <li>新增葡萄牙语。<mention id="SergioCrisostomo"></mention></li>
+                        <li>新增瑞典语。<mention id="SergioCrisostomo"></mention></li>
+                    </ul>
+                </Timeline-item>
                 <Timeline-item color="green">
                     <Icon type="trophy" size="18" slot="dot"></Icon>
                     <Anchor title="2.0.0 Leo's Fortune" h2></Anchor>

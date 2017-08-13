@@ -53,7 +53,7 @@
                         <div class="live-link">
                             <i-button type="primary" @click="handleClick(index)">
                                 <div><Icon type="android-arrow-dropright-circle" size="20"></Icon></div>
-                                <div v-if="item.time === 'finish'">查看回放</div>
+                                <div v-if="item.time === 'finish'">查看教程</div>
                                 <div v-else>报名参加</div>
                             </i-button>
                         </div>
