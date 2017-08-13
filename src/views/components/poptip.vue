@@ -255,6 +255,11 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>on-popper-show</td>
+                            <td>在提示框显示时触发</td>
+                            <td>无</td>
+                        </tr>
+                        <tr>
                             <td>on-popper-hide</td>
                             <td>在提示框消失时触发</td>
                             <td>无</td>

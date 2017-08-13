@@ -188,6 +188,11 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td>on-popper-show</td>
+                            <td>Emit when tooltip displays.</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>on-popper-hide</td>
                             <td>Emit when Tooltip disappear.</td>
                             <td>-</td>
