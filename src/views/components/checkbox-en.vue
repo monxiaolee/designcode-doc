@@ -149,6 +149,18 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>true-value</td>
+                            <td>Value of the checkbox if it's checked.</td>
+                            <td>String, Number, Boolean</td>
+                            <td>true</td>
+                        </tr>
+                        <tr>
+                            <td>false-value</td>
+                            <td>Value of the checkbox if it's not checked.</td>
+                            <td>String, Number, Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Checkbox events" h3></Anchor>
