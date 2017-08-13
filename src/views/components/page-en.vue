@@ -78,7 +78,7 @@
                     <tbody>
                         <tr>
                             <td>current</td>
-                            <td>Current page number</td>
+                            <td>Current page number, support .sync modifier.</td>
                             <td>Number</td>
                             <td>1</td>
                         </tr>

@@ -78,7 +78,7 @@
                     <tbody>
                         <tr>
                             <td>current</td>
-                            <td>当前页码</td>
+                            <td>当前页码，支持 .sync 修饰符</td>
                             <td>Number</td>
                             <td>1</td>
                         </tr>
