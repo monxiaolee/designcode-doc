@@ -8,34 +8,38 @@
                 <p>作者简介：梁灏（Aresn），基于 Vue.js 的开源组件库 iView 作者，程序员社区 TalkingCoder 创办者。现工作于 TalkingData，负责大数据可视化基础架构。</p>
                 <p>本书由 Vue.js 作者 <strong>尤雨溪</strong> 作推荐序<a href="https://i.loli.net/2017/08/07/5987de0f8d841.png" target="_blank">查看</a>，大漠、justjavac 等老师作推荐语<a href="https://i.loli.net/2017/08/07/5987df18c2a41.png" target="_blank">查看</a>。</p>
                 <p><a href="https://i.loli.net/2017/08/07/5987e087b025b.png" target="_blank">查看本书目录</a></p>
-                <p>图书定价：<strong style="color: #ed3f14">79 元</strong>（包邮），限量 100 册，预定完即止。</p>
-                <p><strong style="color: #ed3f14;font-size: 16px;">注：目前 100 本签名版已售罄，现只预售普通版（无纪念品）100 册，感谢您的支持。</strong></p>
+                <p>图书定价：<strong style="color: #ed3f14">79 元</strong>（包邮），限量 200 册，预定完即止。</p>
                 <p>发货日期：出版后即发货，大概在 9 月份。</p>
+                <p><strong style="color: #ed3f14;font-size: 16px;">注：目前 200 本签名版已售罄，感谢您的支持。</strong></p>
+                <p><strong>加入 QQ 群，获取最新状态，参与讨论。群号：225472461</strong></p>
+                <p>
+                    <img src="https://i.loli.net/2017/08/16/5993e3c74221b.png">
+                </p>
             </blockquote>
         </div>
-        <div class="steps">
-            <Steps :current="steps">
-                <Step title="填写订单"></Step>
-                <Step title="付款"></Step>
-                <Step title="完成"></Step>
-            </Steps>
-        </div>
-        <div class="order" v-if="steps === 0">
-            <i-form :model="formItem" :rules="ruleValidate" :label-width="80">
-                <Form-item prop="name" label="姓名">
-                    <i-input v-model="formItem.name" placeholder="请输入收货人真实姓名，例如：梁灏"></i-input>
-                </Form-item>
-                <Form-item prop="phone" label="电话">
-                    <i-input v-model="formItem.phone" placeholder="请输入收货人联系电话，例如：18500000000"></i-input>
-                </Form-item>
-                <Form-item prop="address" label="收货地址">
-                    <i-input type="textarea" v-model="formItem.address" placeholder="请填写完整的收货地址，例如：北京市东城区东直门外大街39号院京投快轨大厦608室"></i-input>
-                </Form-item>
-            </i-form>
-            <div style="text-align: center;margin: 16px 0;">
-                <Button type="primary" size="large" @click="handleOrder">提交订单</Button>
-            </div>
-        </div>
+        <!--<div class="steps">-->
+            <!--<Steps :current="steps">-->
+                <!--<Step title="填写订单"></Step>-->
+                <!--<Step title="付款"></Step>-->
+                <!--<Step title="完成"></Step>-->
+            <!--</Steps>-->
+        <!--</div>-->
+        <!--<div class="order" v-if="steps === 0">-->
+            <!--<i-form :model="formItem" :rules="ruleValidate" :label-width="80">-->
+                <!--<Form-item prop="name" label="姓名">-->
+                    <!--<i-input v-model="formItem.name" placeholder="请输入收货人真实姓名，例如：梁灏"></i-input>-->
+                <!--</Form-item>-->
+                <!--<Form-item prop="phone" label="电话">-->
+                    <!--<i-input v-model="formItem.phone" placeholder="请输入收货人联系电话，例如：18500000000"></i-input>-->
+                <!--</Form-item>-->
+                <!--<Form-item prop="address" label="收货地址">-->
+                    <!--<i-input type="textarea" v-model="formItem.address" placeholder="请填写完整的收货地址，例如：北京市东城区东直门外大街39号院京投快轨大厦608室"></i-input>-->
+                <!--</Form-item>-->
+            <!--</i-form>-->
+            <!--<div style="text-align: center;margin: 16px 0;">-->
+                <!--<Button type="primary" size="large" @click="handleOrder">提交订单</Button>-->
+            <!--</div>-->
+        <!--</div>-->
         <div class="order" v-if="steps === 1">
             <h2>付款步骤：</h2>
             <div style="font-size: 16px;">
