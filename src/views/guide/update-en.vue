@@ -27,7 +27,7 @@
                 <Timeline-item>
                     <Anchor title="2.1.0 Alto's Adventure" h2></Anchor>
                     <p>
-                        <code>2017-08-13</code>
+                        <code>2017-08-14</code>
                     </p>
                     <ul>
                         <li>TimePicker add new property <code>steps</code>, You can set the interval of hours, minutes, and seconds. <mention id="SergioCrisostomo"></mention></li>

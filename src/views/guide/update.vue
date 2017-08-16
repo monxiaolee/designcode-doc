@@ -27,7 +27,7 @@
                 <Timeline-item>
                     <Anchor title="2.1.0 Alto's Adventure" h2></Anchor>
                     <p>
-                        <code>2017-08-13</code>
+                        <code>2017-08-14</code>
                     </p>
                     <ul>
                         <li>TimePicker 新增属性 steps, 可以设置小时、分钟、秒的间隔。<mention id="SergioCrisostomo"></mention></li>
