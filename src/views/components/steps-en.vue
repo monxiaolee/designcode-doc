@@ -57,7 +57,7 @@
                         <Step title="步骤4"></Step>
                     </Steps>
                     <br>
-                    <i-button type="primary" @click="next">下一步</i-button>
+                    <Button type="primary" @click="next">下一步</Button>
                 </div>
                 <div slot="desc">
                     <p>Cooperate with the content and buttons, to represent the progress of a process.</p>

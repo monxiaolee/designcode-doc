@@ -114,25 +114,25 @@
                 <div slot="demo">
                     <h4>Basic</h4>
                     <br><br>
-                    <Button-group>
+                    <ButtonGroup>
                         <Button>Cancel</Button>
                         <Button type="primary">Confirm</Button>
-                    </Button-group>
-                    <Button-group>
+                    </ButtonGroup>
+                    <ButtonGroup>
                         <Button disabled>Yesterday</Button>
                         <Button disabled>Today</Button>
                         <Button disabled>Tomorrow</Button>
-                    </Button-group>
-                    <Button-group>
+                    </ButtonGroup>
+                    <ButtonGroup>
                         <Button type="primary">L</Button>
                         <Button>M</Button>
                         <Button type="ghost">M</Button>
                         <Button type="dashed">R</Button>
-                    </Button-group>
+                    </ButtonGroup>
                     <br><br>
                     <h4>Icons</h4>
                     <br><br>
-                    <Button-group>
+                    <ButtonGroup>
                         <Button type="primary">
                             <Icon type="chevron-left"></Icon>
                             Backward
@@ -141,21 +141,21 @@
                             Forward
                             <Icon type="chevron-right"></Icon>
                         </Button>
-                    </Button-group>
-                    <Button-group>
+                    </ButtonGroup>
+                    <ButtonGroup>
                         <Button type="primary" icon="ios-skipbackward"></Button>
                         <Button type="primary" icon="ios-skipforward"></Button>
-                    </Button-group>
-                    <Button-group>
+                    </ButtonGroup>
+                    <ButtonGroup>
                         <Button type="ghost" icon="ios-color-wand-outline"></Button>
                         <Button type="ghost" icon="ios-sunny-outline"></Button>
                         <Button type="ghost" icon="ios-crop"></Button>
                         <Button type="ghost" icon="ios-color-filter-outline"></Button>
-                    </Button-group>
+                    </ButtonGroup>
                     <br><br>
                     <h4>Circle</h4>
                     <br><br>
-                    <Button-group shape="circle">
+                    <ButtonGroup shape="circle">
                         <Button type="primary">
                             <Icon type="chevron-left"></Icon>
                             Backward
@@ -164,45 +164,45 @@
                             Forward
                             <Icon type="chevron-right"></Icon>
                         </Button>
-                    </Button-group>
-                    <Button-group shape="circle">
+                    </ButtonGroup>
+                    <ButtonGroup shape="circle">
                         <Button type="primary" icon="ios-skipbackward"></Button>
                         <Button type="primary" icon="ios-skipforward"></Button>
-                    </Button-group>
-                    <Button-group shape="circle">
+                    </ButtonGroup>
+                    <ButtonGroup shape="circle">
                         <Button type="ghost" icon="ios-color-wand-outline"></Button>
                         <Button type="ghost" icon="ios-sunny-outline"></Button>
                         <Button type="ghost" icon="ios-crop"></Button>
                         <Button type="ghost" icon="ios-color-filter-outline"></Button>
-                    </Button-group>
+                    </ButtonGroup>
                     <br><br>
                     <h4>Size</h4>
                     <br><br>
-                    <Button-group size="large">
+                    <ButtonGroup size="large">
                         <Button type="ghost">Large</Button>
                         <Button type="ghost">Large</Button>
-                    </Button-group>
-                    <Button-group>
+                    </ButtonGroup>
+                    <ButtonGroup>
                         <Button type="ghost">Default</Button>
                         <Button type="ghost">Default</Button>
-                    </Button-group>
-                    <Button-group size="small">
+                    </ButtonGroup>
+                    <ButtonGroup size="small">
                         <Button type="ghost">Small</Button>
                         <Button type="ghost">Small</Button>
-                    </Button-group>
+                    </ButtonGroup>
                     <br><br>
-                    <Button-group size="large" shape="circle">
+                    <ButtonGroup size="large" shape="circle">
                         <Button type="ghost">Large</Button>
                         <Button type="ghost">Large</Button>
-                    </Button-group>
-                    <Button-group shape="circle">
+                    </ButtonGroup>
+                    <ButtonGroup shape="circle">
                         <Button type="ghost">Default</Button>
                         <Button type="ghost">Default</Button>
-                    </Button-group>
-                    <Button-group size="small" shape="circle">
+                    </ButtonGroup>
+                    <ButtonGroup size="small" shape="circle">
                         <Button type="ghost">Small</Button>
                         <Button type="ghost">Small</Button>
-                    </Button-group>
+                    </ButtonGroup>
                 </div>
                 <div slot="desc">
                     <p>Combine multiple <code>Button</code> together into <code>ButtonGroup</code> to get a buttons set.</p>
@@ -213,12 +213,12 @@
             </Demo>
             <Demo title="Vertical ButtonGroup">
                 <div slot="demo">
-                    <Button-group vertical>
+                    <ButtonGroup vertical>
                         <Button type="ghost" icon="social-facebook"></Button>
                         <Button type="ghost" icon="social-twitter"></Button>
                         <Button type="ghost" icon="social-googleplus"></Button>
                         <Button type="ghost" icon="social-tumblr"></Button>
-                    </Button-group>
+                    </ButtonGroup>
                 </div>
                 <div slot="desc">
                     <p>Set the <code>ButtonGroup</code> attribute <code>vertical</code> to set up a vertical button group.</p>

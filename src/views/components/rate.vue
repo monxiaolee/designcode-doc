@@ -26,14 +26,14 @@
             <Demo title="显示提示">
                 <div slot="demo">
                     <Row>
-                        <i-col span="12">
+                        <Col span="12">
                             <Rate show-text v-model="valueText"></Rate>
-                        </i-col>
-                        <i-col span="12">
+                        </Col>
+                        <Col span="12">
                             <Rate show-text v-model="valueCustomText">
                                 <span style="color: #f5a623">{{ valueCustomText }}</span>
                             </Rate>
-                        </i-col>
+                        </Col>
                     </Row>
                 </div>
                 <div slot="desc">

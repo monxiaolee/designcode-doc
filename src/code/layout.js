@@ -49,36 +49,36 @@ code.top = `
         <Menu mode="horizontal" theme="dark" active-name="1">
             <div class="layout-logo"></div>
             <div class="layout-nav">
-                <Menu-item name="1">
+                <MenuItem name="1">
                     <Icon type="ios-navigate"></Icon>
                     导航一
-                </Menu-item>
-                <Menu-item name="2">
+                </MenuItem>
+                <MenuItem name="2">
                     <Icon type="ios-keypad"></Icon>
                     导航二
-                </Menu-item>
-                <Menu-item name="3">
+                </MenuItem>
+                <MenuItem name="3">
                     <Icon type="ios-analytics"></Icon>
                     导航三
-                </Menu-item>
-                <Menu-item name="4">
+                </MenuItem>
+                <MenuItem name="4">
                     <Icon type="ios-paper"></Icon>
                     导航四
-                </Menu-item>
+                </MenuItem>
             </div>
         </Menu>
         <Menu mode="horizontal" active-name="1">
             <div class="layout-assistant">
-                <Menu-item name="1">二级导航</Menu-item>
-                <Menu-item name="2">二级导航</Menu-item>
-                <Menu-item name="3">二级导航</Menu-item>
+                <MenuItem name="1">二级导航</MenuItem>
+                <MenuItem name="2">二级导航</MenuItem>
+                <MenuItem name="3">二级导航</MenuItem>
             </div>
         </Menu>
         <div class="layout-breadcrumb">
             <Breadcrumb>
-                <Breadcrumb-item href="#">首页</Breadcrumb-item>
-                <Breadcrumb-item href="#">应用中心</Breadcrumb-item>
-                <Breadcrumb-item>某应用</Breadcrumb-item>
+                <BreadcrumbItem href="#">首页</BreadcrumbItem>
+                <BreadcrumbItem href="#">应用中心</BreadcrumbItem>
+                <BreadcrumbItem>某应用</BreadcrumbItem>
             </Breadcrumb>
         </div>
         <div class="layout-content">
@@ -145,65 +145,65 @@ code.left = `
         <Menu mode="horizontal" theme="dark" active-name="1">
             <div class="layout-logo"></div>
             <div class="layout-nav">
-                <Menu-item name="1">
+                <MenuItem name="1">
                     <Icon type="ios-navigate"></Icon>
                     导航一
-                </Menu-item>
-                <Menu-item name="2">
+                </MenuItem>
+                <MenuItem name="2">
                     <Icon type="ios-keypad"></Icon>
                     导航二
-                </Menu-item>
-                <Menu-item name="3">
+                </MenuItem>
+                <MenuItem name="3">
                     <Icon type="ios-analytics"></Icon>
                     导航三
-                </Menu-item>
-                <Menu-item name="4">
+                </MenuItem>
+                <MenuItem name="4">
                     <Icon type="ios-paper"></Icon>
                     导航四
-                </Menu-item>
+                </MenuItem>
             </div>
         </Menu>
         <Menu mode="horizontal" active-name="1">
             <div class="layout-assistant">
-                <Menu-item name="1">二级导航</Menu-item>
-                <Menu-item name="2">二级导航</Menu-item>
-                <Menu-item name="3">二级导航</Menu-item>
+                <MenuItem name="1">二级导航</MenuItem>
+                <MenuItem name="2">二级导航</MenuItem>
+                <MenuItem name="3">二级导航</MenuItem>
             </div>
         </Menu>
         <div class="layout-content">
             <Row>
-                <i-col span="5">
+                <Col span="5">
                     <Menu active-name="1-2" width="auto" :open-names="['1']">
                         <Submenu name="1">
                             <template slot="title">
                                 <Icon type="ios-navigate"></Icon>
                                 导航一
                             </template>
-                            <Menu-item name="1-1">选项 1</Menu-item>
-                            <Menu-item name="1-2">选项 2</Menu-item>
-                            <Menu-item name="1-3">选项 3</Menu-item>
+                            <MenuItem name="1-1">选项 1</MenuItem>
+                            <MenuItem name="1-2">选项 2</MenuItem>
+                            <MenuItem name="1-3">选项 3</MenuItem>
                         </Submenu>
                         <Submenu name="2">
                             <template slot="title">
                                 <Icon type="ios-keypad"></Icon>
                                 导航二
                             </template>
-                            <Menu-item name="2-1">选项 1</Menu-item>
-                            <Menu-item name="2-2">选项 2</Menu-item>
+                            <MenuItem name="2-1">选项 1</MenuItem>
+                            <MenuItem name="2-2">选项 2</MenuItem>
                         </Submenu>
                         <Submenu name="3">
                             <template slot="title">
                                 <Icon type="ios-analytics"></Icon>
                                 导航三
                             </template>
-                            <Menu-item name="3-1">选项 1</Menu-item>
-                            <Menu-item name="3-2">选项 2</Menu-item>
+                            <MenuItem name="3-1">选项 1</MenuItem>
+                            <MenuItem name="3-2">选项 2</MenuItem>
                         </Submenu>
                     </Menu>
-                </i-col>
-                <i-col span="19">
+                </Col>
+                <Col span="19">
                     <div class="layout-content-main">内容区域</div>
-                </i-col>
+                </Col>
             </Row>
         </div>
         <div class="layout-copy">
@@ -262,7 +262,7 @@ code.side = `
 <template>
     <div class="layout">
         <Row type="flex">
-            <i-col span="5" class="layout-menu-left">
+            <Col span="5" class="layout-menu-left">
                 <Menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
                     <div class="layout-logo-left"></div>
                     <Submenu name="1">
@@ -270,35 +270,35 @@ code.side = `
                             <Icon type="ios-navigate"></Icon>
                             导航一
                         </template>
-                        <Menu-item name="1-1">选项 1</Menu-item>
-                        <Menu-item name="1-2">选项 2</Menu-item>
-                        <Menu-item name="1-3">选项 3</Menu-item>
+                        <MenuItem name="1-1">选项 1</MenuItem>
+                        <MenuItem name="1-2">选项 2</MenuItem>
+                        <MenuItem name="1-3">选项 3</MenuItem>
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
                             <Icon type="ios-keypad"></Icon>
                             导航二
                         </template>
-                        <Menu-item name="2-1">选项 1</Menu-item>
-                        <Menu-item name="2-2">选项 2</Menu-item>
+                        <MenuItem name="2-1">选项 1</MenuItem>
+                        <MenuItem name="2-2">选项 2</MenuItem>
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
                             <Icon type="ios-analytics"></Icon>
                             导航三
                         </template>
-                        <Menu-item name="3-1">选项 1</Menu-item>
-                        <Menu-item name="3-2">选项 2</Menu-item>
+                        <MenuItem name="3-1">选项 1</MenuItem>
+                        <MenuItem name="3-2">选项 2</MenuItem>
                     </Submenu>
                 </Menu>
-            </i-col>
-            <i-col span="19">
+            </Col>
+            <Col span="19">
                 <div class="layout-header"></div>
                 <div class="layout-breadcrumb">
                     <Breadcrumb>
-                        <Breadcrumb-item href="#">首页</Breadcrumb-item>
-                        <Breadcrumb-item href="#">应用中心</Breadcrumb-item>
-                        <Breadcrumb-item>某应用</Breadcrumb-item>
+                        <BreadcrumbItem href="#">首页</BreadcrumbItem>
+                        <BreadcrumbItem href="#">应用中心</BreadcrumbItem>
+                        <BreadcrumbItem>某应用</BreadcrumbItem>
                     </Breadcrumb>
                 </div>
                 <div class="layout-content">
@@ -307,7 +307,7 @@ code.side = `
                 <div class="layout-copy">
                     2011-2016 &copy; TalkingData
                 </div>
-            </i-col>
+            </Col>
         </Row>
     </div>
 </template>
@@ -441,34 +441,34 @@ code.fold = `
 <template>
     <div class="layout" :class="{'layout-hide-text': spanLeft < 5}">
         <Row type="flex">
-            <i-col :span="spanLeft" class="layout-menu-left">
+            <Col :span="spanLeft" class="layout-menu-left">
                 <Menu active-name="1" theme="dark" width="auto">
                     <div class="layout-logo-left"></div>
-                    <Menu-item name="1">
+                    <MenuItem name="1">
                         <Icon type="ios-navigate" :size="iconSize"></Icon>
                         <span class="layout-text">选项 1</span>
-                    </Menu-item>
-                    <Menu-item name="2">
+                    </MenuItem>
+                    <MenuItem name="2">
                         <Icon type="ios-keypad" :size="iconSize"></Icon>
                         <span class="layout-text">选项 2</span>
-                    </Menu-item>
-                    <Menu-item name="3">
+                    </MenuItem>
+                    <MenuItem name="3">
                         <Icon type="ios-analytics" :size="iconSize"></Icon>
                         <span class="layout-text">选项 3</span>
-                    </Menu-item>
+                    </MenuItem>
                 </Menu>
-            </i-col>
-            <i-col :span="spanRight">
+            </Col>
+            <Col :span="spanRight">
                 <div class="layout-header">
-                    <i-button type="text" @click="toggleClick">
+                    <Button type="text" @click="toggleClick">
                         <Icon type="navicon" size="32"></Icon>
-                    </i-button>
+                    </Button>
                 </div>
                 <div class="layout-breadcrumb">
                     <Breadcrumb>
-                        <Breadcrumb-item href="#">首页</Breadcrumb-item>
-                        <Breadcrumb-item href="#">应用中心</Breadcrumb-item>
-                        <Breadcrumb-item>某应用</Breadcrumb-item>
+                        <BreadcrumbItem href="#">首页</BreadcrumbItem>
+                        <BreadcrumbItem href="#">应用中心</BreadcrumbItem>
+                        <BreadcrumbItem>某应用</BreadcrumbItem>
                     </Breadcrumb>
                 </div>
                 <div class="layout-content">
@@ -477,7 +477,7 @@ code.fold = `
                 <div class="layout-copy">
                     2011-2016 &copy; TalkingData
                 </div>
-            </i-col>
+            </Col>
         </Row>
     </div>
 </template>

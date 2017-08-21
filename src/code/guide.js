@@ -104,8 +104,8 @@ import Checkbox from 'iview/src/components/checkbox';
 install.warning = `
 module: {
     rules: [
-        { test: /iview.src.*?js$/, loader: 'babel' },
-        { test: /\\.js$/, loader: 'babel', exclude: /node_modules/ }
+        { test: /iview.src.*?js$/, loader: 'babel-loader' },
+        { test: /\\.js$/, loader: 'babel-loader', exclude: /node_modules/ }
     ]
 }
 `;

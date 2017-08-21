@@ -12,30 +12,30 @@
                             下拉菜单
                             <Icon type="arrow-down-b"></Icon>
                         </a>
-                        <Dropdown-menu slot="list">
-                            <Dropdown-item>驴打滚</Dropdown-item>
-                            <Dropdown-item>炸酱面</Dropdown-item>
-                            <Dropdown-item disabled>豆汁儿</Dropdown-item>
-                            <Dropdown-item>冰糖葫芦</Dropdown-item>
-                            <Dropdown-item divided>北京烤鸭</Dropdown-item>
-                        </Dropdown-menu>
+                        <DropdownMenu slot="list">
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem disabled>豆汁儿</DropdownItem>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                            <DropdownItem divided>北京烤鸭</DropdownItem>
+                        </DropdownMenu>
                     </Dropdown>
                     <Dropdown style="margin-left: 20px">
                         <Button type="primary">
                             下拉菜单
                             <Icon type="arrow-down-b"></Icon>
                         </Button>
-                        <Dropdown-menu slot="list">
-                            <Dropdown-item>驴打滚</Dropdown-item>
-                            <Dropdown-item>炸酱面</Dropdown-item>
-                            <Dropdown-item disabled>豆汁儿</Dropdown-item>
-                            <Dropdown-item>冰糖葫芦</Dropdown-item>
-                            <Dropdown-item divided>北京烤鸭</Dropdown-item>
-                        </Dropdown-menu>
+                        <DropdownMenu slot="list">
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem disabled>豆汁儿</DropdownItem>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                            <DropdownItem divided>北京烤鸭</DropdownItem>
+                        </DropdownMenu>
                     </Dropdown>
                 </div>
                 <div slot="desc">
-                    <p>需要配合 <code>Dropdown-menu</code> 和 <code>Dropdown-item</code> 两个组件来使用，并且给列表设置具名 slot 为 <code>list</code>。</p>
+                    <p>需要配合 <code>DropdownMenu</code> 和 <code>DropdownItem</code> 两个组件来使用，并且给列表设置具名 slot 为 <code>list</code>。</p>
                     <p>触发对象可以是链接、按钮等各种元素。</p>
                     <p>本例还展示了禁用项和分隔线。</p>
                 </div>
@@ -48,38 +48,38 @@
                             hover 触发
                             <Icon type="arrow-down-b"></Icon>
                         </a>
-                        <Dropdown-menu slot="list">
-                            <Dropdown-item>驴打滚</Dropdown-item>
-                            <Dropdown-item>炸酱面</Dropdown-item>
-                            <Dropdown-item>豆汁儿</Dropdown-item>
-                            <Dropdown-item>冰糖葫芦</Dropdown-item>
-                            <Dropdown-item>北京烤鸭</Dropdown-item>
-                        </Dropdown-menu>
+                        <DropdownMenu slot="list">
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem>豆汁儿</DropdownItem>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                            <DropdownItem>北京烤鸭</DropdownItem>
+                        </DropdownMenu>
                     </Dropdown>
                     <Dropdown trigger="click" style="margin-left: 20px">
                         <a href="javascript:void(0)">
                             click 触发
                             <Icon type="arrow-down-b"></Icon>
                         </a>
-                        <Dropdown-menu slot="list">
-                            <Dropdown-item>驴打滚</Dropdown-item>
-                            <Dropdown-item>炸酱面</Dropdown-item>
-                            <Dropdown-item>豆汁儿</Dropdown-item>
-                            <Dropdown-item>冰糖葫芦</Dropdown-item>
-                            <Dropdown-item>北京烤鸭</Dropdown-item>
-                        </Dropdown-menu>
+                        <DropdownMenu slot="list">
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem>豆汁儿</DropdownItem>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                            <DropdownItem>北京烤鸭</DropdownItem>
+                        </DropdownMenu>
                     </Dropdown>
                     <Dropdown trigger="custom" :visible="visible" style="margin-left: 20px">
                         <a href="javascript:void(0)" @click="handleOpen">
                             custom 触发
                             <Icon type="arrow-down-b"></Icon>
                         </a>
-                        <Dropdown-menu slot="list">
+                        <DropdownMenu slot="list">
                             <p>常用于各种自定义下拉内容的场景。</p>
                             <div style="text-align: right;margin:10px;">
                                 <Button type="primary" @click="handleClose">关闭</Button>
                             </div>
-                        </Dropdown-menu>
+                        </DropdownMenu>
                     </Dropdown>
                 </div>
                 <div slot="desc">
@@ -95,39 +95,39 @@
                             菜单(左)
                             <Icon type="arrow-down-b"></Icon>
                         </a>
-                        <Dropdown-menu slot="list">
-                            <Dropdown-item>驴打滚</Dropdown-item>
-                            <Dropdown-item>炸酱面</Dropdown-item>
-                            <Dropdown-item>豆汁儿</Dropdown-item>
-                            <Dropdown-item>冰糖葫芦</Dropdown-item>
-                            <Dropdown-item>北京烤鸭</Dropdown-item>
-                        </Dropdown-menu>
+                        <DropdownMenu slot="list">
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem>豆汁儿</DropdownItem>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                            <DropdownItem>北京烤鸭</DropdownItem>
+                        </DropdownMenu>
                     </Dropdown>
                     <Dropdown style="margin-left: 20px">
                         <a href="javascript:void(0)">
                             菜单(居中)
                             <Icon type="arrow-down-b"></Icon>
                         </a>
-                        <Dropdown-menu slot="list">
-                            <Dropdown-item>驴打滚</Dropdown-item>
-                            <Dropdown-item>炸酱面</Dropdown-item>
-                            <Dropdown-item>豆汁儿</Dropdown-item>
-                            <Dropdown-item>冰糖葫芦</Dropdown-item>
-                            <Dropdown-item>北京烤鸭</Dropdown-item>
-                        </Dropdown-menu>
+                        <DropdownMenu slot="list">
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem>豆汁儿</DropdownItem>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                            <DropdownItem>北京烤鸭</DropdownItem>
+                        </DropdownMenu>
                     </Dropdown>
                     <Dropdown style="margin-left: 20px" placement="bottom-end">
                         <a href="javascript:void(0)">
                             菜单(右)
                             <Icon type="arrow-down-b"></Icon>
                         </a>
-                        <Dropdown-menu slot="list">
-                            <Dropdown-item>驴打滚</Dropdown-item>
-                            <Dropdown-item>炸酱面</Dropdown-item>
-                            <Dropdown-item>豆汁儿</Dropdown-item>
-                            <Dropdown-item>冰糖葫芦</Dropdown-item>
-                            <Dropdown-item>北京烤鸭</Dropdown-item>
-                        </Dropdown-menu>
+                        <DropdownMenu slot="list">
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem>豆汁儿</DropdownItem>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                            <DropdownItem>北京烤鸭</DropdownItem>
+                        </DropdownMenu>
                     </Dropdown>
                 </div>
                 <div slot="desc">
@@ -142,22 +142,22 @@
                             北京小吃
                             <Icon type="arrow-down-b"></Icon>
                         </a>
-                        <Dropdown-menu slot="list">
-                            <Dropdown-item>驴打滚</Dropdown-item>
-                            <Dropdown-item>炸酱面</Dropdown-item>
-                            <Dropdown-item>豆汁儿</Dropdown-item>
+                        <DropdownMenu slot="list">
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem>豆汁儿</DropdownItem>
                             <Dropdown placement="right-start">
-                                <Dropdown-item>
+                                <DropdownItem>
                                     北京烤鸭
                                     <Icon type="ios-arrow-right"></Icon>
-                                </Dropdown-item>
-                                <Dropdown-menu slot="list">
-                                    <Dropdown-item>挂炉烤鸭</Dropdown-item>
-                                    <Dropdown-item>焖炉烤鸭</Dropdown-item>
-                                </Dropdown-menu>
+                                </DropdownItem>
+                                <DropdownMenu slot="list">
+                                    <DropdownItem>挂炉烤鸭</DropdownItem>
+                                    <DropdownItem>焖炉烤鸭</DropdownItem>
+                                </DropdownMenu>
                             </Dropdown>
-                            <Dropdown-item>冰糖葫芦</Dropdown-item>
-                        </Dropdown-menu>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                        </DropdownMenu>
                     </Dropdown>
                 </div>
                 <div slot="desc">
@@ -217,7 +217,7 @@
                         <tr>
                             <td>on-click</td>
                             <td>点击菜单项时触发</td>
-                            <td>Dropdown-item 的 name 值</td>
+                            <td>DropdownItem 的 name 值</td>
                         </tr>
                         <tr>
                             <td>on-visible-change</td>
@@ -241,11 +241,11 @@
                         </tr>
                         <tr>
                             <td>list</td>
-                            <td>列表内容，一般由 <code>Dropdown-menu</code> 承担</td>
+                            <td>列表内容，一般由 <code>DropdownMenu</code> 承担</td>
                         </tr>
                     </tbody>
                 </table>
-                <Anchor title="Dropdown-item props" h3></Anchor>
+                <Anchor title="DropdownItem props" h3></Anchor>
                 <table>
                     <thead>
                         <tr>

@@ -14,9 +14,9 @@
             <Demo title="Basic Usage">
                 <div slot="demo">
                     <Breadcrumb>
-                        <Breadcrumb-item href="/">Home</Breadcrumb-item>
-                        <Breadcrumb-item href="/components/breadcrumb">Components</Breadcrumb-item>
-                        <Breadcrumb-item>Breadcrumb</Breadcrumb-item>
+                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                 </div>
                 <div slot="desc">
@@ -27,15 +27,15 @@
             <Demo title="With Icon">
                 <div slot="demo">
                     <Breadcrumb>
-                        <Breadcrumb-item href="/">
+                        <BreadcrumbItem href="/">
                             <Icon type="ios-home-outline"></Icon> Home
-                        </Breadcrumb-item>
-                        <Breadcrumb-item href="/components/breadcrumb">
+                        </BreadcrumbItem>
+                        <BreadcrumbItem href="/components/breadcrumb">
                             <Icon type="social-buffer-outline"></Icon> Components
-                        </Breadcrumb-item>
-                        <Breadcrumb-item>
+                        </BreadcrumbItem>
+                        <BreadcrumbItem>
                             <Icon type="pound"></Icon> Breadcrumb
-                        </Breadcrumb-item>
+                        </BreadcrumbItem>
                     </Breadcrumb>
                 </div>
                 <div slot="desc">
@@ -46,14 +46,14 @@
             <Demo title="Separator">
                 <div slot="demo">
                     <Breadcrumb separator=">">
-                        <Breadcrumb-item href="/">Home</Breadcrumb-item>
-                        <Breadcrumb-item href="/components/breadcrumb">Components</Breadcrumb-item>
-                        <Breadcrumb-item>Breadcrumb</Breadcrumb-item>
+                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                     <Breadcrumb separator="<b class='demo-breadcrumb-separator'>=></b>">
-                        <Breadcrumb-item href="/">Home</Breadcrumb-item>
-                        <Breadcrumb-item href="/components/breadcrumb">Components</Breadcrumb-item>
-                        <Breadcrumb-item>Breadcrumb</Breadcrumb-item>
+                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                 </div>
                 <div slot="desc">

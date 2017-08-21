@@ -44,22 +44,22 @@
             <Demo title="基础用法">
                 <div slot="demo">
                     <Tabs value="name1">
-                        <Tab-pane label="标签一" name="name1">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二" name="name2">标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三" name="name3">标签三的内容</Tab-pane>
+                        <TabPane label="标签一" name="name1">标签一的内容</TabPane>
+                        <TabPane label="标签二" name="name2">标签二的内容</TabPane>
+                        <TabPane label="标签三" name="name3">标签三的内容</TabPane>
                     </Tabs>
                 </div>
                 <div slot="desc">
-                    <p><code>value</code> 与 <code>Tab-pane</code> 的 <code>name</code> 对应，用于标识当前激活的是哪一项，name 值默认从 0 开始，默认激活第一项。可以使用 v-model 双向绑定数据。</p>
+                    <p><code>value</code> 与 <code>TabPane</code> 的 <code>name</code> 对应，用于标识当前激活的是哪一项，name 值默认从 0 开始，默认激活第一项。可以使用 v-model 双向绑定数据。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="禁用">
                 <div slot="demo">
                     <Tabs>
-                        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二" disabled>标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                        <TabPane label="标签一">标签一的内容</TabPane>
+                        <TabPane label="标签二" disabled>标签二的内容</TabPane>
+                        <TabPane label="标签三">标签三的内容</TabPane>
                     </Tabs>
                 </div>
                 <div slot="desc">
@@ -70,9 +70,9 @@
             <Demo title="图标">
                 <div slot="demo">
                     <Tabs>
-                        <Tab-pane label="macOS" icon="social-apple">标签一的内容</Tab-pane>
-                        <Tab-pane label="Windows" icon="social-windows">标签二的内容</Tab-pane>
-                        <Tab-pane label="Linux" icon="social-tux">标签三的内容</Tab-pane>
+                        <TabPane label="macOS" icon="social-apple">标签一的内容</TabPane>
+                        <TabPane label="Windows" icon="social-windows">标签二的内容</TabPane>
+                        <TabPane label="Linux" icon="social-tux">标签三的内容</TabPane>
                     </Tabs>
                 </div>
                 <div slot="desc">
@@ -83,9 +83,9 @@
             <Demo title="迷你型">
                 <div slot="demo">
                     <Tabs size="small">
-                        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                        <TabPane label="标签一">标签一的内容</TabPane>
+                        <TabPane label="标签二">标签二的内容</TabPane>
+                        <TabPane label="标签三">标签三的内容</TabPane>
                     </Tabs>
                 </div>
                 <div slot="desc">
@@ -96,9 +96,9 @@
             <Demo title="卡片样式">
                 <div slot="demo">
                     <Tabs type="card">
-                        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                        <TabPane label="标签一">标签一的内容</TabPane>
+                        <TabPane label="标签二">标签二的内容</TabPane>
+                        <TabPane label="标签三">标签三的内容</TabPane>
                     </Tabs>
                 </div>
                 <div slot="desc">
@@ -109,9 +109,9 @@
             <Demo title="可关闭">
                 <div slot="demo">
                     <Tabs type="card" closable @on-tab-remove="handleTabRemove">
-                        <Tab-pane label="标签一" v-if="tab0">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二" v-if="tab1">标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三" v-if="tab2">标签三的内容</Tab-pane>
+                        <TabPane label="标签一" v-if="tab0">标签一的内容</TabPane>
+                        <TabPane label="标签二" v-if="tab1">标签二的内容</TabPane>
+                        <TabPane label="标签三" v-if="tab2">标签三的内容</TabPane>
                     </Tabs>
                 </div>
                 <div slot="desc">
@@ -123,9 +123,9 @@
             <Demo title="自定义标签页">
                 <div slot="demo">
                     <Tabs value="name1">
-                        <Tab-pane :label="label" name="name1">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二" name="name2">标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三" name="name3">标签三的内容</Tab-pane>
+                        <TabPane :label="label" name="name1">标签一的内容</TabPane>
+                        <TabPane label="标签二" name="name2">标签二的内容</TabPane>
+                        <TabPane label="标签三" name="name3">标签三的内容</TabPane>
                     </Tabs>
                 </div>
                 <div slot="desc">
@@ -137,7 +137,7 @@
             <Demo title="附加内容">
                 <div slot="demo">
                     <Tabs type="card">
-                        <Tab-pane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</Tab-pane>
+                        <TabPane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</TabPane>
                         <Button type="ghost" @click="handleTabsAdd" size="small" slot="extra" :disabled="tabs > 3">增加</Button>
                     </Tabs>
                 </div>
@@ -149,9 +149,9 @@
             <Demo title="不使用动画">
                 <div slot="demo">
                     <Tabs :animated="false">
-                        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                        <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                        <TabPane label="标签一">标签一的内容</TabPane>
+                        <TabPane label="标签二">标签二的内容</TabPane>
+                        <TabPane label="标签三">标签三的内容</TabPane>
                     </Tabs>
                 </div>
                 <div slot="desc">
@@ -164,16 +164,16 @@
                     <Row :gutter="32">
                         <Col span="12" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
                             <Tabs type="card">
-                                <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                                <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                                <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                                <TabPane label="标签一">标签一的内容</TabPane>
+                                <TabPane label="标签二">标签二的内容</TabPane>
+                                <TabPane label="标签三">标签三的内容</TabPane>
                             </Tabs>
                         </Col>
                         <Col span="12" class="demo-tabs-style2">
                             <Tabs type="card">
-                                <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                                <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                                <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                                <TabPane label="标签一">标签一的内容</TabPane>
+                                <TabPane label="标签二">标签二的内容</TabPane>
+                                <TabPane label="标签三">标签三的内容</TabPane>
                             </Tabs>
                         </Col>
                     </Row>

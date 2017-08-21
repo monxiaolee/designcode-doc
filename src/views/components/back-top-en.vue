@@ -25,9 +25,9 @@
             </Demo>
             <Demo title="Customized Style">
                 <div slot="demo">
-                    <Back-top :height="100" :bottom="200">
+                    <BackTop :height="100" :bottom="200">
                         <div class="top">返回顶端</div>
-                    </Back-top>
+                    </BackTop>
                     <p>Scroll down. The blue button shows the customized BackTop style.</p>
                 </div>
                 <div slot="desc">

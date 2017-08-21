@@ -15,10 +15,10 @@
                     <div slot="demo">
                         <Row>
                             <Col span="12">
-                            <Date-picker type="date" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker type="date" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                             <Col span="12">
-                            <Date-picker type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                         </Row>
                     </div>
@@ -32,10 +32,10 @@
                     <div slot="demo">
                         <Row>
                             <Col span="12">
-                            <Date-picker type="date" :options="options1" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker type="date" :options="options1" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                             <Col span="12">
-                            <Date-picker type="daterange" :options="options2" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker type="daterange" :options="options2" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                         </Row>
                     </div>
@@ -50,10 +50,10 @@
                     <div slot="demo">
                         <Row>
                             <Col span="12">
-                            <Date-picker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                             <Col span="12">
-                            <Date-picker :value="value2" format="yyyy/MM/dd" type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker :value="value2" format="yyyy/MM/dd" type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                         </Row>
                     </div>
@@ -65,13 +65,13 @@
                 </Demo>
                 <Demo title="Date Time Picker">
                     <div slot="demo">
-                        <Date-picker type="datetime" placeholder="选择日期和时间" style="width: 200px"></Date-picker>
+                        <DatePicker type="datetime" placeholder="选择日期和时间" style="width: 200px"></DatePicker>
                         <br>
-                        <Date-picker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></Date-picker>
+                        <DatePicker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></DatePicker>
                         <br>
-                        <Date-picker type="datetimerange" placeholder="选择日期和时间" style="width: 300px"></Date-picker>
+                        <DatePicker type="datetimerange" placeholder="选择日期和时间" style="width: 300px"></DatePicker>
                         <br>
-                        <Date-picker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></Date-picker>
+                        <DatePicker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></DatePicker>
                     </div>
                     <div slot="desc">
                         <p>Set <code>type</code> prop to <code>datetime</code> or <code>datetimerange</code> to pick time.</p>
@@ -83,10 +83,10 @@
                     <div slot="demo">
                         <Row>
                             <Col span="12">
-                            <Date-picker type="year" placeholder="选择年" style="width: 200px"></Date-picker>
+                            <DatePicker type="year" placeholder="选择年" style="width: 200px"></DatePicker>
                             </Col>
                             <Col span="12">
-                            <Date-picker type="month" placeholder="选择月" style="width: 200px"></Date-picker>
+                            <DatePicker type="month" placeholder="选择月" style="width: 200px"></DatePicker>
                             </Col>
                         </Row>
                     </div>
@@ -99,10 +99,10 @@
                     <div slot="demo">
                         <Row>
                             <Col span="12">
-                            <Date-picker type="date" :options="options3" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker type="date" :options="options3" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                             <Col span="12">
-                            <Date-picker type="date" :options="options4" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker type="date" :options="options4" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                         </Row>
                     </div>
@@ -116,10 +116,10 @@
                     <div slot="demo">
                         <Row>
                             <Col span="12">
-                            <Date-picker type="date" confirm placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker type="date" confirm placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                             <Col span="12">
-                            <Date-picker type="daterange" confirm placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
+                            <DatePicker type="daterange" confirm placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
                             </Col>
                         </Row>
                     </div>
@@ -131,7 +131,7 @@
                 </Demo>
                 <Demo title="Manually Controlled Component">
                     <div slot="demo">
-                        <Date-picker
+                        <DatePicker
                                 :open="open"
                                 :value="value3"
                                 confirm
@@ -144,7 +144,7 @@
                                 <template v-if="value3 === ''">选择日期</template>
                                 <template v-else>{{ value3 }}</template>
                             </a>
-                        </Date-picker>
+                        </DatePicker>
                     </div>
                     <div slot="desc">
                         <p>In some customized scenes, you can use slot with <code>open</code> prop and events to control the display status of the component. Details on API doc below.</p>
@@ -155,13 +155,13 @@
                     <div slot="demo">
                         <Row :gutter="16">
                             <Col span="8">
-                            <Date-picker size="small" type="date" placeholder="选择日期"></Date-picker>
+                            <DatePicker size="small" type="date" placeholder="选择日期"></DatePicker>
                             </Col>
                             <Col span="8">
-                            <Date-picker type="date" placeholder="选择日期"></Date-picker>
+                            <DatePicker type="date" placeholder="选择日期"></DatePicker>
                             </Col>
                             <Col span="8">
-                            <Date-picker size="large" type="date" placeholder="选择日期"></Date-picker>
+                            <DatePicker size="large" type="date" placeholder="选择日期"></DatePicker>
                             </Col>
                         </Row>
                     </div>

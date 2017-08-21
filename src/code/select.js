@@ -189,12 +189,12 @@ code.clearable = `
 code.group = `
 <template>
     <Select v-model="model7" style="width:200px">
-        <Option-group label="热门城市">
+        <OptionGroup label="热门城市">
             <Option v-for="item in cityList1" :value="item.value" :key="item.value">{{ item.label }}</Option>
-        </Option-group>
-        <Option-group label="其它城市">
+        </OptionGroup>
+        <OptionGroup label="其它城市">
             <Option v-for="item in cityList2" :value="item.value" :key="item.value">{{ item.label }}</Option>
-        </Option-group>
+        </OptionGroup>
     </Select>
 </template>
 <script>

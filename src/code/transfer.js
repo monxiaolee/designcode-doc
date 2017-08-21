@@ -128,7 +128,7 @@ code.high = `
         filterable
         @on-change="handleChange3">
         <div :style="{float: 'right', margin: '5px'}">
-            <i-button type="ghost" size="small" @click="reloadMockData">刷新</i-button>
+            <Button type="ghost" size="small" @click="reloadMockData">刷新</Button>
         </div>
     </Transfer>
 </template>

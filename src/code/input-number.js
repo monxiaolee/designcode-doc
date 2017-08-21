@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <Input-number :max="10" :min="1" v-model="value1"></Input-number>
+    <InputNumber :max="10" :min="1" v-model="value1"></InputNumber>
 </template>
 <script>
     export default {
@@ -17,7 +17,7 @@ code.base = `
 
 code.step = `
 <template>
-    <Input-number :max="10" :min="1" :step="1.2" v-model="value2"></Input-number>
+    <InputNumber :max="10" :min="1" :step="1.2" v-model="value2"></InputNumber>
 </template>
 <script>
     export default {
@@ -32,9 +32,9 @@ code.step = `
 
 code.size = `
 <template>
-    <Input-number v-model="value3" size="small"></Input-number>
-    <Input-number v-model="value4"></Input-number>
-    <Input-number v-model="value5" size="large"></Input-number>
+    <InputNumber v-model="value3" size="small"></InputNumber>
+    <InputNumber v-model="value4"></InputNumber>
+    <InputNumber v-model="value5" size="large"></InputNumber>
 </template>
 <script>
     export default {
@@ -51,7 +51,7 @@ code.size = `
 
 code.disabled = `
 <template>
-    <Input-number v-model="value6" :disabled="disabled"></Input-number>
+    <InputNumber v-model="value6" :disabled="disabled"></InputNumber>
     <Button type="primary" @click="disabled = !disabled">Toggle Disabled</Button>
 </template>
 <script>

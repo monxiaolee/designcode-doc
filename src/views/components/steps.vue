@@ -57,7 +57,7 @@
                         <Step title="步骤4"></Step>
                     </Steps>
                     <br>
-                    <i-button type="primary" @click="next">下一步</i-button>
+                    <Button type="primary" @click="next">下一步</Button>
                 </div>
                 <div slot="desc">
                     <p>点击下一步按钮可以切换当前进度状态。</p>

@@ -22,7 +22,7 @@
             </Demo>
             <Demo title="组合使用">
                 <div slot="demo">
-                    <Checkbox-group v-model="social">
+                    <CheckboxGroup v-model="social">
                         <Checkbox label="twitter">
                             <Icon type="social-twitter"></Icon>
                             <span>Twitter</span>
@@ -39,17 +39,17 @@
                             <Icon type="social-snapchat"></Icon>
                             <span>Snapchat</span>
                         </Checkbox>
-                    </Checkbox-group>
+                    </CheckboxGroup>
                     <p class="demo-data">{{ social }}</p>
-                    <Checkbox-group v-model="fruit">
+                    <CheckboxGroup v-model="fruit">
                         <Checkbox label="香蕉"></Checkbox>
                         <Checkbox label="苹果"></Checkbox>
                         <Checkbox label="西瓜"></Checkbox>
-                    </Checkbox-group>
+                    </CheckboxGroup>
                     <p class="demo-data">{{ fruit }}</p>
                 </div>
                 <div slot="desc">
-                    <p>使用<code>Checkbox-group</code>配合数组来生成组合。在组合使用时，<code>Checkbox</code> 使用 <code>label</code> 来自动判断选中状态。每个 Checkbox 的内容可以自定义，如不填写则默认使用 label 的值。</p>
+                    <p>使用<code>CheckboxGroup</code>配合数组来生成组合。在组合使用时，<code>Checkbox</code> 使用 <code>label</code> 来自动判断选中状态。每个 Checkbox 的内容可以自定义，如不填写则默认使用 label 的值。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>
             </Demo>
@@ -57,11 +57,11 @@
                 <div slot="demo">
                     <Checkbox v-model="disabledSingle" disabled>Checkbox</Checkbox>
                     <p class="demo-data">{{ disabledSingle }}</p>
-                    <Checkbox-group v-model="disabledGroup">
+                    <CheckboxGroup v-model="disabledGroup">
                         <Checkbox label="香蕉" disabled></Checkbox>
                         <Checkbox label="苹果" disabled></Checkbox>
                         <Checkbox label="西瓜"></Checkbox>
-                    </Checkbox-group>
+                    </CheckboxGroup>
                     <p class="demo-data">{{ disabledGroup }}</p>
                 </div>
                 <div slot="desc">
@@ -101,11 +101,11 @@
                             :value="checkAll"
                             @click.prevent.native="handleCheckAll">全选</Checkbox>
                     </div>
-                    <Checkbox-group v-model="checkAllGroup" @on-change="checkAllGroupChange">
+                    <CheckboxGroup v-model="checkAllGroup" @on-change="checkAllGroupChange">
                         <Checkbox label="香蕉"></Checkbox>
                         <Checkbox label="苹果"></Checkbox>
                         <Checkbox label="西瓜"></Checkbox>
-                    </Checkbox-group>
+                    </CheckboxGroup>
                 </div>
                 <div slot="desc">
                     <p>在实现全选效果时，你可能会用到 <code>indeterminate</code> 属性。示例代码只是一种写法，业务中可以用更多的方法，比如计算属性。</p>

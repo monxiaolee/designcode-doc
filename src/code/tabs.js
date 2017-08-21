@@ -3,9 +3,9 @@ let code = {};
 code.base = `
 <template>
     <Tabs value="name1">
-        <Tab-pane label="标签一" name="name1">标签一的内容</Tab-pane>
-        <Tab-pane label="标签二" name="name2">标签二的内容</Tab-pane>
-        <Tab-pane label="标签三" name="name3">标签三的内容</Tab-pane>
+        <TabPane label="标签一" name="name1">标签一的内容</TabPane>
+        <TabPane label="标签二" name="name2">标签二的内容</TabPane>
+        <TabPane label="标签三" name="name3">标签三的内容</TabPane>
     </Tabs>
 </template>
 <script>
@@ -18,9 +18,9 @@ code.base = `
 code.disabled = `
 <template>
     <Tabs>
-        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-        <Tab-pane label="标签二" disabled>标签二的内容</Tab-pane>
-        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+        <TabPane label="标签一">标签一的内容</TabPane>
+        <TabPane label="标签二" disabled>标签二的内容</TabPane>
+        <TabPane label="标签三">标签三的内容</TabPane>
     </Tabs>
 </template>
 <script>
@@ -33,9 +33,9 @@ code.disabled = `
 code.icon = `
 <template>
     <Tabs>
-        <Tab-pane label="macOS" icon="social-apple">标签一的内容</Tab-pane>
-        <Tab-pane label="Windows" icon="social-windows">标签二的内容</Tab-pane>
-        <Tab-pane label="Linux" icon="social-tux">标签三的内容</Tab-pane>
+        <TabPane label="macOS" icon="social-apple">标签一的内容</TabPane>
+        <TabPane label="Windows" icon="social-windows">标签二的内容</TabPane>
+        <TabPane label="Linux" icon="social-tux">标签三的内容</TabPane>
     </Tabs>
 </template>
 <script>
@@ -48,9 +48,9 @@ code.icon = `
 code.mini = `
 <template>
     <Tabs size="small">
-        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-        <Tab-pane label="标签二">标签二的内容</Tab-pane>
-        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+        <TabPane label="标签一">标签一的内容</TabPane>
+        <TabPane label="标签二">标签二的内容</TabPane>
+        <TabPane label="标签三">标签三的内容</TabPane>
     </Tabs>
 </template>
 <script>
@@ -63,9 +63,9 @@ code.mini = `
 code.card = `
 <template>
     <Tabs type="card">
-        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-        <Tab-pane label="标签二">标签二的内容</Tab-pane>
-        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+        <TabPane label="标签一">标签一的内容</TabPane>
+        <TabPane label="标签二">标签二的内容</TabPane>
+        <TabPane label="标签三">标签三的内容</TabPane>
     </Tabs>
 </template>
 <script>
@@ -78,9 +78,9 @@ code.card = `
 code.closable = `
 <template>
     <Tabs type="card" closable @on-tab-remove="handleTabRemove">
-        <Tab-pane label="标签一" v-if="tab0">标签一的内容</Tab-pane>
-        <Tab-pane label="标签二" v-if="tab1">标签二的内容</Tab-pane>
-        <Tab-pane label="标签三" v-if="tab2">标签三的内容</Tab-pane>
+        <TabPane label="标签一" v-if="tab0">标签一的内容</TabPane>
+        <TabPane label="标签二" v-if="tab1">标签二的内容</TabPane>
+        <TabPane label="标签三" v-if="tab2">标签三的内容</TabPane>
     </Tabs>
 </template>
 <script>
@@ -104,9 +104,9 @@ code.closable = `
 code.render = `
 <template>
     <Tabs value="name1">
-        <Tab-pane :label="label" name="name1">标签一的内容</Tab-pane>
-        <Tab-pane label="标签二" name="name2">标签二的内容</Tab-pane>
-        <Tab-pane label="标签三" name="name3">标签三的内容</Tab-pane>
+        <TabPane :label="label" name="name1">标签一的内容</TabPane>
+        <TabPane label="标签二" name="name2">标签二的内容</TabPane>
+        <TabPane label="标签三" name="name3">标签三的内容</TabPane>
     </Tabs>
 </template>
 <script>
@@ -132,7 +132,7 @@ code.render = `
 code.extra = `
 <template>
     <Tabs type="card">
-        <Tab-pane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</Tab-pane>
+        <TabPane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</TabPane>
         <Button type="ghost" @click="handleTabsAdd" size="small" slot="extra" :disabled="tabs > 3">增加</Button>
     </Tabs>
 </template>
@@ -155,9 +155,9 @@ code.extra = `
 code.animated = `
 <template>
     <Tabs :animated="false">
-        <Tab-pane label="标签一">标签一的内容</Tab-pane>
-        <Tab-pane label="标签二">标签二的内容</Tab-pane>
-        <Tab-pane label="标签三">标签三的内容</Tab-pane>
+        <TabPane label="标签一">标签一的内容</TabPane>
+        <TabPane label="标签二">标签二的内容</TabPane>
+        <TabPane label="标签三">标签三的内容</TabPane>
     </Tabs>
 </template>
 <script>
@@ -208,16 +208,16 @@ code.style = `
     <Row :gutter="32">
         <Col span="12" class="demo-tabs-style1" style="background: #e3e8ee;padding:16px;">
             <Tabs type="card">
-                <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                <TabPane label="标签一">标签一的内容</TabPane>
+                <TabPane label="标签二">标签二的内容</TabPane>
+                <TabPane label="标签三">标签三的内容</TabPane>
             </Tabs>
         </Col>
         <Col span="12" class="demo-tabs-style2">
             <Tabs type="card">
-                <Tab-pane label="标签一">标签一的内容</Tab-pane>
-                <Tab-pane label="标签二">标签二的内容</Tab-pane>
-                <Tab-pane label="标签三">标签三的内容</Tab-pane>
+                <TabPane label="标签一">标签一的内容</TabPane>
+                <TabPane label="标签二">标签二的内容</TabPane>
+                <TabPane label="标签三">标签三的内容</TabPane>
             </Tabs>
         </Col>
     </Row>

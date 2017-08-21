@@ -37,10 +37,10 @@
             <Demo title="Use with External Component">
                 <div slot="demo">
                     <Progress :percent="percent"></Progress>
-                    <Button-group size="large">
+                    <ButtonGroup size="large">
                         <Button icon="ios-plus-empty" @click="add"></Button>
                         <Button icon="ios-minus-empty" @click="minus"></Button>
-                    </Button-group>
+                    </ButtonGroup>
                 </div>
                 <div slot="desc">
                     <p>You can realise a dynamic effect by combining data and controlling logic.</p>

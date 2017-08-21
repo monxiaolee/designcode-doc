@@ -18,18 +18,18 @@
             <Demo title="基础用法">
                 <div slot="demo">
                     <Carousel v-model="value1">
-                        <Carousel-item>
+                        <CarouselItem>
                             <div class="demo-carousel">1</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">2</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">3</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">4</div>
-                        </Carousel-item>
+                        </CarouselItem>
                     </Carousel>
                 </div>
                 <div slot="desc">
@@ -40,18 +40,18 @@
             <Demo title="自动切换">
                 <div slot="demo">
                     <Carousel autoplay v-model="value2">
-                        <Carousel-item>
+                        <CarouselItem>
                             <div class="demo-carousel">1</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">2</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">3</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">4</div>
-                        </Carousel-item>
+                        </CarouselItem>
                     </Carousel>
                 </div>
                 <div slot="desc">
@@ -62,35 +62,35 @@
             <Demo title="综合设置">
                 <div slot="demo">
                     <Form :model="setting" :label-width="100">
-                        <Form-item label="自动切换">
+                        <FormItem label="自动切换">
                             <i-switch v-model="setting.autoplay">
                                 <span slot="open">开</span>
                                 <span slot="close">关</span>
                             </i-switch>
-                        </Form-item>
-                        <Form-item label="自动切换速度">
+                        </FormItem>
+                        <FormItem label="自动切换速度">
                             <Slider v-model="setting.autoplaySpeed" :min="300" :max="10000" :step="100"></Slider>
-                        </Form-item>
-                        <Form-item label="指示器位置">
-                            <Radio-group v-model="setting.dots" type="button">
+                        </FormItem>
+                        <FormItem label="指示器位置">
+                            <RadioGroup v-model="setting.dots" type="button">
                                 <Radio label="inside">内部</Radio>
                                 <Radio label="outside">外部</Radio>
                                 <Radio label="none">不显示</Radio>
-                            </Radio-group>
-                        </Form-item>
-                        <Form-item label="切换箭头">
-                            <Radio-group v-model="setting.arrow" type="button">
+                            </RadioGroup>
+                        </FormItem>
+                        <FormItem label="切换箭头">
+                            <RadioGroup v-model="setting.arrow" type="button">
                                 <Radio label="hover">悬停时显示</Radio>
                                 <Radio label="always">一直显示</Radio>
                                 <Radio label="never">不显示</Radio>
-                            </Radio-group>
-                        </Form-item>
-                        <Form-item label="指示器触发方式">
-                            <Radio-group v-model="setting.trigger" type="button">
+                            </RadioGroup>
+                        </FormItem>
+                        <FormItem label="指示器触发方式">
+                            <RadioGroup v-model="setting.trigger" type="button">
                                 <Radio label="click">点击</Radio>
                                 <Radio label="hover">悬停</Radio>
-                            </Radio-group>
-                        </Form-item>
+                            </RadioGroup>
+                        </FormItem>
                     </Form>
                     <Carousel
                         v-model="value3"
@@ -99,18 +99,18 @@
                         :dots="setting.dots"
                         :trigger="setting.trigger"
                         :arrow="setting.arrow">
-                        <Carousel-item>
+                        <CarouselItem>
                             <div class="demo-carousel">1</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">2</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">3</div>
-                        </Carousel-item>
-                        <Carousel-item>
+                        </CarouselItem>
+                        <CarouselItem>
                             <div class="demo-carousel">4</div>
-                        </Carousel-item>
+                        </CarouselItem>
                     </Carousel>
                 </div>
                 <div slot="desc">

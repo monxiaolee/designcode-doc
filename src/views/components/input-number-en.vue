@@ -7,7 +7,7 @@
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
-                    <Input-number :max="10" :min="1" v-model="value1"></Input-number>
+                    <InputNumber :max="10" :min="1" v-model="value1"></InputNumber>
                 </div>
                 <div slot="desc">
                     <p>Change the number by inputing, clicking or tapping up / down button.</p>
@@ -16,7 +16,7 @@
             </Demo>
             <Demo title="Decimal">
                 <div slot="demo">
-                    <Input-number :max="10" :min="1" :step="1.2" v-model="value2"></Input-number>
+                    <InputNumber :max="10" :min="1" :step="1.2" v-model="value2"></InputNumber>
                 </div>
                 <div slot="desc">
                     <p>Set <code>step</code> prop to control the step length of each change.</p>
@@ -25,9 +25,9 @@
             </Demo>
             <Demo title="Size">
                 <div slot="demo">
-                    <Input-number v-model="value3" size="small"></Input-number>
-                    <Input-number v-model="value4"></Input-number>
-                    <Input-number v-model="value5" size="large"></Input-number>
+                    <InputNumber v-model="value3" size="small"></InputNumber>
+                    <InputNumber v-model="value4"></InputNumber>
+                    <InputNumber v-model="value5" size="large"></InputNumber>
                 </div>
                 <div slot="desc">
                     <p>Change the size of the input block to large or small by setting <code>size</code> prop to <code>large</code> or <code>small</code>. Default is medium size.</p>
@@ -36,7 +36,7 @@
             </Demo>
             <Demo title="Disabled">
                 <div slot="demo">
-                    <Input-number v-model="value6" :disabled="disabled"></Input-number>
+                    <InputNumber v-model="value6" :disabled="disabled"></InputNumber>
                     <Button type="primary" @click="disabled = !disabled">Toggle Disabled</Button>
                 </div>
                 <div slot="desc">

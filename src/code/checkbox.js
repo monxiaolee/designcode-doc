@@ -17,7 +17,7 @@ code.single = `
 
 code.group = `
 <template>
-    <Checkbox-group v-model="social">
+    <CheckboxGroup v-model="social">
         <Checkbox label="twitter">
             <Icon type="social-twitter"></Icon>
             <span>Twitter</span>
@@ -34,12 +34,12 @@ code.group = `
             <Icon type="social-snapchat"></Icon>
             <span>Snapchat</span>
         </Checkbox>
-    </Checkbox-group>
-    <Checkbox-group v-model="fruit">
+    </CheckboxGroup>
+    <CheckboxGroup v-model="fruit">
         <Checkbox label="香蕉"></Checkbox>
         <Checkbox label="苹果"></Checkbox>
         <Checkbox label="西瓜"></Checkbox>
-    </Checkbox-group>
+    </CheckboxGroup>
 </template>
 <script>
     export default {
@@ -56,11 +56,11 @@ code.group = `
 code.disabled = `
 <template>
     <Checkbox v-model="disabledSingle" disabled>Checkbox</Checkbox>
-    <Checkbox-group v-model="disabledGroup">
+    <CheckboxGroup v-model="disabledGroup">
         <Checkbox label="香蕉" disabled></Checkbox>
         <Checkbox label="苹果" disabled></Checkbox>
         <Checkbox label="西瓜"></Checkbox>
-    </Checkbox-group>
+    </CheckboxGroup>
 </template>
 <script>
     export default {
@@ -113,11 +113,11 @@ code.indeterminate = `
             :value="checkAll"
             @click.prevent.native="handleCheckAll">全选</Checkbox>
     </div>
-    <Checkbox-group v-model="checkAllGroup" @on-change="checkAllGroupChange">
+    <CheckboxGroup v-model="checkAllGroup" @on-change="checkAllGroupChange">
         <Checkbox label="香蕉"></Checkbox>
         <Checkbox label="苹果"></Checkbox>
         <Checkbox label="西瓜"></Checkbox>
-    </Checkbox-group>
+    </CheckboxGroup>
 </template>
 <script>
     export default {

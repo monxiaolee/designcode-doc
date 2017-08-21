@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <Back-top></Back-top>
+    <BackTop></BackTop>
 </template>
 <script>
     export default {
@@ -22,9 +22,9 @@ code.custom = `
     }
 </style>
 <template>
-    <Back-top :height="100" :bottom="200">
+    <BackTop :height="100" :bottom="200">
         <div class="top">返回顶端</div>
-    </Back-top>
+    </BackTop>
 </template>
 <script>
     export default {

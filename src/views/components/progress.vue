@@ -37,10 +37,10 @@
             <Demo title="配合外部组件使用">
                 <div slot="demo">
                     <Progress :percent="percent"></Progress>
-                    <Button-group size="large">
+                    <ButtonGroup size="large">
                         <Button icon="ios-plus-empty" @click="add"></Button>
                         <Button icon="ios-minus-empty" @click="minus"></Button>
-                    </Button-group>
+                    </ButtonGroup>
                 </div>
                 <div slot="desc">
                     <p>通过数据的联动和逻辑控制，实现动态效果。</p>

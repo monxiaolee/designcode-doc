@@ -9,19 +9,19 @@
             <Demo title="行内表单">
                 <div slot="demo">
                     <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
-                        <Form-item prop="user">
+                        <FormItem prop="user">
                             <Input type="text" v-model="formInline.user" placeholder="Username">
                                 <Icon type="ios-person-outline" slot="prepend"></Icon>
                             </Input>
-                        </Form-item>
-                        <Form-item prop="password">
+                        </FormItem>
+                        <FormItem prop="password">
                             <Input type="password" v-model="formInline.password" placeholder="Password">
                                 <Icon type="ios-locked-outline" slot="prepend"></Icon>
                             </Input>
-                        </Form-item>
-                        <Form-item>
+                        </FormItem>
+                        <FormItem>
                             <Button type="primary" @click="handleSubmit('formInline')">登录</Button>
-                        </Form-item>
+                        </FormItem>
                     </Form>
                 </div>
                 <div slot="desc">
@@ -32,99 +32,99 @@
             <Demo title="表单控件">
                 <div slot="demo">
                     <Form :model="formItem" :label-width="80">
-                        <Form-item label="输入框">
+                        <FormItem label="输入框">
                             <Input v-model="formItem.input" placeholder="请输入"></Input>
-                        </Form-item>
-                        <Form-item label="选择器">
+                        </FormItem>
+                        <FormItem label="选择器">
                             <Select v-model="formItem.select" placeholder="请选择">
                                 <Option value="beijing">北京市</Option>
                                 <Option value="shanghai">上海市</Option>
                                 <Option value="shenzhen">深圳市</Option>
                             </Select>
-                        </Form-item>
-                        <Form-item label="日期控件">
+                        </FormItem>
+                        <FormItem label="日期控件">
                             <Row>
                                 <Col span="11">
-                                    <Date-picker type="date" placeholder="选择日期" v-model="formItem.date"></Date-picker>
+                                    <DatePicker type="date" placeholder="选择日期" v-model="formItem.date"></DatePicker>
                                 </Col>
                                 <Col span="2" style="text-align: center">-</Col>
                                 <Col span="11">
-                                    <Time-picker type="time" placeholder="选择时间" v-model="formItem.time"></Time-picker>
+                                    <TimePicker type="time" placeholder="选择时间" v-model="formItem.time"></TimePicker>
                                 </Col>
                             </Row>
-                        </Form-item>
-                        <Form-item label="单选框">
-                            <Radio-group v-model="formItem.radio">
+                        </FormItem>
+                        <FormItem label="单选框">
+                            <RadioGroup v-model="formItem.radio">
                                 <Radio label="male">男</Radio>
                                 <Radio label="female">女</Radio>
-                            </Radio-group>
-                        </Form-item>
-                        <Form-item label="多选框">
-                            <Checkbox-group v-model="formItem.checkbox">
+                            </RadioGroup>
+                        </FormItem>
+                        <FormItem label="多选框">
+                            <CheckboxGroup v-model="formItem.checkbox">
                                 <Checkbox label="吃饭"></Checkbox>
                                 <Checkbox label="睡觉"></Checkbox>
                                 <Checkbox label="跑步"></Checkbox>
                                 <Checkbox label="看电影"></Checkbox>
-                            </Checkbox-group>
-                        </Form-item>
-                        <Form-item label="开关">
+                            </CheckboxGroup>
+                        </FormItem>
+                        <FormItem label="开关">
                             <i-switch v-model="formItem.switch" size="large">
                                 <span slot="open">开启</span>
                                 <span slot="close">关闭</span>
                             </i-switch>
-                        </Form-item>
-                        <Form-item label="滑块">
+                        </FormItem>
+                        <FormItem label="滑块">
                             <Slider v-model="formItem.slider" range></Slider>
-                        </Form-item>
-                        <Form-item label="文本域">
+                        </FormItem>
+                        <FormItem label="文本域">
                             <Input v-model="formItem.textarea" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
-                        </Form-item>
-                        <Form-item>
+                        </FormItem>
+                        <FormItem>
                             <Button type="primary">提交</Button>
                             <Button type="ghost" style="margin-left: 8px">取消</Button>
-                        </Form-item>
+                        </FormItem>
                     </Form>
                 </div>
                 <div slot="desc">
-                    <p>在 <code>Form</code> 内，每个表单域由 <code>Form-item</code> 组成，可包含的控件有：Input、Radio、Checkbox、Switch、Select、Slider、DatePicker、TimePicker、Cascader、Transfer、InputNumber、Rate、Upload。</p>
-                    <p>给 <code>Form-item</code> 设置属性 <code>label</code> 可以显示表单域的标签，需要给 Form 设置 <code>label-width</code>。</p>
+                    <p>在 <code>Form</code> 内，每个表单域由 <code>FormItem</code> 组成，可包含的控件有：Input、Radio、Checkbox、Switch、Select、Slider、DatePicker、TimePicker、Cascader、Transfer、InputNumber、Rate、Upload。</p>
+                    <p>给 <code>FormItem</code> 设置属性 <code>label</code> 可以显示表单域的标签，需要给 Form 设置 <code>label-width</code>。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.item }}</i-code>
             </Demo>
             <Demo title="对齐方式">
                 <div slot="demo">
                     <Form :model="formLeft" label-position="left" :label-width="100">
-                        <Form-item label="标题">
+                        <FormItem label="标题">
                             <Input v-model="formLeft.input1"></Input>
-                        </Form-item>
-                        <Form-item label="标题名称">
+                        </FormItem>
+                        <FormItem label="标题名称">
                             <Input v-model="formLeft.input2"></Input>
-                        </Form-item>
-                        <Form-item label="标题名称对齐">
+                        </FormItem>
+                        <FormItem label="标题名称对齐">
                             <Input v-model="formLeft.input3"></Input>
-                        </Form-item>
+                        </FormItem>
                     </Form>
                     <Form :model="formRight" label-position="right" :label-width="100">
-                        <Form-item label="标题">
+                        <FormItem label="标题">
                             <Input v-model="formRight.input1"></Input>
-                        </Form-item>
-                        <Form-item label="标题名称">
+                        </FormItem>
+                        <FormItem label="标题名称">
                             <Input v-model="formRight.input2"></Input>
-                        </Form-item>
-                        <Form-item label="标题名称对齐">
+                        </FormItem>
+                        <FormItem label="标题名称对齐">
                             <Input v-model="formRight.input3"></Input>
-                        </Form-item>
+                        </FormItem>
                     </Form>
                     <Form :model="formTop" label-position="top">
-                        <Form-item label="标题">
+                        <FormItem label="标题">
                             <Input v-model="formTop.input1"></Input>
-                        </Form-item>
-                        <Form-item label="标题名称">
+                        </FormItem>
+                        <FormItem label="标题名称">
                             <Input v-model="formTop.input2"></Input>
-                        </Form-item>
-                        <Form-item label="标题名称对齐">
+                        </FormItem>
+                        <FormItem label="标题名称对齐">
                             <Input v-model="formTop.input3"></Input>
-                        </Form-item>
+                        </FormItem>
                     </Form>
                 </div>
                 <div slot="desc">
@@ -135,59 +135,59 @@
             <Demo title="表单验证">
                 <div slot="demo">
                     <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
-                        <Form-item label="姓名" prop="name">
+                        <FormItem label="姓名" prop="name">
                             <Input v-model="formValidate.name" placeholder="请输入姓名"></Input>
-                        </Form-item>
-                        <Form-item label="邮箱" prop="mail">
+                        </FormItem>
+                        <FormItem label="邮箱" prop="mail">
                             <Input v-model="formValidate.mail" placeholder="请输入邮箱"></Input>
-                        </Form-item>
-                        <Form-item label="城市" prop="city">
+                        </FormItem>
+                        <FormItem label="城市" prop="city">
                             <Select v-model="formValidate.city" placeholder="请选择所在地">
                                 <Option value="beijing">北京市</Option>
                                 <Option value="shanghai">上海市</Option>
                                 <Option value="shenzhen">深圳市</Option>
                             </Select>
-                        </Form-item>
-                        <Form-item label="选择日期">
+                        </FormItem>
+                        <FormItem label="选择日期">
                             <Row>
                                 <Col span="11">
-                                    <Form-item prop="date">
-                                        <Date-picker type="date" placeholder="选择日期" v-model="formValidate.date"></Date-picker>
-                                    </Form-item>
+                                    <FormItem prop="date">
+                                        <DatePicker type="date" placeholder="选择日期" v-model="formValidate.date"></DatePicker>
+                                    </FormItem>
                                 </Col>
                                 <Col span="2" style="text-align: center">-</Col>
                                 <Col span="11">
-                                    <Form-item prop="time">
-                                        <Time-picker type="time" placeholder="选择时间" v-model="formValidate.time"></Time-picker>
-                                    </Form-item>
+                                    <FormItem prop="time">
+                                        <TimePicker type="time" placeholder="选择时间" v-model="formValidate.time"></TimePicker>
+                                    </FormItem>
                                 </Col>
                             </Row>
-                        </Form-item>
-                        <Form-item label="性别" prop="gender">
-                            <Radio-group v-model="formValidate.gender">
+                        </FormItem>
+                        <FormItem label="性别" prop="gender">
+                            <RadioGroup v-model="formValidate.gender">
                                 <Radio label="male">男</Radio>
                                 <Radio label="female">女</Radio>
-                            </Radio-group>
-                        </Form-item>
-                        <Form-item label="爱好" prop="interest">
-                            <Checkbox-group v-model="formValidate.interest">
+                            </RadioGroup>
+                        </FormItem>
+                        <FormItem label="爱好" prop="interest">
+                            <CheckboxGroup v-model="formValidate.interest">
                                 <Checkbox label="吃饭"></Checkbox>
                                 <Checkbox label="睡觉"></Checkbox>
                                 <Checkbox label="跑步"></Checkbox>
                                 <Checkbox label="看电影"></Checkbox>
-                            </Checkbox-group>
-                        </Form-item>
-                        <Form-item label="介绍" prop="desc">
+                            </CheckboxGroup>
+                        </FormItem>
+                        <FormItem label="介绍" prop="desc">
                             <Input v-model="formValidate.desc" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
-                        </Form-item>
-                        <Form-item>
+                        </FormItem>
+                        <FormItem>
                             <Button type="primary" @click="handleSubmit('formValidate')">提交</Button>
                             <Button type="ghost" @click="handleReset('formValidate')" style="margin-left: 8px">重置</Button>
-                        </Form-item>
+                        </FormItem>
                     </Form>
                 </div>
                 <div slot="desc">
-                    <p>Form 组件基于 <a href="https://github.com/yiminghe/async-validator" target="_blank"><Icon type="social-github"></Icon> async-validator</a> 实现的数据验证，给 Form 设置属性 <code>rules</code>，同时给需要验证的 Form-item 设置属性 <code>prop</code> 指向对应字段即可。</p>
+                    <p>Form 组件基于 <a href="https://github.com/yiminghe/async-validator" target="_blank"><Icon type="social-github"></Icon> async-validator</a> 实现的数据验证，给 Form 设置属性 <code>rules</code>，同时给需要验证的 FormItem 设置属性 <code>prop</code> 指向对应字段即可。</p>
                     <p>完整的验证规则请参照开源项目 async-validator。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.validate }}</i-code>
@@ -195,19 +195,19 @@
             <Demo title="自定义验证">
                 <div slot="demo">
                     <Form ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="80">
-                        <Form-item label="密码" prop="passwd">
+                        <FormItem label="密码" prop="passwd">
                             <Input type="password" v-model="formCustom.passwd"></Input>
-                        </Form-item>
-                        <Form-item label="确认密码" prop="passwdCheck">
+                        </FormItem>
+                        <FormItem label="确认密码" prop="passwdCheck">
                             <Input type="password" v-model="formCustom.passwdCheck"></Input>
-                        </Form-item>
-                        <Form-item label="年龄" prop="age">
+                        </FormItem>
+                        <FormItem label="年龄" prop="age">
                             <Input type="text" v-model="formCustom.age" number></Input>
-                        </Form-item>
-                        <Form-item>
+                        </FormItem>
+                        <FormItem>
                             <Button type="primary" @click="handleSubmit('formCustom')">提交</Button>
                             <Button type="ghost" @click="handleReset('formCustom')" style="margin-left: 8px">重置</Button>
-                        </Form-item>
+                        </FormItem>
                     </Form>
                 </div>
                 <div slot="desc">
@@ -218,7 +218,7 @@
             <Demo title="动态增减表单项">
                 <div slot="demo">
                     <Form ref="formDynamic" :model="formDynamic" :label-width="80">
-                        <Form-item
+                        <FormItem
                             v-for="(item, index) in formDynamic.items"
                             :key="index"
                             :label="'项目' + (index + 1)"
@@ -232,24 +232,24 @@
                                     <Button type="ghost" @click="handleRemove(index)">删除</Button>
                                 </Col>
                             </Row>
-                        </Form-item>
-                        <Form-item>
+                        </FormItem>
+                        <FormItem>
                             <Row>
                                 <Col span="12">
                                     <Button type="dashed" long @click="handleAdd" icon="plus-round">新增</Button>
                                 </Col>
                             </Row>
-                        </Form-item>
-                        <Form-item>
+                        </FormItem>
+                        <FormItem>
                             <Button type="primary" @click="handleSubmit('formDynamic')">提交</Button>
                             <Button type="ghost" @click="handleReset('formDynamic')" style="margin-left: 8px">重置</Button>
-                        </Form-item>
+                        </FormItem>
                     </Form>
                 </div>
                 <div slot="desc">
-                    <p>当需要动态维护 Form-item 时，也可以直接给 Form-item 设置属性 <code>rules</code> 来单独为该域做验证。</p>
-                    <p>动态设置 Form-item 的 prop 属性时，会依据上层的 Form 组件的 model 来获取，查看示例代码。</p>
-                    <p>Form-item 还可以独立设置 required、error 等属性，详见 API。</p>
+                    <p>当需要动态维护 FormItem 时，也可以直接给 FormItem 设置属性 <code>rules</code> 来单独为该域做验证。</p>
+                    <p>动态设置 FormItem 的 prop 属性时，会依据上层的 Form 组件的 model 来获取，查看示例代码。</p>
+                    <p>FormItem 还可以独立设置 required、error 等属性，详见 API。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.dynamic }}</i-code>
             </Demo>
@@ -292,7 +292,7 @@
                         </tr>
                         <tr>
                             <td>label-width</td>
-                            <td>表单域标签的宽度，所有的 Form-item 都会继承 Form 组件的 label-width 的值</td>
+                            <td>表单域标签的宽度，所有的 FormItem 都会继承 Form 组件的 label-width 的值</td>
                             <td>Number</td>
                             <td>-</td>
                         </tr>

@@ -22,7 +22,7 @@
             </Demo>
             <Demo title="Combination">
                 <div slot="demo">
-                    <Radio-group v-model="phone">
+                    <RadioGroup v-model="phone">
                         <Radio label="apple">
                             <Icon type="social-apple"></Icon>
                             <span>Apple</span>
@@ -35,17 +35,17 @@
                             <Icon type="social-windows"></Icon>
                             <span>Windows</span>
                         </Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ phone }}</p>
-                    <Radio-group v-model="animal">
+                    <RadioGroup v-model="animal">
                         <Radio label="金斑蝶"></Radio>
                         <Radio label="爪哇犀牛"></Radio>
                         <Radio label="印度黑羚"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ animal }}</p>
                 </div>
                 <div slot="desc">
-                    <p>Use <code>Radio-group</code> to combine a set of exclusive selection. When using <code>Radio-group</code>, you shall set <code>label</code> to <code>Radio</code> to enable an auto judgement. The content of each Radio can be customized. If not set, it'll use label's value by default.</p>
+                    <p>Use <code>RadioGroup</code> to combine a set of exclusive selection. When using <code>RadioGroup</code>, you shall set <code>label</code> to <code>Radio</code> to enable an auto judgement. The content of each Radio can be customized. If not set, it'll use label's value by default.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>
             </Demo>
@@ -53,11 +53,11 @@
                 <div slot="demo">
                     <Radio v-model="disabledSingle" disabled>Radio</Radio>
                     <p class="demo-data">{{ disabledSingle }}</p>
-                    <Radio-group v-model="disabledGroup">
+                    <RadioGroup v-model="disabledGroup">
                         <Radio label="金斑蝶" disabled></Radio>
                         <Radio label="爪哇犀牛"></Radio>
                         <Radio label="印度黑羚"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ disabledGroup }}</p>
                 </div>
                 <div slot="desc">
@@ -67,7 +67,7 @@
             </Demo>
             <Demo title="Verticality">
                 <div slot="demo">
-                    <Radio-group v-model="vertical" vertical>
+                    <RadioGroup v-model="vertical" vertical>
                         <Radio label="apple">
                             <Icon type="social-apple"></Icon>
                             <span>Apple</span>
@@ -80,7 +80,7 @@
                             <Icon type="social-windows"></Icon>
                             <span>Windows</span>
                         </Radio>
-                    </Radio-group>
+                    </RadioGroup>
                 </div>
                 <div slot="desc">
                     <p>Set <code>vertical</code> prop can let Radio-gruop be displayed vertically. It will not work in button type.</p>
@@ -89,55 +89,55 @@
             </Demo>
             <Demo title="Button Type">
                 <div slot="demo">
-                    <Radio-group v-model="button1" type="button">
+                    <RadioGroup v-model="button1" type="button">
                         <Radio label="北京"></Radio>
                         <Radio label="上海"></Radio>
                         <Radio label="深圳"></Radio>
                         <Radio label="杭州"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ button1 }}</p>
-                    <Radio-group v-model="button2" type="button">
+                    <RadioGroup v-model="button2" type="button">
                         <Radio label="北京"></Radio>
                         <Radio label="上海" disabled></Radio>
                         <Radio label="深圳"></Radio>
                         <Radio label="杭州"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ button2 }}</p>
-                    <Radio-group v-model="button3" type="button">
+                    <RadioGroup v-model="button3" type="button">
                         <Radio label="北京" disabled></Radio>
                         <Radio label="上海" disabled></Radio>
                         <Radio label="深圳" disabled></Radio>
                         <Radio label="杭州" disabled></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ button3 }}</p>
                 </div>
                 <div slot="desc">
-                    <p>When using Radio-group, you can set <code>type</code> to button to apply a button type.</p>
+                    <p>When using RadioGroup, you can set <code>type</code> to button to apply a button type.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.button }}</i-code>
             </Demo>
             <Demo title="Size">
                 <div slot="demo">
-                    <Radio-group v-model="button4" type="button" size="large">
+                    <RadioGroup v-model="button4" type="button" size="large">
                         <Radio label="北京"></Radio>
                         <Radio label="上海"></Radio>
                         <Radio label="深圳"></Radio>
                         <Radio label="杭州"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ button4 }}</p>
-                    <Radio-group v-model="button5" type="button">
+                    <RadioGroup v-model="button5" type="button">
                         <Radio label="北京"></Radio>
                         <Radio label="上海"></Radio>
                         <Radio label="深圳"></Radio>
                         <Radio label="杭州"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ button5 }}</p>
-                    <Radio-group v-model="button6" type="button" size="small">
+                    <RadioGroup v-model="button6" type="button" size="small">
                         <Radio label="北京"></Radio>
                         <Radio label="上海"></Radio>
                         <Radio label="深圳"></Radio>
                         <Radio label="杭州"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                     <p class="demo-data">{{ button6 }}</p>
                 </div>
                 <div slot="desc">
@@ -166,7 +166,7 @@
                         </tr>
                         <tr>
                             <td>label </td>
-                            <td>Only works when Radios are combined by Radio-group. Assign selected Radio's value, and it'll automatically judge which is selected.</td>
+                            <td>Only works when Radios are combined by RadioGroup. Assign selected Radio's value, and it'll automatically judge which is selected.</td>
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>

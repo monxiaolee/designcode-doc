@@ -9,41 +9,41 @@
             <Demo title="Head Navigator" vertical hide-code>
                 <div slot="demo">
                     <Menu mode="horizontal" :theme="theme1" active-name="1">
-                        <Menu-item name="1">
+                        <MenuItem name="1">
                             <Icon type="ios-paper"></Icon>
                             内容管理
-                        </Menu-item>
-                        <Menu-item name="2">
+                        </MenuItem>
+                        <MenuItem name="2">
                             <Icon type="ios-people"></Icon>
                             用户管理
-                        </Menu-item>
+                        </MenuItem>
                         <Submenu name="3">
                             <template slot="title">
                                 <Icon type="stats-bars"></Icon>
                                 统计分析
                             </template>
-                            <Menu-group title="使用">
-                                <Menu-item name="3-1">新增和启动</Menu-item>
-                                <Menu-item name="3-2">活跃分析</Menu-item>
-                                <Menu-item name="3-3">时段分析</Menu-item>
-                            </Menu-group>
-                            <Menu-group title="留存">
-                                <Menu-item name="3-4">用户留存</Menu-item>
-                                <Menu-item name="3-5">流失用户</Menu-item>
-                            </Menu-group>
+                            <MenuGroup title="使用">
+                                <MenuItem name="3-1">新增和启动</MenuItem>
+                                <MenuItem name="3-2">活跃分析</MenuItem>
+                                <MenuItem name="3-3">时段分析</MenuItem>
+                            </MenuGroup>
+                            <MenuGroup title="留存">
+                                <MenuItem name="3-4">用户留存</MenuItem>
+                                <MenuItem name="3-5">流失用户</MenuItem>
+                            </MenuGroup>
                         </Submenu>
-                        <Menu-item name="4">
+                        <MenuItem name="4">
                             <Icon type="settings"></Icon>
                             综合设置
-                        </Menu-item>
+                        </MenuItem>
                     </Menu>
                     <br>
                     <p>切换主题</p>
-                    <Radio-group v-model="theme1">
+                    <RadioGroup v-model="theme1">
                         <Radio label="light"></Radio>
                         <Radio label="dark"></Radio>
                         <Radio label="primary"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                 </div>
                 <div slot="desc">
                     <p>Horizontal head navigation menu.</p>
@@ -62,32 +62,32 @@
                                         <Icon type="ios-paper"></Icon>
                                         内容管理
                                     </template>
-                                    <Menu-item name="1-1">文章管理</Menu-item>
-                                    <Menu-item name="1-2">评论管理</Menu-item>
-                                    <Menu-item name="1-3">举报管理</Menu-item>
+                                    <MenuItem name="1-1">文章管理</MenuItem>
+                                    <MenuItem name="1-2">评论管理</MenuItem>
+                                    <MenuItem name="1-3">举报管理</MenuItem>
                                 </Submenu>
                                 <Submenu name="2">
                                     <template slot="title">
                                         <Icon type="ios-people"></Icon>
                                         用户管理
                                     </template>
-                                    <Menu-item name="2-1">新增用户</Menu-item>
-                                    <Menu-item name="2-2">活跃用户</Menu-item>
+                                    <MenuItem name="2-1">新增用户</MenuItem>
+                                    <MenuItem name="2-2">活跃用户</MenuItem>
                                 </Submenu>
                                 <Submenu name="3">
                                     <template slot="title">
                                         <Icon type="stats-bars"></Icon>
                                         统计分析
                                     </template>
-                                    <Menu-group title="使用">
-                                        <Menu-item name="3-1">新增和启动</Menu-item>
-                                        <Menu-item name="3-2">活跃分析</Menu-item>
-                                        <Menu-item name="3-3">时段分析</Menu-item>
-                                    </Menu-group>
-                                    <Menu-group title="留存">
-                                        <Menu-item name="3-4">用户留存</Menu-item>
-                                        <Menu-item name="3-5">流失用户</Menu-item>
-                                    </Menu-group>
+                                    <MenuGroup title="使用">
+                                        <MenuItem name="3-1">新增和启动</MenuItem>
+                                        <MenuItem name="3-2">活跃分析</MenuItem>
+                                        <MenuItem name="3-3">时段分析</MenuItem>
+                                    </MenuGroup>
+                                    <MenuGroup title="留存">
+                                        <MenuItem name="3-4">用户留存</MenuItem>
+                                        <MenuItem name="3-5">流失用户</MenuItem>
+                                    </MenuGroup>
                                 </Submenu>
                             </Menu>
                         </Col>
@@ -98,32 +98,32 @@
                                         <Icon type="ios-paper"></Icon>
                                         内容管理
                                     </template>
-                                    <Menu-item name="1-1">文章管理</Menu-item>
-                                    <Menu-item name="1-2">评论管理</Menu-item>
-                                    <Menu-item name="1-3">举报管理</Menu-item>
+                                    <MenuItem name="1-1">文章管理</MenuItem>
+                                    <MenuItem name="1-2">评论管理</MenuItem>
+                                    <MenuItem name="1-3">举报管理</MenuItem>
                                 </Submenu>
                                 <Submenu name="2">
                                     <template slot="title">
                                         <Icon type="ios-people"></Icon>
                                         用户管理
                                     </template>
-                                    <Menu-item name="2-1">新增用户</Menu-item>
-                                    <Menu-item name="2-2">活跃用户</Menu-item>
+                                    <MenuItem name="2-1">新增用户</MenuItem>
+                                    <MenuItem name="2-2">活跃用户</MenuItem>
                                 </Submenu>
                                 <Submenu name="3">
                                     <template slot="title">
                                         <Icon type="stats-bars"></Icon>
                                         统计分析
                                     </template>
-                                    <Menu-group title="使用">
-                                        <Menu-item name="3-1">新增和启动</Menu-item>
-                                        <Menu-item name="3-2">活跃分析</Menu-item>
-                                        <Menu-item name="3-3">时段分析</Menu-item>
-                                    </Menu-group>
-                                    <Menu-group title="留存">
-                                        <Menu-item name="3-4">用户留存</Menu-item>
-                                        <Menu-item name="3-5">流失用户</Menu-item>
-                                    </Menu-group>
+                                    <MenuGroup title="使用">
+                                        <MenuItem name="3-1">新增和启动</MenuItem>
+                                        <MenuItem name="3-2">活跃分析</MenuItem>
+                                        <MenuItem name="3-3">时段分析</MenuItem>
+                                    </MenuGroup>
+                                    <MenuGroup title="留存">
+                                        <MenuItem name="3-4">用户留存</MenuItem>
+                                        <MenuItem name="3-5">流失用户</MenuItem>
+                                    </MenuGroup>
                                 </Submenu>
                             </Menu>
                         </Col>
@@ -134,42 +134,42 @@
                                         <Icon type="ios-paper"></Icon>
                                         内容管理
                                     </template>
-                                    <Menu-item name="1-1">文章管理</Menu-item>
-                                    <Menu-item name="1-2">评论管理</Menu-item>
-                                    <Menu-item name="1-3">举报管理</Menu-item>
+                                    <MenuItem name="1-1">文章管理</MenuItem>
+                                    <MenuItem name="1-2">评论管理</MenuItem>
+                                    <MenuItem name="1-3">举报管理</MenuItem>
                                 </Submenu>
                                 <Submenu name="2">
                                     <template slot="title">
                                         <Icon type="ios-people"></Icon>
                                         用户管理
                                     </template>
-                                    <Menu-item name="2-1">新增用户</Menu-item>
-                                    <Menu-item name="2-2">活跃用户</Menu-item>
+                                    <MenuItem name="2-1">新增用户</MenuItem>
+                                    <MenuItem name="2-2">活跃用户</MenuItem>
                                 </Submenu>
                                 <Submenu name="3">
                                     <template slot="title">
                                         <Icon type="stats-bars"></Icon>
                                         统计分析
                                     </template>
-                                    <Menu-group title="使用">
-                                        <Menu-item name="3-1">新增和启动</Menu-item>
-                                        <Menu-item name="3-2">活跃分析</Menu-item>
-                                        <Menu-item name="3-3">时段分析</Menu-item>
-                                    </Menu-group>
-                                    <Menu-group title="留存">
-                                        <Menu-item name="3-4">用户留存</Menu-item>
-                                        <Menu-item name="3-5">流失用户</Menu-item>
-                                    </Menu-group>
+                                    <MenuGroup title="使用">
+                                        <MenuItem name="3-1">新增和启动</MenuItem>
+                                        <MenuItem name="3-2">活跃分析</MenuItem>
+                                        <MenuItem name="3-3">时段分析</MenuItem>
+                                    </MenuGroup>
+                                    <MenuGroup title="留存">
+                                        <MenuItem name="3-4">用户留存</MenuItem>
+                                        <MenuItem name="3-5">流失用户</MenuItem>
+                                    </MenuGroup>
                                 </Submenu>
                             </Menu>
                         </Col>
                     </Row>
                     <br>
                     <p>切换主题</p>
-                    <Radio-group v-model="theme2">
+                    <RadioGroup v-model="theme2">
                         <Radio label="light"></Radio>
                         <Radio label="dark"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                 </div>
                 <div slot="desc">
                     <p>Vertical navigation menu which can includes sub menus.</p>
@@ -182,39 +182,39 @@
             <Demo title="Menu Group" vertical hide-code>
                 <div slot="demo">
                     <Menu :theme="theme3" active-name="1">
-                        <Menu-group title="内容管理">
-                            <Menu-item name="1">
+                        <MenuGroup title="内容管理">
+                            <MenuItem name="1">
                                 <Icon type="document-text"></Icon>
                                 文章管理
-                            </Menu-item>
-                            <Menu-item name="2">
+                            </MenuItem>
+                            <MenuItem name="2">
                                 <Icon type="chatbubbles"></Icon>
                                 评论管理
-                            </Menu-item>
-                        </Menu-group>
-                        <Menu-group title="统计分析">
-                            <Menu-item name="3">
+                            </MenuItem>
+                        </MenuGroup>
+                        <MenuGroup title="统计分析">
+                            <MenuItem name="3">
                                 <Icon type="heart"></Icon>
                                 用户留存
-                            </Menu-item>
-                            <Menu-item name="4">
+                            </MenuItem>
+                            <MenuItem name="4">
                                 <Icon type="heart-broken"></Icon>
                                 流失用户
-                            </Menu-item>
-                        </Menu-group>
+                            </MenuItem>
+                        </MenuGroup>
                     </Menu>
                     <br>
                     <p>切换主题</p>
-                    <Radio-group v-model="theme3">
+                    <RadioGroup v-model="theme3">
                         <Radio label="light"></Radio>
                         <Radio label="dark"></Radio>
-                    </Radio-group>
+                    </RadioGroup>
                 </div>
                 <div slot="desc">
-                    <p>Use <code>Menu-group</code> to group the menus. Attention:</p>
+                    <p>Use <code>MenuGroup</code> to group the menus. Attention:</p>
                     <ul>
-                        <li> <code>Menu-group</code> can only be used in <code>Menu</code> and <code>Submenu</code>.</li>
-                        <li> <code>Submenu</code> can only be used in <code>Menu</code>. It cannot be used in <code>Menu-group</code> or <code>Menu-item</code>.</li>
+                        <li> <code>MenuGroup</code> can only be used in <code>Menu</code> and <code>Submenu</code>.</li>
+                        <li> <code>Submenu</code> can only be used in <code>Menu</code>. It cannot be used in <code>MenuGroup</code> or <code>MenuItem</code>.</li>
                     </ul>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>

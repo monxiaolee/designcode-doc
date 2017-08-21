@@ -4,10 +4,10 @@ code.base = `
 <template>
     <Row>
         <Col span="12">
-            <Date-picker type="date" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker type="date" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <Date-picker type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -22,10 +22,10 @@ code.shortcuts = `
 <template>
     <Row>
         <Col span="12">
-            <Date-picker type="date" :options="options1" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker type="date" :options="options1" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <Date-picker type="daterange" :options="options2" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker type="daterange" :options="options2" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -109,10 +109,10 @@ code.format = `
 <template>
     <Row>
         <Col span="12">
-            <Date-picker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <Date-picker :value="value2" format="yyyy/MM/dd" type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker :value="value2" format="yyyy/MM/dd" type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -130,13 +130,13 @@ code.format = `
 
 code.datetime = `
 <template>
-    <Date-picker type="datetime" placeholder="选择日期和时间" style="width: 200px"></Date-picker>
+    <DatePicker type="datetime" placeholder="选择日期和时间" style="width: 200px"></DatePicker>
     <br>
-    <Date-picker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></Date-picker>
+    <DatePicker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></DatePicker>
     <br>
-    <Date-picker type="datetimerange" placeholder="选择日期和时间" style="width: 300px"></Date-picker>
+    <DatePicker type="datetimerange" placeholder="选择日期和时间" style="width: 300px"></DatePicker>
     <br>
-    <Date-picker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></Date-picker>
+    <DatePicker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></DatePicker>
 </template>
 <script>
     export default {
@@ -149,10 +149,10 @@ code.type = `
 <template>
     <Row>
         <Col span="12">
-            <Date-picker type="year" placeholder="选择年" style="width: 200px"></Date-picker>
+            <DatePicker type="year" placeholder="选择年" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <Date-picker type="month" placeholder="选择月" style="width: 200px"></Date-picker>
+            <DatePicker type="month" placeholder="选择月" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -167,10 +167,10 @@ code.disabled = `
 <template>
     <Row>
         <Col span="12">
-            <Date-picker type="date" :options="options3" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker type="date" :options="options3" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <Date-picker type="date" :options="options4" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker type="date" :options="options4" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -199,10 +199,10 @@ code.confirm = `
 <template>
     <Row>
         <Col span="12">
-            <Date-picker type="date" confirm placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker type="date" confirm placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <Date-picker type="daterange" confirm placement="bottom-end" placeholder="选择日期" style="width: 200px"></Date-picker>
+            <DatePicker type="daterange" confirm placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -215,7 +215,7 @@ code.confirm = `
 
 code.slot = `
 <template>
-    <Date-picker
+    <DatePicker
         :open="open"
         :value="value3"
         confirm
@@ -228,7 +228,7 @@ code.slot = `
             <template v-if="value3 === ''">选择日期</template>
             <template v-else>{{ value3 }}</template>
         </a>
-    </Date-picker>
+    </DatePicker>
 </template>
 <script>
     export default {
@@ -260,13 +260,13 @@ code.size = `
 <template>
     <Row>
         <Col span="8">
-            <Date-picker size="small" type="date" placeholder="选择日期"></Date-picker>
+            <DatePicker size="small" type="date" placeholder="选择日期"></DatePicker>
         </Col>
         <Col span="8">
-            <Date-picker type="date" placeholder="选择日期"></Date-picker>
+            <DatePicker type="date" placeholder="选择日期"></DatePicker>
         </Col>
         <Col span="8">
-            <Date-picker size="large" type="date" placeholder="选择日期"></Date-picker>
+            <DatePicker size="large" type="date" placeholder="选择日期"></DatePicker>
         </Col>
     </Row>
 </template>
