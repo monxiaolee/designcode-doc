@@ -864,6 +864,20 @@ const routers = [
         component: (resolve) => require(['./views/components/avatar-en.vue'], resolve)
     },
     {
+        path: '/components/color-picker',
+        meta: {
+            title: 'ColorPicker 颜色选择器'
+        },
+        component: (resolve) => require(['./views/components/color-picker.vue'], resolve)
+    },
+    {
+        path: '/components/color-picker-en',
+        meta: {
+            title: 'ColorPicker'
+        },
+        component: (resolve) => require(['./views/components/color-picker-en.vue'], resolve)
+    },
+    {
         path: '*',
         redirect: '/'
     }
