@@ -850,6 +850,20 @@ const routers = [
         component: (resolve) => require(['./views/components/spin-en.vue'], resolve)
     },
     {
+        path: '/components/avatar',
+        meta: {
+            title: 'Avatar 头像'
+        },
+        component: (resolve) => require(['./views/components/avatar.vue'], resolve)
+    },
+    {
+        path: '/components/avatar-en',
+        meta: {
+            title: 'Avatar'
+        },
+        component: (resolve) => require(['./views/components/avatar-en.vue'], resolve)
+    },
+    {
         path: '*',
         redirect: '/'
     }
