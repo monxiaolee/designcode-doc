@@ -98,7 +98,7 @@
                             <td>4.5</td>
                         </tr>
                         <tr>
-                            <td>key</td>
+                            <td>name</td>
                             <td>当前通知的唯一标识</td>
                             <td>String</td>
                             <td>自动</td>
@@ -117,7 +117,7 @@
                         <code>this.$Notice.config(options)</code>
                     </li>
                     <li>
-                        <code>this.$Notice.close(key)</code>
+                        <code>this.$Notice.close(name)</code>
                     </li>
                     <li>
                         <code>this.$Notice.destroy()</code>
