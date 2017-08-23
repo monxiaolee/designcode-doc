@@ -86,7 +86,7 @@
                     </Form>
                 </div>
                 <div slot="desc">
-                    <p>In <code>Form</code>, each form consists of <code>FormItem</code>s. Available Control: Input, Radio, Checkbox, Switch, Select, Slider, DatePicker, TimePicker, Cascader, Transfer, InputNumber, Rate, Upload.</p>
+                    <p>In <code>Form</code>, each form consists of <code>FormItem</code>s. Available Control: Input, Radio, Checkbox, Switch, Select, Slider, DatePicker, TimePicker, Cascader, Transfer, InputNumber, Rate, Upload, AutoComplete, ColorPicker.</p>
                     <p>Setting <code>label</code> prop to <code>FormItem</code> can display the label of the form. <code>label-width</code> needs to be set on Form.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.item }}</i-code>

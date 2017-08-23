@@ -86,7 +86,7 @@
                     </Form>
                 </div>
                 <div slot="desc">
-                    <p>在 <code>Form</code> 内，每个表单域由 <code>FormItem</code> 组成，可包含的控件有：Input、Radio、Checkbox、Switch、Select、Slider、DatePicker、TimePicker、Cascader、Transfer、InputNumber、Rate、Upload。</p>
+                    <p>在 <code>Form</code> 内，每个表单域由 <code>FormItem</code> 组成，可包含的控件有：Input、Radio、Checkbox、Switch、Select、Slider、DatePicker、TimePicker、Cascader、Transfer、InputNumber、Rate、Upload、AutoComplete、ColorPicker。</p>
                     <p>给 <code>FormItem</code> 设置属性 <code>label</code> 可以显示表单域的标签，需要给 Form 设置 <code>label-width</code>。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.item }}</i-code>
