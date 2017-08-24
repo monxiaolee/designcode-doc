@@ -139,6 +139,12 @@ const list = {
                     icon: 'ios-arrow-down'
                 },
                 {
+                    title: 'AutoComplete 自动完成',
+                    path: '/components/auto-complete',
+                    img: 'auto-complete.png',
+                    icon: 'ios-list-outline'
+                },
+                {
                     title: 'Slider 滑块',
                     path: '/components/slider',
                     img: 'slider.png',

@@ -878,6 +878,20 @@ const routers = [
         component: (resolve) => require(['./views/components/color-picker-en.vue'], resolve)
     },
     {
+        path: '/components/auto-complete',
+        meta: {
+            title: 'AutoComplete 自动完成'
+        },
+        component: (resolve) => require(['./views/components/auto-complete.vue'], resolve)
+    },
+    {
+        path: '/components/auto-complete-en',
+        meta: {
+            title: 'AutoComplete'
+        },
+        component: (resolve) => require(['./views/components/auto-complete-en.vue'], resolve)
+    },
+    {
         path: '*',
         redirect: '/'
     }
