@@ -259,7 +259,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>选择框大小，可选值为<code>large</code>和<code>small</code>或者不填</td>
+                            <td>选择框大小，可选值为<code>large</code>、<code>small</code>、<code>default</code>或者不填</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

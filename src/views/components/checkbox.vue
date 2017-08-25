@@ -150,6 +150,12 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>size</td>
+                            <td>多选框的尺寸，可选值为 <code>large</code>、<code>small</code>、<code>default</code> 或者不设置</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>true-value</td>
                             <td>选中时的值，当使用类似 1 和 0 来判断是否选中时会很有用</td>
                             <td>String, Number, Boolean</td>
@@ -196,6 +202,12 @@
                             <td>指定选中项目的集合，可以使用 v-model 双向绑定数据</td>
                             <td>Array</td>
                             <td>[]</td>
+                        </tr>
+                        <tr>
+                            <td>size</td>
+                            <td>多选框组的尺寸，可选值为 <code>large</code>、<code>small</code>、<code>default</code> 或者不设置</td>
+                            <td>String</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>

@@ -254,13 +254,13 @@
                         </tr>
                         <tr>
                             <td>label</td>
-                            <td>use for init in the remote mode. It should set 手动 because  it can't get the option label by the value.</td>
+                            <td>use for init in the remote mode, you should set it because  it can't get the option label by the value.</td>
                             <td>String | Number | Array</td>
                             <td>empty</td>
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>The size of select. The value could be <code>large</code>和<code>small</code>or none.</td>
+                            <td>The size of select. The value could be <code>large</code>, <code>small</code>, <code>default</code>or none.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

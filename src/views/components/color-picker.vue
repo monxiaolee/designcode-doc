@@ -111,6 +111,12 @@
                             <td>String</td>
                             <td>开启 alpha 时为 rgb，其它为 hex</td>
                         </tr>
+                        <tr>
+                            <td>size</td>
+                            <td>尺寸，可选值为<code>large</code>、<code>small</code>、<code>default</code>或者不设置</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="ColorPicker events" h3></Anchor>

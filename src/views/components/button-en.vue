@@ -246,7 +246,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>Button size，options include <code>large</code> and <code>small</code>,  optional</td>
+                            <td>Button size，options include <code>large</code>, <code>small</code>, <code>default</code> optional</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
@@ -301,7 +301,7 @@
                     <tbody>
                         <tr>
                             <td>size</td>
-                            <td>ButtonGroup size, options include <code>large</code> and <code>small</code>, optional</td>
+                            <td>ButtonGroup size, options include <code>large</code>, <code>small</code>, <code>default</code> optional</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

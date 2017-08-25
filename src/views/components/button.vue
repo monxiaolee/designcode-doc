@@ -246,7 +246,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>按钮大小，可选值为<code>large</code>和<code>small</code>或者不设置</td>
+                            <td>按钮大小，可选值为<code>large</code>、<code>small</code>、<code>default</code>或者不设置</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
@@ -301,7 +301,7 @@
                     <tbody>
                         <tr>
                             <td>size</td>
-                            <td>按钮组合大小，可选值为<code>large</code>和<code>small</code>或者不设置</td>
+                            <td>按钮组合大小，可选值为<code>large</code>、<code>small</code>、<code>default</code>或者不设置</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

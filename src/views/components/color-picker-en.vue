@@ -111,6 +111,12 @@
                             <td>String</td>
                             <td>When opening alpha is rgb, the other is hex</td>
                         </tr>
+                        <tr>
+                            <td>size</td>
+                            <td>The size of the component. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave blank.</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="ColorPicker events" h3></Anchor>

@@ -155,7 +155,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>The size of Input. Optional value: <code>large</code>, <code>small</code> or leave empty.</td>
+                            <td>The size of Input. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave empty.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

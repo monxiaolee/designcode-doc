@@ -253,7 +253,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>The size of the component. Optional value: <code>large</code> and <code>small</code> or leave blank.</td>
+                            <td>The size of the component. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave blank.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

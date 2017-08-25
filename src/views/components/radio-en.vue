@@ -177,6 +177,12 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>size</td>
+                            <td>The size of Radio. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave empty.</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>true-value</td>
                             <td>Value of the checkbox if it's checked.</td>
                             <td>String, Number, Boolean</td>
@@ -232,7 +238,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>The size of the button. It only works in button type. Optional value: <code>large</code>, <code>small</code> or leave empty.</td>
+                            <td>The size of the RadioGroup. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave empty.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

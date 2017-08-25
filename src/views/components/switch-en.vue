@@ -86,7 +86,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>Set the size to <code>large</code> or <code>small</code> to use large/small size of switch, by default the switch's size is medium. It is recommended that if you use 2 characters, set the switch size to large.</td>
+                            <td>Set the size to <code>large</code>, <code>small</code> or <code>default</code> to use large/small size of switch, by default the switch's size is medium. It is recommended that if you use 2 characters, set the switch size to large.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

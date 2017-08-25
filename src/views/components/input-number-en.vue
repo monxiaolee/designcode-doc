@@ -83,7 +83,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>Size of InputNumber. Optional value: <code>large</code> or <code>small</code> or leave blank.</td>
+                            <td>Size of InputNumber. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave blank.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

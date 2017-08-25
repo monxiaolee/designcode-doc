@@ -81,7 +81,7 @@
                         </tr>
                         <tr>
                             <td>size</td>
-                            <td>开关的尺寸，可选值为<code>large</code>、<code>small</code>或者不写。建议开关如果使用了2个汉字的文字，使用 large。</td>
+                            <td>开关的尺寸，可选值为<code>large</code>、<code>small</code>、<code>default</code>或者不写。建议开关如果使用了2个汉字的文字，使用 large。</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
