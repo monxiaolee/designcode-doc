@@ -24,6 +24,26 @@
         <h1>更新日志</h1>
         <article class="doc-update">
             <Timeline pending>
+                <Timeline-item color="red">
+                    <Icon type="ios-heart" size="18" slot="dot"></Icon>
+                    <Anchor title="2.2.0 Shadowmatic" h2></Anchor>
+                    <p>
+                        <code>2017-08-28</code>
+                    </p>
+                    <ul>
+                        <li>新增头像组件 Avatar。<router-link to="/components/avatar">查看</router-link></li>
+                        <li>新增颜色选择器组件 ColorPicker。<router-link to="/components/color-picker">查看</router-link></li>
+                        <li>新增自动完成组件 AutoComplete。<router-link to="/components/auto-complete">查看</router-link></li>
+                        <li>Form 支持对 ColorPicker 和 AutoComplete 组件的验证。</li>
+                        <li>Radio 和 RadioGroup 新增 size 属性。</li>
+                        <li>Checkbox 和 CheckboxGroup 新增 size 属性。</li>
+                        <li>具有 size 属性的组件都增加了 default。</li>
+                        <li>修复 Select 在 filterable 模式下，开启 disabled 后仍然能够输入的bug。<issue id="1547"></issue></li>
+                        <li>修复 Poptip 在 transfer 模式下，使用 confirm 样式错乱的bug。<issue id="1612"></issue></li>
+                        <li>修复 InputNumber 的一个问题。<issue id="1654"></issue></li>
+                        <li>优化 Grid 组件对 gutter 的设置。<issue id="1661"></issue></li>
+                    </ul>
+                </Timeline-item>
                 <Timeline-item>
                     <Anchor title="2.1.0 Alto's Adventure" h2></Anchor>
                     <p>

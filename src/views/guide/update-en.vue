@@ -24,6 +24,26 @@
         <h1>Change Log</h1>
         <article class="doc-update">
             <Timeline pending>
+                <Timeline-item color="red">
+                    <Icon type="ios-heart" size="18" slot="dot"></Icon>
+                    <Anchor title="2.2.0 Shadowmatic" h2></Anchor>
+                    <p>
+                        <code>2017-08-28</code>
+                    </p>
+                    <ul>
+                        <li>Add Avatar component. <router-link to="/components/avatar-en">View</router-link></li>
+                        <li>Add ColorPicker component. <router-link to="/components/color-picker-en">View</router-link></li>
+                        <li>Add AutoComplete component.<router-link to="/components/auto-complete-en">View</router-link></li>
+                        <li>Form supports validation of ColorPicker and AutoComplete components.</li>
+                        <li>Radio and RadioGroup add <code>size</code> property.</li>
+                        <li>Checkbox and CheckboxGroup add <code>size</code> property.</li>
+                        <li>Components with size property add <code>default</code> value.</li>
+                        <li>Fix the bug that the Select can still input when opening the disabled in the filterable mode. <issue id="1547"></issue></li>
+                        <li>Fix Poptip in the transfer mode, using the confirm style bug. <issue id="1612"></issue></li>
+                        <li>Fix a problem with InputNumber. <issue id="1654"></issue></li>
+                        <li>Optimize the Grid component for gutter settings. <issue id="1661"></issue></li>
+                    </ul>
+                </Timeline-item>
                 <Timeline-item>
                     <Anchor title="2.1.0 Alto's Adventure" h2></Anchor>
                     <p>
