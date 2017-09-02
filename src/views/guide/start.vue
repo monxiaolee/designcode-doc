@@ -54,6 +54,7 @@
             <Anchor title="组件使用规范" h2></Anchor>
             <p>使用<code>:prop</code>传递数据格式为 数字、布尔值或函数时，必须带<code>:</code>(兼容String除外，具体看组件文档)，比如：</p>
             <i-code lang="html" bg>{{ code.standard.prop }}</i-code>
+            <p>在非 template/render 模式下（例如使用 CDN 引用时），组件名要分隔，例如 <code>DatePicker</code> 必须要写成 <code>date-picker</code>。</p>
             <p>以下组件，在非 template/render 模式下，需要加前缀 <code>i-</code>：</p>
             <ul>
                 <li>Button: <code>i-button</code></li>

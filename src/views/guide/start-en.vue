@@ -46,6 +46,7 @@
             <Anchor title="How to pass value to components" h2></Anchor>
             <p>Many components require adding <code>:</code> before properties for passing integer and boolean:</p>
             <i-code lang="html" bg>{{ code.standard.prop }}</i-code>
+            <p>If not in template/render mode(such as using CDN), the component name must be separated, such as <code>DatePicker</code> should be <code>date-picker</code>. </p>
             <p>The following components, if not in template/render mode, you need to add a prefix <code>i-</code>:</p>
             <ul>
                 <li>Button: <code>i-button</code></li>
