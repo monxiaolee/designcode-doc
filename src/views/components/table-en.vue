@@ -501,6 +501,12 @@
                         </thead>
                         <tbody>
                         <tr>
+                            <td>type</td>
+                            <td>Type of column, Optional value: <code>index</code>, <code>selection</code>, <code>expand</code>, <code>html</code></td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>title</td>
                             <td>Column title.</td>
                             <td>String</td>

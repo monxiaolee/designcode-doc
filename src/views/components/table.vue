@@ -503,6 +503,12 @@
                         </thead>
                         <tbody>
                         <tr>
+                            <td>type</td>
+                            <td>列类型，可选值为 index、selection、expand、html</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>title</td>
                             <td>列头显示文字</td>
                             <td>String</td>

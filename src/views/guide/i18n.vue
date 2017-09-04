@@ -26,6 +26,7 @@
                 <li>韩语（ko-KR）</li>
                 <li>越南语（vi-VN）</li>
                 <li>瑞典语（sv-SE）</li>
+                <li>印尼语（id-ID）</li>
             </ul>
             <p>欢迎贡献代码，以支持更多语言：<a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">查看</a></p>
         </article>

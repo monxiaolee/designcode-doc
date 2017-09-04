@@ -160,7 +160,7 @@
                                 remote
                                 :remote-method="remoteMethod1"
                                 :loading="loading1">
-                                <Option v-for="option in options1" :value="option.value" :key="option.value">{{option.label}}</Option>
+                                <Option v-for="(option, index) in options1" :value="option.value" :key="index">{{option.label}}</Option>
                             </Select>
                         </Col>
                         <Col span="12">
@@ -171,7 +171,7 @@
                             remote
                             :remote-method="remoteMethod2"
                             :loading="loading2">
-                            <Option v-for="option in options2" :value="option.value" :key="option.value">{{option.label}}</Option>
+                            <Option v-for="(option, index) in options2" :value="option.value" :key="index">{{option.label}}</Option>
                         </Select>
                         </Col>
                     </Row>

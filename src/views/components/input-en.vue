@@ -213,6 +213,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>autocomplete</td>
+                            <td>Native autocomplete function, Optional value: off and on</td>
+                            <td>String</td>
+                            <td>off</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Input events" h3></Anchor>

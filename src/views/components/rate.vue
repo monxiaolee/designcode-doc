@@ -30,7 +30,7 @@
                             <Rate show-text v-model="valueText"></Rate>
                         </Col>
                         <Col span="12">
-                            <Rate show-text v-model="valueCustomText">
+                            <Rate show-text allow-half v-model="valueCustomText">
                                 <span style="color: #f5a623">{{ valueCustomText }}</span>
                             </Rate>
                         </Col>
