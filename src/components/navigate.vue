@@ -34,7 +34,7 @@
                     <i class="ivu-icon" :class="'ivu-icon-' + component.icon"></i>
                     <template v-if="lang === 'zh-CN'">
                         {{ component.title.split(' ')[0] }}
-                        <span>{{ component.title.split(' ')[1] }}</span>
+                        <span class="navigate-group-span">{{ component.title.split(' ')[1] }}</span>
                     </template>
                     <template v-else>{{ component.title.split(' ')[0] }}</template>
                 </Menu-item>

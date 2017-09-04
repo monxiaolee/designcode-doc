@@ -24,6 +24,33 @@
         <h1>更新日志</h1>
         <article class="doc-update">
             <Timeline pending>
+                <Timeline-item>
+                    <Anchor title="2.3.0 Lumino City" h2></Anchor>
+                    <p>
+                        <code>2017-09-05</code>
+                    </p>
+                    <ul>
+                        <li>Switch 新增 true-value 和 false-value 属性。<issue id="1399"></issue></li>
+                        <li>Input 新增 autocomplete 属性。</li>
+                        <li>Table 的 column 新增 type: html，避免 XSS。<issue id="993"></issue></li>
+                        <li>Table 列为可展开时，支持设置 title 或 renderHeader。</li>
+                        <li>提高 Select 渲染性能。<issue id="1777"></issue></li>
+                        <li>修复 Table 在 columns 为空时，报错的bug。<issue id="1736"></issue></li>
+                        <li>修复 Table 在多选模式下，将所有列都禁用时，状态标记为全部选中的bug。<issue id="1751"></issue></li>
+                        <li>修复 Select 选择 Option 时，将 slot 内的标签一同携带的bug。<issue id="1690"></issue></li>
+                        <li>修复 Select 在 remote 模式下，手动清空数据后没有清空 label 的bug。<issue id="1743"></issue></li>
+                        <li>修复 Rate 半选状态初始化不正确的bug。<issue id="1761"></issue></li>
+                        <li>修复 Date 在 IE11 下无法显示初始值的bug。<issue id="1422"></issue></li>
+                        <li>修复 Date 在选择时间模式下，清空再次选择后时间错误的bug。<issue id="1223"></issue></li>
+                        <li>修复 Date 无默认值时，有时选择的时间提前一天的bug。<issue id="1734"></issue></li>
+                        <li>修复 Tabs 在 IE11 下，边线宽度设置不正确的bug。<issue id="695"></issue></li>
+                        <li>修复 Tooltip 在 always 模式下，错位的bug。<issue id="1568"></issue></li>
+                        <li>修复 Slider 双击滑块时，滑块跳动的bug。<issue id="1354"></issue></li>
+                        <li>修复 Cascader 在 transfer 模式下，部分样式错误的bug。<issue id="1728"></issue></li>
+                        <li>新增印尼语。<mention id="IndraGunawan"></mention></li>
+                        <blockquote>特别感谢 <mention id="SergioCrisostomo"></mention></blockquote>
+                    </ul>
+                </Timeline-item>
                 <Timeline-item color="red">
                     <Icon type="ios-heart" size="18" slot="dot"></Icon>
                     <Anchor title="2.2.0 Shadowmatic" h2></Anchor>

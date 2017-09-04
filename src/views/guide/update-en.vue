@@ -24,6 +24,33 @@
         <h1>Change Log</h1>
         <article class="doc-update">
             <Timeline pending>
+                <Timeline-item>
+                    <Anchor title="2.3.0 Lumino City" h2></Anchor>
+                    <p>
+                        <code>2017-09-05</code>
+                    </p>
+                    <ul>
+                        <li>Switch add new property <code>true-value</code> and <code>false-value</code>. <issue id="1399"></issue></li>
+                        <li>Input add new property <code>autocomplete</code>.</li>
+                        <li>Table column add <code>type: html</code> to avoid XSS. <issue id="993"></issue></li>
+                        <li>When the Table column is expandable, it can set the title or renderHeader.</li>
+                        <li>Improve Select rendering performance. <issue id="1777"></issue></li>
+                        <li>Fix the bug when Table columns are empty. <issue id="1736"></issue></li>
+                        <li>Fix Table bug in selection mode when all columns are disabled, the header will be checked. <issue id="1751"></issue></li>
+                        <li>Fix Select bug that select an Option, the html tag will be included. <issue id="1690"></issue></li>
+                        <li>Fix Select bug in remote mode, when clear data, the label will not be clear. <issue id="1743"></issue></li>
+                        <li>Fix Rate bug in allow-half mode. <issue id="1761"></issue></li>
+                        <li>Fix Date bug that unable to display the initial value in IE 11. <issue id="1422"></issue></li>
+                        <li>Fix Date bug in <code>datetime</code> type, clear date and select again, the time is wrong. <issue id="1223"></issue></li>
+                        <li>Fix Date bug without default value, sometimes choose the time one day ahead. <issue id="1734"></issue></li>
+                        <li>Fix Tabs bug that bottom border is not correct in IE 11. <issue id="695"></issue></li>
+                        <li>Fix Tooltip bug in always mode, the position is wrong. <issue id="1568"></issue></li>
+                        <li>Fix Slider bug when dbclick, it will jump to the left. <issue id="1354"></issue></li>
+                        <li>Fix Cascader bug in transfer mode, the style is wrong. <issue id="1728"></issue></li>
+                        <li>Add Indonesian. <mention id="IndraGunawan"></mention></li>
+                        <blockquote>Special thanks to <mention id="SergioCrisostomo"></mention></blockquote>
+                    </ul>
+                </Timeline-item>
                 <Timeline-item color="red">
                     <Icon type="ios-heart" size="18" slot="dot"></Icon>
                     <Anchor title="2.2.0 Shadowmatic" h2></Anchor>
