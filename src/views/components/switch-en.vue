@@ -8,10 +8,11 @@
                 <li>If you need to represent the switching between two states or on-off state.</li>
                 <li>The difference between Switch and Checkbox is that Switch will trigger a state change directly when you toggle it, while Checkbox is generally used for state marking, which should work in conjunction with submit operation.</li>
             </ul>
+            <blockquote style="color: #ed3f14">Warning: If you don't use <router-link to="iview-loader-en">iview-loader</router-link>, you have to use <code>i-switch</code> tag.</blockquote>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
-                    <i-switch v-model="switch1" @on-change="change"></i-switch>
+                    <Switch v-model="switch1" @on-change="change"></Switch>
                 </div>
                 <div slot="desc">
                     <p>The most basic usage.</p>
@@ -20,9 +21,9 @@
             </Demo>
             <Demo title="Size">
                 <div slot="demo">
-                    <i-switch size="large"></i-switch>
-                    <i-switch></i-switch>
-                    <i-switch size="small"></i-switch>
+                    <Switch size="large"></Switch>
+                    <Switch></Switch>
+                    <Switch size="small"></Switch>
                 </div>
                 <div slot="desc">
                     <p>Set the size to <code>large</code> or <code>small</code> to use large/small size of switch, by default the switch's size is medium.</p>
@@ -31,23 +32,23 @@
             </Demo>
             <Demo title="Text & icon">
                 <div slot="demo">
-                    <i-switch>
+                    <Switch>
                         <span slot="open">开</span>
                         <span slot="close">关</span>
-                    </i-switch>
-                    <i-switch>
+                    </Switch>
+                    <Switch>
                         <Icon type="android-done" slot="open"></Icon>
                         <Icon type="android-close" slot="close"></Icon>
-                    </i-switch>
+                    </Switch>
                     <br><br>
-                    <i-switch size="large">
+                    <Switch size="large">
                         <span slot="open">开启</span>
                         <span slot="close">关闭</span>
-                    </i-switch>
-                    <i-switch size="large">
+                    </Switch>
+                    <Switch size="large">
                         <span slot="open">ON</span>
                         <span slot="close">OFF</span>
-                    </i-switch>
+                    </Switch>
                 </div>
                 <div slot="desc">
                     <p>With text and icon.</p>
@@ -57,7 +58,7 @@
             </Demo>
             <Demo title="Disabled">
                 <div slot="demo">
-                    <i-switch :disabled="disabled"></i-switch>
+                    <Switch :disabled="disabled"></Switch>
                     <Button type="primary" @click="disabled = !disabled">Toggle Disabled</Button>
                 </div>
                 <div slot="desc">

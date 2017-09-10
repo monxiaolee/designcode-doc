@@ -42,26 +42,27 @@
                 <li>显示某项任务进度的百分比；</li>
                 <li>统计某些指标的占比。</li>
             </ul>
+            <blockquote style="color: #ed3f14">注意：没有使用 <router-link to="iview-loader">iview-loader</router-link> 时，必须使用 <code>i-circle</code> 标签。</blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
                     <Row>
                         <Col span="8">
-                            <i-circle :percent="80">
+                            <Circle :percent="80">
                                 <span class="demo-circle-inner" style="font-size:24px">80%</span>
-                            </i-circle>
+                            </Circle>
                         </Col>
                         <Col span="8">
-                            <i-circle :percent="100" stroke-color="#5cb85c">
+                            <Circle :percent="100" stroke-color="#5cb85c">
                                 <Icon type="ios-checkmark-empty" size="60" style="color:#5cb85c"></Icon>
-                            </i-circle>
+                            </Circle>
                         </Col>
                         <Col span="8">
-                            <i-circle :percent="35" stroke-color="#ff5500">
+                            <Circle :percent="35" stroke-color="#ff5500">
                         <span class="demo-circle-inner">
                             <Icon type="ios-close-empty" size="50" style="color:#ff5500"></Icon>
                         </span>
-                            </i-circle>
+                            </Circle>
                         </Col>
                     </Row>
                 </div>
@@ -72,10 +73,10 @@
             </Demo>
             <Demo title="配合外部组件使用">
                 <div slot="demo">
-                    <i-circle :percent="percent" :stroke-color="color">
+                    <Circle :percent="percent" :stroke-color="color">
                         <Icon v-if="percent == 100" type="ios-checkmark-empty" size="60" style="color:#5cb85c"></Icon>
                         <span v-else style="font-size:24px">{{ percent }}%</span>
-                    </i-circle>
+                    </Circle>
                     <ButtonGroup size="large">
                         <Button icon="ios-plus-empty" @click="add"></Button>
                         <Button icon="ios-minus-empty" @click="minus"></Button>
@@ -88,7 +89,7 @@
             </Demo>
             <Demo title="自定义更多样式">
                 <div slot="demo">
-                    <i-circle
+                    <Circle
                         :size="250"
                         :trail-width="4"
                         :stroke-width="5"
@@ -103,7 +104,7 @@
                                 <i>75%</i>
                             </span>
                         </div>
-                    </i-circle>
+                    </Circle>
                 </div>
                 <div slot="desc">
                     <p>通过自定义<code>slot</code>和丰富的配置，可以组合出很多统计效果。</p>

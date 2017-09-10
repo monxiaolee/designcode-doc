@@ -4,10 +4,11 @@
             <h1>Switch 开关</h1>
             <Anchor title="概述" h2></Anchor>
             <p>在两种状态间切换时用到的开关选择器。</p>
+            <blockquote style="color: #ed3f14">注意：没有使用 <router-link to="iview-loader">iview-loader</router-link> 时，必须使用 <code>i-switch</code> 标签。</blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基本">
                 <div slot="demo">
-                    <i-switch v-model="switch1" @on-change="change"></i-switch>
+                    <Switch v-model="switch1" @on-change="change"></Switch>
                 </div>
                 <div slot="desc">
                     <p>基本用法，状态切换时会触发事件。</p>
@@ -16,9 +17,9 @@
             </Demo>
             <Demo title="尺寸">
                 <div slot="demo">
-                    <i-switch size="large"></i-switch>
-                    <i-switch></i-switch>
-                    <i-switch size="small"></i-switch>
+                    <Switch size="large"></Switch>
+                    <Switch></Switch>
+                    <Switch size="small"></Switch>
                 </div>
                 <div slot="desc">
                     <p>设置<code>size</code>为 <code>large</code> 或 <code>small</code> 使用大号和小号的开关。</p>
@@ -27,23 +28,23 @@
             </Demo>
             <Demo title="文字和图标">
                 <div slot="demo">
-                    <i-switch>
+                    <Switch>
                         <span slot="open">开</span>
                         <span slot="close">关</span>
-                    </i-switch>
-                    <i-switch>
+                    </Switch>
+                    <Switch>
                         <Icon type="android-done" slot="open"></Icon>
                         <Icon type="android-close" slot="close"></Icon>
-                    </i-switch>
+                    </Switch>
                     <br><br>
-                    <i-switch size="large">
+                    <Switch size="large">
                         <span slot="open">开启</span>
                         <span slot="close">关闭</span>
-                    </i-switch>
-                    <i-switch size="large">
+                    </Switch>
+                    <Switch size="large">
                         <span slot="open">ON</span>
                         <span slot="close">OFF</span>
-                    </i-switch>
+                    </Switch>
                 </div>
                 <div slot="desc">
                     <p>自定义内容，建议如果使用2个汉字，将开关尺寸设置为 large。</p>
@@ -52,7 +53,7 @@
             </Demo>
             <Demo title="不可用">
                 <div slot="demo">
-                    <i-switch :disabled="disabled"></i-switch>
+                    <Switch :disabled="disabled"></Switch>
                     <Button type="primary" @click="disabled = !disabled">Toggle Disabled</Button>
                 </div>
                 <div slot="desc">
