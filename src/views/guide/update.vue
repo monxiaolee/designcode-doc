@@ -30,6 +30,7 @@
                         <code>2017-09-10</code>
                     </p>
                     <ul>
+                        <li>发布 <router-link to="/docs/guide/iview-loader">iview-loader</router-link>。</li>
                         <li>修复 Switch 使用 true-value 和 false-value 时，设置 slot 无法正确显示的bug。<issue id="1797"></issue></li>
                         <li>修复 Select 共用同一份 Option 数据时，仅第一个可以选择的bug。<issue id="1807"></issue></li>
                     </ul>

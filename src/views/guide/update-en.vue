@@ -30,6 +30,7 @@
                         <code>2017-09-10</code>
                     </p>
                     <ul>
+                        <li>Publish <router-link to="/docs/guide/iview-loader-en">iview-loader</router-link> .</li>
                         <li>Fix the bug that the slot cannot display correctly when the Switch uses <code>true-value</code> and <code>false-value</code>. <issue id="1797"></issue></li>
                         <li>Fix the bug that Select use the same Option data, only the first one can be selected. <issue id="1807"></issue></li>
                     </ul>

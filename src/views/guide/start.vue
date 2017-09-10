@@ -67,7 +67,7 @@
                 <li>Option: <code>i-option</code></li>
                 <li>Progress: <code>i-progress</code></li>
             </ul>
-            <p>以下组件，在所有模式下，必须加前缀 <code>i-</code>：</p>
+            <p>以下组件，在所有模式下，必须加前缀 <code>i-</code>，除非使用 <router-link to="/docs/guide/iview-loader">iview-loader</router-link>：</p>
             <ul>
                 <li>Switch: <code>i-switch</code></li>
                 <li>Circle: <code>i-circle</code></li>
