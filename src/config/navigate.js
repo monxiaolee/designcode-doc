@@ -45,6 +45,11 @@ const list = {
             path: '/docs/guide/theme'
         },
         {
+            title: 'iView Loader',
+            titleEn: 'iView Loader',
+            path: '/docs/guide/iview-loader'
+        },
+        {
             title: '概览',
             titleEn: 'Overview',
             path: '/overview'

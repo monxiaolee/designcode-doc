@@ -192,6 +192,8 @@
                     '/docs/guide/i18n-en',
                     '/docs/guide/theme',
                     '/docs/guide/theme-en',
+                    '/docs/guide/iview-loader',
+                    '/docs/guide/iview-loader-en',
                     '/overview',
                     '/overview-en',
                     '/docs/guide/update',

@@ -125,6 +125,7 @@
                     '/docs/guide/start',
                     '/docs/guide/i18n',
                     '/docs/guide/theme',
+                    '/docs/guide/iview-loader',
                     '/overview',
                     '/docs/guide/update'
                 ];

@@ -8,7 +8,7 @@
                 <li>If you need to represent the switching between two states or on-off state.</li>
                 <li>The difference between Switch and Checkbox is that Switch will trigger a state change directly when you toggle it, while Checkbox is generally used for state marking, which should work in conjunction with submit operation.</li>
             </ul>
-            <blockquote style="color: #ed3f14">Warning: If you don't use <router-link to="iview-loader-en">iview-loader</router-link>, you have to use <code>i-switch</code> tag.</blockquote>
+            <blockquote style="color: #ed3f14">Warning: If you don't use <router-link to="/docs/guide/iview-loader-en">iview-loader</router-link>, you have to use <code>i-switch</code> tag.</blockquote>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">

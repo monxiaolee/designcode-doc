@@ -192,6 +192,20 @@ const routers = [
         component: (resolve) => require(['./views/guide/theme-en.vue'], resolve)
     },
     {
+        path: '/docs/guide/iview-loader',
+        meta: {
+            title: 'iView Loader'
+        },
+        component: (resolve) => require(['./views/guide/iview-loader.vue'], resolve)
+    },
+    {
+        path: '/docs/guide/iview-loader-en',
+        meta: {
+            title: 'iView Loader'
+        },
+        component: (resolve) => require(['./views/guide/iview-loader-en.vue'], resolve)
+    },
+    {
         path: '/docs/guide/update',
         meta: {
             title: '更新日志'

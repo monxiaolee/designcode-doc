@@ -25,6 +25,16 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.3.1 & 2.3.2" h2></Anchor>
+                    <p>
+                        <code>2017-09-10</code>
+                    </p>
+                    <ul>
+                        <li>Fix the bug that the slot cannot display correctly when the Switch uses <code>true-value</code> and <code>false-value</code>. <issue id="1797"></issue></li>
+                        <li>Fix the bug that Select use the same Option data, only the first one can be selected. <issue id="1807"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.3.0 Lumino City" h2></Anchor>
                     <p>
                         <code>2017-09-05</code>

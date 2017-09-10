@@ -42,7 +42,7 @@
                 <li>显示某项任务进度的百分比；</li>
                 <li>统计某些指标的占比。</li>
             </ul>
-            <blockquote style="color: #ed3f14">注意：没有使用 <router-link to="iview-loader">iview-loader</router-link> 时，必须使用 <code>i-circle</code> 标签。</blockquote>
+            <blockquote style="color: #ed3f14">注意：没有使用 <router-link to="/docs/guide/iview-loader">iview-loader</router-link> 时，必须使用 <code>i-circle</code> 标签。</blockquote>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
