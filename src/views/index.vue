@@ -122,7 +122,7 @@
                     container.appendChild( renderer.domElement );
 
                     document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-                    document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+//                    document.addEventListener( 'touchmove', onDocumentTouchMove, false );
                 }
 
                 function onDocumentMouseMove( event ) {
