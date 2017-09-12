@@ -578,7 +578,7 @@
                         <tr>
                             <td>sortType</td>
                             <td>设置初始化排序。值为 asc 和 desc</td>
-                            <td>Function</td>
+                            <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>

@@ -576,7 +576,7 @@
                         <tr>
                             <td>sortType</td>
                             <td>Set the initialization sort. Optional value: asc or desc.</td>
-                            <td>Function</td>
+                            <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
