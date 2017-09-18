@@ -106,13 +106,15 @@
                 </Demo>
                 <Demo title="Single Choice" vertical hide-code>
                     <div slot="demo">
-                        <Table highlight-row :columns="columns3" :data="data1"></Table>
+                        <Table highlight-row ref="currentRowTable" :columns="columns3" :data="data1"></Table>
+                        <Button @click="handleClearCurrentRow">Clear</Button>
                     </div>
                     <div slot="desc">
                         <p>Enable row selecting by setting <code>highlight-row</code> prop.</p>
                         <p>When a row is selected, <code>@on-current-change</code> is emitted. The event return two values: <code>currentRow</code>, <code>oldCurrentRow</code> (current selected row data, previous selected row data). You can customize operation by controlling the callback function.</p>
                         <p>Add an object with <code>type: 'index'</code> in <code>columns</code> can apply a index column starts with 1.</p>
                         <p>Set <code>_highlight: true</code> key to data can make the item selected by default.</p>
+                        <p>Call the <code>clearCurrentRow</code> method to clear the highlighted item.</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.highlight }}</i-code>
                 </Demo>
@@ -485,6 +487,11 @@
                                 </ul>
                                 Notice: columns and data should be declared simultaneously. If are declared, only selected data will be exported.
                             </td>
+                        </tr>
+                        <tr>
+                            <td>clearCurrentRow</td>
+                            <td>Clear the highlighted item, it is available only when the <code>highlight-row</code> is open.</td>
+                            <td>None</td>
                         </tr>
                         </tbody>
                     </table>
@@ -1955,6 +1962,9 @@
                         data: this.data7.filter((data, index) => index < 4)
                     });
                 }
+            },
+            handleClearCurrentRow () {
+                this.$refs.currentRowTable.clearCurrentRow();
             }
         },
         mounted () {

@@ -595,7 +595,10 @@ code.fixedAll = `
 
 code.highlight = `
 <template>
-    <Table highlight-row :columns="columns3" :data="data1"></Table>
+    <div>
+        <Table highlight-row ref="currentRowTable" :columns="columns3" :data="data1"></Table>
+        <Button @click="handleClearCurrentRow">Clear</Button>
+    </div>
 </template>
 <script>
     export default {
@@ -642,6 +645,11 @@ code.highlight = `
                         address: '深圳市南山区深南大道'
                     }
                 ]
+            }
+        },
+        methods: {
+            handleClearCurrentRow () {
+                this.$refs.currentRowTable.clearCurrentRow();
             }
         }
     }

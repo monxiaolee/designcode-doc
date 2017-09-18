@@ -106,13 +106,15 @@
                 </Demo>
                 <Demo title="单选" vertical hide-code>
                     <div slot="demo">
-                        <Table highlight-row :columns="columns3" :data="data1"></Table>
+                        <Table highlight-row ref="currentRowTable" :columns="columns3" :data="data1"></Table>
+                        <Button @click="handleClearCurrentRow">清除单选</Button>
                     </div>
                     <div slot="desc">
                         <p>通过设置属性 <code>highlight-row</code>，可以选中某一行。</p>
                         <p>当选择时，触发事件 <code>@on-current-change</code>，可以自定义操作，事件返回两个值 <code>currentRow</code> 和 <code>oldCurrentRow</code>，分别为当前行的数据和上一次选择的数据。</p>
                         <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'index'</code>，可以自动显示一个从 1 开始的索引列。</p>
                         <p>给 data 项设置特殊 key <code>_highlight: true</code> 可以默认选中当前项。</p>
+                        <p>调用 <code>clearCurrentRow</code> 方法可以手动清除选中项。</p>
                     </div>
                     <i-code lang="html" slot="code">{{ code.highlight }}</i-code>
                 </Demo>
@@ -487,6 +489,11 @@
                                 </ul>
                                 说明：columns 和 data 需同时声明，声明后将导出指定的数据，建议列数据有自定义render时，可以根据需求自定义导出内容
                             </td>
+                        </tr>
+                        <tr>
+                            <td>clearCurrentRow</td>
+                            <td>清除高亮项，仅在开启 <code>highlight-row</code> 时可用</td>
+                            <td>无</td>
                         </tr>
                         </tbody>
                     </table>
@@ -1957,6 +1964,9 @@
                         data: this.data7.filter((data, index) => index < 4)
                     });
                 }
+            },
+            handleClearCurrentRow () {
+                this.$refs.currentRowTable.clearCurrentRow();
             }
         },
         mounted () {
