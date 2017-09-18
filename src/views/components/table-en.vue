@@ -400,14 +400,20 @@
                             <td>on-row-click</td>
                             <td>Emitted when clicking a certain row.</td>
                             <td>
-                                Current row's data.
+                                <ul>
+                                    <li>Current row's data.</li>
+                                    <li>Current index.</li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
                             <td>on-row-dblclick</td>
                             <td>Emitted when double clicking a certain row.</td>
                             <td>
-                                Current row's data.
+                                <ul>
+                                    <li>Current row's data.</li>
+                                    <li>Current index.</li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>

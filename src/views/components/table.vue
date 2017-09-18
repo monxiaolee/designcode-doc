@@ -402,14 +402,20 @@
                             <td>on-row-click</td>
                             <td>单击某一行时触发</td>
                             <td>
-                                当前行的数据
+                                <ul>
+                                    <li>当前行的数据</li>
+                                    <li>index</li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
                             <td>on-row-dblclick</td>
                             <td>双击某一行时触发</td>
                             <td>
-                                当前行的数据
+                                <ul>
+                                    <li>当前行的数据</li>
+                                    <li>index</li>
+                                </ul>
                             </td>
                         </tr>
                         <tr>
