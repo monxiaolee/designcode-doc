@@ -88,7 +88,7 @@
                         </tr>
                         <tr>
                             <td>color</td>
-                            <td>标签颜色，可选值为<code>blue</code>、<code>green</code>、<code>red</code>、<code>yellow</code></td>
+                            <td>标签颜色，可选值为<code>blue</code>、<code>green</code>、<code>red</code>、<code>yellow</code>、<code>default</code></td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
