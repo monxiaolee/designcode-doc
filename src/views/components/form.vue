@@ -369,7 +369,7 @@
                         <tr>
                             <td>rules</td>
                             <td>表单验证规则</td>
-                            <td>[Object,Array]</td>
+                            <td>Object | Array</td>
                             <td>-</td>
                         </tr>
                         <tr>

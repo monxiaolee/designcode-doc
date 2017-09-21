@@ -369,7 +369,7 @@
                         <tr>
                             <td>rules</td>
                             <td>Validation rules.</td>
-                            <td>[Object,Array]</td>
+                            <td>Object | Array</td>
                             <td>-</td>
                         </tr>
                         <tr>
