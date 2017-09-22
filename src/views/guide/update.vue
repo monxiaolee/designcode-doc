@@ -25,6 +25,32 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.4.0 Monument" h2></Anchor>
+                    <p>
+                        <code>2017-09-25</code>
+                    </p>
+                    <ul>
+                        <li>InputNumber 新增精度属性 <code>precision</code>。<issue id="1810"></issue></li>
+                        <li>Spin 增加全局用法 <code>$Spin</code>。<issue id="1063"></issue></li>
+                        <li>Spin 样式调整，<code>fix</code> 时不再强制设置父级宽高。</li>
+                        <li>Table 支持自适应宽度。<issue id="690"></issue></li>
+                        <li>Table 新增加载中属性 <code>loading</code>，及具名 slot <code>loading</code>。<issue id="704"></issue></li>
+                        <li>Table 新增取消单选方法 <code>clearCurrentRow</code>。<issue id="1372"></issue></li>
+                        <li>Table 事件 <code>@on-row-click</code> 和 <code>@on-row-dblclick</code> 返回参数增加 index。<issue id="693"></issue></li>
+                        <li>Date 支持动态切换 type。<issue id="1851"></issue></li>
+                        <li>Steps 支持动态设置 Step。</li>
+                        <li>所有表单类组件都支持设置 <code>name</code> 属性。<issue id="812"></issue></li>
+                        <li>FormItem 新增 <code>label-for</code> 属性，Input、AutoComplete、Cascader、Date、InputNumber、Select(filterable) 增加 <code>element-id</code> 属性，当设置一致时，点击 label 可以聚焦对应的控件。<issue id="433"></issue></li>
+                        <li>修改 Menu 的 z-index 值。<issue id="823"></issue></li>
+                        <li>优化 Message 样式。<issue id="1881"></issue></li>
+                        <li>优化 Select 样式。<issue id="860"></issue></li>
+                        <li>优化 Date 按 tab 建的交互。<issue id="1930"></issue></li>
+                        <li>修复 Table 在 stripe 模式下，hover 样式不正确的bug。<issue id="1380"></issue></li>
+                        <li>修复 Tabs 在关闭所有页签后，报错的bug。<issue id="1842"></issue></li>
+                        <li>修复 Select 在 remote 模式下，高亮搜索词时，再次键入并选择，query 不正确的bug。<issue id="1865"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.3.1 & 2.3.2" h2></Anchor>
                     <p>
                         <code>2017-09-10</code>

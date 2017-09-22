@@ -25,6 +25,32 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.4.0 Monument" h2></Anchor>
+                    <p>
+                        <code>2017-09-25</code>
+                    </p>
+                    <ul>
+                        <li>InputNumber adds new property <code>precision</code>. <issue id="1810"></issue></li>
+                        <li>Spin adds global usage <code>$Spin</code>. <issue id="1063"></issue></li>
+                        <li>Optimize Spin styles, <code>fix</code> no longer mandatory set parent's width and height.</li>
+                        <li>Table supports adaptive width. <issue id="690"></issue></li>
+                        <li>Table adds property <code>loading</code> and named slot <code>loading</code>. <issue id="704"></issue></li>
+                        <li>Table adds method <code>clearCurrentRow</code> to clear highlighted row. <issue id="1372"></issue></li>
+                        <li>Table event <code>@on-row-click</code> and <code>@on-row-dblclick</code> params add index. <issue id="693"></issue></li>
+                        <li>Date supports the dynamic toggle type. <issue id="1851"></issue></li>
+                        <li>Steps supports dynamic setting Step.</li>
+                        <li>All form components add <code>name</code> property. <issue id="812"></issue></li>
+                        <li>FormItem adds <code>label-for</code> property. Input, AutoComplete, Cascader, Date, InputNumber, Select(filterable) add <code>element-id</code> property, click label can focus corresponding component when label-for is equivalent to element-id. <issue id="433"></issue></li>
+                        <li>Modify the z-index value of the Menu. <issue id="823"></issue></li>
+                        <li>Optimize Message styles. <issue id="1881"></issue></li>
+                        <li>Optimize Select styles. <issue id="860"></issue></li>
+                        <li>Optimize the interaction of Date when press tab key. <issue id="1930"></issue></li>
+                        <li>Fix Table bug in stripe mode that hover style is not correct. <issue id="1380"></issue></li>
+                        <li>Fix Tabs bug after closing all tabs. <issue id="1842"></issue></li>
+                        <li>Fix Select bug in remote mode, highlight the search word, retype and select an item, the query is incorrect. <issue id="1865"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.3.1 & 2.3.2" h2></Anchor>
                     <p>
                         <code>2017-09-10</code>
