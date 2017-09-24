@@ -93,6 +93,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>precision</td>
+                            <td>Precision of input value.</td>
+                            <td>Number</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="InputNumber events" h3></Anchor>
