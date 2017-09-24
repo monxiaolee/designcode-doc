@@ -32,10 +32,6 @@
                     <Icon type="ios-keypad"></Icon>
                     {{ $t('index.component') }}
                 </Menu-item>
-                <Menu-item name="cli">
-                    <Icon type="settings"></Icon>
-                    {{ $t('index.cli') }}
-                </Menu-item>
                 <Menu-item name="live">
                     <Badge :dot="liveDot">
                         <Icon type="ios-videocam"></Icon>
@@ -46,10 +42,25 @@
                     <Icon type="ios-analytics"></Icon>
                     {{ $t('index.practice') }}
                 </Menu-item>
-                <Select size="small" value="2" style="width: 60px;margin: 0 10px;" @on-change="handleVersion">
-                    <Option value="2">2.x</Option>
-                    <Option value="1">1.x</Option>
-                </Select>
+                <Submenu name="ecosystem">
+                    <template slot="title">
+                        <Icon type="ios-infinite"></Icon>
+                        {{ $t('index.ecosystem') }}
+                    </template>
+                    <Menu-item name="cli">
+                        <!--<Icon type="settings"></Icon>-->
+                        {{ $t('index.cli') }}
+                    </Menu-item>
+                    <Menu-item name="iview-loader">
+                        <!--<Icon type="settings"></Icon>-->
+                        iView Loader
+                    </Menu-item>
+                </Submenu>
+                <!--<Select size="small" value="2" style="width: 60px;margin: 0 10px;" @on-change="handleVersion">-->
+                    <!--<Option value="2">2.x</Option>-->
+                    <!--<Option value="1">1.x</Option>-->
+                <!--</Select>-->
+                <Button type="ghost" size="small" icon="social-github" @click="handleGoToGitHub">GitHub</Button>
                 <Button type="ghost" size="small" @click="handleChangeLang" >
                     <template v-if="lang === 'zh-CN'">EN</template>
                     <template v-else>中文</template>
@@ -114,6 +125,8 @@
                     this.$router.push('/cli' + pathSuffix);
                 } else if (type === 'live') {
                     this.$router.push('/live');
+                } else if (type === 'iview-loader') {
+                    this.$router.push('/docs/guide/iview-loader' + pathSuffix);
                 }
                 this.$nextTick(() => {
                     this.updateActiveNav();
@@ -150,6 +163,9 @@
                 if (v == 1) {
                     window.location.href = 'http://v1.iviewui.com';
                 }
+            },
+            handleGoToGitHub () {
+                window.open('https://github.com/iview/iview');
             }
         },
         created () {

@@ -21,7 +21,8 @@ export default {
             community: '社区',
             feedback: '反馈建议',
             bug: '提交bug',
-            chat: '在线讨论'
+            chat: '在线讨论',
+            ecosystem: '生态'
         }
     },
     'en-US': {
@@ -30,7 +31,7 @@ export default {
             guide: 'Guide',
             component: 'Components',
             practice: 'Practice',
-            cli: 'Cli',
+            cli: 'iView Cli',
             overview: 'Overview',
             live: 'Live',
             search: 'Search Components...',
@@ -46,7 +47,8 @@ export default {
             community: 'Community',
             feedback: 'Feedback',
             bug: 'Bug Report',
-            chat: 'Chat Room'
+            chat: 'Chat Room',
+            ecosystem: 'Ecosystem'
         }
     }
 }
