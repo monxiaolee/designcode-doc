@@ -88,6 +88,7 @@
                 <div slot="desc">
                     <p>在 <code>Form</code> 内，每个表单域由 <code>FormItem</code> 组成，可包含的控件有：Input、Radio、Checkbox、Switch、Select、Slider、DatePicker、TimePicker、Cascader、Transfer、InputNumber、Rate、Upload、AutoComplete、ColorPicker。</p>
                     <p>给 <code>FormItem</code> 设置属性 <code>label</code> 可以显示表单域的标签，需要给 Form 设置 <code>label-width</code>。</p>
+                    <p>给 <code>FormItem</code> 设置属性 <code>label-for</code> 可以指定原生的 label 标签的 for 属性，配合设置控件的 <code>element-id</code> 属性，可以点击 label 时聚焦控件。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.item }}</i-code>
             </Demo>
@@ -358,6 +359,12 @@
                             <td>label-width</td>
                             <td>表单域标签的的宽度</td>
                             <td>Number</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>label-for</td>
+                            <td>指定原生的 label 标签的 for 属性，配合控件的 <code>element-id</code> 属性，可以点击 label 时聚焦控件。</td>
+                            <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>

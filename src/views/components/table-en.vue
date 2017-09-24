@@ -120,7 +120,10 @@
                 </Demo>
                 <Demo title="Multiple Choices" vertical hide-code>
                     <div slot="demo">
-                        <Table border :columns="columns4" :data="data1"></Table>
+                        <Table border ref="selection" :columns="columns4" :data="data1"></Table>
+                        <br>
+                        <Button @click="handleSelectAll(true)">Set all selected</Button>
+                        <Button @click="handleSelectAll(false)">Cancel all selected</Button>
                     </div>
                     <div slot="desc">
                         <p>Add an object with <code>type: 'selection'</code> in <code>columns</code> can apply multi-choices function.</p>
@@ -1989,6 +1992,9 @@
             },
             handleClearCurrentRow () {
                 this.$refs.currentRowTable.clearCurrentRow();
+            },
+            handleSelectAll (status) {
+                this.$refs.selection.selectAll(status);
             }
         },
         mounted () {

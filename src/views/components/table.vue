@@ -107,6 +107,7 @@
                 <Demo title="单选" vertical hide-code>
                     <div slot="demo">
                         <Table highlight-row ref="currentRowTable" :columns="columns3" :data="data1"></Table>
+                        <br>
                         <Button @click="handleClearCurrentRow">清除单选</Button>
                     </div>
                     <div slot="desc">
@@ -120,7 +121,10 @@
                 </Demo>
                 <Demo title="多选" vertical hide-code>
                     <div slot="demo">
-                        <Table border :columns="columns4" :data="data1"></Table>
+                        <Table border ref="selection" :columns="columns4" :data="data1"></Table>
+                        <br>
+                        <Button @click="handleSelectAll(true)">设置全选</Button>
+                        <Button @click="handleSelectAll(false)">取消全选</Button>
                     </div>
                     <div slot="desc">
                         <p>通过给 <code>columns</code> 数据设置一项，指定 <code>type: 'selection'</code>，即可自动开启多选功能。</p>
@@ -1991,6 +1995,9 @@
             },
             handleClearCurrentRow () {
                 this.$refs.currentRowTable.clearCurrentRow();
+            },
+            handleSelectAll (status) {
+                this.$refs.selection.selectAll(status);
             }
         },
         mounted () {

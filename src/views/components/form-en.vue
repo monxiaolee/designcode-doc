@@ -88,6 +88,7 @@
                 <div slot="desc">
                     <p>In <code>Form</code>, each form consists of <code>FormItem</code>s. Available Control: Input, Radio, Checkbox, Switch, Select, Slider, DatePicker, TimePicker, Cascader, Transfer, InputNumber, Rate, Upload, AutoComplete, ColorPicker.</p>
                     <p>Setting <code>label</code> prop to <code>FormItem</code> can display the label of the form. <code>label-width</code> needs to be set on Form.</p>
+                    <p>Set the property <code>label-for</code> to <code>FormItem</code>, and the <code>element-id</code> property to component, it will be focused when click label.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.item }}</i-code>
             </Demo>
@@ -358,6 +359,12 @@
                             <td>label-width</td>
                             <td>Label width.</td>
                             <td>Number</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>label-for</td>
+                            <td>Set the property <code>for</code> to the native tag <code>label</code>, which matches the <code>element-id</code> property of the component and can click on the label to focus it.</td>
+                            <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>

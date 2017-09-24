@@ -658,7 +658,11 @@ code.highlight = `
 
 code.selection = `
 <template>
-    <Table border :columns="columns4" :data="data1"></Table>
+    <div>
+        <Table border ref="selection" :columns="columns4" :data="data1"></Table>
+        <Button @click="handleSelectAll(true)">设置全选</Button>
+        <Button @click="handleSelectAll(false)">取消全选</Button>
+    </div>
 </template>
 <script>
     export default {
@@ -705,6 +709,11 @@ code.selection = `
                         address: '深圳市南山区深南大道'
                     }
                 ]
+            }
+        },
+        methods: {
+            handleSelectAll (status) {
+                this.$refs.selection.selectAll(status);
             }
         }
     }

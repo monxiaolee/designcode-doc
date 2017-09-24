@@ -99,6 +99,12 @@
                             <td>Number</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>element-id</td>
+                            <td>给表单元素设置 <code>id</code>，详见 Form 用法。</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="InputNumber events" h3></Anchor>

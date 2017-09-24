@@ -99,6 +99,12 @@
                             <td>Number</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>element-id</td>
+                            <td>Set the <code>id</code> for the input element, more info can be found in Form.</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="InputNumber events" h3></Anchor>
