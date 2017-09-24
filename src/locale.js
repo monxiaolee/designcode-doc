@@ -5,7 +5,7 @@ export default {
             guide: '指南',
             component: '组件',
             practice: '实践',
-            cli: '脚手架',
+            cli: 'iView Cli',
             overview: '概览',
             live: '教程',
             search: '搜索组件...',

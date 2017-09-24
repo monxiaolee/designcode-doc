@@ -187,6 +187,17 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.expand }}</i-code>
                 </Demo>
+                <Demo title="Loading" vertical hide-code>
+                    <div slot="demo">
+                        <Table :loading="loading" :columns="columns1" :data="data1"></Table>
+                        <br>
+                        Change status <Switch v-model="loading"></Switch>
+                    </div>
+                    <div slot="desc">
+                        <p>Set property <code>loading</code> can make the table in the load state, and it is recommended for asynchronous request data, paging.</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.loading }}</i-code>
+                </Demo>
                 <Demo title="Size" vertical hide-code>
                     <div slot="demo">
                         <Table size="large" :columns="columns1" :data="data1"></Table>
@@ -276,6 +287,12 @@
                             <td>The height of the table. Unit: px / When this prop is set, if the content height is larger then the set value, the header will be fixed at the top.</td>
                             <td>Number | String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>loading</td>
+                            <td>Whether the table is loading.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>disabled-hover</td>
@@ -1684,7 +1701,8 @@
                         movie: '倩女幽魂',
                         music: '演员'
                     }
-                ]
+                ],
+                loading: true
             }
         },
         computed: {

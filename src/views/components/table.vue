@@ -189,6 +189,17 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.expand }}</i-code>
                 </Demo>
+                <Demo title="加载中" vertical hide-code>
+                    <div slot="demo">
+                        <Table :loading="loading" :columns="columns1" :data="data1"></Table>
+                        <br>
+                        切换 Loading 状态 <Switch v-model="loading"></Switch>
+                    </div>
+                    <div slot="desc">
+                        <p>通过设置属性 <code>loading</code> 可以让表格处于加载中状态，在异步请求数据、分页时建议使用。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.loading }}</i-code>
+                </Demo>
                 <Demo title="尺寸" vertical hide-code>
                     <div slot="demo">
                         <Table size="large" :columns="columns1" :data="data1"></Table>
@@ -278,6 +289,12 @@
                             <td>表格高度，单位 px，设置后，如果表格内容大于此值，会固定表头</td>
                             <td>Number | String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>loading</td>
+                            <td>表格是否加载中</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>disabled-hover</td>
@@ -1686,7 +1703,8 @@
                         movie: '倩女幽魂',
                         music: '演员'
                     }
-                ]
+                ],
+                loading: true
             }
         },
         computed: {
