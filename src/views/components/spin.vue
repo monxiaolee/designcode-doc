@@ -134,6 +134,17 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.status }}</i-code>
             </Demo>
+            <Demo title="整页加载">
+                <div slot="demo">
+                    <Button type="primary" @click="handleSpinShow">整页加载，3秒后关闭</Button>
+                    <Button type="primary" @click="handleSpinCustom">自定义显示内容</Button>
+                </div>
+                <div slot="desc">
+                    <p>使用内置的 <code>$Spin</code> 方法可以全局加载。</p>
+                    <p>可以使用 Render 函数自定义显示内容。<studyRender></studyRender></p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.$spin }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Spin props" h3></Anchor>
@@ -186,18 +197,47 @@
     import Demo from '../../components/demo.vue';
     import Code from '../../code/spin';
     import Anchor from '../../components/anchor.vue';
+    import studyRender from '../../components/study.vue';
 
     export default {
         components: {
             iArticle,
             iCode,
             Demo,
-            Anchor
+            Anchor,
+            studyRender
         },
         data () {
             return {
                 code: Code,
                 spinShow: true
+            }
+        },
+        methods: {
+            handleSpinShow () {
+                this.$Spin.show();
+                setTimeout(() => {
+                    this.$Spin.hide();
+                }, 3000);
+            },
+            handleSpinCustom () {
+                this.$Spin.show({
+                    render: (h) => {
+                        return h('div', [
+                            h('Icon', {
+                                'class': 'demo-spin-icon-load',
+                                props: {
+                                    type: 'load-c',
+                                    size: 18
+                                }
+                            }),
+                            h('div', 'Loading')
+                        ])
+                    }
+                });
+                setTimeout(() => {
+                    this.$Spin.hide();
+                }, 3000);
             }
         }
     }
