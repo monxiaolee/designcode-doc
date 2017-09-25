@@ -25,8 +25,8 @@
                         <router-link :to="'/docs/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
                         <router-link :to="'/docs/guide/install' + suffix">{{ $t('index.component') }}</router-link>
                         <router-link :to="'/docs/practice/case' + suffix">{{ $t('index.practice') }}</router-link>
-                        <router-link :to="'/cli' + suffix">{{ $t('index.cli') }}</router-link>
                         <router-link :to="'/overview' + suffix">{{ $t('index.overview') }}</router-link>
+                        <router-link :to="'/cli' + suffix">{{ $t('index.cli') }}</router-link>
                         <a href="https://github.com/iview/iview" target="_blank">
                             <Icon type="social-github"></Icon>
                             GitHub

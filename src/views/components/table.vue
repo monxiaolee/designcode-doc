@@ -468,6 +468,10 @@
                             <td>footer</td>
                             <td>页脚</td>
                         </tr>
+                        <tr>
+                            <td>loading</td>
+                            <td>加载中</td>
+                        </tr>
                         </tbody>
                     </table>
                     <Anchor title="Table methods" h3></Anchor>

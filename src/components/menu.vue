@@ -2,6 +2,9 @@
     .wrapper-header-nav .ivu-menu-item i{
         margin-right: 6px;
     }
+    .wrapper-header .ivu-menu{
+        z-index: 901;
+    }
 </style>
 <template>
     <Menu mode="horizontal" :active-name="currentActiveKey" @on-select="handleSelect">
@@ -32,7 +35,7 @@
                     <Icon type="ios-keypad"></Icon>
                     {{ $t('index.component') }}
                 </Menu-item>
-                <Menu-item name="live">
+                <Menu-item name="live" v-if="lang === 'zh-CN'">
                     <Badge :dot="liveDot">
                         <Icon type="ios-videocam"></Icon>
                         {{ $t('index.live') }}

@@ -465,6 +465,10 @@
                             <td>footer</td>
                             <td>Table footer</td>
                         </tr>
+                        <tr>
+                            <td>loading</td>
+                            <td>Table loading</td>
+                        </tr>
                         </tbody>
                     </table>
                     <Anchor title="Table methods" h3></Anchor>

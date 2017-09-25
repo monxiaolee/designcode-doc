@@ -77,6 +77,14 @@
             return {
                 list: [
                     {
+                        title: 'Vue.js 实战系列合集',
+                        time: 'finish',
+                        cost: '36元',
+                        cover: 'https://ooo.0o0.ooo/2017/05/22/59227ada0b65c.png',
+                        desc: '本系列系统的讲解了 Vue.js 的组件、webpack、插件和 Render 函数用法，包含示例，适合 Vue.js 初学者。 合集包含以下4课：《Vue.js 实战之组件篇》、《Vue.js 实战之工程篇》、《Vue.js 实战之插件篇》、《Vue.js 实战之 Render 函数》。 系列讲座 9折。',
+                        link: 'https://segmentfault.com/ls/1650000011074057'
+                    },
+                    {
                         title: 'Vue.js 实战之插件篇',
                         time: 'finish',
                         cost: '9.9元',
