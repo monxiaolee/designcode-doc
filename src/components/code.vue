@@ -44,6 +44,7 @@
                 <input type="hidden" name="css" :value="jsFiddleData.css" />
                 <input type="hidden" name="html" :value="jsFiddleData.html" />
                 <input type="hidden" name="title" :value="jsFiddleData.title" />
+                <input type="hidden" name="description" :value="jsFiddleData.description" />
             </form>
         </span>
         <span class="scale" @click="scale">
@@ -150,7 +151,8 @@
                 jsContructorObject.template = `<div>${template}</div>`;
 
                 const APIData = {
-                  title: 'Component title',
+                  title: 'iView Component example',
+                  description: 'iView - A high quality UI Toolkit based on Vue.js',
                   js: `new Vue(${JSON.stringify(jsContructorObject, null, '  ')});`,
                   css: style + '\n#component {padding: 20px;}',
                   html: [
