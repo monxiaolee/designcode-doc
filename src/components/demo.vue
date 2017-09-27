@@ -34,6 +34,7 @@
 <script>
 
     export default {
+        name: 'Demo',
         props: {
             title: {
                 type: String,
