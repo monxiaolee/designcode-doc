@@ -133,8 +133,14 @@
             scale () {
                 this.openScale = true;
             },
-            getSource(source, type){
-                return source.slice(source.indexOf(`<${type}>`) + `<${type}>`.length, source.lastIndexOf(`</${type}>`));
+			getSource(source, type){
+				const regex = new RegExp(`<${type}[^>]*>`);
+				let openingTag = source.match(regex);
+
+				if (!openingTag) return '';
+				else openingTag = openingTag[0];
+
+                return source.slice(source.indexOf(openingTag) + openingTag.length, source.lastIndexOf(`</${type}>`));
             },
             openFiddle(){
                 const source = this.$refs.code.textContent;
