@@ -81,8 +81,7 @@
                 code: '',
                 copied: false,
                 docLang: this.$lang,
-                title: 'Code',
-                jsFiddleData: {}
+                title: 'Code'
             }
         },
         computed: {
