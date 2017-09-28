@@ -155,7 +155,7 @@
                     template
                 ].join('\n');
 
-                const css = '@import url("//unpkg.com/iview/dist/styles/iview.css");\n' + style;
+                const css = '@import url("//unpkg.com/iview/dist/styles/iview.css");\n#app{padding: 32px;}' + style;
                 const js = script + '\nvar Component = Vue.extend(Main)\nnew Component().$mount(\'#app\')';
 
                 const data = {
