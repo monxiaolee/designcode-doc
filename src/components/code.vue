@@ -182,7 +182,7 @@
 
                 document.body.appendChild(form);
                 form.submit();
-                document.removeChild.appendChild(form);
+                document.body.removeChild(form);
             }
         }
     }
