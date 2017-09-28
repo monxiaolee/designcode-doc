@@ -58,9 +58,10 @@
 
     function replaceTag(source, tagMap) {
         Object.keys(tagMap).forEach(i => {
-            source = source.replace(new RegExp(`<${i}(?!-)`, 'g'), `<${tagMap[i]}`)
+            source = source
+                .replace(new RegExp(`<${i}\(\\W+\)`, 'g'), `<${tagMap[i]}$1`)
                 .replace(new RegExp(`<\/${i}>`, 'g'), `<\/${tagMap[i]}>`);
-        })
+        });
         return source;
     }
 
@@ -132,24 +133,21 @@
             scale () {
                 this.openScale = true;
             },
+            getSource(source, type){
+                return source.slice(source.indexOf(`<${type}>`) + `<${type}>`.length, source.lastIndexOf(`</${type}>`));
+            },
             openFiddle(){
                 const source = this.$refs.code.textContent;
 
-                let script = source.match(/<script>[\s\S]*?<\/script>/g);
-                let style = source.match(/<style[\s\S]*?>[\s\S]*?<\/style>/g);
-                let template = source.match(/<template>[\s\S]*?<\/template>/g);
+                const script = this.getSource(source, 'script').replace(/export default/, 'var Main =');
+                const style = this.getSource(source, 'style');
+                const template = '<div id="app">' + replaceTag(this.getSource(source, 'template'), tag_map) + '</div>';
 
-                script = script ? script[0].replace(/<script>/, '').replace(/<\/script>/, '').replace(/export default/, 'var Main =') : '';
-                style = style ? style[0].replace(/<style[\s\S]*?>/, '').replace(/<\/style>/, '') : '';
-                template = template ? template[0].replace(/<template>/, `<div id="app">`).replace(/<\/template>/, '</div>') : '';
-
-                if (template) {
-                    template = replaceTag(template, tag_map);
-                }
-
-                const html = '<script src="//unpkg.com/vue/dist/vue.js"></scr' + 'ipt>\n' +
-                             '<script src="//unpkg.com/iview/dist/iview.min.js"></scr' + 'ipt>\n' +
-                             template;
+                const html = [
+                    '<script src="//unpkg.com/vue/dist/vue.js"></scr' + 'ipt>',
+                    '<script src="//unpkg.com/iview/dist/iview.min.js"></scr' + 'ipt>',
+                    template
+                ].join('\n');
 
                 const css = '@import url("//unpkg.com/iview/dist/styles/iview.css");\n' + style;
                 const js = script + '\nvar Component = Vue.extend(Main)\nnew Component().$mount(\'#app\')';
@@ -162,21 +160,29 @@
                     panel_js: 3
                 };
 
-                const form = document.getElementById('fiddle-form') || document.createElement('form');
-                form.innerHTML = '';
+                const formAttributes = {
+                    method: 'post',
+                    action: 'https://jsfiddle.net/api/post/library/pure/',
+                    target: '_blank',
+                    id: 'fiddle-form',
+                    style: 'display: none;'
+                }
+
                 const node = document.createElement('textarea');
-                form.method = 'post';
-                form.action = 'https://jsfiddle.net/api/post/library/pure/';
-                form.target = '_blank';
+                const form = document.createElement('form');
+                for (const attr in formAttributes) {
+                    form.setAttribute(attr, formAttributes[attr]);
+                }
+
                 for (let name in data) {
                     node.name = name;
                     node.value = data[name].toString();
                     form.appendChild(node.cloneNode());
                 }
-                form.setAttribute('id', 'fiddle-form');
-                form.style.display = 'none';
+
                 document.body.appendChild(form);
                 form.submit();
+                document.removeChild.appendChild(form);
             }
         }
     }
