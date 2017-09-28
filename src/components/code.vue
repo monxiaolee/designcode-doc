@@ -36,16 +36,8 @@
 <template>
     <div>
         <pre :class="{bg: bg}"><code :class="language" ref="code"><slot></slot></code></pre>
-        <span class="open-fiddle" @click="openFiddle">
+        <span class="open-fiddle" v-if="title !== 'Code'" @click="openFiddle">
             <Icon type="code-working" size="18" />
-            <form action="http://jsfiddle.net/api/post/library/pure/" ref="fiddle" method="POST" target="_blank">
-                <input type="hidden" name="wrap" value="d" />
-                <input type="hidden" name="js" :value="jsFiddleData.js" />
-                <input type="hidden" name="css" :value="jsFiddleData.css" />
-                <input type="hidden" name="html" :value="jsFiddleData.html" />
-                <input type="hidden" name="title" :value="jsFiddleData.title" />
-                <input type="hidden" name="description" :value="jsFiddleData.description" />
-            </form>
         </span>
         <span class="scale" @click="scale">
             <Icon type="qr-scanner" size="18"></Icon>
@@ -62,6 +54,15 @@
 <script>
     import hljs from 'hljs';
     import Clipboard from 'clipboard';
+    import tag_map from './tag-map';
+
+    function replaceTag(source, tagMap) {
+        Object.keys(tagMap).forEach(i => {
+            source = source.replace(new RegExp(`<${i}(?!-)`, 'g'), `<${tagMap[i]}`)
+                .replace(new RegExp(`<\/${i}>`, 'g'), `<\/${tagMap[i]}>`);
+        })
+        return source;
+    }
 
     export default {
         props: {
@@ -133,37 +134,50 @@
                 this.openScale = true;
             },
             openFiddle(){
-                const form = this.$refs.fiddle;
-                const input = form.firstElementChild;
                 const source = this.$refs.code.textContent;
 
-                let js = source.match(/<script>[\s\S]*?<\/script>/g);
-                let style = source.match(/<style>[\s\S]*?<\/style>/g);
+                let script = source.match(/<script>[\s\S]*?<\/script>/g);
+                let style = source.match(/<style[\s\S]*?>[\s\S]*?<\/style>/g);
                 let template = source.match(/<template>[\s\S]*?<\/template>/g);
 
-                js = js ? js[0].slice(8, -9).trim() : '';
-                style = style ? style[0].slice(7, -8).trim() : '';
-                template = template ? template[0].slice(10, -11).trim().replace(/[\n\t\r]|\s\s/g, '') : '';
+                script = script ? script[0].replace(/<script>/, '').replace(/<\/script>/, '').replace(/export default/, 'var Main =') : '';
+                style = style ? style[0].replace(/<style[\s\S]*?>/, '').replace(/<\/style>/, '') : '';
+                template = template ? template[0].replace(/<template>/, `<div id="app">`).replace(/<\/template>/, '</div>') : '';
 
-                const objectOpen = js.indexOf('{')
-                const jsContructorObject = eval('(' + js.slice(objectOpen) + ')');
-                jsContructorObject.el = '#app';
-                jsContructorObject.template = `<div>${template}</div>`;
-
-                const APIData = {
-                  title: 'iView Component example',
-                  description: 'iView - A high quality UI Toolkit based on Vue.js',
-                  js: `new Vue(${JSON.stringify(jsContructorObject, null, '  ')});`,
-                  css: style + '\n#component {padding: 20px;}',
-                  html: [
-                      '<link rel="stylesheet" type="text/css" href="//unpkg.com/iview/dist/styles/iview.css">',
-                      '<script src="//unpkg.com/vue/dist/vue.min.js"></sc' + 'ript>',
-                      '<script src="//unpkg.com/iview/dist/iview.min.js"></sc' + 'ript>',
-                      '<div id="component"><div id="app"></div></div>'
-                  ].join('\n'),
+                if (template) {
+                    template = replaceTag(template, tag_map);
                 }
-                this.jsFiddleData = APIData
-                this.$nextTick(() => form.submit());
+
+                const html = '<script src="//unpkg.com/vue/dist/vue.js"></scr' + 'ipt>\n' +
+                             '<script src="//unpkg.com/iview/dist/iview.min.js"></scr' + 'ipt>\n' +
+                             template;
+
+                const css = '@import url("//unpkg.com/iview/dist/styles/iview.css");\n' + style;
+                const js = script + '\nvar Component = Vue.extend(Main)\nnew Component().$mount(\'#app\')';
+
+                const data = {
+                    js: js,
+                    css: css,
+                    html: html,
+                    panel_css: 1,
+                    panel_js: 3
+                };
+
+                const form = document.getElementById('fiddle-form') || document.createElement('form');
+                form.innerHTML = '';
+                const node = document.createElement('textarea');
+                form.method = 'post';
+                form.action = 'https://jsfiddle.net/api/post/library/pure/';
+                form.target = '_blank';
+                for (let name in data) {
+                    node.name = name;
+                    node.value = data[name].toString();
+                    form.appendChild(node.cloneNode());
+                }
+                form.setAttribute('id', 'fiddle-form');
+                form.style.display = 'none';
+                document.body.appendChild(form);
+                form.submit();
             }
         }
     }
