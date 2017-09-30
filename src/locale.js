@@ -22,7 +22,10 @@ export default {
             feedback: '反馈建议',
             bug: '提交bug',
             chat: '在线讨论',
-            ecosystem: '生态'
+            ecosystem: '生态',
+            code_copy: '复制代码',
+            code_fullscreen: '放大',
+            code_jsfiddle: '在 JSFiddle 中打开'
         }
     },
     'en-US': {
@@ -48,7 +51,10 @@ export default {
             feedback: 'Feedback',
             bug: 'Bug Report',
             chat: 'Chat Room',
-            ecosystem: 'Ecosystem'
+            ecosystem: 'Ecosystem',
+            code_copy: 'Copy code',
+            code_fullscreen: 'Fullscreen',
+            code_jsfiddle: 'Open in JSFiddle'
         }
     }
 }

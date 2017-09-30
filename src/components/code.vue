@@ -37,14 +37,20 @@
     <div>
         <pre :class="{bg: bg}"><code :class="language" ref="code"><slot></slot></code></pre>
         <span class="open-fiddle" v-if="title !== 'Code'" @click="openFiddle">
-            <Icon type="code-working" size="18" />
+            <Tooltip :content="$t('index.code_jsfiddle')" placement="top" transfer>
+                <Icon type="code-working" size="18" />
+            </Tooltip>
         </span>
         <span class="scale" @click="scale">
-            <Icon type="qr-scanner" size="18"></Icon>
+            <Tooltip :content="$t('index.code_fullscreen')" placement="top" transfer>
+                <Icon type="qr-scanner" size="18"></Icon>
+            </Tooltip>
         </span>
         <span class="copy" @click="clip">
-            <Icon type="clipboard" size="18" v-show="!copied"></Icon>
-            <Icon type="checkmark" size="18" v-show="copied" style="color:#5cb85c"></Icon>
+            <Tooltip :content="$t('index.code_copy')" placement="top" transfer>
+                <Icon type="clipboard" size="18" v-show="!copied"></Icon>
+                <Icon type="checkmark" size="18" v-show="copied" style="color:#5cb85c"></Icon>
+            </Tooltip>
         </span>
         <Modal class-name="code-scale-modal" :title="title" width="65" v-model="openScale">
             <pre :class="{bg: bg}"><code :class="language" ref="code2"></code></pre>
