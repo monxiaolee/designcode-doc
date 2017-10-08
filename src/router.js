@@ -17,6 +17,13 @@ const routers = [
         component: (resolve) => require(['./views/vue-book.vue'], resolve)
     },
     {
+        path: '/vue-book/check',
+        meta: {
+            title: '《Vue.js 实战》预购查询'
+        },
+        component: (resolve) => require(['./views/vue-book-check.vue'], resolve)
+    },
+    {
         path: '/cli',
         meta: {
             title: 'iView Cli 可视化脚手架'
