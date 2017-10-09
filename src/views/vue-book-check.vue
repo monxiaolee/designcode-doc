@@ -3,12 +3,12 @@
         <div class="main ivu-article">
             <h1>《Vue.js 实战》预购信息确认</h1>
             <template v-if="order === ''">
-                <h2>输入订单号：</h2>
-                <Input size="large" v-model="id" placeholder="输入下单时的订单号" style="margin-top: 16px" />
+                <h2>输入订单号（或手机号）：</h2>
+                <Input size="large" v-model="id" placeholder="输入下单时的订单号（或手机号）" style="margin-top: 16px" />
                 <Button size="large" type="primary" long style="margin-top: 16px" @click="handleCheck">查询</Button>
             </template>
             <template v-else>
-                <h2>订单号 <strong>{{ id }}</strong> 信息：</h2>
+                <h2>订单号 <strong>{{ order.id }}</strong> 信息：</h2>
                 <p>
                     <strong>姓名：</strong>
                     <span>{{ order.name }}</span>
@@ -75,7 +75,7 @@
                             if (order === '') {
                                 this.$Notice.error({
                                     title: '订单号有误',
-                                    desc: '订单号' + this.id + '没有查询到信息'
+                                    desc: '订单号（或手机号）' + this.id + '没有查询到信息'
                                 });
                             } else {
                                 this.order = res.data.data.order;
@@ -86,7 +86,7 @@
             },
             handleSetCheck (type) {
                 const params = new URLSearchParams();
-                params.append('id', this.id);
+                params.append('id', this.order.id);
                 params.append('check', type);
 
                 axios({
