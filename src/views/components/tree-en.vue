@@ -71,7 +71,7 @@
                         <tr>
                             <td>on-toggle-expand</td>
                             <td>Emitted when when the list is expanded or dropped.</td>
-                            <td>An array of current nodes.</td>
+                            <td>Current nodes.</td>
                         </tr>
                     </tbody>
                 </table>

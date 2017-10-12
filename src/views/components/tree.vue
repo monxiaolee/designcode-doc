@@ -70,7 +70,7 @@
                         <tr>
                             <td>on-toggle-expand</td>
                             <td>展开和收起子列表时触发</td>
-                            <td>当前节点的数组</td>
+                            <td>当前节点的数据</td>
                         </tr>
                     </tbody>
                 </table>
