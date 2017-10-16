@@ -913,6 +913,20 @@ const routers = [
         component: (resolve) => require(['./views/components/auto-complete-en.vue'], resolve)
     },
     {
+        path: '/components/scroll',
+        meta: {
+            title: 'Scroll 无限滚动'
+        },
+        component: (resolve) => require(['./views/components/scroll.vue'], resolve)
+    },
+    {
+        path: '/components/scroll-en',
+        meta: {
+            title: 'Scroll'
+        },
+        component: (resolve) => require(['./views/components/scroll-en.vue'], resolve)
+    },
+    {
         path: '*',
         redirect: '/'
     }

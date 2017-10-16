@@ -388,6 +388,12 @@ const list = {
                     path: '/components/spin',
                     img: 'spin.png',
                     icon: 'load-d'
+                },
+                {
+                    title: 'Scroll 无限滚动',
+                    path: '/components/scroll',
+                    img: 'scroll.png',
+                    icon: 'ios-more'
                 }
             ]
         }
