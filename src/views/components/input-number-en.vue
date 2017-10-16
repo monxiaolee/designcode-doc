@@ -44,6 +44,24 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
+            <Demo title="Readonly">
+                <div slot="demo">
+                    <InputNumber v-model="value7" readonly></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>Set <code>readonly</code> prop, it will be ready-only.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.readonly }}</i-code>
+            </Demo>
+            <Demo title="Editable">
+                <div slot="demo">
+                    <InputNumber v-model="value8" :editable="false"></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>Set <code>editable</code>prop to control whether it can be entered.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.editable }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="InputNumber props" h3></Anchor>
@@ -92,6 +110,18 @@
                             <td>Set disable status.</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>readonly</td>
+                            <td>Whether to the read-only.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>editable</td>
+                            <td>Whether it can be edited.</td>
+                            <td>Boolean</td>
+                            <td>true</td>
                         </tr>
                         <tr>
                             <td>precision</td>
@@ -151,7 +181,9 @@
                 value3: 2,
                 value4: 2,
                 value5: 2,
-                value6: 1
+                value6: 1,
+                value7: 1,
+                value8: 1
             }
         }
     }

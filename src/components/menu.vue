@@ -58,6 +58,9 @@
                         <!--<Icon type="settings"></Icon>-->
                         iView Loader
                     </Menu-item>
+                    <Menu-item name="iview-admin">
+                        iView Admin
+                    </Menu-item>
                 </Submenu>
                 <!--<Select size="small" value="2" style="width: 60px;margin: 0 10px;" @on-change="handleVersion">-->
                     <!--<Option value="2">2.x</Option>-->
@@ -130,6 +133,8 @@
                     this.$router.push('/live');
                 } else if (type === 'iview-loader') {
                     this.$router.push('/docs/guide/iview-loader' + pathSuffix);
+                } else if (type === 'iview-admin') {
+                    window.open('https://github.com/iview/iview-admin');
                 }
                 this.$nextTick(() => {
                     this.updateActiveNav();

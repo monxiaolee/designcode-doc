@@ -44,6 +44,24 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
+            <Demo title="只读">
+                <div slot="demo">
+                    <InputNumber v-model="value7" readonly></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>通过设置<code>readonly</code>属性开启只读。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.readonly }}</i-code>
+            </Demo>
+            <Demo title="不可编辑">
+                <div slot="demo">
+                    <InputNumber v-model="value8" :editable="false"></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>通过设置<code>editable</code>属性控制是否能编辑。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.editable }}</i-code>
+            </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="InputNumber props" h3></Anchor>
@@ -92,6 +110,18 @@
                             <td>设置禁用状态</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>readonly</td>
+                            <td>是否设置为只读</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>editable</td>
+                            <td>是否可编辑</td>
+                            <td>Boolean</td>
+                            <td>true</td>
                         </tr>
                         <tr>
                             <td>precision</td>
@@ -151,7 +181,9 @@
                 value3: 2,
                 value4: 2,
                 value5: 2,
-                value6: 1
+                value6: 1,
+                value7: 1,
+                value8: 1
             }
         }
     }

@@ -66,4 +66,34 @@ code.disabled = `
 </script>
 `;
 
+code.readonly = `
+<template>
+    <InputNumber v-model="value7" readonly></InputNumber>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                value7: 1
+            }
+        }
+    }
+</script>
+`;
+
+code.editable = `
+<template>
+    <InputNumber v-model="value8" :editable="false"></InputNumber>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                value8: 1
+            }
+        }
+    }
+</script>
+`;
+
 export default code;
