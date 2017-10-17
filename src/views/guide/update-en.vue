@@ -25,6 +25,26 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.5.0 Old Man’s Journey" h2></Anchor>
+                    <p>
+                        <code>2017-10-17</code>
+                    </p>
+                    <ul>
+                        <li><strong>Publish management system template <a href="https://github.com/iview/iview-admin" target="_blank">iview-admin</a>.</strong></li>
+                        <li>Add infinite Scroll component. <router-link to="/components/scroll-en">View</router-link></li>
+                        <li>Date will automatically identify the weekly start Date according to the current language package. <issue id="1809"></issue></li>
+                        <li>InputNumber add <code>readonly</code> and <code>editable</code> properties. </li>
+                        <li>Optimize the performance of InputNumber real-time input.<issue id="2059"></issue></li>
+                        <li>Optimized Date to focusout after entering a wrong Date format. <issue id="2002"></issue></li>
+                        <li>Fix the problem that Date is not validated by the Form under SSR. <issue id="1971"></issue></li>
+                        <li>Fix a problem with Date in IE11. <issue id="1937"></issue></li>
+                        <li>Fix the bug that Date, Dropdown in transfer mode, the style is wrong when the body's width is 100%. <issue id="2050"></issue></li>
+                        <li>Fix the bug that sometimes the error message cannot be cleared when the FormItem set `error` property. <issue id="2047"></issue></li>
+                        <li>Fix Badge bug that when the dot is opened and the count is 0, the dot is displayed. </li>
+                        <li>Fix InputNumber bug that when the precision is 0, unable to set the precision to an integer. <issue id="2026"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.4.0 Monument" h2></Anchor>
                     <p>
                         <code>2017-09-25</code>

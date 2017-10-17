@@ -43,6 +43,7 @@ export default {
     'RadioGroup': 'radio-group',
     'Rate': 'rate',
     'Row': 'row',
+    'Scroll': 'scroll',
     'Select': 'i-select',
     'Slider': 'slider',
     'Spin': 'spin',

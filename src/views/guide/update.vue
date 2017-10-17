@@ -25,6 +25,26 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.5.0 Old Man’s Journey" h2></Anchor>
+                    <p>
+                        <code>2017-10-17</code>
+                    </p>
+                    <ul>
+                        <li><strong>发布后台管理系统模板 <a href="https://github.com/iview/iview-admin" target="_blank">iview-admin</a>。</strong></li>
+                        <li>新增无限滚动组件 Scroll。<router-link to="/components/scroll">查看</router-link></li>
+                        <li>Date 会根据当前语言包自动识别每周起始日。<issue id="1809"></issue></li>
+                        <li>InputNumber 新增 readonly 和 editable 属性。</li>
+                        <li>优化 InputNumber 实时输入的表现。<issue id="2059"></issue></li>
+                        <li>优化 Date 在输入一个错误日期格式后失焦的表现。<issue id="2002"></issue></li>
+                        <li>修复 Date 在 SSR 无法通过 Form 验证的问题。<issue id="1971"></issue></li>
+                        <li>修复 Date 在 IE11 下的一个问题。<issue id="1937"></issue></li>
+                        <li>修复 Date、Dropdown 在 transfer 模式下，body 宽度为 100% 时，样式错误的bug。<issue id="2050"></issue></li>
+                        <li>修复 FormItem 在动态设置 error 时，有时错误信息无法清空的bug。<issue id="2047"></issue></li>
+                        <li>修复 Badge 在开启 dot 且 count 为 0 时，扔显示 dot 的bug。</li>
+                        <li>修复 InputNumber 在 precision 为 0 时，无法设置精度为整数的bug。<issue id="2026"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.4.0 Monument" h2></Anchor>
                     <p>
                         <code>2017-09-25</code>
