@@ -25,6 +25,15 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.5.1" h2></Anchor>
+                    <p>
+                        <code>2017-10-18</code>
+                    </p>
+                    <ul>
+                        <li>Fixed bug in version 2.5.0 that the DatePicker will be displayed <code>false</code> when binding an empty data. <issue id="2119"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.5.0 Old Man’s Journey" h2></Anchor>
                     <p>
                         <code>2017-10-17</code>

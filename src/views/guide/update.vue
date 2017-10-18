@@ -25,6 +25,15 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.5.1" h2></Anchor>
+                    <p>
+                        <code>2017-10-18</code>
+                    </p>
+                    <ul>
+                        <li>修复 2.5.0 版本下，DatePicker 绑定数据为空时，初始化显示为 false 的bug。<issue id="2119"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.5.0 Old Man’s Journey" h2></Anchor>
                     <p>
                         <code>2017-10-17</code>
