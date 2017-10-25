@@ -36,13 +36,13 @@
                                 <a href="https://github.com/iview/iview-cli" target="_blank">iView Cli</a>
                             </li>
                             <li>
+                                <a href="https://github.com/iview/iview-admin" target="_blank">iView Admin</a>
+                            </li>
+                            <li>
                                 <a href="https://github.com/iview/iview-doc" target="_blank">iView Doc</a>
                             </li>
                             <li>
                                 <a href="https://github.com/iview/iview-project" target="_blank">iView Project</a>
-                            </li>
-                            <li>
-                                <a href="https://github.com/iview/iview-theme" target="_blank">iView Theme</a>
                             </li>
                         </ul>
                     </i-col>

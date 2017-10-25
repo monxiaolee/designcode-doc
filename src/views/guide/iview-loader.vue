@@ -5,6 +5,7 @@
             <Anchor title="用途" h2></Anchor>
             <p>统一 iView 标签书写规范，所有标签都可以使用首字母大写的形式，包括 Vue 限制的两个标签 <code>Switch</code> 和 <code>Circle</code>。</p>
             <p>虽然不推荐，但通过 loader 选项配置，可以开启所有标签前缀的写法了，比如 <code>i-date-picker</code>。</p>
+            <p><a href="https://cn.vuejs.org/v2/style-guide/#模板中的组件名大小写-强烈推荐" target="_blank">为什么推荐在单文件组件和字符串模板中组件名应该总是 PascalCase 的。</a></p>
             <Anchor title="使用方法" h2></Anchor>
             <Anchor title="安装" h3></Anchor>
             <p>首先通过 npm 安装 iview-loader</p>

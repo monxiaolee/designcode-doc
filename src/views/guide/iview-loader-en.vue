@@ -5,6 +5,7 @@
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>Uniform iView tag writing specification, all tags can be used in the form of capital letters, including two tags <code>Switch</code> and <code>Circle</code> that are restricted by Vue.</p>
             <p>Although not recommended, you can use the loader option configuration to open all tag prefixes, such as <code>i-date-picker</code> .</p>
+            <p><a href="https://vuejs.org/v2/style-guide/#Component-name-casing-in-templates-strongly-recommended" target="_blank">Why is it recommended to always be PascalCase in a single file component and a string template.</a></p>
             <Anchor title="Usage" h2></Anchor>
             <Anchor title="Install" h3></Anchor>
             <p>First, install iview-loader through npm</p>

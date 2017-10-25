@@ -7,12 +7,60 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <Tree :data="baseData" show-checkbox></Tree>
+                    <Tree :data="data1"></Tree>
                 </div>
                 <div slot="desc">
-                    <p>最简单的用法，展示可勾选，可选中，禁用，默认展开等功能。</p>
+                    <p>最简单的用法，展示可选中，默认展开功能。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
+            </Demo>
+            <Demo title="可勾选">
+                <div slot="demo">
+                    <Tree :data="data2" show-checkbox></Tree>
+                </div>
+                <div slot="desc">
+                    <p>设置属性 <code>show-checkbox</code> 可以对节点进行勾选。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.checkbox }}</i-code>
+            </Demo>
+            <Demo title="异步加载子节点">
+                <div slot="demo">
+                    <Tree :data="data3" :load-data="loadData" show-checkbox></Tree>
+                </div>
+                <div slot="desc">
+                    <p>使用 <code>load-data</code> 属性可以异步加载子节点，需要给数据增加 <code>loading</code> 来标识当前是否在加载中。</p>
+                    <p>load-data 第一个参数为当前节点信息；执行 load-data 的第二个参数，将需要添加的数据传入。</p>
+                    <p>如果某节点不包含 <code>loading</code> 和 <code>children</code> 字段，则不会应用异步加载效果。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.lazy }}</i-code>
+            </Demo>
+            <Demo title="默认展开、选中、勾选和禁用">
+                <div slot="demo">
+                    <Tree :data="data4" show-checkbox multiple></Tree>
+                </div>
+                <div slot="desc">
+                    <p>给节点设置 <code>expand</code>、<code>selected</code>、<code>checked</code> 和 <code>disabled</code> 可以将节点设置为展开、选中、勾选和禁用。</p>
+                    <p>设置属性 <code>multiple</code> 可进行多选。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.more }}</i-code>
+            </Demo>
+            <Demo title="自定义节点内容">
+                <div slot="demo">
+                    <Tree :data="data5" :render="renderContent"></Tree>
+                </div>
+                <div slot="desc">
+                    <p>使用强大的 Render 函数可以自定义节点显示内容和交互，比如添加图标，按钮等。</p>
+                    <p>Render 函数的第二个参数，包含三个字段：</p>
+                    <ul>
+                        <li><strong>root</strong> &lt;Array&gt;：树的根节点</li>
+                        <li><strong>node</strong> &lt;Object&gt;：当前节点</li>
+                        <li><strong>data</strong> &lt;Object&gt;：当前节点的数据</li>
+                    </ul>
+                    <p>通过合理地使用 root、node 和 data 可以实现各种效果，其中，iView 给每个节点都设置了一个 <code>nodeKey</code> 字段，用来标识节点的 id。</p>
+                    <p>Render 函数分两种，一种是给当前树的每个节点都设置同样的渲染内容，此 render 通过 Tree 组件的属性 <code>render</code> 传递；另一种是单独给某个节点设置，在该节点的 <code>render</code> 字段内设置；同时设置时，会优先使用当前节点的 Render 函数。</p>
+                    <p><study-render></study-render></p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.render }}</i-code>
             </Demo>
             <div class="api">
                 <Anchor title="API" h2></Anchor>
@@ -44,6 +92,24 @@
                             <td>是否显示多选框</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>empty-text</td>
+                            <td>没有数据时的提示</td>
+                            <td>String</td>
+                            <td>暂无数据</td>
+                        </tr>
+                        <tr>
+                            <td>load-data</td>
+                            <td>异步加载数据的方法，见示例</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>render</td>
+                            <td>自定义渲染内容，见示例</td>
+                            <td>Function</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>
@@ -149,6 +215,12 @@
                             <td>Array</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>render</td>
+                            <td>自定义当前节点渲染内容，见示例</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -161,43 +233,286 @@
     import Demo from '../../components/demo.vue';
     import Code from '../../code/tree';
     import Anchor from '../../components/anchor.vue';
+    import studyRender from '../../components/study.vue';
 
     export default {
         components: {
             iArticle,
             iCode,
             Demo,
-            Anchor
+            Anchor,
+            studyRender
         },
         data () {
             return {
                 code: Code,
-                baseData: [{
-                    expand: true,
-                    title: 'parent 1',
-                    children: [{
-                        title: 'parent 1-0',
+                data1: [
+                    {
+                        title: 'parent 1',
                         expand: true,
-                        disabled: true,
-                        children: [{
-                            title: 'leaf',
-                            disableCheckbox: true
-                        }, {
-                            title: 'leaf',
-                        }]
-                    }, {
-                        title: 'parent 1-1',
+                        children: [
+                            {
+                                title: 'parent 1-1',
+                                expand: true,
+                                children: [
+                                    {
+                                        title: 'leaf 1-1-1'
+                                    },
+                                    {
+                                        title: 'leaf 1-1-2'
+                                    }
+                                ]
+                            },
+                            {
+                                title: 'parent 1-2',
+                                expand: true,
+                                children: [
+                                    {
+                                        title: 'leaf 1-2-1'
+                                    },
+                                    {
+                                        title: 'leaf 1-2-1'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                data2: [
+                    {
+                        title: 'parent 1',
                         expand: true,
-                        checked: true,
-                        children: [{
-                            title: '<span style="color: red">leaf</span>',
-                        }]
-                    }]
-                }]
+                        children: [
+                            {
+                                title: 'parent 1-1',
+                                expand: true,
+                                children: [
+                                    {
+                                        title: 'leaf 1-1-1'
+                                    },
+                                    {
+                                        title: 'leaf 1-1-2'
+                                    }
+                                ]
+                            },
+                            {
+                                title: 'parent 1-2',
+                                expand: true,
+                                children: [
+                                    {
+                                        title: 'leaf 1-2-1'
+                                    },
+                                    {
+                                        title: 'leaf 1-2-1'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                data3: [
+                    {
+                        title: 'parent',
+                        loading: false,
+                        children: []
+                    }
+                ],
+                data4: [
+                    {
+                        title: 'parent 1',
+                        expand: true,
+                        selected: true,
+                        children: [
+                            {
+                                title: 'parent 1-1',
+                                expand: true,
+                                children: [
+                                    {
+                                        title: 'leaf 1-1-1',
+                                        disabled: true
+                                    },
+                                    {
+                                        title: 'leaf 1-1-2'
+                                    }
+                                ]
+                            },
+                            {
+                                title: 'parent 1-2',
+                                expand: true,
+                                children: [
+                                    {
+                                        title: 'leaf 1-2-1',
+                                        checked: true
+                                    },
+                                    {
+                                        title: 'leaf 1-2-1'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                data5: [
+                    {
+                        title: 'parent 1',
+                        expand: true,
+                        render: (h, { root, node, data }) => {
+                            return h('span', {
+                                style: {
+                                    display: 'inline-block',
+                                    width: '100%'
+                                }
+                            }, [
+                                h('span', [
+                                    h('Icon', {
+                                        props: {
+                                            type: 'ios-folder-outline'
+                                        },
+                                        style: {
+                                            marginRight: '8px'
+                                        }
+                                    }),
+                                    h('span', data.title)
+                                ]),
+                                h('span', {
+                                    style: {
+                                        display: 'inline-block',
+                                        float: 'right',
+                                        marginRight: '32px'
+                                    }
+                                }, [
+                                    h('Button', {
+                                        props: Object.assign({}, this.buttonProps, {
+                                            icon: 'ios-plus-empty',
+                                            type: 'primary'
+                                        }),
+                                        style: {
+                                            width: '52px'
+                                        },
+                                        on: {
+                                            click: () => { this.append(data) }
+                                        }
+                                    })
+                                ])
+                            ]);
+                        },
+                        children: [
+                            {
+                                title: 'child 1-1',
+                                expand: true,
+                                children: [
+                                    {
+                                        title: 'leaf 1-1-1',
+                                        expand: true
+                                    },
+                                    {
+                                        title: 'leaf 1-1-2',
+                                        expand: true
+                                    }
+                                ]
+                            },
+                            {
+                                title: 'child 1-2',
+                                expand: true,
+                                children: [
+                                    {
+                                        title: 'leaf 1-2-1',
+                                        expand: true
+                                    },
+                                    {
+                                        title: 'leaf 1-2-1',
+                                        expand: true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                buttonProps: {
+                    type: 'ghost',
+                    size: 'small',
+                }
             }
         },
         methods: {
-
+            loadData (item, callback) {
+                setTimeout(() => {
+                    const data = [
+                        {
+                            title: 'children',
+                            loading: false,
+                            children: []
+                        },
+                        {
+                            title: 'children',
+                            loading: false,
+                            children: []
+                        }
+                    ];
+                    callback(data);
+                }, 1000);
+            },
+            renderContent (h, { root, node, data }) {
+                return h('span', {
+                    style: {
+                        display: 'inline-block',
+                        width: '100%'
+                    }
+                }, [
+                    h('span', [
+                        h('Icon', {
+                            props: {
+                                type: 'ios-paper-outline'
+                            },
+                            style: {
+                                marginRight: '8px'
+                            }
+                        }),
+                        h('span', data.title)
+                    ]),
+                    h('span', {
+                        style: {
+                            display: 'inline-block',
+                            float: 'right',
+                            marginRight: '32px'
+                        }
+                    }, [
+                        h('Button', {
+                            props: Object.assign({}, this.buttonProps, {
+                                icon: 'ios-plus-empty'
+                            }),
+                            style: {
+                                marginRight: '8px'
+                            },
+                            on: {
+                                click: () => { this.append(data) }
+                            }
+                        }),
+                        h('Button', {
+                            props: Object.assign({}, this.buttonProps, {
+                                icon: 'ios-minus-empty'
+                            }),
+                            on: {
+                                click: () => { this.remove(root, node, data) }
+                            }
+                        })
+                    ])
+                ]);
+            },
+            append (data) {
+                const children = data.children || [];
+                children.push({
+                    title: 'appended node',
+                    expand: true
+                });
+                this.$set(data, 'children', children);
+            },
+            remove (root, node, data) {
+                const parentKey = root.find(el => el === node).parent;
+                const parent = root.find(el => el.nodeKey === parentKey).node;
+                const index = parent.children.indexOf(data);
+                parent.children.splice(index, 1);
+            }
         }
     };
 </script>
