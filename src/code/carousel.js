@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <Carousel v-model="value1">
+    <Carousel v-model="value1" loop>
         <CarouselItem>
             <div class="demo-carousel">1</div>
         </CarouselItem>
@@ -30,7 +30,7 @@ code.base = `
 
 code.autoplay = `
 <template>
-    <Carousel autoplay v-model="value2">
+    <Carousel autoplay v-model="value2" loop>
         <CarouselItem>
             <div class="demo-carousel">1</div>
         </CarouselItem>
@@ -60,10 +60,16 @@ code.setting = `
 <template>
     <Form :model="setting" :label-width="100">
         <FormItem label="自动切换">
-            <i-switch v-model="setting.autoplay">
+            <Switch v-model="setting.autoplay">
                 <span slot="open">开</span>
                 <span slot="close">关</span>
-            </i-switch>
+            </Switch>
+        </FormItem>
+        <FormItem label="圆形指示器">
+            <Switch v-model="setting.radiusDot">
+                <span slot="open">开</span>
+                <span slot="close">关</span>
+            </Switch>
         </FormItem>
         <FormItem label="自动切换速度">
             <Slider v-model="setting.autoplaySpeed" :min="300" :max="10000" :step="100"></Slider>
@@ -94,6 +100,7 @@ code.setting = `
         :autoplay="setting.autoplay"
         :autoplay-speed="setting.autoplaySpeed"
         :dots="setting.dots"
+        :radius-dot="setting.radiusDot"
         :trigger="setting.trigger"
         :arrow="setting.arrow">
         <CarouselItem>
@@ -119,6 +126,7 @@ code.setting = `
                     autoplay: false,
                     autoplaySpeed: 2000,
                     dots: 'inside',
+                    radiusDot: false,
                     trigger: 'click',
                     arrow: 'hover'
                 }

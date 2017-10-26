@@ -17,7 +17,7 @@
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">
-                    <Carousel v-model="value1">
+                    <Carousel v-model="value1" loop>
                         <CarouselItem>
                             <div class="demo-carousel">1</div>
                         </CarouselItem>
@@ -39,7 +39,7 @@
             </Demo>
             <Demo title="自动切换">
                 <div slot="demo">
-                    <Carousel autoplay v-model="value2">
+                    <Carousel autoplay v-model="value2" loop>
                         <CarouselItem>
                             <div class="demo-carousel">1</div>
                         </CarouselItem>
@@ -63,10 +63,16 @@
                 <div slot="demo">
                     <Form :model="setting" :label-width="100">
                         <FormItem label="自动切换">
-                            <i-switch v-model="setting.autoplay">
+                            <Switch v-model="setting.autoplay">
                                 <span slot="open">开</span>
                                 <span slot="close">关</span>
-                            </i-switch>
+                            </Switch>
+                        </FormItem>
+                        <FormItem label="圆形指示器">
+                            <Switch v-model="setting.radiusDot">
+                                <span slot="open">开</span>
+                                <span slot="close">关</span>
+                            </Switch>
                         </FormItem>
                         <FormItem label="自动切换速度">
                             <Slider v-model="setting.autoplaySpeed" :min="300" :max="10000" :step="100"></Slider>
@@ -97,6 +103,7 @@
                         :autoplay="setting.autoplay"
                         :autoplay-speed="setting.autoplaySpeed"
                         :dots="setting.dots"
+                        :radius-dot="setting.radiusDot"
                         :trigger="setting.trigger"
                         :arrow="setting.arrow">
                         <CarouselItem>
@@ -144,6 +151,12 @@
                             <td>auto</td>
                         </tr>
                         <tr>
+                            <td>loop</td>
+                            <td>是否开启循环</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
                             <td>autoplay</td>
                             <td>是否自动切换</td>
                             <td>Boolean</td>
@@ -160,6 +173,12 @@
                             <td>指示器的位置，可选值为 inside （内部），outside（外部），none（不显示）</td>
                             <td>String</td>
                             <td>inside</td>
+                        </tr>
+                        <tr>
+                            <td>radius-dot</td>
+                            <td>是否显示圆形指示器</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>trigger</td>
@@ -226,6 +245,7 @@
                     autoplay: false,
                     autoplaySpeed: 2000,
                     dots: 'inside',
+                    radiusDot: false,
                     trigger: 'click',
                     arrow: 'hover'
                 }
