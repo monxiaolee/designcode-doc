@@ -56,7 +56,7 @@
             <div class="i-article">
                 <Row>
                     <Col span="10">
-                        <img src="https://ooo.0o0.ooo/2017/10/25/59f0b2bbd6678.png" style="display: block;width: 90%;margin: 0 auto;">
+                        <img src="../images/vue-book.png" style="display: block;width: 90%;margin: 0 auto;">
                     </Col>
                     <Col span="14">
                         <div style="padding: 32px">
