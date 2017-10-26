@@ -51,7 +51,7 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.color }}</i-code>
             </Demo>
-            <Demo title="Checkable">
+            <Demo title="可选择">
                 <div slot="demo">
                     <Tag checkable color="blue">标签一</Tag>
                     <Tag checkable color="green">标签二</Tag>
