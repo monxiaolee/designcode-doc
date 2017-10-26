@@ -95,6 +95,12 @@
                         <td>Function</td>
                         <td>-</td>
                     </tr>
+                    <tr>
+                        <td>distance-to-edge</td>
+                        <td>Distance from edge to trigger the callback. If negative, callback will fire before reaching edge. Positive values should be under 24.</td>
+                        <td>Number | Array</td>
+                        <td>[20, 20]</td>
+                    </tr>
                     </tbody>
                 </table>
             </div>

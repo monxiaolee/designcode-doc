@@ -25,6 +25,28 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.6.0 FRAMED" h2></Anchor>
+                    <p>
+                        <code>2017-10-26</code>
+                    </p>
+                    <ul>
+                        <li>Refactor the Tree component to support Render function, asynchronous loading data, and perfect documentation. <mention id="SergioCrisostomo"></mention></li>
+                        <li>Carousel add new properties <code>loop</code> and <code>radius-dot</code>. <issue id="2181"></issue> <mention id="lisafra"></mention></li>
+                        <li>Tabs can be rolled when TabPane are too much. <issue id="1031"></issue> <mention id="marxy"></mention></li>
+                        <li>The Date panel can display local year and month formats based on the current language package. <issue id="2097"></issue> <mention id="SergioCrisostomo"></mention></li>
+                        <li>Table add new properties <code>callback</code>, <code>quoted</code> and <code>separator</code> in export csv file. <issue id="2114"></issue></li>
+                        <li>Table add filter event <code>on-filter-change</code>. <issue id="2078"></issue></li>
+                        <li>Tag add new property <code>checkable</code>. <issue id="2115"></issue></li>
+                        <li>Scroll add new property <code>distance-to-edge</code>.  <issue id="2137"></issue></li>
+                        <li>Fix the Scroll component bug under the Firefox browser that unable to trigger the rolling event. <issue id="2135"></issue></li>
+                        <li>Fix Select bug in remote and multiple mode, and when the data is cleared, the selected item is not empty. <issue id="2066"></issue></li>
+                        <li>Fix Poptip bug in transfer mode, the float layer will be closed when click inside. <issue id="1700"></issue></li>
+                        <li>Fix Tabs bug that can not update TabPane using v-for directive. <issue id="2100"></issue></li>
+                        <li>Fix Cascader bug in trigger mode with only one item, sometimes it will be selected directly. <issue id="1922"></issue></li>
+                        <li>Fix the bug when Input size is small, and using in FormItem, the icon's position is wrong. <issue id="2149"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.5.1" h2></Anchor>
                     <p>
                         <code>2017-10-18</code>

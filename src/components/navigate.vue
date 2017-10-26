@@ -3,7 +3,7 @@
 </style>
 <template>
     <div class="navigate">
-        <div class="ad" @click="handleAd" v-if="lang === 'zh-CN'">
+        <div class="ad" @click="handleAd">
             <div class="ad-main">
                 <img src="../images/ad-vue.png">
             </div>

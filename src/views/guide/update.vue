@@ -25,6 +25,28 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.6.0 FRAMED" h2></Anchor>
+                    <p>
+                        <code>2017-10-26</code>
+                    </p>
+                    <ul>
+                        <li>重构 Tree 组件，支持 Render 函数、异步加载数据，完善文档。<mention id="SergioCrisostomo"></mention></li>
+                        <li>Carousel 增加循环滚动属性 <code>loop</code> 和圆形指示器属性 <code>radius-dot</code>。<issue id="2181"></issue> <mention id="lisafra"></mention></li>
+                        <li>Tabs 标签页过多时，可以进行滚动。<issue id="1031"></issue> <mention id="marxy"></mention></li>
+                        <li>Date 面板可根据当前语言包显示当地的年月格式。<issue id="2097"></issue> <mention id="SergioCrisostomo"></mention></li>
+                        <li>Table 导出 csv 数据方法新增 <code>callback</code>、<code>quoted</code> 和 <code>separator</code> 选项。<issue id="2114"></issue></li>
+                        <li>Table 新增过滤事件 <code>on-filter-change</code>。<issue id="2078"></issue></li>
+                        <li>Tag 新增可选择属性 <code>checkable</code>。<issue id="2115"></issue></li>
+                        <li>Scroll 新增边缘距离属性 <code>distance-to-edge</code>。<issue id="2137"></issue></li>
+                        <li>修复 Scroll 组件在 Firefox 浏览器下，无法触发滚动事件的 bug。<issue id="2135"></issue></li>
+                        <li>修复 Select 在 remote、multiple 模式下，主动清空数据后，未清空选中项的 bug。<issue id="2066"></issue></li>
+                        <li>修复 Poptip 在 transfer 模式下，点击内部会关闭浮层的 bug。<issue id="1700"></issue></li>
+                        <li>修复 Tabs 的 TabPane 无法使用 v-for 动态更新的 bug。<issue id="2100"></issue></li>
+                        <li>修复 Cascader 在 trigger 为 hover 模式下，只有一项时，有时会直接选中的 bug。<issue id="1922"></issue></li>
+                        <li>修复 Input 在 FormItem 内，size 为 small 时，icon 错位的 bug。<issue id="2149"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.5.1" h2></Anchor>
                     <p>
                         <code>2017-10-18</code>

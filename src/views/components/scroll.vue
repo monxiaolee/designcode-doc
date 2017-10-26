@@ -95,6 +95,12 @@
                             <td>Function</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>distance-to-edge</td>
+                            <td>从边缘到触发回调的距离。如果是负的，回调将在到达边缘之前触发。值最好在 24 以下。</td>
+                            <td>Number | Array</td>
+                            <td>[20, 20]</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
