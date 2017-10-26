@@ -138,7 +138,7 @@
                 <div slot="demo">
                     <Tabs type="card">
                         <TabPane v-for="tab in tabs" :key="tab" :label="'标签' + tab">标签{{ tab }}</TabPane>
-                        <Button type="ghost" @click="handleTabsAdd" size="small" slot="extra" :disabled="tabs > 3">增加</Button>
+                        <Button type="ghost" @click="handleTabsAdd" size="small" slot="extra">增加</Button>
                     </Tabs>
                 </div>
                 <div slot="desc">
