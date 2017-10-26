@@ -60,6 +60,20 @@ code.color = `
 </script>
 `;
 
+code.checkable = `
+<template>
+    <Tag checkable color="blue">标签一</Tag>
+    <Tag checkable color="green">标签二</Tag>
+    <Tag checkable color="red">标签三</Tag>
+    <Tag checkable color="yellow">标签四</Tag>
+</template>
+<script>
+    export default {
+        
+    }
+</script>
+`;
+
 code.add = `
 <template>
     <Tag v-for="item in count" :key="item" :name="item" closable @on-close="handleClose2">标签{{ item + 1 }}</Tag>

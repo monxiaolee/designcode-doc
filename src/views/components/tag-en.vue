@@ -51,6 +51,18 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.color }}</i-code>
             </Demo>
+            <Demo title="Checkable">
+                <div slot="demo">
+                    <Tag checkable color="blue">标签一</Tag>
+                    <Tag checkable color="green">标签二</Tag>
+                    <Tag checkable color="red">标签三</Tag>
+                    <Tag checkable color="yellow">标签四</Tag>
+                </div>
+                <div slot="desc">
+                    <p>Set the property <code>checkable</code> to select the tag, and the property <code>checked</code> to control the current selection state.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.checkable }}</i-code>
+            </Demo>
             <Demo title="Add & Remove Dynamically">
                 <div slot="demo">
                     <Tag v-for="item in count" :key="item" :name="item" closable @on-close="handleClose2">标签{{ item + 1 }}</Tag>
@@ -79,6 +91,18 @@
                             <td>Tag can be closed.</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>checkable</td>
+                            <td>Tag can be selected.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>checked</td>
+                            <td>The selected state of the tag.</td>
+                            <td>Boolean</td>
+                            <td>true</td>
                         </tr>
                         <tr>
                             <td>type</td>
