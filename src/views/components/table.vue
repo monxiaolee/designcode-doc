@@ -420,6 +420,11 @@
                             </td>
                         </tr>
                         <tr>
+                            <td>on-filter-change</td>
+                            <td>筛选时有效，筛选条件发生变化时触发</td>
+                            <td>当前列数据</td>
+                        </tr>
+                        <tr>
                             <td>on-row-click</td>
                             <td>单击某一行时触发</td>
                             <td>
@@ -516,6 +521,18 @@
                                     <li>
                                         <strong>data</strong>
                                         自定义导出的行数据
+                                    </li>
+                                    <li>
+                                        <strong>callback</strong>
+                                        添加此函数后，不会下载，而是返回数据
+                                    </li>
+                                    <li>
+                                        <strong>separator</strong>
+                                        数据分隔符，默认是逗号(,)
+                                    </li>
+                                    <li>
+                                        <strong>quoted</strong>
+                                        每项数据是否加引号，默认为 false
                                     </li>
                                 </ul>
                                 说明：columns 和 data 需同时声明，声明后将导出指定的数据，建议列数据有自定义render时，可以根据需求自定义导出内容

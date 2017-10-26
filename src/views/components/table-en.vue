@@ -417,6 +417,11 @@
                             </td>
                         </tr>
                         <tr>
+                            <td>on-filter-change</td>
+                            <td>It works during filtering. Emitted when the filter conditions change.</td>
+                            <td>Current column.</td>
+                        </tr>
+                        <tr>
                             <td>on-row-click</td>
                             <td>Emitted when clicking a certain row.</td>
                             <td>
@@ -513,6 +518,18 @@
                                     <li>
                                         <strong>data</strong>
                                         Customize rows to be exported.
+                                    </li>
+                                    <li>
+                                        <strong>callback</strong>
+                                        After you add this function, you will not download, but return the data.
+                                    </li>
+                                    <li>
+                                        <strong>separator</strong>
+                                        Data delimiters, by default, are commas (,).
+                                    </li>
+                                    <li>
+                                        <strong>quoted</strong>
+                                        If each data is quoted, the default is false.
                                     </li>
                                 </ul>
                                 Notice: columns and data should be declared simultaneously. If are declared, only selected data will be exported.
