@@ -10,6 +10,13 @@
                 <li>Extensive documentation.</li>
                 <li>Customized theme.</li>
             </ul>
+            <Anchor title="Who's using iView" h2></Anchor>
+            <ul>
+                <li><a href="http://www.talkingdata.com/" target="_blank">TalkingData</a></li>
+                <li><a href="http://www.alibaba.com/" target="_blank">Alibaba</a></li>
+                <li><a href="http://www.jd.com/" target="_blank">JD</a></li>
+                <li><a href="http://www.didichuxing.com/" target="_blank">Didi</a></li>
+            </ul>
             <Anchor title="Example" h2></Anchor>
             <i-code lang="html" bg>{{ code.introduce.demo }}</i-code>
             <p>Result</p>

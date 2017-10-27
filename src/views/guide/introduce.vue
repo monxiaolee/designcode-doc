@@ -11,6 +11,13 @@
                 <li>事无巨细的文档</li>
                 <li>可自定义主题</li>
             </ul>
+            <Anchor title="谁在使用" h2></Anchor>
+            <ul>
+                <li><a href="http://www.talkingdata.com/" target="_blank">TalkingData</a></li>
+                <li><a href="http://www.alibaba.com/" target="_blank">阿里巴巴</a></li>
+                <li><a href="http://www.jd.com/" target="_blank">京东</a></li>
+                <li><a href="http://www.didichuxing.com/" target="_blank">滴滴出行</a></li>
+            </ul>
             <Anchor title="安装" h2></Anchor>
             <p>使用 npm</p>
             <i-code lang="auto" bg>{{ code.introduce.install }}</i-code>
