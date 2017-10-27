@@ -119,6 +119,7 @@
                 });
             },
             handleAd () {
+                _hmt.push(['_trackEvent', 'vue-book', 'click']);
 //                this.$router.push('/live');
                 this.showAd = true;
 //                window.open('https://www.iviewui.com/vue-book');
