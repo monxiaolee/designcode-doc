@@ -56,7 +56,7 @@
                                 <a href="https://www.talkingdata.com/" target="_blank">TalkingData</a> - {{ $t('index.td') }}
                             </li>
                             <li>
-                                <a href="https://www.talkingdata.com/" target="_blank">Marketing Intelligence</a> - {{ $t('index.td_mi') }}
+                                <a href="http://mi.talkingdata.com/" target="_blank">Marketing Intelligence</a> - {{ $t('index.td_mi') }}
                             </li>
                             <li>
                                 <a href="https://github.com/TalkingData/Fregata" target="_blank">Fregata</a> - {{ $t('index.Fregata') }}

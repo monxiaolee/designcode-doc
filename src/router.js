@@ -24,6 +24,13 @@ const routers = [
         component: (resolve) => require(['./views/vue-book-check.vue'], resolve)
     },
     {
+        path: '/new-issue',
+        meta: {
+            title: 'iView Issue Helper'
+        },
+        component: (resolve) => require(['./views/new-issue.vue'], resolve)
+    },
+    {
         path: '/cli',
         meta: {
             title: 'iView Cli 可视化脚手架'
