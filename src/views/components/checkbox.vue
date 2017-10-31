@@ -72,20 +72,20 @@
             <Demo title="与其它组件通信">
                 <div slot="demo">
                     <Checkbox v-model="checked" :disabled="disabled">
-                        <span v-if="checked">选中</span>
-                        <span v-else>取消</span>
+                        <span v-if="checked">Checked</span>
+                        <span v-else>Unchecked</span>
                          - 
-                        <span v-if="!disabled">可用</span>
-                        <span v-else>不可用</span>
+                        <span v-if="!disabled">Usable</span>
+                        <span v-else>Disabled</span>
                     </Checkbox>
                     <br>
                     <Button type="primary" @click="checked = !checked">
-                        <span v-if="!checked">选中</span>
-                        <span v-else>取消</span>
+                        <span v-if="!checked">Checked</span>
+                        <span v-else>Unchecked</span>
                     </Button>
                     <Button type="primary" @click="disabled = !disabled">
-                        <span v-if="disabled">可用</span>
-                        <span v-else>不可用</span>
+                        <span v-if="disabled">Usable</span>
+                        <span v-else>Disabled</span>
                     </Button>
                 </div>
                 <div slot="desc">
