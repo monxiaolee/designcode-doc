@@ -77,15 +77,15 @@ $ npm install iview --save
 install.import = `
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import App from 'components/app.vue';    // 路由挂载
-import Routers from './router.js';       // 路由列表
+import App from 'components/app.vue';
+import Routers from './router.js';
 import iView from 'iview';
-import 'iview/dist/styles/iview.css';    // 使用 CSS
+import 'iview/dist/styles/iview.css';
 
 Vue.use(VueRouter);
 Vue.use(iView);
 
-// 路由配置
+// The routing configuration
 const RouterConfig = {
     routes: Routers
 };
@@ -122,10 +122,10 @@ $ npm run build
 `;
 
 standard.prop = `
-正确的使用方法：
+Correct usage:
 <Page :current="1" :total="100"></Page>
 
-错误的使用方法：
+Incorrect usage:
 <Page current="1" total="100"></Page>
 `;
 
@@ -150,13 +150,13 @@ Vue.use(iView);
 Vue.config.lang = 'zh-CN';
 Vue.locale('zh-CN', zhLocale);
 Vue.locale('en-US', enLocale);
-// 注意：使用 vue-i18n 时，需要将本地的语言包和 iView 的语言包合并
+// Note: when using vue-i18n, you need to merge the local language pack with the iView language package
 `;
 
 theme.less = `
 @import '~iview/src/styles/index.less';
 
-// 下面是要覆盖的变量，例如：
+// Here are the variables to cover, such as:
 @primary-color: #8c0776;
 `;
 
