@@ -8,7 +8,7 @@
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
-                    <Input v-model="value" placeholder="请输入..." style="width: 300px"></Input>
+                    <Input v-model="value" placeholder="Enter something..." style="width: 300px"></Input>
                 </div>
                 <div slot="desc">
                     <p>Basic usage. You can use <code>v-model</code> to enable a two-way bingding on data.</p>
@@ -38,7 +38,7 @@
             </Demo>
             <Demo title="Input with Icon">
                 <div slot="demo">
-                    <Input v-model="value4" icon="ios-clock-outline" placeholder="请输入..." style="width: 200px"></Input>
+                    <Input v-model="value4" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px"></Input>
                 </div>
                 <div slot="desc">
                     <p>Add an icon at the left of the input box by setting <code>icon</code> prop.</p>
@@ -50,10 +50,10 @@
                 <div slot="demo">
                     <Row :gutter="8">
                         <Col span="12">
-                            <Input v-model="value5" type="textarea" placeholder="请输入..."></Input>
+                            <Input v-model="value5" type="textarea" placeholder="Enter something..."></Input>
                         </Col>
                         <Col span="12">
-                            <Input v-model="value6" type="textarea" :rows="4" placeholder="请输入..."></Input>
+                            <Input v-model="value6" type="textarea" :rows="4" placeholder="Enter something..."></Input>
                         </Col>
                     </Row>
                 </div>
@@ -67,10 +67,10 @@
                 <div slot="demo">
                     <Row :gutter="8">
                         <Col span="12">
-                            <Input v-model="value7" type="textarea" :autosize="true" placeholder="请输入..."></Input>
+                            <Input v-model="value7" type="textarea" :autosize="true" placeholder="Enter something..."></Input>
                         </Col>
                         <Col span="12">
-                            <Input v-model="value8" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
+                            <Input v-model="value8" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="Enter something..."></Input>
                         </Col>
                     </Row>
                 </div>
@@ -84,10 +84,10 @@
                 <div slot="demo">
                     <Row :gutter="8">
                         <Col span="12">
-                            <Input v-model="value9" disabled placeholder="请输入..."></Input>
+                            <Input v-model="value9" disabled placeholder="Enter something..."></Input>
                         </Col>
                         <Col span="12">
-                            <Input v-model="value10" disabled type="textarea" placeholder="请输入..."></Input>
+                            <Input v-model="value10" disabled type="textarea" placeholder="Enter something..."></Input>
                         </Col>
                     </Row>
                 </div>
@@ -117,8 +117,8 @@
                     <br>
                     <Input v-model="value13">
                         <Select v-model="select3" slot="prepend" style="width: 80px">
-                            <Option value="day">日活</Option>
-                            <Option value="month">月活</Option>
+                            <Option value="day">Day</Option>
+                            <Option value="month">Month</Option>
                         </Select>
                         <Button slot="append" icon="ios-search"></Button>
                     </Input>

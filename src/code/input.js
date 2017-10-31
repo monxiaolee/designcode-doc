@@ -2,7 +2,7 @@ let code = {};
 
 code.base = `
 <template>
-    <Input v-model="value" placeholder="请输入..." style="width: 300px"></Input>
+    <Input v-model="value" placeholder="Enter something..." style="width: 300px"></Input>
 </template>
 <script>
     export default {
@@ -38,7 +38,7 @@ code.size = `
 
 code.icon = `
 <template>
-    <Input v-model="value4" icon="ios-clock-outline" placeholder="请输入..." style="width: 200px"></Input>
+    <Input v-model="value4" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px"></Input>
 </template>
 <script>
     export default {
@@ -53,8 +53,8 @@ code.icon = `
 
 code.textarea = `
 <template>
-    <Input v-model="value5" type="textarea" placeholder="请输入..."></Input>
-    <Input v-model="value6" type="textarea" :rows="4" placeholder="请输入..."></Input>
+    <Input v-model="value5" type="textarea" placeholder="Enter something..."></Input>
+    <Input v-model="value6" type="textarea" :rows="4" placeholder="Enter something..."></Input>
 </template>
 <script>
     export default {
@@ -70,8 +70,8 @@ code.textarea = `
 
 code.autosize = `
 <template>
-    <Input v-model="value7" type="textarea" :autosize="true" placeholder="请输入..."></Input>
-    <Input v-model="value8" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="请输入..."></Input>
+    <Input v-model="value7" type="textarea" :autosize="true" placeholder="Enter something..."></Input>
+    <Input v-model="value8" type="textarea" :autosize="{minRows: 2,maxRows: 5}" placeholder="Enter something..."></Input>
 </template>
 <script>
     export default {
@@ -87,8 +87,8 @@ code.autosize = `
 
 code.disabled = `
 <template>
-    <Input v-model="value9" disabled placeholder="请输入..."></Input>
-    <Input v-model="value10" disabled type="textarea" placeholder="请输入..."></Input>
+    <Input v-model="value9" disabled placeholder="Enter something..."></Input>
+    <Input v-model="value10" disabled type="textarea" placeholder="Enter something..."></Input>
 </template>
 <script>
     export default {
@@ -123,8 +123,8 @@ code.addon = `
     <br>
     <Input v-model="value13">
         <Select v-model="select3" slot="prepend" style="width: 80px">
-            <Option value="day">日活</Option>
-            <Option value="month">月活</Option>
+            <Option value="day">Day</Option>
+            <Option value="month">Month</Option>
         </Select>
         <Button slot="append" icon="ios-search"></Button>
     </Input>
