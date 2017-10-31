@@ -8,10 +8,10 @@ code.type = `
     <Button type="dashed">Dashed</Button>
     <Button type="text">Text</Button>
     <br><br>
-    <Button type="info">信息按钮</Button>
-    <Button type="success">成功按钮</Button>
-    <Button type="warning">警告按钮</Button>
-    <Button type="error">错误按钮</Button>
+    <Button type="info">Info</Button>
+    <Button type="success">Success</Button>
+    <Button type="warning">Warning</Button>
+    <Button type="error">Error</Button>
 </template>
 <script>
     export default {
@@ -23,14 +23,14 @@ code.type = `
 code.icon = `
 <template>
     <Button type="primary" shape="circle" icon="ios-search"></Button>
-    <Button type="primary" icon="ios-search">搜索</Button>
-    <Button type="primary" shape="circle" icon="ios-search">搜索</Button>
-    <Button type="primary" shape="circle">圆角按钮</Button>
+    <Button type="primary" icon="ios-search">Search</Button>
+    <Button type="primary" shape="circle" icon="ios-search">Search</Button>
+    <Button type="primary" shape="circle">Circle</Button>
     <br><br>
     <Button type="ghost" shape="circle" icon="ios-search"></Button>
-    <Button type="ghost" icon="ios-search">搜索</Button>
-    <Button type="ghost" shape="circle" icon="ios-search">搜索</Button>
-    <Button type="ghost" shape="circle">圆角按钮</Button>
+    <Button type="ghost" icon="ios-search">Search</Button>
+    <Button type="ghost" shape="circle" icon="ios-search">Search</Button>
+    <Button type="ghost" shape="circle">Circle</Button>
 </template>
 <script>
     export default {
@@ -58,9 +58,9 @@ code.size = `
 
 code.long = `
 <template>
-    <Button type="success" long>确认提交</Button>
+    <Button type="success" long>SUBMIT</Button>
     <br><br>
-    <Button type="error" long>确认删除</Button>
+    <Button type="error" long>DELETE</Button>
 </template>
 <script>
     export default {
@@ -126,16 +126,16 @@ code.loading = `
 `;
 code.group = `
 <template>
-    <h4>基本</h4>
+    <h4>Basic</h4>
     <br><br>
     <ButtonGroup>
-        <Button>取消</Button>
-        <Button type="primary">确定</Button>
+        <Button>Cancel</Button>
+        <Button type="primary">Confirm</Button>
     </ButtonGroup>
     <ButtonGroup>
-        <Button disabled>昨日</Button>
-        <Button disabled>今日</Button>
-        <Button disabled>明日</Button>
+        <Button disabled>Yesterday</Button>
+        <Button disabled>Today</Button>
+        <Button disabled>Tomorrow</Button>
     </ButtonGroup>
     <ButtonGroup>
         <Button type="primary">L</Button>
@@ -144,15 +144,15 @@ code.group = `
         <Button type="dashed">R</Button>
     </ButtonGroup>
     <br><br>
-    <h4>配合图标</h4>
+    <h4>Icons</h4>
     <br><br>
     <ButtonGroup>
         <Button type="primary">
             <Icon type="chevron-left"></Icon>
-            前进
+            Backward
         </Button>
         <Button type="primary">
-            后退
+            Forward
             <Icon type="chevron-right"></Icon>
         </Button>
     </ButtonGroup>
@@ -167,15 +167,15 @@ code.group = `
         <Button type="ghost" icon="ios-color-filter-outline"></Button>
     </ButtonGroup>
     <br><br>
-    <h4>圆角</h4>
+    <h4>Circle</h4>
     <br><br>
     <ButtonGroup shape="circle">
         <Button type="primary">
             <Icon type="chevron-left"></Icon>
-            前进
+            Backward
         </Button>
         <Button type="primary">
-            后退
+            Forward
             <Icon type="chevron-right"></Icon>
         </Button>
     </ButtonGroup>
@@ -190,7 +190,7 @@ code.group = `
         <Button type="ghost" icon="ios-color-filter-outline"></Button>
     </ButtonGroup>
     <br><br>
-    <h4>尺寸</h4>
+    <h4>Size</h4>
     <br><br>
     <ButtonGroup size="large">
         <Button type="ghost">Large</Button>
