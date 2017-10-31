@@ -18,6 +18,9 @@
                 <li><a href="http://www.jd.com/" target="_blank">京东</a></li>
                 <li><a href="http://www.didichuxing.com/" target="_blank">滴滴出行</a></li>
             </ul>
+            <blockquote>
+                如果你的公司和产品使用了iView，欢迎到 <a href="https://github.com/iview/iview/issues/2143" target="_blank">这里</a> 留言。
+            </blockquote>
             <Anchor title="安装" h2></Anchor>
             <p>使用 npm</p>
             <i-code lang="auto" bg>{{ code.introduce.install }}</i-code>

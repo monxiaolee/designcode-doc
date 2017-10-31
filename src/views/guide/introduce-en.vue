@@ -17,6 +17,9 @@
                 <li><a href="http://www.jd.com/" target="_blank">JD</a></li>
                 <li><a href="http://www.didichuxing.com/" target="_blank">Didi</a></li>
             </ul>
+            <blockquote>
+                If your company or products use iView, welcome to click <a href="https://github.com/iview/iview/issues/2143" target="_blank">here</a> to leave a message.
+            </blockquote>
             <Anchor title="Example" h2></Anchor>
             <i-code lang="html" bg>{{ code.introduce.demo }}</i-code>
             <p>Result</p>
