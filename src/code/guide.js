@@ -30,11 +30,11 @@ introduce.demo = `
 `;
 
 install.cdn = `
-<!-- 引入Vue -->
+<!-- import Vue.js -->
 <script src="//vuejs.org/js/vue.min.js"></script>
-<!-- 引入样式 -->
+<!-- import stylesheet -->
 <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
-<!-- 引入组件库 -->
+<!-- import iView -->
 <script src="//unpkg.com/iview/dist/iview.min.js"></script>
 `;
 
@@ -51,7 +51,7 @@ install.demo = `
 <body>
 <div id="app">
     <i-button @click="show">Click me!</i-button>
-    <Modal v-model="visible" title="Welcome">欢迎使用 iView</Modal>
+    <Modal v-model="visible" title="Welcome">Welcome to iView</Modal>
 </div>
 <script>
     new Vue({
