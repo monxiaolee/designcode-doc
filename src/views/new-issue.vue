@@ -109,42 +109,64 @@
                         <FormItem label="Issue 标题：" prop="title">
                             <Input v-model="formData.title"/>
                         </FormItem>
-                        <FormItem label="重现链接：" prop="link">
-                            <Input v-model="formData.link"/>
-                        </FormItem>
-                        <div class="ivu-article" style="margin-bottom: 20px">
-                            <p>
-                                请提供一个尽可能精简的 <a href="https://jsfiddle.net/yyrzhm46/" target="_blank">JSFiddle</a> 链接或是 GitHub 仓库的链接。
+
+                        <template v-if="formData.type === 'feature-request'">
+                            <FormItem label="这个功能解决了什么问题？" prop="problem">
+                                <Input type="textarea" v-model="formData.problem" :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <div class="ivu-article" style="margin-bottom: 20px">
+                                <p>
+                                    请尽可能详尽地说明这个需求的用例和场景。最重要的是：解释清楚是怎样的用户体验需求催生了这个功能上的需求。iView 的一个重要设计原则是保持 API 的简洁和直接。通常来说，我们只考虑添加在现有的 API 下无法轻松实现的功能。新功能的用例也应当足够常见。
+                                </p>
+                            </div>
+                            <FormItem label="你期望的 API 是怎样的？" prop="api">
+                                <Input type="textarea" v-model="formData.api" :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <div class="ivu-article" style="margin-bottom: 20px">
+                                <p>
+                                    描述一下你期望这个新功能的 API 是如何使用的，并提供一些代码示例。请用 <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown</a> 格式化你的代码片段。
                             </p>
-                            <p>
-                                <a @click="handleOpenMin">什么是最小化重现，为什么这是必需的？</a>
+                            </div>
+                        </template>
+
+                        <template v-if="formData.type === 'bug'">
+                            <FormItem label="重现链接：" prop="link">
+                                <Input v-model="formData.link"/>
+                            </FormItem>
+                            <div class="ivu-article" style="margin-bottom: 20px">
+                                <p>
+                                    请提供一个尽可能精简的 <a href="https://jsfiddle.net/yyrzhm46/" target="_blank">JSFiddle</a> 链接或是 GitHub 仓库的链接。
                             </p>
-                        </div>
-                        <FormItem label="环境（操作系统版本 / 浏览器版本 / Vue 版本等等信息）：" prop="system">
-                            <Input v-model="formData.system"/>
-                        </FormItem>
-                        <FormItem label="重现步骤：" prop="step">
-                            <Input type="textarea" v-model="formData.step" :autosize="{minRows: 2,maxRows: 10}"/>
-                        </FormItem>
-                        <div class="ivu-article" style="margin-bottom: 20px">
-                            <p>
-                                简洁清晰的重现步骤能够帮助我们更迅速地定位问题所在。支持使用 <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown</a> 来格式化列表或是代码片段。
+                                <p>
+                                    <a @click="handleOpenMin">什么是最小化重现，为什么这是必需的？</a>
+                                </p>
+                            </div>
+                            <FormItem label="环境（操作系统版本 / 浏览器版本 / Vue 版本等等信息）：" prop="system">
+                                <Input v-model="formData.system"/>
+                            </FormItem>
+                            <FormItem label="重现步骤：" prop="step">
+                                <Input type="textarea" v-model="formData.step" :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <div class="ivu-article" style="margin-bottom: 20px">
+                                <p>
+                                    简洁清晰的重现步骤能够帮助我们更迅速地定位问题所在。支持使用 <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown</a> 来格式化列表或是代码片段。
                             </p>
-                        </div>
-                        <FormItem label="期望的结果是什么？" prop="expectedOutcome">
-                            <Input type="textarea" v-model="formData.expectedOutcome"
-                                   :autosize="{minRows: 2,maxRows: 10}"/>
-                        </FormItem>
-                        <FormItem label="实际的结果是什么？" prop="actualResult">
-                            <Input type="textarea" v-model="formData.actualResult"
-                                   :autosize="{minRows: 2,maxRows: 10}"/>
-                        </FormItem>
-                        <FormItem label="补充说明（可选）：" prop="supplement">
-                            <Input type="textarea" v-model="formData.supplement" :autosize="{minRows: 2,maxRows: 10}"/>
-                        </FormItem>
-                        <div class="ivu-article">
-                            <p>比如：遇到这个 bug 的业务场景、上下文。</p>
-                        </div>
+                            </div>
+                            <FormItem label="期望的结果是什么？" prop="expectedOutcome">
+                                <Input type="textarea" v-model="formData.expectedOutcome"
+                                       :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <FormItem label="实际的结果是什么？" prop="actualResult">
+                                <Input type="textarea" v-model="formData.actualResult"
+                                       :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <FormItem label="补充说明（可选）：" prop="supplement">
+                                <Input type="textarea" v-model="formData.supplement" :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <div class="ivu-article">
+                                <p>比如：遇到这个 bug 的业务场景、上下文。</p>
+                            </div>
+                        </template>
                     </Form>
                     <div style="text-align: center;margin: 15px;">
                         <Button size="large" type="primary" @click="handlePreview">预览</Button>
@@ -208,7 +230,7 @@
                 </p>
                 </div>
             </Modal>
-            <Modal v-model="isPreview" class-name="issue-vertical-center-modal" title="Issue 预览" width="680">
+            <Modal v-model="isPreview" title="Issue 预览" width="680">
                 <div class="ivu-article" v-if="isPreview" v-html="content.html"></div>
                 <div slot="footer">
                     <Button type="primary" size="large" @click="handleCreate">创建</Button>
@@ -258,42 +280,64 @@
                         <FormItem label="Title:" prop="title">
                             <Input v-model="formData.title"/>
                         </FormItem>
-                        <FormItem label="Link to minimal reproduction:" prop="link">
-                            <Input v-model="formData.link"/>
-                        </FormItem>
-                        <div class="ivu-article" style="margin-bottom: 20px">
-                            <p>
-                                Please provide a link to a <a href="https://jsfiddle.net/yyrzhm46/" target="_blank">JSFiddle</a> or provide a GitHub repo.
+
+                        <template v-if="formData.type === 'feature-request'">
+                            <FormItem label="What problem does solve this feature?" prop="problem">
+                                <Input type="textarea" v-model="formData.problem" :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <div class="ivu-article" style="margin-bottom: 20px">
+                                <p>
+                                    Explain your use case, context, and rationale behind this feature request. More importantly, what is the end user experience you are trying to build that led to the need for this feature? An important design goal of iView is keeping the API surface small and straightforward. In general, we only consider adding new features that solve a problem that cannot be easily dealt with using existing APIs (i.e. not just an alternative way of doing things that can already be done). The problem should also be common enough to justify the addition.
+                                </p>
+                            </div>
+                            <FormItem label="What does the proposed api look like?" prop="api">
+                                <Input type="textarea" v-model="formData.api" :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <div class="ivu-article" style="margin-bottom: 20px">
+                                <p>
+                                    Describe how you propose to solve the problem and provide code samples of how the API would work once implemented. Note that you can use <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown</a> to format your code blocks.
+                                </p>
+                            </div>
+                        </template>
+
+                        <template v-if="formData.type === 'bug'">
+                            <FormItem label="Link to minimal reproduction:" prop="link">
+                                <Input v-model="formData.link"/>
+                            </FormItem>
+                            <div class="ivu-article" style="margin-bottom: 20px">
+                                <p>
+                                    Please provide a link to a <a href="https://jsfiddle.net/yyrzhm46/" target="_blank">JSFiddle</a> or provide a GitHub repo.
                             </p>
-                            <p>
-                                <a @click="handleOpenMin">What is a minimal reproduction, and why is it required?</a>
+                                <p>
+                                    <a @click="handleOpenMin">What is a minimal reproduction, and why is it required?</a>
+                                </p>
+                            </div>
+                            <FormItem label="Environment(os version, browser version, Vue version...):" prop="system">
+                                <Input v-model="formData.system"/>
+                            </FormItem>
+                            <FormItem label="Step to reproduce:" prop="step">
+                                <Input type="textarea" v-model="formData.step" :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <div class="ivu-article" style="margin-bottom: 20px">
+                                <p>
+                                    Clear and concise reproduction instructions are important for us to be able to triage your issue in a timely manner. Note that you can use <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown</a> to format lists and code.
                             </p>
-                        </div>
-                        <FormItem label="Environment(os version, browser version, Vue version...):" prop="system">
-                            <Input v-model="formData.system"/>
-                        </FormItem>
-                        <FormItem label="Step to reproduce:" prop="step">
-                            <Input type="textarea" v-model="formData.step" :autosize="{minRows: 2,maxRows: 10}"/>
-                        </FormItem>
-                        <div class="ivu-article" style="margin-bottom: 20px">
-                            <p>
-                                Clear and concise reproduction instructions are important for us to be able to triage your issue in a timely manner. Note that you can use <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">Markdown</a> to format lists and code.
-                            </p>
-                        </div>
-                        <FormItem label="What is expected?：" prop="expectedOutcome">
-                            <Input type="textarea" v-model="formData.expectedOutcome"
-                                   :autosize="{minRows: 2,maxRows: 10}"/>
-                        </FormItem>
-                        <FormItem label="What is actually happening?" prop="actualResult">
-                            <Input type="textarea" v-model="formData.actualResult"
-                                   :autosize="{minRows: 2,maxRows: 10}"/>
-                        </FormItem>
-                        <FormItem label="Any additional comments(optional):" prop="supplement">
-                            <Input type="textarea" v-model="formData.supplement" :autosize="{minRows: 2,maxRows: 10}"/>
-                        </FormItem>
-                        <div class="ivu-article">
-                            <p>e.g. some background/context of how you ran into this bug.</p>
-                        </div>
+                            </div>
+                            <FormItem label="What is expected?：" prop="expectedOutcome">
+                                <Input type="textarea" v-model="formData.expectedOutcome"
+                                       :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <FormItem label="What is actually happening?" prop="actualResult">
+                                <Input type="textarea" v-model="formData.actualResult"
+                                       :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <FormItem label="Any additional comments(optional):" prop="supplement">
+                                <Input type="textarea" v-model="formData.supplement" :autosize="{minRows: 2,maxRows: 10}"/>
+                            </FormItem>
+                            <div class="ivu-article">
+                                <p>e.g. some background/context of how you ran into this bug.</p>
+                            </div>
+                        </template>
                     </Form>
                     <div style="text-align: center;margin: 15px;">
                         <Button size="large" type="primary" @click="handlePreview">Preview</Button>
@@ -321,7 +365,7 @@
                     </p>
                 </div>
             </Modal>
-            <Modal v-model="isMin" class-name="issue-vertical-center-modal" title="About Reproductions" width="680">
+            <Modal v-model="isMin" title="About Reproductions" width="680">
                 <div class="ivu-article">
                     <p>
                         A bug reproduction is a piece of code that can run and demonstrate how a bug can happen.
@@ -351,7 +395,7 @@
                     </p>
                 </div>
             </Modal>
-            <Modal v-model="isPreview" class-name="issue-vertical-center-modal" title="Preview Issue" width="680">
+            <Modal v-model="isPreview" title="Preview Issue" width="680">
                 <div class="ivu-article" v-if="isPreview" v-html="content.html"></div>
                 <div slot="footer">
                     <Button type="primary" size="large" @click="handleCreate">Create</Button>
@@ -401,30 +445,44 @@
                     step: '',
                     expectedOutcome: '',
                     actualResult: '',
-                    supplement: ''
-                },
-                formRule: {
+                    supplement: '',
+                    problem: '',
+                    api: ''
+                }
+            };
+        },
+        computed: {
+            formRule () {
+                const type = this.formData.type;
+
+                return {
                     title: [
                         {required: true, message: this.lang === 'zh-CN' ? '标题不能为空' : 'The title cannot be empty', trigger: 'change'}
                     ],
-                    link: [
+                    link: type === 'bug' ? [
                         {required: true, message: this.lang === 'zh-CN' ? '链接不能为空' : 'The link cannot be empty', trigger: 'change'},
                         {type: 'url', message: this.lang === 'zh-CN' ? '链接不正确' : 'Incorrect link', trigger: 'blur'}
-                    ],
-                    system: [
+                    ] : [],
+                    system: type === 'bug' ? [
                         {required: true, message: this.lang === 'zh-CN' ? '环境信息不能为空' : 'Environmental information cannot be empty', trigger: 'change'}
-                    ],
-                    step: [
+                    ] : [],
+                    step: type === 'bug' ? [
                         {required: true, message: this.lang === 'zh-CN' ? '重现步骤不能为空' : 'The reproduction step can not be empty', trigger: 'change'}
-                    ],
-                    expectedOutcome: [
+                    ] : [],
+                    expectedOutcome: type === 'bug' ? [
                         {required: true, message: this.lang === 'zh-CN' ? '期望的结果内容不能为空' : 'The expected result cannot be empty', trigger: 'change'}
-                    ],
-                    actualResult: [
+                    ] : [],
+                    actualResult: type === 'bug' ? [
                         {required: true, message: this.lang === 'zh-CN' ? '实际的结果内容不能为空' : 'The actual result cannot be empty', trigger: 'change'}
-                    ]
+                    ] : [],
+                    problem: type === 'feature-request' ? [
+                        {required: true, message: this.lang === 'zh-CN' ? '内容不能为空' : 'The content cannot be empty', trigger: 'change'}
+                    ] : [],
+                    api: type === 'feature-request' ? [
+                        {required: true, message: this.lang === 'zh-CN' ? '内容不能为空' : 'The content cannot be empty', trigger: 'change'}
+                    ] : []
                 }
-            };
+            }
         },
         methods: {
             handleChangeLang () {
@@ -453,7 +511,8 @@
                 })
             },
             getGenerate () {
-                return generate(`
+                if (this.formData.type === 'bug') {
+                    return generate(`
 ### Environment
 ${this.formData.system}
 
@@ -471,6 +530,14 @@ ${this.formData.actualResult}
 
 ${this.formData.supplement ? `---\n${this.formData.supplement}` : ''}
                 `.trim())
+                } else {
+                    return generate(`
+### What problem does this feature solve?
+${this.formData.problem}
+
+### What does the proposed API look like?
+${this.formData.api}`.trim())
+                }
             },
             handleCreate () {
                 const type = this.formData.type === 'bug' ? '[Bug Report]' : '[Feature Request]';
