@@ -79,7 +79,7 @@
                                 <a href="https://github.com/iview/iview/issues" target="_blank">{{ $t('index.feedback') }}</a>
                             </li>
                             <li>
-                                <a href="https://github.com/iview/iview/issues/new" target="_blank">{{ $t('index.bug') }}</a>
+                                <a href="https://www.iviewui.com/new-issue" target="_blank">{{ $t('index.bug') }}</a>
                             </li>
                             <li>
                                 <a href="https://gitter.im/iview/iview" target="_blank">{{ $t('index.chat') }}</a>
