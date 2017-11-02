@@ -1,5 +1,5 @@
 <style scoped lang="less">
-    @import "../styles/index-halloween.less";
+    @import "../styles/index.less";
 </style>
 <style>
     .index-version .ivu-badge-count{
@@ -174,7 +174,7 @@
         },
         mounted () {
             this.lang = this.$lang;
-//            this.liziInit();
+            this.liziInit();
         },
         beforeDestroy () {
             if (this.interval) clearInterval(this.interval);

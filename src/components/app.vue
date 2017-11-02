@@ -43,7 +43,7 @@
             if (window.localStorage.getItem('liveModalTime')) {
                 const time = parseInt(window.localStorage.getItem('liveModalTime'));
                 const today = this.getTodayUnix();
-                if ((today - time) > 86400000 * 7) this.liveVisible = true;
+                if ((today - time) > 86400000 * 4) this.liveVisible = true;
             } else {
                 this.liveVisible = true;
             }
@@ -53,8 +53,8 @@
                     top: 85
                 });
                 this.$Notice.info({
-                    title: '您正在用 iView 吗？',
-                    desc: '<p>如果您和您的的公司或组织正在使用 iView，非常感谢您的支持，希望可以在这里留下您的公司信息。您的回复将成为维护者、社区用户和观望者的信心来源。</p><a href="https://github.com/iview/iview/issues/2143" target="_blank">> 点击这里回复 <</a>',
+                    title: '《Vue.js 实战》正在热卖',
+                    desc: '<p>本书由 iView 作者 Aresn 著， Vue.js 作者<strong>尤雨溪</strong>作推荐序，大漠、justjavac 等人联合推荐。</p><p style="margin-top: 6px"><a href="https://detail.tmall.com/item.htm?id=559480603657" target="_blank" onclick="clickAdBuy()">立即购买书籍</a><a href="https://segmentfault.com/ls/1650000011074057" target="_blank" style="margin-left: 20px" onclick="clickAdVideo()">配套视频教程</a></p>',
                     duration: 0,
                     onClose: () => {
                         const today = this.getTodayUnix();
@@ -66,22 +66,31 @@
                     top: 24
                 });
             } else if (this.liveVisible && this.$lang === 'en-US') {
-                this.$Notice.config({
-                    top: 85
-                });
-                this.$Notice.info({
-                    title: 'Are you using iView?',
-                    desc: '<p>We appreciate you support if you or your organization is using iView. You are welcome to leave replies about your organization here, which could became the confidence of maintainers, communication and undecided watchers.</p><a href="https://github.com/iview/iview/issues/2143" target="_blank">> Click here to reply <</a>',
-                    duration: 0,
-                    onClose: () => {
-                        const today = this.getTodayUnix();
-                        window.localStorage.setItem('liveModalTime', today);
-                        this.$Message.success('Closed successfully, no longer prompt', 4);
-                    }
-                });
-                this.$Notice.config({
-                    top: 24
-                });
+//                this.$Notice.config({
+//                    top: 85
+//                });
+//                this.$Notice.info({
+//                    title: 'Are you using iView?',
+//                    desc: '<p>We appreciate you support if you or your organization is using iView. You are welcome to leave replies about your organization here, which could became the confidence of maintainers, communication and undecided watchers.</p><a href="https://github.com/iview/iview/issues/2143" target="_blank">> Click here to reply <</a>',
+//                    duration: 0,
+//                    onClose: () => {
+//                        const today = this.getTodayUnix();
+//                        window.localStorage.setItem('liveModalTime', today);
+//                        this.$Message.success('Closed successfully, no longer prompt', 4);
+//                    }
+//                });
+//                this.$Notice.config({
+//                    top: 24
+//                });
+            }
+
+            // 广告统计
+            window.clickAdBuy = function () {
+                _hmt.push(['_trackEvent', 'index-ad-buy', 'click'])
+            }
+
+            window.clickAdVideo = function () {
+                _hmt.push(['_trackEvent', 'index-ad-video', 'click'])
             }
         },
         methods: {
