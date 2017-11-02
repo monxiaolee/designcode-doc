@@ -66,11 +66,14 @@
                     <!--<Option value="2">2.x</Option>-->
                     <!--<Option value="1">1.x</Option>-->
                 <!--</Select>-->
-                <Button type="ghost" size="small" icon="social-github" @click="handleGoToGitHub">GitHub</Button>
-                <Button type="ghost" size="small" @click="handleChangeLang" >
-                    <template v-if="lang === 'zh-CN'">EN</template>
-                    <template v-else>中文</template>
-                </Button>
+                <ButtonGroup>
+                    <Button type="ghost" size="small" icon="social-github" @click="handleGoToGitHub"></Button>
+                    <Button type="ghost" size="small" icon="social-twitter" @click="handleGoToTwitter"></Button>
+                    <Button type="ghost" size="small" @click="handleChangeLang" >
+                        <template v-if="lang === 'zh-CN'">EN</template>
+                        <template v-else>中文</template>
+                    </Button>
+                </ButtonGroup>
             </div>
         </div>
     </Menu>
@@ -173,7 +176,12 @@
                 }
             },
             handleGoToGitHub () {
+                _hmt.push(['_trackEvent', 'menu-go-github', 'click']);
                 window.open('https://github.com/iview/iview');
+            },
+            handleGoToTwitter () {
+                _hmt.push(['_trackEvent', 'menu-go-twitter', 'click']);
+                window.open('https://twitter.com/iViewUI');
             }
         },
         created () {
