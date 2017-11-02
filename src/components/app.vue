@@ -54,7 +54,7 @@
                 });
                 this.$Notice.info({
                     title: '《Vue.js 实战》正在热卖',
-                    desc: '<p>本书由 iView 作者 Aresn 著， Vue.js 作者<strong>尤雨溪</strong>作推荐序，大漠、justjavac 等人联合推荐。</p><p style="margin-top: 6px"><a href="https://detail.tmall.com/item.htm?id=559480603657" target="_blank" onclick="clickAdBuy()">立即购买书籍</a><a href="https://segmentfault.com/ls/1650000011074057" target="_blank" style="margin-left: 20px" onclick="clickAdVideo()">配套视频教程</a></p>',
+                    desc: '<p>本书由 iView 作者 Aresn 著， Vue.js 作者<strong>尤雨溪</strong>作推荐序，大漠、justjavac 等人联合推荐。如果你喜欢通过实例来学习，那么本书会是你上手 Vue 的一个好选择。</p><p style="margin-top: 6px"><a href="https://detail.tmall.com/item.htm?id=559480603657" target="_blank" onclick="clickAdBuy()">立即购买书籍</a><a href="https://segmentfault.com/ls/1650000011074057" target="_blank" style="margin-left: 20px" onclick="clickAdVideo()">查看系列视频</a></p>',
                     duration: 0,
                     onClose: () => {
                         const today = this.getTodayUnix();

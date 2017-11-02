@@ -77,7 +77,7 @@
                                         <Button icon="ios-cart" type="error" size="large" long @click="handleBuy('jd')">京东购买</Button>
                                     </i-col>
                                     <i-col span="8">
-                                        <Button icon="ios-videocam" type="info" size="large" long @click="handleBuy('video')">配套视频教程</Button>
+                                        <Button icon="ios-videocam" type="info" size="large" long @click="handleBuy('video')">系列视频教程</Button>
                                     </i-col>
                                 </Row>
                             </div>
