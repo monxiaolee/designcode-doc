@@ -56,7 +56,7 @@ code.change = `
         <Step title="步骤3"></Step>
         <Step title="步骤4"></Step>
     </Steps>
-    <Button type="primary" @click="next">下一步</Button>
+    <Button type="primary" @click="next">Next step</Button>
 </template>
 <script>
     export default {
