@@ -5,9 +5,9 @@ export default {
     data () {
         return {
             data: [
-                { "key": "1", "label": "内容1", "disabled": false },
-                { "key": "2", "label": "内容2", "disabled": true },
-                { "key": "3", "label": "内容3", "disabled": false }
+                { "key": "1", "label": "Content 1", "disabled": false },
+                { "key": "2", "label": "Content 2", "disabled": true },
+                { "key": "3", "label": "Content 3", "disabled": false }
             ],
             targetKeys: ["1","2"]
         }
@@ -45,8 +45,8 @@ code.base = `
                 for (let i = 1; i <= 20; i++) {
                     mockData.push({
                         key: i.toString(),
-                        label: '内容' + i,
-                        description: '内容' + i + '的描述信息',
+                        label: 'Content ' + i,
+                        description: 'The desc of content  ' + i,
                         disabled: Math.random() * 3 < 1
                     });
                 }
@@ -94,8 +94,8 @@ code.search = `
                 for (let i = 1; i <= 20; i++) {
                     mockData.push({
                         key: i.toString(),
-                        label: '内容' + i,
-                        description: '内容' + i + '的描述信息',
+                        label: 'Content ' + i,
+                        description: 'The desc of content  ' + i,
                         disabled: Math.random() * 3 < 1
                     });
                 }
@@ -124,11 +124,11 @@ code.high = `
         :target-keys="targetKeys3"
         :list-style="listStyle"
         :render-format="render3"
-        :operations="['向左移动','向右移动']"
+        :operations="['To left','To right']"
         filterable
         @on-change="handleChange3">
         <div :style="{float: 'right', margin: '5px'}">
-            <Button type="ghost" size="small" @click="reloadMockData">刷新</Button>
+            <Button type="ghost" size="small" @click="reloadMockData">Refresh</Button>
         </div>
     </Transfer>
 </template>
@@ -150,8 +150,8 @@ code.high = `
                 for (let i = 1; i <= 20; i++) {
                     mockData.push({
                         key: i.toString(),
-                        label: '内容' + i,
-                        description: '内容' + i + '的描述信息',
+                        label: 'Content ' + i,
+                        description: 'The desc of content  ' + i,
                         disabled: Math.random() * 3 < 1
                     });
                 }
@@ -199,8 +199,8 @@ code.render = `
                 for (let i = 1; i <= 20; i++) {
                     mockData.push({
                         key: i.toString(),
-                        label: '内容' + i,
-                        description: '内容' + i + '的描述信息',
+                        label: 'Content ' + i,
+                        description: 'The desc of content  ' + i,
                         disabled: Math.random() * 3 < 1
                     });
                 }
