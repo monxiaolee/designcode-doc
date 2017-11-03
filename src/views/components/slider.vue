@@ -195,7 +195,7 @@
         },
         methods: {
             format (val) {
-                return `进度：${val}%`
+                return `Progress: ${val}%`
             },
             hideFormat () {
                 return null;
