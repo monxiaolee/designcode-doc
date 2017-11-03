@@ -2,10 +2,10 @@ let code = {};
 
 code.base = `
 <template>
-    <Alert>消息提示文案</Alert>
-    <Alert type="success">成功提示文案</Alert>
-    <Alert type="warning">警告提示文案</Alert>
-    <Alert type="error">错误提示文案</Alert>
+    <Alert>An info prompt</Alert>
+    <Alert type="success">A success prompt</Alert>
+    <Alert type="warning">A warning prompt</Alert>
+    <Alert type="error">An error prompt</Alert>
 </template>
 <script>
     export default {
@@ -17,23 +17,23 @@ code.base = `
 code.desc = `
 <template>
     <Alert>
-        消息提示文案
-        <template slot="desc">消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案</template>
+        An info prompt
+        <template slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </template>
     </Alert>
     <Alert type="success">
-        成功提示文案
-        <span slot="desc">成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案</span>
+        A success prompt
+        <template slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </template>
     </Alert>
     <Alert type="warning">
-        警告提示文案
+        A warning prompt
         <template slot="desc">
-            警告的提示描述文案警告的提示描述文案警告的提示描述文案
-        </template>
+        Content of prompt. Content of prompt. Content of prompt.
+    </template>
     </Alert>
     <Alert type="error">
-        错误提示文案
+        An error prompt
         <span slot="desc">
-            自定义错误描述文案。<Icon type="help-circled" size="14"></Icon>
+            Custom error description copywriting. <Icon type="help-circled" size="14"></Icon>
         </span>
     </Alert>
 </template>
@@ -46,34 +46,34 @@ code.desc = `
 
 code.icon = `
 <template>
-    <Alert show-icon>消息提示文案</Alert>
-    <Alert type="success" show-icon>成功提示文案</Alert>
-    <Alert type="warning" show-icon>警告提示文案</Alert>
-    <Alert type="error" show-icon>错误提示文案</Alert>
+    <Alert show-icon>An info prompt</Alert>
+    <Alert type="success" show-icon>A success prompt</Alert>
+    <Alert type="warning" show-icon>A warning prompt</Alert>
+    <Alert type="error" show-icon>An error prompt</Alert>
     <Alert show-icon>
-        消息提示文案
-        <template slot="desc">消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案</template>
+        An info prompt
+        <template slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </template>
     </Alert>
     <Alert type="success" show-icon>
-        成功提示文案
-        <span slot="desc">成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案</span>
+        A success prompt
+        <span slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </span>
     </Alert>
     <Alert type="warning" show-icon>
-        警告提示文案
+        A warning prompt
         <template slot="desc">
-            警告的提示描述文案警告的提示描述文案警告的提示描述文案
-        </template>
+        Content of prompt. Content of prompt. Content of prompt.
+    </template>
     </Alert>
     <Alert type="error" show-icon>
-        错误提示文案
+        An error prompt
         <span slot="desc">
-            自定义错误描述文案。
+            Custom error description copywriting.
         </span>
     </Alert>
     <Alert show-icon>
-        自定义图标
+        Custom icon
         <Icon type="ios-lightbulb-outline" slot="icon"></Icon>
-        <template slot="desc">自定义图标文案自定义图标文案自定义图标文案自定义图标文案自定义图标文案</template>
+        <template slot="desc">Custom icon copywriting. Custom icon copywriting. Custom icon copywriting. </template>
     </Alert>
 </template>
 <script>
@@ -85,14 +85,14 @@ code.icon = `
 
 code.close = `
 <template>
-    <Alert closable>消息提示文案</Alert>
+    <Alert closable>An info prompt</Alert>
     <Alert type="success" show-icon closable>
-        成功提示文案
-        <span slot="desc">成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案</span>
+        A success prompt
+        <span slot="desc">Content of prompt. Content of prompt. Content of prompt. Content of prompt. </span>
     </Alert>
     <Alert type="warning" closable>
-        自定义关闭内容
-        <span slot="close">不再提示</span>
+        Custom closing content
+        <span slot="close">No longer prompt</span>
     </Alert>
 </template>
 <script>
@@ -104,8 +104,8 @@ code.close = `
 
 code.banner = `
 <template>
-    <Alert banner type="warning">通知：通知内容。。。</Alert>
-    <Alert banner closable type="warning">通知：通知内容。。。</Alert>
+    <Alert banner type="warning">Notice: notification contents...</Alert>
+    <Alert banner closable type="warning">Notice: notification contents...</Alert>
 </template>
 <script>
     export default {
