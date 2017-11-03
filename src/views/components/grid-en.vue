@@ -74,7 +74,7 @@
                 <li>Setting the <code>span</code> parameter for <code>col</code> will define the span range, ranging from 1 to 24</li>
                 <li>The sum of <code>col</code>s in each <code>row</code> should equal to 24</li>
             </ul>
-            <blockquote>Note: In a non template/render pattern, it is necessary to use <code>i-col</code>.</blockquote>
+            <Alert show-icon style="margin-top: 16px">Note: In a non template/render pattern, it is necessary to use <code>i-col</code>.</Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">

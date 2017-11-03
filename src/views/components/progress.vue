@@ -4,7 +4,7 @@
             <h1>Progress 进度条</h1>
             <Anchor title="概述" h2></Anchor>
             <p>展示操作或任务的当前进度，比如上传文件。</p>
-            <blockquote>注意：非 template/render 模式下，需使用 <code>i-progress</code>。</blockquote>
+            <Alert show-icon style="margin-top: 16px">注意：非 template/render 模式下，需使用 <code>i-progress</code>。</Alert>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基本用法">
                 <div slot="demo">

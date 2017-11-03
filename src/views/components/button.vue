@@ -3,7 +3,7 @@
         <article>
             <h1>Button 按钮</h1>
             <p>基础组件，触发业务逻辑时使用。</p>
-            <blockquote>注意：非 template/render 模式下，需使用 <code>i-button</code>。</blockquote>
+            <Alert show-icon style="margin-top: 16px">注意：非 template/render 模式下，需使用 <code>i-button</code>。</Alert>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="按钮类型">
                 <div slot="demo">

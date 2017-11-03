@@ -4,7 +4,7 @@
             <h1>Input 输入框</h1>
             <Anchor title="概述" h2></Anchor>
             <p>基本表单组件，支持 input 和 textarea，并在原生控件基础上进行了功能扩展，可以组合使用。</p>
-            <blockquote>注意：非 template/render 模式下，需使用 <code>i-input</code>。</blockquote>
+            <Alert show-icon style="margin-top: 16px">注意：非 template/render 模式下，需使用 <code>i-input</code>。</Alert>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">

@@ -74,7 +74,7 @@
                 <li>通过设置<code>col</code>的<code>span</code>参数，指定跨越的范围，其范围是1到24</li>
                 <li>每个<code>row</code>中的<code>col</code>总和应该为24</li>
             </ul>
-            <blockquote>注意：非 template/render 模式下，需使用 <code>i-col</code>。</blockquote>
+            <Alert show-icon style="margin-top: 16px">注意：非 template/render 模式下，需使用 <code>i-col</code>。</Alert>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基础用法">
                 <div slot="demo">

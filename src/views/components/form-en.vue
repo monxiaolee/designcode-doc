@@ -4,7 +4,7 @@
             <h1>Form</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>Forms with abilities of data collecting, validating, and submitting, which includes checkbox, radio, dropdown etc.</p>
-            <blockquote>Attention: <code>i-form</code> is needed if not under template/render mode.</blockquote>
+            <Alert show-icon style="margin-top: 16px">Attention: <code>i-form</code> is needed if not under template/render mode.</Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Inline Form">
                 <div slot="demo">

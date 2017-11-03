@@ -30,7 +30,7 @@
             <i-code lang="auto" bg>{{ code.theme.build }}</i-code>
             <p>The tool will generate the style code <code>iview.css</code> in this dictionary. The only thing you need to do is import it in your entry file <code>main.js</code>:</p>
             <i-code lang="js" bg>{{ code.theme.import }}</i-code>
-            <blockquote>Note: The tool will pull HEAD branch from GitHub, which could be different from the version you use. Also, you need to repull it every time you updating iView.</blockquote>
+            <Alert show-icon style="margin-top: 16px">Note: The tool will pull HEAD branch from GitHub, which could be different from the version you use. Also, you need to repull it every time you updating iView.</Alert>
         </article>
     </i-article>
 </template>

@@ -42,7 +42,7 @@
             <h1>Upload 上传</h1>
             <Anchor title="概述" h2></Anchor>
             <p>文件选择上传和拖拽上传控件。</p>
-            <blockquote>暂不支持 IE9 浏览器。</blockquote>
+            <Alert show-icon style="margin-top: 16px">暂不支持 IE9 浏览器。</Alert>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="点击上传">
                 <div slot="demo">

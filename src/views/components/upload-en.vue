@@ -42,7 +42,7 @@
             <h1>Upload</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>File select upload and drag upload component.</p>
-            <blockquote>IE 9 is not supported.</blockquote>
+            <Alert show-icon style="margin-top: 16px">IE 9 is not supported.</Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Click to Upload">
                 <div slot="demo">

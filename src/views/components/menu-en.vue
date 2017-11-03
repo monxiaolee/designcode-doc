@@ -4,7 +4,7 @@
             <h1>Menu</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>Provide navigation menu for web pages. Usually located at the top or the left side of the page.</p>
-            <blockquote>Attention：Use <code>i-menu</code> if not under template/render mode.</blockquote>
+            <Alert show-icon style="margin-top: 16px">Attention：Use <code>i-menu</code> if not under template/render mode.</Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Head Navigator" vertical hide-code>
                 <div slot="demo">

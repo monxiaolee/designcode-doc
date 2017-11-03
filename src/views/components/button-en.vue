@@ -3,7 +3,7 @@
         <article>
             <h1>Button</h1>
             <p>Basic component that is used to trigger bussiness logic.</p>
-            <blockquote>Warning：Except for template/render mode，use <code>i-button</code> instead.</blockquote>
+            <Alert show-icon style="margin-top: 16px">Warning：Except for template/render mode，use <code>i-button</code> instead.</Alert>
             <Anchor title="Example" h2></Anchor>
             <Demo title="Types">
                 <div slot="demo">

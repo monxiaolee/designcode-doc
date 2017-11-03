@@ -4,7 +4,7 @@
             <h1>Progress</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>Show current progres status of the opreation or task. For example, uploading file.</p>
-            <blockquote>Attention：Use <code>i-progress</code> if not under template/render mode.</blockquote>
+            <Alert show-icon style="margin-top: 16px">Attention：Use <code>i-progress</code> if not under template/render mode.</Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">

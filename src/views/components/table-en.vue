@@ -32,7 +32,7 @@
                 <Anchor title="Brief Introduction" h2></Anchor>
                 <p>Table is used to display a mass of structured data.</p>
                 <p>It supports sorting, filtering, paging, custom operation, exporting to csv and many other complex functions.</p>
-                <blockquote>Attention：Use <code>i-table</code> if not under template/render mode.</blockquote>
+                <Alert show-icon style="margin-top: 16px">Attention：Use <code>i-table</code> if not under template/render mode.</Alert>
                 <Anchor title="Examples" h2></Anchor>
                 <Demo title="Basic Usage" vertical hide-code>
                     <div slot="demo">

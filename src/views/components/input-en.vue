@@ -4,7 +4,7 @@
             <h1>Input</h1>
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>Basic form component. It supports input and textarea, and expands some functions on native DOM components. It can combine with native component.</p>
-            <blockquote>Attention: <code>i-input</code> is needed if not under template/render mode.</blockquote>
+            <Alert show-icon style="margin-top: 16px">Attention: <code>i-input</code> is needed if not under template/render mode.</Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">

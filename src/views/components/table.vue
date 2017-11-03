@@ -32,7 +32,7 @@
                 <Anchor title="概述" h2></Anchor>
                 <p>主要用于展示大量结构化数据。</p>
                 <p>支持排序、筛选、分页、自定义操作、导出 csv 等复杂功能。</p>
-                <blockquote>注意：非 template/render 模式下，需使用 <code>i-table</code>。</blockquote>
+                <Alert show-icon style="margin-top: 16px">注意：非 template/render 模式下，需使用 <code>i-table</code>。</Alert>
                 <Anchor title="代码示例" h2></Anchor>
                 <Demo title="基础用法" vertical hide-code>
                     <div slot="demo">

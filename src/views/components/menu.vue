@@ -4,7 +4,7 @@
             <h1>Menu 导航菜单</h1>
             <Anchor title="概述" h2></Anchor>
             <p>为页面和功能提供导航的菜单列表，常用于网站顶部和左侧。</p>
-            <blockquote>注意：非 template/render 模式下，需使用 <code>i-menu</code>。</blockquote>
+            <Alert show-icon style="margin-top: 16px">注意：非 template/render 模式下，需使用 <code>i-menu</code>。</Alert>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="顶部导航" vertical hide-code>
                 <div slot="demo">

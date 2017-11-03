@@ -30,7 +30,7 @@
             <i-code lang="auto" bg>{{ code.theme.build }}</i-code>
             <p>最终会在指定的目录下编译为 <code>iview.css</code> 的文件，只需在入口处引用它就可以了，比如在 main.js 文件：</p>
             <i-code lang="js" bg>{{ code.theme.import }}</i-code>
-            <blockquote>注意：这种方法是从 GitHub 拉取最新的样式变量，并不是你当前的 iView 版本，另外在更新 iView 后，应该重新拉取。</blockquote>
+            <Alert show-icon style="margin-top: 16px">注意：这种方法是从 GitHub 拉取最新的样式变量，并不是你当前的 iView 版本，另外在更新 iView 后，应该重新拉取。</Alert>
         </article>
     </i-article>
 </template>

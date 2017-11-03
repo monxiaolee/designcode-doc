@@ -14,7 +14,7 @@
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>A dropdown select , alternative to the native select component.</p>
             <p>Select supports single, multiple, search and keyboard.</p>
-            <blockquote>Notice: If not template/render mode, you need to use<code>i-select</code>, <code>i-option</code>.</blockquote>
+            <Alert show-icon style="margin-top: 16px">Notice: If not template/render mode, you need to use<code>i-select</code>, <code>i-option</code>.</Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
