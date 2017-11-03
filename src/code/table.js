@@ -10,38 +10,42 @@ code.base = `
             return {
                 columns1: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data1: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ]
             }
@@ -60,38 +64,42 @@ code.stripe = `
             return {
                 columns1: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data1: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ]
             }
@@ -110,38 +118,42 @@ code.border = `
             return {
                 columns1: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data1: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ]
             }
@@ -178,11 +190,11 @@ code.class = `
     }
 </style>
 <template>
-    <p>自定义行样式：</p>
+    <p>Custom row styles:</p>
     <Table :row-class-name="rowClassName" :columns="columns1" :data="data1"></Table>
-    <p>自定义列样式：</p>
+    <p>Custom column styles:</p>
     <Table :columns="columns9" :data="data1"></Table>
-    <p>自定义任意单元格样式：</p>
+    <p>Custom arbitrary cell styles:</p>
     <Table :columns="columns1" :data="data8"></Table>
 </template>
 <script>
@@ -191,79 +203,83 @@ code.class = `
             return {
                 columns1: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 columns9: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age',
                         className: 'demo-table-info-column'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data1: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ],
                 data8: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park'
                     },
                     {
-                        name: '张小刚',
+                        name: 'Jim Green',
                         age: 25,
-                        address: '北京市海淀区西二旗',
+                        address: 'London No. 1 Lake Park',
                         cellClassName: {
                             age: 'demo-table-info-cell-age',
                             address: 'demo-table-info-cell-address'
                         }
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
+                        address: 'Ottawa No. 2 Lake Park',
                         cellClassName: {
                             name: 'demo-table-info-cell-name'
                         }
@@ -295,58 +311,66 @@ code.height = `
             return {
                 columns1: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data2: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     },
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ]
             }
@@ -365,38 +389,38 @@ code.fixed = `
             return {
                 columns2: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name',
                         width: 100,
                         fixed: 'left'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age',
                         width: 100
                     },
                     {
-                        title: '省份',
+                        title: 'Province',
                         key: 'province',
                         width: 100
                     },
                     {
-                        title: '市区',
+                        title: 'City',
                         key: 'city',
                         width: 100
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address',
                         width: 200
                     },
                     {
-                        title: '邮编',
+                        title: 'Postcode',
                         key: 'zip',
                         width: 100
                     },
                     {
-                        title: '操作',
+                        title: 'Action',
                         key: 'action',
                         fixed: 'right',
                         width: 120,
@@ -407,48 +431,48 @@ code.fixed = `
                                         type: 'text',
                                         size: 'small'
                                     }
-                                }, '查看'),
+                                }, 'View'),
                                 h('Button', {
                                     props: {
                                         type: 'text',
                                         size: 'small'
                                     }
-                                }, '编辑')
+                                }, 'Edit')
                             ]);
                         }
                     }
                 ],
                 data3: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居',
-                        province: '北京市',
-                        city: '朝阳区',
+                        address: 'New York No. 1 Lake Park',
+                        province: 'America',
+                        city: 'New York',
                         zip: 100000
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗',
-                        province: '北京市',
-                        city: '海淀区',
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'Washington, D.C. No. 1 Lake Park',
+                        province: 'America',
+                        city: 'Washington, D.C.',
                         zip: 100000
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道',
-                        province: '上海市',
-                        city: '浦东新区',
+                        address: 'Sydney No. 1 Lake Park',
+                        province: 'Australian',
+                        city: 'Sydney',
                         zip: 100000
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
-                        province: '广东',
-                        city: '南山区',
+                        address: 'Ottawa No. 2 Lake Park',
+                        province: 'Canada',
+                        city: 'Ottawa',
                         zip: 100000
                     }
                 ]
@@ -468,38 +492,38 @@ code.fixedAll = `
             return {
                 columns2: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name',
                         width: 100,
                         fixed: 'left'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age',
                         width: 100
                     },
                     {
-                        title: '省份',
+                        title: 'Province',
                         key: 'province',
                         width: 100
                     },
                     {
-                        title: '市区',
+                        title: 'City',
                         key: 'city',
                         width: 100
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address',
                         width: 200
                     },
                     {
-                        title: '邮编',
+                        title: 'Postcode',
                         key: 'zip',
                         width: 100
                     },
                     {
-                        title: '操作',
+                        title: 'Action',
                         key: 'action',
                         fixed: 'right',
                         width: 120,
@@ -510,80 +534,80 @@ code.fixedAll = `
                                         type: 'text',
                                         size: 'small'
                                     }
-                                }, '查看'),
+                                }, 'View'),
                                 h('Button', {
                                     props: {
                                         type: 'text',
                                         size: 'small'
                                     }
-                                }, '编辑')
+                                }, 'Edit')
                             ]);
                         }
                     }
                 ],
                 data4: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居',
-                        province: '北京市',
-                        city: '朝阳区',
+                        address: 'New York No. 1 Lake Park',
+                        province: 'America',
+                        city: 'New York',
                         zip: 100000
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗',
-                        province: '北京市',
-                        city: '海淀区',
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'Washington, D.C. No. 1 Lake Park',
+                        province: 'America',
+                        city: 'Washington, D.C.',
                         zip: 100000
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道',
-                        province: '上海市',
-                        city: '浦东新区',
+                        address: 'Sydney No. 1 Lake Park',
+                        province: 'Australian',
+                        city: 'Sydney',
                         zip: 100000
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
-                        province: '广东',
-                        city: '南山区',
+                        address: 'Ottawa No. 2 Lake Park',
+                        province: 'Canada',
+                        city: 'Ottawa',
                         zip: 100000
                     },
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居',
-                        province: '北京市',
-                        city: '朝阳区',
+                        address: 'New York No. 1 Lake Park',
+                        province: 'America',
+                        city: 'New York',
                         zip: 100000
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗',
-                        province: '北京市',
-                        city: '海淀区',
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'Washington, D.C. No. 1 Lake Park',
+                        province: 'America',
+                        city: 'Washington, D.C.',
                         zip: 100000
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道',
-                        province: '上海市',
-                        city: '浦东新区',
+                        address: 'Sydney No. 1 Lake Park',
+                        province: 'Australian',
+                        city: 'Sydney',
                         zip: 100000
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
-                        province: '广东',
-                        city: '南山区',
+                        address: 'Ottawa No. 2 Lake Park',
+                        province: 'Canada',
+                        city: 'Ottawa',
                         zip: 100000
                     }
                 ]
@@ -611,38 +635,42 @@ code.highlight = `
                         align: 'center'
                     },
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data1: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ]
             }
@@ -660,8 +688,8 @@ code.selection = `
 <template>
     <div>
         <Table border ref="selection" :columns="columns4" :data="data1"></Table>
-        <Button @click="handleSelectAll(true)">设置全选</Button>
-        <Button @click="handleSelectAll(false)">取消全选</Button>
+        <Button @click="handleSelectAll(true)">Set all selected</Button>
+        <Button @click="handleSelectAll(false)">Cancel all selected</Button>
     </div>
 </template>
 <script>
@@ -675,38 +703,42 @@ code.selection = `
                         align: 'center'
                     },
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data1: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ]
             }
@@ -730,47 +762,47 @@ code.sort = `
             return {
                 columns5: [
                     {
-                        title: '日期',
+                        title: 'Date',
                         key: 'date',
                         sortable: true
                     },
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age',
                         sortable: true
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data5: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居',
+                        address: 'New York No. 1 Lake Park',
                         date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗',
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
                         date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道',
+                        address: 'Sydney No. 1 Lake Park',
                         date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
+                        address: 'Ottawa No. 2 Lake Park',
                         date: '2016-10-04'
                     }
                 ]
@@ -790,23 +822,23 @@ code.filter = `
             return {
                 columns6: [
                     {
-                        title: '日期',
+                        title: 'Date',
                         key: 'date'
                     },
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age',
                         filters: [
                             {
-                                label: '大于25岁',
+                                label: 'Greater than 25',
                                 value: 1
                             },
                             {
-                                label: '小于25岁',
+                                label: 'Less than 25',
                                 value: 2
                             }
                         ],
@@ -820,20 +852,20 @@ code.filter = `
                         }
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address',
                         filters: [
                             {
-                                label: '北京',
-                                value: '北京'
+                                label: 'New York',
+                                value: 'New York'
                             },
                             {
-                                label: '上海',
-                                value: '上海'
+                                label: 'London',
+                                value: 'London'
                             },
                             {
-                                label: '深圳',
-                                value: '深圳'
+                                label: 'Sydney',
+                                value: 'Sydney'
                             }
                         ],
                         filterMethod (value, row) {
@@ -843,30 +875,30 @@ code.filter = `
                 ],
                 data5: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居',
+                        address: 'New York No. 1 Lake Park',
                         date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗',
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
                         date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道',
+                        address: 'Sydney No. 1 Lake Park',
                         date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
+                        address: 'Ottawa No. 2 Lake Park',
                         date: '2016-10-04'
                     }
-                ]
+                ],
             }
         }
     }
@@ -883,7 +915,7 @@ code.render = `
             return {
                 columns7: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name',
                         render: (h, params) => {
                             return h('div', [
@@ -897,15 +929,15 @@ code.render = `
                         }
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     },
                     {
-                        title: '操作',
+                        title: 'Action',
                         key: 'action',
                         width: 150,
                         align: 'center',
@@ -924,7 +956,7 @@ code.render = `
                                             this.show(params.index)
                                         }
                                     }
-                                }, '查看'),
+                                }, 'View'),
                                 h('Button', {
                                     props: {
                                         type: 'error',
@@ -935,31 +967,31 @@ code.render = `
                                             this.remove(params.index)
                                         }
                                     }
-                                }, '删除')
+                                }, 'Delete')
                             ]);
                         }
                     }
                 ],
                 data6: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park'
                     }
                 ]
             }
@@ -967,8 +999,8 @@ code.render = `
         methods: {
             show (index) {
                 this.$Modal.info({
-                    title: '用户信息',
-                    content: \`姓名：$\{this.data6[index].name\}<br>年龄：$\{this.data6[index].age\}<br>地址：$\{this.data6[index].address\}\`
+                    title: 'User Info',
+                    content: \`Name：$\{this.data6[index].name\}<br>Age：$\{this.data6[index].age\}<br>Address：$\{this.data6[index].address\}\`
                 })
             },
             remove (index) {
@@ -990,29 +1022,29 @@ code.expand = `
     <div>
         <Row class="expand-row">
             <Col span="8">
-                <span class="expand-key">职业：</span>
+                <span class="expand-key">Job: </span>
                 <span class="expand-value">{{ row.job }}</span>
             </Col>
             <Col span="8">
-                <span class="expand-key">兴趣：</span>
+                <span class="expand-key">Interest: </span>
                 <span class="expand-value">{{ row.interest }}</span>
             </Col>
             <Col span="8">
-                <span class="expand-key">生日：</span>
+                <span class="expand-key">Birthday: </span>
                 <span class="expand-value">{{ row.birthday }}</span>
             </Col>
         </Row>
         <Row>
             <Col span="8">
-                <span class="expand-key">最喜欢的书：</span>
+                <span class="expand-key">Favorite book: </span>
                 <span class="expand-value">《{{ row.book }}》</span>
             </Col>
             <Col span="8">
-                <span class="expand-key">最喜欢的电影：</span>
+                <span class="expand-key">Favorite movie: </span>
                 <span class="expand-value">{{ row.movie }}</span>
             </Col>
             <Col span="8">
-                <span class="expand-key">最喜欢的音乐：</span>
+                <span class="expand-key">Favorite music: </span>
                 <span class="expand-value">{{ row.music }}</span>
             </Col>
         </Row>
@@ -1049,62 +1081,62 @@ code.expand = `
                         }
                     },
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data9: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居',
-                        job: '数据工程师',
-                        interest: '羽毛球',
+                        address: 'New York No. 1 Lake Park',
+                        job: 'Data engineer',
+                        interest: 'badminton',
                         birthday: '1991-05-14',
-                        book: '乔布斯传',
-                        movie: '致命魔术',
+                        book: 'Steve Jobs',
+                        movie: 'The Prestige',
                         music: 'I Cry'
                     },
                     {
-                        name: '张小刚',
+                        name: 'Jim Green',
                         age: 25,
-                        address: '北京市海淀区西二旗',
-                        job: '数据科学家',
-                        interest: '排球',
+                        address: 'London No. 1 Lake Park',
+                        job: 'Data Scientist',
+                        interest: 'volleyball',
                         birthday: '1989-03-18',
-                        book: '我的奋斗',
-                        movie: '罗马假日',
+                        book: 'My Struggle',
+                        movie: 'Roman Holiday',
                         music: 'My Heart Will Go On'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道',
-                        job: '数据产品经理',
-                        interest: '网球',
+                        address: 'Sydney No. 1 Lake Park',
+                        job: 'Data Product Manager',
+                        interest: 'tennis',
                         birthday: '1992-01-31',
-                        book: '赢',
-                        movie: '乔布斯',
+                        book: 'Win',
+                        movie: 'Jobs',
                         music: 'Don’t Cry'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
-                        job: '数据分析师',
-                        interest: '桌球，跑步',
+                        address: 'Ottawa No. 2 Lake Park',
+                        job: 'Data Analyst',
+                        interest: 'snooker',
                         birthday: '1988-7-25',
-                        book: '红楼梦',
-                        movie: '倩女幽魂',
-                        music: '演员'
+                        book: 'A Dream in Red Mansions',
+                        movie: 'A Chinese Ghost Story',
+                        music: 'actor'
                     }
                 ]
             }
@@ -1118,7 +1150,7 @@ code.loading = `
     <div>
         <Table :loading="loading" :columns="columns1" :data="data1"></Table>
         <br>
-        切换 Loading 状态 <Switch v-model="loading"></Switch>
+        Change Loading Status <Switch v-model="loading"></Switch>
     </div>
 </template>
 <script>
@@ -1128,38 +1160,42 @@ code.loading = `
                 loading: true,
                 columns1: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data1: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ]
             }
@@ -1179,38 +1215,42 @@ code.size = `
             return {
                 columns1: [
                     {
-                        title: '姓名',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '年龄',
+                        title: 'Age',
                         key: 'age'
                     },
                     {
-                        title: '地址',
+                        title: 'Address',
                         key: 'address'
                     }
                 ],
                 data1: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居'
+                        address: 'New York No. 1 Lake Park',
+                        date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
-                        age: 25,
-                        address: '北京市海淀区西二旗'
+                        name: 'Jim Green',
+                        age: 24,
+                        address: 'London No. 1 Lake Park',
+                        date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道'
+                        address: 'Sydney No. 1 Lake Park',
+                        date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道'
+                        address: 'Ottawa No. 2 Lake Park',
+                        date: '2016-10-04'
                     }
                 ]
             }
@@ -1235,16 +1275,16 @@ code.table1 = `
                 tableData1: this.mockTableData1(),
                 tableColumns1: [
                     {
-                        title: '名称',
+                        title: 'Name',
                         key: 'name'
                     },
                     {
-                        title: '状态',
+                        title: 'Status',
                         key: 'status',
                         render: (h, params) => {
                             const row = params.row;
                             const color = row.status === 1 ? 'blue' : row.status === 2 ? 'green' : 'red';
-                            const text = row.status === 1 ? '构建中' : row.status === 2 ? '构建完成' : '构建失败';
+                            const text = row.status === 1 ? 'Working' : row.status === 2 ? 'Success' : 'Fail';
 
                             return h('Tag', {
                                 props: {
@@ -1255,13 +1295,13 @@ code.table1 = `
                         }
                     },
                     {
-                        title: '画像内容',
+                        title: 'Portrayal',
                         key: 'portrayal',
                         render: (h, params) => {
                             return h('Poptip', {
                                 props: {
                                     trigger: 'hover',
-                                    title: params.row.portrayal.length + '个画像',
+                                    title: params.row.portrayal.length + 'portrayals',
                                     placement: 'bottom'
                                 }
                             }, [
@@ -1282,13 +1322,13 @@ code.table1 = `
                         }
                     },
                     {
-                        title: '选定人群数',
+                        title: 'People',
                         key: 'people',
                         render: (h, params) => {
                             return h('Poptip', {
                                 props: {
                                     trigger: 'hover',
-                                    title: params.row.people.length + '个客群',
+                                    title: params.row.people.length + 'customers',
                                     placement: 'bottom'
                                 }
                             }, [
@@ -1302,21 +1342,21 @@ code.table1 = `
                                                 textAlign: 'center',
                                                 padding: '4px'
                                             }
-                                        }, item.n + '：' + item.c + '人')
+                                        }, item.n + '：' + item.c + 'People')
                                     }))
                                 ])
                             ]);
                         }
                     },
                     {
-                        title: '取样时段',
+                        title: 'Sampling Time',
                         key: 'time',
                         render: (h, params) => {
-                            return h('div', '近' + params.row.time + '天');
+                            return h('div', 'Almost' + params.row.time + 'days');
                         }
                     },
                     {
-                        title: '更新时间',
+                        title: 'Updated Time',
                         key: 'update',
                         render: (h, params) => {
                             return h('div', this.formatDate(this.tableData1[params.index].update));
@@ -1330,20 +1370,20 @@ code.table1 = `
                 let data = [];
                 for (let i = 0; i < 10; i++) {
                     data.push({
-                        name: '商圈' + Math.floor(Math.random () * 100 + 1),
+                        name: 'Business' + Math.floor(Math.random () * 100 + 1),
                         status: Math.floor(Math.random () * 3 + 1),
-                        portrayal: ['城市渗透', '人群迁移', '消费指数', '生活指数', '娱乐指数'],
+                        portrayal: ['City', 'People', 'Cost', 'Life', 'Entertainment'],
                         people: [
                             {
-                                n: '客群' + Math.floor(Math.random () * 100 + 1),
+                                n: 'People' + Math.floor(Math.random () * 100 + 1),
                                 c: Math.floor(Math.random () * 1000000 + 100000)
                             },
                             {
-                                n: '客群' + Math.floor(Math.random () * 100 + 1),
+                                n: 'People' + Math.floor(Math.random () * 100 + 1),
                                 c: Math.floor(Math.random () * 1000000 + 100000)
                             },
                             {
-                                n: '客群' + Math.floor(Math.random () * 100 + 1),
+                                n: 'People' + Math.floor(Math.random () * 100 + 1),
                                 c: Math.floor(Math.random () * 1000000 + 100000)
                             }
                         ],
@@ -1362,7 +1402,7 @@ code.table1 = `
                 return y + '-' + m + '-' + d;
             },
             changePage () {
-                // 这里直接更改了模拟的数据，真实使用场景应该从服务端获取数据
+                // The simulated data is changed directly here, and the actual usage scenario should fetch the data from the server
                 this.tableData1 = this.mockTableData1();
             }
         }
@@ -1373,17 +1413,17 @@ code.table1 = `
 code.table2 = `
 <template>
     <Checkbox-group v-model="tableColumnsChecked" @on-change="changeTableColumns">
-        <Checkbox label="show">展示</Checkbox>
-        <Checkbox label="weak">唤醒</Checkbox>
-        <Checkbox label="signin">登录</Checkbox>
-        <Checkbox label="click">点击</Checkbox>
-        <Checkbox label="active">激活</Checkbox>
-        <Checkbox label="day7">7日留存</Checkbox>
-        <Checkbox label="day30">30日留存</Checkbox>
-        <Checkbox label="tomorrow">次日留存</Checkbox>
-        <Checkbox label="day">日活跃</Checkbox>
-        <Checkbox label="week">周活跃</Checkbox>
-        <Checkbox label="month">月活跃</Checkbox>
+        <Checkbox label="show">Show</Checkbox>
+        <Checkbox label="weak">Weak</Checkbox>
+        <Checkbox label="signin">Signin</Checkbox>
+        <Checkbox label="click">Click</Checkbox>
+        <Checkbox label="active">Active</Checkbox>
+        <Checkbox label="day7">7, retained</Checkbox>
+        <Checkbox label="day30">30, retained</Checkbox>
+        <Checkbox label="tomorrow">The next day left</Checkbox>
+        <Checkbox label="day">Day Active</Checkbox>
+        <Checkbox label="week">Week Active</Checkbox>
+        <Checkbox label="month">Month Active</Checkbox>
     </Checkbox-group>
     <Table :data="tableData2" :columns="tableColumns2" border></Table>
 </template>
@@ -1404,7 +1444,7 @@ code.table2 = `
                 }
                 for (let i = 0; i < 10; i++) {
                     data.push({
-                        name: '推广名称' + (i+1),
+                        name: 'Name ' + (i+1),
                         fav: 0,
                         show: getNum(),
                         weak: getNum(),
@@ -1424,7 +1464,7 @@ code.table2 = `
             getTable2Columns () {
                 const table2ColumnList = {
                     name: {
-                        title: '名称',
+                        title: 'Name',
                         key: 'name',
                         fixed: 'left',
                         width: 200,
@@ -1448,72 +1488,73 @@ code.table2 = `
                                             this.toggleFav(params.index);
                                         }
                                     }
-                                })
+                                }),
+                                h('span', ' ' + params.row.name)
                             ]);
                         }
                     },
                     show: {
-                        title: '展示',
+                        title: 'Show',
                         key: 'show',
                         width: 150,
                         sortable: true
                     },
                     weak: {
-                        title: '唤醒',
+                        title: 'Weak',
                         key: 'weak',
                         width: 150,
                         sortable: true
                     },
                     signin: {
-                        title: '登录',
+                        title: 'Signin',
                         key: 'signin',
                         width: 150,
                         sortable: true
                     },
                     click: {
-                        title: '点击',
+                        title: 'Click',
                         key: 'click',
                         width: 150,
                         sortable: true
                     },
                     active: {
-                        title: '激活',
+                        title: 'Active',
                         key: 'active',
                         width: 150,
                         sortable: true
                     },
                     day7: {
-                        title: '7日留存',
+                        title: '7, retained',
                         key: 'day7',
                         width: 150,
                         sortable: true
                     },
                     day30: {
-                        title: '30日留存',
+                        title: '30, retained',
                         key: 'day30',
                         width: 150,
                         sortable: true
                     },
                     tomorrow: {
-                        title: '次日留存',
+                        title: 'The next day left',
                         key: 'tomorrow',
                         width: 150,
                         sortable: true
                     },
                     day: {
-                        title: '日活跃',
+                        title: 'Day Active',
                         key: 'day',
                         width: 150,
                         sortable: true
                     },
                     week: {
-                        title: '周活跃',
+                        title: 'Week Active',
                         key: 'week',
                         width: 150,
                         sortable: true
                     },
                     month: {
-                        title: '月活跃',
+                        title: 'Month Active',
                         key: 'month',
                         width: 150,
                         sortable: true
@@ -1543,19 +1584,19 @@ code.table2 = `
 code.table3 = `
 <template>
     <div style="margin: 10px">
-        显示边框 <i-switch v-model="showBorder" style="margin-right: 5px"></i-switch>
-        显示斑马纹 <i-switch v-model="showStripe" style="margin-right: 5px"></i-switch>
-        显示索引 <i-switch v-model="showIndex" style="margin-right: 5px"></i-switch>
-        显示多选框 <i-switch v-model="showCheckbox" style="margin-right: 5px"></i-switch>
-        显示表头 <i-switch v-model="showHeader" style="margin-right: 5px"></i-switch>
-        表格滚动 <i-switch v-model="fixedHeader" style="margin-right: 5px"></i-switch>
+        Display border <i-switch v-model="showBorder" style="margin-right: 5px"></i-switch>
+        Display stripe <i-switch v-model="showStripe" style="margin-right: 5px"></i-switch>
+        Display index <i-switch v-model="showIndex" style="margin-right: 5px"></i-switch>
+        Display multi choice <i-switch v-model="showCheckbox" style="margin-right: 5px"></i-switch>
+        Display header <i-switch v-model="showHeader" style="margin-right: 5px"></i-switch>
+        Table scrolling <i-switch v-model="fixedHeader" style="margin-right: 5px"></i-switch>
         <br>
         <br>
-        表格尺寸
+        Table size
         <Radio-group v-model="tableSize" type="button">
-            <Radio label="large">大</Radio>
-            <Radio label="default">中</Radio>
-            <Radio label="small">小</Radio>
+            <Radio label="large">large</Radio>
+            <Radio label="default">medium(default)</Radio>
+            <Radio label="small">small</Radio>
         </Radio-group>
     </div>
     <Table :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 250 : ''" :size="tableSize" :data="tableData3" :columns="tableColumns3"></Table>
@@ -1566,51 +1607,51 @@ code.table3 = `
             return {
                 tableData3: [
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居',
+                        address: 'New York No. 1 Lake Park',
                         date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
+                        name: 'Jim Green',
                         age: 24,
-                        address: '北京市海淀区西二旗',
+                        address: 'London No. 1 Lake Park',
                         date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道',
+                        address: 'Sydney No. 1 Lake Park',
                         date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
+                        address: 'Ottawa No. 2 Lake Park',
                         date: '2016-10-04'
                     },
                     {
-                        name: '王小明',
+                        name: 'John Brown',
                         age: 18,
-                        address: '北京市朝阳区芍药居',
+                        address: 'New York No. 1 Lake Park',
                         date: '2016-10-03'
                     },
                     {
-                        name: '张小刚',
+                        name: 'Jim Green',
                         age: 24,
-                        address: '北京市海淀区西二旗',
+                        address: 'London No. 1 Lake Park',
                         date: '2016-10-01'
                     },
                     {
-                        name: '李小红',
+                        name: 'Joe Black',
                         age: 30,
-                        address: '上海市浦东新区世纪大道',
+                        address: 'Sydney No. 1 Lake Park',
                         date: '2016-10-02'
                     },
                     {
-                        name: '周小伟',
+                        name: 'Jon Snow',
                         age: 26,
-                        address: '深圳市南山区深南大道',
+                        address: 'Ottawa No. 2 Lake Park',
                         date: '2016-10-04'
                     }
                 ],
@@ -1641,25 +1682,25 @@ code.table3 = `
                     })
                 }
                 columns.push({
-                    title: '日期',
+                    title: 'Date',
                     key: 'date',
                     sortable: true
                 });
                 columns.push({
-                    title: '姓名',
+                    title: 'Name',
                     key: 'name'
                 });
                 columns.push({
-                    title: '年龄',
+                    title: 'Age',
                     key: 'age',
                     sortable: true,
                     filters: [
                         {
-                            label: '大于25岁',
+                            label: 'Greater than 25',
                             value: 1
                         },
                         {
-                            label: '小于25岁',
+                            label: 'Less than 25',
                             value: 2
                         }
                     ],
@@ -1673,20 +1714,20 @@ code.table3 = `
                     }
                 });
                 columns.push({
-                    title: '地址',
+                    title: 'Address',
                     key: 'address',
                     filters: [
                         {
-                            label: '北京',
-                            value: '北京'
+                            label: 'New York',
+                            value: 'New York'
                         },
                         {
-                            label: '上海',
-                            value: '上海'
+                            label: 'London',
+                            value: 'London'
                         },
                         {
-                            label: '深圳',
-                            value: '深圳'
+                            label: 'Sydney',
+                            value: 'Sydney'
                         }
                     ],
                     filterMethod (value, row) {
@@ -1704,9 +1745,9 @@ code.csv = `
 <template>
     <Table :columns="columns8" :data="data7" size="small" ref="table"></Table>
     <br>
-    <Button type="primary" size="large" @click="exportData(1)"><Icon type="ios-download-outline"></Icon> 导出原始数据</Button>
-    <Button type="primary" size="large" @click="exportData(2)"><Icon type="ios-download-outline"></Icon> 导出排序和过滤后的数据</Button>
-    <Button type="primary" size="large" @click="exportData(3)"><Icon type="ios-download-outline"></Icon> 导出自定义数据</Button>
+    <Button type="primary" size="large" @click="exportData(1)"><Icon type="ios-download-outline"></Icon> Export source data</Button>
+    <Button type="primary" size="large" @click="exportData(2)"><Icon type="ios-download-outline"></Icon> Export sorting and filtered data</Button>
+    <Button type="primary" size="large" @click="exportData(3)"><Icon type="ios-download-outline"></Icon> Export custom data</Button>
 </template>
 <script>
     export default {
@@ -1714,23 +1755,23 @@ code.csv = `
             return {
                 columns8: [
                     {
-                        "title": "名称",
+                        "title": "Name",
                         "key": "name",
                         "fixed": "left",
                         "width": 200
                     },
                     {
-                        "title": "展示",
+                        "title": "Show",
                         "key": "show",
                         "width": 150,
                         "sortable": true,
                         filters: [
                             {
-                                label: '大于4000',
+                                label: 'Greater than 4000',
                                 value: 1
                             },
                             {
-                                label: '小于4000',
+                                label: 'Less than 4000',
                                 value: 2
                             }
                         ],
@@ -1744,61 +1785,61 @@ code.csv = `
                         }
                     },
                     {
-                        "title": "唤醒",
+                        "title": "Weak",
                         "key": "weak",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "登录",
+                        "title": "Signin",
                         "key": "signin",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "点击",
+                        "title": "Click",
                         "key": "click",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "激活",
+                        "title": "Active",
                         "key": "active",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "7日留存",
+                        "title": "7, retained",
                         "key": "day7",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "30日留存",
+                        "title": "30, retained",
                         "key": "day30",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "次日留存",
+                        "title": "The next day left",
                         "key": "tomorrow",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "日活跃",
+                        "title": "Day Active",
                         "key": "day",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "周活跃",
+                        "title": "Week Active",
                         "key": "week",
                         "width": 150,
                         "sortable": true
                     },
                     {
-                        "title": "月活跃",
+                        "title": "Month Active",
                         "key": "month",
                         "width": 150,
                         "sortable": true
@@ -1806,7 +1847,7 @@ code.csv = `
                 ],
                 data7: [
                     {
-                        "name": "推广名称1",
+                        "name": "Name1",
                         "fav": 0,
                         "show": 7302,
                         "weak": 5627,
@@ -1821,7 +1862,7 @@ code.csv = `
                         "month": 5610
                     },
                     {
-                        "name": "推广名称2",
+                        "name": "Name2",
                         "fav": 0,
                         "show": 4720,
                         "weak": 4086,
@@ -1836,7 +1877,7 @@ code.csv = `
                         "month": 1537
                     },
                     {
-                        "name": "推广名称3",
+                        "name": "Name3",
                         "fav": 0,
                         "show": 7181,
                         "weak": 8007,
@@ -1851,7 +1892,7 @@ code.csv = `
                         "month": 1588
                     },
                     {
-                        "name": "推广名称4",
+                        "name": "Name4",
                         "fav": 0,
                         "show": 9911,
                         "weak": 8976,
@@ -1866,7 +1907,7 @@ code.csv = `
                         "month": 9043
                     },
                     {
-                        "name": "推广名称5",
+                        "name": "Name5",
                         "fav": 0,
                         "show": 934,
                         "weak": 1394,
@@ -1881,7 +1922,7 @@ code.csv = `
                         "month": 9908
                     },
                     {
-                        "name": "推广名称6",
+                        "name": "Name6",
                         "fav": 0,
                         "show": 6856,
                         "weak": 1608,
@@ -1896,7 +1937,7 @@ code.csv = `
                         "month": 6851
                     },
                     {
-                        "name": "推广名称7",
+                        "name": "Name7",
                         "fav": 0,
                         "show": 5107,
                         "weak": 6407,
@@ -1911,7 +1952,7 @@ code.csv = `
                         "month": 3676
                     },
                     {
-                        "name": "推广名称8",
+                        "name": "Name8",
                         "fav": 0,
                         "show": 862,
                         "weak": 6520,
@@ -1926,7 +1967,7 @@ code.csv = `
                         "month": 2346
                     },
                     {
-                        "name": "推广名称9",
+                        "name": "Name9",
                         "fav": 0,
                         "show": 567,
                         "weak": 5859,
@@ -1941,7 +1982,7 @@ code.csv = `
                         "month": 3190
                     },
                     {
-                        "name": "推广名称10",
+                        "name": "Name10",
                         "fav": 0,
                         "show": 3651,
                         "weak": 1819,
@@ -1962,21 +2003,21 @@ code.csv = `
             exportData (type) {
                 if (type === 1) {
                     this.$refs.table.exportCsv({
-                        filename: '原始数据'
+                        filename: 'The original data'
                     });
                 } else if (type === 2) {
                     this.$refs.table.exportCsv({
-                        filename: '排序和过滤后的数据',
+                        filename: 'Sorting and filtering data',
                         original: false
                     });
                 } else if (type === 3) {
                     this.$refs.table.exportCsv({
-                        filename: '自定义数据',
+                        filename: 'Custom data',
                         columns: this.columns8.filter((col, index) => index < 4),
                         data: this.data7.filter((data, index) => index < 4)
                     });
                 }
-            }        
+            }      
         }
     }
 </script>
