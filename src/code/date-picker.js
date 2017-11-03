@@ -4,10 +4,10 @@ code.base = `
 <template>
     <Row>
         <Col span="12">
-            <DatePicker type="date" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker type="date" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <DatePicker type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker type="daterange" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -22,10 +22,10 @@ code.shortcuts = `
 <template>
     <Row>
         <Col span="12">
-            <DatePicker type="date" :options="options1" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker type="date" :options="options1" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <DatePicker type="daterange" :options="options2" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker type="daterange" :options="options2" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -36,34 +36,34 @@ code.shortcuts = `
                 options1: {
                     shortcuts: [
                         {
-                            text: '今天',
+                            text: 'Today',
                             value () {
                                 return new Date();
                             },
                             onClick: (picker) => {
-                                this.$Message.info('点击了今天');
+                                this.$Message.info('Click today');
                             }
                         },
                         {
-                            text: '昨天',
+                            text: 'Yesterday',
                             value () {
                                 const date = new Date();
                                 date.setTime(date.getTime() - 3600 * 1000 * 24);
                                 return date;
                             },
                             onClick: (picker) => {
-                                this.$Message.info('点击了昨天');
+                                this.$Message.info('Click yesterday');
                             }
                         },
                         {
-                            text: '一周前',
+                            text: 'One week',
                             value () {
                                 const date = new Date();
                                 date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
                                 return date;
                             },
                             onClick: (picker) => {
-                                this.$Message.info('点击了一周前');
+                                this.$Message.info('Click a week ago');
                             }
                         }
                     ]
@@ -71,7 +71,7 @@ code.shortcuts = `
                 options2: {
                     shortcuts: [
                         {
-                            text: '最近一周',
+                            text: 'A week',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
@@ -80,7 +80,7 @@ code.shortcuts = `
                             }
                         },
                         {
-                            text: '最近一个月',
+                            text: 'A month',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
@@ -89,7 +89,7 @@ code.shortcuts = `
                             }
                         },
                         {
-                            text: '最近三个月',
+                            text: '3 month',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
@@ -109,10 +109,10 @@ code.format = `
 <template>
     <Row>
         <Col span="12">
-            <DatePicker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker :value="value1" format="yyyy年MM月dd日" type="date" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <DatePicker :value="value2" format="yyyy/MM/dd" type="daterange" placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker :value="value2" format="yyyy/MM/dd" type="daterange" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -130,13 +130,13 @@ code.format = `
 
 code.datetime = `
 <template>
-    <DatePicker type="datetime" placeholder="选择日期和时间" style="width: 200px"></DatePicker>
+    <DatePicker type="datetime" placeholder="Select date and time" style="width: 200px"></DatePicker>
     <br>
-    <DatePicker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 200px"></DatePicker>
+    <DatePicker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="Select date and time(Excluding seconds)" style="width: 200px"></DatePicker>
     <br>
-    <DatePicker type="datetimerange" placeholder="选择日期和时间" style="width: 300px"></DatePicker>
+    <DatePicker type="datetimerange" placeholder="Select date and time" style="width: 300px"></DatePicker>
     <br>
-    <DatePicker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期和时间（不含秒）" style="width: 300px"></DatePicker>
+    <DatePicker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="Select date and time(Excluding seconds)" style="width: 300px"></DatePicker>
 </template>
 <script>
     export default {
@@ -149,10 +149,10 @@ code.type = `
 <template>
     <Row>
         <Col span="12">
-            <DatePicker type="year" placeholder="选择年" style="width: 200px"></DatePicker>
+            <DatePicker type="year" placeholder="Select year" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <DatePicker type="month" placeholder="选择月" style="width: 200px"></DatePicker>
+            <DatePicker type="month" placeholder="Select month" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -167,10 +167,10 @@ code.disabled = `
 <template>
     <Row>
         <Col span="12">
-            <DatePicker type="date" :options="options3" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker type="date" :options="options3" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <DatePicker type="date" :options="options4" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker type="date" :options="options4" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -199,10 +199,10 @@ code.confirm = `
 <template>
     <Row>
         <Col span="12">
-            <DatePicker type="date" confirm placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker type="date" confirm placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
         <Col span="12">
-            <DatePicker type="daterange" confirm placement="bottom-end" placeholder="选择日期" style="width: 200px"></DatePicker>
+            <DatePicker type="daterange" confirm placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
         </Col>
     </Row>
 </template>
@@ -225,7 +225,7 @@ code.slot = `
         @on-ok="handleOk">
         <a href="javascript:void(0)" @click="handleClick">
             <Icon type="ios-calendar-outline"></Icon>
-            <template v-if="value3 === ''">选择日期</template>
+            <template v-if="value3 === ''">Select date</template>
             <template v-else>{{ value3 }}</template>
         </a>
     </DatePicker>
@@ -260,13 +260,13 @@ code.size = `
 <template>
     <Row>
         <Col span="8">
-            <DatePicker size="small" type="date" placeholder="选择日期"></DatePicker>
+            <DatePicker size="small" type="date" placeholder="Select date"></DatePicker>
         </Col>
         <Col span="8">
-            <DatePicker type="date" placeholder="选择日期"></DatePicker>
+            <DatePicker type="date" placeholder="Select date"></DatePicker>
         </Col>
         <Col span="8">
-            <DatePicker size="large" type="date" placeholder="选择日期"></DatePicker>
+            <DatePicker size="large" type="date" placeholder="Select date"></DatePicker>
         </Col>
     </Row>
 </template>
