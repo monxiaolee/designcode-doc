@@ -34,11 +34,11 @@
                     <Card style="width:350px">
                         <p slot="title">
                             <Icon type="ios-film-outline"></Icon>
-                            经典电影
+                            Classic film
                         </p>
                         <a href="#" slot="extra" @click.prevent="changeLimit">
                             <Icon type="ios-loop-strong"></Icon>
-                            换一换
+                            Change
                         </a>
                         <ul>
                             <li v-for="item in randomMovieList">
@@ -60,8 +60,8 @@
                 <div slot="demo">
                     <div style="background:#eee;padding: 20px">
                         <Card :bordered="false">
-                            <p slot="title">无边框标题</p>
-                            <p>无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边框内容填充无边框内容填充。</p>
+                            <p slot="title">No border title</p>
+                            <p>Content of no border type. Content of no border type. Content of no border type. Content of no border type. </p>
                         </Card>
                     </div>
                 </div>
@@ -75,18 +75,18 @@
                     <Row>
                         <Col span="11">
                             <Card>
-                                <p slot="title">标准卡片</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
+                                <p slot="title">The standard card</p>
+                                <p>Content of card</p>
+                                <p>Content of card</p>
+                                <p>Content of card</p>
                             </Card>
                         </Col>
                         <Col span="11" offset="2">
                             <Card dis-hover>
-                                <p slot="title">禁用悬停阴影的卡片</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
+                                <p slot="title">Disable card with hover shadows</p>
+                                <p>Content of card</p>
+                                <p>Content of card</p>
+                                <p>Content of card</p>
                             </Card>
                         </Col>
                     </Row>
@@ -101,18 +101,18 @@
                     <Row style="background:#eee;padding:20px">
                         <Col span="11">
                             <Card :bordered="false">
-                                <p slot="title">无边框卡片</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
+                                <p slot="title">Borderless card</p>
+                                <p>Content of card</p>
+                                <p>Content of card</p>
+                                <p>Content of card</p>
                             </Card>
                         </Col>
                         <Col span="11" offset="2">
                             <Card shadow>
-                                <p slot="title">使用阴影效果的卡片</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
-                                <p>卡片内容</p>
+                                <p slot="title">Use a card with a shadow effect</p>
+                                <p>Content of card</p>
+                                <p>Content of card</p>
+                                <p>Content of card</p>
                             </Card>
                         </Col>
                     </Row>
@@ -128,7 +128,7 @@
                     <Card style="width:320px">
                         <div style="text-align:center">
                             <img src="../../images/logo.png">
-                            <h3>一套基于 Vue.js 的高质量UI组件库</h3>
+                            <h3>A high quality UI Toolkit based on Vue.js</h3>
                         </div>
                     </Card>
                 </div>
@@ -222,52 +222,52 @@
                 code: Code,
                 movieList: [
                     {
-                        name: '肖申克的救赎',
+                        name: 'The Shawshank Redemption',
                         url: 'https://movie.douban.com/subject/1292052/',
                         rate: 9.6
                     },
                     {
-                        name: '这个杀手不太冷',
+                        name: 'Leon:The Professional',
                         url: 'https://movie.douban.com/subject/1295644/',
                         rate: 9.4
                     },
                     {
-                        name: '霸王别姬',
+                        name: 'Farewell to My Concubine',
                         url: 'https://movie.douban.com/subject/1291546/',
                         rate: 9.5
                     },
                     {
-                        name: '阿甘正传',
+                        name: 'Forrest Gump',
                         url: 'https://movie.douban.com/subject/1292720/',
                         rate: 9.4
                     },
                     {
-                        name: '美丽人生',
+                        name: 'Life Is Beautiful',
                         url: 'https://movie.douban.com/subject/1292063/',
                         rate: 9.5
                     },
                     {
-                        name: '千与千寻',
+                        name: 'Spirited Away',
                         url: 'https://movie.douban.com/subject/1291561/',
                         rate: 9.2
                     },
                     {
-                        name: '辛德勒的名单',
+                        name: 'Schindler\'s List',
                         url: 'https://movie.douban.com/subject/1295124/',
                         rate: 9.4
                     },
                     {
-                        name: '海上钢琴师',
+                        name: 'The Legend of 1900',
                         url: 'https://movie.douban.com/subject/1292001/',
                         rate: 9.2
                     },
                     {
-                        name: '机器人总动员',
+                        name: 'WALL·E',
                         url: 'https://movie.douban.com/subject/2131459/',
                         rate: 9.3
                     },
                     {
-                        name: '盗梦空间',
+                        name: 'Inception',
                         url: 'https://movie.douban.com/subject/3541415/',
                         rate: 9.2
                     }
