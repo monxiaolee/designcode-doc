@@ -47,7 +47,7 @@
             <Demo title="点击上传">
                 <div slot="demo">
                     <Upload action="//jsonplaceholder.typicode.com/posts/">
-                        <Button type="ghost" icon="ios-cloud-upload-outline">上传文件</Button>
+                        <Button type="ghost" icon="ios-cloud-upload-outline">Upload files</Button>
                     </Upload>
                 </div>
                 <div slot="desc">
@@ -60,7 +60,7 @@
                     <Upload
                         multiple
                         action="//jsonplaceholder.typicode.com/posts/">
-                        <Button type="ghost" icon="ios-cloud-upload-outline">上传文件</Button>
+                        <Button type="ghost" icon="ios-cloud-upload-outline">Upload files</Button>
                     </Upload>
                 </div>
                 <div slot="desc">
@@ -73,9 +73,9 @@
                     <Upload
                         :before-upload="handleUpload"
                         action="//jsonplaceholder.typicode.com/posts/">
-                        <Button type="ghost" icon="ios-cloud-upload-outline">选择要上传文件的文件</Button>
+                        <Button type="ghost" icon="ios-cloud-upload-outline">Select the file to upload</Button>
                     </Upload>
-                    <div v-if="file !== null">待上传文件：{{ file.name }} <Button type="text" @click="upload" :loading="loadingStatus">{{ loadingStatus ? '上传中' : '点击上传' }}</Button></div>
+                    <div v-if="file !== null">Upload file: {{ file.name }} <Button type="text" @click="upload" :loading="loadingStatus">{{ loadingStatus ? 'Uploading' : 'Click to upload' }}</Button></div>
                 </div>
                 <div slot="desc">
                     <p>绑定 <code>before-upload</code>，并返回<code>false</code>，可以阻止默认上传流程，手动控制文件上传。</p>
@@ -90,7 +90,7 @@
                         action="//jsonplaceholder.typicode.com/posts/">
                         <div style="padding: 20px 0">
                             <Icon type="ios-cloud-upload" size="52" style="color: #3399ff"></Icon>
-                            <p>点击或将文件拖拽到这里上传</p>
+                            <p>Click or drag files here to upload</p>
                         </div>
                     </Upload>
                 </div>
@@ -131,7 +131,7 @@
                             <Icon type="camera" size="20"></Icon>
                         </div>
                     </Upload>
-                    <Modal title="查看图片" v-model="visible">
+                    <Modal title="View Image" v-model="visible">
                         <img :src="'https://o5wwk8baw.qnssl.com/' + imgName + '/large'" v-if="visible" style="width: 100%">
                     </Modal>
                 </div>
@@ -386,7 +386,7 @@
                 setTimeout(() => {
                     this.file = null;
                     this.loadingStatus = false;
-                    this.$Message.success('上传成功')
+                    this.$Message.success('Success')
                 }, 1500);
             },
             handleView (name) {
@@ -405,21 +405,21 @@
             },
             handleFormatError (file) {
                 this.$Notice.warning({
-                    title: '文件格式不正确',
-                    desc: '文件 ' + file.name + ' 格式不正确，请上传 jpg 或 png 格式的图片。'
+                    title: 'The file format is incorrect',
+                    desc: 'File format of ' + file.name + ' is incorrect, please select jpg or png.'
                 });
             },
             handleMaxSize (file) {
                 this.$Notice.warning({
-                    title: '超出文件大小限制',
-                    desc: '文件 ' + file.name + ' 太大，不能超过 2M。'
+                    title: 'Exceeding file size limit',
+                    desc: 'File  ' + file.name + ' is too large, no more than 2M.'
                 });
             },
             handleBeforeUpload () {
                 const check = this.uploadList.length < 5;
                 if (!check) {
                     this.$Notice.warning({
-                        title: '最多只能上传 5 张图片。'
+                        title: 'Up to five pictures can be uploaded.'
                     });
                 }
                 return check;
