@@ -12,28 +12,28 @@ code.base = `
             return {
                 cityList: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        value: 'New York',
+                        label: 'New York'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        value: 'London',
+                        label: 'London'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        value: 'Sydney',
+                        label: 'Sydney'
                     },
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        value: 'Ottawa',
+                        label: 'Ottawa'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        value: 'Paris',
+                        label: 'Paris'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        value: 'Canberra',
+                        label: 'Canberra'
                     }
                 ],
                 model1: ''
@@ -61,28 +61,28 @@ code.size = `
             return {
                 cityList: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        value: 'New York',
+                        label: 'New York'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        value: 'London',
+                        label: 'London'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        value: 'Sydney',
+                        label: 'Sydney'
                     },
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        value: 'Ottawa',
+                        label: 'Ottawa'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        value: 'Paris',
+                        label: 'Paris'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        value: 'Canberra',
+                        label: 'Canberra'
                     }
                 ],
                 model2: '',
@@ -100,9 +100,9 @@ code.disabled = `
         <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
     </Select>
     <Select v-model="model6" style="width:200px">
-        <Option value="beijing">北京市</Option>
-        <Option value="shanghai" disabled>上海市</Option>
-        <Option value="shenzhen">深圳市</Option>
+        <Option value="beijing">New York</Option>
+        <Option value="shanghai" disabled>London</Option>
+        <Option value="shenzhen">Sydney</Option>
     </Select>
 </template>
 <script>
@@ -111,28 +111,28 @@ code.disabled = `
             return {
                 cityList: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        value: 'New York',
+                        label: 'New York'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        value: 'London',
+                        label: 'London'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        value: 'Sydney',
+                        label: 'Sydney'
                     },
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        value: 'Ottawa',
+                        label: 'Ottawa'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        value: 'Paris',
+                        label: 'Paris'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        value: 'Canberra',
+                        label: 'Canberra'
                     }
                 ],
                 model5: '',
@@ -155,28 +155,28 @@ code.clearable = `
             return {
                 cityList: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        value: 'New York',
+                        label: 'New York'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        value: 'London',
+                        label: 'London'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        value: 'Sydney',
+                        label: 'Sydney'
                     },
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        value: 'Ottawa',
+                        label: 'Ottawa'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        value: 'Paris',
+                        label: 'Paris'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        value: 'Canberra',
+                        label: 'Canberra'
                     }
                 ],
                 model8: ''
@@ -189,10 +189,10 @@ code.clearable = `
 code.group = `
 <template>
     <Select v-model="model7" style="width:200px">
-        <OptionGroup label="热门城市">
+        <OptionGroup label="Hot Cities">
             <Option v-for="item in cityList1" :value="item.value" :key="item.value">{{ item.label }}</Option>
         </OptionGroup>
-        <OptionGroup label="其它城市">
+        <OptionGroup label="Other Cities">
             <Option v-for="item in cityList2" :value="item.value" :key="item.value">{{ item.label }}</Option>
         </OptionGroup>
     </Select>
@@ -203,56 +203,56 @@ code.group = `
             return {
                 cityList: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        value: 'New York',
+                        label: 'New York'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        value: 'London',
+                        label: 'London'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        value: 'Sydney',
+                        label: 'Sydney'
                     },
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        value: 'Ottawa',
+                        label: 'Ottawa'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        value: 'Paris',
+                        label: 'Paris'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        value: 'Canberra',
+                        label: 'Canberra'
                     }
                 ],
                 cityList1: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        value: 'New York',
+                        label: 'New York'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        value: 'London',
+                        label: 'London'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        value: 'Sydney',
+                        label: 'Sydney'
                     }
                 ],
                 cityList2: [
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        value: 'Ottawa',
+                        label: 'Ottawa'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        value: 'Paris',
+                        label: 'Paris'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        value: 'Canberra',
+                        label: 'Canberra'
                     }
                 ],
                 model7: ''
@@ -265,17 +265,17 @@ code.group = `
 code.label = `
 <template>
     <Select v-model="model9" style="width:200px">
-        <Option value="beijing" label="北京市">
-            <span>北京</span>
-            <span style="float:right;color:#ccc">Beiing</span>
+        <Option value="New York" label="New York">
+            <span>New York</span>
+            <span style="float:right;color:#ccc">America</span>
         </Option>
-        <Option value="shanghai" label="上海市">
-            <span>上海</span>
-            <span style="float:right;color:#ccc">ShangHai</span>
+        <Option value="London" label="London">
+            <span>London</span>
+            <span style="float:right;color:#ccc">U.K.</span>
         </Option>
-        <Option value="shenzhen" label="深圳市">
-            <span>深圳</span>
-            <span style="float:right;color:#ccc">ShenZhen</span>
+        <Option value="Sydney" label="Sydney">
+            <span>Sydney</span>
+            <span style="float:right;color:#ccc">Australian</span>
         </Option>
     </Select>
 </template>
@@ -302,28 +302,28 @@ code.multiple = `
             return {
                 cityList: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        value: 'New York',
+                        label: 'New York'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        value: 'London',
+                        label: 'London'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        value: 'Sydney',
+                        label: 'Sydney'
                     },
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        value: 'Ottawa',
+                        label: 'Ottawa'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        value: 'Paris',
+                        label: 'Paris'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        value: 'Canberra',
+                        label: 'Canberra'
                     }
                 ],
                 model10: []
@@ -354,28 +354,28 @@ code.filterable = `
             return {
                 cityList: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        value: 'New York',
+                        label: 'New York'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        value: 'London',
+                        label: 'London'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        value: 'Sydney',
+                        label: 'Sydney'
                     },
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        value: 'Ottawa',
+                        label: 'Ottawa'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        value: 'Paris',
+                        label: 'Paris'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        value: 'Canberra',
+                        label: 'Canberra'
                     }
                 ],
                 model11: '',
