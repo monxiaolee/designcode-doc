@@ -2,13 +2,13 @@ let code = {};
 
 code.info = `
 <template>
-    <Button type="primary" @click="info">显示普通提醒</Button>
+    <Button type="primary" @click="info">Display info prompt</Button>
 </template>
 <script>
     export default {
         methods: {
             info () {
-                this.$Message.info('这是一条普通的提醒');
+                this.$Message.info('This is a info tip');
             }
         }
     }
@@ -17,21 +17,21 @@ code.info = `
 
 code.type = `
 <template>
-    <Button @click="success">显示成功提示</Button>
-    <Button @click="warning">显示警告提示</Button>
-    <Button @click="error">显示错误提示</Button>
+    <Button @click="success">Display success prompt</Button>
+    <Button @click="warning">Display warning prompt</Button>
+    <Button @click="error">Display error prompt</Button>
 </template>
 <script>
     export default {
         methods: {
             success () {
-                this.$Message.success('这是一条成功的提示');
+                this.$Message.success('This is a success tip');
             },
             warning () {
-                this.$Message.warning('这是一条警告的提示');
+                this.$Message.warning('This is a warning tip');
             },
             error () {
-                this.$Message.error('对方不想说话，并且向你抛出了一个异常');
+                this.$Message.error('This is an error tip');
             }
         }
     }
@@ -40,14 +40,14 @@ code.type = `
 
 code.loading = `
 <template>
-    <Button @click="loading">显示加载中...</Button>
+    <Button @click="loading">Display loading...</Button>
 </template>
 <script>
     export default {
         methods: {
             loading () {
                 const msg = this.$Message.loading({
-                    content: '正在加载中...',
+                    content: 'Loading...',
                     duration: 0
                 });
                 setTimeout(msg, 3000);
@@ -59,13 +59,13 @@ code.loading = `
 
 code.time = `
 <template>
-    <Button @click="time">显示一个10秒的提示</Button>
+    <Button @click="time">Displays a 10 second prompt</Button>
 </template>
 <script>
     export default {
         methods: {
             this.$Message.info({
-                content: '我将在10秒后消失',
+                content: 'I\'ll be gone in 10 seconds',
                 duration: 10
             });
         }
@@ -82,14 +82,14 @@ this.$Message.config({
 
 code.closable = `
 <template>
-    <Button @click="closable">显示一个可关闭的提示</Button>
+    <Button @click="closable">Display a closable message</Button>
 </template>
 <script>
     export default {
         methods: {
             closable () {
                 this.$Message.info({
-                    content: '可手动关闭的提示',
+                    content: 'Tips for manual closing',
                     duration: 10,
                     closable: true
                 });

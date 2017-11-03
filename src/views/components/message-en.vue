@@ -7,7 +7,7 @@
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Normal Prompt">
                 <div slot="demo">
-                    <Button type="primary" @click="info">显示普通提示</Button>
+                    <Button type="primary" @click="info">Display info prompt</Button>
                 </div>
                 <div slot="desc">
                     <p>Basic promt, fades after 1.5 seconds by default.</p>
@@ -16,9 +16,9 @@
             </Demo>
             <Demo title="Prompt Type">
                 <div slot="demo">
-                    <Button @click="success">显示成功提示</Button>
-                    <Button @click="warning">显示警告提示</Button>
-                    <Button @click="error">显示错误提示</Button>
+                    <Button @click="success">Display success prompt</Button>
+                    <Button @click="warning">Display warning prompt</Button>
+                    <Button @click="error">Display error prompt</Button>
                 </div>
                 <div slot="desc">
                     <p>Different prompt types: success, warning, error.</p>
@@ -27,7 +27,7 @@
             </Demo>
             <Demo title="Loading Prompt">
                 <div slot="demo">
-                    <Button @click="loading">显示加载中...</Button>
+                    <Button @click="loading">Display loading...</Button>
                 </div>
                 <div slot="desc">
                     <p>Loading status, dismissed asynchronously.</p>
@@ -36,7 +36,7 @@
             </Demo>
             <Demo title="Custom Prompt Duration">
                 <div slot="demo">
-                    <Button @click="time">显示一个10秒的提示</Button>
+                    <Button @click="time">Displays a 10 second prompt</Button>
                 </div>
                 <div slot="desc">
                     <p>Customize prompt duration. Can also be configured in <code>Message.config()</code>, refer to API section below.</p>
@@ -45,7 +45,7 @@
             </Demo>
             <Demo title="Closable">
                 <div slot="demo">
-                    <Button @click="closable">Display a closable message.</Button>
+                    <Button @click="closable">Display a closable message</Button>
                 </div>
                 <div slot="desc">
                     <p>Set parameter as an object, and set its <code>closable</code> to true to allow manual close. Details on API Doc.</p>
@@ -171,33 +171,33 @@
         },
         methods: {
             info () {
-                this.$Message.info('这是一条普通的提示');
+                this.$Message.info('This is a info tip');
             },
             success () {
-                this.$Message.success('这是一条成功的提示');
+                this.$Message.success('This is a success tip');
             },
             warning () {
-                this.$Message.warning('这是一条警告的提示');
+                this.$Message.warning('This is a warning tip');
             },
             error () {
-                this.$Message.error('对方不想说话，并且向你抛出了一个异常');
+                this.$Message.error('This is an error tip');
             },
             loading () {
                 const msg = this.$Message.loading({
-                    content: '正在加载中...',
+                    content: 'Loading...',
                     duration: 0
                 });
                 setTimeout(msg, 3000);
             },
             time () {
                 this.$Message.info({
-                    content: '我将在10秒后消失',
+                    content: 'I\'ll be gone in 10 seconds',
                     duration: 10
                 });
             },
             closable () {
                 this.$Message.info({
-                    content: '可手动关闭的提示',
+                    content: 'Tips for manual closing',
                     duration: 10,
                     closable: true
                 });
