@@ -32,7 +32,7 @@ code.base = `
         </MenuItem>
     </Menu>
     <br>
-    <p>切换主题</p>
+    <p>Change theme</p>
     <RadioGroup v-model="theme1">
         <Radio label="light"></Radio>
         <Radio label="dark"></Radio>
@@ -163,7 +163,7 @@ code.vertical = `
         </Col>
     </Row>
     <br>
-    <p>切换主题</p>
+    <p>Change theme</p>
     <RadioGroup v-model="theme2">
         <Radio label="light"></Radio>
         <Radio label="dark"></Radio>
@@ -205,7 +205,7 @@ code.group = `
         </MenuGroup>
     </Menu>
     <br>
-    <p>切换主题</p>
+    <p>Change theme</p>
     <RadioGroup v-model="theme3">
         <Radio label="light"></Radio>
         <Radio label="dark"></Radio>

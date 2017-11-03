@@ -38,7 +38,7 @@
                         </MenuItem>
                     </Menu>
                     <br>
-                    <p>切换主题</p>
+                    <p>Change theme</p>
                     <RadioGroup v-model="theme1">
                         <Radio label="light"></Radio>
                         <Radio label="dark"></Radio>
@@ -165,7 +165,7 @@
                         </Col>
                     </Row>
                     <br>
-                    <p>切换主题</p>
+                    <p>Change theme</p>
                     <RadioGroup v-model="theme2">
                         <Radio label="light"></Radio>
                         <Radio label="dark"></Radio>
@@ -204,7 +204,7 @@
                         </MenuGroup>
                     </Menu>
                     <br>
-                    <p>切换主题</p>
+                    <p>Change theme</p>
                     <RadioGroup v-model="theme3">
                         <Radio label="light"></Radio>
                         <Radio label="dark"></Radio>
