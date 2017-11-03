@@ -4,10 +4,10 @@ code.base = `
 <template>
     <Row>
         <Col span="12">
-            <TimePicker type="time" placeholder="选择时间" style="width: 168px"></TimePicker>
+            <TimePicker type="time" placeholder="Select time" style="width: 168px"></TimePicker>
         </Col>
         <Col span="12">
-            <TimePicker type="timerange" placement="bottom-end" placeholder="选择时间" style="width: 168px"></TimePicker>
+            <TimePicker type="timerange" placement="bottom-end" placeholder="Select time" style="width: 168px"></TimePicker>
         </Col>
     </Row>
 </template>
@@ -22,10 +22,10 @@ code.format = `
 <template>
     <Row>
         <Col span="12">
-            <TimePicker :value="value1" format="HH点mm分ss秒" placeholder="选择时间" style="width: 168px"></TimePicker>
+            <TimePicker :value="value1" format="HH点mm分ss秒" placeholder="Select time" style="width: 168px"></TimePicker>
         </Col>
         <Col span="12">
-            <TimePicker :value="value2" format="HH’mm’ss" type="timerange" placement="bottom-end" placeholder="选择时间" style="width: 168px"></TimePicker>
+            <TimePicker :value="value2" format="HH’mm’ss" type="timerange" placement="bottom-end" placeholder="Select time" style="width: 168px"></TimePicker>
         </Col>
     </Row>
 </template>
@@ -45,10 +45,10 @@ code.hours = `
 <template>
     <Row>
         <Col span="12">
-            <TimePicker format="HH:mm" placeholder="选择时间" style="width: 112px"></TimePicker>
+            <TimePicker format="HH:mm" placeholder="Select time" style="width: 112px"></TimePicker>
         </Col>
         <Col span="12">
-            <TimePicker format="HH:mm" type="timerange" placement="bottom-end" placeholder="选择时间" style="width: 168px"></TimePicker>
+            <TimePicker format="HH:mm" type="timerange" placement="bottom-end" placeholder="Select time" style="width: 168px"></TimePicker>
         </Col>
     </Row>
 </template>
@@ -66,7 +66,7 @@ code.disabled = `
             <TimePicker
                 :disabled-hours="[1,5,10]"
                 :disabled-minutes="[0,10,20]"
-                placeholder="选择时间"
+                placeholder="Select time"
                 style="width: 168px"></TimePicker>
         </Col>
         <Col span="12">
@@ -74,7 +74,7 @@ code.disabled = `
                 hide-disabled-options
                 :disabled-hours="[1,5,10]"
                 :disabled-minutes="[0,10,20]"
-                placeholder="选择时间"
+                placeholder="Select time"
                 style="width: 168px"></TimePicker>
         </Col>
     </Row>
@@ -90,10 +90,10 @@ code.confirm = `
 <template>
     <Row>
         <Col span="12">
-            <TimePicker confirm placeholder="选择时间" style="width: 168px"></TimePicker>
+            <TimePicker confirm placeholder="Select time" style="width: 168px"></TimePicker>
         </Col>
         <Col span="12">
-            <TimePicker confirm type="timerange" placement="bottom-end" placeholder="选择时间" style="width: 168px"></TimePicker>
+            <TimePicker confirm type="timerange" placement="bottom-end" placeholder="Select time" style="width: 168px"></TimePicker>
         </Col>
     </Row>
 </template>
@@ -115,7 +115,7 @@ code.slot = `
         @on-ok="handleOk">
         <a href="javascript:void(0)" @click="handleClick">
             <Icon type="ios-clock-outline"></Icon>
-            <template v-if="value3 === ''">选择时间</template>
+            <template v-if="value3 === ''">Select time</template>
             <template v-else>{{ value3 }}</template>
         </a>
     </TimePicker>
@@ -150,13 +150,13 @@ code.size = `
 <template>
     <row :gutter="16">
         <Col span="8">
-            <TimePicker size="small" placeholder="选择时间"></TimePicker>
+            <TimePicker size="small" placeholder="Select time"></TimePicker>
         </Col>
         <Col span="8">
-            <TimePicker placeholder="选择时间"></TimePicker>
+            <TimePicker placeholder="Select time"></TimePicker>
         </Col>
         <Col span="8">
-            <TimePicker size="large" placeholder="选择时间"></TimePicker>
+            <TimePicker size="large" placeholder="Select time"></TimePicker>
         </Col>
     </Row>
 </template>
@@ -169,7 +169,7 @@ code.size = `
 
 code.steps = `
 <template>
-    <TimePicker :steps="[1, 15, 15]" placeholder="选择时间" style="width: 112px"></TimePicker>
+    <TimePicker :steps="[1, 15, 15]" placeholder="Select time" style="width: 112px"></TimePicker>
 </template>
 <script>
     export default {
