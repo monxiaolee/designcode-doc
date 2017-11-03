@@ -20,7 +20,7 @@
             <Demo title="Basic Usage">
                 <div slot="demo">
                     <Affix>
-                        <span class="demo-affix">固定在最顶部</span>
+                        <span class="demo-affix">Fixed at the top</span>
                     </Affix>
                 </div>
                 <div slot="desc">
@@ -31,7 +31,7 @@
             <Demo title="Offset">
                 <div slot="demo">
                     <Affix :offset-top="50">
-                        <span class="demo-affix">固定在距离顶部 50px 的位置</span>
+                        <span class="demo-affix">Fixed at the top 50px from the top</span>
                     </Affix>
                 </div>
                 <div slot="desc">
@@ -42,7 +42,7 @@
             <Demo title="Fixed at the bottom">
                 <div slot="demo">
                     <Affix :offset-bottom="20">
-                        <span class="demo-affix">固定在距离底部 20px 的位置</span>
+                        <span class="demo-affix">Fix at the bottom 20px</span>
                     </Affix>
                 </div>
                 <div slot="desc">
@@ -54,7 +54,7 @@
             <Demo title="Callback when affix state is changed">
                 <div slot="demo">
                     <Affix :offset-top="100" @on-change="change">
-                        <span class="demo-affix">固定在距离顶部 100px 的位置</span>
+                        <span class="demo-affix">Fix the position at the top of 100px at the top</span>
                     </Affix>
                 </div>
                 <div slot="desc">
@@ -132,7 +132,7 @@
         },
         methods: {
             change (status) {
-                this.$Message.info(`当前状态：${status}`);
+                this.$Message.info(`Status: ${status}`);
             }
         }
     }
