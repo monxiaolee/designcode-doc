@@ -225,6 +225,12 @@
                             <td>String</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>spellcheck</td>
+                            <td>Native spellcheck property.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Input events" h3></Anchor>
