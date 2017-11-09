@@ -308,6 +308,11 @@
                             <td>点击取消的回调</td>
                             <td>无</td>
                         </tr>
+                        <tr>
+                            <td>on-visible-change</td>
+                            <td>显示状态发生变化时触发</td>
+                            <td>true / false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Modal slot" h3></Anchor>

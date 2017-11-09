@@ -307,6 +307,11 @@
                             <td>Callback when clicking cancel.</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>on-visible-change</td>
+                            <td>Triggered when the display status changes.</td>
+                            <td>true / false</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Modal slot" h3></Anchor>
