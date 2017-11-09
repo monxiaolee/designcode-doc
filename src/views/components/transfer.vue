@@ -178,6 +178,11 @@
                             <td>选项在两栏之间转移时的回调函数</td>
                             <td>targetKeys, direction, moveKeys</td>
                         </tr>
+                        <tr>
+                            <td>on-selected-change</td>
+                            <td>选中项发生变化时触发</td>
+                            <td>sourceSelectedKeys, targetSelectedKeys</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Transfer slot" h3></Anchor>

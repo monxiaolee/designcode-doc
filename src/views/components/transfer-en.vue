@@ -178,6 +178,11 @@
                             <td>Emitted when selection is transfered.</td>
                             <td>targetKeys, direction, moveKeys</td>
                         </tr>
+                        <tr>
+                            <td>on-selected-change</td>
+                            <td>Triggered when the selected item changes.</td>
+                            <td>sourceSelectedKeys, targetSelectedKeys</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Transfer slot" h3></Anchor>
