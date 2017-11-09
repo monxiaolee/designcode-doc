@@ -190,6 +190,7 @@
                 <div slot="desc">
                     <p>Form 组件基于 <a href="https://github.com/yiminghe/async-validator" target="_blank"><Icon type="social-github"></Icon> async-validator</a> 实现的数据验证，给 Form 设置属性 <code>rules</code>，同时给需要验证的 FormItem 设置属性 <code>prop</code> 指向对应字段即可。</p>
                     <p>完整的验证规则请参照开源项目 async-validator。</p>
+                    <p>验证方法也支持 Promise。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.validate }}</i-code>
             </Demo>
@@ -304,6 +305,12 @@
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
+                        <tr>
+                            <td>autocomplete</td>
+                            <td>原生的 autocomplete 属性，可选值为 off 或 on</td>
+                            <td>String</td>
+                            <td>off</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Form methods" h3></Anchor>
@@ -318,7 +325,7 @@
                     <tbody>
                         <tr>
                             <td>validate</td>
-                            <td>对整个表单进行校验，参数为检验完的回调，会返回一个 Boolean 表示成功与失败</td>
+                            <td>对整个表单进行校验，参数为检验完的回调，会返回一个 Boolean 表示成功与失败，支持 Promise</td>
                             <td>callback</td>
                         </tr>
                         <tr>

@@ -190,6 +190,7 @@
                 <div slot="desc">
                     <p>The validation module of Form is based on <a href="https://github.com/yiminghe/async-validator" target="_blank"><Icon type="social-github"></Icon> async-validator</a>. Set <code>rules</code> to Form and set <code>prop</code> prop to FormItem that needs to be validated.</p>
                     <p>For complete validation rules, please visit async-validator project site.</p>
+                    <p>Validate method support Promise.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.validate }}</i-code>
             </Demo>
@@ -304,6 +305,12 @@
                             <td>Boolean</td>
                             <td>true</td>
                         </tr>
+                        <tr>
+                            <td>autocomplete</td>
+                            <td>Native autocomplete property, which can be selected as off or on.</td>
+                            <td>String</td>
+                            <td>off</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Form methods" h3></Anchor>
@@ -318,7 +325,7 @@
                     <tbody>
                         <tr>
                             <td>validate</td>
-                            <td>Validate the whole form. The parameter is the callback function after validating. It'll return a Boolean value to notice success of failure.</td>
+                            <td>Validate the whole form. The parameter is the callback function after validating. It'll return a Boolean value to notice success of failure. Support Promise.</td>
                             <td>callback</td>
                         </tr>
                         <tr>
