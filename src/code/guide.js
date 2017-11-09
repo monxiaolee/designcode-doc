@@ -137,21 +137,79 @@ import locale from 'iview/dist/locale/en-US';
 Vue.use(iView, { locale });
 `;
 
-i18n.vue = `
+i18n.demand = `
 import Vue from 'vue';
-import VueI18n from 'vue-i18n';
+// importing iView on demand
+import { locale, Page } from 'iview';
+import lang from 'iview/dist/locale/en-US';
+
+// configure language
+locale(lang);
+
+// import components
+Vue.component('Page', Page);
+`;
+
+i18n.vuei18n6 = `
+import Vue from 'vue';
 import iView from 'iview';
-import zhLocale from 'iview/dist/locale/zh-CN';
-import enLocale from 'iview/dist/locale/en-US';
+import VueI18n from 'vue-i18n';
+import en from 'iview/dist/locale/en-US';
+import zh from 'iview/dist/locale/zh-CN';
+
+Vue.use(VueI18n);
+Vue.use(iView);
+Vue.locale = () => {};
+
+const messages = {
+    en: Object.assign({ message: 'hello' }, en),
+    zh: Object.assign({ message: '你好' }, zh)
+};
+
+// Create VueI18n instance with options
+const i18n = new VueI18n({
+    locale: 'en',  // set locale
+    messages  // set locale messages
+});
+
+new Vue({ i18n }).$mount('#app');
+`;
+
+i18n.vuei18n5 = `
+import Vue from 'vue';
+import iView from 'iview';
+import VueI18n from 'vue-i18n';
+import en from 'iview/dist/locale/en-US';
+import zh from 'iview/dist/locale/zh-CN';
 
 Vue.use(VueI18n);
 Vue.use(iView);
 
-Vue.config.lang = 'zh-CN';
-Vue.locale('zh-CN', zhLocale);
-Vue.locale('en-US', enLocale);
-// Note: when using vue-i18n, you need to merge the local language pack with the iView language package
+Vue.config.lang = 'en-US';
+Vue.locale('en-US', en);
+Vue.locale('zh-CN', zh);
 `;
+
+i18n.cdn = `
+<script src="//unpkg.com/vue"></script>
+<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+<script src="//unpkg.com/iview/dist/locale/en-US.js"></script>
+
+<script>
+    iview.lang('en-US');
+</script>
+`;
+
+i18n.cdnvuei18n = `
+<script src="//unpkg.com/vue"></script>
+<script src="//unpkg.com/iview/dist/iview.min.js"></script>
+<script src="//unpkg.com/iview/dist/locale/en-US.js"></script>
+
+<script>
+    iview.lang('en-US');
+</script>
+`;
+
 
 theme.less = `
 @import '~iview/src/styles/index.less';
