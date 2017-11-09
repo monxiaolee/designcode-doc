@@ -40,8 +40,8 @@
             <Anchor title="Reminder" h2></Anchor>
             <ul>
                 <li>Partial import will only effect logic level; you still need to import all the styles, which means add <code>import 'iview/dist/styles/iview.css';</code> to <strong>main.js</strong> or the root component.</li>
-                <li>Partial import depends on babel, so it's necessary to add module to webpack in order to let it compiled:</li>
-                <i-code lang="js" bg>{{ code.install.warning }}</i-code>
+                <!--<li>Partial import depends on babel, so it's necessary to add module to webpack in order to let it compiled:</li>-->
+                <!--<i-code lang="js" bg>{{ code.install.warning }}</i-code>-->
             </ul>
             <Anchor title="How to pass value to components" h2></Anchor>
             <p>Many components require adding <code>:</code> before properties for passing integer and boolean:</p>

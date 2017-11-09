@@ -99,7 +99,9 @@ new Vue({
 `;
 
 install.need = `
-import Checkbox from 'iview/src/components/checkbox';
+import { Button, Table } from 'iview';
+Vue.component('Button', Button);
+Vue.component('Table', Table);
 `;
 
 install.warning = `

@@ -48,8 +48,8 @@
             <Anchor title="特别提醒" h2></Anchor>
             <ul>
                 <li>按需引用仍然需要导入样式，即在 <strong>main.js</strong> 或根组件执行 <code>import 'iview/dist/styles/iview.css';</code></li>
-                <li>按需引用是直接引用的组件库源代码，需要借助 babel 进行编译，以 webpack 为例：</li>
-                <i-code lang="js" bg>{{ code.install.warning }}</i-code>
+                <!--<li>按需引用是直接引用的组件库源代码，需要借助 babel 进行编译，以 webpack 为例：</li>-->
+                <!--<i-code lang="js" bg>{{ code.install.warning }}</i-code>-->
             </ul>
             <Anchor title="组件使用规范" h2></Anchor>
             <p>使用<code>:prop</code>传递数据格式为 数字、布尔值或函数时，必须带<code>:</code>(兼容String除外，具体看组件文档)，比如：</p>
