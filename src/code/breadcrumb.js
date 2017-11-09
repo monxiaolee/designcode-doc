@@ -3,8 +3,8 @@ let code = {};
 code.base = `
 <template>
     <Breadcrumb>
-        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
     </Breadcrumb>
 </template>
@@ -18,10 +18,10 @@ code.base = `
 code.icon = `
 <template>
     <Breadcrumb>
-        <BreadcrumbItem href="/">
+        <BreadcrumbItem to="/">
             <Icon type="ios-home-outline"></Icon> Home
         </BreadcrumbItem>
-        <BreadcrumbItem href="/components/breadcrumb">
+        <BreadcrumbItem to="/components/breadcrumb">
             <Icon type="social-buffer-outline"></Icon> Components
         </BreadcrumbItem>
         <BreadcrumbItem>
@@ -45,13 +45,13 @@ code.separator = `
 </style>
 <template>
     <Breadcrumb separator=">">
-        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
     </Breadcrumb>
     <Breadcrumb separator="<b class='demo-breadcrumb-separator'>=></b>">
-        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
     </Breadcrumb>
 </template>

@@ -14,23 +14,23 @@
             <Demo title="Basic Usage">
                 <div slot="demo">
                     <Breadcrumb>
-                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
                         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                 </div>
                 <div slot="desc">
-                    <p>Simplest usage: add link by setting <code>href</code> prop.</p>
+                    <p>Simplest usage: add link by setting <code>to</code> prop.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="With Icon">
                 <div slot="demo">
                     <Breadcrumb>
-                        <BreadcrumbItem href="/">
+                        <BreadcrumbItem to="/">
                             <Icon type="ios-home-outline"></Icon> Home
                         </BreadcrumbItem>
-                        <BreadcrumbItem href="/components/breadcrumb">
+                        <BreadcrumbItem to="/components/breadcrumb">
                             <Icon type="social-buffer-outline"></Icon> Components
                         </BreadcrumbItem>
                         <BreadcrumbItem>
@@ -46,13 +46,13 @@
             <Demo title="Separator">
                 <div slot="demo">
                     <Breadcrumb separator=">">
-                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
                         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                     <Breadcrumb separator="<b class='demo-breadcrumb-separator'>=></b>">
-                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
                         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                 </div>
@@ -94,9 +94,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>href</td>
+                            <td>to</td>
                             <td>Link, no link if not set.</td>
-                            <td>String</td>
+                            <td>String | Object</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>href</td>
+                            <td>Same as to, and will be abandoned.</td>
+                            <td>String | Object</td>
                             <td>-</td>
                         </tr>
                         <tr>

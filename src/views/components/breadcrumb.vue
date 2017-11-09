@@ -14,23 +14,23 @@
             <Demo title="基础用法">
                 <div slot="demo">
                     <Breadcrumb>
-                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
                         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                 </div>
                 <div slot="desc">
-                    <p>最基础的用法，通过设置<code>href</code>属性添加链接。</p>
+                    <p>最基础的用法，通过设置<code>to</code>属性添加链接。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
             <Demo title="带图标的">
                 <div slot="demo">
                     <Breadcrumb>
-                        <BreadcrumbItem href="/">
+                        <BreadcrumbItem to="/">
                             <Icon type="ios-home-outline"></Icon> Home
                         </BreadcrumbItem>
-                        <BreadcrumbItem href="/components/breadcrumb">
+                        <BreadcrumbItem to="/components/breadcrumb">
                             <Icon type="social-buffer-outline"></Icon> Components
                         </BreadcrumbItem>
                         <BreadcrumbItem>
@@ -46,13 +46,13 @@
             <Demo title="分隔符">
                 <div slot="demo">
                     <Breadcrumb separator=">">
-                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
                         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                     <Breadcrumb separator="<b class='demo-breadcrumb-separator'>=></b>">
-                        <BreadcrumbItem href="/">Home</BreadcrumbItem>
-                        <BreadcrumbItem href="/components/breadcrumb">Components</BreadcrumbItem>
+                        <BreadcrumbItem to="/">Home</BreadcrumbItem>
+                        <BreadcrumbItem to="/components/breadcrumb">Components</BreadcrumbItem>
                         <BreadcrumbItem>Breadcrumb</BreadcrumbItem>
                     </Breadcrumb>
                 </div>
@@ -94,9 +94,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>href</td>
+                            <td>to</td>
                             <td>链接，不传则没有链接</td>
-                            <td>String</td>
+                            <td>String | Object</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>href</td>
+                            <td>同 to，未来将废弃</td>
+                            <td>String | Object</td>
                             <td>-</td>
                         </tr>
                         <tr>
