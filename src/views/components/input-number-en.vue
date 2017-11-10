@@ -152,6 +152,16 @@
                             <td>Callback when number changes. Return the current value.</td>
                             <td>current value</td>
                         </tr>
+                        <tr>
+                            <td>on-focus</td>
+                            <td>Trigger on focus.</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>on-blur</td>
+                            <td>Trigger on blur.</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>

@@ -152,6 +152,16 @@
                             <td>数值改变时的回调，返回当前值</td>
                             <td>当前值</td>
                         </tr>
+                        <tr>
+                            <td>on-focus</td>
+                            <td>聚焦时触发</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>on-blur</td>
+                            <td>失焦时触发</td>
+                            <td>-</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
