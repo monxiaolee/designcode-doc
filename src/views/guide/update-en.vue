@@ -25,6 +25,33 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.7.0 Lara Croft GO" h2></Anchor>
+                    <p>
+                        <code>2017-11-13</code>
+                    </p>
+                    <ul>
+                        <li>i18n support vue-i18n 6.x+ version, and support using with <code>script</code> tag. Improve the i18n doc. <router-link to="/docs/guide/i18n-en">View</router-link></li>
+                        <li>Now you can load components on demand. <router-link to="/docs/guide/start-en">View</router-link></li>
+                        <li>Form validation method <code>validate</code> supporting Promise. <issue id="2018"></issue></li>
+                        <li>Form add new property <code>autocomplete</code>. </li>
+                        <li>BreadcrumbItem <code>href</code> support the <code>to</code> Object of vue-router, and add new property <code>to</code>, the same as href. The href property will be abandoned in the future. <issue id="2214"></issue></li>
+                        <li>Input add new property <code>spellcheck</code>, and some components add <code>autocomplete</code> and <code>spellcheck</code> as default. <issue id="2324"></issue></li>
+                        <li>Modal add new event <code>on-visible-change</code>. </li>
+                        <li>Transfer add new event <code>on-selected-change</code>. <issue id="2019"></issue></li>
+                        <li>InputNumber add new event <code>on-focus</code> and <code>on-blur</code>. </li>
+                        <li>Avatar style adjusts to center. <issue id="1926"></issue></li>
+                        <li>Fixed InputNumber bug that sometimes unable to enter the range of numbers. <issue id="2205"></issue></li>
+                        <li>Fixed Table bug when it is not set width and in vertical scroll, the fixed column's position is wrong. <issue id="2102"></issue></li>
+                        <li>Fixed Table bug when the column is expandable and fixed, the fixed column will be rendered again. <issue id="1648"></issue></li>
+                        <li>Fixed DatePicker and TimePicker that can not trigger <code>on-change</code> event when click clear button at first time.<issue id="2215"></issue></li>
+                        <li>Fixed DatePicker, TimePicker and ColorPicker bug that using in FormItem, the icon is incorrect.<issue id="2219"></issue></li>
+                        <li>Fixed an IE bug of TimePicker. <issue id="2330"></issue></li>
+                        <li>Fixed Page bug in simple mode, enter an empty string, it shows NaN. <issue id="1575"></issue></li>
+                        <li>Fixed Tooltip bug when change the content, the position is wrong. <issue id="1482"></issue></li>
+                        <li>Add Ukrainian. <mention id="f3man"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.6.0 FRAMED" h2></Anchor>
                     <p>
                         <code>2017-10-26</code>

@@ -25,6 +25,33 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.7.0 Lara Croft GO" h2></Anchor>
+                    <p>
+                        <code>2017-11-13</code>
+                    </p>
+                    <ul>
+                        <li>i18n 兼容 vue-i18n 6.x+ 版本，并支持通过 <code>script</code> 标签引入，完善国际化使用文档。<router-link to="/docs/guide/i18n">查看</router-link></li>
+                        <li>现在可以更好地按需加载组件了。<router-link to="/docs/guide/start">查看</router-link></li>
+                        <li>Form 验证方法 <code>validate</code> 支持 Promise。<issue id="2018"></issue></li>
+                        <li>Form 新增 <code>autocomplete</code> 属性。</li>
+                        <li>BreadcrumbItem 的 <code>href</code> 属性支持传入 vue-router 的 to 对象，同时新增 <code>to</code> 属性，与 href 相同，未来将废弃 href 属性。<issue id="2214"></issue></li>
+                        <li>Input 新增 <code>spellcheck</code> 属性，部分可输入类组件设置了默认的 <code>autocomplete</code> 和 <code>spellcheck</code> 属性。<issue id="2324"></issue></li>
+                        <li>Modal 增加事件 <code>on-visible-change</code>。</li>
+                        <li>Transfer 新增选中项变化事件 <code>on-selected-change</code>。<issue id="2019"></issue></li>
+                        <li>InputNumber 新增事件 <code>on-focus</code> 和 <code>on-blur</code>。</li>
+                        <li>Avatar 样式调整为居中。<issue id="1926"></issue></li>
+                        <li>修复 InputNumber 有时无法输入范围内数字的 bug。<issue id="2205"></issue></li>
+                        <li>修复 Table 在未设置 width，垂直滚动时，固定列出现错位的 bug。<issue id="2102"></issue></li>
+                        <li>修复 Table 在可展开且有固定列时，固定一列重复渲染的 bug。<issue id="1648"></issue></li>
+                        <li>修复 DatePicker、TimePicker 第一次点击清除按钮时，无法触发 <code>on-change</code> 事件的 bug。<issue id="2215"></issue></li>
+                        <li>修复 DatePicker、TimePicker、ColorPicker 在 FormItem 内使用时，图标位置不正确的 bug。<issue id="2219"></issue></li>
+                        <li>修复 TimePicker 在 IE 下的一个问题。<issue id="2330"></issue></li>
+                        <li>修复 Page 在 simple 模式下，输入页码为空时，回车显示为 NaN 的 bug。<issue id="1575"></issue></li>
+                        <li>修复 Tooltip 在动态改变 content 时，错位的 bug。<issue id="1482"></issue></li>
+                        <li>增加乌克兰语。<mention id="f3man"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.6.0 FRAMED" h2></Anchor>
                     <p>
                         <code>2017-10-26</code>
