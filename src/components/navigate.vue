@@ -128,7 +128,7 @@
                 if (type === 'taobao') {
                     window.open('https://detail.tmall.com/item.htm?id=559480603657');
                 } else if (type === 'jd') {
-                    window.open('https://item.jd.com/17301055780.html');
+                    window.open('https://item.jd.com/12215519.html');
                 } else if (type === 'video') {
                     window.open('https://segmentfault.com/ls/1650000011074057');
                 }

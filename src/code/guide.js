@@ -206,9 +206,25 @@ i18n.cdnvuei18n = `
 <script src="//unpkg.com/vue"></script>
 <script src="//unpkg.com/iview/dist/iview.min.js"></script>
 <script src="//unpkg.com/iview/dist/locale/en-US.js"></script>
+<script src="//unpkg.com/iview/dist/locale/zh-CN.js"></script>
 
 <script>
-    iview.lang('en-US');
+    // you need to add Polyfill if your browser doesn't support ES2015
+    Vue.locale = () => {};
+    const messages = {
+        en: Object.assign({ message: 'hello' }, iview.langs['en-US']),
+        zh: Object.assign({ message: '你好' }, iview.langs['zh-CN'])
+    };
+
+    const i18n = new VueI18n({
+      locale: 'en', // set locale
+      messages // set locale messages
+    })
+    
+    new Vue({
+        el: '#app',
+        i18n: i18n
+    })
 </script>
 `;
 
