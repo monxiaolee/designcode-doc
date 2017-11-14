@@ -25,6 +25,15 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.7.1" h2></Anchor>
+                    <p>
+                        <code>2017-11-14</code>
+                    </p>
+                    <ul>
+                        <li>Fix the problem of errors in Tabs. <issue id="2407"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.7.0 Lara Croft GO" h2></Anchor>
                     <p>
                         <code>2017-11-13</code>

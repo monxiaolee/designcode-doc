@@ -141,21 +141,24 @@
                 </div>
             </div>
         </Modal>
-        <Modal v-model="ask" title="提问" @on-ok="handleModalClose" @on-cancel="handleModalClose" :styles="{top: '20px'}">
+        <Modal v-model="ask" title="免费加入 iView 官方QQ群参与讨论" class-name="vertical-center-modal">
             <div class="ivu-article">
-                <p>如果您在开发中遇到问题，包括但不限于 iView、JavaScript、Vue、Webpack 等相关技术，可以加入小密圈和我们一对一提问，收到问题后，我们会在 30 分钟内解答。</p>
-                <p>因为提供高质量的答疑服务，所以我们暂时收费 <span style="color: #f50">￥98/年</span> 。</p>
-                <p>如果您不愿意付费，可以在 GitHub 提交与 iView 相关的 issues，或到 <a href="https://segmentfault.com/t/iview" target="_blank">社区</a>讨论。</p>
-                <div>
-                    <img src="../images/miquan.jpg" style="width: 300px;margin: 0 auto;display: block;">
-                </div>
+                <p>免费加入官方QQ讨论群，交流 iView 技术问题。</p>
+                <p>群号：<strong>621780943</strong></p>
+                <p>二维码：</p>
+                <p>
+                    <img src="../images/qqgroup1.png" style="display: block;width: 50%;margin: 0 auto;">
+                </p>
+                <p>
+                    <Alert show-icon>仅限开发者加入，请勿讨论与技术无关的问题，比如发招聘信息等。</Alert>
+                </p>
             </div>
         </Modal>
         <!-- todo 提问 -->
-        <!--<div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">-->
-            <!--<Icon type="help-circled"></Icon>-->
-            <!--<p>{{ $t('index.ask') }}</p>-->
-        <!--</div>-->
+        <div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">
+            <Icon type="ios-people" size="24"></Icon>
+            <p>QQ群</p>
+        </div>
     </div>
 </template>
 <script>
