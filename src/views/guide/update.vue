@@ -25,6 +25,15 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.7.2" h2></Anchor>
+                    <p>
+                        <code>2017-11-14</code>
+                    </p>
+                    <ul>
+                        <li>修复 Tabs 销毁时报错的问题。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.7.1" h2></Anchor>
                     <p>
                         <code>2017-11-14</code>
