@@ -17,6 +17,8 @@
                 <li><a href="http://www.alibaba.com/" target="_blank">阿里巴巴</a></li>
                 <li><a href="http://www.jd.com/" target="_blank">京东</a></li>
                 <li><a href="http://www.didichuxing.com/" target="_blank">滴滴出行</a></li>
+                <li><a href="http://www.sina.com.cn/" target="_blank">新浪</a></li>
+                <li><a href="https://www.lenovo.com.cn/" target="_blank">联想</a></li>
             </ul>
             <blockquote>
                 如果你的公司和产品使用了iView，欢迎到 <a href="https://github.com/iview/iview/issues/2143" target="_blank">这里</a> 留言。
