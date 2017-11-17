@@ -25,6 +25,17 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.7.3" h2></Anchor>
+                    <p>
+                        <code>2017-11-16</code>
+                    </p>
+                    <ul>
+                        <li>Fixed problem that can not be used in Nuxt.js under version 2.7.0.</li>
+                        <li>Fixed a bug about InputNumber. <issue id="2418"></issue></li>
+                        <li>Update Spanish. <issue id="2426"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.7.2" h2></Anchor>
                     <p>
                         <code>2017-11-14</code>

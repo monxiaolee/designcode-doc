@@ -25,6 +25,17 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.7.3" h2></Anchor>
+                    <p>
+                        <code>2017-11-16</code>
+                    </p>
+                    <ul>
+                        <li>修复 2.7.0 版本下，无法在 Nuxt.js 中使用的问题。</li>
+                        <li>修复 InputNumber 的一个问题。<issue id="2418"></issue></li>
+                        <li>修改了西班牙语。<issue id="2426"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.7.2" h2></Anchor>
                     <p>
                         <code>2017-11-14</code>
