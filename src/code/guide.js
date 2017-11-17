@@ -113,6 +113,18 @@ module: {
 }
 `;
 
+install.babel_plugins = `
+npm install babel-plugin-import --save-dev
+
+// .babelrc
+{
+  "plugins": [["import", {
+    "libraryName": "iview",
+    "libraryDirectory": "src/components"
+  }]]
+}
+`
+
 start.dev = `
 // 如果是第一次使用，先运行init，以后直接运行dev
 $ npm run init

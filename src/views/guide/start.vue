@@ -43,7 +43,9 @@
             <p>一般在 webpack 入口页面 <code>main.js</code> 中如下配置：</p>
             <i-code lang="js" bg>{{ code.install.import }}</i-code>
             <Anchor title="按需引用" h2></Anchor>
-            <p>如果您想在 webpack 中按需使用组件，减少文件体积，可以这样写：</p>
+            <p>借助插件 <a href="https://github.com/ant-design/babel-plugin-import" target="_blank">babel-plugin-import</a>可以实现按需加载组件，减少文件体积。首先安装，并在文件 <code>.babelrc</code> 中配置：</p>
+            <i-code bg>{{ code.install.babel_plugins }}</i-code>
+            <p>然后这样按需引入组件，就可以减小体积了：</p>
             <i-code bg>{{ code.install.need }}</i-code>
             <Anchor title="特别提醒" h2></Anchor>
             <ul>

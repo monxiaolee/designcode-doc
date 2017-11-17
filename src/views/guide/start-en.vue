@@ -35,7 +35,11 @@
             <p>Import iView in the entry file (<code>main.js</code> as usual) of webpack:</p>
             <i-code lang="js" bg>{{ code.install.import }}</i-code>
             <Anchor title="Import on demand" h2></Anchor>
-            <p>Only import components what we need will help reduce size.</p>
+            <!--<p>Only import components what we need will help reduce size.</p>-->
+            <!--<i-code bg>{{ code.install.need }}</i-code>-->
+            <p>By using the <a href="https://github.com/ant-design/babel-plugin-import" target="_blank">babel-plugin-import</a> , you can load components on demand and reduce the size of files. First installation, then update <code>.babelrc</code> file:</p>
+            <i-code bg>{{ code.install.babel_plugins }}</i-code>
+            <p>Now you can import components like:</p>
             <i-code bg>{{ code.install.need }}</i-code>
             <Anchor title="Reminder" h2></Anchor>
             <ul>
