@@ -71,14 +71,17 @@
                             <div style="margin-top: 12px;">
                                 <Row :gutter="16">
                                     <i-col span="8">
-                                        <Button icon="ios-cart" type="warning" size="large" long @click="handleBuy('taobao')">淘宝购买</Button>
+                                        <Button icon="ios-cart" type="warning" size="large" long @click="handleBuy('taobao')">天猫购买</Button>
                                     </i-col>
                                     <i-col span="8">
                                         <Button icon="ios-cart" type="error" size="large" long @click="handleBuy('jd')">京东购买</Button>
                                     </i-col>
                                     <i-col span="8">
-                                        <Button icon="ios-videocam" type="info" size="large" long @click="handleBuy('video')">系列视频教程</Button>
+                                        <Button icon="ios-cart" type="info" size="large" long @click="handleBuy('dangdang')">当当购买</Button>
                                     </i-col>
+                                    <!--<i-col span="6">-->
+                                        <!--<Button icon="ios-videocam" type="info" size="large" long @click="handleBuy('video')">系列视频教程</Button>-->
+                                    <!--</i-col>-->
                                 </Row>
                             </div>
                         </div>
@@ -131,6 +134,8 @@
                     window.open('https://item.jd.com/12215519.html');
                 } else if (type === 'video') {
                     window.open('https://segmentfault.com/ls/1650000011074057');
+                } else if (type === 'dangdang') {
+                    window.open('http://product.dangdang.com/25180286.html');
                 }
             }
         },
