@@ -98,18 +98,18 @@
             },
             handleClick (type, bit) {
                 if (type === 'mac') {
-                    window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.0.0.dmg');
+                    window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0.dmg');
                 } else if (type === 'windows') {
                     if (bit === 64) {
-                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.0.0-win32-x64.zip');
+                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0-win32-x64.zip');
                     } else if (bit === 32) {
-                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.0.0-win32-ia32.zip');
+                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0-win32-ia32.zip');
                     }
                 } else if (type === 'linux') {
                     if (bit === 64) {
-                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.0.0-linux-x64.zip');
+                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0-linux-x64.zip');
                     } else if (bit === 32) {
-                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.0.0-linux-ia32.zip');
+                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0-linux-ia32.zip');
                     }
                 } else if (type === 'github') {
                     window.open('https://github.com/iview/iview-cli');
