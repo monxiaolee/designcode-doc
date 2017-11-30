@@ -1012,7 +1012,7 @@ code.render = `
 `;
 
 code.expand = `
-\/\/ expand-row.vue
+\/\/ table-expand.vue
 <style scoped>
     .expand-row{
         margin-bottom: 16px;
