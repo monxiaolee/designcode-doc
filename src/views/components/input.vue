@@ -143,7 +143,7 @@
                     <tbody>
                         <tr>
                             <td>type</td>
-                            <td>输入框类型，可选值为 <code>text</code>、<code>password</code> 或 <code>textarea</code></td>
+                            <td>输入框类型，可选值为 <code>text</code>、<code>password</code>、<code>textarea</code>、<code>url</code>、<code>email</code>、<code>date</code></td>
                             <td>String</td>
                             <td>text</td>
                         </tr>

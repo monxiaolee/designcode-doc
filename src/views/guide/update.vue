@@ -25,6 +25,18 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.7.4" h2></Anchor>
+                    <p>
+                        <code>2017-12-01</code>
+                    </p>
+                    <ul>
+                        <li>修复部分组件在按需加载时报错的问题。<issue id="2537"></issue></li>
+                        <li>Input 增加了更多的类型。<issue id="2526"></issue></li>
+                        <li>新增意大利语。<mention id="lucagentile"></mention></li>
+                        <li>新增泰语。<mention id="NatJNP"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.7.3" h2></Anchor>
                     <p>
                         <code>2017-11-16</code>

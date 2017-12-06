@@ -143,7 +143,7 @@
                     <tbody>
                         <tr>
                             <td>type</td>
-                            <td>Input type. Optional value: <code>text</code>, <code>password</code>, <code>textarea</code></td>
+                            <td>Input type. Optional value: <code>text</code>, <code>password</code>, <code>textarea</code>, <code>url</code>, <code>email</code>, <code>date</code></td>
                             <td>String</td>
                             <td>text</td>
                         </tr>

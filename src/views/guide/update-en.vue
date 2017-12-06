@@ -25,6 +25,18 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.7.4" h2></Anchor>
+                    <p>
+                        <code>2017-12-01</code>
+                    </p>
+                    <ul>
+                        <li>Fixed bug that import some components on demand. <issue id="2537"></issue></li>
+                        <li>Input add more type. <issue id="2526"></issue></li>
+                        <li>Add Italian. <mention id="lucagentile"></mention></li>
+                        <li>Add Thai. <mention id="NatJNP"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.7.3" h2></Anchor>
                     <p>
                         <code>2017-11-16</code>

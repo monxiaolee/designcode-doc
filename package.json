@@ -20,9 +20,9 @@
     "clipboard": "^1.7.1",
     "highlightjs": "^8.7.0",
     "ityped": "0.0.6",
-    "iview": "^2.7.3",
+    "iview": "^2.7.4",
     "marked": "^0.3.6",
-    "vue": "^2.5.2",
+    "vue": "^2.5.9",
     "vue-i18n": "^5.0.3",
     "vue-router": "^2.8.1"
   },
@@ -41,7 +41,7 @@
     "html-loader": "^0.3.0",
     "html-webpack-plugin": "^2.30.1",
     "iview-loader": "^1.0.0",
-    "less": "^2.7.1",
+    "less": "^2.7.3",
     "less-loader": "^2.2.3",
     "sockjs-client": "^1.1.4",
     "style-loader": "^0.13.1",
@@ -50,9 +50,9 @@
     "vue-html-loader": "^1.2.3",
     "vue-loader": "^11.0.0",
     "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.5.2",
+    "vue-template-compiler": "^2.5.9",
     "webpack": "^2.7.0",
-    "webpack-dev-server": "^2.9.2",
+    "webpack-dev-server": "^2.9.5",
     "webpack-merge": "^3.0.0"
   }
 }

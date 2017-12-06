@@ -35,7 +35,9 @@
                 <li>越南语（vi-VN）</li>
                 <li>瑞典语（sv-SE）</li>
                 <li>印尼语（id-ID）</li>
-                <li>乌克兰语（uk_UA）</li>
+                <li>乌克兰语（uk-UA）</li>
+                <li>意大利语（it-IT）</li>
+                <li>泰语（th-TH）</li>
             </ul>
             <p>欢迎贡献代码，以支持更多语言。只需在<a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">这里</a>添加一个语言配置文件即可。</p>
         </article>

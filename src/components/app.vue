@@ -22,6 +22,26 @@
                 <Icon type="load-c" size="18" class="icon-loading"></Icon>
             </div>
         </transition>
+        <Modal v-if="lang === 'zh-CN'" v-model="fee" title="第一期前端探索交流会报名中" width="750" :closable="false" :mask-closable="false">
+            <div class="ivu-article">
+                <p>活动介绍：前端探索交流会 FEE(Front End Explore) 是由 TalkingData 可视化团队发起的非盈利性前端开发者交流会，旨在分享、探索和传播具有创新的、有价值的思想、灵感或经验。</p>
+                <p>时间地点：2017-12-09 14:30 北京市东城区东直门外大街39号院京投快轨大厦604A(TalkingData腾云大学)</p>
+                <p>活动详细介绍、嘉宾介绍、主题及报名点击链接查看：<a href="http://www.huodongxing.com/event/3416099407500" target="_blank">http://www.huodongxing.com/event/3416099407500</a></p>
+                <p>说明：由于现场至多容纳120人，为防止无效报名，收取20元门票，门票的所有收入将捐赠给开源项目（本期捐赠 Vue.js）。请在14:00 - 14:30 之间入场。</p>
+                <p>
+                    关注 FEE 公众号，获取最新动态：
+                </p>
+                <row>
+                    <i-col span="12">
+                        <img src="../images/fee-code.jpg" width="200px">
+                    </i-col>
+                </row>
+            </div>
+            <div slot="footer">
+                <Button type="text" size="large" @click="feeclose">关闭</Button>
+                <Button type="primary" size="large" style="width: 100px" @click="gotofee">报名</Button>
+            </div>
+        </Modal>
     </div>
 </template>
 <script>
@@ -32,7 +52,8 @@
             return {
                 liveVisible: false,
                 iViewVisible: false,
-                lang: this.$lang
+                lang: this.$lang,
+                fee: true
             }
         },
         computed: {
@@ -107,6 +128,13 @@
             handleLive () {
                 const today = this.getTodayUnix();
                 window.localStorage.setItem('liveModalTime', today);
+            },
+            feeclose () {
+                this.fee = false;
+            },
+            gotofee () {
+                _hmt.push(['_trackEvent', 'gotofee', 'click']);
+                window.open('http://www.huodongxing.com/event/3416099407500');
             }
         }
     }

@@ -35,7 +35,9 @@
                 <li>Vietnamese(vi-VN)</li>
                 <li>Swedish(sv-SE)</li>
                 <li>Indonesian(id-ID)</li>
-                <li>Ukrainian(uk_UA)</li>
+                <li>Ukrainian(uk-UA)</li>
+                <li>Italian(it-IT)</li>
+                <li>Thai(th-TH)</li>
             </ul>
             <p>If your target language is not included, you are more than welcome to contribute: just add another language config <a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">here</a> and create a pull request.</p>
         </article>
