@@ -11,7 +11,7 @@ export default {
             search: '搜索组件...',
             notFound: '没有找到相关组件',
             ask: '提问',
-            donate: '赞助',
+            donate: '广告投放',
             links: '相关站点',
             tc: '有逼格的程序员社区',
             td: '用数据的心智去超越',

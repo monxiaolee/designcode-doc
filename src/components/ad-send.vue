@@ -2,10 +2,11 @@
     <div class="advertisement-ad" @click.stop="handleClick"></div>
 </template>
 <script>
+    import bus from './bus';
     export default {
         methods: {
             handleClick () {
-
+                bus.$emit('on-donate-show');
             }
         }
     }

@@ -3,9 +3,10 @@
 </style>
 <template>
     <div class="navigate">
-        <div class="ad" @click="handleAd">
+        <div class="ad" @click="handleAd" v-if="lang === 'zh-CN'">
             <div class="ad-main">
                 <img src="../images/ad-juejin.png">
+                <ad-send></ad-send>
             </div>
         </div>
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'guide'">
@@ -27,7 +28,7 @@
                     </Badge>
                 </template>
             </Menu-item>
-            <Button type="primary" icon="social-usd" size="small" style="width:130px;margin:15px 0 15px 15px;" @click="handleDonate">{{ $t('index.donate') }}</Button>
+            <Button type="warning" v-if="lang === 'zh-CN'" icon="heart" size="small" style="width:130px;margin:15px 0 15px 15px;" @click="handleDonate">{{ $t('index.donate') }}</Button>
             <div class="navigate-group">{{ $t('index.component') }}</div>
             <Menu-group v-for="item in navigate.components" :key="item.type" :title="item.type">
                 <Menu-item v-for="component in item.list" :key="component.path" :name="component.path">
@@ -95,8 +96,10 @@
     import navigate from '../config/navigate';
     import version from '../config/config';
     import bus from './bus';
+    import adSend from './ad-send.vue';
 
     export default {
+        components: { adSend },
         props: {
             type: {
                 type: [String, Number]

@@ -122,25 +122,46 @@
                 </div>
             </card>
         </div>
-        <Modal v-model="donate" v-if="lang === 'zh-CN'" title="支持 iView 的开发" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">
+        <!--<Modal v-model="donate" v-if="lang === 'zh-CN'" title="支持 iView 的开发" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">-->
+            <!--<div class="ivu-article">-->
+                <!--<p>iView 是采用 MIT 许可的开源项目，您可以在个人或企业项目中免费使用。不过，如果您觉得 iView 对您的项目带来了帮助，提高开发效率，可以用捐助来表示您的谢意：)</p>-->
+                <!--<p>您可以用公司的名义进行赞助，赞助信息将在文档页展示。联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a></p>-->
+                <!--<h3>个人可使用 微信 或 支付宝 捐助：</h3>-->
+                <!--<div>-->
+                    <!--<img src="../images/pay.png" style="width: 100%">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</Modal>-->
+        <Modal v-model="donate" title="与 iView 合作，有效触达技术人群" @on-ok="handleModalClose" @on-cancel="handleModalClose" width="600" class-name="vertical-center-modal">
             <div class="ivu-article">
-                <p>iView 是采用 MIT 许可的开源项目，您可以在个人或企业项目中免费使用。不过，如果您觉得 iView 对您的项目带来了帮助，提高开发效率，可以用捐助来表示您的谢意：)</p>
-                <p>您可以用公司的名义进行赞助，赞助信息将在文档页展示。联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a></p>
-                <h3>个人可使用 微信 或 支付宝 捐助：</h3>
+                <p>如果您有品牌推广、活动推广、招聘推广、社区合作的需求，欢迎联系我们。</p>
+                <p>联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a> 咨询。</p>
+                <p>广告位如下图所示：</p>
                 <div>
-                    <img src="../images/pay.png" style="width: 100%">
+                    <Carousel v-if="donate" v-model="adCarousel" loop autoplay :autoplay-speed="3000" dots="outside">
+                        <CarouselItem>
+                            <div class="demo-carousel" style="height: 300px">
+                                <img src="../images/ad-demo1.png" style="width: 100%">
+                            </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <div class="demo-carousel" style="height: 300px;">
+                                <img src="../images/ad-demo2.png" style="width: 100%">
+                            </div>
+                        </CarouselItem>
+                    </Carousel>
                 </div>
             </div>
         </Modal>
-        <Modal v-model="donate" v-if="lang !== 'zh-CN'" title="Donate iView project" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">
-            <div class="ivu-article">
-                <p>iView is an open source project with MIT licenses that you can use for free in your personal or business projects. However, if you feel that iView has helped your project to improve development efficiency, you can use donations to express your gratitude: )</p>
-                <h3>Use Wechat or Alipay to donate：</h3>
-                <div>
-                    <img src="../images/pay.png" style="width: 100%">
-                </div>
-            </div>
-        </Modal>
+        <!--<Modal v-model="donate" v-if="lang !== 'zh-CN'" title="Donate iView project" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">-->
+            <!--<div class="ivu-article">-->
+                <!--<p>iView is an open source project with MIT licenses that you can use for free in your personal or business projects. However, if you feel that iView has helped your project to improve development efficiency, you can use donations to express your gratitude: )</p>-->
+                <!--<h3>Use Wechat or Alipay to donate：</h3>-->
+                <!--<div>-->
+                    <!--<img src="../images/pay.png" style="width: 100%">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</Modal>-->
         <Modal v-model="ask" title="免费加入 iView 官方QQ群参与讨论" class-name="vertical-center-modal">
             <div class="ivu-article">
                 <p>免费加入官方QQ讨论群，交流 iView 技术问题。</p>
@@ -178,7 +199,8 @@
                 donate: false,
                 ask: false,
                 activeKey: '',
-                lang: this.$lang
+                lang: this.$lang,
+                adCarousel: 0
             }
         },
         methods: {
