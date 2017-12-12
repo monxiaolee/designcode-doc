@@ -102,110 +102,113 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.search }}</i-code>
             </Demo>
+
+            <ad></ad>
+
+            <div class="api">
+                <Anchor title="API" h2></Anchor>
+                <Anchor title="AutoComplete props" h3></Anchor>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Default</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>value</td>
+                        <td>Bound value. Use v-model to enable a two-way binding.</td>
+                        <td>String | Number</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>data</td>
+                        <td>Data source for autocomplete.</td>
+                        <td>Array</td>
+                        <td>[]</td>
+                    </tr>
+                    <tr>
+                        <td>clearable</td>
+                        <td>Set AutoComplete to clear option.</td>
+                        <td>Boolean</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>disabled</td>
+                        <td>Whether disabled select.</td>
+                        <td>Boolean</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>placeholder</td>
+                        <td>Placeholder of input.</td>
+                        <td>String</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>size</td>
+                        <td>The size of Input. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave empty.</td>
+                        <td>String</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>icon</td>
+                        <td>Icon at the end of Input.</td>
+                        <td>String</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>filter-method</td>
+                        <td>Filter options by input, if function, filter options against it. The function will receive two arguments, <code>value</code> and <code>option</code>, if the function returns true, the option will be included in the filtered set; Otherwise, it will be excluded.</td>
+                        <td>Function | Boolean</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>transfer</td>
+                        <td>Whether to append the layer in body. When used in Tabs or a fixed Table column, suggests adding this property, it will not be affected by the parent style, resulting in better results.</td>
+                        <td>Boolean</td>
+                        <td>false</td>
+                    </tr>
+                    <tr>
+                        <td>element-id</td>
+                        <td>Set the <code>id</code> for the input element, more info can be found in Form.</td>
+                        <td>String</td>
+                        <td>-</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <Anchor title="AutoComplete events" h3></Anchor>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Description</th>
+                        <th>Return Value</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>on-change</td>
+                        <td>Called when select an option or input value change, or value of input is changed.</td>
+                        <td>value</td>
+                    </tr>
+                    <tr>
+                        <td>on-select</td>
+                        <td>Called when a option is selected. param is option's value and option instance.</td>
+                        <td>value</td>
+                    </tr>
+                    <tr>
+                        <td>on-search</td>
+                        <td>Called when searching items.</td>
+                        <td>query</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </article>
-        <div class="api">
-            <Anchor title="API" h2></Anchor>
-            <Anchor title="AutoComplete props" h3></Anchor>
-            <table>
-                <thead>
-                <tr>
-                    <th>Property</th>
-                    <th>Description</th>
-                    <th>Type</th>
-                    <th>Default</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>value</td>
-                    <td>Bound value. Use v-model to enable a two-way binding.</td>
-                    <td>String | Number</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>data</td>
-                    <td>Data source for autocomplete.</td>
-                    <td>Array</td>
-                    <td>[]</td>
-                </tr>
-                <tr>
-                    <td>clearable</td>
-                    <td>Set AutoComplete to clear option.</td>
-                    <td>Boolean</td>
-                    <td>false</td>
-                </tr>
-                <tr>
-                    <td>disabled</td>
-                    <td>Whether disabled select.</td>
-                    <td>Boolean</td>
-                    <td>false</td>
-                </tr>
-                <tr>
-                    <td>placeholder</td>
-                    <td>Placeholder of input.</td>
-                    <td>String</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>size</td>
-                    <td>The size of Input. Optional value: <code>large</code>, <code>small</code>, <code>default</code> or leave empty.</td>
-                    <td>String</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>icon</td>
-                    <td>Icon at the end of Input.</td>
-                    <td>String</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>filter-method</td>
-                    <td>Filter options by input, if function, filter options against it. The function will receive two arguments, <code>value</code> and <code>option</code>, if the function returns true, the option will be included in the filtered set; Otherwise, it will be excluded.</td>
-                    <td>Function | Boolean</td>
-                    <td>false</td>
-                </tr>
-                <tr>
-                    <td>transfer</td>
-                    <td>Whether to append the layer in body. When used in Tabs or a fixed Table column, suggests adding this property, it will not be affected by the parent style, resulting in better results.</td>
-                    <td>Boolean</td>
-                    <td>false</td>
-                </tr>
-                <tr>
-                    <td>element-id</td>
-                    <td>Set the <code>id</code> for the input element, more info can be found in Form.</td>
-                    <td>String</td>
-                    <td>-</td>
-                </tr>
-                </tbody>
-            </table>
-            <Anchor title="AutoComplete events" h3></Anchor>
-            <table>
-                <thead>
-                <tr>
-                    <th>Event Name</th>
-                    <th>Description</th>
-                    <th>Return Value</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>on-change</td>
-                    <td>Called when select an option or input value change, or value of input is changed.</td>
-                    <td>value</td>
-                </tr>
-                <tr>
-                    <td>on-select</td>
-                    <td>Called when a option is selected. param is option's value and option instance.</td>
-                    <td>value</td>
-                </tr>
-                <tr>
-                    <td>on-search</td>
-                    <td>Called when searching items.</td>
-                    <td>query</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
     </i-article>
 </template>
 <script>

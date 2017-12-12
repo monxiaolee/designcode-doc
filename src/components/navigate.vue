@@ -5,7 +5,7 @@
     <div class="navigate">
         <div class="ad" @click="handleAd">
             <div class="ad-main">
-                <img src="../images/ad-vue.png">
+                <img src="../images/ad-juejin.png">
             </div>
         </div>
         <Menu width="auto" :active-name="activeKey" @on-select="handleSelect" v-if="type === 'guide'">
@@ -122,10 +122,10 @@
                 });
             },
             handleAd () {
-                _hmt.push(['_trackEvent', 'vue-book', 'click']);
+                _hmt.push(['_trackEvent', 'vue-juejin', 'click']);
 //                this.$router.push('/live');
-                this.showAd = true;
-//                window.open('https://www.iviewui.com/vue-book');
+//                this.showAd = true;
+                window.open('https://juejin.im/welcome/frontend?utm_source=iview&utm_medium=banner&utm_content=huoyue&utm_campaign=q4_website');
             },
             handleBuy (type) {
                 if (type === 'taobao') {

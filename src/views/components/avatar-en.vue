@@ -77,6 +77,8 @@
                 <i-code lang="html" slot="code">{{ code.string }}</i-code>
             </Demo>
 
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Avatar props" h3></Anchor>

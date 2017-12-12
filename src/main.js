@@ -16,9 +16,13 @@ import Env from './config/env';
 import bus from './components/bus';
 import 'iview/dist/styles/iview.css';
 
+import ad from './components/ad.vue';
+
 Vue.use(VueRouter);
 Vue.use(VueI18n);
 Vue.use(iView);
+
+Vue.component('ad', ad);
 
 // 开启debug模式
 Vue.config.debug = true;

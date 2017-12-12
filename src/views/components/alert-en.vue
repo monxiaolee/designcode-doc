@@ -109,6 +109,9 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.banner }}</i-code>
             </Demo>
+
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Alert props" h3></Anchor>

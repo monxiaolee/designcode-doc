@@ -151,6 +151,9 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.list }}</i-code>
             </Demo>
+
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Upload props" h3></Anchor>

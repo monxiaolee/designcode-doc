@@ -175,6 +175,9 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.confirm }}</i-code>
             </Demo>
+
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Poptip props" h3></Anchor>

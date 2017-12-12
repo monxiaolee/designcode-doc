@@ -66,6 +66,9 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.disabled }}</i-code>
             </Demo>
+
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Switch props" h3></Anchor>

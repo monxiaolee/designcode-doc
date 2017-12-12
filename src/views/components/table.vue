@@ -234,6 +234,9 @@
                 <Button type="primary" size="large" @click="table1 = true">带有分页的复杂表格</Button>
                 <Button type="primary" size="large" @click="table2 = true">多列指标筛选的表格</Button>
                 <Button type="primary" size="large" @click="table3 = true">多种效果组合的表格</Button>
+
+                <ad></ad>
+
                 <div class="api">
                     <Anchor title="API" h2></Anchor>
                     <Anchor title="Table props" h3></Anchor>

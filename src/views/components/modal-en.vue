@@ -194,6 +194,9 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.render }}</i-code>
             </Demo>
+
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Modal props" h3></Anchor>

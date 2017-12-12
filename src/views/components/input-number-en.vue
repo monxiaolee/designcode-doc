@@ -62,6 +62,9 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.editable }}</i-code>
             </Demo>
+
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="InputNumber props" h3></Anchor>

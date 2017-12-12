@@ -124,6 +124,9 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.delay }}</i-code>
             </Demo>
+
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Tooltip props" h3></Anchor>

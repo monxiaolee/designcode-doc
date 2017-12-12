@@ -280,6 +280,8 @@
                 <i-code lang="html" slot="code">{{ code.reponsive2 }}</i-code>
             </Demo>
 
+            <ad></ad>
+
             <div class="api">
                 <Anchor title="API" h2></Anchor>
                 <Anchor title="Row props" h3></Anchor>
