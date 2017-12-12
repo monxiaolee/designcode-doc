@@ -144,10 +144,10 @@
         <Modal v-model="ask" title="免费加入 iView 官方QQ群参与讨论" class-name="vertical-center-modal">
             <div class="ivu-article">
                 <p>免费加入官方QQ讨论群，交流 iView 技术问题。</p>
-                <p>群号：<strong>621780943</strong></p>
+                <p>群号：<strong>623520058</strong></p>
                 <p>二维码：</p>
                 <p>
-                    <img src="../images/qqgroup1.png" style="display: block;width: 50%;margin: 0 auto;">
+                    <img src="../images/qqgroup2.png" style="display: block;width: 50%;margin: 0 auto;">
                 </p>
                 <p>
                     <Alert show-icon>仅限开发者加入，请勿讨论与技术无关的问题，比如发招聘信息等。</Alert>
