@@ -67,45 +67,45 @@
             if (window.localStorage.getItem('liveModalTime')) {
                 const time = parseInt(window.localStorage.getItem('liveModalTime'));
                 const today = this.getTodayUnix();
-                if ((today - time) > 86400000 * 4) this.liveVisible = true;
+                if ((today - time) > 86400000 * 5) this.liveVisible = true;
             } else {
                 this.liveVisible = true;
             }
 
             if (this.liveVisible && this.$lang === 'zh-CN') {
-//                this.$Notice.config({
-//                    top: 85
-//                });
-//                this.$Notice.info({
-//                    title: '《Vue.js 实战》正在热卖',
-//                    desc: '<p>本书由 iView 作者 Aresn 著， Vue.js 作者<strong>尤雨溪</strong>作推荐序，大漠、justjavac 等人联合推荐。如果你喜欢通过实例来学习，那么本书会是你上手 Vue 的一个好选择。</p><p style="margin-top: 6px"><a href="https://detail.tmall.com/item.htm?id=559480603657" target="_blank" onclick="clickAdBuy()">立即购买书籍</a><a href="https://segmentfault.com/ls/1650000011074057" target="_blank" style="margin-left: 20px" onclick="clickAdVideo()">查看系列视频</a></p>',
-//                    duration: 0,
-//                    onClose: () => {
-//                        const today = this.getTodayUnix();
-//                        window.localStorage.setItem('liveModalTime', today);
-//                        this.$Message.success('关闭成功，近期不再提示', 4);
-//                    }
-//                });
-//                this.$Notice.config({
-//                    top: 24
-//                });
+                this.$Notice.config({
+                    top: 85
+                });
+                this.$Notice.info({
+                    title: '关于使用 iView 控制台警告的说明',
+                    desc: '<p>如果您使用的是 Vue.js 2.5.10 版本，会在控制台弹出一系列标签错误的警告，但这只会在开发环境提示，而且不影响 iView 的使用。</p><p>下个 Vue.js 版本或许会修复这个问题。</p><p>您也可以降级 Vue.js 到 2.5.9 版本。</p>',
+                    duration: 0,
+                    onClose: () => {
+                        const today = this.getTodayUnix();
+                        window.localStorage.setItem('liveModalTime', today);
+                        this.$Message.success('关闭成功，近期不再提示', 4);
+                    }
+                });
+                this.$Notice.config({
+                    top: 24
+                });
             } else if (this.liveVisible && this.$lang === 'en-US') {
-//                this.$Notice.config({
-//                    top: 85
-//                });
-//                this.$Notice.info({
-//                    title: 'Are you using iView?',
-//                    desc: '<p>We appreciate you support if you or your organization is using iView. You are welcome to leave replies about your organization here, which could became the confidence of maintainers, communication and undecided watchers.</p><a href="https://github.com/iview/iview/issues/2143" target="_blank">> Click here to reply <</a>',
-//                    duration: 0,
-//                    onClose: () => {
-//                        const today = this.getTodayUnix();
-//                        window.localStorage.setItem('liveModalTime', today);
-//                        this.$Message.success('Closed successfully, no longer prompt', 4);
-//                    }
-//                });
-//                this.$Notice.config({
-//                    top: 24
-//                });
+                this.$Notice.config({
+                    top: 85
+                });
+                this.$Notice.info({
+                    title: 'Notice about iView console warning',
+                    desc: '<p>If you are using Vue.js 2.5.10, a series of warning will pop up in the console, but this will only be prompted in the development environment and will not affect the use of the iView.</p><p>The next Vue.js version might fix this problem.</p><p>You can also demote Vue.js to version 2.5.9.</p>',
+                    duration: 0,
+                    onClose: () => {
+                        const today = this.getTodayUnix();
+                        window.localStorage.setItem('liveModalTime', today);
+                        this.$Message.success('Closed successfully, no longer prompt', 4);
+                    }
+                });
+                this.$Notice.config({
+                    top: 24
+                });
             }
 
             // 广告统计
