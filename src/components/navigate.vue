@@ -5,7 +5,7 @@
     <div class="navigate">
         <div class="ad" @click="handleAd" v-if="lang === 'zh-CN'">
             <div class="ad-main">
-                <img src="../images/ad-juejin.png">
+                <img src="../images/ad-juejin.jpg" style="border-radius: 6px">
                 <ad-send></ad-send>
             </div>
         </div>
