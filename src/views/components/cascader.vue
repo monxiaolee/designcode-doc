@@ -182,8 +182,8 @@
                         <tr>
                             <td>change-on-select</td>
                             <td>当此项为 true 时，点选每级菜单选项值都会发生变化，具体见上面的示例</td>
-                            <td>Function</td>
-                            <td>value</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>size</td>
