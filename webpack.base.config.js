@@ -70,7 +70,7 @@ module.exports = {
             {
                 test: /\.less/,
                 use: ExtractTextPlugin.extract({
-                    use: 'less-loader',
+                    use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
                     fallback: 'style-loader'
                 })
             },
