@@ -1,5 +1,6 @@
 <style scoped lang="less">
-    @import "../styles/index.less";
+    /*@import "../styles/index.less";*/
+    @import "../styles/index-christmas.less";
 </style>
 <style>
     .index-version .ivu-badge-count{
@@ -18,7 +19,7 @@
                 <i-col span="24">
                     <h1>
                         <img src="../images/logo.png" class="img-logo">
-                        <img src="../images/name.png" class="img-name">
+                        <img src="../images/name-christmas.png" class="img-name">
                     </h1>
                     <h2>{{ $t('index.title') }}</h2>
                     <div class="list">
@@ -174,7 +175,7 @@
         },
         mounted () {
             this.lang = this.$lang;
-            this.liziInit();
+//            this.liziInit();
         },
         beforeDestroy () {
             if (this.interval) clearInterval(this.interval);

@@ -14,7 +14,8 @@ import zhLocale from 'iview/dist/locale/zh-CN';
 import enLocale from 'iview/dist/locale/en-US';
 import Env from './config/env';
 import bus from './components/bus';
-import 'iview/dist/styles/iview.css';
+// import 'iview/dist/styles/iview.css';
+import './styles/theme-christmas/index.less';
 
 import ad from './components/ad.vue';
 
