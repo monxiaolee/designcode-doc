@@ -120,7 +120,7 @@
                         </tr>
                         <tr>
                             <td>color</td>
-                            <td>标签颜色，可选值为<code>blue</code>、<code>green</code>、<code>red</code>、<code>yellow</code>、<code>default</code></td>
+                            <td>标签颜色，预设颜色值为<code>blue</code>、<code>green</code>、<code>red</code>、<code>yellow</code>、<code>default</code>，你也可以自定义颜色值。</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>

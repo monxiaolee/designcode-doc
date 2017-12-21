@@ -119,7 +119,7 @@
                         </tr>
                         <tr>
                             <td>color</td>
-                            <td>Tag color, optional values for <code>blue</code>, <code>green</code>, <code>red</code>, <code>yellow</code>, <code>default</code>.</td>
+                            <td>Tag color, default values for <code>blue</code>, <code>green</code>, <code>red</code>, <code>yellow</code>, <code>default</code>, you can set custom color.</td>
                             <td>String</td>
                             <td>-</td>
                         </tr>
