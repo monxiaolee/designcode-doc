@@ -490,13 +490,14 @@ code.media = `
 <template>
     <div class="layout">
         <Layout>
-            <Sider breakpoint="md" hide-trigger collapsible>
+            <Sider breakpoint="md" collapsible>
                 <Menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
                     <div class="layout-logo-left"></div>
                     <MenuItem name="1-1"><Icon type="ios-navigate"></Icon>Option 1</MenuItem>
                     <MenuItem name="1-2"><Icon type="ios-keypad"></Icon>Option 2</MenuItem>
                     <MenuItem name="1-3"><Icon type="ios-analytics"></Icon>Option 3</MenuItem>
                 </Menu>
+                <div slot="trigger"></div>
             </Sider>
             <Layout>
                 <Header class="layout-header-bar"></Header>

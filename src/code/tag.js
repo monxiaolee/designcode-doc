@@ -52,6 +52,11 @@ code.color = `
     <Tag type="dot" closable color="green">标签二</Tag>
     <Tag type="dot" closable color="red">标签三</Tag>
     <Tag type="dot" closable color="yellow">标签四</Tag>
+    <br><br>
+    <Tag closable color="#EF6AFF" checkable>标签一</Tag>
+    <Tag type="border" closable color="#EF6AFF" checkable>标签二</Tag>
+    <Tag type="dot" closable color="#EF6AFF" checkable>标签三</Tag>
+    <Tag closable color="default" checkable>标签四</Tag>
 </template>
 <script>
     export default {
