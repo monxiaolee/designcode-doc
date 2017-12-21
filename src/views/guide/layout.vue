@@ -84,7 +84,7 @@
 <template>
     <i-article>
         <article>
-            <Anchor title="Layout布局" h1></Anchor>
+            <Anchor title="Layout 布局" h1></Anchor>
                 <p>协助进行页面级整体布局。</p>
             <Anchor title="设计规则" h2></Anchor>
             <Anchor title="尺寸" h3></Anchor>
