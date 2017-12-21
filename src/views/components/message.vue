@@ -57,7 +57,7 @@
                     <Button @click="renderFunc">显示render函数创建的内容</Button>
                 </div>
                 <div slot="desc">
-                    <p>可给render传入一个Vue的render函数。</p>
+                    <p>可给render传入一个 Vue 的 Render 函数。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.render }}</i-code>
             </Demo>
