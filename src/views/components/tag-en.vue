@@ -45,9 +45,13 @@
                     <Tag type="dot" closable color="green">标签二</Tag>
                     <Tag type="dot" closable color="red">标签三</Tag>
                     <Tag type="dot" closable color="yellow">标签四</Tag>
+                    <br><br>
+                    <Tag closable color="#FFA2D3">标签一</Tag>
+                    <Tag type="border" closable color="#FFA2D3">标签一</Tag>
+                    <Tag type="dot" closable color="#FFA2D3">标签一</Tag>
                 </div>
                 <div slot="desc">
-                    <p>Four different colors.</p>
+                    <p>Four default color, you can also use custom color.</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.color }}</i-code>
             </Demo>

@@ -52,6 +52,15 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.closable }}</i-code>
             </Demo>
+            <Demo title="render">
+                <div slot="demo">
+                    <Button @click="renderFunc">show message</Button>
+                </div>
+                <div slot="desc">
+                    <p>You can custom content with render</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.render }}</i-code>
+            </Demo>
 
             <ad></ad>
 
@@ -91,6 +100,12 @@
                             <td>content</td>
                             <td>Prompt's message content</td>
                             <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>render</td>
+                            <td>Custom description renderer. It uses Vue's render function.</td>
+                            <td>Function</td>
                             <td>-</td>
                         </tr>
                         <tr>
@@ -203,6 +218,19 @@
                     content: 'Tips for manual closing',
                     duration: 10,
                     closable: true
+                });
+            },
+            renderFunc () {
+                this.$Message.info({
+                    duration: 0,
+                    closable: true,
+                    render: h => {
+                        return h('span', {}, [
+                            'This is created by ',
+                            h('a', {}, 'render'),
+                            ' function'
+                        ])
+                    }
                 });
             }
         }
