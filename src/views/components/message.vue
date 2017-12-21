@@ -104,7 +104,7 @@
                         </tr>
                         <tr>
                             <td>render</td>
-                            <td>自定义描述内容，使用 Vue 的 Render 函数。</td>
+                            <td>自定义描述内容，使用 Vue 的 Render 函数</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
