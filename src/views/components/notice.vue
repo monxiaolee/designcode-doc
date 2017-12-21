@@ -105,7 +105,7 @@
                         </tr>
                         <tr>
                             <td>render</td>
-                            <td>自定义描述内容，使用 Vue 的 Render 函数。如果同时设置了 render 和 desc，则只显示 render 的内容</td>
+                            <td>自定义描述内容，使用 Vue 的 Render 函数，如果同时设置了 render 和 desc，则只显示 render 的内容</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
