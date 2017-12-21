@@ -52,12 +52,12 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.closable }}</i-code>
             </Demo>
-            <Demo title="自定义render函数">
+            <Demo title="自定义 Render 函数">
                 <div slot="demo">
                     <Button @click="renderFunc">显示render函数创建的内容</Button>
                 </div>
                 <div slot="desc">
-                    <p>可给render传入一个 Vue 的 Render 函数。</p>
+                    <p>使用 Render 函数自定义内容。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.render }}</i-code>
             </Demo>

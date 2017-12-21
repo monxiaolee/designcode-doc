@@ -47,7 +47,7 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.time }}</i-code>
             </Demo>
-            <Demo title="render函数">
+            <Demo title="Render 函数">
                 <div slot="demo">
                     <Button type="primary" @click="renderFunc">打开提醒</Button>
                 </div>
