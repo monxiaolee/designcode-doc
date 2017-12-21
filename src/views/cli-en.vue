@@ -98,18 +98,18 @@
             },
             handleClick (type, bit) {
                 if (type === 'mac') {
-                    window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0.dmg');
+                    window.open('https://pan.baidu.com/s/1gfCiXpD');
                 } else if (type === 'windows') {
                     if (bit === 64) {
-                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0-win32-x64.zip');
+                        window.open('https://pan.baidu.com/s/1o7JgdXC');
                     } else if (bit === 32) {
-                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0-win32-ia32.zip');
+                        window.open('https://pan.baidu.com/s/1nvvbSQd');
                     }
                 } else if (type === 'linux') {
                     if (bit === 64) {
-                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0-linux-x64.zip');
+                        window.open('https://pan.baidu.com/s/1b1T9Cy');
                     } else if (bit === 32) {
-                        window.open('http://git.oschina.net/icarusion/iviewcli/raw/master/iView-cli-2.1.0-linux-ia32.zip');
+                        window.open('https://pan.baidu.com/s/1hshEPDi');
                     }
                 } else if (type === 'github') {
                     window.open('https://github.com/iview/iview-cli');
