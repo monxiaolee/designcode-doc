@@ -129,7 +129,7 @@
                 <li><code>Content</code>: The content layout with default style, in which any element can be nested, and must be placed in <code>Layout</code>.</li>
                 <li><code>Footer</code>: The bottom layout with default style, in which any element can be nested, and must be placed in <code>Layout</code>.</li>
             </ul>
-            <Alert show-icon style="margin-top: 16px">Based on flex layout, please pay attention to the <a hraf="https://caniuse.com/#search=flex" title="can i use">compatibility</a>.</Alert>
+            <Alert show-icon style="margin-top: 16px">Based on flex layout, please pay attention to the <a href="https://caniuse.com/#search=flex" target="_blank" title="can i use">compatibility</a>.</Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Structure" vertical hide-code>
                 <div slot="demo">
