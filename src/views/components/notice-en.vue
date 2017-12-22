@@ -239,8 +239,7 @@
                             h('a', 'render'),
                             ' function'
                         ])
-                    },
-                    duration: 0
+                    }
                 });
             }
         }
