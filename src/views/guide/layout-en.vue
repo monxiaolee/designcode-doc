@@ -79,6 +79,31 @@
     .rotate-icon{
         transform: rotate(-90deg);
     }
+    .menu-item span{
+        display: inline-block;
+        overflow: hidden;
+        width: 69px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: bottom;
+        transition: width .2s ease .2s;
+    }
+    .menu-item i{
+        transform: translateX(0px);
+        transition: font-size .2s ease, transform .2s ease;
+        vertical-align: middle;
+        font-size: 16px;
+    }
+    .collapsed-menu span{
+        width: 0px;
+        transition: width .2s ease;
+    }
+    .collapsed-menu i{
+        transform: translateX(5px);
+        transition: font-size .2s ease .2s, transform .2s ease .2s;
+        vertical-align: middle;
+        font-size: 22px;
+    }
 </style>
 <template>
     <i-article>
@@ -400,12 +425,20 @@
                 <div slot="demo">
                     <div :class="['layout', isCollapsed ? 'layout-hide-text' : '']">
                         <Layout>
-                            <Sider ref="side1" hide-trigger collapsible v-model="isCollapsed">
-                                <Menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
-                                    <div class="layout-logo-left"></div>
-                                    <MenuItem name="1-1"><Icon type="ios-navigate"></Icon><span class="layout-text">Option 1</span></MenuItem>
-                                    <MenuItem name="1-2"><Icon type="ios-keypad"></Icon><span class="layout-text">Option 2</span></MenuItem>
-                                    <MenuItem name="1-3"><Icon type="ios-analytics"></Icon><span class="layout-text">Option 3</span></MenuItem>
+                            <Sider ref="side1" hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed">
+                                <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses">
+                                    <MenuItem name="1-1">
+                                        <Icon type="ios-navigate"></Icon>
+                                        <span>Option 1</span>
+                                    </MenuItem>
+                                    <MenuItem name="1-2">
+                                        <Icon type="search"></Icon>
+                                        <span>Option 2</span>
+                                    </MenuItem>
+                                    <MenuItem name="1-3">
+                                        <Icon type="settings"></Icon>
+                                        <span>Option 3</span>
+                                    </MenuItem>
                                 </Menu>
                             </Sider>
                             <Layout>
@@ -428,12 +461,20 @@
                 <div slot="demo">
                     <div class="layout">
                         <Layout>
-                            <Sider breakpoint="md" collapsible>
-                                <Menu active-name="1-2" theme="dark" width="auto" :open-names="['1']">
-                                    <div class="layout-logo-left"></div>
-                                    <MenuItem name="1-1"><Icon type="ios-navigate"></Icon>Option 1</MenuItem>
-                                    <MenuItem name="1-2"><Icon type="ios-keypad"></Icon>Option 2</MenuItem>
-                                    <MenuItem name="1-3"><Icon type="ios-analytics"></Icon>Option 3</MenuItem>
+                            <Sider breakpoint="md" collapsible :collapsed-width="78" v-model="isCollapsed2">
+                                <Menu active-name="1-2" theme="dark" width="auto" :class="menuitemClasses2">
+                                    <MenuItem name="1-1">
+                                        <Icon type="ios-navigate"></Icon>
+                                        <span>Option 1</span>
+                                    </MenuItem>
+                                    <MenuItem name="1-2">
+                                        <Icon type="search"></Icon>
+                                        <span>Option 2</span>
+                                    </MenuItem>
+                                    <MenuItem name="1-3">
+                                        <Icon type="settings"></Icon>
+                                        <span>Option 3</span>
+                                    </MenuItem>
                                 </Menu>
                                 <div slot="trigger"></div>
                             </Sider>
@@ -624,7 +665,8 @@
                 code: Code,
                 spanLeft: 5,
                 spanRight: 19,
-                isCollapsed: false
+                isCollapsed: false,
+                isCollapsed2: false
             }
         },
         computed: {
@@ -636,6 +678,18 @@
                     'menu-icon',
                     this.isCollapsed ? 'rotate-icon' : ''
                 ];
+            },
+            menuitemClasses: function () {
+                return [
+                    'menu-item',
+                    this.isCollapsed ? 'collapsed-menu' : ''
+                ]
+            },
+            menuitemClasses2: function () {
+                return [
+                    'menu-item',
+                    this.isCollapsed2 ? 'collapsed-menu' : ''
+                ]
             }
         },
         methods: {

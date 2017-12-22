@@ -87,21 +87,21 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         vertical-align: bottom;
-        transition: all .2s ease .2s;
+        transition: width .2s ease .2s;
     }
     .menu-item i{
         transform: translateX(0px);
-        transition: all .2s ease;
+        transition: font-size .2s ease, transform .2s ease;
         vertical-align: middle;
         font-size: 16px;
     }
     .collapsed-menu span{
         width: 0px;
-        transition: all .2s ease;
+        transition: width .2s ease;
     }
     .collapsed-menu i{
         transform: translateX(5px);
-        transition: all .2s ease .2s;
+        transition: font-size .2s ease .2s, transform .2s ease .2s;
         vertical-align: middle;
         font-size: 22px;
     }
