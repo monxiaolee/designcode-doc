@@ -95,9 +95,9 @@ code.render = `
                     title: 'Notification title',
                     desc: 'The desc will hide when you set render.',
                     render: h => {
-                        return h('span', {}, [
+                        return h('span', [
                             'This is created by ',
-                            h('a', {}, 'render'),
+                            h('a', 'render'),
                             ' function'
                         ])
                     },

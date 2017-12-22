@@ -234,9 +234,9 @@
                     title: '这是通知标题',
                     desc: '当你定义了render之后，这个描述会被覆盖',
                     render: h => {
-                        return h('span', {}, [
+                        return h('span', [
                             '这是',
-                            h('a', {}, 'render'),
+                            h('a', 'render'),
                             '函数渲染的'
                         ])
                     },

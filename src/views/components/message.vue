@@ -222,12 +222,11 @@
             },
             renderFunc () {
                 this.$Message.info({
-                    duration: 0,
-                    closable: true,
+                    duration: 20,
                     render: h => {
-                        return h('span', {}, [
+                        return h('span', [
                             '这是',
-                            h('a', {}, 'render'),
+                            h('a', 'render'),
                             '函数渲染的'
                         ])
                     }

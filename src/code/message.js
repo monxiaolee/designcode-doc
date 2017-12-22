@@ -108,12 +108,11 @@ code.render = `
         methods: {
             renderFunc () {
                 this.$Message.info({
-                    duration: 0,
-                    closable: true,
+                    duration: 20,
                     render: h => {
-                        return h('span', {}, [
+                        return h('span', [
                             'This is created by ',
-                            h('a', {}, 'render'),
+                            h('a', 'render'),
                             ' function'
                         ])
                     }
