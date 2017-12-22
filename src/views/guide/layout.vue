@@ -155,7 +155,7 @@
                 <li><code>Content</code>：内容部分，自带默认样式，其下可嵌套任何元素，只能放在 <code>Layout</code> 中。</li>
                 <li><code>Footer</code>：底部布局，自带默认样式，其下可嵌套任何元素，只能放在 <code>Layout</code> 中。</li>
             </ul>
-            <Alert show-icon style="margin-top: 16px">注意：采用 flex 布局实现，请注意<a hraf="https://caniuse.com/#search=flex" title="can i use">浏览器兼容性</a>问题。</Alert>
+            <Alert show-icon style="margin-top: 16px">注意：采用 flex 布局实现，请注意<a href="https://caniuse.com/#search=flex" target="_blank" title="can i use">浏览器兼容性</a>问题。</Alert>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="基本结构" vertical hide-code>
                 <div slot="demo">

@@ -25,6 +25,25 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Icon type="ios-snowy" class="ivu-load-loop doc-update-loop" style="font-size: 32px;color: rgb(220,50,51)" slot="dot"></Icon>
+                    <Anchor title="2.8.0 Oceanhorn" h2>
+                        <span class="doc-update-important">Merry Christmas</span>
+                    </Anchor>
+                    <p>
+                        <code>2017-12-25</code>
+                    </p>
+                    <ul>
+                        <li>新增响应式布局组件 Layout（包括 Layout、Header、Sider、Content、Footer 5个组件）。<issue id="2646"></issue> <mention id="lison16"></mention></li>
+                        <li>Tag 支持自定义颜色。<issue id="2644"></issue></li>
+                        <li>$Message 和 $Notice 支持 Render 函数。<issue id="2667"></issue></li>
+                        <li>Affix 优化滚动时的占位区域高度。<issue id="2628"></issue></li>
+                        <li>$Modal 支持 ESC 键关闭。<issue id="2362"></issue></li>
+                        <li>TimeRange 也增加 steps 属性。<issue id="2580"></issue></li>
+                        <li>修复无法按需加载 Submenu 组件的 bug。<issue id="2553"></issue></li>
+                        <li>修复在 Vue 2.5.11 版本下，Circle 和 Switch 标签名警告的问题。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.7.4" h2></Anchor>
                     <p>
                         <code>2017-12-01</code>

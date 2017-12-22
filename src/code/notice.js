@@ -100,8 +100,7 @@ code.render = `
                             h('a', 'render'),
                             ' function'
                         ])
-                    },
-                    duration: 0
+                    }
                 });
             }
         }

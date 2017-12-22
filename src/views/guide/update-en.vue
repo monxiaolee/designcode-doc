@@ -25,6 +25,25 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Icon type="ios-snowy" class="ivu-load-loop doc-update-loop" style="font-size: 32px;color: rgb(220,50,51)" slot="dot"></Icon>
+                    <Anchor title="2.8.0 Oceanhorn" h2>
+                        <span class="doc-update-important">Merry Christmas</span>
+                    </Anchor>
+                    <p>
+                        <code>2017-12-25</code>
+                    </p>
+                    <ul>
+                        <li>Add responsive components(including Layout, Header, Sider, Content, Footer). <issue id="2646"></issue> <mention id="lison16"></mention></li>
+                        <li>Tag supports custom colors. <issue id="2644"></issue></li>
+                        <li>$Message and $Notice support Render function. <issue id="2667"></issue></li>
+                        <li>Affix optimizes the height of the occupied area when scrolling. <issue id="2628"></issue></li>
+                        <li>$Modal supports press ESC key to close. <issue id="2362"></issue></li>
+                        <li>TimeRange supports steps property. <issue id="2580"></issue></li>
+                        <li>Fixed bug that cannot load Submenu components on demand. <issue id="2553"></issue></li>
+                        <li>Fixed the problem of the Circle and Switch tag warning under Vue 2.5.11.</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.7.4" h2></Anchor>
                     <p>
                         <code>2017-12-01</code>
