@@ -47,12 +47,12 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.time }}</i-code>
             </Demo>
-            <Demo title="render函数">
+            <Demo title="Render 函数">
                 <div slot="demo">
                     <Button type="primary" @click="renderFunc">打开提醒</Button>
                 </div>
                 <div slot="desc">
-                    <p>你可以自定义render函数来替代desc</p>
+                    <p>你可以自定义 Render 函数来替代 desc</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.render }}</i-code>
             </Demo>
@@ -105,7 +105,7 @@
                         </tr>
                         <tr>
                             <td>render</td>
-                            <td>自定义描述内容，使用 Vue 的 Render 函数。如果同时设置了render和desc，则只显示render的内容</td>
+                            <td>自定义描述内容，使用 Vue 的 Render 函数，如果同时设置了 render 和 desc，则只显示 render 的内容</td>
                             <td>Function</td>
                             <td>-</td>
                         </tr>
