@@ -423,6 +423,12 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>closable</td>
+                            <td>Whether to support press Esc key to close.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
                             <td>onOk</td>
                             <td>Callback when clicking confirm button (OK button).</td>
                             <td>Function</td>
