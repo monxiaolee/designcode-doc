@@ -33,7 +33,7 @@
                         <code>2017-12-25</code>
                     </p>
                     <ul>
-                        <li>新增响应式布局组件 Layout（包括 Layout、Header、Sider、Content、Footer 5个组件）。<issue id="2646"></issue> <mention id="lison16"></mention></li>
+                        <li>新增响应式布局组件 Layout（包括 Layout、Header、Sider、Content、Footer 5个组件）。<issue id="2646"></issue> <mention id="lison16"></mention> <router-link to="/components/layout">查看</router-link></li>
                         <li>Tag 支持自定义颜色。<issue id="2644"></issue></li>
                         <li>$Message 和 $Notice 支持 Render 函数。<issue id="2667"></issue></li>
                         <li>Affix 优化滚动时的占位区域高度。<issue id="2628"></issue></li>

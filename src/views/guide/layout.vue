@@ -496,7 +496,7 @@
                 <div slot="demo">
                     <div class="layout">
                         <div class="layout">
-                            <iframe src="../src/views/guide/layout-page/header-fixed.html" height="360"></iframe>
+                            <iframe src="https://file.iviewui.com/layout-page/header-fixed.html" height="360"></iframe>
                         </div>
                     </div>
                 </div>

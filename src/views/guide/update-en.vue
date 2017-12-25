@@ -33,7 +33,7 @@
                         <code>2017-12-25</code>
                     </p>
                     <ul>
-                        <li>Add responsive components(including Layout, Header, Sider, Content, Footer). <issue id="2646"></issue> <mention id="lison16"></mention></li>
+                        <li>Add responsive components(including Layout, Header, Sider, Content, Footer). <issue id="2646"></issue> <mention id="lison16"></mention> <router-link to="/components/layout-en">View</router-link></li>
                         <li>Tag supports custom colors. <issue id="2644"></issue></li>
                         <li>$Message and $Notice support Render function. <issue id="2667"></issue></li>
                         <li>Affix optimizes the height of the occupied area when scrolling. <issue id="2628"></issue></li>
