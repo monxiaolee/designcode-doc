@@ -411,7 +411,7 @@
             <Demo title="Sider" vertical hide-code>
                 <div slot="demo">
                     <div class="layout">
-                        <iframe src="../src/views/guide/layout-page/sider.html" height="360"></iframe>
+                        <iframe src="https://file.iviewui.com/layout-page2/sider.html" height="360"></iframe>
                     </div>
                 </div>
                 <div slot="desc">
@@ -497,7 +497,7 @@
                 <div slot="demo">
                     <div class="layout">
                         <div class="layout">
-                            <iframe src="../src/views/guide/layout-page/header-fixed.html" height="360"></iframe>
+                            <iframe src="https://file.iviewui.com/layout-page2/header-fixed.html" height="360"></iframe>
                         </div>
                     </div>
                 </div>
@@ -510,7 +510,7 @@
                 <div slot="demo">
                     <div class="layout">
                         <div class="layout">
-                            <iframe src="../src/views/guide/layout-page/sider-fixed.html" height="360"></iframe>
+                            <iframe src="https://file.iviewui.com/layout-page2/sider-fixed.html" height="360"></iframe>
                         </div>
                     </div>
                 </div>
