@@ -98,7 +98,7 @@
                         </tr>
                         <tr>
                             <td>step</td>
-                            <td>每次改变的步伐，可以是小数</td>
+                            <td>The step length of each change, can be a decimal number</td>
                             <td>Number</td>
                             <td>1</td>
                         </tr>
