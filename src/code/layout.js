@@ -669,7 +669,7 @@ code.headerFixed = `
                     </div>
                 </Menu>
             </Header>
-            <Content :style="{margin: '88px 20px 0', background: '#fff', minHeight: '500px'}}">
+            <Content :style="{margin: '88px 20px 0', background: '#fff', minHeight: '500px'}">
                 Content
             </Content>
             <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
