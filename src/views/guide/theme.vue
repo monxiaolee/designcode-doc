@@ -16,7 +16,7 @@
             <p>首先在项目中先建一个目录，比如 <code>my-theme</code>，然后在 my-theme 下建立一个 less 文件 <code>index.less</code>，并写入下面内容：</p>
             <i-code lang="auto" bg>{{ code.theme.less }}</i-code>
             <p>
-                完整的变量列表可以查看 <a href="https://github.com/iview/iview/blob/master/src/styles/custom.less" target="_blank">默认样式变量</a>。
+                完整的变量列表可以查看 <a href="https://github.com/iview/iview/blob/2.0/src/styles/custom.less" target="_blank">默认样式变量</a>。
             </p>
             <p>然后在入口文件 <code>main.js</code> 内导入这个 less 文件即可：</p>
             <i-code lang="auto" bg>{{ code.theme.lessImport }}</i-code>

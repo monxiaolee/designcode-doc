@@ -16,7 +16,7 @@
             <p>In order to do this, you need to create a dictionary first. For example, create a dictionary <code>my-theme</code> and add a less file <code>index.less</code> in it.</p>
             <i-code lang="auto" bg>{{ code.theme.less }}</i-code>
             <blockquote>
-                Note: For entire variable list, check out <a href="https://github.com/iview/iview/blob/master/src/styles/custom.less" target="_blank">Default Variables</a>。
+                Note: For entire variable list, check out <a href="https://github.com/iview/iview/blob/2.0/src/styles/custom.less" target="_blank">Default Variables</a>。
             </blockquote>
             <p>After you creating the file which contains the variable you need to override, import it in your entry file <code>main.js</code>:</p>
             <i-code lang="auto" bg>{{ code.theme.lessImport }}</i-code>
