@@ -16,7 +16,7 @@
 <template>
     <div>
         <router-view></router-view>
-        <Back-top :bottom="100"></Back-top>
+        <Back-top></Back-top>
         <transition name="fade">
             <div class="loading" v-show="loading">
                 <Icon type="load-c" size="18" class="icon-loading"></Icon>
@@ -73,39 +73,39 @@
             }
 
             if (this.liveVisible && this.$lang === 'zh-CN') {
-//                this.$Notice.config({
-//                    top: 85
-//                });
-//                this.$Notice.info({
-//                    title: '关于使用 iView 控制台警告的说明',
-//                    desc: '<p>如果您使用的是 Vue.js 2.5.10 版本，会在控制台弹出一系列标签错误的警告，但这只会在开发环境提示，而且不影响 iView 的使用。</p><p>下个 Vue.js 版本已经修复这个问题。</p><p>您也可以降级 Vue.js 到 2.5.9 版本。</p>',
-//                    duration: 0,
-//                    onClose: () => {
-//                        const today = this.getTodayUnix();
-//                        window.localStorage.setItem('liveModalTime', today);
-//                        this.$Message.success('关闭成功，近期不再提示', 4);
-//                    }
-//                });
-//                this.$Notice.config({
-//                    top: 24
-//                });
+                this.$Notice.config({
+                    top: 85
+                });
+                this.$Notice.info({
+                    title: '开源项目限时推广',
+                    desc: '<p><a href="https://github.com/TalkingData/inmap" target="_blank">inMap</a> 是一款基于百度地图的大数据可视化库，专注于大数据方向的散点、热力图、网格、聚合等方式展示，致力于让大数据可视化变得简单易用。</p><p>点击 Star 支持作者 → <a style="vertical-align: middle;display: inline-block" href="https://github.com/TalkingData/inmap" target="_blank"><img src="https://img.shields.io/github/stars/TalkingData/inmap.svg?style=social"></a></p>',
+                    duration: 0,
+                    onClose: () => {
+                        const today = this.getTodayUnix();
+                        window.localStorage.setItem('liveModalTime', today);
+                        this.$Message.success('关闭成功，近期不再提示', 4);
+                    }
+                });
+                this.$Notice.config({
+                    top: 24
+                });
             } else if (this.liveVisible && this.$lang === 'en-US') {
-//                this.$Notice.config({
-//                    top: 85
-//                });
-//                this.$Notice.info({
-//                    title: 'Notice about iView console warning',
-//                    desc: '<p>If you are using Vue.js 2.5.10, a series of warning will pop up in the console, but this will only be prompted in the development environment and will not affect the use of the iView.</p><p>The next Vue.js version has fixed this problem.</p><p>You can also demote Vue.js to version 2.5.9.</p>',
-//                    duration: 0,
-//                    onClose: () => {
-//                        const today = this.getTodayUnix();
-//                        window.localStorage.setItem('liveModalTime', today);
-//                        this.$Message.success('Closed successfully, no longer prompt', 4);
-//                    }
-//                });
-//                this.$Notice.config({
-//                    top: 24
-//                });
+                this.$Notice.config({
+                    top: 85
+                });
+                this.$Notice.info({
+                    title: 'Open source project promotion',
+                    desc: '<p><a href="https://github.com/TalkingData/inmap" target="_blank">inMap</a> is a big data visualization library based on Baidu map. It focuses on the scatter, heat map, grid and aggregation algorithm. Make it easy to use.</p><p>Click Star to support the author: <br><a style="vertical-align: middle;display: inline-block" href="https://github.com/TalkingData/inmap" target="_blank"><img src="https://img.shields.io/github/stars/TalkingData/inmap.svg?style=social"></a></p>',
+                    duration: 0,
+                    onClose: () => {
+                        const today = this.getTodayUnix();
+                        window.localStorage.setItem('liveModalTime', today);
+                        this.$Message.success('Closed successfully, no longer prompt', 4);
+                    }
+                });
+                this.$Notice.config({
+                    top: 24
+                });
             }
 
             // 广告统计

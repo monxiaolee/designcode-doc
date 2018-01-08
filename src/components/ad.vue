@@ -1,25 +1,25 @@
 <template>
     <div v-if="lang === 'zh-CN'">
-        <div class="advertisement" id="API">
-            <row :gutter="32">
-                <i-col span="12">
-                    <div class="advertisement-main">
-                        <a href="https://github.com/TalkingData/inmap" target="_blank" @click="handleAd('ad-inmap')">
-                            <img src="../images/ad-inmap.png">
-                        </a>
-                        <ad-send></ad-send>
-                    </div>
-                </i-col>
-                <i-col span="12">
-                    <div class="advertisement-main">
-                        <a href="https://edu.talkingdata.com" target="_blank" @click="handleAd('ad-tdu')">
-                            <img src="../images/ad-tdu.png">
-                        </a>
-                        <ad-send></ad-send>
-                    </div>
-                </i-col>
-            </row>
-        </div>
+        <!--<div class="advertisement" id="API">-->
+            <!--<row :gutter="32">-->
+                <!--<i-col span="12">-->
+                    <!--<div class="advertisement-main">-->
+                        <!--<a href="https://github.com/TalkingData/inmap" target="_blank" @click="handleAd('ad-inmap')">-->
+                            <!--<img src="../images/ad-inmap.png">-->
+                        <!--</a>-->
+                        <!--<ad-send></ad-send>-->
+                    <!--</div>-->
+                <!--</i-col>-->
+                <!--<i-col span="12">-->
+                    <!--<div class="advertisement-main">-->
+                        <!--<a href="https://edu.talkingdata.com" target="_blank" @click="handleAd('ad-tdu')">-->
+                            <!--<img src="../images/ad-tdu.png">-->
+                        <!--</a>-->
+                        <!--<ad-send></ad-send>-->
+                    <!--</div>-->
+                <!--</i-col>-->
+            <!--</row>-->
+        <!--</div>-->
         <div class="advertisement">
             <row :gutter="32">
                 <i-col span="12">

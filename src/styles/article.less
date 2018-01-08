@@ -3,21 +3,24 @@
     padding: 1px;
 
     &-header{
-        position: relative;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        right: 0;
         z-index: 1000;
         //box-shadow: 0 1px 1px rgba(0,0,0,.08);
         .ivu-menu{
             &-horizontal{
-                height: 80px;
-                line-height: 80px;
+                height: 65px;
+                line-height: 65px;
                 &:after{
                     display: none !important;
                 }
             }
         }
         &-nav{
-            width: 90%;
-            height: 80px;
+            width: 95%;
+            height: 65px;
             margin: 0 auto;
             &-list{
                 height: inherit;
@@ -30,7 +33,7 @@
             }
             &-logo{
                 height: 50px;
-                margin-top: 15px;
+                margin-top: 8px;
                 float: left;
                 img{
                     height: 100%;
@@ -62,9 +65,9 @@
     }
     &-container{
         background: #fff;
-        width: 90%;
-        margin: 30px auto 20px;
-        border-radius: 6px;
+        //width: 90%;
+        margin: 80px auto 15px;
+        //border-radius: 6px;
         box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
     }
 
@@ -89,6 +92,20 @@
             top: 0;
             bottom: 0;
             left: -1px;
+        }
+    }
+
+    &-aside{
+        display: block;
+        width: calc(100% - 10px);
+        border: 1px solid #e9eaec;
+        border-radius: 3px;
+        padding: 2px 2px 0;
+        margin: 10px 0;
+        cursor: pointer;
+
+        img{
+            width: 100%;
         }
     }
 }
@@ -138,38 +155,47 @@
 }
 .catalogue{
     z-index: 2;
-    position: fixed;
-    top: 110px;
-    right: 0;
+    //position: fixed;
+    //top: 110px;
+    //right: 0;
     cursor: pointer;
 
     .ivu-card{
-        border-radius: 4px 0 0 4px;
+        //border-radius: 4px 0 0 4px;
+        border-radius: 0;
     }
 
     .ivu-card-body{
         padding: 8px 10px;
     }
+    .ivu-card-bordered{
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+    }
 
     a{
+        color: #495060;
         font-size: 12px !important;
     }
 
     &-title{
-        width: 14px;
+        //width: 14px;
+        width: auto;
         font-size: 12px;
+        font-weight: bold;
     }
 
     &-content{
-        display: none;
+        //display: none;
     }
 
     &:hover {
         .catalogue-title{
-            width: auto;
+            //width: auto;
         }
         .catalogue-content{
-            display: block;
+            //display: block;
         }
     }
 }

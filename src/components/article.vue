@@ -12,10 +12,41 @@
                     <i-col span="4" class="wrapper-navigate">
                         <Navigate :type="activeKey"></Navigate>
                     </i-col>
-                    <i-col span="20">
+                    <i-col span="17">
                         <div class="wrapper-content ivu-article">
                             <slot></slot>
                         </div>
+                    </i-col>
+                    <i-col span="3">
+                        <Affix :offset-top="75">
+                            <div class="catalogue" v-show="list.length">
+                                <card dis-hover>
+                                    <div class="catalogue-title">
+                                        <template v-if="lang === 'zh-CN'">目录</template>
+                                        <template v-else>Catalogue</template>
+                                    </div>
+                                    <div class="catalogue-content">
+                                        <ul>
+                                            <li v-for="item in list">
+                                                <a :href="'#' + item.path" @click.stop.prevent="handleClickLink(item.path)">{{ item.title }}</a>
+                                            </li>
+                                            <li v-if="need_api">
+                                                <a href="#API" @click.stop.prevent="handleClickLink('API')">API</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </card>
+                            </div>
+
+                            <template v-if="lang === 'zh-CN'">
+                                <a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAsideAd('aside-iview-live')" class="wrapper-aside">
+                                    <img src="../images/aside-iview-live.png">
+                                </a>
+                                <div class="wrapper-aside" @click="handleAsideAd('aside-qqgroup', true)">
+                                    <img src="../images/aside-qqgroup.png">
+                                </div>
+                            </template>
+                        </Affix>
                     </i-col>
                 </Row>
             </div>
@@ -104,24 +135,6 @@
                 </Row>
             </div>
         </div>
-        <div class="catalogue" v-show="list.length">
-            <card dis-hover shadow>
-                <div class="catalogue-title">
-                    <template v-if="lang === 'zh-CN'">目录</template>
-                    <template v-else>CAT</template>
-                </div>
-                <div class="catalogue-content">
-                    <ul>
-                        <li v-for="item in list">
-                            <a :href="'#' + item">{{ item }}</a>
-                        </li>
-                        <li>
-                            <a href="#API">API</a>
-                        </li>
-                    </ul>
-                </div>
-            </card>
-        </div>
         <!--<Modal v-model="donate" v-if="lang === 'zh-CN'" title="支持 iView 的开发" @on-ok="handleModalClose" @on-cancel="handleModalClose" class-name="vertical-center-modal">-->
             <!--<div class="ivu-article">-->
                 <!--<p>iView 是采用 MIT 许可的开源项目，您可以在个人或企业项目中免费使用。不过，如果您觉得 iView 对您的项目带来了帮助，提高开发效率，可以用捐助来表示您的谢意：)</p>-->
@@ -176,10 +189,10 @@
             </div>
         </Modal>
         <!-- todo 提问 -->
-        <div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">
-            <Icon type="ios-people" size="24"></Icon>
-            <p>QQ群</p>
-        </div>
+        <!--<div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">-->
+            <!--<Icon type="ios-people" size="24"></Icon>-->
+            <!--<p>QQ群</p>-->
+        <!--</div>-->
     </div>
 </template>
 <script>
@@ -196,6 +209,7 @@
         data () {
             return {
                 list: [],
+                need_api: false,
                 donate: false,
                 ask: false,
                 activeKey: '',
@@ -241,6 +255,18 @@
             },
             handleNavMenuChange (val) {
                 this.activeKey = val;
+            },
+            // 控制锚点跳转
+            handleClickLink (id) {
+                const top = document.getElementById(id).offsetTop;
+                window.location.hash = id;
+                window.scrollTo(0, top + 15);
+            },
+            handleAsideAd (name, isQQGroup = false) {
+                _hmt.push(['_trackEvent', name, 'click']);
+                if (isQQGroup) {
+                    this.ask = true;
+                }
             }
         },
         created () {
@@ -251,10 +277,32 @@
 
             const examples = this.$slots.default[0].elm.querySelectorAll('.example');
 
-            for (let i = 0; i < examples.length; i++) {
-                const title = examples[i].querySelectorAll('header span a')[0].getAttribute('href').replace('#', '');
-                this.list.push(title);
+            // 有示例时，显示示例的目录，没有，显示标题为目录
+            if (examples.length) {
+                this.need_api = true;
+                for (let i = 0; i < examples.length; i++) {
+                    const title = examples[i].querySelectorAll('header span a')[0].getAttribute('href').replace('#', '');
+                    this.list.push({
+                        title: title,
+                        path: title
+                    });
+                }
+            } else {
+                this.need_api = false;
+                const headers = this.$slots.default[0].elm.querySelectorAll('.anchor');
+                for (let i = 0; i < headers.length; i++) {
+                    const title = headers[i].querySelectorAll('h2')[0];
+                    if (title) {
+                        const title_name = title.innerHTML;
+                        const path = headers[i].querySelectorAll('h2')[0].getAttribute('id');
+                        this.list.push({
+                            title: title_name,
+                            path: path
+                        });
+                    }
+                }
             }
+
             bus.$on('on-donate-show', () => {
                 this.donate = true;
             })
