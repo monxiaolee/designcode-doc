@@ -39,9 +39,19 @@
                             </div>
 
                             <template v-if="lang === 'zh-CN'">
-                                <a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAsideAd('aside-iview-live')" class="wrapper-aside">
-                                    <img src="../images/aside-iview-live.png">
+                                <div style="margin-top: 20px"></div>
+                                <a v-if="ad_index === 1" href="https://cn.udacity.com/course/intro-to-python-nanodegree-foundation--nd000-cn-python/?utm_source=iviewui&utm_medium=banner&utm_campaign=python" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
+                                    <img src="../images/aside-udacity-1.jpg">
                                 </a>
+                                <a v-if="ad_index === 2" href="https://cn.udacity.com/course/react-nanodegree--nd019-cn/?utm_source=iviewui&utm_medium=banner&utm_campaign=react" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
+                                    <img src="../images/aside-udacity-2.jpg">
+                                </a>
+                                <a v-if="ad_index === 3" href="https://cn.udacity.com/fend/?utm_source=iviewui&utm_medium=banner&utm_campaign=fend" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
+                                    <img src="../images/aside-udacity-3.jpg">
+                                </a>
+                                <!--<a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAsideAd('aside-iview-live')" class="wrapper-aside">-->
+                                    <!--<img src="../images/aside-iview-live.png">-->
+                                <!--</a>-->
                                 <div class="wrapper-aside" @click="handleAsideAd('aside-qqgroup', true)">
                                     <img src="../images/aside-qqgroup.png">
                                 </div>
@@ -90,6 +100,9 @@
                                 <a href="http://mi.talkingdata.com/" target="_blank">Marketing Intelligence</a> - {{ $t('index.td_mi') }}
                             </li>
                             <li>
+                                <a href="https://github.com/TalkingData/inmap/" target="_blank">inMap</a> - {{ $t('index.inmap') }}
+                            </li>
+                            <li>
                                 <a href="https://github.com/TalkingData/Fregata" target="_blank">Fregata</a> - {{ $t('index.Fregata') }}
                             </li>
                             <li>
@@ -129,6 +142,10 @@
                                 <a href="https://www.talkingdata.com/">
                                     <img src="../images/logo-td.png">
                                 </a>
+                            </div>
+                            <div class="footer-version">
+                                <p>{{ $t('index.current_version') }}</p>
+                                <p>Vue.js 2.5.13, iView 2.8.0</p>
                             </div>
                         </div>
                     </i-col>
@@ -214,7 +231,8 @@
                 ask: false,
                 activeKey: '',
                 lang: this.$lang,
-                adCarousel: 0
+                adCarousel: 0,
+                ad_index: 1  // 随机广告索引，更好地显示一类广告
             }
         },
         methods: {
@@ -260,7 +278,9 @@
             handleClickLink (id) {
                 const top = document.getElementById(id).offsetTop;
                 window.location.hash = id;
-                window.scrollTo(0, top + 15);
+                let scroll_top = top + 15;
+                if (id === 'API') scroll_top -= 150;
+                window.scrollTo(0, scroll_top);
             },
             handleAsideAd (name, isQQGroup = false) {
                 _hmt.push(['_trackEvent', name, 'click']);
@@ -273,6 +293,10 @@
             this.lang = this.$lang;
         },
         mounted () {
+            // 随机广告索引
+            this.ad_index = Math.floor(Math.random () * 3 + 1);
+
+
             this.updateActiveNav();
 
             const examples = this.$slots.default[0].elm.querySelectorAll('.example');

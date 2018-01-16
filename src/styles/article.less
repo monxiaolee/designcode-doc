@@ -97,15 +97,26 @@
 
     &-aside{
         display: block;
-        width: calc(100% - 10px);
+        width: calc(100% - 2px);
         border: 1px solid #e9eaec;
         border-radius: 3px;
-        padding: 2px 2px 0;
+        //padding: 2px 2px 0;
         margin: 10px 0;
         cursor: pointer;
 
+        &-no-padding{
+            padding: 0;
+            border: 1px solid transparent;
+        }
+
         img{
             width: 100%;
+            border-radius: 3px;
+            opacity: 0.8;
+            transition: opacity .2s ease-in-out;
+            &:hover{
+                opacity: 1;
+            }
         }
     }
 }
@@ -151,6 +162,13 @@
         img{
             width: 80px;
         }
+    }
+    &-version{
+        font-size: 12px;
+        text-align: center;
+        padding: 20px 0 4px;
+        color: #bbbec4;
+        padding-left: 6px;
     }
 }
 .catalogue{

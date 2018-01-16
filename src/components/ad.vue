@@ -24,8 +24,11 @@
             <row :gutter="32">
                 <i-col span="12">
                     <div class="advertisement-main">
-                        <a href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">
-                            <img src="../images/ad-vuebook.png">
+                        <!--<a href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">-->
+                            <!--<img src="../images/ad-vuebook.png">-->
+                        <!--</a>-->
+                        <a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAd('ad-vuebook')">
+                            <img src="../images/ad-learning-vue.png">
                         </a>
                         <ad-send></ad-send>
                     </div>
@@ -35,7 +38,7 @@
                         <a href="javascript:void(0)" @click="handleAd('ad-buy')">
                             <img src="../images/ad-buy.png">
                         </a>
-                        <ad-send></ad-send>
+                        <!--<ad-send></ad-send>-->
                     </div>
                 </i-col>
             </row>
@@ -79,7 +82,7 @@
         }
 
         a{
-            opacity: 0.7;
+            opacity: 0.8;
             transition: opacity .2s ease-in-out;
         }
         a:hover{

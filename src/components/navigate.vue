@@ -28,7 +28,7 @@
                     </Badge>
                 </template>
             </Menu-item>
-            <Button type="warning" v-if="lang === 'zh-CN'" icon="heart" size="small" style="width:130px;margin:15px 0 15px 15px;" @click="handleDonate">{{ $t('index.donate') }}</Button>
+            <!--<Button type="warning" v-if="lang === 'zh-CN'" icon="heart" size="small" style="width:130px;margin:15px 0 15px 15px;" @click="handleDonate">{{ $t('index.donate') }}</Button>-->
             <div class="navigate-group">{{ $t('index.component') }}</div>
             <Menu-group v-for="item in navigate.components" :key="item.type" :title="item.type">
                 <Menu-item v-for="component in item.list" :key="component.path" :name="component.path">
