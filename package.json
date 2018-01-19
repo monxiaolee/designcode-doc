@@ -21,7 +21,7 @@
     "highlightjs": "^8.7.0",
     "ityped": "0.0.6",
     "iview": "^2.8.0",
-    "marked": "^0.3.9",
+    "marked": "^0.3.12",
     "vue": "^2.5.13",
     "vue-i18n": "^5.0.3",
     "vue-router": "^2.8.1"
@@ -52,7 +52,7 @@
     "vue-style-loader": "^1.0.0",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^2.7.0",
-    "webpack-dev-server": "^2.9.7",
+    "webpack-dev-server": "^2.11.0",
     "webpack-merge": "^3.0.0"
   }
 }

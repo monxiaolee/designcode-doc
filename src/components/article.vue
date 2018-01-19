@@ -40,18 +40,21 @@
 
                             <template v-if="lang === 'zh-CN'">
                                 <div style="margin-top: 20px"></div>
-                                <a v-if="ad_index === 1" href="https://cn.udacity.com/course/intro-to-python-nanodegree-foundation--nd000-cn-python/?utm_source=iviewui&utm_medium=banner&utm_campaign=python" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
-                                    <img src="../images/aside-udacity-1.jpg">
-                                </a>
-                                <a v-if="ad_index === 2" href="https://cn.udacity.com/course/react-nanodegree--nd019-cn/?utm_source=iviewui&utm_medium=banner&utm_campaign=react" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
-                                    <img src="../images/aside-udacity-2.jpg">
-                                </a>
-                                <a v-if="ad_index === 3" href="https://cn.udacity.com/fend/?utm_source=iviewui&utm_medium=banner&utm_campaign=fend" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
-                                    <img src="../images/aside-udacity-3.jpg">
-                                </a>
+                                <!--<a v-if="ad_index === 1" href="https://cn.udacity.com/course/intro-to-python-nanodegree-foundation&#45;&#45;nd000-cn-python/?utm_source=iviewui&utm_medium=banner&utm_campaign=python" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">-->
+                                    <!--<img src="../images/aside-udacity-1.jpg">-->
+                                <!--</a>-->
+                                <!--<a v-if="ad_index === 2" href="https://cn.udacity.com/course/react-nanodegree&#45;&#45;nd019-cn/?utm_source=iviewui&utm_medium=banner&utm_campaign=react" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">-->
+                                    <!--<img src="../images/aside-udacity-2.jpg">-->
+                                <!--</a>-->
+                                <!--<a v-if="ad_index === 3" href="https://cn.udacity.com/fend/?utm_source=iviewui&utm_medium=banner&utm_campaign=fend" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">-->
+                                    <!--<img src="../images/aside-udacity-3.jpg">-->
+                                <!--</a>-->
                                 <!--<a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAsideAd('aside-iview-live')" class="wrapper-aside">-->
                                     <!--<img src="../images/aside-iview-live.png">-->
                                 <!--</a>-->
+                                <a href="https://cn.udacity.com/course/intro-to-python-nanodegree-foundation--nd000-cn-python/?utm_source=iviewui&utm_medium=banner&utm_campaign=python" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
+                                    <img src="../images/aside-udacity-4.jpg">
+                                </a>
                                 <div class="wrapper-aside" @click="handleAsideAd('aside-qqgroup', true)">
                                     <img src="../images/aside-qqgroup.png">
                                 </div>
