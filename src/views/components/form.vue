@@ -5,6 +5,15 @@
             <Anchor title="概述" h2></Anchor>
             <p>具有数据收集、校验和提交功能的表单，包含复选框、单选框、输入框、下拉选择框等元素。</p>
             <Alert show-icon style="margin-top: 16px">注意：非 template/render 模式下，需使用 <code>i-form</code>。</Alert>
+            <Alert show-icon>
+                W3C 标准中有如下<a href="https://www.w3.org/MarkUp/html-spec/html-spec_8.html#SEC8.2" target="_blank">规定</a>：
+                <template slot="desc">
+                    <p>
+                        <i>When there is only one single-line text input field in a form, the user agent should accept Enter in that field as a request to submit the form.</i>
+                    </p>
+                    <p>即：当一个 form 元素中只有一个输入框时，在该输入框中按下回车应提交该表单。如果希望阻止这一默认行为，可以在 <code>&lt;Form&gt;</code> 标签上添加 <code>@submit.native.prevent</code>。</p>
+                </template>
+            </Alert>
             <Anchor title="代码示例" h2></Anchor>
             <Demo title="行内表单">
                 <div slot="demo">

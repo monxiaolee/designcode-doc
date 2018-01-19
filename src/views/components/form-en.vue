@@ -5,6 +5,15 @@
             <Anchor title="Brief Introduction" h2></Anchor>
             <p>Forms with abilities of data collecting, validating, and submitting, which includes checkbox, radio, dropdown etc.</p>
             <Alert show-icon style="margin-top: 16px">Attention: <code>i-form</code> is needed if not under template/render mode.</Alert>
+            <Alert show-icon>
+                <a href="https://www.w3.org/MarkUp/html-spec/html-spec_8.html#SEC8.2" target="_blank">W3C</a> regulates that
+                    <template slot="desc">
+                    <p>
+                        <i>When there is only one single-line text input field in a form, the user agent should accept Enter in that field as a request to submit the form.</i>
+                    </p>
+                    <p>To prevent this behavior, you can add <code>@submit.native.prevent</code> on <code>&lt;Form&gt;</code>.</p>
+                </template>
+            </Alert>
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Inline Form">
                 <div slot="demo">
