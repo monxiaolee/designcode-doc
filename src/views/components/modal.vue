@@ -185,7 +185,7 @@
                         姓名：{{ value }}
                     </p>
                     <p>
-                        <Button @click="render">自定义内容</Button>
+                        <Button @click="handleRender">自定义内容</Button>
                     </p>
                 </div>
                 <div slot="desc">
@@ -570,7 +570,7 @@
                     }
                 });
             },
-            render () {
+            handleRender () {
                 this.$Modal.confirm({
                     render: (h) => {
                         return h('Input', {

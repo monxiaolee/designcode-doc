@@ -185,7 +185,7 @@
                         Name: {{ value }}
                     </p>
                     <p>
-                        <Button @click="render">Custom content</Button>
+                        <Button @click="handleRender">Custom content</Button>
                     </p>
                 </div>
                 <div slot="desc">
@@ -569,7 +569,7 @@
                     }
                 });
             },
-            render () {
+            handleRender () {
                 this.$Modal.confirm({
                     render: (h) => {
                         return h('Input', {
