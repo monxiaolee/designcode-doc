@@ -179,6 +179,53 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.vertical }}</i-code>
             </Demo>
+            <Demo title="内嵌菜单" vertical hide-code>
+                <div slot="demo">
+                    <Menu active-name="1-2" :open-names="['1']">
+                        <Submenu name="1">
+                            <template slot="title">
+                                <Icon type="ios-analytics"></Icon>
+                                Navigation One
+                            </template>
+                            <MenuGroup title="Item 1">
+                                <MenuItem name="1-1">Option 1</MenuItem>
+                                <MenuItem name="1-2">Option 2</MenuItem>
+                            </MenuGroup>
+                            <MenuGroup title="Item 2">
+                                <MenuItem name="1-3">Option 3</MenuItem>
+                                <MenuItem name="1-4">Option 4</MenuItem>
+                            </MenuGroup>
+                        </Submenu>
+                        <Submenu name="2">
+                            <template slot="title">
+                                <Icon type="ios-filing"></Icon>
+                                Navigation Two
+                            </template>
+                            <MenuItem name="2-1">Option 5</MenuItem>
+                            <MenuItem name="2-2">Option 6</MenuItem>
+                            <Submenu name="3">
+                                <template slot="title">Submenu</template>
+                                <MenuItem name="3-1">Option 7</MenuItem>
+                                <MenuItem name="3-2">Option 8</MenuItem>
+                            </Submenu>
+                        </Submenu>
+                        <Submenu name="4">
+                            <template slot="title">
+                                <Icon type="ios-gear"></Icon>
+                                Navigation Three
+                            </template>
+                            <MenuItem name="4-1">Option 9</MenuItem>
+                            <MenuItem name="4-2">Option 10</MenuItem>
+                            <MenuItem name="4-3">Option 11</MenuItem>
+                            <MenuItem name="4-4">Option 12</MenuItem>
+                        </Submenu>
+                    </Menu>
+                </div>
+                <div slot="desc">
+                    <p>垂直菜单，子菜单内嵌在菜单区域。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.inline }}</i-code>
+            </Demo>
             <Demo title="分组" vertical hide-code>
                 <div slot="demo">
                     <Menu :theme="theme3" active-name="1">
@@ -211,11 +258,7 @@
                     </RadioGroup>
                 </div>
                 <div slot="desc">
-                    <p>使用 <code>MenuGroup</code> 组件进行分组，注意：</p>
-                    <ul>
-                        <li> <code>MenuGroup</code> 只能用在 <code>Menu</code> 和 <code>Submenu</code> 内。</li>
-                        <li> <code>Submenu</code> 只能用在 <code>Menu</code> 内，不能用在 <code>MenuGroup</code> 和 <code>MenuItem</code> 内。</li>
-                    </ul>
+                    <p>使用 <code>MenuGroup</code> 组件进行分组。</p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.group }}</i-code>
             </Demo>

@@ -40,6 +40,21 @@ code.alpha = `
 </script>
 `;
 
+code.hue = `
+<template>
+    <ColorPicker v-model="color7" :hue="false" />
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                color7: '#19be6b'
+            }
+        }
+    }
+</script>
+`;
+
 code.colors = `
 <template>
     <Row>

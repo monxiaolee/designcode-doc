@@ -32,6 +32,15 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.alpha }}</i-code>
             </Demo>
+            <Demo title="Hue">
+                <div slot="demo">
+                    <ColorPicker v-model="color7" :hue="false" />
+                </div>
+                <div slot="desc">
+                    <p>Set property <code>hue</code> to false, can hide hue slider.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.hue }}</i-code>
+            </Demo>
             <Demo title="Color Presets">
                 <div slot="demo">
                     <Row>
@@ -94,6 +103,12 @@
                             <td>Whether to display the alpha slider.</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>hue</td>
+                            <td>Whether to display the hue slider.</td>
+                            <td>Boolean</td>
+                            <td>true</td>
                         </tr>
                         <tr>
                             <td>recommend</td>
@@ -170,7 +185,8 @@
                 color4: '#19be6b',
                 color5: '#19be6b',
                 colors: ['#311B92', '#512DA8', '#673AB7', '#9575CD', '#D1C4E9'],
-                color6: '#19be6b'
+                color6: '#19be6b',
+                color7: '#19be6b'
             }
         }
     }

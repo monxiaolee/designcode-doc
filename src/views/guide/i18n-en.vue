@@ -38,6 +38,9 @@
                 <li>Ukrainian(uk-UA)</li>
                 <li>Italian(it-IT)</li>
                 <li>Thai(th-TH)</li>
+                <li>Hindi(hi-IN)</li>
+                <li>Farsi(fa-IR)</li>
+                <li>Romanian(ro-RO)</li>
             </ul>
             <p>If your target language is not included, you are more than welcome to contribute: just add another language config <a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">here</a> and create a pull request.</p>
         </article>

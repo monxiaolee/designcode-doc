@@ -38,6 +38,9 @@
                 <li>乌克兰语（uk-UA）</li>
                 <li>意大利语（it-IT）</li>
                 <li>泰语（th-TH）</li>
+                <li>印地语（hi-IN）</li>
+                <li>波斯语（fa-IR）</li>
+                <li>罗马尼亚语（ro-RO）</li>
             </ul>
             <p>欢迎贡献代码，以支持更多语言。只需在<a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">这里</a>添加一个语言配置文件即可。</p>
         </article>

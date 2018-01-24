@@ -227,6 +227,11 @@
                             <td>菜单显示状态改变时调用</td>
                             <td>visible</td>
                         </tr>
+                        <tr>
+                            <td>on-clickoutside</td>
+                            <td>点击外部关闭下拉菜单时触发</td>
+                            <td>event</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Dropdown slot" h3></Anchor>

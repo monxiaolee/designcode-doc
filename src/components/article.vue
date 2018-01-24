@@ -148,7 +148,7 @@
                             </div>
                             <div class="footer-version">
                                 <p>{{ $t('index.current_version') }}</p>
-                                <p>Vue.js 2.5.13, iView 2.8.0</p>
+                                <p>Vue.js 2.5.13, iView 2.9.0</p>
                             </div>
                         </div>
                     </i-col>

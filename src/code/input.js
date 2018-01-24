@@ -36,6 +36,21 @@ code.size = `
 </script>
 `;
 
+code.clearable = `
+<template>
+    <Input v-model="value14" placeholder="Enter something..." clearable style="width: 200px"></Input>
+</template>
+<script>
+    export default {
+        data () {
+            return {
+                value14: 'Hello World'
+            }
+        }
+    }
+</script>
+`;
+
 code.icon = `
 <template>
     <Input v-model="value4" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px"></Input>

@@ -36,6 +36,15 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.size }}</i-code>
             </Demo>
+            <Demo title="可清空">
+                <div slot="demo">
+                    <Input v-model="value14" placeholder="Enter something..." clearable style="width: 200px"></Input>
+                </div>
+                <div slot="desc">
+                    <p>开启属性 <code>clearable</code> 可显示清空按钮。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.clearable }}</i-code>
+            </Demo>
             <Demo title="带Icon的输入框">
                 <div slot="demo">
                     <Input v-model="value4" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px"></Input>
@@ -167,6 +176,12 @@
                             <td>占位文本</td>
                             <td>String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>clearable</td>
+                            <td>是否显示清空按钮</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
@@ -359,6 +374,7 @@
                 value11: '',
                 value12: '',
                 value13: '',
+                value14: 'Hello World',
                 select1: 'http',
                 select2: 'com',
                 select3: 'day'

@@ -25,6 +25,36 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.9.0 Agent A" h2></Anchor>
+                    <p>
+                        <code>2018-01-24</code>
+                    </p>
+                    <ul>
+                        <li>Update dependencies and use browserlist. <issue id="2835"></issue> <issue id="2837"></issue> <issue id="2839"></issue></li>
+                        <li>Refactor the Slider component. <issue id="2393"></issue></li>
+                        <li>Optimized Button, Radio, Checkbox style, enhanced keyboard accessibility, closer to native. <issue id="1647"></issue></li>
+                        <li>Menu supports multi-level nesting.</li>
+                        <li>ColorPicker add new property <code>hue</code> to control whether to show the hue slider. <issue id="2672"></issue></li>
+                        <li>AutoComplete add property <code>placement</code>. <issue id="2803"></issue></li>
+                        <li>Input add property <code>clearable</code>. <issue id="2884"></issue></li>
+                        <li>Dropdown add new event <code>@on-clickoutside</code>. <issue id="2783"></issue></li>
+                        <li>Fixed Table bug that using sort or filter on fixed column. <issue id="2832"></issue></li>
+                        <li>Fixed Table bug that sometimes throw error when filtering. <issue id="2352"></issue></li>
+                        <li>Fixed Table bug when there is a scrollbar, and set data to empty, the table head is wrong. <issue id="2775"></issue></li>
+                        <li>Fixed Cascader bug when <code>label</code> is empty. <issue id="2722"></issue></li>
+                        <li>Fixed Cascader bug in <code>change-on-select</code> mode, dynamically change the data can not select the bound value. <issue id="2793"></issue></li>
+                        <li>Fixed Dropdown bug when <code>trigger="click"</code>, will throw error sometimes. <issue id="2780"></issue></li>
+                        <li>Fixed Slider bug when <code>show-tip="always"</code> and using in Modal, the Tooltip position is wrong. <issue id="2852"></issue></li>
+                        <li>Optimized Table in multiple choice mode, when data is empty, can not click the checkbox all button now. <issue id="2823"></issue></li>
+                        <li>Optimized the style of $Notice using Render function. <issue id="2752"></issue></li>
+                        <li>Optimized the style of Input in the textarea mode.</li>
+                        <li>Optimized the disabled style of Select in the filterable mode. <issue id="2893"></issue></li>
+                        <li>Add Hindi. <mention id="rajnikant307"></mention></li>
+                        <li>Add Farsi. <mention id="roshangara"></mention></li>
+                        <li>Add Romanian. <mention id="Leonard1980"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Icon type="ios-snowy" class="ivu-load-loop doc-update-loop" style="font-size: 32px;color: rgb(220,50,51)" slot="dot"></Icon>
                     <Anchor title="2.8.0 Oceanhorn" h2>
                         <span class="doc-update-important">Merry Christmas</span>

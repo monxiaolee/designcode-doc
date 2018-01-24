@@ -227,6 +227,11 @@
                             <td>Emit when display status of Dropdown changed.</td>
                             <td>visible</td>
                         </tr>
+                        <tr>
+                            <td>on-clickoutside</td>
+                            <td>Triggered when click the outside body.</td>
+                            <td>event</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Dropdown slot" h3></Anchor>

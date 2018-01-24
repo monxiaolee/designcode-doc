@@ -25,6 +25,36 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.9.0 Agent A" h2></Anchor>
+                    <p>
+                        <code>2018-01-24</code>
+                    </p>
+                    <ul>
+                        <li>更新依赖，以及使用 browserlist。<issue id="2835"></issue> <issue id="2837"></issue> <issue id="2839"></issue></li>
+                        <li>重构了 Slider 组件。<issue id="2393"></issue></li>
+                        <li>优化了 Button、Radio、Checkbox 样式，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
+                        <li>Menu 支持多级嵌套。</li>
+                        <li>ColorPicker 新增是否显示色彩滑块的属性 <code>hue</code>。<issue id="2672"></issue></li>
+                        <li>AutoComplete 新增 <code>placement</code> 属性。<issue id="2803"></issue></li>
+                        <li>Input 新增 <code>clearable</code> 属性。<issue id="2884"></issue></li>
+                        <li>Dropdown 新增事件 <code>@on-clickoutside</code>。<issue id="2783"></issue></li>
+                        <li>修复 Table 固定列使用排序和筛选功能时的 bug。<issue id="2832"></issue></li>
+                        <li>修复 Table 在筛选时有时报错的 bug。<issue id="2352"></issue></li>
+                        <li>修复 Table 在有滚动条时，数据置空后，表头错误的 bug。<issue id="2775"></issue></li>
+                        <li>修复 Cascader 数据 label 为空时，报错的 bug。<issue id="2722"></issue></li>
+                        <li>修复 Cascader 在 <code>change-on-select</code> 模式下，动态改变 data 无法选中绑定值的 bug。<issue id="2793"></issue></li>
+                        <li>修复 Dropdown 在 <code>trigger="click"</code> 有时报错的问题。<issue id="2780"></issue></li>
+                        <li>修复 Slider 在 Modal 内使用，<code>show-tip="always"</code> 时，Tooltip 错位的 bug。<issue id="2852"></issue></li>
+                        <li>优化 Table 在多选模式下，无数据时，无法点击全选按钮。<issue id="2823"></issue></li>
+                        <li>优化 $Notice 使用 Render 时的样式。<issue id="2752"></issue></li>
+                        <li>优化 Input 在 textarea 模式下的样式。</li>
+                        <li>优化 Select 在 filterable 模式下， disabled 时的样式。<issue id="2893"></issue></li>
+                        <li>新增印地语。<mention id="rajnikant307"></mention></li>
+                        <li>新增波斯语。<mention id="roshangara"></mention></li>
+                        <li>新增罗马尼亚语。<mention id="Leonard1980"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Icon type="ios-snowy" class="ivu-load-loop doc-update-loop" style="font-size: 32px;color: rgb(220,50,51)" slot="dot"></Icon>
                     <Anchor title="2.8.0 Oceanhorn" h2>
                         <span class="doc-update-important">Merry Christmas</span>

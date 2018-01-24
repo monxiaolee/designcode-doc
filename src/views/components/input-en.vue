@@ -36,6 +36,15 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.size }}</i-code>
             </Demo>
+            <Demo title="Clearable">
+                <div slot="demo">
+                    <Input v-model="value14" placeholder="Enter something..." clearable style="width: 200px"></Input>
+                </div>
+                <div slot="desc">
+                    <p>Set property <code>clearable</code> to display clear button.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.clearable }}</i-code>
+            </Demo>
             <Demo title="Input with Icon">
                 <div slot="demo">
                     <Input v-model="value4" icon="ios-clock-outline" placeholder="Enter something..." style="width: 200px"></Input>
@@ -167,6 +176,12 @@
                             <td>Placeholder.</td>
                             <td>String</td>
                             <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>clearable</td>
+                            <td>Whether to display the clear button.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
                         </tr>
                         <tr>
                             <td>disabled</td>
@@ -359,6 +374,7 @@
                 value11: '',
                 value12: '',
                 value13: '',
+                value14: 'Hello World',
                 select1: 'http',
                 select2: 'com',
                 select3: 'day'
