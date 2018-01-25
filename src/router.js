@@ -357,7 +357,7 @@ const routers = [
         meta: {
             title: 'Checkbox'
         },
-        component: require('./views/components/checkbox-en.vue')
+        component: (resolve) => require(['./views/components/checkbox-en.vue'], resolve)
     },
     {
         path: '/components/switch',

@@ -24,10 +24,10 @@
             <row :gutter="32">
                 <i-col span="12">
                     <div class="advertisement-main">
-                        <a v-if="ad_index === 1" href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">
-                            <img src="../images/ad-vuebook.png">
-                        </a>
-                        <a v-if="ad_index === 2" href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAd('ad-vuebook')">
+                        <!--<a v-if="ad_index === 1" href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">-->
+                            <!--<img src="../images/ad-vuebook.png">-->
+                        <!--</a>-->
+                        <a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAd('ad-vuebook')">
                             <img src="../images/ad-learning-vue.png">
                         </a>
                         <ad-send></ad-send>
