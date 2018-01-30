@@ -25,6 +25,16 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.9.1" h2></Anchor>
+                    <p>
+                        <code>2018-01-30</code>
+                    </p>
+                    <ul>
+                        <li>修复了 Slider 在 2.9.0 版本下，设置 <code>max</code> 大于 100 时的 bug。<issue id="2914"></issue></li>
+                        <li>优化了 Avatar 的默认背景色。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.9.0 Agent A" h2></Anchor>
                     <p>
                         <code>2018-01-24</code>

@@ -25,6 +25,16 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.9.1" h2></Anchor>
+                    <p>
+                        <code>2018-01-30</code>
+                    </p>
+                    <ul>
+                        <li>Fix Slider for min/max values greater than 100 under 2.9.0 version. <issue id="2914"></issue></li>
+                        <li>Optimize Avatar default background color.</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.9.0 Agent A" h2></Anchor>
                     <p>
                         <code>2018-01-24</code>
