@@ -27,18 +27,24 @@
                         <!--<a v-if="ad_index === 1" href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">-->
                             <!--<img src="../images/ad-vuebook.png">-->
                         <!--</a>-->
-                        <a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAd('ad-vuebook')">
+                        <a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAd('ad-vuelearning')">
                             <img src="../images/ad-learning-vue.png">
                         </a>
                         <ad-send></ad-send>
                     </div>
                 </i-col>
                 <i-col span="12">
-                    <div class="advertisement-main" @click="handleSendAd">
-                        <a href="javascript:void(0)" @click="handleAd('ad-buy')">
-                            <img src="../images/ad-buy.png">
-                        </a>
+                    <!--<div class="advertisement-main" @click="handleSendAd">-->
+                        <!--<a href="javascript:void(0)" @click="handleAd('ad-buy')">-->
+                            <!--<img src="../images/ad-buy.png">-->
+                        <!--</a>-->
                         <!--<ad-send></ad-send>-->
+                    <!--</div>-->
+                    <div class="advertisement-main">
+                        <a href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">
+                            <img src="../images/ad-vuebook.png">
+                        </a>
+                        <ad-send></ad-send>
                     </div>
                 </i-col>
             </row>

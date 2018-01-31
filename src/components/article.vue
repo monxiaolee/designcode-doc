@@ -146,10 +146,10 @@
                                     <img src="../images/logo-td.png">
                                 </a>
                             </div>
-                            <div class="footer-version">
-                                <p>{{ $t('index.current_version') }}</p>
-                                <p>Vue.js 2.5.13, iView 2.9.0</p>
-                            </div>
+                            <!--<div class="footer-version">-->
+                                <!--<p>{{ $t('index.current_version') }}</p>-->
+                                <!--<p>Vue.js 2.5.13, iView 2.9.0</p>-->
+                            <!--</div>-->
                         </div>
                     </i-col>
                 </Row>
@@ -171,10 +171,15 @@
                 <p>联系邮箱 <a href="mailto:admin@aresn.com">admin@aresn.com</a> 咨询。</p>
                 <p>广告位如下图所示：</p>
                 <div>
-                    <Carousel v-if="donate" v-model="adCarousel" loop autoplay :autoplay-speed="3000" dots="outside">
+                    <Carousel v-if="donate" v-model="adCarousel" autoplay :autoplay-speed="5000" dots="outside">
                         <CarouselItem>
                             <div class="demo-carousel" style="height: 300px">
                                 <img src="../images/ad-demo1.png" style="width: 100%">
+                            </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                            <div class="demo-carousel" style="height: 300px;">
+                                <img src="../images/ad-demo3.png" style="width: 100%">
                             </div>
                         </CarouselItem>
                         <CarouselItem>
