@@ -52,8 +52,11 @@
                                 <!--<a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAsideAd('aside-iview-live')" class="wrapper-aside">-->
                                     <!--<img src="../images/aside-iview-live.png">-->
                                 <!--</a>-->
-                                <a href="https://cn.udacity.com/course/intro-to-python-nanodegree-foundation--nd000-cn-python/?utm_source=iviewui&utm_medium=banner&utm_campaign=python" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
+                                <a v-if="ad_index === 1" href="https://cn.udacity.com/course/intro-to-python-nanodegree-foundation--nd000-cn-python/?utm_source=iviewui&utm_medium=banner&utm_campaign=python" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
                                     <img src="../images/aside-udacity-4.jpg">
+                                </a>
+                                <a v-if="ad_index === 2" href="https://cn.udacity.com/fend/?utm_source=iviewui&utm_medium=banner&utm_campaign=fend" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
+                                    <img src="../images/aside-udacity-5.jpg">
                                 </a>
                                 <div class="wrapper-aside" @click="handleAsideAd('aside-qqgroup', true)">
                                     <img src="../images/aside-qqgroup.png">
@@ -302,7 +305,7 @@
         },
         mounted () {
             // 随机广告索引
-            this.ad_index = Math.floor(Math.random () * 3 + 1);
+            this.ad_index = Math.floor(Math.random () * 2 + 1);
 
 
             this.updateActiveNav();
