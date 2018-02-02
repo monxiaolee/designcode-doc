@@ -25,6 +25,15 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.9.2" h2></Anchor>
+                    <p>
+                        <code>2018-02-02</code>
+                    </p>
+                    <ul>
+                        <li>Fix Slider bug that can not emit <code>on-change</code> event. <issue id="2975"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.9.1" h2></Anchor>
                     <p>
                         <code>2018-01-30</code>

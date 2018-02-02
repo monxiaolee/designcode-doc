@@ -25,6 +25,15 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.9.2" h2></Anchor>
+                    <p>
+                        <code>2018-02-02</code>
+                    </p>
+                    <ul>
+                        <li>修复 Slider 无法正常触发 <code>on-change</code> 事件的 bug。<issue id="2975"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.9.1" h2></Anchor>
                     <p>
                         <code>2018-01-30</code>
