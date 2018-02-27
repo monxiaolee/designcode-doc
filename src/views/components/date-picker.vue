@@ -25,6 +25,7 @@
                     <div slot="desc">
                         <p>设置属性 <code>type</code> 为 <code>date</code> 或 <code>daterange</code> 分别显示<strong>选择单日</strong>和<strong>选择范围</strong>类型。</p>
                         <p>设置属性 <code>placement</code> 可以更改选择器出现的方向，与 Poptip 和 Tooltip 配置一致，支持 12 个方向，详见 API。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持从右往左选择。</blockquote>
                     </div>
                     <i-code lang="html" slot="code">{{ code.base }}</i-code>
                 </Demo>
@@ -46,6 +47,65 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.shortcuts }}</i-code>
                 </Demo>
+
+                <Demo title="面板不联动">
+                    <div slot="demo">
+                        <DatePicker type="daterange" split-panels placeholder="Select date" style="width: 200px"></DatePicker>
+                    </div>
+                    <div slot="desc">
+                        <p>开启属性 <code>split-panels</code> 后，左右两面板在切换年、月时不联动。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持。</blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.split_panels }}</i-code>
+                </Demo>
+
+                <Demo title="多选">
+                    <div slot="demo">
+                        <DatePicker type="date" multiple placeholder="Select date" style="width: 300px"></DatePicker>
+                    </div>
+                    <div slot="desc">
+                        <p>开启属性 <code>multiple</code> 后，可以多选。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持。</blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.multiple }}</i-code>
+                </Demo>
+
+                <Demo title="显示星期数">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
+                                <DatePicker type="date" show-week-numbers placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                            <Col span="12">
+                                <DatePicker type="daterange" show-week-numbers placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>开启属性 <code>show-week-numbers</code> 后，可以显示星期数。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持。</blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.weeks }}</i-code>
+                </Demo>
+
+                <Demo title="起始日期">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
+                                <DatePicker type="date" :start-date="new Date(1991, 4, 14)" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                            <Col span="12">
+                                <DatePicker type="daterange" :start-date="new Date(1991, 4, 14)" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>设置属性 <code>start-date</code> 后，可以将默认显示的日期面板设置为指定日期。</p>
+                        <blockquote><code>2.10.0</code> 版本开始支持。</blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.start_date }}</i-code>
+                </Demo>
+
                 <Demo title="日期格式">
                     <div slot="demo">
                         <Row>
@@ -240,6 +300,30 @@
                             <td>options</td>
                             <td>选择器额外配置，比如不可选日期与快捷选项，具体项详见下表</td>
                             <td>Object</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>split-panels</td>
+                            <td>开启后，左右面板不联动，仅在 <code>daterange</code> 和 <code>datetimerange</code> 下可用。</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>multiple</td>
+                            <td>开启后，可以选择多个日期，仅在 <code>date</code> 下可用。</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>show-week-numbers</td>
+                            <td>开启后，可以显示星期数。</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>start-date</td>
+                            <td>设置默认显示的起始日期。</td>
+                            <td>Date</td>
                             <td>-</td>
                         </tr>
                         <tr>
@@ -444,7 +528,7 @@
                 options2: {
                     shortcuts: [
                         {
-                            text: 'A week',
+                            text: '1 week',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
@@ -453,7 +537,7 @@
                             }
                         },
                         {
-                            text: 'A month',
+                            text: '1 month',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
@@ -462,7 +546,7 @@
                             }
                         },
                         {
-                            text: '3 month',
+                            text: '3 month3',
                             value () {
                                 const end = new Date();
                                 const start = new Date();

@@ -25,6 +25,7 @@
                     <div slot="desc">
                         <p>Set <code>type</code> prop to <code>date</code> or <code>daterange</code> to show <strong>Pick Single Date</strong> or <strong>Pick Range</strong> type.</p>
                         <p>Set <code>placement</code> prop to change the display direction of the DatePicker. Same as Poptip and Tooltip, <code>placement</code> supports 12 directions. Details on API doc below.</p>
+                        <blockquote>Support from right to left choice after <code>2.10.0</code>.</blockquote>
                     </div>
                     <i-code lang="html" slot="code">{{ code.base }}</i-code>
                 </Demo>
@@ -46,6 +47,65 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.shortcuts }}</i-code>
                 </Demo>
+
+                <Demo title="Split Panels">
+                    <div slot="demo">
+                        <DatePicker type="daterange" split-panels placeholder="Select date" style="width: 200px"></DatePicker>
+                    </div>
+                    <div slot="desc">
+                        <p>Open property <code>split-panels</code>, the left and right panels are not interconnected during the switching year and month.</p>
+                        <blockquote>Support after <code>2.10.0</code></blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.split_panels }}</i-code>
+                </Demo>
+
+                <Demo title="Multiple">
+                    <div slot="demo">
+                        <DatePicker type="date" multiple placeholder="Select date" style="width: 300px"></DatePicker>
+                    </div>
+                    <div slot="desc">
+                        <p>Open property <code>multiple</code>, you can select multiple.</p>
+                        <blockquote>Support after <code>2.10.0</code></blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.multiple }}</i-code>
+                </Demo>
+
+                <Demo title="Show Week Numbers">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
+                                <DatePicker type="date" show-week-numbers placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                            <Col span="12">
+                                <DatePicker type="daterange" show-week-numbers placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>Open property <code>show-week-numbers</code>, can display the week numbers.</p>
+                        <blockquote>Support after <code>2.10.0</code></blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.weeks }}</i-code>
+                </Demo>
+
+                <Demo title="Start Date">
+                    <div slot="demo">
+                        <Row>
+                            <Col span="12">
+                                <DatePicker type="date" :start-date="new Date(1991, 4, 14)" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                            <Col span="12">
+                                <DatePicker type="daterange" :start-date="new Date(1991, 4, 14)" placement="bottom-end" placeholder="Select date" style="width: 200px"></DatePicker>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div slot="desc">
+                        <p>Set property <code>start-date</code> to a custom date, you can change the default display date panel to the specified date.</p>
+                        <blockquote>Support after <code>2.10.0</code></blockquote>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.start_date }}</i-code>
+                </Demo>
+
                 <Demo title="Date Format">
                     <div slot="demo">
                         <Row>
@@ -240,6 +300,30 @@
                             <td>options</td>
                             <td>Extra configurations of DatePicker, such as disabling date, or shortcuts. For more details, see the table below.</td>
                             <td>Object</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>split-panels</td>
+                            <td>When open it, the left and right panels are not interconnected during the switching year and month. Only work in <code>daterange</code> and <code>datetimerange</code> type.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>multiple</td>
+                            <td>When open it, you can select multiple dates. Only work in <code>date</code> type.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>show-week-numbers</td>
+                            <td>When open it, you can display the numbers of week.</td>
+                            <td>Boolean</td>
+                            <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>start-date</td>
+                            <td>Set the start date of the default display.</td>
+                            <td>Date</td>
                             <td>-</td>
                         </tr>
                         <tr>
@@ -444,7 +528,7 @@
                 options2: {
                     shortcuts: [
                         {
-                            text: 'A week',
+                            text: '1 week',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
@@ -453,7 +537,7 @@
                             }
                         },
                         {
-                            text: 'A month',
+                            text: '1 month',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
@@ -462,7 +546,7 @@
                             }
                         },
                         {
-                            text: '3 month',
+                            text: '3 month3',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
