@@ -41,6 +41,7 @@
                 <li>Hindi(hi-IN)</li>
                 <li>Farsi(fa-IR)</li>
                 <li>Romanian(ro-RO)</li>
+                <li>Greek(el-GR)</li>
             </ul>
             <p>If your target language is not included, you are more than welcome to contribute: just add another language config <a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">here</a> and create a pull request.</p>
         </article>
