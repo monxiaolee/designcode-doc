@@ -25,6 +25,37 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.10.0 Reigns" h2></Anchor>
+                    <p>
+                        <code>2018-02-27</code>
+                    </p>
+                    <ul>
+                        <li>
+                            Refactor the DatePicker component. <issue id="2861"></issue>
+                            <ul>
+                                <li><code>daterange</code> supports right-to-left selection. <issue id="2731"></issue></li>
+                                <li>Add property <code>split-panels</code>, when open it, the left and right panels are not interconnected during the switching year and month. <issue id="2067"></issue></li>
+                                <li>Add property <code>multiple</code>, when open it, you can select multiple dates.</li>
+                                <li>Add property <code>start-date</code>, you can set the date to display by default when the panel is expanded. <issue id="2814"></issue></li>
+                                <li>Add property <code>show-week-numbers</code>, when open it, you can display the numbers of week.</li>
+                                <li>Fixed the problem of unable to dynamically modify <code>type</code>. <issue id="2608"></issue></li>
+                                <li>Fixed the data bound with <code>v-model</code>, sometimes failing to update the panel. <issue id="2386"></issue></li>
+                                <li>Fixed the problem of entering a disabled date. <issue id="2544"></issue></li>
+                            </ul>
+                        </li>
+                        <li>Remove global style <code>ul</code> and <code>ol</code>. <issue id="3061"></issue></li>
+                        <li>Optimized Slider, Switch style, enhanced keyboard accessibility, closer to native. <issue id="1647"></issue></li>
+                        <li>Fixed Slider bug when set <code>step</code> property to decimal. <issue id="2984"></issue></li>
+                        <li>Fixed Select bug with empty Option, press the arrow keys will throw error. </li>
+                        <li>Fixed Avatar bug when use Chinese characters as slot, sometimes can not be centered. <issue id="3033"></issue></li>
+                        <li>Fixed Carousel bug that dots not update when <code>v-model</code> is not used. <issue id="3038"></issue></li>
+                        <li>Add Greek. <mention id="d4rth0nyx"></mention></li>
+                        <li>Optimize Chinese Traditional.</li>
+                        <li>Fixed bug in Romanian file. <issue id="3060"></issue></li>
+                        <blockquote>Special thanks to <mention id="SergioCrisostomo"></mention> and <mention id="Xotic750"></mention> contribution!</blockquote>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.9.2" h2></Anchor>
                     <p>
                         <code>2018-02-02</code>
