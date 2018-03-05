@@ -380,6 +380,12 @@
                             <td>String</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>time-picker-options</td>
+                            <td>TimePicker attributes can be configured under the type datetime and datetimerange, such as steps.</td>
+                            <td>Object</td>
+                            <td>{}</td>
+                        </tr>
                         </tbody>
                     </table>
                     <Anchor title="options" h3></Anchor>

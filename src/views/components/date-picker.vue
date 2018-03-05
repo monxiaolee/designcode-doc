@@ -380,6 +380,12 @@
                             <td>String</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>time-picker-options</td>
+                            <td>可以在 type 为 datetime 和 datetimerange 下，配置 TimePicker 的属性，比如时间间隔 steps</td>
+                            <td>Object</td>
+                            <td>{}</td>
+                        </tr>
                         </tbody>
                     </table>
                     <Anchor title="options" h3></Anchor>
