@@ -552,7 +552,7 @@
                             }
                         },
                         {
-                            text: '3 month3',
+                            text: '3 months',
                             value () {
                                 const end = new Date();
                                 const start = new Date();
