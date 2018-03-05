@@ -38,17 +38,19 @@
                                 <li>新增 <code>multiple</code> 属性，开启后，可以选择多个日期。</li>
                                 <li>新增 <code>start-date</code> 属性，可以设置面板展开时默认显示的日期。<issue id="2814"></issue></li>
                                 <li>新增属性 <code>show-week-numbers</code>，开启后，可以显示星期数。</li>
+                                <li>新增属性 <code>time-picker-options</code>，可以在 type 为 <code>datetime</code> 和 <code>datetimerange</code> 下，配置 TimePicker 的属性，比如时间间隔 <code>steps</code>。<issue id="3091"></issue></li>
                                 <li>修复无法动态修改 <code>type</code> 的问题。<issue id="2608"></issue></li>
                                 <li>修复使用 <code>v-model</code> 绑定的数据，有时无法更新面板的问题。<issue id="2386"></issue></li>
                                 <li>修复手动输入禁用的日期报错的问题。<issue id="2544"></issue></li>
                             </ul>
                         </li>
                         <li>移除全局样式 <code>ul</code> 和 <code>ol</code>。<issue id="3061"></issue></li>
-                        <li>优化了 Slider、Switch 样式与交互，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
+                        <li>优化了 Slider、Switch、Select（重构） 样式与交互，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
                         <li>修复了 Slider 的 <code>step</code> 属性设置为小数时的 bug。<issue id="2984"></issue></li>
                         <li>修复 Select 在无 Option 时，按下方向键报错的 bug。</li>
                         <li>修复 Avatar 使用中文字符，有时不能居中的 bug。<issue id="3033"></issue></li>
                         <li>修复 Carousel 在没有使用 <code>v-model</code> 时，指示器不更新的 bug。<issue id="3038"></issue></li>
+                        <li>修复 Input 在 <code>size="small"</code> 且使用 <code>prepend</code> 或 <code>append</code> 时，样式不正确的 bug。<issue id="3089"></issue></li>
                         <li>新增希腊语。<mention id="d4rth0nyx"></mention></li>
                         <li>优化繁体中文。</li>
                         <li>修复罗马尼亚语文件错误的问题。<issue id="3060"></issue></li>
