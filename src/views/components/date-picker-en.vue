@@ -382,7 +382,7 @@
                         </tr>
                         <tr>
                             <td>time-picker-options</td>
-                            <td>TimePicker attributes can be configured under the type datetime and datetimerange, such as steps.</td>
+                            <td>TimePicker attributes can be configured under the type datetime and datetimerange, such as steps: <code>:time-picker-options="{steps: [1, 10, 10]}"</code></td>
                             <td>Object</td>
                             <td>{}</td>
                         </tr>
