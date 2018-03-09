@@ -20,6 +20,18 @@
                 <!--</i-col>-->
             <!--</row>-->
         <!--</div>-->
+        <!--<div class="advertisement">-->
+            <!--<row :gutter="32">-->
+                <!--<i-col span="12">-->
+                    <!--<div class="advertisement-main">-->
+                        <!--<a href="https://github.com/TalkingData/inmap" target="_blank" @click="handleAd('ad-inmap')">-->
+                            <!--<img src="../images/ad-inmap.png">-->
+                        <!--</a>-->
+                        <!--<ad-send></ad-send>-->
+                    <!--</div>-->
+                <!--</i-col>-->
+            <!--</row>-->
+        <!--</div>-->
         <div class="advertisement">
             <row :gutter="32">
                 <i-col span="12">
@@ -41,8 +53,11 @@
                         <!--<ad-send></ad-send>-->
                     <!--</div>-->
                     <div class="advertisement-main">
-                        <a href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">
-                            <img src="../images/ad-vuebook.png">
+                        <!--<a href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">-->
+                            <!--<img src="../images/ad-vuebook.png">-->
+                        <!--</a>-->
+                        <a href="https://github.com/TalkingData/inmap" target="_blank" @click="handleAd('ad-inmap')">
+                            <img src="../images/ad-inmap.png">
                         </a>
                         <ad-send></ad-send>
                     </div>

@@ -25,9 +25,18 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.10.1" h2></Anchor>
+                    <p>
+                        <code>2018-03-09</code>
+                    </p>
+                    <ul>
+                        <li>Fixed the problem of large file size after compiling in version 2.10.0</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.10.0 Reigns" h2></Anchor>
                     <p>
-                        <code>2018-02-27</code>
+                        <code>2018-03-09</code>
                     </p>
                     <ul>
                         <li>

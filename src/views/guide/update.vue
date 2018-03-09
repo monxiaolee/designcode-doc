@@ -25,9 +25,18 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.10.1" h2></Anchor>
+                    <p>
+                        <code>2018-03-09</code>
+                    </p>
+                    <ul>
+                        <li>修复 2.10.0 版本，编译后文件过大的问题。</li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.10.0 Reigns" h2></Anchor>
                     <p>
-                        <code>2018-02-27</code>
+                        <code>2018-03-09</code>
                     </p>
                     <ul>
                         <li>
