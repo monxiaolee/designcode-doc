@@ -45,7 +45,7 @@
                             </ul>
                         </li>
                         <li>移除全局样式 <code>ul</code> 和 <code>ol</code>。<issue id="3061"></issue></li>
-                        <li>优化了 Slider、Switch、Select（重构） 样式与交互，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
+                        <li>优化了 Slider、Switch 样式与交互，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
                         <li>修复了 Slider 的 <code>step</code> 属性设置为小数时的 bug。<issue id="2984"></issue></li>
                         <li>修复 Select 在无 Option 时，按下方向键报错的 bug。</li>
                         <li>修复 Avatar 使用中文字符，有时不能居中的 bug。<issue id="3033"></issue></li>

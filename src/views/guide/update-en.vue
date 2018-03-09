@@ -45,7 +45,7 @@
                             </ul>
                         </li>
                         <li>Remove global style <code>ul</code> and <code>ol</code>. <issue id="3061"></issue></li>
-                        <li>Optimized Slider, Switch, Select(Refactor) style, enhanced keyboard accessibility, closer to native. <issue id="1647"></issue></li>
+                        <li>Optimized Slider, Switch style, enhanced keyboard accessibility, closer to native. <issue id="1647"></issue></li>
                         <li>Fixed Slider bug when set <code>step</code> property to decimal. <issue id="2984"></issue></li>
                         <li>Fixed Select bug with empty Option, press the arrow keys will throw error. </li>
                         <li>Fixed Avatar bug when use Chinese characters as slot, sometimes can not be centered. <issue id="3033"></issue></li>
