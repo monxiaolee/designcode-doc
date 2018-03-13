@@ -130,8 +130,8 @@
                         <tr>
                             <td>show-tip</td>
                             <td>提示的显示控制，可选值为 <code>hover</code>（悬停，默认）、<code>always</code>（总是可见）、<code>never</code>（不可见）</td>
-                            <td>Boolean</td>
-                            <td>false</td>
+                            <td>String</td>
+                            <td>hover</td>
                         </tr>
                         <tr>
                             <td>tip-format</td>
