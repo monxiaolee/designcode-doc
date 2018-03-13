@@ -131,8 +131,8 @@
                         <tr>
                             <td>show-tip</td>
                             <td>Tooltip display control, Optional value: <code>hover</code>（Hover, default）,<code>always</code>（Always visible）,<code>never</code>（Invisible）.</td>
-                            <td>Boolean</td>
-                            <td>false</td>
+                            <td>String</td>
+                            <td>hover</td>
                         </tr>
                         <tr>
                             <td>tip-format</td>
