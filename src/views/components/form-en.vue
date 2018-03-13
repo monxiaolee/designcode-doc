@@ -562,7 +562,7 @@
                         { required: true, type: 'date', message: 'Please select the date', trigger: 'change' }
                     ],
                     time: [
-                        { required: true, type: 'date', message: 'Please select time', trigger: 'change' }
+                        { required: true, type: 'string', message: 'Please select time', trigger: 'change' }
                     ],
                     desc: [
                         { required: true, message: 'Please enter a personal introduction', trigger: 'blur' },
