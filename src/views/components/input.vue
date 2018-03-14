@@ -249,6 +249,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>wrap</td>
+                            <td>原生的 wrap 属性，可选值为 hard 和 soft，仅在 textarea 下生效</td>
+                            <td>String</td>
+                            <td>soft</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Input events" h3></Anchor>

@@ -249,6 +249,12 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>wrap</td>
+                            <td>Native wrap property, optional value: hard and soft, only works in textarea type.</td>
+                            <td>String</td>
+                            <td>soft</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Input events" h3></Anchor>
