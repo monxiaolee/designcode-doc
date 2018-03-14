@@ -42,6 +42,7 @@
                 <li>波斯语（fa-IR）</li>
                 <li>罗马尼亚语（ro-RO）</li>
                 <li>希腊语（el-GR）</li>
+                <li>荷兰语（nl-NL）</li>
             </ul>
             <p>欢迎贡献代码，以支持更多语言。只需在<a href="https://github.com/iview/iview/tree/2.0/src/locale/lang" target="_blank">这里</a>添加一个语言配置文件即可。</p>
         </article>

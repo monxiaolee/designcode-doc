@@ -25,6 +25,27 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Icon type="planet" size="18" slot="dot"></Icon>
+                    <Anchor title="2.11.0 Alto's Odyssey" h2>
+                        <span class="doc-update-important">悼念史蒂芬·霍金</span>
+                    </Anchor>
+                    <p>
+                        <code>2018-03-14</code>
+                    </p>
+                    <ul>
+                        <li>InputNumber 新增格式化展示属性 <code>formatter</code> 和 <code>parser</code>。<issue id="3081"></issue></li>
+                        <li>Input 增加 <code>wrap</code> 属性。<issue id="3086"></issue></li>
+                        <li>Page 增加 <code>transfer</code> 属性。<issue id="3112"></issue></li>
+                        <li>优化了 Select 样式与交互，增强键盘的可访问性，更接近原生。<issue id="1647"></issue></li>
+                        <li>修复 Menu 多层嵌套在 Vue.js 2.5.14 版本之后报错的 bug。<a href="https://github.com/iview/iview/commit/b71a171d36e1327ee8fe1cc4f35fe97887f0786c" target="_blank">b71a171</a></li>
+                        <li>修复 Select 在不同尺寸，多选样式和单选不一致的 bug。<issue id="2451"></issue></li>
+                        <li>修复 Cascader 在搜索时，样式不正确的 bug。</li>
+                        <li>修复 Input 在 <code>size="small"</code> 且使用 <code>append</code> 或 <code>prepend</code> 时，样式错误的 bug。</li>
+                        <li>优化 Collapse 样式。<issue id="2973"></issue></li>
+                        <li>新增荷兰语。<mention id="mervy-sim"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.10.1" h2></Anchor>
                     <p>
                         <code>2018-03-09</code>

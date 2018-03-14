@@ -23,6 +23,24 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.step }}</i-code>
             </Demo>
+            <Demo title="Formatter">
+                <div slot="demo">
+                    <InputNumber
+                            :max="10000"
+                            v-model="value9"
+                            :formatter="value => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
+                            :parser="value => value.replace(/\$\s?|(,*)/g, '')"></InputNumber>
+                    <InputNumber
+                            :max="100"
+                            v-model="value10"
+                            :formatter="value => `${value}%`"
+                            :parser="value => value.replace('%', '')"></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>Display value within it's situation with <code>formatter</code>, and we usually use <code>parser</code> at the same time.</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.formatter }}</i-code>
+            </Demo>
             <Demo title="Size">
                 <div slot="demo">
                     <InputNumber v-model="value3" size="small"></InputNumber>
@@ -98,7 +116,7 @@
                         </tr>
                         <tr>
                             <td>step</td>
-                            <td>The step length of each change, can be a decimal number</td>
+                            <td>The step length of each change, can be a decimal number.</td>
                             <td>Number</td>
                             <td>1</td>
                         </tr>
@@ -113,6 +131,18 @@
                             <td>Set disable status.</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>formatter</td>
+                            <td>Specifies the format of the value presented.</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>parser</td>
+                            <td>Specifies the value extracted from formatter.</td>
+                            <td>Function</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td>readonly</td>
@@ -196,7 +226,9 @@
                 value5: 2,
                 value6: 1,
                 value7: 1,
-                value8: 1
+                value8: 1,
+                value9: 1000,
+                value10: 100
             }
         }
     }

@@ -25,6 +25,27 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Icon type="planet" size="18" slot="dot"></Icon>
+                    <Anchor title="2.11.0 Alto's Odyssey" h2>
+                        <span class="doc-update-important">Mourning Stephen Hawking</span>
+                    </Anchor>
+                    <p>
+                        <code>2018-03-14</code>
+                    </p>
+                    <ul>
+                        <li>InputNumber add formatted display properties <code>formatter</code> and <code>parser</code>. <issue id="3081"></issue></li>
+                        <li>Input add new property <code>wrap</code>. <issue id="3086"></issue></li>
+                        <li>Page add new property <code>transfer</code>. <issue id="3112"></issue></li>
+                        <li>Optimized Select style, enhanced keyboard accessibility, closer to native. <issue id="1647"></issue></li>
+                        <li>Fixed Menu with inline Submenu bug that throw errors after Vue.js 2.5.14. <a href="https://github.com/iview/iview/commit/b71a171d36e1327ee8fe1cc4f35fe97887f0786c" target="_blank">b71a171</a></li>
+                        <li>Fixed Select bug in different sizes, the multiple mode style is wrong. <issue id="2451"></issue></li>
+                        <li>Fixed Cascader style bug under search mode.</li>
+                        <li>Fixed Input style bug when <code>size="small"</code> and using <code>append</code> or <code>prepend</code>.</li>
+                        <li>Optimized Collapse style. <issue id="2973"></issue></li>
+                        <li>Add Dutch. <mention id="mervy-sim"></mention></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.10.1" h2></Anchor>
                     <p>
                         <code>2018-03-09</code>

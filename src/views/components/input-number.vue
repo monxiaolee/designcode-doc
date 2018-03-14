@@ -23,6 +23,24 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.step }}</i-code>
             </Demo>
+            <Demo title="格式化展示">
+                <div slot="demo">
+                    <InputNumber
+                        :max="10000"
+                        v-model="value9"
+                        :formatter="value => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
+                        :parser="value => value.replace(/\$\s?|(,*)/g, '')"></InputNumber>
+                    <InputNumber
+                        :max="100"
+                        v-model="value10"
+                        :formatter="value => `${value}%`"
+                        :parser="value => value.replace('%', '')"></InputNumber>
+                </div>
+                <div slot="desc">
+                    <p>通过 <code>formatter</code> 格式化数字，以展示具有具体含义的数据，往往需要配合 <code>parser</code> 一起使用。</p>
+                </div>
+                <i-code lang="html" slot="code">{{ code.formatter }}</i-code>
+            </Demo>
             <Demo title="尺寸">
                 <div slot="demo">
                     <InputNumber v-model="value3" size="small"></InputNumber>
@@ -115,6 +133,18 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>formatter</td>
+                            <td>指定输入框展示值的格式</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>parser</td>
+                            <td>指定从 formatter 里转换回数字的方式，和 formatter 搭配使用</td>
+                            <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>readonly</td>
                             <td>是否设置为只读</td>
                             <td>Boolean</td>
@@ -196,7 +226,9 @@
                 value5: 2,
                 value6: 1,
                 value7: 1,
-                value8: 1
+                value8: 1,
+                value9: 1000,
+                value10: 100
             }
         }
     }
