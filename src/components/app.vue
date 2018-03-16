@@ -73,22 +73,22 @@
             }
 
             if (this.liveVisible && this.$lang === 'zh-CN') {
-                this.$Notice.config({
-                    top: 85
-                });
-                this.$Notice.info({
-                    title: 'iView 近期更新',
-                    desc: '由于近期版本更新内容较多，欢迎阅读文章 <a href="https://zhuanlan.zhihu.com/p/34447635" target="_blank">《iView 近期的更新，以及那些“不为人知”的故事》</a> 来详细了解 iView 的更新内容。欢迎点赞、分享。',
-                    duration: 0,
-                    onClose: () => {
-                        const today = this.getTodayUnix();
-                        window.localStorage.setItem('liveModalTime', today);
-                        this.$Message.success('关闭成功，近期不再提示', 4);
-                    }
-                });
-                this.$Notice.config({
-                    top: 24
-                });
+//                this.$Notice.config({
+//                    top: 85
+//                });
+//                this.$Notice.info({
+//                    title: 'iView 近期更新',
+//                    desc: '由于近期版本更新内容较多，欢迎阅读文章 <a href="https://zhuanlan.zhihu.com/p/34447635" target="_blank">《iView 近期的更新，以及那些“不为人知”的故事》</a> 来详细了解 iView 的更新内容。欢迎点赞、分享。',
+//                    duration: 0,
+//                    onClose: () => {
+//                        const today = this.getTodayUnix();
+//                        window.localStorage.setItem('liveModalTime', today);
+//                        this.$Message.success('关闭成功，近期不再提示', 4);
+//                    }
+//                });
+//                this.$Notice.config({
+//                    top: 24
+//                });
             } else if (this.liveVisible && this.$lang === 'en-US') {
 //                this.$Notice.config({
 //                    top: 85

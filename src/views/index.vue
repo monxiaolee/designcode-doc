@@ -11,7 +11,7 @@
     }
 </style>
 <template>
-    <div style="-webkit-filter: grayscale(100%);">
+    <div>
         <div class="index">
             <div class="bg"><span></span></div>
             <Row type="flex" justify="center" align="middle" style="position: relative;z-index: 3">
@@ -21,10 +21,6 @@
                         <img src="../images/name.png" class="img-name">
                     </h1>
                     <h2>{{ $t('index.title') }}</h2>
-                    <h2>
-                        <a v-if="lang === 'zh-CN'" href="https://baike.baidu.com/item/斯蒂芬·威廉·霍金" target="_blank">史蒂芬·霍金，1942-1-8 ~ 2018-3-14</a>
-                        <a v-else href="https://en.wikipedia.org/wiki/Stephen_Hawking" target="_blank">Stephen Hawking, 1942-1-8 ~ 2018-3-14</a>
-                    </h2>
                     <div class="list">
                         <router-link :to="'/docs/guide/introduce' + suffix">{{ $t('index.guide') }}</router-link>
                         <router-link :to="'/docs/guide/install' + suffix">{{ $t('index.component') }}</router-link>
