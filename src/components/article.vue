@@ -58,9 +58,12 @@
                                 <a v-if="ad_index === 2" href="https://cn.udacity.com/fend/?utm_source=iviewui&utm_medium=banner&utm_campaign=fend" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
                                     <img src="../images/aside-udacity-5.jpg">
                                 </a>
-                                <div class="wrapper-aside" @click="handleAsideAd('aside-qqgroup', true)">
-                                    <img src="../images/aside-qqgroup.png">
-                                </div>
+                                <a href="https://www.mysubmail.com/sms?from=iview" target="_blank" @click="handleAsideAd('aside-submail')" class="wrapper-aside wrapper-aside-no-padding">
+                                    <img src="../images/aside-submail3.jpg">
+                                </a>
+                                <!--<div class="wrapper-aside" @click="handleAsideAd('aside-qqgroup', true)">-->
+                                    <!--<img src="../images/aside-qqgroup.png">-->
+                                <!--</div>-->
                             </template>
                         </Affix>
                     </i-col>

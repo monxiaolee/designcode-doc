@@ -38,7 +38,7 @@
         <pre :class="{bg: bg}"><code :class="language" ref="code"><slot></slot></code></pre>
         <span class="open-fiddle" v-if="title !== 'Code'" @click="openFiddle">
             <Tooltip :content="$t('index.code_jsfiddle')" placement="top" transfer>
-                <Icon type="code-working" size="18" />
+                <Icon type="code" size="18" />
             </Tooltip>
         </span>
         <span class="scale" @click="scale">
