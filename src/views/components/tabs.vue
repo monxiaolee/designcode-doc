@@ -282,7 +282,7 @@
                         <tr>
                             <td>name</td>
                             <td>用于标识当前面板，对应 value，默认为其索引值</td>
-                            <td>String | Number</td>
+                            <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>

@@ -281,7 +281,7 @@
                         <tr>
                             <td>name</td>
                             <td>Used to identify the current panel, corresponding to the value, the default for its index.</td>
-                            <td>String | Number</td>
+                            <td>String</td>
                             <td>-</td>
                         </tr>
                         <tr>
