@@ -53,6 +53,7 @@
                 </div>
                 <div slot="desc">
                     <p>Customized title, extra operation and main content. User can customize all parts of the component, and combined with other components. It's relatively flexible.</p>
+                    <p><blockquote>You can quickly set the title bar by setting the properties <code>title</code> and <code>icon</code> after 2.12.0</blockquote></p>
                 </div>
                 <i-code lang="html" slot="code">{{ code.base }}</i-code>
             </Demo>
@@ -176,6 +177,18 @@
                             <td>Padding of the card. Unit: px</td>
                             <td>Number</td>
                             <td>16</td>
+                        </tr>
+                        <tr>
+                            <td>title</td>
+                            <td>Title, new property after 2.12.0</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>icon</td>
+                            <td>Icon of title, new property after 2.12.0</td>
+                            <td>String</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>

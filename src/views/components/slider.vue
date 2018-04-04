@@ -139,6 +139,12 @@
                             <td>Function</td>
                             <td>value</td>
                         </tr>
+                        <tr>
+                            <td>input-size</td>
+                            <td>数字输入框的尺寸，可选值为<code>large</code>、<code>small</code>、<code>default</code>或者不填，仅在开启 show-input 时有效</td>
+                            <td>String</td>
+                            <td>default</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Slider events" h3></Anchor>

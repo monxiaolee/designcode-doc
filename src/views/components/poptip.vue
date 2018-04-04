@@ -211,7 +211,7 @@
                         </tr>
                         <tr>
                             <td>placement</td>
-                            <td>提示框出现的位置，可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code></td>
+                            <td>提示框出现的位置，可选值为<code>top</code><code>top-start</code><code>top-end</code><code>bottom</code><code>bottom-start</code><code>bottom-end</code><code>left</code><code>left-start</code><code>left-end</code><code>right</code><code>right-start</code><code>right-end</code>，2.12.0 版本开始支持自动识别</td>
                             <td>String</td>
                             <td>top</td>
                         </tr>
@@ -244,6 +244,12 @@
                             <td>是否将弹层放置于 body 内，在 Tabs、带有 fixed 的 Table 列内使用时，建议添加此属性，它将不受父级样式影响，从而达到更好的效果</td>
                             <td>Boolean</td>
                             <td>false</td>
+                        </tr>
+                        <tr>
+                            <td>popper-class</td>
+                            <td>给 Poptip 设置 class-name，在使用 transfer 时会很有用</td>
+                            <td>String</td>
+                            <td>-</td>
                         </tr>
                     </tbody>
                 </table>

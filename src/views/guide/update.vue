@@ -25,6 +25,37 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.12.0 Human Resource Machine" h2></Anchor>
+                    <p>
+                        <code>2018-04-04</code>
+                    </p>
+                    <ul>
+                        <li>Select、AutoComplete、DatePicker、TimePicker、ColorPicker、Cascader、Dropdown 等组件支持自动识别浮层展开方向。<issue id="3156"></issue></li>
+                        <li>Table 支持表头分组。</li>
+                        <li>InputNumber 的值可以删除或设置为 null。<issue id="3174"></issue></li>
+                        <li>Card 新增属性 <code>title</code> 和 <code>icon</code>，可以更简单地设置头部。</li>
+                        <li>Tree 新增属性 <code>children-key</code>。</li>
+                        <li>Slider 新增属性 <code>input-size</code>。<issue id="3301"></issue></li>
+                        <li>Poptip 新增属性 <code>popper-class</code>。</li>
+                        <li>优化 Input 在 clearable 模式下，无数据时不显示清空按钮。</li>
+                        <li>优化 Table 筛选、排序样式。</li>
+                        <li>修复 Table 在同时固定表头和列时，不显示垂直滚动条的 bug。<issue id="3178"></issue></li>
+                        <li>修复 Table 固定列无法滚动的 bug。<issue id="2871"></issue></li>
+                        <li>修复 Table 有时表头溢出的 bug。<issue id="3178"></issue></li>
+                        <li>修复 Table 表头过长，有时导致滚动条溢出的 bug。<issue id="3178"></issue></li>
+                        <li>修复 TimePicker 设置初始输入为空数组时，报错的 bug。<issue id="3161"></issue></li>
+                        <li>修复 DatePicker 在选范围时，点击切换下一年按钮时，逻辑不正确的 bug。<issue id="3158"></issue></li>
+                        <li>修复 Sider 无法正确使用 <code>v-model</code> 的 bug。<issue id="3186"></issue></li>
+                        <li>修复 Slider 设置 step 为小数，有时无法拖动到最大值的 bug。<issue id="3195"></issue></li>
+                        <li>修复 Slider 首次点击滑条，无法触发 on-change 事件的 bug。<issue id="3291"></issue></li>
+                        <li>修复 Menu 在 accordion 模式下，事件 on-open-change 返回错误值的 bug。<issue id="3298"></issue></li>
+                        <li>修复 Select 中 Option 过长，样式不正确的 bug。<issue id="2931"></issue></li>
+                        <li>修复 Select 点击过快，错位的 bug。</li>
+                        <li>修复 FormItem 在 slot 内时，有时无法正确获取到 Form 的 bug。</li>
+                        <blockquote>特别感谢 <mention id="huanghong1125">@huanghong1125</mention> 的贡献！</blockquote>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Icon type="planet" size="18" slot="dot"></Icon>
                     <Anchor title="2.11.0 Alto's Odyssey" h2>
                         <span class="doc-update-important">悼念史蒂芬·霍金</span>

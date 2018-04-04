@@ -188,6 +188,17 @@
                     </div>
                     <i-code lang="html" slot="code">{{ code.expand }}</i-code>
                 </Demo>
+
+                <Demo title="表头分组" vertical hide-code>
+                    <div slot="demo">
+                        <Table :columns="columns11" :data="data10" border height="500"></Table>
+                    </div>
+                    <div slot="desc">
+                        <p>给 column 设置 children，可以渲染出分组表头。</p>
+                    </div>
+                    <i-code lang="html" slot="code">{{ code.head }}</i-code>
+                </Demo>
+
                 <Demo title="加载中" vertical hide-code>
                     <div slot="demo">
                         <Table :loading="loading" :columns="columns1" :data="data1"></Table>
@@ -662,6 +673,12 @@
                             <td>filterRemote</td>
                             <td>使用远程过滤</td>
                             <td>Function</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>children</td>
+                            <td>表头分组</td>
+                            <td>Array</td>
                             <td>-</td>
                         </tr>
                         </tbody>
@@ -1288,6 +1305,102 @@
                         key: 'address'
                     }
                 ],
+                columns11: [
+                    {
+                        title: 'Name',
+                        key: 'name',
+                        align: 'center',
+                        width: 200,
+                        fixed: 'left',
+                        filters: [
+                            {
+                                label: 'Joe',
+                                value: 1
+                            },
+                            {
+                                label: 'John',
+                                value: 2
+                            }
+                        ],
+                        filterMultiple: false,
+                        filterMethod (value, row) {
+                            if (value === 1) {
+                                return row.name === 'Joe';
+                            } else if (value === 2) {
+                                return row.name === 'John Brown';
+                            }
+                        }
+                    },
+                    {
+                        title: 'Other',
+                        align: 'center',
+                        children: [
+                            {
+                                title: 'Age',
+                                key: 'age',
+                                align: 'center',
+                                width: 200,
+                                sortable: true
+                            },
+                            {
+                                title: 'Address',
+                                align: 'center',
+                                children: [
+                                    {
+                                        title: 'Street',
+                                        key: 'street',
+                                        align: 'center',
+                                        width: 200
+                                    },
+                                    {
+                                        title: 'Block',
+                                        align: 'center',
+                                        children: [
+                                            {
+                                                title: 'Building',
+                                                key: 'building',
+                                                align: 'center',
+                                                width: 200,
+                                                sortable: true
+                                            },
+                                            {
+                                                title: 'Door No.',
+                                                key: 'door',
+                                                align: 'center',
+                                                width: 200
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Company',
+                        align: 'center',
+                        children: [
+                            {
+                                title: 'Company Address',
+                                key: 'caddress',
+                                align: 'center',
+                                width: 200
+                            },
+                            {
+                                title: 'Company Name',
+                                key: 'cname',
+                                align: 'center',
+                                width: 200
+                            }
+                        ]
+                    },
+                    {
+                        title: 'Gender',
+                        key: 'gender',
+                        align: 'center',
+                        width: 200,
+                        fixed: 'right'
+                    }
+                ],
                 data1: [
                     {
                         name: 'John Brown',
@@ -1739,7 +1852,8 @@
                         music: 'actor'
                     }
                 ],
-                loading: true
+                loading: true,
+                data10: []
             }
         },
         computed: {
@@ -2034,6 +2148,22 @@
         },
         mounted () {
             this.changeTableColumns();
+
+            const data = [];
+            for (let i = 0; i < 20; i++) {
+                data.push({
+                    key: i,
+                    name: 'John Brown',
+                    age: i + 1,
+                    street: 'Lake Park',
+                    building: 'C',
+                    door: 2035,
+                    caddress: 'Lake Street 42',
+                    cname: 'SoftLake Co',
+                    gender: 'M',
+                });
+            }
+            this.data10 = data;
         }
     }
 </script>

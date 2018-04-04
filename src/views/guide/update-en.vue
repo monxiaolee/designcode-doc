@@ -25,6 +25,37 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.12.0 Human Resource Machine" h2></Anchor>
+                    <p>
+                        <code>2018-04-04</code>
+                    </p>
+                    <ul>
+                        <li>Components such as Select, AutoComplete, DatePicker, TimePicker, ColorPicker, Cascader, Dropdown, etc., support the automatic recognition of the direction in which the floating layer expands. <issue id="3156"></issue></li>
+                        <li>Table support header grouping.</li>
+                        <li>The value of InputNumber can be removed or set to null. <issue id="3174"></issue></li>
+                        <li>Card add new property <code>title</code> and <code>icon</code>, can set the head more simply.</li>
+                        <li>Tree add new property <code>children-key</code>.</li>
+                        <li>Slider add new property <code>input-size</code>. <issue id="3301"></issue></li>
+                        <li>Poptip add new property <code>popper-class</code>.</li>
+                        <li>Optimized Input In the clearable mode, the clear button is not displayed when value is empty.</li>
+                        <li>Optimize Table filtering and sorting styles.</li>
+                        <li>Fixed Table does not show vertical scroll bar bugs when headers and columns are fixed at the same time. <issue id="3178"></issue></li>
+                        <li>Fixed bug where Table fixed columns could not be scrolled. <issue id="2871"></issue></li>
+                        <li>Fixed Table header overflow sometimes. <issue id="3178"></issue></li>
+                        <li>Fixed the bug that the Table header is too long, sometimes causing scroll bars to overflow. <issue id="3178"></issue></li>
+                        <li>Fixed bug where TimePicker set initial value to empty array. <issue id="3161"></issue></li>
+                        <li>Fixed a bug in the logic when the DatePicker selected the range and clicked to switch the next year button. <issue id="3158"></issue></li>
+                        <li>Fixed Sider bug of using <code>v-model</code> incorrectly. <issue id="3186"></issue></li>
+                        <li>Fixed Slider bug that setting step as a decimal, sometimes unable to drag to the maximum. <issue id="3195"></issue></li>
+                        <li>Fixed Slider bug that click on the slider and could not trigger the on-change event for the first time. <issue id="3291"></issue></li>
+                        <li>Fixed Menu bug in the accordion mode, the event on-open-change returns wrong value. <issue id="3298"></issue></li>
+                        <li>Fixed the bug that the Option of Select is too long and the style is incorrect. <issue id="2931"></issue></li>
+                        <li>Fixed Select bug that click too fast.</li>
+                        <li>Fixed the FormItem bug as slot, can not get correct Form sometimes.</li>
+                        <blockquote>Special thanks to <mention id="huanghong1125">@huanghong1125</mention> contribution!</blockquote>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Icon type="planet" size="18" slot="dot"></Icon>
                     <Anchor title="2.11.0 Alto's Odyssey" h2>
                         <span class="doc-update-important">Mourning Stephen Hawking</span>

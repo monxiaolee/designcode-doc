@@ -114,6 +114,12 @@
                         <td>Function</td>
                         <td>-</td>
                     </tr>
+                    <tr>
+                        <td>children-key</td>
+                        <td>Define child node key</td>
+                        <td>String</td>
+                        <td>children</td>
+                    </tr>
                     </tbody>
                 </table>
                 <Anchor title="Tree events" h3></Anchor>

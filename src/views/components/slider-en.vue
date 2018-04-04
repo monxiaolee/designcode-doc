@@ -140,6 +140,12 @@
                             <td>Function</td>
                             <td>value</td>
                         </tr>
+                        <tr>
+                            <td>input-size</td>
+                            <td>The size of InputNumber. The value could be <code>large</code>, <code>small</code>, <code>default</code>or none. Only works when show-input is open.</td>
+                            <td>String</td>
+                            <td>default</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Slider events" h3></Anchor>

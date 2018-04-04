@@ -168,7 +168,7 @@
                     </tr>
                     <tr>
                         <td>placement</td>
-                        <td>The direction of pop-ups. The value could be <code>bottom</code> or <code>top</code></td>
+                        <td>The direction of pop-ups. The value could be <code>bottom</code> or <code>top</code>, supports automatic recognition after 2.12.0</td>
                         <td>String</td>
                         <td>bottom</td>
                     </tr>

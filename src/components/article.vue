@@ -52,18 +52,18 @@
                                 <!--<a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAsideAd('aside-iview-live')" class="wrapper-aside">-->
                                     <!--<img src="../images/aside-iview-live.png">-->
                                 <!--</a>-->
-                                <!--<a v-if="ad_index === 1" href="https://cn.udacity.com/course/intro-to-python-nanodegree-foundation&#45;&#45;nd000-cn-python/?utm_source=iviewui&utm_medium=banner&utm_campaign=python" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">-->
-                                    <!--<img src="../images/aside-udacity-4.jpg">-->
-                                <!--</a>-->
-                                <!--<a v-if="ad_index === 2" href="https://cn.udacity.com/fend/?utm_source=iviewui&utm_medium=banner&utm_campaign=fend" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">-->
-                                    <!--<img src="../images/aside-udacity-5.jpg">-->
-                                <!--</a>-->
+                                <a v-if="ad_index === 1" href="https://cn.udacity.com/course/intro-to-python-nanodegree-foundation--nd000-cn-python/?utm_source=iviewui&utm_medium=banner&utm_campaign=python" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
+                                    <img src="../images/aside-udacity-4.jpg">
+                                </a>
+                                <a v-if="ad_index === 2" href="https://cn.udacity.com/fend/?utm_source=iviewui&utm_medium=banner&utm_campaign=fend" target="_blank" @click="handleAsideAd('aside-udacity')" class="wrapper-aside wrapper-aside-no-padding">
+                                    <img src="../images/aside-udacity-5.jpg">
+                                </a>
                                 <a href="https://www.mysubmail.com/sms?from=iview" target="_blank" @click="handleAsideAd('aside-submail')" class="wrapper-aside wrapper-aside-no-padding">
                                     <img src="../images/aside-submail3.jpg">
                                 </a>
-                                <div class="wrapper-aside" @click="handleAsideAd('aside-qqgroup', true)">
-                                    <img src="../images/aside-qqgroup.png">
-                                </div>
+                                <!--<div class="wrapper-aside" @click="handleAsideAd('aside-qqgroup', true)">-->
+                                    <!--<img src="../images/aside-qqgroup.png">-->
+                                <!--</div>-->
                             </template>
                         </Affix>
                     </i-col>
@@ -221,7 +221,7 @@
         </Modal>
         <!-- todo 提问 -->
         <!--<div class="ask-question" @click="ask = true" v-if="lang === 'zh-CN'">-->
-            <!--<Icon type="ios-people" size="24"></Icon>-->
+            <!--<Icon type="ios-people" size="20"></Icon>-->
             <!--<p>QQ群</p>-->
         <!--</div>-->
     </div>
