@@ -39,8 +39,8 @@
                         <!--<a v-if="ad_index === 1" href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">-->
                             <!--<img src="../images/ad-vuebook.png">-->
                         <!--</a>-->
-                        <a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAd('ad-vuelearning')">
-                            <img src="../images/ad-learning-vue.png">
+                        <a href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">
+                            <img src="../images/ad-vuebook.png">
                         </a>
                         <ad-send></ad-send>
                     </div>
@@ -53,12 +53,12 @@
                         <!--<ad-send></ad-send>-->
                     <!--</div>-->
                     <div class="advertisement-main">
-                        <!--<a href="https://item.jd.com/12215519.html" target="_blank" @click="handleAd('ad-vuebook')">-->
-                            <!--<img src="../images/ad-vuebook.png">-->
-                        <!--</a>-->
-                        <a href="https://github.com/TalkingData/inmap" target="_blank" @click="handleAd('ad-inmap')">
-                            <img src="../images/ad-inmap.png">
+                        <a href="https://segmentfault.com/ls/1650000011074057" target="_blank" @click="handleAd('ad-vuelearning')">
+                            <img src="../images/ad-learning-vue.png">
                         </a>
+                        <!--<a href="https://github.com/TalkingData/inmap" target="_blank" @click="handleAd('ad-inmap')">-->
+                            <!--<img src="../images/ad-inmap.png">-->
+                        <!--</a>-->
                         <ad-send></ad-send>
                     </div>
                 </i-col>
