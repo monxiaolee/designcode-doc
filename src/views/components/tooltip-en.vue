@@ -25,8 +25,8 @@
             <Anchor title="Examples" h2></Anchor>
             <Demo title="Basic Usage">
                 <div slot="demo">
-                    <Tooltip content="这里是提示文字">
-                        当鼠标经过这段文字时，会显示一个气泡框
+                    <Tooltip content="Here is the prompt text">
+                        A balloon appears when the mouse passes over this text
                     </Tooltip>
                 </div>
                 <div slot="desc">
@@ -38,49 +38,49 @@
             <Demo title="Placement">
                 <div slot="demo">
                     <div class="top">
-                        <Tooltip content="Top Left 文字提示" placement="top-start">
-                            <Button>上左</Button>
+                        <Tooltip content="Top Left text" placement="top-start">
+                            <Button>Top Left</Button>
                         </Tooltip>
-                        <Tooltip content="Top Center 文字提示" placement="top">
-                            <Button>上边</Button>
+                        <Tooltip content="Top Center text" placement="top">
+                            <Button>Top Center</Button>
                         </Tooltip>
-                        <Tooltip content="Top Right 文字提示" placement="top-end">
-                            <Button>上右</Button>
+                        <Tooltip content="Top Right text" placement="top-end">
+                            <Button>Top Right</Button>
                         </Tooltip>
                     </div>
                     <div class="center">
                         <div class="center-left">
-                            <Tooltip content="Left Top 文字提示" placement="left-start">
-                                <Button>左上</Button>
+                            <Tooltip content="Left Top text" placement="left-start">
+                                <Button>Left Top</Button>
                             </Tooltip><br><br>
-                            <Tooltip content="Left Center 文字提示" placement="left">
-                                <Button>左边</Button>
+                            <Tooltip content="Left Center text" placement="left">
+                                <Button>Left Center</Button>
                             </Tooltip><br><br>
-                            <Tooltip content="Left Bottom 文字提示" placement="left-end">
-                                <Button>左下</Button>
+                            <Tooltip content="Left Bottom text" placement="left-end">
+                                <Button>Left Bottom</Button>
                             </Tooltip>
                         </div>
                         <div class="center-right">
-                            <Tooltip content="Right Top 文字提示" placement="right-start">
-                                <Button>右上</Button>
+                            <Tooltip content="Right Top text" placement="right-start">
+                                <Button>Right Top</Button>
                             </Tooltip><br><br>
-                            <Tooltip content="Right Center 文字提示" placement="right">
-                                <Button>右边</Button>
+                            <Tooltip content="Right Center text" placement="right">
+                                <Button>Right Center</Button>
                             </Tooltip><br><br>
-                            <Tooltip content="Right Bottom 文字提示" placement="right-end">
-                                <Button>右下</Button>
+                            <Tooltip content="Right Bottom text" placement="right-end">
+                                <Button>Right Bottom</Button>
                             </Tooltip>
                         </div>
                     </div>
                     <div class="bottom">
-                        <Tooltip content="Bottom Left 文字提示" placement="bottom-start">
-                            <Button>下左</Button>
+                        <Tooltip content="Bottom Left text" placement="bottom-start">
+                            <Button>Bottom Left</Button>
                         </Tooltip>
-                        <Tooltip content="Bottom Center 文字提示" placement="bottom">
-                            <Button>下边</Button>
+                        <Tooltip content="Bottom Center text" placement="bottom">
+                            <Button>Bottom Center</Button>
                         </Tooltip>
-                        <Tooltip content="Bottom Right 文字提示" placement="bottom-end">
-                            <Button>下右</Button>
+                        <Tooltip content="Bottom Right text" placement="bottom-end">
+                            <Button>Bottom Right</Button>
                         </Tooltip>
                     </div>
                 </div>
@@ -92,10 +92,10 @@
             <Demo title="Custom">
                 <div slot="demo">
                     <Tooltip placement="top">
-                        <Button>多行</Button>
+                        <Button>Multiple lines</Button>
                         <div slot="content">
-                            <p>显示多行信息</p>
-                            <p><i>可以自定义样式</i></p>
+                            <p>Display multiple lines of information</p>
+                            <p><i>Can customize the style</i></p>
                         </div>
                     </Tooltip>
                 </div>
@@ -106,8 +106,8 @@
             </Demo>
             <Demo title="Disabled">
                 <div slot="demo">
-                    <Tooltip placement="top" content="可以禁用文字提示" :disabled="disabled">
-                        <Button @click="disabled = true">点击关闭提示</Button>
+                    <Tooltip placement="top" content="Can disable text prompts" :disabled="disabled">
+                        <Button @click="disabled = true">Click to close</Button>
                     </Tooltip>
                 </div>
                 <div slot="desc">
@@ -117,8 +117,8 @@
             </Demo>
             <Demo title="Delay">
                 <div slot="demo">
-                    <Tooltip placement="top" content="Tooltip 文字提示" :delay="1000">
-                        <Button @click="disabled = true">延时1秒显示</Button>
+                    <Tooltip placement="top" content="Tooltip text" :delay="1000">
+                        <Button @click="disabled = true">Delay 1 second to show</Button>
                     </Tooltip>
                 </div>
                 <div slot="desc">
