@@ -251,6 +251,14 @@
                             <td>String</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>options</td>
+                            <td>自定义 popper.js 的配置项，具体配置见 <a href="https://popper.js.org/popper-documentation.html" target="_blank">popper.js 文档</a></td>
+                            <td>Object</td>
+                            <td>
+                                <i-code lang="js">{{ code.options }}</i-code>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Poptip events" h3></Anchor>

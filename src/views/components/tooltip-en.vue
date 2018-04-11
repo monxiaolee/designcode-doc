@@ -178,6 +178,14 @@
                             <td>Boolean</td>
                             <td>false</td>
                         </tr>
+                        <tr>
+                            <td>options</td>
+                            <td>Customize popper.js configuration items. For details, see <a href="https://popper.js.org/popper-documentation.html" target="_blank">popper.js document</a>.</td>
+                            <td>Object</td>
+                            <td>
+                                <i-code lang="js">{{ code.options }}</i-code>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Tooltip events" h3></Anchor>

@@ -194,4 +194,16 @@ code.confirm = `
 </script>
 `;
 
+code.options = `
+{
+    modifiers: {
+        computeStyle:{
+            gpuAcceleration: false,
+        },
+        preventOverflow :{
+            boundariesElement: 'body'
+        }
+    }
+}
+`;
 export default code;
