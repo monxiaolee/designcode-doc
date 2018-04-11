@@ -35,6 +35,7 @@
                         <li>Optimize the Table filter style. <issue id="3206"></issue></li>
                         <li>Fixed Table bug of using filtering and sorting in header group. <issue id="3339"></issue></li>
                         <li>Fixed bug in Poptip and Tooltip that identify placement and you can custom options for popper.js now.</li>
+                        <li>Fixed DatePicker bug in daterange mode that show incorrect values after select year or month. <issue id="3345"></issue></li>
                         <li>Fixed bug that DatePicker sometimes returns incorrect values in the <code>on-change</code> event of the Safari browser. <issue id="3232"></issue></li>
                         <li>Fixed bug that DatePicker <code>show-week-numbers</code> cannot be dynamically set. <issue id="3277"></issue></li>
                     </ul>
