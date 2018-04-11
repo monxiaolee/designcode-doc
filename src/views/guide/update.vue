@@ -34,6 +34,7 @@
                         <li>DatePicker 的 <code>disabledDate</code> 功能，现在也能限制时、分、秒了。<issue id="3246"></issue></li>
                         <li>优化 Table 筛选样式。<issue id="3206"></issue></li>
                         <li>修复 Table 在多级表头里使用过滤和排序的 bug。<issue id="3339"></issue></li>
+                        <li>修复 Table 在 2.12.0 版本，设置 <code>show-header="false"</code> 报错的 bug。</li>
                         <li>修复 Poptip 和 Tooltip 有时方向识别错误的 bug，并支持自定义 popper.js 的 options 选项。</li>
                         <li>修复 DatePicker 在 daterange 模式下，选择年、月后显示值不正确的 bug。<issue id="3345"></issue></li>
                         <li>修复 DatePicker 在 Safari 浏览器下 <code>on-change</code> 事件返回值有时不正确的 bug。<issue id="3232"></issue></li>

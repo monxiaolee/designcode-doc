@@ -34,6 +34,7 @@
                         <li>DatePicker <code>disabledDate</code> function can now also limit hours, minutes, and seconds. <issue id="3246"></issue></li>
                         <li>Optimize the Table filter style. <issue id="3206"></issue></li>
                         <li>Fixed Table bug of using filtering and sorting in header group. <issue id="3339"></issue></li>
+                        <li>Fixed Table bug in version 2.12.0 that will throw error when set the <code>show-header="false"</code>.</li>
                         <li>Fixed bug in Poptip and Tooltip that identify placement and you can custom options for popper.js now.</li>
                         <li>Fixed DatePicker bug in daterange mode that show incorrect values after select year or month. <issue id="3345"></issue></li>
                         <li>Fixed bug that DatePicker sometimes returns incorrect values in the <code>on-change</code> event of the Safari browser. <issue id="3232"></issue></li>
