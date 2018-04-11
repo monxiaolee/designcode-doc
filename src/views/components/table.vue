@@ -591,6 +591,18 @@
                             <td>-</td>
                         </tr>
                         <tr>
+                            <td>minWidth</td>
+                            <td>最小列宽</td>
+                            <td>Number</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>maxWidth</td>
+                            <td>最大列宽</td>
+                            <td>Number</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>align</td>
                             <td>对齐方式，可选值为 <code>left</code> 左对齐、<code>right</code> 右对齐和 <code>center</code> 居中对齐</td>
                             <td>String</td>

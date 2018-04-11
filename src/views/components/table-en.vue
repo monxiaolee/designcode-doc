@@ -588,6 +588,18 @@
                             <td>-</td>
                         </tr>
                         <tr>
+                            <td>minWidth</td>
+                            <td>Minimum column width.</td>
+                            <td>Number</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>maxWidth</td>
+                            <td>Maximum column width.</td>
+                            <td>Number</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>align</td>
                             <td>Alignment way. Optional value: <code>left</code>, <code>right</code> or <code>center</code>.</td>
                             <td>String</td>
@@ -613,7 +625,6 @@
                         </tr>
                         <tr>
                             <td>render</td>
-                            <!--<td>自定义渲染列，传入三个参数 row、column 和 index，分别指当前行数据，当前列数据，当前行索引，详见示例</td>-->
                             <td>Custom column renderer. It uses Vue's render function. It accepts two arguments:  the first is h, the second is an object including <code>row</code>, <code>column</code> and <code>index</code> (current row's data, current column's data, current index). Details on the demo above.</td>
                             <td>Function</td>
                             <td>-</td>
