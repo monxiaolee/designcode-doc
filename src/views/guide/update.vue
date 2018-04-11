@@ -25,6 +25,21 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.13.0 King of Opera" h2></Anchor>
+                    <p>
+                        <code>2018-04-11</code>
+                    </p>
+                    <ul>
+                        <li>Table 列新增属性 <code>minWidth</code> 和 <code>maxWidth</code>。<issue id="3284"></issue></li>
+                        <li>DatePicker 的 <code>disabledDate</code> 功能，现在也能限制时、分、秒了。<issue id="3246"></issue></li>
+                        <li>优化 Table 筛选样式。<issue id="3206"></issue></li>
+                        <li>修复 Table 在多级表头里使用过滤和排序的 bug。<issue id="3339"></issue></li>
+                        <li>修复 Poptip 和 Tooltip 有时方向识别错误的 bug，并支持自定义 popper.js 的 options 选项。</li>
+                        <li>修复 DatePicker 在 Safari 浏览器下 <code>on-change</code> 事件返回值有时不正确的 bug。<issue id="3232"></issue></li>
+                        <li>修复 DatePicker 的 <code>show-week-numbers</code> 无法动态设置的 bug。<issue id="3277"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.12.0 Human Resource Machine" h2></Anchor>
                     <p>
                         <code>2018-04-04</code>

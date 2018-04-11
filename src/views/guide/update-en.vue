@@ -25,6 +25,21 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.13.0 King of Opera" h2></Anchor>
+                    <p>
+                        <code>2018-04-11</code>
+                    </p>
+                    <ul>
+                        <li>Table column add new property <code>minWidth</code> and <code>maxWidth</code>. <issue id="3284"></issue></li>
+                        <li>DatePicker <code>disabledDate</code> function can now also limit hours, minutes, and seconds. <issue id="3246"></issue></li>
+                        <li>Optimize the Table filter style. <issue id="3206"></issue></li>
+                        <li>Fixed Table bug of using filtering and sorting in header group. <issue id="3339"></issue></li>
+                        <li>Fixed bug in Poptip and Tooltip that identify placement and you can custom options for popper.js now.</li>
+                        <li>Fixed bug that DatePicker sometimes returns incorrect values in the <code>on-change</code> event of the Safari browser. <issue id="3232"></issue></li>
+                        <li>Fixed bug that DatePicker <code>show-week-numbers</code> cannot be dynamically set. <issue id="3277"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.12.0 Human Resource Machine" h2></Anchor>
                     <p>
                         <code>2018-04-04</code>
