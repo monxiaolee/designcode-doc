@@ -188,7 +188,7 @@
                         <tr>
                             <td>on-focus</td>
                             <td>Trigger on focus.</td>
-                            <td>-</td>
+                            <td>event</td>
                         </tr>
                         <tr>
                             <td>on-blur</td>
