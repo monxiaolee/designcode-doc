@@ -188,7 +188,7 @@
                         <tr>
                             <td>on-focus</td>
                             <td>聚焦时触发</td>
-                            <td>-</td>
+                            <td>event</td>
                         </tr>
                         <tr>
                             <td>on-blur</td>
