@@ -434,7 +434,7 @@
                         <tr>
                             <td>on-change</td>
                             <td>Emit when date is changed.</td>
-                            <td>Formatted date like 2016-01-01</td>
+                            <td>Return two values, formatted date like 2016-01-01, and the current date type, such as date.</td>
                         </tr>
                         <tr>
                             <td>on-open-change</td>

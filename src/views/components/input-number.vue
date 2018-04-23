@@ -133,6 +133,12 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>placeholder</td>
+                            <td>占位文本</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>formatter</td>
                             <td>指定输入框展示值的格式</td>
                             <td>Function</td>

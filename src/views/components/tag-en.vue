@@ -129,6 +129,12 @@
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>fade</td>
+                            <td>Whether to use a gradient animation when appearing and disappearing, animation duration may cause flashing of the placeholder.</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Tag events" h3></Anchor>

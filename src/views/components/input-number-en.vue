@@ -133,6 +133,12 @@
                             <td>false</td>
                         </tr>
                         <tr>
+                            <td>placeholder</td>
+                            <td>Placeholder.</td>
+                            <td>String</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td>formatter</td>
                             <td>Specifies the format of the value presented.</td>
                             <td>Function</td>

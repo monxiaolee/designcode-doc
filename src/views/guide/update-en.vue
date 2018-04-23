@@ -25,6 +25,22 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.13.1" h2></Anchor>
+                    <p>
+                        <code>2018-04-23</code>
+                    </p>
+                    <ul>
+                        <li>Tag add new property <code>fade</code>.</li>
+                        <li>InputNumber add new property <code>placeholder</code>. <issue id="3424"></issue></li>
+                        <li>InputNumber add new event <code>on-focus</code> and return <code>event</code>. <issue id="3395"></issue></li>
+                        <li>DatePicker event <code>on-change</code> will return a new value <code>type</code>. <issue id="3353"></issue></li>
+                        <li>Optimize the configuration of popper.js and expand animation of dropdown. <issue id="3354"></issue></li>
+                        <li>Fixed Table bug dynamically adjusts the page width, and the scroll bar shows the wrong sometimes. <issue id="3358"></issue></li>
+                        <li>Fixed inaccurate bug in position when Poptip / Tooltip modified content dynamically. <issue id="3412"></issue></li>
+                        <li>Fixed issue where clicking a button would jump when using Carousel inside a Form. <issue id="3426"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.13.0 King of Opera" h2></Anchor>
                     <p>
                         <code>2018-04-11</code>

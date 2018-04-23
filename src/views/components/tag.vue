@@ -130,6 +130,12 @@
                             <td>String | Number</td>
                             <td>-</td>
                         </tr>
+                        <tr>
+                            <td>fade</td>
+                            <td>是否在出现和消失时使用渐变的动画，动画时长可能会引起占位的闪烁</td>
+                            <td>Boolean</td>
+                            <td>true</td>
+                        </tr>
                     </tbody>
                 </table>
                 <Anchor title="Tag events" h3></Anchor>

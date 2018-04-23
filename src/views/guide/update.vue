@@ -25,6 +25,22 @@
         <article class="doc-update">
             <Timeline pending>
                 <Timeline-item>
+                    <Anchor title="2.13.1" h2></Anchor>
+                    <p>
+                        <code>2018-04-23</code>
+                    </p>
+                    <ul>
+                        <li>Tag 新增属性 <code>fade</code>。</li>
+                        <li>InputNumber 新增属性 <code>placeholder</code>。<issue id="3424"></issue></li>
+                        <li>InputNumber 的事件 <code>on-focus</code> 增加返回值 event。<issue id="3395"></issue></li>
+                        <li>DatePicker 的事件 <code>on-change</code> 增加返回值 type。<issue id="3353"></issue></li>
+                        <li>优化 popper.js 的配置及 dropdown 的展开动画。<issue id="3354"></issue></li>
+                        <li>修复 Table 在动态调整页面宽度，有时滚动条显示错误的 bug。<issue id="3358"></issue></li>
+                        <li>修复 Poptip / Tooltip 动态修改内容后，位置计算不准确的 bug。<issue id="3412"></issue></li>
+                        <li>修复在 Form 内使用 Carousel 时，点击按钮会跳转的问题。<issue id="3426"></issue></li>
+                    </ul>
+                </Timeline-item>
+                <Timeline-item>
                     <Anchor title="2.13.0 King of Opera" h2></Anchor>
                     <p>
                         <code>2018-04-11</code>
