@@ -2,25 +2,25 @@
 
 const list = {
     guide: [
-        {
-            title: '介绍',
+        /*{
+            title: '说明',
             titleEn: 'Introduction',
             path: '/docs/guide/introduce'
-        },
+        },*/
         {
-            title: '设计原则',
+            title: '标准说明',
             titleEn: 'Design Principles',
             path: '/docs/guide/design'
         },
         {
-            title: '布局',
+            title: '典型布局',
             titleEn: 'Navigation Examples',
             path: '/docs/guide/layout'
         },
         {
-            title: '参与贡献',
-            titleEn: 'Contributing Guide',
-            path: '/docs/guide/standard'
+            title: 'd3节点布局相关',
+            titleEn: 'Navigation Examples',
+            path: '/docs/guide/d3layout'
         }
     ],
     beforeComponents: [
@@ -35,29 +35,55 @@ const list = {
             path: '/docs/guide/start'
         },
         {
-            title: '国际化',
-            titleEn: 'Internationalization',
-            path: '/docs/guide/i18n'
-        },
-        {
-            title: '定制主题',
-            titleEn: 'Customize Theme',
-            path: '/docs/guide/theme'
-        },
-        {
-            title: 'iView Loader',
-            titleEn: 'iView Loader',
-            path: '/docs/guide/iview-loader'
-        },
-        {
             title: '概览',
             titleEn: 'Overview',
             path: '/overview'
+        }
+    ],
+    d3FNetwork: [
+        {
+            title: 'ForceAtlas2',
+            path: '/d3FNetwork/ForceAtlas2'
         },
         {
-            title: '更新日志',
-            titleEn: 'Change Log',
-            path: '/docs/guide/update'
+            title: 'D3Force',
+            path: '/d3FNetwork/D3Force'
+        },
+        {
+            title: 'UNDirectTree',
+            path: '/d3FNetwork/UNDirectTree'
+        },
+        {
+            title: 'QueryPathTreeLine',
+            path: '/d3FNetwork/QueryPathTreeLine'
+        },
+        {
+            title: 'QueryPathTreeMatix',
+            path: '/d3FNetwork/QueryPathTreeMatix'
+        },
+        {
+            title: 'UNDirectTreeLine',
+            path: '/d3FNetwork/UNDirectTreeLine'
+        },
+        {
+            title: 'UNDirectTreeMatix',
+            path: '/d3FNetwork/UNDirectTreeMatix'
+        },
+        {
+            title: 'CircularLayout',
+            path: '/d3FNetwork/CircularLayout'
+        },
+        {
+            title: 'ForestMatrixLayout',
+            path: '/d3FNetwork/ForestMatrixLayout'
+        },
+        {
+            title: 'VerticalTree',
+            path: '/d3FNetwork/VerticalTree'
+        },
+        {
+            title: 'CircularAllLayout',
+            path: '/d3FNetwork/CircularAllLayout'
         }
     ],
     components: [
@@ -398,22 +424,55 @@ const list = {
             ]
         }
     ],
-    practice: [
+    classicCase: [
         {
-            title: '实践案例',
+            title: '典型案例',
             titleEn: 'Practical Cases',
-            path: '/docs/practice/case'
+            path: '/docs/classicCase/case'
         },
         {
-            title: 'iView Logo 设计思路',
-            titleEn: 'iView Logo Design',
-            path: '/docs/practice/logo'
+            title: '独立工程',
+            path: '/docs/classicCase/independence-project'
         }
     ],
     live: [
         {
             title: '最新课程',
             path: '/live'
+        }
+    ],
+    themeDefault: [
+        {
+            title: 'Color颜色',
+            titleEn: 'Introduction',
+            path: '/docs/theme-default/color'
+        },
+        {
+            title: 'Font字体',
+            titleEn: 'Design Principles',
+            path: '/docs/theme-default/font'
+        },
+        {
+            title: 'Icon图标',
+            titleEn: 'Navigation Examples',
+            path: '/docs/theme-default/icon'
+        }
+    ],
+    themeTransparent: [
+        {
+            title: 'Color颜色',
+            titleEn: 'Introduction',
+            path: '/docs/theme-transparent/color'
+        },
+        {
+            title: 'Font字体',
+            titleEn: 'Design Principles',
+            path: '/docs/theme-transparent/font'
+        },
+        {
+            title: 'Icon图标',
+            titleEn: 'Navigation Examples',
+            path: '/docs/theme-transparent/icon'
         }
     ]
 };

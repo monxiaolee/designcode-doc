@@ -1,5 +1,5 @@
 /**
- * Created by aresn on 16/7/18.
+ * Created by Lmx on 18/4/25.
  */
 let util = {
 
@@ -9,7 +9,7 @@ util.alert = function(content) {
 };
 
 util.title = function (title) {
-    title = title ? title + ' - iView' : 'iView - A high quality UI Toolkit based on Vue.js';
+    title = title ? title + ' - staticR' : 'staticR - 第一版静态资源参考文档';
     window.document.title = title;
 };
 const SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g;

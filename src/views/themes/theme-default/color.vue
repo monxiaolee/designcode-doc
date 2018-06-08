@@ -1,22 +1,15 @@
-<style>
-    .demo-case-img{
-        width: 100%;
-    }
-    .demo-case-img img{
-        width: 100%;
-    }
-</style>
 <template>
     <i-article>
         <article>
-            典型案例整理中。。。
+            默认皮肤标准色
         </article>
     </i-article>
 </template>
 <script>
-    import iArticle from '../../components/article.vue';
-    import iCode from 'iCode';
-    import Anchor from '../../components/anchor.vue';
+    import iArticle from '../../../components/article.vue';
+    import iCode from '../../../components/code.vue';
+    import Code from '../../../code/guide';
+    import Anchor from '../../../components/anchor.vue';
 
     export default {
         components: {
@@ -26,11 +19,12 @@
         },
         data () {
             return {
-
+                code: Code,
+                value: [20, 50]
             }
         },
         methods: {
 
         }
-    };
+    }
 </script>

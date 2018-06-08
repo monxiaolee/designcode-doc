@@ -11,7 +11,7 @@
     <Menu mode="horizontal" :active-name="currentActiveKey" @on-select="handleSelect">
         <div class="wrapper-header-nav">
             <router-link to="/" class="wrapper-header-nav-logo">
-                <img src="../images/logo-doc.png">
+                <img src="../images/staticR-logo.png">
             </router-link>
             <div class="wrapper-header-nav-search">
                 <i-select
@@ -29,34 +29,38 @@
             </div>
             <div class="wrapper-header-nav-list">
                 <Menu-item name="guide">
-                    <Icon type="ios-navigate"></Icon>
+                    <Icon type="clipboard"></Icon>
                     {{ $t('index.guide') }}
                 </Menu-item>
                 <Menu-item name="component">
-                    <Icon type="ios-keypad"></Icon>
+                    <Icon type="social-dropbox"></Icon>
                     {{ $t('index.component') }}
                 </Menu-item>
+                <!-- 
                 <Menu-item name="live" v-if="lang === 'zh-CN'">
                     <Badge :dot="liveDot">
                         <Icon type="ios-videocam"></Icon>
                         {{ $t('index.live') }}
                     </Badge>
+                </Menu-item> 
+                -->
+                <Menu-item name="classicCase">
+                    <Icon type="social-buffer"></Icon>
+                    {{ $t('index.classicCase') }}
                 </Menu-item>
-                <Menu-item name="practice">
-                    <Icon type="ios-analytics"></Icon>
-                    {{ $t('index.practice') }}
-                </Menu-item>
-                <Submenu name="ecosystem">
+                <Submenu name="design_theme">
                     <template slot="title">
-                        <Icon type="ios-infinite"></Icon>
-                        {{ $t('index.ecosystem') }}
+                        <Icon type="ios-albums"></Icon>
+                        {{ $t('index.design_theme') }}
                     </template>
-                    <Menu-item name="cli">
-                        <!--<Icon type="settings"></Icon>-->
-                        {{ $t('index.cli') }}
+                    <Menu-item name="theme-default">
+                        {{ $t('index.theme_default') }}
                     </Menu-item>
+                    <Menu-item name="theme-transparent">
+                        {{ $t('index.theme_transparent') }}
+                    </Menu-item>
+                    <!-- 
                     <Menu-item name="iview-loader">
-                        <!--<Icon type="settings"></Icon>-->
                         iView Loader
                     </Menu-item>
                     <Menu-item name="iview-admin">
@@ -65,19 +69,8 @@
                     <Menu-item name="iview-area">
                         iView Area
                     </Menu-item>
+                    -->
                 </Submenu>
-                <!--<Select size="small" value="2" style="width: 60px;margin: 0 10px;" @on-change="handleVersion">-->
-                    <!--<Option value="2">2.x</Option>-->
-                    <!--<Option value="1">1.x</Option>-->
-                <!--</Select>-->
-                <ButtonGroup>
-                    <Button type="ghost" size="small" icon="social-github" @click="handleGoToGitHub"></Button>
-                    <Button type="ghost" size="small" icon="social-twitter" @click="handleGoToTwitter"></Button>
-                    <Button type="ghost" size="small" @click="handleChangeLang" >
-                        <template v-if="lang === 'zh-CN'">EN</template>
-                        <template v-else>中文</template>
-                    </Button>
-                </ButtonGroup>
             </div>
         </div>
     </Menu>
@@ -131,11 +124,13 @@
                 } else if (type === 'guide') {
                     this.$router.push(navigate.guide[0].path + pathSuffix);
                 } else if (type === 'component') {
-                    this.$router.push(navigate.beforeComponents[0].path + pathSuffix);
-                } else if (type === 'practice') {
-                    this.$router.push(navigate.practice[0].path + pathSuffix);
-                } else if (type === 'cli') {
-                    this.$router.push('/cli' + pathSuffix);
+                    this.$router.push(navigate.components[0].list[0].path + pathSuffix);
+                } else if (type === 'classicCase') {
+                    this.$router.push(navigate.classicCase[0].path + pathSuffix);
+                } else if (type === 'theme-default') {
+                    this.$router.push(navigate.themeDefault[0].path + pathSuffix);
+                } else if (type === 'theme-transparent') {
+                    this.$router.push(navigate.themeTransparent[0].path + pathSuffix);
                 } else if (type === 'live') {
                     this.$router.push('/live');
                 } else if (type === 'iview-loader') {
@@ -163,8 +158,8 @@
                 const route = this.$route.path;
                 if (route.indexOf('component') > -1 || componentList.indexOf(route) > -1) {
                     this.currentActiveKey = 'component';
-                } else if (route.indexOf('practice') > -1) {
-                    this.currentActiveKey = 'practice';
+                } else if (route.indexOf('classicCase') > -1) {
+                    this.currentActiveKey = 'classicCase';
                 } else if (route.indexOf('live') > -1) {
                     this.currentActiveKey = 'live';
                 } else {

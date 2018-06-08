@@ -110,7 +110,7 @@
     <i-article>
         <article>
             <Anchor title="Layout 布局" h1></Anchor>
-                <p>协助进行页面级整体布局。</p>
+            <p>协助进行页面级整体布局。</p>
             <Anchor title="设计规则" h2></Anchor>
             <Anchor title="尺寸" h3></Anchor>
             <p>一级导航项偏左靠近 logo 放置，辅助菜单偏右放置。</p>
@@ -518,8 +518,6 @@
                 </div>
                 <i-code lang="html" slot="code">{{ code.siderFixed }}</i-code>
             </Demo>
-
-            <ad></ad>
 
             <div class="api">
                 <Anchor title="API" h2></Anchor>

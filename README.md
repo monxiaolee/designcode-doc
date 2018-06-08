@@ -1,2 +1,2 @@
-# iview-doc
-Doc of iView
+# designcode-doc
+Doc of designcode
