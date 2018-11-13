@@ -439,7 +439,7 @@ adjustCoverNodesXPos(connectedComp, node, moveDistY) {
     }
 }
 
-  // 避免遮挡 XPos
+  // 避免遮挡 XPos 
 	coverCheckXPos() {
 		let radius = this.options.nodesRadius
 		let childStep = this.options.childStep

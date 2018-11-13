@@ -104,6 +104,13 @@ const routers = [
         component: (resolve) => require(['./views/guide/d3FNetwork.vue'], resolve)
     },
     {
+        path: '/d3Topo/index',
+        meta: {
+            title: 'd3拓扑图'
+        },
+        component: (resolve) => require(['./views/topo/index.vue'], resolve)
+    },
+    {
         path: '/d3FNetwork/ForestMatrixLayout',
         meta: {
             title: 'ForestMatrixLayout-demo'
