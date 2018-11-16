@@ -14,7 +14,7 @@
     }
 </style>
 <template>
-    <div style="height: 100%;">
+    <div>
         <router-view></router-view>
         <Back-top></Back-top>
         <transition name="fade">
