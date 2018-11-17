@@ -1,6 +1,9 @@
 <template>
 	<div id="topo-container">
 		<item-list id="item-list-left"></item-list>
+		<div id="chart-container">
+			<svg id="topo-chart" width="5000" height="5000"></svg>
+		</div>
 	</div>
 </template>
 <script>
@@ -26,6 +29,9 @@
 
 				let drag =  d3.drag().on("start", function() {
 					console.log('111111')
+				})
+				.on("drag", function() {
+					console.log("222")
 				})
 			}
 		}
