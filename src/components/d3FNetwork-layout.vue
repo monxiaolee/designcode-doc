@@ -5,7 +5,7 @@
     </div>
 </template>
 <script>
-    import Navigate from './Navigate'
+    import Navigate from './navigate'
     export default {
         data () {
             return {

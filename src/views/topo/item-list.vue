@@ -3,11 +3,11 @@
 		<div class="item-category">
 			<div class="item-header">输入</div>
 			<div class="item-content">
-				<div class="item">
-					<Poptip trigger="hover" title="Title" content="content">
-				        <Button>Hover</Button>
-				    </Poptip>
+
+				<div class="item" data-type="INPUT" data-name="READDATA">
+				    <Button>读取数据</Button>
 			    </div>
+
 			</div>
 		</div>
 		
