@@ -63,7 +63,7 @@
 			            	})
 
 			            }
-			            // $dragItem.remove()
+			            $dragItem.remove()
 						console.log('拖拽结束')
 					})
 

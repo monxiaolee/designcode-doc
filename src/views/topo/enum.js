@@ -27,7 +27,7 @@ let icon = {
 }
 
 let name = {
-  READDATA: '读取设备',
+  READDATA: '读取数据',
   DEVICE: '设备数据',
   CUSTOM_DATA: '自定义数据',
   LOGIC_RULE: '逻辑规则',
@@ -37,4 +37,9 @@ let name = {
   EMAIL: '邮件'
 }
 
-export { type, bgColor, icon, name }
+let portDelta = {
+  INPUT_X: 0,
+  Y: 15
+}
+
+export { type, bgColor, icon, name, portDelta }

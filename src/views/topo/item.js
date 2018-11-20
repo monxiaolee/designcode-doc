@@ -14,14 +14,22 @@ class Item {
 		// 回调事件
 		this.onDrag = params.onDrag
 		this.onClick = params.onClick
+		this.onPortMousedown = params.onPortMousedown
+		this.onPortMouseup = params.onPortMouseup
 
 		// 私有属性
 		this._group = null
 		this._dragDeltaX = 0
 		this._dragDeltaY = 0
+		this._input = null
+		this._output = null
 
 		this._createElement()
 		this._bindEvent()
+	}
+
+	getItemWidth() {
+		return parseInt(this._group.select('rect').attr('width'))
 	}
 
 	/**
@@ -29,13 +37,14 @@ class Item {
 	*/
 	_createElement() {
 		let group = this.container.append('g')
-	      .attr('transform', 'translate(${this.x}, ${this.y}')
+			.attr('transform', 'translate('+this.x+', '+this.y+')')
+		  // .attr("transform", "translate("+this.x+", "+this.y+")")
+	      // .attr('transform', 'translate(${this.x}, ${this.y}')
 	      .attr('class', 'item')
 	    this._group = group
 	    group.append('rect')
 	      .attr('width', 120)
 	      .attr('height', 30)
-	      .attr('rx', 5)
 	      .attr('rx', 5)
 	      .attr('fill', bgColor[this.type])
 	      .attr('class', 'item item-rect')
@@ -74,6 +83,17 @@ class Item {
 	      .attr('class', 'item_label')
 	      .attr('text-anchor', 'middle')
 
+	    if(['ACTION', 'FUNCTION'].indexOf(this.type)) {
+	    	let input = group.append('g').attr('transform', 'translate(-5, 10)').attr('class', 'port_input')
+	    	this._input = input
+	    	input.append('rect')
+	    		.attr('rx', 3)
+	    		.attr('ry', 3)
+	    		.attr('width', 10)
+	    		.attr('height', 10)
+	    		.attr('class', 'port')
+	    }
+
 	}
 
 	/**
@@ -86,6 +106,48 @@ class Item {
 			.on("drag", this._onGroupDrag.bind(this))
 
 		this._group.call(drag)
+		if(this._input) {
+			this._input.on('mouseenter', this._onPortEnter)
+			this._input.on('mouseleave', this._onPortLeave)
+			this._input.on('mousedown', this._onPortMousedown.bind(this))
+			this._input.on('mouseup', this._onPortMouseup.bind(this))
+		}
+	}
+
+	/**
+	*鼠标移入连线句柄
+	*@private
+	*/
+	_onPortEnter() {
+		d3.select(this).select('rect').classed('port-hovered', true)
+	}
+
+	/**
+	*鼠标离开连线句柄
+	*@private
+	*/
+	_onPortLeave() {
+		d3.select(this).select('rect').classed('port-hovered', false)
+	}
+
+	/**
+	*鼠标按下连线句柄
+	*@private
+	*/
+	_onPortMousedown() {
+		d3.event.stopPropagation()
+		let portType = d3.select(d3.event.target.parentNode).attr('class').replace('port_', '')
+		this.onPortMousedown(this, portType)
+	}
+
+	/**
+	*鼠标在连线句柄抬起
+	*@private
+	*/
+	_onPortMouseup() {
+		d3.event.stopPropagation()
+		let portType = d3.select(d3.event.target.parentNode).attr('class').replace('port_', '')
+		this.onPortMouseup(this, portType)
 	}
 
 	/**
@@ -104,8 +166,8 @@ class Item {
 	_onGroupDrag() {
 		this.x = d3.event.x - this._dragDeltaX
 		this.y = d3.event.y - this._dragDeltaY
-		this._group.raise().attr('transform', 'translate(${this.x}, ${this.y})')
-		// this.onDrag(this)
+		this._group.raise().attr('transform', 'translate('+this.x+', '+this.y+')') //raise() 低头抬尾变元素的方法
+		this.onDrag(this)
 	}
 
 	/**

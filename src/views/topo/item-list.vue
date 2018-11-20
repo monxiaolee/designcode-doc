@@ -3,11 +3,18 @@
 		<div class="item-category">
 			<div class="item-header">输入</div>
 			<div class="item-content">
-
 				<div class="item" data-type="INPUT" data-name="READDATA">
 				    <Button>读取数据</Button>
 			    </div>
+			</div>
+		</div>
 
+		<div class="item-category">
+			<div class="item-header">处理方法</div>
+			<div class="item-content">
+				<div class="item" data-type="FUNCTION" data-name="LOGIC_RULE">
+					<Button>逻辑规则</Button>
+				</div>
 			</div>
 		</div>
 		

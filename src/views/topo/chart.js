@@ -1,4 +1,5 @@
 import Item from './item'
+import Line from './line'
 import * as d3 from 'd3'
 
 class Chart {
@@ -6,6 +7,8 @@ class Chart {
 		this.container = params.container
 
 		this.list = {}
+		this.drawingLine = false
+    	this.currentLine = null
 
 		this._bindEvent()
 	}
@@ -23,7 +26,9 @@ class Chart {
 			name: params.name,
 			type: params.type,
 			onDrag: this._onItemDrag.bind(this),
-			onClick: this._onItemClick.bind(this)
+			onClick: this._onItemClick.bind(this),
+			onPortMousedown: this._onPortMousedown.bind(this),
+			onPortMouseup: this._onPortMouseup.bind(this)
 		})
 
 		this.list[item.id] = item
@@ -36,14 +41,87 @@ class Chart {
 	 */
 	_bindEvent() {
 		this.container.on('mousemove', this._onMousemove.bind(this))
+		this.container.on('mouseup', this._onMouseup.bind(this))
 	}
 
 	/**
-	 * 鼠标在画板中移动
-	 */
-	_onMousemove() {
-		
+	* 创建连线
+	* @ param fromItem
+	* @ param portType
+	* @ returns {Line}
+	* @ private
+	*/
+	_addLine(fromItem, fromPortType, targetItem, targetPortType) {
+		return new Line({
+			container: this.container,
+			fromItem: fromItem,
+			fromPortType: fromPortType,
+			targetItem: targetItem,
+			targetPortType: targetPortType
+		})
 	}
+
+	/**
+	* 鼠标按下连线具柄回调
+	*/
+	_onPortMousedown(fromItem, fromPortType) {
+		console.log("鼠标按下连线具柄回调")
+		this.currentLine = this._addLine(fromItem, fromPortType)
+		this.drawingLine = true
+	}
+
+	/**
+	* 鼠标在画布中移动
+	*/
+	_onMousemove() {
+		if(this.drawingLine && this.currentLine) {
+			let coordinates = {
+				x: d3.event.offsetX,
+				y: d3.event.offsetY
+			}
+			this.currentLine.updataPath(coordinates)
+			this.currentLine.path.classed('active', true)
+		}
+	}
+
+
+	/**
+	* 鼠标在连线具柄位置抬起后回调事件
+	* @param targetItem
+	* @param targetPortType
+	* @private
+	*/
+	_onPortMouseup() {
+		console.log("鼠标在连上句柄位置抬起后的回调事件")
+		if(!this.drawingLine) {
+			return
+		}
+	}
+
+	/**
+    * 鼠标在元素位置抬起后回调事件，对元素进行自动连线
+    * @param targetItem
+    * @private
+    */
+    _onItemMouseup(targetItem) {
+    	if(!this.drawingLine)
+    		return
+    }
+
+	/**
+	* 鼠标在空白处的回调事件
+	*/
+	_onMouseup() {
+		if(!this.drawingLine) 
+			return
+
+		if(this.currentLine) {
+			this.currentLine.remove()
+			this.currentLine = null
+		}
+		this.drawingLine = false
+	}
+
 
 	/**
 	 * 元素移动回调事件
