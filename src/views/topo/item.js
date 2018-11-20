@@ -1,6 +1,6 @@
 import * as d3 from 'd3'
 import * as util from './util'
-import { type, bgColor } from './enum'
+import { type, bgColor, icon, name } from './enum'
 
 class Item {
 	constructor(params) {
@@ -26,21 +26,53 @@ class Item {
 
 	/**
 	* 创建svg元素
-	* @private
 	*/
 	_createElement() {
 		let group = this.container.append('g')
-			.attr('transform', 'translate(${this.x}, ${this.y})')
-			.attr('class', 'item')
-		this._group = group
-		group.append('rect')
-			.attr('width', 120)
-			.attr('height', 30)
-			.attr('rx', 5)
-			.attr('fill', bgColor[this.type])
-			.attr('class', 'item item-rect')
+	      .attr('transform', 'translate(${this.x}, ${this.y}')
+	      .attr('class', 'item')
+	    this._group = group
+	    group.append('rect')
+	      .attr('width', 120)
+	      .attr('height', 30)
+	      .attr('rx', 5)
+	      .attr('rx', 5)
+	      .attr('fill', bgColor[this.type])
+	      .attr('class', 'item item-rect')
 
-		// let iconGroup = group.append('g')
+	    let iconGroup = group.append('g')
+	    iconGroup.append('rect')
+	      .attr('x', 0)
+	      .attr('y', 0)
+	      .attr('width', 30)
+	      .attr('height', 30)
+	      .attr('fill', '#000')
+	      .attr('fill-opacity', '0.05')
+	    iconGroup.append('image')
+	      .attr('href', icon[this.name])
+	      .attr('x', 4)
+	      .attr('y', 4)
+	      .attr('width', 22)
+	      .attr('height', 22)
+
+	    let iconLine = d3.path()
+	    iconLine.moveTo(30, 0)
+	    iconLine.lineTo(30, 30)
+	    iconGroup.append('path')
+	      .attr('stroke-width', 0.5)
+	      .attr('stroke', '#000')
+	      .attr('stroke-opacity', 0.1)
+	      .attr('d', iconLine)
+
+	    let text = group.append('text')
+	    let title = this.title || name[this.name]
+	    this._text = text
+	    text.text(title)
+	      .attr('x', 73)
+	      .attr('y', 14)
+	      .attr('dy', '0.35em')
+	      .attr('class', 'item_label')
+	      .attr('text-anchor', 'middle')
 
 	}
 
