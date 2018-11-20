@@ -37,9 +37,6 @@ class Line {
 	*/
 	remove() {
 		this.path.remove()
-		if(this.fromItem && this.targetItem) {
-			console.log(this.fromItem[this.fromPortType + 'Ids'])
-		}
 	}
 
 	/**
