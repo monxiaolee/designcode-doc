@@ -131,7 +131,7 @@
     /deep/ .line {
       fill: none;
       stroke: #999;
-      stroke-width: 3px;
+      stroke-width: 1px;
 
       &.active {
         stroke: #ff7f0e;

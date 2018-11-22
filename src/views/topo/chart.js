@@ -7,6 +7,7 @@ class Chart {
 		this.container = params.container
 
 		this.list = {}
+		this.lineList = {}
 		this.drawingLine = false
     	this.currentLine = null
 
@@ -25,8 +26,12 @@ class Chart {
 			y: params.y,
 			name: params.name,
 			type: params.type,
+			inputIds: params.inputIds,
+			outputIds: params.outputIds,
+			data: params.data,
 			onDrag: this._onItemDrag.bind(this),
 			onClick: this._onItemClick.bind(this),
+			onMouseup: this._onItemMouseup.bind(this),
 			onPortMousedown: this._onPortMousedown.bind(this),
 			onPortMouseup: this._onPortMouseup.bind(this)
 		})
@@ -91,11 +96,25 @@ class Chart {
 	* @param targetPortType
 	* @private
 	*/
-	_onPortMouseup() {
+	_onPortMouseup(targetItem, targetPortType) {
 		console.log("鼠标在连上句柄位置抬起后的回调事件")
 		if(!this.drawingLine) {
 			return
 		}
+
+		this.currentLine.targetPortType = targetPortType
+		this.currentLine.targetItem = targetItem
+		this.currentLine.updataPath()
+		this.currentLine.path.classed('active', false)
+
+		// 记录input/output元素的id
+		this.currentLine.fromItem[this.currentLine.fromPortType + 'Ids'].add(targetItem.id)
+	    this.currentLine.fromItem[this.currentLine.fromPortType + 'PathIds'].add(this.currentLine.id)
+	    this.currentLine.targetItem[this.currentLine.targetPortType + 'Ids'].add(this.currentLine.fromItem.id)
+	    this.currentLine.targetItem[this.currentLine.targetPortType + 'PathIds'].add(this.currentLine.id)
+
+		this.lineList[this.currentLine.id] = this.currentLine
+		this.drawingLine = false
 	}
 
 	/**
@@ -104,8 +123,11 @@ class Chart {
     * @private
     */
     _onItemMouseup(targetItem) {
+    	console.log("鼠标在元素位置抬起后回调事件，需要对元素进行自动连线")
     	if(!this.drawingLine)
     		return
+
+    	this._onMouseup()
     }
 
 	/**
@@ -129,6 +151,20 @@ class Chart {
 	 */
 	_onItemDrag(item) {
 		console.log("元素移动的回调函数")
+
+		console.log(this.lineList)
+		if(item.inputPathIds.size) {
+		    item.inputPathIds.forEach(id => {
+		    	console.log(this.lineList[id])
+		    	this.lineList[id].updataPath()
+		    })
+	    }
+
+	    if(item.outputPathIds.size) {
+		    item.outputPathIds.forEach(id => {
+		    	this.lineList[id].updataPath()
+		    })
+	    }
 	}
 
 	/**

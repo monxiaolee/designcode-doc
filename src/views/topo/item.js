@@ -11,9 +11,17 @@ class Item {
 		this.name = params.name,
 		this.type = type[params.type]
 
+		// 记录input/output元素的id和连线对象
+	    this.inputIds = params.inputIds || new Set()
+	    this.outputIds = params.outputIds || new Set()
+	    this.inputPathIds = new Set()
+	    this.outputPathIds = new Set()
+	    this.data = params.data || null
+
 		// 回调事件
 		this.onDrag = params.onDrag
 		this.onClick = params.onClick
+		this.onMouseup = params.onMouseup
 		this.onPortMousedown = params.onPortMousedown
 		this.onPortMouseup = params.onPortMouseup
 
@@ -101,6 +109,7 @@ class Item {
 	* @private
 	*/
 	_bindEvent() {
+		this._group.on('mouseup', this._onMouseup.bind(this))
 		let drag = d3.drag()
 			.on("start", this._onGroupDragstart.bind(this))
 			.on("drag", this._onGroupDrag.bind(this))
@@ -178,6 +187,15 @@ class Item {
 		d3.event.stopPropagation()
 		this._group.classed('active', true)
 		this.onClick(this)
+	}
+
+	/**
+	* 鼠标在元素位置抬起
+	* @private
+	*/
+	_onMouseup() {
+		d3.event.stopPropagation()
+		this.onMouseup(this)
 	}
 
 

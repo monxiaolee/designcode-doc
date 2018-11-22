@@ -1,9 +1,11 @@
 import * as d3 from 'd3'
 import { portDelta } from './enum'
+import * as util from './util'
 
 class Line {
 	constructor(params) {
 		this.container = params.container,
+		this.id = util.makeId()
 		this.fromItem = params.fromItem,
 		this.fromPortType = params.fromPortType,
 		this.targetItem = params.targetItem,
@@ -18,6 +20,7 @@ class Line {
 	* @ param _targetPosition 目标坐标，如果targetPosition未传直接使用targetPort的坐标
 	*/
 	updataPath(_targetPosition) {
+		console.log('走到这儿了。。。')
 		let fromPortPosition = this._getPortPosition(this.fromPortType, this.fromItem)
 		let targetPosition = _targetPosition || this._getPortPosition(this.targetPortType, this.targetItem)
 		let path = d3.path()
