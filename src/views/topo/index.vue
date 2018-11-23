@@ -54,7 +54,6 @@
 			              y: d3.event.sourceEvent.y - dragDeltaY - $container.offsetTop
 			            }
 			            if(position.x > 0) {
-			            	console.log(position.x, position.y, $dragItem.attr('data-name'), $dragItem.attr('data-type'))
 			            	chart.addItem({
 			            		x: position.x,
 			            		y: position.y,
@@ -64,7 +63,6 @@
 
 			            }
 			            $dragItem.remove()
-						console.log('拖拽结束')
 					})
 
 				items.call(drag)
